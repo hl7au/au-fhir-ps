@@ -1,0 +1,4 @@
+== Suppressed Messages ==
+
+# No examples in this IG
+The Implementation Guide contains no examples for this profile
