@@ -1,0 +1,27 @@
+# Temporary folders #
+#####################
+temp/
+template/
+output/
+input-cache/
+/input-cache
+/output
+/node_modules
+/terms
+
+# Windows generated files #
+###########################
+Thumbs.db
+
+# OS generated files #
+######################
+.DS_Store
+.DS_Store?
+
+# backup files #
+################
+*.bak
+build.bat
+publisher.jar
+
+
