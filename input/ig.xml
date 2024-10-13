@@ -36,7 +36,7 @@
 	<dependsOn>
 		<uri value="http://hl7.org/fhir/uv/ips/ImplementationGuide/hl7.fhir.uv.ips"/>
 		<packageId value="hl7.fhir.uv.ips"/>
-		<version value="2.0.0-ballot"/>
+		<version value="1.1.0"/>
 	</dependsOn>
 	<dependsOn>
 		<uri value="http://hl7.org.au/fhir/core/ImplementationGuide/hl7.fhir.au.core"/>
@@ -97,6 +97,11 @@
 				<nameUrl value="artefacts.html"/>
 				<title value="FHIR artefacts"/>
 				<generation value="markdown"/>
+				<page>
+					<nameUrl value="artifacts.html"/>
+					<title value="Artefacts Summary"/>
+					<generation value="html"/>
+				</page>
 				<page>
 					<nameUrl value="profiles-and-extensions.html"/>
 					<title value="Profiles and Extensions"/>
