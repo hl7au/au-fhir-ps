@@ -110,7 +110,8 @@
 				<!-- <page>
 					<nameUrl value="search-parameters.html"/>
 					<title value="Search Parameters"/>
-					<generation value="markdown"/> -->
+					<generation value="markdown"/> 
+				</page> -->
 				<!-- <page>
 					<nameUrl value="capability-statements.html"/>
 					<title value="Capability Statements"/>
@@ -147,7 +148,7 @@
 				<title value="Change Log"/>
 				<generation value="markdown"/>
 			</page>-->
-		</page>
+		</page> 
 		<!-- copyright year is a mandatory parameter -->
 		<parameter>
 			<code value="copyrightyear"/>
