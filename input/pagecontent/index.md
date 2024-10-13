@@ -4,9 +4,6 @@ TBD
 
 ## Dependencies
 {% include dependency-table.xhtml %}
-{% include ip-statements.xhtml %} 
-{% include cross-version-analysis.xhtml %}
-{% include globals-table.xhtml %} 
 
 ### How to read this guide
 
