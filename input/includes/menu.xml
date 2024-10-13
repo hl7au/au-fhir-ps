@@ -1,0 +1,79 @@
+<ul xmlns="http://www.w3.org/1999/xhtml" class="nav navbar-nav">
+  <li>
+    <a href="index.html">Home</a>
+  </li>
+  <!-- <li class="dropdown">
+    <a data-toggle="dropdown" href="#" class="dropdown-toggle">Conformance
+      <b class="caret"></b>
+    </a>
+    <ul class="dropdown-menu">
+      <li>
+        <a href="general-requirements.html">General Requirements</a>
+        <a href="declaring-conformance.html">Declaring Conformance</a>
+      </li>
+    </ul>
+  </li> -->
+  <li class="dropdown">
+    <a data-toggle="dropdown" href="#" class="dropdown-toggle">Guidance
+      <b class="caret"></b>
+    </a>
+     <ul class="dropdown-menu">
+      <!-- <li>
+        <a href="general-guidance.html">General Guidance</a>
+      </li>-->
+       <li>
+        <a href="relationship.html">Relationship with other IGs</a>
+      </li>
+      <li>
+        <a href="variance.html">AU Variance Statement</a>
+      </li>
+      <li>
+        <a href="future.html">Future of AU Patient Summary</a>
+      </li> 
+    </ul>
+  </li>
+<li class="dropdown">
+    <a data-toggle="dropdown" href="#" class="dropdown-toggle">FHIR Artefacts
+      <b class="caret"></b>
+    </a>
+    <ul class="dropdown-menu">
+      <li>
+        <a href="artifacts.html">Artefacts Summary</a>
+      </li>
+      <li>
+        <a href="profiles-and-extensions.html">Profiles and Extensions</a>
+      </li>
+      <!-- <li>
+        <a href="search-parameters.html">Search Parameters</a>
+      </li>-->
+      <li>
+        <a href="terminology.html">Terminology</a>
+      </li>
+      <!-- <li>
+        <a href="capability-statements.html">Capability Statements</a>
+      </li> -->
+      <!-- <li>
+        <a href="actors.html">Actor Definitions</a>
+      </li>-->
+    </ul>
+  </li>
+  <li>
+    <a href="examples.html">Examples</a>
+  </li>
+  <li class="dropdown">
+    <a data-toggle="dropdown" href="#" class="dropdown-toggle">Support
+      <b class="caret"></b>
+    </a>
+    <ul class="dropdown-menu">
+      <li>
+        <a href="downloads.html">Downloads</a>
+      </li>
+      <li>
+        <a href="license.html">License and Legal</a>
+      </li>
+    </ul>
+  </li>
+  <!-- <li>
+    <a href="changes.html">Change Log</a>
+  </li>-->
+</ul>
