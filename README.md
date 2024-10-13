@@ -4,7 +4,7 @@ TBD
 ## Did you find an error?
 TBD
 
-## Contributing to AU Core Development
+## Contributing to Development
 
 TBD
 
