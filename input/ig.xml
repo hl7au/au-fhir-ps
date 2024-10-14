@@ -72,14 +72,24 @@
 				<nameUrl value="guidance.html"/>
 				<title value="Guidance"/>
 				<generation value="markdown"/>
-				<!-- <page>
+				<page>
 					<nameUrl value="general-guidance.html"/>
 					<title value="General Guidance"/>
 					<generation value="markdown"/>
-				</page>-->
+				</page>
+				<page>
+					<nameUrl value="aucdi.html"/>
+					<title value="AU Core Data for Interoperability"/>
+					<generation value="markdown"/>
+				</page>
 				<page>
 					<nameUrl value="relationship.html"/>
 					<title value="Relationship with other IGs"/>
+					<generation value="markdown"/>
+				</page>
+				<page>
+					<nameUrl value="comparison.html"/>
+					<title value="Comparison with other national and international IGs"/>
 					<generation value="markdown"/>
 				</page>
 				<page>
