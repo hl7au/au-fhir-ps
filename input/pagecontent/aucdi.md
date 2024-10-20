@@ -9,7 +9,7 @@ Column attribute descriptions are as follows:
 - <b>AUCDI Data Group</b>: Represents a grouping of one or more AUCDI Data Elements.
 - <b>AUCDI Data Element</b>: Represents a single, discreet clinical concept defined by AUCDI.
 - <b>AU Core Profile(s)</b>: Represents the mapping of AUCDI Data Groups and AUCDI Data Elements to AU Core FHIR artefacts.
-- <b>AU Patient Summary Profile(s)</b>: Represents the mapping of AUCDI Data Groups and AUCDI Data Elements to AU Core FHIR artefacts.
+- <b>AU Patient Summary Profile(s)</b>: Represents the mapping of AUCDI Data Groups and AUCDI Data Elements to AU Patient Summary FHIR artefacts.
 - <b>FHIR Path</b>: The specific path in the FHIR standards for each AUCDI Data Element within, showing where and how to implement these elements in FHIR-based systems. 
 - <b>Comment</b>: Additional information about the mapping including an explanation of where an element or group is not yet mapped.
 

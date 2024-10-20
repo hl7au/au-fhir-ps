@@ -3,7 +3,7 @@ AU Patient Summary complies with, and leverages, national and international stan
 - [International Patient Summary Implementation Guide 2.0.0-ballot](https://hl7.org/fhir/uv/ips/2024Sep/)
 - [AU Core Implementation Guide](https://build.fhir.org/ig/hl7au/au-fhir-core/)
 
-Relationships between AU Patient Summary, AUCore, AUCDI, and the above key implementation guides is described in [Relationship with other IGs](relationship.html). 
+Relationships between AU Patient Summary, AU Core, AUCDI, and the above key implementation guides is described in [Relationship with other IGs](relationship.html). 
 
 Corresponding profiles, conformance requirements, and capability statements included in the key FHIR implementation guides were reviewed and considered during AU Core's development to ensure alignment, and to facilitate adoption of, this standard.
 
