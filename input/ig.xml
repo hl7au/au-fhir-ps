@@ -7,7 +7,7 @@
 	<extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-fmm">
 		<valueInteger value="0"/>
 	</extension>
-	<url value="http://hl7.org.au/fhir/aups/ImplementationGuide/hl7.fhir.au.ps"/>
+	<url value="http://hl7.org.au/fhir/ps/ImplementationGuide/hl7.fhir.au.ps"/>
 	<version value="0.1.0-cibuild"/>
 	<name value="AUPatientSummaryImplementationGuide"/>
 	<title value="AU Patient Summary Implementation Guide"/>
@@ -44,6 +44,18 @@
 		<version value="current"/>
 	</dependsOn>
 	<definition>
+		<resource>
+			<reference>
+				<reference value="StructureDefinition/au-ps-patient"/>
+			</reference>
+			<exampleBoolean value="false"/>
+		</resource>
+		<resource>
+			<reference>
+				<reference value="StructureDefinition/au-ps-organization"/>
+			</reference>
+			<exampleBoolean value="false"/>
+		</resource>
 		<page>
 			<nameUrl value="toc.html"/>
 			<title value="Table of Contents"/>

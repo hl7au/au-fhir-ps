@@ -37,6 +37,6 @@ TBD
 
 The following link to the ImplementationGuide resource defines the technical details of this publication, including dependencies and publishing parameters:
 
-- [XML](ImplementationGuide-hl7.fhir.au.core.xml) 
-- [JSON](ImplementationGuide-hl7.fhir.au.core.json)
-- [TTL](ImplementationGuide-hl7.fhir.au.core.ttl)
+- [XML](ImplementationGuide-hl7.fhir.au.ps.xml) 
+- [JSON](ImplementationGuide-hl7.fhir.au.ps.json)
+- [TTL](ImplementationGuide-hl7.fhir.au.ps.ttl)
