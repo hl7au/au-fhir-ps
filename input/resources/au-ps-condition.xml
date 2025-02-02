@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<StructureDefinition xmlns="http://hl7.org/fhir">
+  <id value="au-ps-condition"/>
+  <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-fmm">
+    <valueInteger value="0"/> 
+  </extension>
+  <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-compliesWithProfile">
+    <valueCanonical value="http://hl7.org/fhir/uv/ips/StructureDefinition/Condition-uv-ips"/>
+  </extension>
+  <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-compliesWithProfile">
+    <valueCanonical value="http://hl7.org.au/fhir/core/StructureDefinition/au-core-condition"/>
+  </extension>
+  <url value="http://hl7.org.au/fhir/ps/StructureDefinition/au-ps-condition"/>
+  <name value="AUPSCondition"/>
+  <title value="AU PS Condition"/>
+  <status value="draft"/>
+  <description value="This profile sets minimum expectations for a Condition resource in the context of a patient summary in an Australian context. It is based on the [AU Base Condition](http://build.fhir.org/ig/hl7au/au-fhir-base/StructureDefinition-au-condition.html) profile, and applies the constraints of [AU Core Condition](http://hl7.org.au/fhir/core/StructureDefinition/au-core-condition) and [Condition (IPS)](http://hl7.org/fhir/uv/ips/StructureDefinition/Condition-uv-ips)." />
+  <kind value="resource"/>
+  <abstract value="false"/>
+  <type value="Condition"/>
+  <baseDefinition value="http://hl7.org.au/fhir/StructureDefinition/au-condition"/>
+  <derivation value="constraint"/>
+  <differential>
+    <element id="Condition"> 
+      <path value="Condition"/>
+    </element>
+    <element id="Condition.clinicalStatus">
+      <path value="Condition.clinicalStatus"/>
+      <min value="1"/>
+      <mustSupport value="true"/>
+    </element>
+    <element id="Condition.verificationStatus">
+      <path value="Condition.verificationStatus"/>
+      <mustSupport value="true"/>
+    </element>
+    <element id="Condition.category">
+      <path value="Condition.category"/>
+      <min value="1"/>
+      <mustSupport value="true"/>
+    </element>
+    <element id="Condition.severity">
+      <path value="Condition.severity"/>
+      <mustSupport value="true"/>
+      <binding>
+        <strength value="extensible"/>
+        <valueSet value="http://hl7.org/fhir/ValueSet/condition-severity"/>
+      </binding>
+    </element>
+    <element id="Condition.code">
+      <path value="Condition.code"/>
+      <min value="1"/>
+      <mustSupport value="true"/>
+      <binding>
+        <strength value="extensible"/>
+        <valueSet value="https://healthterminologies.gov.au/fhir/ValueSet/clinical-condition-1"/>
+      </binding>
+    </element>
+    <element id="Condition.bodySite">
+      <path value="Condition.bodySite"/>
+      <condition value="au-core-cond-01"/>
+      <constraint>
+        <key value="au-core-cond-01"/>
+        <severity value="error"/>
+        <human value="If a coded body site is provided, at least one coding shall be from SNOMED CT"/>
+        <expression value="coding.exists() implies coding.where(system='http://snomed.info/sct').exists()"/>
+        <xpath value="not(exists(f:coding/f:system)) or exists(f:coding/f:system[@value='http://snomed.info/sct'])"/>
+      </constraint>
+      <binding>
+        <strength value="extensible"/>
+        <valueSet value="https://healthterminologies.gov.au/fhir/ValueSet/body-site-1"/>
+      </binding>
+    </element>
+    <element id="Condition.subject">
+      <path value="Condition.subject"/>
+      <type>
+        <code value="Reference"/>
+        <targetProfile value="http://hl7.org.au/fhir/ps/StructureDefinition/au-ps-patient"/>
+      </type>
+      <mustSupport value="true"/>
+    </element>
+    <element id="Condition.subject.reference">
+      <path value="Condition.subject.reference"/>
+      <mustSupport value="true"/>
+    </element>
+    <element id="Condition.onset[x]">
+      <path value="Condition.onset[x]"/>
+      <type>
+        <code value="dateTime"/>
+      </type>
+      <type>
+        <code value="Age"/>
+      </type>
+      <type>
+        <code value="Period"/>
+      </type>
+      <type>
+        <code value="Range"/>
+      </type>
+      <mustSupport value="true"/>
+    </element>
+    <element id="Condition.abatement[x]">
+      <path value="Condition.abatement[x]"/>
+      <type>
+        <code value="dateTime"/>
+      </type>
+      <type>
+        <code value="Age"/>
+      </type>
+      <type>
+        <code value="Period"/>
+      </type>
+      <type>
+        <code value="Range"/>
+      </type>
+      <mustSupport value="true"/>
+    </element>
+    <element id="Condition.note">
+      <path value="Condition.note"/>
+      <mustSupport value="true"/>
+    </element>
+  </differential>
+</StructureDefinition>

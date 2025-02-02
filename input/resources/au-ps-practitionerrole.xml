@@ -10,7 +10,7 @@
   <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-compliesWithProfile">
     <valueCanonical value="http://hl7.org.au/fhir/core/StructureDefinition/au-core-practitionerrole"/>
   </extension>
-  <url value="http://hl7.org.au/fhir/core/StructureDefinition/au-core-practitionerrole"/>
+  <url value="http://hl7.org.au/fhir/ps/StructureDefinition/au-ps-practitionerrole"/>
   <name value="AUPSPractitionerRole"/>
   <title value="AU PS PractitionerRole"/>
   <status value="active"/>

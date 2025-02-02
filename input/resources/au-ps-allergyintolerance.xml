@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<StructureDefinition xmlns="http://hl7.org/fhir">
+  <id value="au-ps-allergyintolerance"/>
+  <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-fmm">
+    <valueInteger value="0"/> 
+  </extension>
+  <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-compliesWithProfile">
+    <valueCanonical value="http://hl7.org/fhir/uv/ips/StructureDefinition/AllergyIntolerance-uv-ips"/>
+  </extension>
+  <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-compliesWithProfile">
+    <valueCanonical value="http://hl7.org.au/fhir/core/StructureDefinition/au-core-allergyintolerance"/>
+  </extension>
+  <url value="http://hl7.org.au/fhir/ps/StructureDefinition/au-ps-allergyintolerance"/>
+  <name value="AUPSAllergyIntolerance"/>
+  <title value="AU PS AllergyIntolerance"/>
+  <status value="draft"/>
+  <description value="This profile sets minimum expectations for an AllergyIntolerance resource in the context of a patient summary in an Australian context. It is based on the [AU Base AllergyIntolerance](http://build.fhir.org/ig/hl7au/au-fhir-base/StructureDefinition-au-allergyintolerance.html) profile, and applies the constraints of [AU Core AllergyIntolerance](http://hl7.org.au/fhir/core/StructureDefinition/au-core-allergyintolerance) and [AllergyIntolerance (IPS)](http://hl7.org/fhir/uv/ips/StructureDefinition/AllergyIntolerance-uv-ips)."/>
+  <kind value="resource"/>
+  <abstract value="false"/>
+  <type value="AllergyIntolerance"/>
+  <baseDefinition value="http://hl7.org.au/fhir/StructureDefinition/au-allergyintolerance"/>
+  <derivation value="constraint"/>
+  <differential>
+    <element id="AllergyIntolerance">
+      <path value="AllergyIntolerance"/>
+    </element>
+    <element id="AllergyIntolerance.clinicalStatus">
+      <path value="AllergyIntolerance.clinicalStatus"/>
+      <mustSupport value="true"/>
+    </element>
+    <element id="AllergyIntolerance.verificationStatus">
+      <path value="AllergyIntolerance.verificationStatus"/>
+      <mustSupport value="true"/>
+    </element>
+    <element id="AllergyIntolerance.type">
+      <path value="AllergyIntolerance.type"/>
+      <mustSupport value="true"/>
+    </element>
+    <element id="AllergyIntolerance.code">
+      <path value="AllergyIntolerance.code"/>
+      <min value="1"/>
+      <mustSupport value="true"/>
+      <binding>
+        <strength value="extensible" />
+        <valueSet value="https://healthterminologies.gov.au/fhir/ValueSet/indicator-hypersensitivity-intolerance-to-substance-2"/>
+      </binding>
+    </element>
+    <element id="AllergyIntolerance.patient">
+      <path value="AllergyIntolerance.patient"/>
+      <type>
+        <code value="Reference"/>
+        <targetProfile value="http://hl7.org.au/fhir/ps/StructureDefinition/au-ps-patient"/>
+      </type>
+      <mustSupport value="true"/>
+    </element>
+    <element id="AllergyIntolerance.patient.reference">
+      <path value="AllergyIntolerance.patient.reference"/>
+      <mustSupport value="true"/>
+    </element>
+    <element id="AllergyIntolerance.onset[x]">
+      <path value="AllergyIntolerance.onset[x]"/>
+      <type>
+        <code value="dateTime"/>
+      </type>
+      <type>
+        <code value="Age"/>
+      </type>
+      <type>
+        <code value="Period"/>
+      </type>
+      <type>
+        <code value="Range"/>
+      </type>
+      <mustSupport value="true"/>
+    </element>
+    <element id="AllergyIntolerance.reaction">
+      <path value="AllergyIntolerance.reaction"/>
+      <mustSupport value="true"/>
+    </element>
+    <element id="AllergyIntolerance.reaction.manifestation">
+      <path value="AllergyIntolerance.reaction.manifestation"/>
+      <mustSupport value="true"/>
+    </element>
+    <element id="AllergyIntolerance.reaction.severity">
+      <path value="AllergyIntolerance.reaction.severity"/>
+      <mustSupport value="true"/>
+    </element>
+  </differential>
+</StructureDefinition>
