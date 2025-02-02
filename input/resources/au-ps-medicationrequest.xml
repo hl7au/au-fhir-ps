@@ -94,8 +94,8 @@
       </type>
       <mustSupport value="true"/>
     </element>
-    <element id="MedicationStatement.subject.reference">
-			<path value="MedicationStatement.subject.reference"/>
+    <element id="MedicationRequest.subject.reference">
+			<path value="MedicationRequest.subject.reference"/>
 			<min value="1"/>
 			<mustSupport value="true"/>
 		</element>
