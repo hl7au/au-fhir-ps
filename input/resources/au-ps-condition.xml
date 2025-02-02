@@ -27,20 +27,36 @@
     <element id="Condition.clinicalStatus">
       <path value="Condition.clinicalStatus"/>
       <min value="1"/>
+      <type>
+				<code value="CodeableConcept"/>
+				<profile value="http://hl7.org/fhir/uv/ips/StructureDefinition/CodeableConcept-uv-ips"/>
+			</type>
       <mustSupport value="true"/>
     </element>
     <element id="Condition.verificationStatus">
       <path value="Condition.verificationStatus"/>
+      <type>
+				<code value="CodeableConcept"/>
+				<profile value="http://hl7.org/fhir/uv/ips/StructureDefinition/CodeableConcept-uv-ips"/>
+			</type>
       <mustSupport value="true"/>
     </element>
     <element id="Condition.category">
       <path value="Condition.category"/>
       <min value="1"/>
+      <type>
+				<code value="CodeableConcept"/>
+				<profile value="http://hl7.org/fhir/uv/ips/StructureDefinition/CodeableConcept-uv-ips"/>
+			</type>
       <mustSupport value="true"/>
     </element>
     <element id="Condition.severity">
       <path value="Condition.severity"/>
       <mustSupport value="true"/>
+      <type>
+				<code value="CodeableConcept"/>
+				<profile value="http://hl7.org/fhir/uv/ips/StructureDefinition/CodeableConcept-uv-ips"/>
+			</type>
       <binding>
         <strength value="extensible"/>
         <valueSet value="http://hl7.org/fhir/ValueSet/condition-severity"/>
@@ -49,6 +65,10 @@
     <element id="Condition.code">
       <path value="Condition.code"/>
       <min value="1"/>
+      <type>
+				<code value="CodeableConcept"/>
+				<profile value="http://hl7.org/fhir/uv/ips/StructureDefinition/CodeableConcept-uv-ips"/>
+			</type>
       <mustSupport value="true"/>
       <binding>
         <strength value="extensible"/>
@@ -63,7 +83,6 @@
         <severity value="error"/>
         <human value="If a coded body site is provided, at least one coding shall be from SNOMED CT"/>
         <expression value="coding.exists() implies coding.where(system='http://snomed.info/sct').exists()"/>
-        <xpath value="not(exists(f:coding/f:system)) or exists(f:coding/f:system[@value='http://snomed.info/sct'])"/>
       </constraint>
       <binding>
         <strength value="extensible"/>
@@ -80,11 +99,15 @@
     </element>
     <element id="Condition.subject.reference">
       <path value="Condition.subject.reference"/>
+      <min value="1"/>
       <mustSupport value="true"/>
     </element>
     <element id="Condition.onset[x]">
       <path value="Condition.onset[x]"/>
       <type>
+        <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-type-must-support">
+					<valueBoolean value="true" />
+				</extension>
         <code value="dateTime"/>
       </type>
       <type>

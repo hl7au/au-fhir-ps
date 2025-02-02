@@ -14,7 +14,7 @@
   <name value="AUPSOrganization"/>
   <title value="AU PS Organization"/>
   <status value="draft"/>
-  <description value="This profile sets minimum expectations for a Patient resource in the context of a patient summary in an Australian context. It is based on the [AU Base Organization](http://build.fhir.org/ig/hl7au/au-fhir-base/StructureDefinition-au-organization.html) profile, and applies the constraints of [AU Core Organization](http://hl7.org.au/fhir/core/StructureDefinition/au-core-organization) and [Organization (IPS)](http://hl7.org/fhir/uv/ips/StructureDefinition/Organization-uv-ips)."/>
+  <description value="This profile sets minimum expectations for an Organization resource in the context of a patient summary in an Australian context. It is based on the [AU Base Organization](http://build.fhir.org/ig/hl7au/au-fhir-base/StructureDefinition-au-organization.html) profile, and applies the constraints of [AU Core Organization](http://hl7.org.au/fhir/core/StructureDefinition/au-core-organization) and [Organization (IPS)](http://hl7.org/fhir/uv/ips/StructureDefinition/Organization-uv-ips)."/>
   <kind value="resource"/>
   <abstract value="false"/>
   <type value="Organization"/>

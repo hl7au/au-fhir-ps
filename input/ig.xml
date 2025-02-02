@@ -58,6 +58,18 @@
 		</resource>
 		<resource>
 			<reference>
+				<reference value="StructureDefinition/au-ps-immunization"/>
+			</reference>
+			<exampleBoolean value="false"/>
+		</resource>
+		<resource>
+			<reference>
+				<reference value="StructureDefinition/au-ps-medication"/>
+			</reference>
+			<exampleBoolean value="false"/>
+		</resource>
+		<resource>
+			<reference>
 				<reference value="StructureDefinition/au-ps-practitioner"/>
 			</reference>
 			<exampleBoolean value="false"/>
