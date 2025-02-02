@@ -70,6 +70,18 @@
 		</resource>
 		<resource>
 			<reference>
+				<reference value="StructureDefinition/au-ps-medicationrequest"/>
+			</reference>
+			<exampleBoolean value="false"/>
+		</resource>
+		<resource>
+			<reference>
+				<reference value="StructureDefinition/au-ps-medicationstatement"/>
+			</reference>
+			<exampleBoolean value="false"/>
+		</resource>
+		<resource>
+			<reference>
 				<reference value="StructureDefinition/au-ps-practitioner"/>
 			</reference>
 			<exampleBoolean value="false"/>

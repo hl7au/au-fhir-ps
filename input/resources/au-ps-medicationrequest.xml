@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="utf-8"?>
+<StructureDefinition xmlns="http://hl7.org/fhir">
+  <id value="au-ps-medicationrequest"/>
+  <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-fmm">
+    <valueInteger value="0"/> 
+  </extension>
+  <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-compliesWithProfile">
+    <valueCanonical value="http://hl7.org/fhir/uv/ips/StructureDefinition/MedicationRequest-uv-ips"/>
+  </extension>
+  <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-compliesWithProfile">
+    <valueCanonical value="http://hl7.org.au/fhir/core/StructureDefinition/au-core-medicationrequest"/>
+  </extension>
+  <url value="http://hl7.org.au/fhir/ps/StructureDefinition/au-ps-medicationrequest"/>
+  <name value="AUPSMedicationRequest"/>
+  <title value="AU PS MedicationRequest"/>
+  <status value="draft"/>
+  <description value="This profile sets minimum expectations for a MedicationRequest resource in the context of a patient summary in an Australian context. It is based on the [AU Base MedicationRequest](http://build.fhir.org/ig/hl7au/au-fhir-base/StructureDefinition-au-medicationrequest.html) profile, and applies the constraints of [AU Core MedicationRequest](http://hl7.org.au/fhir/core/StructureDefinition/au-core-medicationrequest) and [MedicationRequest (IPS)](http://hl7.org/fhir/uv/ips/StructureDefinition/MedicationRequest-uv-ips)." />
+  <kind value="resource"/>
+  <abstract value="false"/>
+  <type value="MedicationRequest"/>
+  <baseDefinition value="http://hl7.org.au/fhir/StructureDefinition/au-medicationrequest"/>
+  <derivation value="constraint"/>
+  <differential>
+    <element id="MedicationRequest">
+      <path value="MedicationRequest"/>
+    </element>
+    <element id="MedicationRequest.status">
+      <path value="MedicationRequest.status"/>
+      <mustSupport value="true"/>
+    </element>
+    <element id="MedicationRequest.intent">
+      <path value="MedicationRequest.intent"/>
+      <mustSupport value="true"/>
+    </element>
+    <element id="MedicationRequest.medication[x]">
+      <path value="MedicationRequest.medication[x]"/>
+      <slicing>
+        <discriminator>
+          <type value="type"/>
+          <path value="$this"/>
+        </discriminator>
+        <rules value="closed"/>
+      </slicing>
+      <mustSupport value="true"/>
+    </element>
+    <element id="MedicationRequest.medication[x]:medicationCodeableConcept">
+      <path value="MedicationRequest.medication[x]"/>
+      <sliceName value="medicationCodeableConcept"/>
+      <type>
+        <code value="CodeableConcept"/>
+      </type>
+    </element>
+    <element id="MedicationRequest.medication[x]:medicationCodeableConcept.coding">
+      <path value="MedicationRequest.medication[x].coding"/>
+      <slicing>
+        <discriminator>
+          <type value="pattern" />
+          <path value="$this" />
+        </discriminator>
+        <rules value="open"/>
+      </slicing>
+    </element>
+    <element id="MedicationRequest.medication[x]:medicationCodeableConcept.coding:pbs">
+      <path value="MedicationRequest.medication[x].coding"/>
+      <sliceName value="pbs"/>
+      <binding>
+        <strength value="required" />
+        <valueSet value="http://terminology.hl7.org.au/ValueSet/pbs-item" />
+      </binding>
+      <mustSupport value="true"/>
+    </element>
+    <element id="MedicationRequest.medication[x]:medicationCodeableConcept.coding:amt">
+      <path value="MedicationRequest.medication[x].coding"/>
+      <sliceName value="amt"/>
+      <binding>
+        <strength value="required" />
+        <valueSet value="https://healthterminologies.gov.au/fhir/ValueSet/australian-medication-1" />
+      </binding>
+      <mustSupport value="true"/>
+    </element>
+    <element id="MedicationRequest.medication[x]:medicationReference">
+      <path value="MedicationRequest.medication[x]"/>
+      <sliceName value="medicationReference"/>
+      <type>
+        <code value="Reference"/>
+        <targetProfile value="http://hl7.org.au/fhir/ps/StructureDefinition/au-ps-medication"/>
+      </type>
+    </element>
+    <element id="MedicationRequest.subject">
+      <path value="MedicationRequest.subject"/>
+      <type>
+        <code value="Reference"/>
+        <targetProfile value="http://hl7.org.au/fhir/ps/StructureDefinition/au-ps-patient"/>
+      </type>
+      <mustSupport value="true"/>
+    </element>
+    <element id="MedicationStatement.subject.reference">
+			<path value="MedicationStatement.subject.reference"/>
+			<min value="1"/>
+			<mustSupport value="true"/>
+		</element>
+    <element id="MedicationRequest.encounter">
+      <path value="MedicationRequest.encounter"/>
+      <type>
+        <code value="Reference"/>
+        <targetProfile value="http://hl7.org.au/fhir/core/StructureDefinition/au-core-encounter"/>
+      </type>
+      <mustSupport value="true"/>
+    </element>
+    <element id="MedicationRequest.authoredOn">
+      <path value="MedicationRequest.authoredOn"/>
+      <min value="1"/>
+      <condition value="au-core-medreq-01"/>
+      <constraint>
+        <key value="au-core-medreq-01"/>
+        <severity value="error"/>
+        <human value="Date shall be precise to the day or, if not available, the Data Absent Reason extension shall be present"/>
+        <expression value="$this.hasValue() implies (extension('http://hl7.org/fhir/StructureDefinition/data-absent-reason').value.exists().not() and $this.toString().length() >= 10)"/>
+      </constraint>
+      <mustSupport value="true"/>
+    </element>
+    <element id="MedicationRequest.requester">
+      <path value="MedicationRequest.requester"/>
+      <min value="1"/>
+      <type>
+        <code value="Reference"/>
+        <targetProfile value="http://hl7.org.au/fhir/ps/StructureDefinition/au-ps-practitioner" />
+        <targetProfile value="http://hl7.org.au/fhir/ps/StructureDefinition/au-ps-practitionerrole"/>
+        <targetProfile value="http://hl7.org.au/fhir/ps/StructureDefinition/au-ps-organization"/>
+        <targetProfile value="http://hl7.org.au/fhir/ps/StructureDefinition/au-ps-patient"/>
+        <targetProfile value="http://hl7.org.au/fhir/StructureDefinition/au-relatedperson"/>
+      </type>
+      <mustSupport value="true"/>
+    </element>
+    <element id="MedicationRequest.reasonCode">
+      <path value="MedicationRequest.reasonCode"/>
+      <mustSupport value="true"/>
+    </element>
+    <element id="MedicationRequest.reasonReference">
+      <path value="MedicationRequest.reasonReference"/>
+    <type>
+        <code value="Reference"/>
+        <targetProfile value="http://hl7.org.au/fhir/ps/StructureDefinition/au-ps-condition" />
+        <targetProfile value="http://hl7.org/fhir/StructureDefinition/Observation"/>
+      </type>
+      <mustSupport value="true"/>
+    </element>
+    <element id="MedicationRequest.dosageInstruction">
+      <path value="MedicationRequest.dosageInstruction"/>
+      <mustSupport value="true"/>
+    </element>
+  </differential>
+</StructureDefinition>
