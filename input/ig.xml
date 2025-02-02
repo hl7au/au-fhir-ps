@@ -46,7 +46,13 @@
 	<definition>
 		<resource>
 			<reference>
-				<reference value="StructureDefinition/au-ps-patient"/>
+				<reference value="StructureDefinition/au-ps-allergyintolerance"/>
+			</reference>
+			<exampleBoolean value="false"/>
+		</resource>
+		<resource>
+			<reference>
+				<reference value="StructureDefinition/au-ps-condition"/>
 			</reference>
 			<exampleBoolean value="false"/>
 		</resource>
