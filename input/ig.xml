@@ -58,6 +58,12 @@
 		</resource>
 		<resource>
 			<reference>
+				<reference value="StructureDefinition/au-ps-encounter"/>
+			</reference>
+			<exampleBoolean value="false"/>
+		</resource>
+		<resource>
+			<reference>
 				<reference value="StructureDefinition/au-ps-immunization"/>
 			</reference>
 			<exampleBoolean value="false"/>
@@ -89,6 +95,12 @@
 		<resource>
 			<reference>
 				<reference value="StructureDefinition/au-ps-practitionerrole"/>
+			</reference>
+			<exampleBoolean value="false"/>
+		</resource>
+		<resource>
+			<reference>
+				<reference value="StructureDefinition/au-ps-procedure"/>
 			</reference>
 			<exampleBoolean value="false"/>
 		</resource>
