@@ -36,7 +36,7 @@
 	<dependsOn>
 		<uri value="http://hl7.org/fhir/uv/ips/ImplementationGuide/hl7.fhir.uv.ips"/>
 		<packageId value="hl7.fhir.uv.ips"/>
-		<version value="1.1.0"/>
+		<version value="current"/>
 	</dependsOn>
 	<dependsOn>
 		<uri value="http://hl7.org.au/fhir/core/ImplementationGuide/hl7.fhir.au.core"/>
@@ -53,6 +53,12 @@
 		<resource>
 			<reference>
 				<reference value="StructureDefinition/au-ps-bundle"/>
+			</reference>
+			<exampleBoolean value="false"/>
+		</resource>
+		<resource>
+			<reference>
+				<reference value="StructureDefinition/au-ps-composition"/>
 			</reference>
 			<exampleBoolean value="false"/>
 		</resource>
