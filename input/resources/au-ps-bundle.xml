@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="utf-8"?>
+<StructureDefinition xmlns="http://hl7.org/fhir">
+  <id value="au-ps-bundle"/>
+  <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-fmm">
+    <valueInteger value="0"/> 
+  </extension>
+  <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-compliesWithProfile">
+    <valueCanonical value="http://hl7.org/fhir/uv/ips/StructureDefinition/Bundle-uv-ips"/>
+  </extension>
+  <url value="http://hl7.org.au/fhir/ps/StructureDefinition/au-ps-bundle"/>
+  <name value="AUPSBundle"/>
+  <title value="AU PS Bundle"/>
+  <status value="draft"/>
+  <description value="This profile sets minimum expectations for a Bundle resource in the context of a patient summary in an Australian context. It is based on [Bundle (IPS)](http://hl7.org/fhir/uv/ips/StructureDefinition/Bundle-uv-ips) and AU Patient Summary."/>
+  <kind value="resource"/>
+  <abstract value="false"/>
+  <type value="Bundle"/>
+  <baseDefinition value="http://hl7.org/fhir/uv/ips/StructureDefinition/Bundle-uv-ips"/>
+  <derivation value="constraint"/>
+  <differential>
+    <element id="Bundle">
+      <path value="Bundle"/>
+      <short value="AU Patient Summary Bundle"/>
+      <definition value="AU Patient Summary Bundle. &#xD;&#xA;A container for a collection of resources in the patient summary document in an Australian context."/>
+    </element>
+    <element id="Bundle.entry:composition">
+      <path value="Bundle.entry"/>
+      <sliceName value="composition"/>
+    </element>
+    <element id="Bundle.entry:composition.resource">
+      <path value="Bundle.entry.resource"/>
+      <type>
+        <code value="Composition"/>
+        <profile value="http://hl7.org.au/fhir/ps/StructureDefinition/au-ps-composition"/>
+      </type>
+    </element>
+     <element id="Bundle.entry:patient">
+      <path value="Bundle.entry"/>
+      <sliceName value="patient"/>
+    </element>
+    <element id="Bundle.entry:patient.resource">
+      <path value="Bundle.entry.resource"/>
+      <type>
+        <code value="Patient"/>
+        <profile value="http://hl7.org.au/fhir/ps/StructureDefinition/au-ps-patient"/>
+      </type>
+    </element>
+     <element id="Bundle.entry:allergyintolerance">
+      <path value="Bundle.entry"/>
+      <sliceName value="allergyintolerance"/>
+    </element>
+    <element id="Bundle.entry:allergyintolerance.resource">
+      <path value="Bundle.entry.resource"/>
+      <type>
+        <code value="AllergyIntolerance"/>
+        <profile value="http://hl7.org.au/fhir/ps/StructureDefinition/au-ps-allergyintolerance"/>
+      </type>
+    </element>
+    <element id="Bundle.entry:condition">
+      <path value="Bundle.entry"/>
+      <sliceName value="condition"/>
+    </element>
+    <element id="Bundle.entry:condition.resource">
+      <path value="Bundle.entry.resource"/>
+      <type>
+        <code value="Condition"/>
+        <profile value="http://hl7.org.au/fhir/ps/StructureDefinition/au-ps-condition"/>
+      </type>
+    </element>
+    <element id="Bundle.entry:immunization">
+      <path value="Bundle.entry"/>
+      <sliceName value="immunization"/>
+    </element>
+    <element id="Bundle.entry:immunization.resource">
+      <path value="Bundle.entry.resource"/>
+      <type>
+        <code value="Immunization"/>
+        <profile value="http://hl7.org.au/fhir/ps/StructureDefinition/au-ps-immunization"/>
+      </type>
+    </element>
+    <element id="Bundle.entry:medication">
+      <path value="Bundle.entry"/>
+      <sliceName value="medication"/>
+    </element>
+    <element id="Bundle.entry:medication.resource">
+      <path value="Bundle.entry.resource"/>
+      <type>
+        <code value="Medication"/>
+        <profile value="http://hl7.org.au/fhir/ps/StructureDefinition/au-ps-medication"/>
+      </type>
+    </element>
+    <element id="Bundle.entry:medicationrequest">
+      <path value="Bundle.entry"/>
+      <sliceName value="medicationrequest"/>
+    </element>
+    <element id="Bundle.entry:medicationrequest.resource">
+      <path value="Bundle.entry.resource"/>
+      <type>
+        <code value="MedicationRequest"/>
+        <profile value="http://hl7.org.au/fhir/ps/StructureDefinition/au-ps-medicationrequest"/>
+      </type>
+    </element>
+    <element id="Bundle.entry:medicationstatement">
+      <path value="Bundle.entry"/>
+      <sliceName value="medicationstatement"/>
+    </element>
+    <element id="Bundle.entry:medicationstatement.resource">
+      <path value="Bundle.entry.resource"/>
+      <type>
+        <code value="MedicationStatement"/>
+        <profile value="http://hl7.org.au/fhir/ps/StructureDefinition/au-ps-medicationstatement"/>
+      </type>
+    </element>
+    <element id="Bundle.entry:practitioner">
+      <path value="Bundle.entry"/>
+      <sliceName value="practitioner"/>
+    </element>
+    <element id="Bundle.entry:practitioner.resource">
+      <path value="Bundle.entry.resource"/>
+      <type>
+        <code value="Practitioner"/>
+        <profile value="http://hl7.org.au/fhir/ps/StructureDefinition/au-ps-practitioner"/>
+      </type>
+    </element>
+    <element id="Bundle.entry:practitionerrole">
+      <path value="Bundle.entry"/>
+      <sliceName value="practitionerrole"/>
+    </element>
+    <element id="Bundle.entry:practitionerrole.resource">
+      <path value="Bundle.entry.resource"/>
+      <type>
+        <code value="PractitionerRole"/>
+        <profile value="http://hl7.org.au/fhir/ps/StructureDefinition/au-ps-practitionerrole"/>
+      </type>
+    </element>
+    <element id="Bundle.entry:procedure">
+      <path value="Bundle.entry"/>
+      <sliceName value="procedure"/>
+    </element>
+    <element id="Bundle.entry:procedure.resource">
+      <path value="Bundle.entry.resource"/>
+      <type>
+        <code value="Procedure"/>
+        <profile value="http://hl7.org.au/fhir/ps/StructureDefinition/au-ps-procedure"/>
+      </type>
+    </element>
+    <element id="Bundle.entry:organization">
+      <path value="Bundle.entry"/>
+      <sliceName value="organization"/>
+    </element>
+    <element id="Bundle.entry:organization.resource">
+      <path value="Bundle.entry.resource"/>
+      <type>
+        <code value="Organization"/>
+        <profile value="http://hl7.org.au/fhir/ps/StructureDefinition/au-ps-organization"/>
+      </type>
+    </element>
+     <element id="Bundle.entry:encounter">
+      <path value="Bundle.entry"/>
+      <sliceName value="encounter"/>
+    </element>
+    <element id="Bundle.entry:encounter.resource">
+      <path value="Bundle.entry.resource"/>
+      <type>
+        <code value="Encounter"/>
+        <profile value="http://hl7.org.au/fhir/ps/StructureDefinition/au-ps-encounter"/>
+      </type>
+    </element>
+  </differential>
+</StructureDefinition>

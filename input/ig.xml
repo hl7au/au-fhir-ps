@@ -52,6 +52,12 @@
 		</resource>
 		<resource>
 			<reference>
+				<reference value="StructureDefinition/au-ps-bundle"/>
+			</reference>
+			<exampleBoolean value="false"/>
+		</resource>
+		<resource>
+			<reference>
 				<reference value="StructureDefinition/au-ps-condition"/>
 			</reference>
 			<exampleBoolean value="false"/>
