@@ -4,28 +4,433 @@
   <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-fmm">
     <valueInteger value="0"/> 
   </extension>
-  <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-compliesWithProfile">
+  <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-imposeProfile">
     <valueCanonical value="http://hl7.org/fhir/uv/ips/StructureDefinition/Composition-uv-ips"/>
   </extension>
   <url value="http://hl7.org.au/fhir/ps/StructureDefinition/au-ps-composition"/>
   <name value="AUPSComposition"/>
   <title value="AU PS Composition"/>
   <status value="draft"/>
-  <description value="This profile sets minimum expectations for a Composition resource in the context of a patient summary in an Australian context. It is based on [Composition (IPS)](http://hl7.org/fhir/uv/ips/StructureDefinition/Composition-uv-ips) and AU Patient Summary."/>
+  <description value="This profile sets minimum expectations for a Composition resource in the context of a patient summary in an Australian context. It is based on [AU Base Composition](http://hl7.org.au/fhir/StructureDefinition/au-composition) and imposes [Composition (IPS)](http://hl7.org/fhir/uv/ips/StructureDefinition/Composition-uv-ips)."/>
   <kind value="resource"/>
   <abstract value="false"/>
   <type value="Composition"/>
-  <baseDefinition value="http://hl7.org/fhir/uv/ips/StructureDefinition/Composition-uv-ips"/>
+  <baseDefinition value="http://hl7.org.au/fhir/StructureDefinition/au-composition"/>
   <derivation value="constraint"/>
   <differential>
     <element id="Composition">
       <path value="Composition"/>
-      <short value="AU Patient Summary composition"/>
-      <definition value="AU Patient Summary composition. &#xD;&#xA;A composition is a set of healthcare-related information that is assembled together into a single logical document that provides a single coherent statement of meaning, establishes its own context and that has clinical attestation with regard to who is making the statement. &#xD;&#xA;While a Composition defines the structure, it does not actually contain the content: rather the full content of a document is contained in a Bundle, of which the Composition is the first resource contained."/>
+      <short value="Patient Summary composition"/>
     </element>
-  </differential>
-  <element id="Composition.section:sectionProblems">
+    <element id="Composition.text">
+      <path value="Composition.text"/>
+      <mustSupport value="true"/>
+    </element>
+    <element id="Composition.identifier">
+      <path value="Composition.identifier"/>
+      <mustSupport value="true"/>
+    </element>
+    <element id="Composition.status">
+      <path value="Composition.status"/>
+      <mustSupport value="true"/>
+    </element>
+    <element id="Composition.type">
+      <path value="Composition.type"/>
+      <short value="Kind of composition (&quot;Patient Summary&quot;)"/>
+      <type>
+        <code value="CodeableConcept"/>
+        <profile value="http://hl7.org/fhir/uv/ips/StructureDefinition/CodeableConcept-uv-ips"/>
+      </type>
+      <patternCodeableConcept>
+        <coding>
+          <system value="http://loinc.org"/>
+          <code value="60591-5"/>
+        </coding>
+      </patternCodeableConcept>
+      <mustSupport value="true"/>
+    </element>
+    <element id="Composition.subject">
+      <path value="Composition.subject"/>
+      <definition value="Who or what the composition is about.&#xD;&#xA;In general a composition can be about a person, (patient or healthcare practitioner), a device (e.g. a machine) or even a group of subjects (such as a document about a herd of livestock, or a set of patients that share a common exposure).&#xD;&#xA;For the AU PS the subject is always the patient."/>
+      <min value="1"/>
+      <type>
+        <code value="Reference"/>
+        <targetProfile value="http://hl7.org.au/fhir/ps/StructureDefinition/au-ps-patient"/>
+      </type>
+      <mustSupport value="true"/>
+    </element>
+    <element id="Composition.subject.reference">
+      <path value="Composition.subject.reference"/>
+      <min value="1"/>
+      <mustSupport value="true"/>
+    </element>
+    <element id="Composition.date">
+      <path value="Composition.date"/>
+      <mustSupport value="true"/>
+    </element>
+    <element id="Composition.author">
+      <path value="Composition.author"/>
+      <short value="Who and/or what authored the patient summary"/>
+      <type>
+        <code value="Reference"/>
+        <targetProfile value="http://hl7.org.au/fhir/ps/StructureDefinition/au-ps-practitioner"/>
+        <targetProfile value="http://hl7.org.au/fhir/ps/StructureDefinition/au-ps-practitionerrole"/>
+        <targetProfile value="http://hl7.org/fhir/StructureDefinition/Device"/>
+        <targetProfile value="http://hl7.org.au/fhir/ps/StructureDefinition/au-ps-patient"/>
+        <targetProfile value="http://hl7.org.au/fhir/StructureDefinition/au-relatedperson"/>
+        <targetProfile value="http://hl7.org.au/fhir/ps/StructureDefinition/au-ps-organization"/>
+      </type>
+      <mustSupport value="true"/>
+    </element>
+    <element id="Composition.title">
+      <path value="Composition.title"/>
+      <short value="Patient Summary"/>
+      <mustSupport value="true"/>
+    </element>
+    <element id="Composition.attester">
+      <path value="Composition.attester"/>
+      <mustSupport value="true"/>
+    </element>
+    <element id="Composition.attester.mode">
+      <path value="Composition.attester.mode"/>
+      <mustSupport value="true"/>
+    </element>
+    <element id="Composition.attester.time">
+      <path value="Composition.attester.time"/>
+      <mustSupport value="true"/>
+    </element>
+    <element id="Composition.attester.party">
+      <path value="Composition.attester.party"/>
+      <mustSupport value="true"/>
+    </element>
+    <element id="Composition.custodian">
+      <path value="Composition.custodian"/>
+      <mustSupport value="true"/>
+    </element>
+    <element id="Composition.relatesTo.target[x]">
+      <path value="Composition.relatesTo.target[x]"/>
+      <type>
+        <code value="Identifier"/>
+      </type>
+      <type>
+        <code value="Reference"/>
+        <targetProfile value="http://hl7.org/fhir/StructureDefinition/Composition"/>
+        <targetProfile value="http://hl7.org/fhir/uv/ips/StructureDefinition/Composition-uv-ips"/>
+        <targetProfile value="http://hl7.org.au/fhir/ps/StructureDefinition/au-ps-composition"/>
+      </type>
+    </element>
+    <element id="Composition.event">
+      <path value="Composition.event"/>
+      <slicing>
+        <discriminator>
+          <type value="pattern"/>
+          <path value="code"/>
+        </discriminator>
+        <rules value="open"/>
+      </slicing>
+      <definition value="The main activity being described by a IPS is the provision of healthcare over a period of time. &#xD;&#xA;In the CDA representation of the IPS this is shown by setting the value of serviceEvent/@classCode to “PCPR” (care provision) and indicating the duration over which care was provided in serviceEvent/effectiveTime. &#xD;&#xA;In the FHIR representation at least one event should be used to record this information.&#xD;&#xA;Additional data from outside this duration may also be included if it is relevant to care provided during that time range (e.g., reviewed during the stated time range). For example if the IPS is generated by a GP based on information recorded in his/her EHR-S, then the start value should represent the date when the treatment relationship between the patient and the GP started; and the end value the date of the latest care event."/>
+    </element>
+    <element id="Composition.event:careProvisioningEvent">
+      <path value="Composition.event"/>
+      <sliceName value="careProvisioningEvent"/>
+      <short value="The care provisioning being documented"/>
+      <min value="0"/>
+      <max value="1"/>
+      <mustSupport value="true"/>
+    </element>
+    <element id="Composition.event:careProvisioningEvent.code">
+      <path value="Composition.event.code"/>
+      <min value="1"/>
+      <max value="1"/>
+      <patternCodeableConcept>
+        <coding>
+          <system value="http://terminology.hl7.org/CodeSystem/v3-ActClass"/>
+          <code value="PCPR"/>
+        </coding>
+      </patternCodeableConcept>
+      <mustSupport value="true"/>
+    </element>
+    <element id="Composition.event:careProvisioningEvent.period">
+      <path value="Composition.event.period"/>
+      <mustSupport value="true"/>
+    </element>
+    <element id="Composition.section">
+      <path value="Composition.section"/>
+      <slicing>
+        <discriminator>
+          <type value="pattern"/>
+          <path value="code"/>
+        </discriminator>
+        <ordered value="false"/>
+        <rules value="open"/>
+      </slicing>
+      <short value="Sections composing the patient summary"/>
+      <min value="3"/>
+      <mustSupport value="true"/>
+    </element>
+    <element id="Composition.section.extension">
+      <path value="Composition.section.extension"/>
+      <slicing>
+        <discriminator>
+          <type value="value"/>
+          <path value="url"/>
+        </discriminator>
+        <ordered value="false"/>
+        <rules value="open"/>
+      </slicing>
+    </element>
+    <element id="Composition.section.extension:section-note">
+      <path value="Composition.section.extension"/>
+      <sliceName value="section-note"/>
+      <short value="Additional notes that apply to the section (but not to specific resource)."/>
+      <min value="0"/>
+      <max value="1"/>
+      <type>
+        <code value="Extension"/>
+        <profile value="http://hl7.org/fhir/StructureDefinition/note"/>
+      </type>
+    </element>
+    <element id="Composition.section.text">
+      <path value="Composition.section.text"/>
+      <min value="1"/>
+      <mustSupport value="true"/>
+    </element>
+    <element id="Composition.section.section">
+      <path value="Composition.section.section"/>
+      <max value="0"/>
+    </element>
+    <element id="Composition.section:sectionProblems">
       <path value="Composition.section"/>
       <sliceName value="sectionProblems"/>
+      <short value="IPS Problems Section"/>
+      <min value="1"/>
+      <max value="1"/>
+      <mustSupport value="true"/>
     </element>
+    <element id="Composition.section:sectionProblems.title">
+      <path value="Composition.section.title"/>
+      <min value="1"/>
+      <mustSupport value="true"/>
+    </element>
+    <element id="Composition.section:sectionProblems.code">
+      <path value="Composition.section.code"/>
+      <min value="1"/>
+      <type>
+        <code value="CodeableConcept"/>
+        <profile value="http://hl7.org/fhir/uv/ips/StructureDefinition/CodeableConcept-uv-ips"/>
+      </type>
+      <patternCodeableConcept>
+        <coding>
+          <system value="http://loinc.org"/>
+          <code value="11450-4"/>
+        </coding>
+      </patternCodeableConcept>
+    </element>
+    <element id="Composition.section:sectionProblems.entry">
+      <path value="Composition.section.entry"/>
+      <slicing>
+        <discriminator>
+          <type value="profile"/>
+          <path value="resolve()"/>
+        </discriminator>
+        <rules value="open"/>
+      </slicing>
+      <short value="Clinical problems or conditions currently being monitored for the patient."/>
+      <type>
+        <code value="Reference"/>
+        <targetProfile value="http://hl7.org/fhir/StructureDefinition/Condition"/>
+        <targetProfile value="http://hl7.org/fhir/StructureDefinition/DocumentReference"/>
+      </type>
+      <mustSupport value="true"/>
+    </element>
+    <element id="Composition.section:sectionProblems.entry:problem">
+      <path value="Composition.section.entry"/>
+      <sliceName value="problem"/>
+      <min value="0"/>
+      <max value="*"/>
+      <type>
+        <code value="Reference"/>
+        <targetProfile value="http://hl7.org.au/fhir/ps/StructureDefinition/au-ps-condition"/>
+      </type>
+      <mustSupport value="true"/>
+    </element>
+    <element id="Composition.section:sectionAllergies">
+      <path value="Composition.section"/>
+      <sliceName value="sectionAllergies"/>
+      <short value="IPS Allergies and Intolerances Section"/>
+      <min value="1"/>
+      <max value="1"/>
+      <mustSupport value="true"/>
+    </element>
+    <element id="Composition.section:sectionAllergies.title">
+      <path value="Composition.section.title"/>
+      <min value="1"/>
+      <mustSupport value="true"/>
+    </element>
+    <element id="Composition.section:sectionAllergies.code">
+      <path value="Composition.section.code"/>
+      <min value="1"/>
+      <type>
+        <code value="CodeableConcept"/>
+        <profile value="http://hl7.org/fhir/uv/ips/StructureDefinition/CodeableConcept-uv-ips"/>
+      </type>
+      <patternCodeableConcept>
+        <coding>
+          <system value="http://loinc.org"/>
+          <code value="48765-2"/>
+        </coding>
+      </patternCodeableConcept>
+    </element>
+    <element id="Composition.section:sectionAllergies.entry">
+      <path value="Composition.section.entry"/>
+      <slicing>
+        <discriminator>
+          <type value="profile"/>
+          <path value="resolve()"/>
+        </discriminator>
+        <rules value="open"/>
+      </slicing>
+      <short value="Relevant allergies or intolerances (conditions) for that patient."/>
+      <type>
+        <code value="Reference"/>
+        <targetProfile value="http://hl7.org/fhir/StructureDefinition/AllergyIntolerance"/>
+        <targetProfile value="http://hl7.org/fhir/StructureDefinition/DocumentReference"/>
+      </type>
+      <mustSupport value="true"/>
+    </element>
+    <element id="Composition.section:sectionAllergies.entry:allergyOrIntolerance">
+      <path value="Composition.section.entry"/>
+      <sliceName value="allergyOrIntolerance"/>
+      <min value="0"/>
+      <max value="*"/>
+      <type>
+        <code value="Reference"/>
+        <targetProfile value="http://hl7.org.au/fhir/ps/StructureDefinition/au-ps-allergyintolerance"/>
+      </type>
+      <mustSupport value="true"/>
+    </element>
+    <element id="Composition.section:sectionMedications">
+      <path value="Composition.section"/>
+      <sliceName value="sectionMedications"/>
+      <short value="IPS Medication Summary Section"/>
+      <min value="1"/>
+      <max value="1"/>
+      <mustSupport value="true"/>
+    </element>
+    <element id="Composition.section:sectionMedications.title">
+      <path value="Composition.section.title"/>
+      <short value="Medication Summary section"/>
+      <min value="1"/>
+      <mustSupport value="true"/>
+    </element>
+    <element id="Composition.section:sectionMedications.code">
+      <path value="Composition.section.code"/>
+      <min value="1"/>
+      <type>
+        <code value="CodeableConcept"/>
+        <profile value="http://hl7.org/fhir/uv/ips/StructureDefinition/CodeableConcept-uv-ips"/>
+      </type>
+      <patternCodeableConcept>
+        <coding>
+          <system value="http://loinc.org"/>
+          <code value="10160-0"/>
+        </coding>
+      </patternCodeableConcept>
+    </element>
+    <element id="Composition.section:sectionMedications.entry">
+      <path value="Composition.section.entry"/>
+      <slicing>
+        <discriminator>
+          <type value="profile"/>
+          <path value="resolve()"/>
+        </discriminator>
+        <rules value="open"/>
+      </slicing>
+      <short value="Medications relevant for the scope of the patient summary"/>
+      <type>
+        <code value="Reference"/>
+        <targetProfile value="http://hl7.org/fhir/StructureDefinition/MedicationStatement"/>
+        <targetProfile value="http://hl7.org/fhir/StructureDefinition/MedicationRequest"/>
+        <targetProfile value="http://hl7.org/fhir/StructureDefinition/MedicationAdministration"/>
+        <targetProfile value="http://hl7.org/fhir/StructureDefinition/MedicationDispense"/>
+        <targetProfile value="http://hl7.org/fhir/StructureDefinition/DocumentReference"/>
+      </type>
+      <mustSupport value="true"/>
+    </element>
+    <element id="Composition.section:sectionMedications.entry:medicationStatement">
+      <path value="Composition.section.entry"/>
+      <sliceName value="medicationStatement"/>
+      <min value="0"/>
+      <max value="*"/>
+      <type>
+        <code value="Reference"/>
+        <targetProfile value="http://hl7.org.au/fhir/ps/StructureDefinition/au-ps-medicationstatement"/>
+      </type>
+    </element>
+    <element id="Composition.section:sectionMedications.entry:medicationRequest">
+      <path value="Composition.section.entry"/>
+      <sliceName value="medicationRequest"/>
+      <min value="0"/>
+      <max value="*"/>
+      <type>
+        <code value="Reference"/>
+        <targetProfile value="http://hl7.org.au/fhir/ps/StructureDefinition/au-ps-medicationrequest"/>
+      </type>
+    </element>
+    <element id="Composition.section:sectionImmunizations">
+      <path value="Composition.section"/>
+      <sliceName value="sectionImmunizations"/>
+      <short value="Immunizations Section"/>
+      <min value="0"/>
+      <max value="1"/>
+      <mustSupport value="true"/>
+    </element>
+    <element id="Composition.section:sectionImmunizations.title">
+      <path value="Composition.section.title"/>
+      <min value="1"/>
+      <mustSupport value="true"/>
+    </element>
+    <element id="Composition.section:sectionImmunizations.code">
+      <path value="Composition.section.code"/>
+      <min value="1"/>
+      <type>
+        <code value="CodeableConcept"/>
+        <profile value="http://hl7.org/fhir/uv/ips/StructureDefinition/CodeableConcept-uv-ips"/>
+      </type>
+      <patternCodeableConcept>
+        <coding>
+          <system value="http://loinc.org"/>
+          <code value="11369-6"/>
+        </coding>
+      </patternCodeableConcept>
+    </element>
+    <element id="Composition.section:sectionImmunizations.entry">
+      <path value="Composition.section.entry"/>
+      <slicing>
+        <discriminator>
+          <type value="profile"/>
+          <path value="resolve()"/>
+        </discriminator>
+        <rules value="open"/>
+      </slicing>
+      <short value="Patient's immunization status and pertinent history."/>
+      <type>
+        <code value="Reference"/>
+        <targetProfile value="http://hl7.org/fhir/StructureDefinition/Immunization"/>
+        <targetProfile value="http://hl7.org/fhir/StructureDefinition/DocumentReference"/>
+      </type>
+      <mustSupport value="true"/>
+    </element>
+    <element id="Composition.section:sectionImmunizations.entry:immunization">
+      <path value="Composition.section.entry"/>
+      <sliceName value="immunization"/>
+      <min value="0"/>
+      <max value="*"/>
+      <type>
+        <code value="Reference"/>
+        <targetProfile value="http://hl7.org.au/fhir/ps/StructureDefinition/au-ps-immunization"/>
+      </type>
+      <mustSupport value="true"/>
+    </element>
+  </differential>
 </StructureDefinition>
