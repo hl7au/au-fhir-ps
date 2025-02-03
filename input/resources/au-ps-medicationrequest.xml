@@ -104,7 +104,7 @@
       <path value="MedicationRequest.encounter"/>
       <type>
         <code value="Reference"/>
-        <targetProfile value="http://hl7.org.au/fhir/core/StructureDefinition/au-core-encounter"/>
+        <targetProfile value="http://hl7.org.au/fhir/ps/StructureDefinition/au-ps-encounter"/>
       </type>
       <mustSupport value="true"/>
     </element>
