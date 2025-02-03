@@ -101,10 +101,22 @@
     </element>
     <element id="Composition.attester.party">
       <path value="Composition.attester.party"/>
+      <type>
+        <code value="Reference"/>
+        <targetProfile value="http://hl7.org.au/fhir/ps/StructureDefinition/au-ps-patient"/>
+        <targetProfile value="http://hl7.org.au/fhir/StructureDefinition/au-relatedperson"/>
+        <targetProfile value="http://hl7.org.au/fhir/ps/StructureDefinition/au-ps-practitioner"/>
+        <targetProfile value="http://hl7.org.au/fhir/ps/StructureDefinition/au-ps-practitionerrole"/>        
+        <targetProfile value="http://hl7.org.au/fhir/ps/StructureDefinition/au-ps-organization"/>
+      </type>
       <mustSupport value="true"/>
     </element>
     <element id="Composition.custodian">
       <path value="Composition.custodian"/>
+      <type>
+        <code value="Reference"/>   
+        <targetProfile value="http://hl7.org.au/fhir/ps/StructureDefinition/au-ps-organization"/>
+      </type>
       <mustSupport value="true"/>
     </element>
     <element id="Composition.relatesTo.target[x]">
@@ -366,6 +378,7 @@
         <code value="Reference"/>
         <targetProfile value="http://hl7.org.au/fhir/ps/StructureDefinition/au-ps-medicationstatement"/>
       </type>
+      <mustSupport value="true"/>
     </element>
     <element id="Composition.section:sectionMedications.entry:medicationRequest">
       <path value="Composition.section.entry"/>
@@ -376,6 +389,7 @@
         <code value="Reference"/>
         <targetProfile value="http://hl7.org.au/fhir/ps/StructureDefinition/au-ps-medicationrequest"/>
       </type>
+      <mustSupport value="true"/>
     </element>
     <element id="Composition.section:sectionImmunizations">
       <path value="Composition.section"/>
