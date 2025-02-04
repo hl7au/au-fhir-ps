@@ -9,8 +9,6 @@ Corresponding profiles, conformance requirements, and capability statements incl
 
 The below comparison evaluates AU Patient Summary conformance requirements with the key implementation guides identifying where compliance with AU Patient Summary satisfies the expectations established by the referenced implementation guide. 
 
-At this time only TBD is available. 
-
 ### Profile comparison
 As part of profile comparison, the requirements, constraints, and standards specified in a particular FHIR profile are evaluated. These requirements can include mandatory elements, must support elements, cardinality constraints, data types, terminology bindings, usage rules, extensions, rules on missing or suppressed data. 
 
