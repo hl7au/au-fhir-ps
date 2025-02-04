@@ -299,7 +299,7 @@
       <min value="1"/>
       <type>
         <code value="Organization"/>
-        <profile value="http://hl7.org/fhir/uv/ips/StructureDefinition/Organization-uv-ips"/>
+        <profile value="http://hl7.org.au/fhir/ps/StructureDefinition/au-ps-organization"/>
       </type>
     </element>
     <element id="Bundle.entry:observation-pregnancy-edd">

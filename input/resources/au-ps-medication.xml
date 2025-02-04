@@ -27,6 +27,10 @@
     <element id="Medication.code">
       <path value="Medication.code"/>
       <min value="1"/>
+      <type>
+				<code value="CodeableConcept"/>
+				<profile value="http://hl7.org/fhir/uv/ips/StructureDefinition/CodeableConcept-uv-ips"/>
+			</type>
       <mustSupport value="true"/>
     </element>
     <element id="Medication.code.coding">
@@ -75,6 +79,11 @@
 				<code value="CodeableConcept"/>
 				<profile value="http://hl7.org/fhir/uv/ips/StructureDefinition/CodeableConcept-uv-ips"/>
 			</type>
+      <type>
+        <code value="Reference"/>
+        <targetProfile value="http://hl7.org/fhir/StructureDefinition/Substance"/>
+        <targetProfile value="http://hl7.org/fhir/StructureDefinition/Medication"/>
+      </type>
 			<mustSupport value="true"/>
 		</element>
 		<element id="Medication.ingredient.strength">
