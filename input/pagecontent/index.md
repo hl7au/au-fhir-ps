@@ -44,18 +44,18 @@ Supported by the PS CFG, the AU PS Project Team will develop a set of technical 
 This guide is divided into several pages which are listed at the top of each page in the menu bar.
 
 - [Home](index.html): This page provides the introduction and scope for this guide.
-- [Guidance](guidance.html): This is a placeholder for when content becomes available.
-  - [General Guidance](general-guidance.html): This page is a placeholder for general guidance in this guide.
+- [Guidance](guidance.html): These pages list the guidance for this guide.
+  - [General Guidance](general-guidance.html): This page provides guidance on using the profiles defined in this guide. There is currently none.
   - [Sex and Gender](sex-and-gender.html): This page provides guidance on the representation of sex, gender, and related concepts.
   - [Relationship with other IGs](relationship.html): This page provides guidance on the relationship between AU Patient Summary, AUCDI, and other implementation guides.
   - [AU Variance Statement](variance.html): This page documents the variance from AU Base and AU Core.
   - [Comparison with other national and international IGs](comparison.html): This page provides comparison between AU Patient Summary profiles and other national and international implementation guides.
   - [Future of AU Patient Summary](future.html): This page outlines the approach to developing AU Patient Summary.
-- [FHIR Artefacts](artefacts.html): This is a placeholder for when content becomes available.
-  - [Artefacts Summary](artifacts.html): This is a placeholder for when content becomes available.
-  - [Profiles and Extensions](profiles-and-extensions.html): This is a placeholder for when content becomes available.
-  - [Terminology](terminology.html): This is a placeholder for when content becomes available.
-- [Examples](examples.html): This is a placeholder for when content becomes available.
+- [FHIR Artefacts](artefacts.html): These pages provide detailed descriptions and formal definitions for all the FHIR artefacts defined in this guide.
+  - [Artefacts Summary](artifacts.html): This page lists the FHIR artefacts defined in this guide.
+  - [Profiles and Extensions](profiles-and-extensions.html): This page describes the profiles and extensions that are defined in this guide to exchange data. Each profile page includes a narrative description and guidance, formal definition and a "Notes" section that summarises the supported search transactions for each profile. Guidance typically focuses on the profiled elements but can include guidance on un-profiled elements to aid with implementation.
+  - [Terminology](terminology.html): This page lists the value sets and code systems supported in this guide.
+- [Examples](examples.html): This page lists all the examples used in this guide. There are currently no examples.
 - [Support](downloads.html): These pages provide supporting material for implementation of AU Patient Summary.
   - [Downloads](downloads.html): This page provides links to downloadable artefacts.
   - [License and Legal](license.html): This page outlines the license and legal requirements for material in AU Patient Summary.

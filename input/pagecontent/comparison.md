@@ -172,15 +172,15 @@ The following IPA profile(s) contain additional requirements. Implementers are a
     </thead>
     <tbody>
         <tr>
-            <td style="width: 25%;"><a href="StructureDefinition-au-ps-immunization.html">AU Core Immunization</a></td>
+            <td style="width: 25%;"><a href="StructureDefinition-au-ps-immunization.html">AU PS Immunization</a></td>
             <td style="width: 25%;"><a href="https://hl7.org/fhir/uv/ipa/STU1/StructureDefinition-ipa-immunization.html">IPA-Immunization</a></td>
             <td style="width: 25%;">Immunization.statusReason</td>
             <td style="width: 25%;"><i>Must Support</i> element in IPA.</td>
         </tr>
         <tr>
-            <td style="width: 25%;"><a href="StructureDefinition-au-ps-medicationrequest.html">AU Core MedicationRequest</a></td>
+            <td style="width: 25%;"><a href="StructureDefinition-au-ps-medicationrequest.html">AU PS MedicationRequest</a></td>
             <td style="width: 25%;"><a href="https://hl7.org/fhir/uv/ipa/STU1/StructureDefinition-ipa-medicationrequest.html">IPA-MedicationRequest</a></td>
-            <td style="width: 25%;">>MedicationRequest.reported[x]</td>
+            <td style="width: 25%;">MedicationRequest.reported[x]</td>
             <td style="width: 25%;"><i>Must Support</i> element in IPA.</td>
         </tr>
         <tr>
