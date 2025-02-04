@@ -1,5 +1,6 @@
 - [General Guidance](general-guidance.html)
-- [AUCDI](aucdi.html)
+- [Sex and Gender](sex-and-gender.html)
+- [AU Core Data for Interoperability](aucdi.html)
 - [Relationship with other IGs](relationship.html)
 - [AU Variance Statement](variance.html)
 - [Comparison with other national and international IGs](comparison.html)

@@ -26,12 +26,10 @@ All examples included in this implementation guide are available for download:
 
 ### Consolidated CSV and Excel file representations of profiles 
 
-TBD
-
-<!-- All the profile information for the {{site.data.fhir.ig.title}} in a single CSV or Excel file, which may be helpful to testers and analysts to review element properties across profiles in a single table:
+All the profile information for the {{site.data.fhir.ig.title}} in a single CSV or Excel file, which may be helpful to testers and analysts to review element properties across profiles in a single table:
 
 - [CSV(compressed folder)](csvs.zip)
-- [Excel(compressed folder)](excels.zip) -->
+- [Excel(compressed folder)](excels.zip)
 
 ### Implementation Guide Details
 
