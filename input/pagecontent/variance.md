@@ -9,6 +9,13 @@ HL7 Australia published FHIR implementation guides are required to follow specif
 ### Variance from AU Base
 This implementation guide has no variance (i.e. fully compliant) from AU Base FHIR Implementation Guide version 5.0.1-ci-build ([current](https://build.fhir.org/ig/hl7au/au-fhir-base/)).
 
+#### Additionally Profiled Resources
+
+This implementation guide profiles the following resources that are not profiled in AU Base:
+
+- [AU PS Bundle](StructureDefinition-au-ps-bundle.html) profiles FHIR resource [Bundle](http://hl7.org/fhir/R4/bundle.html)
+
+
 ### Variance from AU Core
 This implementation guide has no variance (i.e. fully compliant) from AU Core FHIR Implementation Guide version 1.0.1-ci-build ([current](https://build.fhir.org/ig/hl7au/au-fhir-core/)).
 
@@ -16,4 +23,6 @@ This implementation guide has no variance (i.e. fully compliant) from AU Core FH
 
 This implementation guide profiles the following resources that are not profiled in AU Core:
 
+- [AU PS Bundle](StructureDefinition-au-ps-bundle.html) profiles FHIR resource [Bundle](http://hl7.org/fhir/R4/bundle.html)
+- [AU PS Composition](StructureDefinition-au-ps-composition.html) profiles FHIR resource [Composition](http://hl7.org/fhir/R4/composition.html)
 - [AU PS MedicationStatement](StructureDefinition-au-ps-medicationstatement.html) profiles FHIR resource [MedicationStatement](http://hl7.org/fhir/R4/medicationstatement.html)
