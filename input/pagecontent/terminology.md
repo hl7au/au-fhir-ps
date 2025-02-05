@@ -78,12 +78,12 @@ Column attribute descriptions are as follows:
 
 See the [FHIR terminology section]({{site.data.fhir.path}}terminologies-systems.html) for a complete discussion on code systems and a list of code system names used in FHIR. 
 
-The following code systems are referenced by the value sets listed above.
+The following code systems are referenced by the value sets listed above or are the code system for a fixed value in an AU PS profile.
 
 Column attribute descriptions are as follows:
 <ul>
   <li><strong>CodeSystem:</strong> The title of a code system.</li>
-  <li><strong>ValueSet where used:</strong> The value set(s) that reference the code system.</li>
+  <li><strong>ValueSet where used:</strong> The value set(s) that reference the code system or the profile where a fixed value is applied.</li>
   <li><strong>Available from:</strong> Where the code system is published.</li>
   <li><strong>Publisher:</strong> Identifies the organisation responsible for maintaining the code system.</li>
 </ul>
@@ -91,7 +91,7 @@ Column attribute descriptions are as follows:
 |CodeSystem|ValueSet where used|Available from|Publisher|
 |---|---|---|---|
 |[ActCode AU](https://build.fhir.org/ig/hl7au/au-fhir-base/CodeSystem-au-v3-ActCode.html)|[ActEncounterCode - AU Extended](https://build.fhir.org/ig/hl7au/au-fhir-base/ValueSet-au-v3-ActEncounterCode-extended.html)|AU Base|HL7 Australia|
-|[ActCode](https://terminology.hl7.org/5.3.0/CodeSystem-v3-ActCode.html)|[ActEncounterCode](https://terminology.hl7.org/5.5.0/ValueSet-v3-ActEncounterCode.html)|HL7 Terminology (THO)|Health Level Seven International|
+|[ActCode](https://terminology.hl7.org/5.3.0/CodeSystem-v3-ActCode.html)|[ActEncounterCode](https://terminology.hl7.org/5.5.0/ValueSet-v3-ActEncounterCode.html), [AU PS Composition](StructureDefinition-au-ps-composition.html)|HL7 Terminology (THO)|Health Level Seven International|
 |[AddressUse](https://hl7.org/fhir/R4/codesystem-address-use.html)|[AddressUse](https://hl7.org/fhir/R4/valueset-address-use.html)|FHIR|Health Level Seven International|
 |[AddressType](https://hl7.org/fhir/R4/codesystem-address-type.html)|[AddressType](https://hl7.org/fhir/R4/valueset-address-type.html)|FHIR|Health Level Seven International|
 |[AdministrativeGender](https://hl7.org/fhir/R4/codesystem-administrative-gender.html)|[AdministrativeGender](https://hl7.org/fhir/R4/valueset-administrative-gender.html)|FHIR|Health Level Seven International|
@@ -116,7 +116,7 @@ Column attribute descriptions are as follows:
 |[Location Type (Physical) AU](https://build.fhir.org/ig/hl7au/au-fhir-base/CodeSystem-au-location-physical-type.html)|[Location Type (Physical) - AU Extended](https://build.fhir.org/ig/hl7au/au-fhir-base/ValueSet-au-location-physical-type-extended.html)|AU Base|HL7 Australia|
 |[Location Type AU](https://build.fhir.org/ig/hl7au/au-fhir-base/CodeSystem-au-location-type.html)|[ServiceDeliveryLocationRoleType - AU Extended](https://build.fhir.org/ig/hl7au/au-fhir-base/ValueSet-au-v3-ServiceDeliveryLocationRoleType-extended.html)|AU Base|HL7 Australia|
 |[LocationStatus](https://hl7.org/fhir/R4/codesystem-location-status.html)|[LocationStatus](https://hl7.org/fhir/R4/valueset-location-status.html)|FHIR|Health Level Seven International|
-|[LOINC](https://www.healthterminologies.gov.au/access-clinical-terminology/access-fhir-terminology-resources/code-systems/?ui:filter=loinc)|[Australian Pronouns](https://healthterminologies.gov.au/fhir/ValueSet/australian-pronouns-1), [RCPA SPIA Pathology Reporting](https://healthterminologies.gov.au/fhir/ValueSet/spia-pathology-reporting-1), [Vital Signs](http://hl7.org/fhir/R4/valueset-observation-vitalsignresult.html)|NCTS, HL7 Terminology (THO)|Regenstrief Institute, Inc|
+|[LOINC](https://www.healthterminologies.gov.au/access-clinical-terminology/access-fhir-terminology-resources/code-systems/?ui:filter=loinc)|[Australian Pronouns](https://healthterminologies.gov.au/fhir/ValueSet/australian-pronouns-1), [RCPA SPIA Pathology Reporting](https://healthterminologies.gov.au/fhir/ValueSet/spia-pathology-reporting-1), [Vital Signs](http://hl7.org/fhir/R4/valueset-observation-vitalsignresult.html), [AU PS Composition](StructureDefinition-au-ps-composition.html)|NCTS, HL7 Terminology (THO)|Regenstrief Institute, Inc|
 |[Medication request intent](https://hl7.org/fhir/R4/codesystem-medicationrequest-intent.html)|[Medication request intent](https://hl7.org/fhir/R4/valueset-medicationrequest-intent.html)|FHIR|Health Level Seven International|
 |[MedicationRequest status](https://hl7.org/fhir/R4/codesystem-medicationrequest-status.html)|[Medicationrequest status](https://hl7.org/fhir/R4/valueset-medicationrequest-status.html)|FHIR|Health Level Seven International|
 |[NameUse](https://hl7.org/fhir/R4/codesystem-name-use.html)|[NameUse](https://hl7.org/fhir/R4/valueset-name-use.html)|FHIR|Health Level Seven International|
