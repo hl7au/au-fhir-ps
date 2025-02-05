@@ -69,7 +69,7 @@ The table below provides a profile only comparison from AU Patient Summary to pr
         </tr>
         <tr>
             <td style="width: 25%; text-align: left; vertical-align: middle;"><a href="StructureDefinition-au-ps-immunization.html">AU Core Immunization</a></td>
-            <td style="width: 25%; text-align: center; vertical-align: middle;"><img src="green_checkmark.svg.png" width="20"/></td>
+            <td style="width: 25%; text-align: center; vertical-align: middle;"><img src="orange)checkmark.svg.png" width="20"/></td>
             <td style="width: 25%; text-align: center; vertical-align: middle;"><img src="green_checkmark.svg.png" width="20"/></td>
             <td style="width: 25%; text-align: center; vertical-align: middle;"><img src="green_checkmark.svg.png" width="20"/></td>
         </tr>
@@ -200,10 +200,6 @@ The following IPA profile(s) contain additional requirements. Implementers are a
         </tr>
         <tr>
             <td style="width: 25%;">MedicationStatement.statusReason</td>
-            <td style="width: 25%;"><i>Must Support</i> element in IPA.</td>
-        </tr>
-        <tr>
-            <td style="width: 25%;">MedicationStatement.context</td>
             <td style="width: 25%;"><i>Must Support</i> element in IPA.</td>
         </tr>
         <tr>

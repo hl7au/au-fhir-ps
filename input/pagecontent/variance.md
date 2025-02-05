@@ -1,4 +1,4 @@
-This version of the AU PS FHIR IG complies with [Version 1.0 of the HL7 Australia FHIR Work Group AU Variance Requirements](https://hl7.org.au/fhir/HL7%20AU%20Variance%20Requirements%20v1.0.pdf).
+This version of the AU Patient Summary (AU PS) complies with [Version 1.0 of the HL7 Australia FHIR Work Group AU Variance Requirements](https://hl7.org.au/fhir/HL7%20AU%20Variance%20Requirements%20v1.0.pdf).
 
 HL7 Australia published FHIR implementation guides are required to follow specific publishing requirements:
 - **SHOULD** use AU Core profiles

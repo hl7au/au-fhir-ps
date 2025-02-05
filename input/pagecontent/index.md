@@ -44,8 +44,8 @@ Supported by the PS CFG, the AU PS Project Team will develop a set of technical 
 This guide is divided into several pages which are listed at the top of each page in the menu bar.
 
 - [Home](index.html): This page provides the introduction and scope for this guide.
-- [Conformance](conformance.html): These pages describe the set of rules to claim conformance to this guide including the expectations for *Must Support*  elements in AU Core profiles.
-  - [General Requirements](general-requirements.html): This page defines requirements common to profiles used in this guideincluding the expectations for mandatory and *Must Support*  elements in AU PS profiles.
+- [Conformance](conformance.html): These pages describe the set of rules to claim conformance to this guide including the expectations for *Must Support*  elements in AU PS profiles.
+  - [General Requirements](general-requirements.html): This page defines requirements common to profiles used in this guide including the expectations for mandatory and *Must Support*  elements in AU PS profiles.
   - [Declaring Conformance](declaring-conformance.html): This page describes how to declare conformance to AU PS.
 - [Guidance](guidance.html): These pages list the guidance for this guide.
   - [General Guidance](general-guidance.html): This page provides guidance on using the profiles defined in this guide. There is currently none.
