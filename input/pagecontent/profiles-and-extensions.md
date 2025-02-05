@@ -9,8 +9,15 @@ The following profiles and have been defined for this implementation guide.
 <!-- ================================================ -->
 
 In addition to the profiles defined in this implementation guide the following profiles are supported:
-* [AU Base Related Person](https://build.fhir.org/ig/hl7au/au-fhir-base/StructureDefinition-au-relatedperson.html)
-* [AU Core Location](https://build.fhir.org/ig/hl7au/au-fhir-core/StructureDefinition-au-core-location.html)
+- [AU Base Related Person](https://build.fhir.org/ig/hl7au/au-fhir-base/StructureDefinition-au-relatedperson.html)
+- [AU Core Location](https://build.fhir.org/ig/hl7au/au-fhir-core/StructureDefinition-au-core-location.html)
+- [Codeable Concept (IPS)](https://build.fhir.org/ig/HL7/fhir-ips/StructureDefinition-CodeableConcept-uv-ips.html)
+* [DeviceUseStatementUvIps](https://build.fhir.org/ig/HL7/fhir-ips/StructureDefinition-DeviceUseStatement-uv-ips.html)
+* [DiagnosticReportUvIps](https://build.fhir.org/ig/HL7/fhir-ips/StructureDefinition-DiagnosticReport-uv-ips.html)
+* [ImagingStudyUvIps](https://build.fhir.org/ig/HL7/fhir-ips/StructureDefinition-ImagingStudy-uv-ips.html)
+* [ObservationPregnancyEddUvIps](https://build.fhir.org/ig/HL7/fhir-ips/StructureDefinition-Observation-pregnancy-edd-uv-ips.html)
+* [ObservationPregnancyOutcomeUvIps](https://build.fhir.org/ig/HL7/fhir-ips/StructureDefinition-Observation-pregnancy-outcome-uv-ips.html)
+* [ObservationPregnancyStatusUvIps](https://build.fhir.org/ig/HL7/fhir-ips/StructureDefinition-Observation-pregnancy-status-uv-ips.html)
 * []()
 * []()
 

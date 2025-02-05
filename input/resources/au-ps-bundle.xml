@@ -508,6 +508,20 @@
         <profile value="http://hl7.org.au/fhir/ps/StructureDefinition/au-ps-encounter"/>
       </type>
     </element>
+    <element id="Bundle.entry:location">
+      <path value="Bundle.entry"/>
+      <sliceName value="location"/>
+      <min value="0"/>
+      <max value="*"/>
+    </element>
+    <element id="Bundle.entry:location.resource">
+      <path value="Bundle.entry.resource"/>
+      <min value="1"/>
+      <type>
+        <code value="Location"/>
+        <profile value="http://hl7.org.au/fhir/core/StructureDefinition/au-core-location"/>
+      </type>
+    </element>
     <element id="Bundle.entry:relatedperson">
       <path value="Bundle.entry"/>
       <sliceName value="relatedperson"/>
