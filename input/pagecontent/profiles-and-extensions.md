@@ -8,12 +8,18 @@ The following profiles and have been defined for this implementation guide.
 {% include sd-list-generator.md %}
 <!-- ================================================ -->
 
-TBD
+In addition to the profiles defined in this implementation guide the following profiles are supported:
+* [AU Base Related Person](https://build.fhir.org/ig/hl7au/au-fhir-base/StructureDefinition-au-relatedperson.html)
+* [AU Core Location](https://build.fhir.org/ig/hl7au/au-fhir-core/StructureDefinition-au-core-location.html)
+* []()
+* []()
+
 
 ### Extensions
 
 All extensions used in this guide are defined in the FHIR Extensions Pack or [AU Base](http://build.fhir.org/ig/hl7au/au-fhir-base/profiles-and-extensions.html#extensions).
 
-The following extension are marked with Must Support in this implementation guide:
-
-TBD
+The following extensions are marked with *Must Support* in this implementation guide:
+* [Australian Indigenous Status](https://build.fhir.org/ig/hl7au/au-fhir-base/StructureDefinition-indigenous-status.html) in [AU PS Patient](StructureDefinition-au-ps-patient.html)
+* [Individual Pronouns](http://hl7.org/fhir/StructureDefinition/individual-pronouns) in [AU PS Patient](StructureDefinition-au-ps-patient.html)
+* [Individual Gender Identity](http://hl7.org/fhir/StructureDefinition/individual-genderIdentity) in [AU PS Patient](StructureDefinition-au-ps-patient.html)

@@ -89,10 +89,6 @@
 		<element id="Medication.ingredient.strength">
 			<path value="Medication.ingredient.strength"/>
 			<mustSupport value="true"/>
-			<type>
-				<code value="Ratio"/>
-				<profile value="http://hl7.org/fhir/uv/ips/StructureDefinition/Ratio-uv-ips"/>
-			</type>
 		</element>
   </differential>
 </StructureDefinition>
