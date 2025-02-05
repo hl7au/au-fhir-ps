@@ -8,7 +8,9 @@ The following profiles and have been defined for this implementation guide.
 {% include sd-list-generator.md %}
 <!-- ================================================ -->
 
-In addition to the profiles defined in this implementation guide, the following profiles defined elsewhere are a data type profile for a *Must Support* element or are the target of a *Must Support* reference element:
+#### Other profiles used 
+
+In addition to the profiles defined in this implementation guide, the following profiles defined elsewhere are used by AU Patient Summary. These profiles are a data type profile for a *Must Support* element in an AU PS profile or are the target of a *Must Support* reference element in an AU PS profile through definition or by impose:
 - [AU Base Related Person](https://build.fhir.org/ig/hl7au/au-fhir-base/StructureDefinition-au-relatedperson.html)
 - [AU Core Location](https://build.fhir.org/ig/hl7au/au-fhir-core/StructureDefinition-au-core-location.html)
 - [Codeable Concept (IPS)](https://build.fhir.org/ig/HL7/fhir-ips/StructureDefinition-CodeableConcept-uv-ips.html)
