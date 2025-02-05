@@ -53,10 +53,13 @@ The table below provides a profile only comparison from AU Patient Summary to pr
             <td style="width: 25%; text-align: center; vertical-align: middle;"><img src="minus_symbol.svg.png" width="20"/></td>
         </tr>
         <tr>
-            <td style="width: 25%; text-align: left; vertical-align: middle;"><a href="StructureDefinition-au-ps-condition.html">AU PS Condition</a></td>
+            <td rowspan="2" style="width: 25%; text-align: left; vertical-align: middle;"><a href="StructureDefinition-au-ps-condition.html">AU PS Condition</a></td>
             <td style="width: 25%; text-align: center; vertical-align: middle;"><img src="green_checkmark.svg.png" width="20"/></td>
-            <td style="width: 25%; text-align: center; vertical-align: middle;"><img src="green_checkmark.svg.png" width="20"/></td>
-            <td style="width: 25%; text-align: center; vertical-align: middle;"><img src="green_checkmark.svg.png" width="20"/></td>
+            <td rowspan="2" style="width: 25%; text-align: center; vertical-align: middle;"><img src="green_checkmark.svg.png" width="20"/></td>
+            <td rowspan="2" style="width: 25%; text-align: center; vertical-align: middle;"><img src="green_checkmark.svg.png" width="20"/></td>
+        </tr>
+        <tr>
+            <td style="width: 25%; text-align: center; vertical-align: middle;">IPA-problem-list-item <img src="orange_checkmark.svg.png" width="20"/></td>
         </tr>
         <tr>
             <td style="width: 25%; text-align: left; vertical-align: middle;"><a href="StructureDefinition-au-ps-encounter.html">AU PS Encounter</a></td>
@@ -172,6 +175,12 @@ The following IPA profile(s) contain additional requirements. Implementers are a
     </thead>
     <tbody>
         <tr>
+            <td style="width: 25%;"><a href="StructureDefinition-au-ps-condition.html">AU PS Condition</a></td>
+            <td style="width: 25%;"><a href="https://build.fhir.org/ig/HL7/fhir-ipa/StructureDefinition-ipa-problem-list-item.html">IPA-problem-list-item</a></td>
+            <td style="width: 25%;">Condition.category</td>
+            <td style="width: 25%;">Requires category of 'problem-list-item'.</td>
+        </tr>
+        <tr>
             <td style="width: 25%;"><a href="StructureDefinition-au-ps-immunization.html">AU PS Immunization</a></td>
             <td style="width: 25%;"><a href="https://hl7.org/fhir/uv/ipa/STU1/StructureDefinition-ipa-immunization.html">IPA-Immunization</a></td>
             <td style="width: 25%;">Immunization.statusReason</td>
@@ -222,12 +231,5 @@ The following IPA profile(s) contain additional requirements. Implementers are a
     </tbody>
 </table>
 
-##### Missing Data
-AU PS compliant resources are compliant with IPA requirements for Missing Data.
-
-##### Suppressed Data
-IPA does not include requirements for Suppressed Data.
-
-##### Additional profiles
-This version of AU PS has no equivalent profile for the following IPA profiles:
-- IPA-DocumentReference
+##### Missing and Suppressed Data
+AU PS compliant resources are compliant with IPA requirements for Missing Data. IPA does not include requirements for Suppressed Data.
