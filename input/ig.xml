@@ -131,7 +131,7 @@
 				<title value="Home"/>
 				<generation value="markdown"/>
 			</page>
-			<!-- <page>
+			<page>
 				<nameUrl value="conformance.html"/>
 				<title value="Conformance"/>
 				<generation value="markdown"/>
@@ -145,7 +145,7 @@
 					<title value="Declaring Conformance"/>
 					<generation value="markdown"/>
 				</page>
-			</page> -->
+			</page>
 			<page>
 				<nameUrl value="guidance.html"/>
 				<title value="Guidance"/>
@@ -185,6 +185,31 @@
 					<title value="Future of AU Patient Summary"/>
 					<generation value="markdown"/>
 				</page>
+			</page>
+			<page>
+				<nameUrl value="usecase.html"/>
+				<title value="Use Cases"/>
+				<generation value="markdown"/>
+				<page>
+					<nameUrl value="uc-interstate.html"/>
+					<title value="Interstate GP Visit"/>
+					<generation value="markdown"/>
+				</page>
+				<page>
+					<nameUrl value="uc-emergency.html"/>
+					<title value="Emergency Hospital Attendance"/>
+					<generation value="markdown"/>
+				</page>
+				<page>
+					<nameUrl value="uc-referral.html"/>
+					<title value="Referral Specialist and Allied Health"/>
+					<generation value="markdown"/>
+				</page>
+			</page>
+			<page>
+				<nameUrl value="security.html"/>
+				<title value="Security and Privacy"/>
+				<generation value="markdown"/>
 			</page>
 			<page>
 				<nameUrl value="artefacts.html"/>

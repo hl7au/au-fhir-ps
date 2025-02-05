@@ -2,7 +2,7 @@
   <li>
     <a href="index.html">Home</a>
   </li>
-  <!-- <li class="dropdown">
+  <li class="dropdown">
     <a data-toggle="dropdown" href="#" class="dropdown-toggle">Conformance
       <b class="caret"></b>
     </a>
@@ -12,7 +12,7 @@
         <a href="declaring-conformance.html">Declaring Conformance</a>
       </li>
     </ul>
-  </li> -->
+  </li>
   <li class="dropdown">
     <a data-toggle="dropdown" href="#" class="dropdown-toggle">Guidance
       <b class="caret"></b>
@@ -41,7 +41,26 @@
       </li> 
     </ul>
   </li>
-<li class="dropdown">
+  <li class="dropdown">
+    <a data-toggle="dropdown" href="#" class="dropdown-toggle">Use Cases
+      <b class="caret"></b>
+    </a>
+     <ul class="dropdown-menu">
+      <li>
+        <a href="uc-interstate.html">Interstate GP Visit</a>
+      </li>
+      <li>
+        <a href="uc-emergency.html">Emergency Hospital Attendance</a>
+      </li>
+      <li>
+        <a href="uc-referral.html">Referral Specialist and Allied Health</a>
+      </li>
+    </ul>
+  </li>
+  <li>
+    <a href="security.html">Security and Privacy</a>
+  </li>
+  <li class="dropdown">
     <a data-toggle="dropdown" href="#" class="dropdown-toggle">FHIR Artefacts
       <b class="caret"></b>
     </a>
