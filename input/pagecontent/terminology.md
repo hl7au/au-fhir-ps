@@ -21,8 +21,8 @@ Column attribute descriptions are as follows:
 |---|---|---|
 |[ActEncounterCode - AU Extended](https://build.fhir.org/ig/hl7au/au-fhir-base//ValueSet-au-v3-ActEncounterCode-extended.html)|[AU PS Encounter](StructureDefinition-au-ps-encounter.html)|AU Base|
 |[AdministrativeGender](https://hl7.org/fhir/R4/valueset-administrative-gender.html)|[AU PS Patient](StructureDefinition-au-ps-patient.html)|FHIR|
-|[AddressUse](https://hl7.org/fhir/R4/valueset-address-use.html)|[AU Core Location](StructureDefinition-au-core-location.html), [AU PS Organization](StructureDefinition-au-ps-organization.html), [AU PS Patient](StructureDefinition-au-ps-patient.html)|FHIR|
-|[AddressType](https://hl7.org/fhir/R4/valueset-address-type.html)|[AU Core Location](StructureDefinition-au-core-location.html), [AU PS Organization](StructureDefinition-au-ps-organization.html), [AU PS Patient](StructureDefinition-au-ps-patient.html)|FHIR|
+|[AddressUse](https://hl7.org/fhir/R4/valueset-address-use.html)|[AU Core Location](https://build.fhir.org/ig/hl7au/au-fhir-core/StructureDefinition-au-core-location.html), [AU PS Organization](StructureDefinition-au-ps-organization.html), [AU PS Patient](StructureDefinition-au-ps-patient.html)|FHIR|
+|[AddressType](https://hl7.org/fhir/R4/valueset-address-type.html)|[AU Core Location](https://build.fhir.org/ig/hl7au/au-fhir-core/StructureDefinition-au-core-location.html), [AU PS Organization](StructureDefinition-au-ps-organization.html), [AU PS Patient](StructureDefinition-au-ps-patient.html)|FHIR|
 |[Adverse Reaction Agent](https://healthterminologies.gov.au/fhir/ValueSet/adverse-reaction-agent-1)|[AU PS AllergyIntolerance](StructureDefinition-au-ps-allergyintolerance.html)|NCTS|
 |[Adverse Reaction Substances and Negated Findings](https://healthterminologies.gov.au/fhir/ValueSet/adverse-reaction-substances-and-negated-findings-1)|[AU PS AllergyIntolerance](StructureDefinition-au-ps-allergyintolerance.html)|NCTS|
 |[AllergyIntolerance Clinical Status Codes](https://hl7.org/fhir/R4/valueset-allergyintolerance-clinical.html)|[AU PS AllergyIntolerance](StructureDefinition-au-ps-allergyintolerance.html)|FHIR|
@@ -33,7 +33,7 @@ Column attribute descriptions are as follows:
 |[Australian Medication](https://healthterminologies.gov.au/fhir/ValueSet/australian-medication-1)|[AU PS MedicationRequest](StructureDefinition-au-ps-medicationrequest.html), [AU PS Medication](StructureDefinition-au-ps-medication.html)|NCTS|
 |[Australian Medicines Terminology Vaccine](https://healthterminologies.gov.au/fhir/ValueSet/amt-vaccine-1)|[AU PS Immunization](StructureDefinition-au-ps-immunization.html)|NCTS|
 |[Australian Pronouns](https://healthterminologies.gov.au/fhir/ValueSet/australian-pronouns-1)|[Individual Pronouns](http://hl7.org/fhir/StructureDefinition/individual-pronouns)|NCTS|
-|[Australian States and Territories](https://healthterminologies.gov.au/fhir/ValueSet/australian-states-territories-2)|[AU Core Location](https://build.fhir.org/ig/hl7au/au-fhir-ps/StructureDefinition-au-core-location.html), [AU PS Organization](https://build.fhir.org/ig/hl7au/au-fhir-ps/StructureDefinition-au-ps-organization.html), [AU PS Patient](https://build.fhir.org/ig/hl7au/au-fhir-ps/StructureDefinition-au-ps-patient.html)|NCTS|
+|[Australian States and Territories](https://healthterminologies.gov.au/fhir/ValueSet/australian-states-territories-2)|[AU Core Location](https://build.fhir.org/ig/hl7au/au-fhir-core/StructureDefinition-au-core-location.html), [AU PS Organization](https://build.fhir.org/ig/hl7au/au-fhir-ps/StructureDefinition-au-ps-organization.html), [AU PS Patient](https://build.fhir.org/ig/hl7au/au-fhir-ps/StructureDefinition-au-ps-patient.html)|NCTS|
 |[Clinical Condition](https://healthterminologies.gov.au/fhir/ValueSet/clinical-condition-1)|[AU PS Condition](StructureDefinition-au-ps-condition.html)|NCTS|
 |[Clinical Finding](https://healthterminologies.gov.au/fhir/ValueSet/clinical-finding-1)|[AU PS AllergyIntolerance](StructureDefinition-au-ps-allergyintolerance.html), [AU PS Condition](StructureDefinition-au-ps-condition.html)|NCTS|
 |[Clinical Specialty](https://healthterminologies.gov.au/fhir/ValueSet/clinical-specialty-1)|[AU PS PractitionerRole](StructureDefinition-au-ps-practitionerrole.html)|NCTS|
@@ -57,8 +57,8 @@ Column attribute descriptions are as follows:
 |[Immunization Status Codes](https://hl7.org/fhir/R4/valueset-immunization-status.html)|[AU PS Immunization](StructureDefinition-au-ps-immunization.html)|FHIR|
 |[Indicator of Hypersensitivity or Intolerance to Substance](https://healthterminologies.gov.au/fhir/ValueSet/indicator-hypersensitivity-intolerance-to-substance-2)|[AU PS AllergyIntolerance](StructureDefinition-au-ps-allergyintolerance.html)|NCTS|
 |[Individual Healthcare Identifier Record Status](https://healthterminologies.gov.au/fhir/ValueSet/ihi-record-status-1)|[AU PS Patient](StructureDefinition-au-ps-patient.html)|NCTS|
-|[Location Type (Physical) - AU Extended](https://build.fhir.org/ig/hl7au/au-fhir-base//ValueSet-au-location-physical-type-extended.html)|[AU Core Location](StructureDefinition-au-core-location.html)|AU Base|
-|[LocationStatus](https://hl7.org/fhir/R4/valueset-location-status.html)|[AU Core Location](StructureDefinition-au-core-location.html)|FHIR|
+|[Location Type (Physical) - AU Extended](https://build.fhir.org/ig/hl7au/au-fhir-base//ValueSet-au-location-physical-type-extended.html)|[AU Core Location](https://build.fhir.org/ig/hl7au/au-fhir-core/StructureDefinition-au-core-location.html)|AU Base|
+|[LocationStatus](https://hl7.org/fhir/R4/valueset-location-status.html)|[AU Core Location](https://build.fhir.org/ig/hl7au/au-fhir-core/StructureDefinition-au-core-location.html)|FHIR|
 |[Medication request intent](https://hl7.org/fhir/R4/valueset-medicationrequest-intent.html)|[AU PS MedicationRequest](StructureDefinition-au-ps-medicationrequest.html)|FHIR|
 |[Medicationrequest status](https://hl7.org/fhir/R4/valueset-medicationrequest-status.html)|[AU PS MedicationRequest](StructureDefinition-au-ps-medicationrequest.html)|FHIR|
 |[NameUse](https://hl7.org/fhir/R4/valueset-name-use.html)|[AU PS Patient](StructureDefinition-au-ps-patient.html), [AU PS Practitioner](StructureDefinition-au-ps-practitioner.html)|FHIR|
@@ -69,7 +69,7 @@ Column attribute descriptions are as follows:
 |[Reason for Request](https://healthterminologies.gov.au/fhir/ValueSet/reason-for-request-1)|[AU PS MedicationRequest](StructureDefinition-au-ps-medicationrequest.html)|NCTS|
 |[Route of Administration](https://healthterminologies.gov.au/fhir/ValueSet/route-of-administration-1)|[AU PS MedicationRequest](StructureDefinition-au-ps-medicationrequest.html)|NCTS|
 |[Service Type](https://healthterminologies.gov.au/fhir/ValueSet/service-type-1)|[AU PS Encounter](StructureDefinition-au-ps-encounter.html)|NCTS|
-|[ServiceDeliveryLocationRoleType - AU Extended](https://build.fhir.org/ig/hl7au/au-fhir-base//ValueSet-au-v3-ServiceDeliveryLocationRoleType-extended.html)|[AU Core Location](StructureDefinition-au-core-location.html)|AU Base|
+|[ServiceDeliveryLocationRoleType - AU Extended](https://build.fhir.org/ig/hl7au/au-fhir-base//ValueSet-au-v3-ServiceDeliveryLocationRoleType-extended.html)|[AU Core Location](https://build.fhir.org/ig/hl7au/au-fhir-core/StructureDefinition-au-core-location.html)|AU Base|
 |[SNOMED CT Additional Dosage Instructions](https://hl7.org/fhir/R4/valueset-additional-instruction-codes.html)|[AU PS MedicationRequest](StructureDefinition-au-ps-medicationrequest.html)|FHIR|
 |[SNOMED CT Administration Method Codes](https://hl7.org/fhir/R4/valueset-administration-method-codes.html)|[AU PS MedicationRequest](StructureDefinition-au-ps-medicationrequest.html)|FHIR|
 {:.grid}
