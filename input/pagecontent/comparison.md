@@ -10,7 +10,7 @@ Corresponding profiles, conformance requirements, and capability statements incl
 The below comparison evaluates AU Patient Summary conformance requirements with the key implementation guides identifying where compliance with AU Patient Summary satisfies the expectations established by the referenced implementation guide. 
 
 ### Profile comparison
-As part of profile comparison, the requirements, constraints, and standards specified in a particular FHIR profile are evaluated. These requirements can include mandatory elements, must support elements, cardinality constraints, data types, terminology bindings, usage rules, extensions, rules on missing or suppressed data. 
+As part of profile comparison, the requirements, constraints, and standards specified in a particular FHIR profile are evaluated. These requirements can include mandatory elements, *Must Support* elements, cardinality constraints, data types, terminology bindings, usage rules, extensions, rules on missing or suppressed data. 
 
 The table below provides a profile only comparison from AU Patient Summary to profiles in key implementation guides. Compliance in the reverse direction is not guaranteed, i.e. a resource that is compliant with an International Patient Summary profile **MAY NOT** be compliant with AU Patient Summary.
 
@@ -68,8 +68,8 @@ The table below provides a profile only comparison from AU Patient Summary to pr
             <td style="width: 25%; text-align: center; vertical-align: middle;"><img src="green_checkmark.svg.png" width="20"/></td>
         </tr>
         <tr>
-            <td style="width: 25%; text-align: left; vertical-align: middle;"><a href="StructureDefinition-au-ps-immunization.html">AU Core Immunization</a></td>
-            <td style="width: 25%; text-align: center; vertical-align: middle;"><img src="orange)checkmark.svg.png" width="20"/></td>
+            <td style="width: 25%; text-align: left; vertical-align: middle;"><a href="StructureDefinition-au-ps-immunization.html">AU PS Immunization</a></td>
+            <td style="width: 25%; text-align: center; vertical-align: middle;"><img src="orange_checkmark.svg.png" width="20"/></td>
             <td style="width: 25%; text-align: center; vertical-align: middle;"><img src="green_checkmark.svg.png" width="20"/></td>
             <td style="width: 25%; text-align: center; vertical-align: middle;"><img src="green_checkmark.svg.png" width="20"/></td>
         </tr>
