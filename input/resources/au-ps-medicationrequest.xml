@@ -41,10 +41,6 @@
         </discriminator>
         <rules value="closed"/>
       </slicing>
-      <binding>
-        <strength value="preferred" />
-        <valueSet value="http://hl7.org/fhir/uv/ips/ValueSet/medication-uv-ips" />
-      </binding>
       <mustSupport value="true"/>
     </element>
     <element id="MedicationRequest.medication[x]:medicationCodeableConcept">
