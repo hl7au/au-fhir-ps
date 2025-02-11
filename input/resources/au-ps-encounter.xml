@@ -46,11 +46,11 @@
       </type>
       <mustSupport value="true"/>
     </element>
-    <element id="Encounter.subject.reference">
+    <!--<element id="Encounter.subject.reference">
       <path value="Encounter.subject.reference"/>
       <min value="1"/>
       <mustSupport value="true"/>
-    </element>
+    </element>-->
     <element id="Encounter.participant">
       <path value="Encounter.participant"/>
       <mustSupport value="true"/>
