@@ -4,9 +4,9 @@
   <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-fmm">
     <valueInteger value="0"/> 
   </extension>
-  <!-- <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-compliesWithProfile">
+  <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-compliesWithProfile">
     <valueCanonical value="http://hl7.org.au/fhir/core/StructureDefinition/au-core-relatedperson"/>
-  </extension>-->
+  </extension>
   <url value="http://hl7.org.au/fhir/ps/StructureDefinition/au-ps-relatedperson"/>
   <name value="AUPSRelatedPerson"/>
   <title value="AU PS RelatedPerson"/>
