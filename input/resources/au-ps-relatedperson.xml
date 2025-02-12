@@ -37,7 +37,7 @@
       <path value="RelatedPerson.patient"/>
       <type>
         <code value="Reference"/>
-        <targetProfile value="http://hl7.org.au/fhir/core/StructureDefinition/au-ps-patient"/>
+        <targetProfile value="http://hl7.org.au/fhir/ps/StructureDefinition/au-ps-patient"/>
       </type>
       <mustSupport value="true"/>
     </element>
