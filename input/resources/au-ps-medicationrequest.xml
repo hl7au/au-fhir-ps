@@ -125,7 +125,7 @@
         <targetProfile value="http://hl7.org.au/fhir/ps/StructureDefinition/au-ps-practitionerrole"/>
         <targetProfile value="http://hl7.org.au/fhir/ps/StructureDefinition/au-ps-organization"/>
         <targetProfile value="http://hl7.org.au/fhir/ps/StructureDefinition/au-ps-patient"/>
-        <targetProfile value="http://hl7.org.au/fhir/StructureDefinition/au-relatedperson"/>
+        <targetProfile value="http://hl7.org.au/fhir/ps/StructureDefinition/au-ps-relatedperson"/>
       </type>
       <mustSupport value="true"/>
     </element>
