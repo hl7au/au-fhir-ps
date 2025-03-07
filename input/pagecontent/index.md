@@ -50,10 +50,16 @@ This guide is divided into several pages which are listed at the top of each pag
 - [Guidance](guidance.html): These pages list the guidance for this guide.
   - [General Guidance](general-guidance.html): This page provides guidance on using the profiles defined in this guide. There is currently none.
   - [Sex and Gender](sex-and-gender.html): This page provides guidance on the representation of sex, gender, and related concepts.
+  - [AU Core Data for Interoperability](aucdi.html): This page maps AUCDI data groups and elements to FHIR artefacts in AU Patient Summary.
   - [Relationship with other IGs](relationship.html): This page provides guidance on the relationship between AU Patient Summary, AUCDI, and other implementation guides.
   - [AU Variance Statement](variance.html): This page documents the variance from AU Base and AU Core.
   - [Comparison with other national and international IGs](comparison.html): This page provides comparison between AU Patient Summary profiles and other national and international implementation guides.
   - [Future of AU Patient Summary](future.html): This page outlines the approach to developing AU Patient Summary.
+- Use Cases: These pages document a set of example use case that assist in understanding how to implement AU Patient Summary.
+   - [Interstate GP Visit](uc-interstate.html): This page documents the Interstate GP Visit - Patient Driven Patient Summary example use case.
+   - [Emergency Hospital Attendance](uc-emergency.html): This page documents the Emergency Hospital Attendance - Clinician Driven Patient Summary example use case.
+   - [Referral Specialist and Allied Health](uc-referral.html): This page documents the Referral to Specialist and Allied Health - Clinician Driven Patient Summary (as Supplemental Information) example use case.
+- [Security and Privacy](security.html): This page documents the AU Patient Summary general security and privacy requirements and recommendations.
 - [FHIR Artefacts](artefacts.html): These pages provide detailed descriptions and formal definitions for all the FHIR artefacts defined in this guide.
   - [Artefacts Summary](artifacts.html): This page lists the FHIR artefacts defined in this guide.
   - [Profiles and Extensions](profiles-and-extensions.html): This page describes the profiles and extensions that are defined in this guide to exchange data. Each profile page includes a narrative description and guidance, formal definition and a "Notes" section that summarises the supported search transactions for each profile. Guidance typically focuses on the profiled elements but can include guidance on un-profiled elements to aid with implementation.

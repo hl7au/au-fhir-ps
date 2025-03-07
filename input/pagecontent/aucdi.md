@@ -279,12 +279,12 @@ Column attribute descriptions are as follows:
     <td>This AUCDI element is a Future Candidate Requirement Under Consideration. Future versions of AU Core will develop and test approaches to addressing Last Updated.</td>
   </tr>
   <tr>
-    <td rowspan="4">Last menstrual period assertion</td>
+    <td rowspan="3">Last menstrual period assertion</td>
     <td colspan="2">Date of onset</td>
     <td>TBD</td>
     <td>TBD</td>
     <td>TBD</td>
-    <td rowspan="2">This data group is added to AUCDI R2 and does not yet have an agreed mapping to AU Core. Outcomes from the scoping workshops for AU Core R2 and Patient Summary R1 indicate that this data group will be deferred to a later release.</td>
+    <td rowspan="3">This data group is added to AUCDI R2 and does not yet have an agreed mapping to AU Core. Outcomes from the scoping workshops for AU Core R2 and Patient Summary R1 indicate that this data group will be deferred to a later release.</td>
   </tr>
   <tr>
     <td colspan="2">Certainty</td>
@@ -299,12 +299,12 @@ Column attribute descriptions are as follows:
     <td>TBD</td>
   </tr>
   <tr>
-    <td rowspan="4">Pregnancy assertion</td>
+    <td rowspan="3">Pregnancy assertion</td>
     <td colspan="2">Pregnancy assertion</td>
     <td>TBD</td>
     <td>TBD</td>
     <td>TBD</td>
-    <td rowspan="2">This data group is added to AUCDI R2 and does not yet have an agreed mapping to AU Core. Outcomes from the scoping workshops for AU Core R2 and Patient Summary R1 indicate that this data group will be deferred to a later release.</td>
+    <td rowspan="3">This data group is added to AUCDI R2 and does not yet have an agreed mapping to AU Core. Outcomes from the scoping workshops for AU Core R2 and Patient Summary R1 indicate that this data group will be deferred to a later release.</td>
   </tr>
   <tr>
     <td colspan="2">Justification</td>
@@ -319,12 +319,12 @@ Column attribute descriptions are as follows:
     <td>TBD</td>
   </tr>
   <tr>
-    <td rowspan="4">Estimated date of delivery summary</td>
+    <td rowspan="3">Estimated date of delivery summary</td>
     <td colspan="2">EDD by cycle</td>
     <td>TBD</td>
     <td>TBD</td>
     <td>TBD</td>
-    <td rowspan="2">This data group is added to AUCDI R2 and does not yet have an agreed mapping to AU Core. Outcomes from the scoping workshops for AU Core R2 and Patient Summary R1 indicate that this data group will be deferred to a later release.</td>
+    <td rowspan="3">This data group is added to AUCDI R2 and does not yet have an agreed mapping to AU Core. Outcomes from the scoping workshops for AU Core R2 and Patient Summary R1 indicate that this data group will be deferred to a later release.</td>
   </tr>
   <tr>
     <td colspan="2">EDD by ultrasound</td>
