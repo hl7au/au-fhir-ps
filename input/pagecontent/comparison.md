@@ -193,12 +193,8 @@ The following IPA profile(s) contain additional requirements. Implementers are a
             <td style="width: 25%;"><i>Must Support</i> element in IPA.</td>
         </tr>
         <tr>
-            <td rowspan="4" style="width: 25%;"><a href="StructureDefinition-au-ps-medicationstatement.html">AU PS MedicationStatement</a></td>
-            <td rowspan="4" style="width: 25%;"><a href="https://hl7.org/fhir/uv/ipa/STU1/StructureDefinition-ipa-medicationstatement.html">IPA-MedicationStatement</a></td>
-            <td style="width: 25%;">MedicationStatement.status</td>
-            <td style="width: 25%;"><i>Must Support</i> element in IPA.</td>
-        </tr>
-        <tr>
+            <td rowspan="3" style="width: 25%;"><a href="StructureDefinition-au-ps-medicationstatement.html">AU PS MedicationStatement</a></td>
+            <td rowspan="3" style="width: 25%;"><a href="https://hl7.org/fhir/uv/ipa/STU1/StructureDefinition-ipa-medicationstatement.html">IPA-MedicationStatement</a></td>
             <td style="width: 25%;">MedicationStatement.statusReason</td>
             <td style="width: 25%;"><i>Must Support</i> element in IPA.</td>
         </tr>
