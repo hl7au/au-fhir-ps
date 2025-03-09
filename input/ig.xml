@@ -22,7 +22,7 @@
 			<use value="work"/>
 		</telecom>
 	</contact>
-	<description value="TBD: A brief description of what MyIG is about (probably the same text as in your readme)"/>
+	<description value="AU Patient Summary is provided to support the use of patient summaries in HL7® FHIR®© in an Australian context. It complies with the requirements defined in IPS and AU Core, and sets the minimum expectations on FHIR resources to support conformance and implementation in systems."/>
 	<jurisdiction>
 		<coding>
 			<system value="urn:iso:std:iso:3166"/>

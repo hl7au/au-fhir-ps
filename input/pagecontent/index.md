@@ -1,6 +1,6 @@
 
 ### Introduction
-The purpose of the AU Patient Summary FHIR IG is to support generation of patient summaries in an Australian context.
+AU Patient Summary is provided to support the use of patient summaries in HL7® FHIR®© in an Australian context. It complies with the requirements defined in [IPS](https://build.fhir.org/ig/HL7/fhir-ips/) and [AU Core](https://build.fhir.org/ig/hl7au/au-fhir-core), and sets the minimum expectations on FHIR resources to support conformance and implementation in systems.
 
 A Patient Summary is:
 * a health record extract comprising a core set of digital health and administrative data elements that provide a snapshot in time of a subject of care’s health information and healthcare.
