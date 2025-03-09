@@ -17,6 +17,7 @@ An interpretation of AUCDI clinical information requirements through community c
 ### AUCDI mappings into AU Patient Summary
 
 The table below shows the relationship between the AUCDI Data Groups and Elements included in [AUCDI Release 2 Patient Summary component – Draft for Community Comment](https://sparked.csiro.au/index.php/sparked-products-resources/australian-core-data-for-interoperability/aucdi-release-2-patient-summary-community-comment/), AU Core profiles, and AU Patient Summary profiles.<br/>
+
 Column attribute descriptions are as follows:
 - **AUCDI Data Group**: The name of the AUCDI data group.
 - **AUCDI Data Element**: The name of the AUCDI data element within an AUCDI data group.
@@ -50,7 +51,7 @@ Column attribute descriptions are as follows:
     <td><a href="https://build.fhir.org/ig/hl7au/au-fhir-core/StructureDefinition-au-core-allergyintolerance.html">AU Core AllergyIntolerance</a></td>
     <td><a href="StructureDefinition-au-ps-allergyintolerance.html">AU PS AllergyIntolerance</a></td>
     <td>TBD</td>
-    <td>This data element is added to AUCDI R2; work is underway to map to AU Core</td>
+    <td>This data element is added to AUCDI R2; work is underway to map to AU Core.</td>
   </tr>
   <tr>
     <td colspan="2">Manifestation</td>
@@ -75,6 +76,7 @@ Column attribute descriptions are as follows:
   </tr>
   <tr>
     <td colspan="2">Last updated</td>
+    <td>-</td>
     <td>-</td>
     <td>-</td>
     <td>This AUCDI element is a Future Candidate Requirement Under Consideration. Future versions of AU Core will develop and test approaches to addressing Last Updated.</td>
