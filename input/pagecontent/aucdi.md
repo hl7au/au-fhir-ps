@@ -201,7 +201,7 @@ Column attribute descriptions are as follows:
     <td><a href="https://build.fhir.org/ig/hl7au/au-fhir-core/StructureDefinition-au-core-medicationstatement.html">AU Core MedicationStatement</a> | <a href="https://build.fhir.org/ig/hl7au/au-fhir-core/StructureDefinition-au-core-medication.html">AU Core Medication</a></td>
     <td><a href="StructureDefinition-au-ps-medicationstatement.html">AU PS MedicationStatement</a> | <a href="StructureDefinition-au-ps-medication.html">AU PS Medication</a></td>
     <td>MedicationStatement.medication[x] | Medication.code</td>
-    <td rowspan="9">See <a href="medicine-information.html">Medicine Information</a> guidance.</td>
+    <td rowspan="9">See the <a href="https://build.fhir.org/ig/hl7au/au-fhir-core/medicine-information.html">Medicine Information</a> guidance page in AU Core.</td>
   </tr>
   <tr>
     <td colspan="2">Clinical indication</td>
@@ -257,7 +257,7 @@ Column attribute descriptions are as follows:
     <td><a href="https://build.fhir.org/ig/hl7au/au-fhir-core/StructureDefinition-au-core-patient.html">AU Core Patient</a></td>
     <td><a href="StructureDefinition-au-ps-patient.html">AU PS Patient</a></td>
     <td>Patient.extension.where(url='http://hl7.org/fhir/StructureDefinition/individual-recordedSexOrGender')</td>
-    <td>The <a href="http://hl7.org/fhir/StructureDefinition/individual-recordedSexOrGender">Person Recorded Sex or Gender extension</a> is profiled by <a href="StructureDefinition-au-core-rsg-sexassignedab.html">AU Core Sex Assigned At Birth (RSG)</a> to represent the concept of Sex assigned at birth.</td>
+    <td>The <a href="http://hl7.org/fhir/StructureDefinition/individual-recordedSexOrGender">Person Recorded Sex or Gender extension</a> is profiled by <a href="https://build.fhir.org/ig/hl7au/au-fhir-core/StructureDefinition-au-core-rsg-sexassignedab.html">AU Core Sex Assigned At Birth (RSG)</a> to represent the concept of Sex assigned at birth.</td>
   </tr>
   <tr>
     <td colspan="2">Gender identity</td>
