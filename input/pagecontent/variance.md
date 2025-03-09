@@ -7,7 +7,9 @@ HL7 Australia published FHIR implementation guides are required to follow specif
 
 
 ### Variance from AU Base
-This implementation guide has no variance (i.e. fully compliant) from AU Base FHIR Implementation Guide version 5.0.1-ci-build ([current](https://build.fhir.org/ig/hl7au/au-fhir-base/)).
+This implementation guide has no variance (i.e. fully compliant) from AU Base FHIR Implementation Guide version 5.1.0-ci-build ([current](https://build.fhir.org/ig/hl7au/au-fhir-base/)).
+
+Note that while there is no variance, this implementation guide imposes requirements additional to AU Bae.
 
 #### Additionally Profiled Resources
 
@@ -17,7 +19,9 @@ This implementation guide profiles the following resources that are not profiled
 
 
 ### Variance from AU Core
-This implementation guide has no variance (i.e. fully compliant) from AU Core FHIR Implementation Guide version 1.0.1-ci-build ([current](https://build.fhir.org/ig/hl7au/au-fhir-core/)).
+This implementation guide has no variance (i.e. fully compliant) from AU Core FHIR Implementation Guide version 1.1.0-ci-build ([current](https://build.fhir.org/ig/hl7au/au-fhir-core/)). 
+
+Note that while there is no variance, this implementation guide imposes requirements additional to AU Core.
 
 #### Additionally Profiled Resources
 
@@ -25,4 +29,16 @@ This implementation guide profiles the following resources that are not profiled
 
 - [AU PS Bundle](StructureDefinition-au-ps-bundle.html) profiles FHIR resource [Bundle](http://hl7.org/fhir/R4/bundle.html)
 - [AU PS Composition](StructureDefinition-au-ps-composition.html) profiles FHIR resource [Composition](http://hl7.org/fhir/R4/composition.html)
-- [AU PS MedicationStatement](StructureDefinition-au-ps-medicationstatement.html) profiles FHIR resource [MedicationStatement](http://hl7.org/fhir/R4/medicationstatement.html)
+
+
+### Variance from IPS
+This implementation guide has no variance (i.e. fully compliant) from IPS Implementation Guide version 2.0.0-ci-build ([current](https://build.fhir.org/ig/HL7/fhir-ips)).
+
+Note that while there is no variance, this implementation guide imposes requirements additional to IPS.
+
+#### Additionally Profiled Resources
+
+This implementation guide profiles the following resources that are not profiled in IPS:
+
+- [AU PS Encounter](StructureDefinition-au-ps-encounter.html) profiles FHIR resource [Encounter](http://hl7.org/fhir/R4/encounter.html)
+- [AU PS RelatedPerson](StructureDefinition-au-ps-relatedperson.html) profiles FHIR resource [RelatedPerson](http://hl7.org/fhir/R4/relatedperson.html)

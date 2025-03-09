@@ -1,4 +1,4 @@
-This guide is built on top of the FHIR standard and, where available, [AU Base](https://build.fhir.org/ig/hl7au/au-fhir-base/). It is compliant with the profile conformance requirements in [AU Core](https://build.fhir.org/ig/hl7au/au-fhir-core/) and [IPS](https://build.fhir.org/ig/HL7/fhir-ips/).
+This guide is built on top of the FHIR standard and, where available, [AU Core](https://build.fhir.org/ig/hl7au/au-fhir-core/) and [AU Base](https://build.fhir.org/ig/hl7au/au-fhir-base/). It is compliant with the profile conformance requirements in [AU Core](https://build.fhir.org/ig/hl7au/au-fhir-core/) and [IPS](https://build.fhir.org/ig/HL7/fhir-ips/).
 
 
 The context of AU Patient Summary within the set of HL7 AU standards is shown in the figure below:
