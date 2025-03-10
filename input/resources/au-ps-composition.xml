@@ -223,12 +223,6 @@
       <definition value="The IPS problem section lists and describes clinical problems or conditions currently being monitored for the patient."/>
       <min value="1"/>
       <max value="1"/>
-      <constraint>
-        <key value="ips-comp-1"/>
-        <severity value="error"/>
-        <human value="Either section.entry or emptyReason are present"/>
-        <expression value="(entry.reference.exists() or emptyReason.exists())"/>
-      </constraint>
       <mustSupport value="true"/>
     </element>
     <element id="Composition.section:sectionProblems.title">
@@ -286,12 +280,6 @@
       <definition value="This section documents the relevant allergies or intolerances (conditions) for that patient, describing the kind of reaction (e.g. rash, anaphylaxis,..); preferably the agents that cause it; and optionally the criticality and the certainty of the allergy.&#xD;&#xA;At a minimum, it should list currently active and any relevant historical allergies and adverse reactions.&#xD;&#xA;If no information about allergies is available, or if no allergies are known this should be clearly documented in the section."/>
       <min value="1"/>
       <max value="1"/>
-      <constraint>
-        <key value="ips-comp-1"/>
-        <severity value="error"/>
-        <human value="Either section.entry or emptyReason are present"/>
-        <expression value="(entry.reference.exists() or emptyReason.exists())"/>
-      </constraint>
       <mustSupport value="true"/>
     </element>
     <element id="Composition.section:sectionAllergies.title">
@@ -349,12 +337,6 @@
       <definition value="The medication summary section contains a description of the patient's medications relevant for the scope of the patient summary.&#xD;&#xA;The actual content could depend on the jurisdiction, it could report:&#xD;&#xA;- the currently active medications; &#xD;&#xA;- the current and past medications considered relevant by the authoring GP; &#xD;&#xA;- the patient prescriptions or dispensations automatically extracted by a regional or a national EHR.&#xD;&#xA;&#xD;&#xA;In those cases medications are documented in the Patient Summary as medication statements or medication requests.&#xD;&#xA;This section requires either an entry indicating the subject is known not to be on any relevant medication; either an entry indicating that no information is available about medications; or entries summarizing the subject's relevant medications."/>
       <min value="1"/>
       <max value="1"/>
-      <constraint>
-        <key value="ips-comp-1"/>
-        <severity value="error"/>
-        <human value="Either section.entry or emptyReason are present"/>
-        <expression value="(entry.reference.exists() or emptyReason.exists())"/>
-      </constraint>
       <mustSupport value="true"/>
     </element>
     <element id="Composition.section:sectionMedications.title">
