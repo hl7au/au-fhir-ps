@@ -1,3 +1,4 @@
+{% include connectathon-note.md -%}
 
 ### Introduction
 AU Patient Summary is provided to support the use of patient summaries in HL7® FHIR®© in an Australian context. It complies with the requirements defined in [IPS](https://build.fhir.org/ig/HL7/fhir-ips/) and [AU Core](https://build.fhir.org/ig/hl7au/au-fhir-core), and sets the minimum expectations on FHIR resources to support conformance and implementation in systems.
@@ -57,16 +58,16 @@ This guide is divided into several pages which are listed at the top of each pag
   - [AU Variance Statement](variance.html): This page documents the variance from AU Base and AU Core.
   - [Comparison with other national and international IGs](comparison.html): This page provides comparison between AU Patient Summary profiles and other national and international implementation guides.
   - [Future of AU Patient Summary](future.html): This page outlines the approach to developing AU Patient Summary.
-- Use Cases: These pages document a set of example use case that assist in understanding how to implement AU Patient Summary.
+- Use Cases: These pages document a set of example use cases that assist in understanding how to implement AU Patient Summary.
    - [Interstate GP Visit](uc-interstate.html): This page documents the Interstate GP Visit - Patient Driven Patient Summary example use case.
    - [Emergency Hospital Attendance](uc-emergency.html): This page documents the Emergency Hospital Attendance - Clinician Driven Patient Summary example use case.
    - [Referral Specialist and Allied Health](uc-referral.html): This page documents the Referral to Specialist and Allied Health - Clinician Driven Patient Summary (as Supplemental Information) example use case.
 - [Security and Privacy](security.html): This page documents the AU Patient Summary general security and privacy requirements and recommendations.
 - [FHIR Artefacts](artefacts.html): These pages provide detailed descriptions and formal definitions for all the FHIR artefacts defined in this guide.
   - [Artefacts Summary](artifacts.html): This page lists the FHIR artefacts defined in this guide.
-  - [Profiles and Extensions](profiles-and-extensions.html): This page describes the profiles and extensions that are defined in this guide to exchange data. Each profile page includes a narrative description and guidance, formal definition and a "Notes" section that summarises the supported search transactions for each profile. Guidance typically focuses on the profiled elements but can include guidance on un-profiled elements to aid with implementation.
+  - [Profiles and Extensions](profiles-and-extensions.html): This page describes the profiles and extensions that are defined in this guide to exchange data. Each profile page includes a narrative description and guidance, and formal definition. Guidance typically focuses on the profiled elements but can include guidance on un-profiled elements to aid with implementation.
   - [Terminology](terminology.html): This page lists the value sets and code systems supported in this guide.
-- [Examples](examples.html): This page lists all the examples used in this guide. There are currently no examples.
+- [Examples](examples.html): This page lists all the examples used in this guide.
 - [Support](downloads.html): These pages provide supporting material for implementation of AU Patient Summary.
   - [Downloads](downloads.html): This page provides links to downloadable artefacts.
   - [License and Legal](license.html): This page outlines the license and legal requirements for material in AU Patient Summary.
