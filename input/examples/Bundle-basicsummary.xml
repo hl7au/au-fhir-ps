@@ -56,7 +56,7 @@
           </entry>
         </section>
         <section>
-          <title value="Allergies and Intolerances"/>
+          <title value="Active Allergies or Intolerances"/>
           <code>
             <coding>
               <system value="http://loinc.org"/>
