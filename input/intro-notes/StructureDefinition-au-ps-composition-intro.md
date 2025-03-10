@@ -1,7 +1,7 @@
 See [Comparison with other national and international IGs](comparison.html) for a comparison between AU Core profiles and profiles in other implementation guides.
 
 ### Profile specific implementation guidance
-- See [Composition (IPS)](https://build.fhir.org/ig/costateixeira/fhir-ips/StructureDefinition-Composition-uv-ips.html) for the additional requirements imposed by IPS on the Composition resource e.g. for the mandatory sections (meds, allergies, etc.) constraint _**ips-comp-1:** Either section.entry or emptyReason are present_ is imposed
+- See [Composition (IPS)](https://build.fhir.org/ig/HL7/fhir-ips/StructureDefinition-Composition-uv-ips.html) for the additional requirements imposed by IPS on the Composition resource e.g. for the mandatory sections (meds, allergies, etc.) constraint _**ips-comp-1:** Either section.entry or emptyReason are present_ is imposed.
 - See guidance on how to represent [Empty & Known Absent Sections](https://build.fhir.org/ig/HL7/fhir-ips/Design-Conventions.html#empty-sections--missing-data) in IPS.
 - See [Narrative Content Guidance](https://build.fhir.org/ig/HL7/fhir-ips/Design-Conventions.html#narrative-content-guidance) in IPS.
 - See guidance on reprenting medications information in the Medications Summary section on the [Medication Lists in the IPS](https://build.fhir.org/ig/HL7/fhir-ips/Design-Conventions.html#narrative-content-guidance) section in IPS.
