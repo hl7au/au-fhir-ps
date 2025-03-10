@@ -7,7 +7,7 @@ A Patient Summary is:
 * designed for supporting use case scenarios including planned and unplanned care, continuity of care and transition of care.
 
 AU Patient Summary will:
-* use AU Core and be based on IPS, localised to meet Australian requirements and aligned to the IPS specification.
+* be compliant with AU Core and IPS, localised to meet Australian requirements and aligned to the IPS specification.
 * be easy to implement and support patient summary use case specialisation for clinical workflows without requiring redevelopment.
 
 ### Project background
@@ -18,6 +18,8 @@ The Sparked AU FHIR Accelerator is a community comprising government, technology
 
 #### What is a patient summary?
 A patient summary is a standardised collection of patient information. Rather than an entire patient health record, it is the necessary minimum and sufficient data to ensure safe patient care. Patient summaries can enhance patient safety by ensuring critical information is readily accessible when it’s needed most and enables clinicians across different health sectors and health domains to provide more informed, consistent care.
+
+The AU Patient Summary will support the consumer on their healthcare journey, providing the consumer and their healthcare providers with timely and current access to relevant health information. It will provide a future pathway for individuals to share their healthcare information when travelling internationally. 
 
 #### International Patient Summary
 The International Patient Summary is a globally recognised patient summary standard. In 2021, the G7 nations committed to working towards the adoption of the International Patient Summary (IPS) with several international efforts being currently underway to drive adoption, including the European Union, USA, Canada and New Zealand. Multinational vendors with presence in Australia are at various stages of implementation of the IPS.
