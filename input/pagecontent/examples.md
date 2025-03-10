@@ -4,15 +4,15 @@ The following examples are published with this guide and all are available as a 
 
 
 <div class="stu-note" markdown="1">
-Work is underway to develop a set of examples that demonstrate parts of the three use cases:
-* Interstate GP Visit - Patient Driven Patient Summary
-* Emergency Hospital Attendance - Clinician Driven Patient Summary
-* Referral to Specialist and Allied Health - Clinician Driven Patient Summary (as Supplemental Information)
-
 The current set of examples are provided to demonstrate some parts of AU Patient Summary profiles including:
 * Composition.section.emptyReason
 * No Known X
 * Data Absent Reason extension
+
+Work is underway to develop a set of examples that demonstrate the AU Patient Summary use cases:
+* Interstate GP Visit - Patient Driven Patient Summary
+* Emergency Hospital Attendance - Clinician Driven Patient Summary
+* Referral to Specialist and Allied Health - Clinician Driven Patient Summary (as Supplemental Information)
 
 </div><!-- stu-note -->
 
