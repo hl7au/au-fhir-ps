@@ -1,6 +1,6 @@
 <div class="stu-note" markdown="1">
 
-#### AU Core 1.1.0-preview for Connectathon 
+#### AU Patient Summary 0.1.0-preview for Connectathon 
 
 This preview snapshot supports the HL7 Australia March 2025 Connectathon.
 
