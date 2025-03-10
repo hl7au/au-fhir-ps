@@ -2,18 +2,18 @@
 AU PS profiles will by design:
 * ensure compliance with AU Core and IPS
 * support additional requirements agreed as necessary to support patient summaries in an Australian healthcare context
-* support stakeholder needs and use of AU Patient Summary
+* support varied stakeholder needs and use of AU Patient Summary
 
- Compliance with AU Core and IPS:
-1. **SHALL** validate against both IPS and AU Core profiles when both profiles defined
+ Profile compliance with AU Core and IPS is defined as:
+* **SHALL** validate against both IPS and AU Core profiles when both profiles defined
    - Cardinality
    - *Must Support*
    - Fixed values and patterns
    - Data type sub-elements and profiles
    - Data type choices
    - Invariants
-1. **SHALL** validate reference elements against AU PS profile where defined
-1. AU Core profile value sets are preferred over IPS profile value sets :
+* **SHALL** validate reference elements against AU PS profile where defined
+* AU Core profile value sets are preferred over IPS profile value sets :
    - where an element has a required binding, the element **SHALL** apply the intersection of both value sets (AU Core and IPS)
    - where an element has a lesser binding, use the AU Core value set and binding strength (where AU Core is equivalent or stronger) or use the IPS value set where the binding strength is stronger
 
@@ -23,7 +23,7 @@ When managing profile complexity and requirements in the [national and internati
 1. [Complies With Profile (compliesWith)](https://hl7.org/fhir/extensions/StructureDefinition-structuredefinition-compliesWithProfile.html)
 1. [Dependent Profiles (imposeProfile)](https://hl7.org/fhir/extensions/StructureDefinition-structuredefinition-imposeProfile.html)
 
-These mechanisms offer differing capabilities and advantages. Typically HL7 AU profiles use derivation to manage compliance within HL7 AU inheritence. However, AU Patient Summary compliance is required to comply to both HL7 AU (AU Core) and IPS and therefore additional mechanism(s) are required.
+These mechanisms offer differing capabilities and advantages. Typically HL7 AU profiles have used derivation to manage compliance within HL7 AU inheritence. However, AU Patient Summary will comply to both HL7 AU (AU Core) and IPS and therefore additional mechanism(s) are required.
 
 <div class="stu-note" markdown="1">
 For a human, the main differences with use of imposeProfile are:
@@ -37,22 +37,21 @@ Users of this implementation guide are encouraged to provide their feedback abou
 </div><!-- stu-note -->
 
 AU Patient Summary Composition currently:
-* derive from AU Base
-* apply agreed requirements for AU Patient Summary from community discussions
+* derives from AU Base
+* apply agreed requirements for AU Patient Summary from community discussions (human authors)
 * use imposeProfile to enforce IPS constraints
 *Note: Rules from IPS are applied via use of imposeProfile*
 
-div> 
+<div> 
     <img src="aupscomp-current.png" alt="AU Patient Summary Composition current profiling approach" style="width:55%"/>
   </div>
 *Figure 1: AU Patient Summary Composition current profiling approach*
 <br/><br/>
 
 All other profiles currently :
-* derive from AU Base, where available
-* apply AU Core and IPS requirements
+* derives from AU Base, where available
+* apply AU Core and IPS requirements (human authors)
 * use compliesWith to assert compliance with IPS
 *Note: Rules from AU Core and IPS are applied via human authoring. This has been undertaken in support of human-centric design discussions early in the AU Patient Summary project.*
 
-
-
+TBD
