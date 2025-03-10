@@ -32,6 +32,27 @@ For a human, the main differences with use of imposeProfile are:
 
 While only AU Patient Summary Composition currently uses imposeProfile, to support future maintenance it is being considered that all AU Patient Summary profile derive from AU Core, where available, and then use imposeProfile to apply IPS rules. This means that a number of additional requirements including cardinality, terminology, or flagging of Must Support would not be directly visible in the formal views of this guide.
 
-Readers and users of this implementation guide are encouraged to provide their feedback about the potential use of imposePrile design choice.
+Users of this implementation guide are encouraged to provide their feedback about the potential use of imposePrile design choice.
 
 </div><!-- stu-note -->
+
+AU Patient Summary Composition currently:
+* derive from AU Base
+* apply agreed requirements for AU Patient Summary from community discussions
+* use imposeProfile to enforce IPS constraints
+*Note: Rules from IPS are applied via use of imposeProfile*
+
+div> 
+    <img src="aupscomp-current.png" alt="AU Patient Summary Composition current profiling approach" style="width:55%"/>
+  </div>
+*Figure 1: AU Patient Summary Composition current profiling approach*
+<br/><br/>
+
+All other profiles currently :
+* derive from AU Base, where available
+* apply AU Core and IPS requirements
+* use compliesWith to assert compliance with IPS
+*Note: Rules from AU Core and IPS are applied via human authoring. This has been undertaken in support of human-centric design discussions early in the AU Patient Summary project.*
+
+
+
