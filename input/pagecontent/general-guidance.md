@@ -17,7 +17,7 @@ AU PS profiles will by design:
    - where an element has a required binding, the element **SHALL** apply the intersection of both value sets (AU Core and IPS)
    - where an element has a lesser binding, use the AU Core value set and binding strength (where AU Core is equivalent or stronger) or use the IPS value set where the binding strength is stronger
 
-When managing profile complexity and requirements in the [national and international context for AU Patient Summary](file:///C:/work/git/au-fhir-ps/output/relationship.html#relationship-to-aucdi-and-other-igs), FHIR offers the following mechanisms:
+When managing profile complexity and requirements in the [national and international context for AU Patient Summary](relationship.html#relationship-to-aucdi-and-other-igs), the following mechanisms are available:
 1. [Derived from Profiles (derive)](https://build.fhir.org/structuredefinition-definitions.html#StructureDefinition.baseDefinition)
 1. Informal alignment (humans authoring rules in a profile)
 1. [Complies With Profile (compliesWith)](https://hl7.org/fhir/extensions/StructureDefinition-structuredefinition-compliesWithProfile.html)
@@ -37,7 +37,7 @@ Users of this implementation guide are encouraged to provide their feedback abou
 
 
 
-AU Patient Summary Composition currently:
+AU PS Composition currently:
 * derives from AU Base
 * apply agreed requirements for AU Patient Summary from community discussions (human authors)
 * use imposeProfile to enforce IPS constraints
@@ -45,13 +45,13 @@ AU Patient Summary Composition currently:
 *Note: Rules from IPS are applied via use of imposeProfile*
 
 <div> 
-    <img src="aupscomp-current.png" alt="AU Patient Summary Composition current profiling approach" style="width:55%"/>
+    <img src="aupscomp-current.png" alt="AU Patient Summary Composition current profiling approach" style="width:45%"/>
   </div>
 *Figure 1: AU Patient Summary Composition current profiling approach*
 <br/><br/>
 
-All other profiles currently :
-* derives from AU Base, where available
+All other profiles (e.g. AU PS Patient, AU PS MedicationStatement) currently:
+* derive from AU Base, where available
 * apply AU Core and IPS requirements (human authors)
 * use compliesWith to assert compliance with IPS
 
