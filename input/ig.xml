@@ -142,7 +142,7 @@
 				<reference value="Bundle/basicsummary"/>
 			</reference>
 			<name value="Bundle - Basic summary"/>
-			<description value="Shows an example of a tbd patient summary that demonstrates tbd. Example for the *AU Patient Summary Bundle* and *AU Patient Summary Composition* profile. Patient: Mia Leanne Banks."/>
+			<description value="Shows an example of a provider curated patient summary that demonstrates no known problems or disabilities, current allergies and intolerances, and current medication use. Example for the *AU Patient Summary Bundle* and *AU Patient Summary Composition* profile. Patient: Mia Leanne Banks."/>
 			<exampleCanonical value="http://hl7.org.au/fhir/ps/StructureDefinition/au-ps-bundle"/>
 		</resource>
 		<!-- PAGES-->
