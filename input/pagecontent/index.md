@@ -51,7 +51,7 @@ This guide is divided into several pages which are listed at the top of each pag
   - [General Requirements](general-requirements.html): This page defines requirements common to profiles used in this guide including the expectations for mandatory and *Must Support*  elements in AU PS profiles.
   - [Declaring Conformance](declaring-conformance.html): This page describes how to declare conformance to AU PS.
 - [Guidance](guidance.html): These pages list the guidance for this guide.
-  - [General Guidance](general-guidance.html): This page provides guidance on using the profiles defined in this guide. There is currently none.
+  - [General Guidance](general-guidance.html): This page provides guidance on using the profiles defined in this guide. 
   - [Sex and Gender](sex-and-gender.html): This page provides guidance on the representation of sex, gender, and related concepts.
   - [AU Core Data for Interoperability](aucdi.html): This page maps AUCDI data groups and elements to FHIR artefacts in AU Patient Summary.
   - [Relationship with other IGs](relationship.html): This page provides guidance on the relationship between AU Patient Summary, AUCDI, and other implementation guides.
