@@ -13,7 +13,7 @@ AU PS profiles will by design:
    - Data type choices
    - Invariants
 * **SHALL** validate reference elements against AU PS profile where defined
-* AU Core profile value sets are preferred over IPS profile value sets :
+* AU Core profile value sets are preferred over IPS profile value sets:
    - where an element has a required binding, the element **SHALL** apply the intersection of both value sets (AU Core and IPS)
    - where an element has a lesser binding, use the AU Core value set and binding strength (where AU Core is equivalent or stronger) or use the IPS value set where the binding strength is stronger
 
@@ -23,16 +23,16 @@ When managing profile complexity and requirements in the [national and internati
 1. [Complies With Profile (compliesWith)](https://hl7.org/fhir/extensions/StructureDefinition-structuredefinition-compliesWithProfile.html)
 1. [Dependent Profiles (imposeProfile)](https://hl7.org/fhir/extensions/StructureDefinition-structuredefinition-imposeProfile.html)
 
-These mechanisms offer differing capabilities and advantages. Typically HL7 AU profiles have used derivation to manage compliance within HL7 AU inheritence. However, AU Patient Summary will comply to both HL7 AU (AU Core) and IPS and therefore additional mechanism(s) are required.
+These mechanisms offer differing capabilities and advantages. Typically HL7 AU profiles have used derivation to manage compliance within HL7 AU inheritance. However, AU Patient Summary will comply to both HL7 AU (AU Core) and IPS and therefore additional mechanism(s) are required.
 
 <div class="stu-note" markdown="1">
 For a human, the main differences with use of imposeProfile are:
 - does not rely on humans to maintain compliance rules from the target profile
 - does not visually show human reader of the source profile any rules from the target profile, i.e. a human reader must view and understand both profiles to understand the rules
 
-While only AU Patient Summary Composition currently uses imposeProfile, to support future maintenance it is under consideration that all AU Patient Summary profiles derive from AU Core, where available, and use imposeProfile to apply IPS rules. That would mean that a number of IPS-imposed requirements including cardinality, terminology, and flagging of Must Support would not be directly visible in the formal views within this guide.
+While only AU Patient Summary Composition currently uses imposeProfile, to support future maintenance it is under consideration that all AU Patient Summary profiles derive from AU Core, where available, and use imposeProfile to apply IPS rules. That would mean that a number of IPS-imposed requirements including cardinality, terminology, and flagging of <i>Must Support</i> would not be directly visible in the formal views within this guide.
 
-Users of this implementation guide are encouraged to provide their feedback about the potential use of imposePrile.
+Users of this implementation guide are encouraged to provide their feedback about the potential use of imposeProfile.
 </div><!-- stu-note -->
 
 

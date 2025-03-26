@@ -38,7 +38,7 @@ Example: CapabilityStatement resource for a server supporting the AU PS Patient 
             "resource": [
               ...
               {
-                "type": "Observation",
+                "type": "Patient",
                 "supportedProfile": [
                   "http://hl7.org.au/fhir/ps/StructureDefinition/au-ps-patient"
                 ],
