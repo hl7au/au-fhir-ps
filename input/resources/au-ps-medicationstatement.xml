@@ -115,7 +115,7 @@
         <code value="Reference"/>
         <targetProfile value="http://hl7.org.au/fhir/ps/StructureDefinition/au-ps-condition" />
         <targetProfile value="http://hl7.org/fhir/StructureDefinition/Observation"/>
-        <targetProfile value="http://hl7.org.au/fhir/StructureDefinition/au-diagnosticreport"/>
+        <targetProfile value="http://hl7.org/fhir/uv/ips/StructureDefinition/DiagnosticReport-uv-ips"/>
       </type>
       <mustSupport value="true"/>
     </element>
