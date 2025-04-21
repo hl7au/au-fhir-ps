@@ -122,6 +122,9 @@
       </type>
       <mustSupport value="true"/>
     </element>
+    <element id="Composition.relatesTo">
+			<path value="Composition.relatesTo"/>
+		</element>
     <element id="Composition.relatesTo.target[x]">
       <path value="Composition.relatesTo.target[x]"/>
       <type>

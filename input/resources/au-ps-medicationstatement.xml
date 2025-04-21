@@ -44,6 +44,7 @@
       <sliceName value="medicationCodeableConcept"/>
       <type>
         <code value="CodeableConcept"/>
+        <profile value="http://hl7.org/fhir/uv/ips/StructureDefinition/CodeableConcept-uv-ips"/>
       </type>
     </element>
     <element id="MedicationStatement.medication[x]:medicationCodeableConcept.coding">
