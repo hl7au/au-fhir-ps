@@ -51,11 +51,11 @@
     </element>
     <element id="Condition.severity">
       <path value="Condition.severity"/>
-      <mustSupport value="true"/>
       <type>
 				<code value="CodeableConcept"/>
 				<profile value="http://hl7.org/fhir/uv/ips/StructureDefinition/CodeableConcept-uv-ips"/>
 			</type>
+      <mustSupport value="true"/>
       <binding>
         <strength value="extensible"/>
         <valueSet value="http://hl7.org/fhir/ValueSet/condition-severity"/>

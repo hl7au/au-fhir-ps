@@ -83,14 +83,6 @@
     </element>
     <element id="AllergyIntolerance.onset[x]">
       <path value="AllergyIntolerance.onset[x]"/>
-      <slicing>
-        <discriminator>
-          <type value="type"/>
-          <path value="$this"/>
-        </discriminator>
-        <ordered value="false"/>
-        <rules value="open"/>
-      </slicing>
       <type>
         <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-type-must-support">
 					<valueBoolean value="true" />
@@ -105,16 +97,6 @@
       </type>
       <type>
         <code value="Range"/>
-      </type>
-      <mustSupport value="true"/>
-    </element>
-    <element id="AllergyIntolerance.onset[x]:onsetDateTime">
-      <path value="AllergyIntolerance.onset[x]"/>
-      <sliceName value="onsetDateTime"/>
-      <min value="0"/>
-      <max value="1"/>
-      <type>
-        <code value="dateTime"/>
       </type>
       <mustSupport value="true"/>
     </element>
