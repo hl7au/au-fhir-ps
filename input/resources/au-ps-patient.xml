@@ -160,7 +160,6 @@
     </element>
     <element id="Patient.contact">
       <path value="Patient.contact"/>
-      <mustSupport value="true"/>
     </element>
     <element id="Patient.contact.relationship">
       <path value="Patient.contact.relationship"/>
