@@ -158,6 +158,17 @@
       <path value="Patient.communication.language"/>
       <mustSupport value="true"/>
     </element>
+    <element id="Patient.contact">
+      <path value="Patient.contact"/>
+      <mustSupport value="true"/>
+    </element>
+    <element id="Patient.contact.relationship">
+      <path value="Patient.contact.relationship"/>
+      <type>
+				<code value="CodeableConcept"/>
+				<profile value="http://hl7.org/fhir/uv/ips/StructureDefinition/CodeableConcept-uv-ips"/>
+			</type>
+    </element>
     <element id="Patient.communication.preferred">
       <path value="Patient.communication.preferred"/>
       <mustSupport value="true"/>
