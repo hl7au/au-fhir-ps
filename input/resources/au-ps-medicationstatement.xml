@@ -132,5 +132,12 @@
 			<path value="MedicationStatement.dosage.timing"/>
 			<mustSupport value="true"/>
 		</element>
+    <element id="MedicationStatement.dosage.route">
+      <path value="MedicationStatement.dosage.route"/>
+      <type>
+        <code value="CodeableConcept"/>
+        <profile value="http://hl7.org/fhir/uv/ips/StructureDefinition/CodeableConcept-uv-ips"/>
+      </type>
+    </element>
   </differential>
 </StructureDefinition>

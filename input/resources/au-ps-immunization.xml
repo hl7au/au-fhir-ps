@@ -88,6 +88,20 @@
       <path value="Immunization.primarySource"/>
       <mustSupport value="true"/>
     </element>
+    <element id="Immunization.site">
+      <path value="Immunization.site"/>
+      <type>
+				<code value="CodeableConcept"/>
+				<profile value="http://hl7.org/fhir/uv/ips/StructureDefinition/CodeableConcept-uv-ips"/>
+			</type>
+    </element>
+    <element id="Immunization.route">
+      <path value="Immunization.route"/>
+      <type>
+				<code value="CodeableConcept"/>
+				<profile value="http://hl7.org/fhir/uv/ips/StructureDefinition/CodeableConcept-uv-ips"/>
+			</type>
+    </element>
     <element id="Immunization.note">
       <path value="Immunization.note"/>
       <mustSupport value="true"/>
