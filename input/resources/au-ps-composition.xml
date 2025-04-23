@@ -412,7 +412,7 @@
     <element id="Composition.section:sectionImmunizations">
       <path value="Composition.section"/>
       <sliceName value="sectionImmunizations"/>
-      <short value="Immunizations Section"/>
+      <short value="IPS Immunizations Section"/>
       <definition value="The Immunizations Section defines a patient's current immunization status and pertinent immunization history.&#xD;&#xA;The primary use case for the Immunization Section is to enable communication of a patient's immunization status.&#xD;&#xA;The section includes the current immunization status, and may contain the entire immunization history that is relevant to the period of time being summarized."/>
       <min value="0"/>
       <max value="1"/>
