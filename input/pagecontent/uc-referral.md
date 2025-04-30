@@ -79,7 +79,7 @@ INSERT SEQUENCE DIAGRAM
 
 <div class="stu-note" markdown="1">
 
-#### TODO FOR EXAMPLE 01 - PATIENT SUMMARY EMBEDDED IN REFERRAL
+**TODO for Example 01 - patient summary embedded in a referral**
 This is a Work in Progress. To dos include:
 1. use case decisions still to be made including attestation (see above) - as decisions are made they will be reflected in the example
 2. Immunization history to be added. 
@@ -89,9 +89,13 @@ _Note: the example data e.g. immunisation history, meds, etc. are provided by th
 
 </div>
 
+
 **TBD EXAMPLE O2 - MOST RECENT PATIENT SUMMARY**
 
-#### TODO FOR EXAMPLE 02 - MORE RECENT PATIENT SUMMARY
+
+<div class="stu-note" markdown="1">
+
+**TODO FOR Example 02 - more recent patient summary**
 Pre-requisite decisions to get started are:
 1. what external system to provide the most recent patient summary
 1. what kind of 'device' is considered to author this
