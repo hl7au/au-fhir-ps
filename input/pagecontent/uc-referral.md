@@ -36,7 +36,9 @@ The following decisions are to be confirmed:
 
 The following is to be decided:
 1. what external system to provide the most recent patient summary
+1. what kind of 'device' is considered to author this
 1. what sort of link/QR code/RESTfulAPI can be used to access the summary
+1. how is currency detected? is it indicated in the payload? or is this out of scope?
 
 </div>
 
@@ -53,25 +55,38 @@ The following is to be decided:
 2. Endocronoligst CIS
 3. External system to provide the most recent patient summary
 
-#### Precondition(s)
+### Precondition(s)
 1. The referral from the GP includes a patient summary at the time of referral.
 2. A more recent patient summary is available from an external source. This may be the original GP, or may be a national health record system.
-3. The endocrinologist’s system can access both documents.
+3. The Endocrinologist’s system can access both documents.
 
-#### Postcondition(s)
-1. The endocrinologist uses the information to guide clinical decisions.
-2. Treament changes are recorded in the endocrinologist's system and are communicated back to the GP and patient.
+### Postcondition(s)
+1. The Endocrinologist uses the information to guide clinical decisions.
+2. Treatment changes are recorded in the endocrinologist's system and are communicated back to the GP and patient.
 
-#### Flow
+### Flow
 1. Joyce attends her scheduled consultation with the Endocrinologist.
 2. The Endocrinologist opens the referral in their CIS, accesses and reviews the embedded patient summary.
-3. The system alerts that a more recent patient summary is available from another source.
-4. The Endocrinologist accesses the latest patient summary, comparing the embedded patient summary to the latest patient summary, and verifies consistency in medications and medical history.
+3. The Endocrinologist's CIS alerts that a more recent patient summary is available from another source.
+4. The Endocrinologist accesses the more recent patient summary, comparing the embedded patient summary to the more recent patient summary, and verifies consistency in medications and medical history.
 5. The Endocrinologist notes updated clinical information, including changes to Joyce’s insulin regimen.
 6. Based on the review and patient discussion, the Endocrinologist decides to increase Joyce’s insulin dose and documents this within their CIS.
 
 INSERT SEQUENCE DIAGRAM
 
-INSERT EXAMPLE 01 - PATIENT SUMMARY EMBEDDED IN REFERRAL
+[INSERT EXAMPLE 01 - PATIENT SUMMARY EMBEDDED IN REFERRAL](Bundle-aups-referral-endoconsult-01.html)
 
-INSERT EXAMPLE O2 - MOST RECENT PATIENT SUMMARY
+<div class="stu-note" markdown="1">
+
+#### TODO IN EXAMPLE 01 - PATIENT SUMMARY EMBEDDED IN REFERRAL
+This is a Work in Progress. To do includes:
+1. use case decisions still to be made including attestation (see above) - as decisions are made they will be reflected in the example
+2. Immunization history to be added. 
+3. Diagnostic Results to be added. 
+4. Other pregnancy information to be added.
+
+_Note: the clinical information (e.g. medications) for inclusion in examples for this use case are provided by the AU Patient Summary Clinical Focus Group._
+
+</div>
+
+TBD INSERT EXAMPLE O2 - MOST RECENT PATIENT SUMMARY
