@@ -220,11 +220,6 @@
 					<generation value="markdown"/>
 				</page>
 				<page>
-					<nameUrl value="uc-emergency.html"/>
-					<title value="Emergency Hospital Attendance"/>
-					<generation value="markdown"/>
-				</page>
-				<page>
 					<nameUrl value="uc-referral.html"/>
 					<title value="Referral Specialist and Allied Health"/>
 					<generation value="markdown"/>
