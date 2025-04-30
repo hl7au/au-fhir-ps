@@ -1,5 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!--WIP. 1. use case decisions still to be made including attestation. 2. Immunization history to be added. 3. Diagnostic Results to be added. Other pregnancy information to be added. --> 
+<!--WIP. 
+1. use case decisions still to be made including attestation. 
+2. Immunization history to be added. 
+3. Diagnostic Results to be added.  --> 
 <Bundle xmlns="http://hl7.org/fhir">
   <id value="aups-referral-endoconsult-01"/>
   <meta>
@@ -77,24 +80,34 @@
                   <tr>
                     <th>Medicine</th>
                     <th>Dose</th>
+                    <th>Status</th>
+                    <th>Last Updated</th>
                   </tr>
                 </thead>
                 <tbody>
                   <tr>
                     <td>Prenatal vitamins</td>
                     <td>1 tablet daily</td>
+                    <td>Active</td>
+                    <th>28/10/2024</th>
                   </tr>
                   <tr>
                     <td>Insulin (Humulin N)</td>
                     <td>10 units subcutaneously in the morning and evening</td>
+                    <td>Active</td>
+                    <th>28/10/2024</th>
                   </tr>
                   <tr>
                     <td>Insulin (Humulin R)</td>
                     <td>5 units subcutaneously before each meal</td>
+                    <td>Active</td>
+                    <th>28/10/2024</th>
                   </tr>
                   <tr>
                     <td>Metformin</td>
                     <td>500mg twice daily</td>
+                    <td>Active</td>
+                    <th>28/10/2024</th>
                   </tr>
                 </tbody>
               </table>
@@ -127,16 +140,19 @@
                 <thead>
                   <tr>
                     <th>Problem/Diagnosis</th>
+                    <th>Status</th>
                     <th>Comment</th>
                   </tr>
                 </thead>
                 <tbody>
                   <tr>
                     <td>Gestational diabetes</td>
+                    <td>Active</td>
                     <td>Recent diagnosis, referring to Endo &amp; Dietitian</td>
                   </tr>
                   <tr>
                     <td>Anaemia</td>
+                    <td>Active</td>
                     <td></td>
                   </tr>
                 </tbody>
@@ -174,7 +190,7 @@
             </coding>
           </code>
           <text>
-            <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml">Pregnancy confirmed 12 June 2024.</div>
+            <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml">Pregnancy confirmed 12/06/2024. Estimated Date of Delivery  03/02/2025.</div>
           </text>
           <entry>
             <reference value="urn:uuid:f85ad223-7bed-46f3-893d-e89d6082f9a9"/>
@@ -243,6 +259,9 @@
           <postalCode value="2484"/>
           <country value="AU"/>
         </address>
+        <generalPractitioner>
+          <reference value="urn:uuid:afead11c-3bee-4020-af4f-44040abfa961"/>
+        </generalPractitioner>
       </Patient>
     </resource>
   </entry>
@@ -301,8 +320,6 @@
         </medicationReference>
         <subject>
           <reference value="urn:uuid:85822a88-55b1-460c-bb7b-e8fc22d8568f"/>
-          <type value="Patient"/>
-          <display value="Joyce JOHNSON"/>
         </subject>
         <effectivePeriod>
           <start value="2024"/>
@@ -345,8 +362,6 @@
         </medicationCodeableConcept>
         <subject>
           <reference value="urn:uuid:85822a88-55b1-460c-bb7b-e8fc22d8568f"/>
-          <type value="Patient"/>
-          <display value="Joyce JOHNSON"/>
         </subject>
         <effectivePeriod>
           <start value="2024"/>
@@ -379,8 +394,6 @@
         </medicationCodeableConcept>
         <subject>
           <reference value="urn:uuid:85822a88-55b1-460c-bb7b-e8fc22d8568f"/>
-          <type value="Patient"/>
-          <display value="Joyce JOHNSON"/>
         </subject>
         <effectivePeriod>
           <start value="2024"/>
@@ -405,8 +418,6 @@
         </medicationCodeableConcept>
         <subject>
           <reference value="urn:uuid:85822a88-55b1-460c-bb7b-e8fc22d8568f"/>
-          <type value="Patient"/>
-          <display value="Joyce JOHNSON"/>
         </subject>
         <effectivePeriod>
           <start value="2024"/>
@@ -448,8 +459,6 @@
         </code>
         <subject>
           <reference value="urn:uuid:85822a88-55b1-460c-bb7b-e8fc22d8568f"/>
-          <type value="Patient"/>
-          <display value="Joyce JOHNSON"/>
         </subject>
         <note>
           <text value="Recent diagnosis, referring to Endo &amp; Dietitian"/>
@@ -487,8 +496,6 @@
         </code>
         <subject>
           <reference value="urn:uuid:85822a88-55b1-460c-bb7b-e8fc22d8568f"/>
-          <type value="Patient"/>
-          <display value="Joyce JOHNSON"/>
         </subject>
       </Condition>
     </resource>
@@ -512,8 +519,6 @@
         </vaccineCode>
         <patient>
           <reference value="urn:uuid:85822a88-55b1-460c-bb7b-e8fc22d8568f"/>
-          <type value="Patient"/>
-          <display value="Joyce JOHNSON"/>
         </patient>
         <occurrenceDateTime value="2024-10-05"/>
       </Immunization>
@@ -555,13 +560,53 @@
           </coding>
           <text value="Pregnant"/>
         </valueCodeableConcept>
+        <hasMember>
+          <reference value="urn:uuid:ad82d71b-ca1c-4db6-a726-cc70cf638306"/>
+        </hasMember>
+      </Observation>
+    </resource>
+  </entry>
+  <entry>
+    <fullUrl value="urn:uuid:ad82d71b-ca1c-4db6-a726-cc70cf638306"/>
+    <resource>
+      <Observation>
+        <status value="final"/>
+        <category>
+          <coding>
+            <system value="http://terminology.hl7.org/CodeSystem/observation-category"/>
+            <code value="imaging"/>
+            <display value="Imaging"/>
+          </coding>
+        </category>
+        <code>
+          <coding>
+            <system value="http://snomed.info/sct"/>
+            <code value="161714006"/>
+            <display value="Estimated date of delivery"/>
+          </coding>
+          <coding>
+            <system value="http://snomed.info/sct"/>
+            <code value="161714006"/>
+            <display value="Estimated date of delivery"/>
+          </coding>
+          <coding>
+            <system value="http://loinc.org"/>
+            <code value="11781-2"/>
+            <display value="Delivery date US composite estimate"/>
+          </coding>
+        </code>
+        <subject>
+          <reference value="urn:uuid:85822a88-55b1-460c-bb7b-e8fc22d8568f"/>
+        </subject>
+        <effectiveDateTime value="2024-06-12"/>
+        <valueDateTime value="2025-02-03"/>
       </Observation>
     </resource>
   </entry>
   <entry>
     <fullUrl value="urn:uuid:afead11c-3bee-4020-af4f-44040abfa961"/>
     <resource>
-      <PractitionerRole xmlns="http://hl7.org/fhir">
+      <PractitionerRole>
         <meta>
           <profile value="http://hl7.org.au/fhir/ps/StructureDefinition/au-ps-practitionerrole"/>
         </meta>

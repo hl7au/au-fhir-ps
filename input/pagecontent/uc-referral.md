@@ -78,14 +78,13 @@ INSERT SEQUENCE DIAGRAM
 
 <div class="stu-note" markdown="1">
 
-#### TODO IN EXAMPLE 01 - PATIENT SUMMARY EMBEDDED IN REFERRAL
-This is a Work in Progress. To do includes:
+#### TODO FOR EXAMPLE 01 - PATIENT SUMMARY EMBEDDED IN REFERRAL
+This is a Work in Progress. To dos include:
 1. use case decisions still to be made including attestation (see above) - as decisions are made they will be reflected in the example
 2. Immunization history to be added. 
 3. Diagnostic Results to be added. 
-4. Other pregnancy information to be added.
 
-_Note: the clinical information (e.g. medications) for inclusion in examples for this use case are provided by the AU Patient Summary Clinical Focus Group._
+_Note: the example data e.g. immunisation history, meds, etc. are provided by the AU Patient Summary Clinical Focus Group._
 
 </div>
 
