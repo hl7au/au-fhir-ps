@@ -16,7 +16,7 @@ The Endocrinologist accesses and compares both patient summaries to verify the a
 
 <div class="stu-note" markdown="1">
 
-#### Decisions to be confirmed for AU PS 1 (embedded in referral)
+#### Use Case Decisions to be confirmed for the patient summary embedded in referral
 The following decisions are to be confirmed:
 1. is it accessed by a QR code and/or link
 1. is it attested by provider at time of creation and is this 'legal' attestation
@@ -29,7 +29,7 @@ The following is to be decided:
 
 <div class="stu-note" markdown="1">
 
-#### Decisions to be confirmed for AU PS 2 (most recent)
+#### Use Case Decisions to be confirmed for more recent patient summary
 The following decisions are to be confirmed:
 1. Attested by a digital signature by an authoritative source - and what that means
 1. how is discovery of the most recent undertaken - is this search using limited info or is this out of scope of this use case
@@ -37,6 +37,7 @@ The following decisions are to be confirmed:
 The following is to be decided:
 1. what external system to provide the most recent patient summary
 1. what kind of 'device' is considered to author this
+1. what data is in this 'most recent' - what's different to the patient summary at time of referral?
 1. what sort of link/QR code/RESTfulAPI can be used to access the summary
 1. how is currency detected? is it indicated in the payload? or is this out of scope?
 
@@ -74,7 +75,7 @@ The following is to be decided:
 
 INSERT SEQUENCE DIAGRAM
 
-[INSERT EXAMPLE 01 - PATIENT SUMMARY EMBEDDED IN REFERRAL](Bundle-aups-referral-endoconsult-01.html)
+**[EXAMPLE 01 - PATIENT SUMMARY EMBEDDED IN REFERRAL](Bundle-aups-referral-endoconsult-01.html)**
 
 <div class="stu-note" markdown="1">
 
@@ -88,4 +89,12 @@ _Note: the example data e.g. immunisation history, meds, etc. are provided by th
 
 </div>
 
-TBD INSERT EXAMPLE O2 - MOST RECENT PATIENT SUMMARY
+**TBD EXAMPLE O2 - MOST RECENT PATIENT SUMMARY**
+
+#### TODO FOR EXAMPLE 02 - MORE RECENT PATIENT SUMMARY
+Pre-requisite decisions to get started are:
+1. what external system to provide the most recent patient summary
+1. what kind of 'device' is considered to author this
+1. what data is in this 'most recent' - what's different to the patient summary at time of referral?
+
+</div>
