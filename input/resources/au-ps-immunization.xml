@@ -88,6 +88,10 @@
       <path value="Immunization.primarySource"/>
       <mustSupport value="true"/>
     </element>
+    <element id="Immunization.lotNumber">
+      <path value="Immunization.lotNumber"/>
+      <mustSupport value="true"/>
+    </element>
     <element id="Immunization.site">
       <path value="Immunization.site"/>
       <type>
