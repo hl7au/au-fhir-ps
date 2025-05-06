@@ -7,147 +7,29 @@
   <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-compliesWithProfile">
     <valueCanonical value="http://hl7.org/fhir/uv/ips/StructureDefinition/Patient-uv-ips"/>
   </extension>
-  <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-compliesWithProfile">
-    <valueCanonical value="http://hl7.org.au/fhir/core/StructureDefinition/au-core-patient"/>
-  </extension>
   <url value="http://hl7.org.au/fhir/ps/StructureDefinition/au-ps-patient"/>
   <name value="AUPSPatient"/>
   <title value="AU PS Patient"/>
   <status value="draft"/>
-  <description value="This profile sets minimum expectations for a Patient resource in the context of a patient summary in an Australian context. It is based on the [AU Base Patient](http://build.fhir.org/ig/hl7au/au-fhir-base/StructureDefinition-au-patient.html) profile, and applies the constraints of [AU Core Patient](http://hl7.org.au/fhir/core/StructureDefinition/au-core-patient) and [Patient (IPS)](http://hl7.org/fhir/uv/ips/StructureDefinition/Patient-uv-ips)."/>
+  <description value="This profile sets minimum expectations for a Patient resource in the context of a patient summary in an Australian context. It is based on the [AU Core Patient](https://build.fhir.org/ig/hl7au/au-fhir-core/StructureDefinition-au-core-patient.html) profile, and applies the additional requirements from [Patient (IPS)](http://hl7.org/fhir/uv/ips/StructureDefinition/Patient-uv-ips)."/>
   <kind value="resource"/>
   <abstract value="false"/>
   <type value="Patient"/>
-  <baseDefinition value="http://hl7.org.au/fhir/StructureDefinition/au-patient"/>
+  <baseDefinition value="http://hl7.org.au/fhir/core/StructureDefinition/au-core-patient"/>
   <derivation value="constraint"/>
   <differential>
     <element id="Patient">
       <path value="Patient"/>
       <short value="A patient in the context of electronic exchange of health information"/>
-      <constraint>
-        <key value="au-core-pat-01"/>
-        <severity value="error"/>
-        <human value="At least one patient identifier shall be valid, or if not available, the Data Absent Reason extension shall be present"/>
-        <expression value="(identifier.where(system.count() + value.count() &gt;1)).exists() xor identifier.extension('http://hl7.org/fhir/StructureDefinition/data-absent-reason').exists()"/>
-      </constraint>
-      <constraint>
-        <key value="au-core-pat-02"/>
-        <severity value="error"/>
-        <human value="At least one patient name shall have a family name, or if not available, the Data Absent Reason extension shall be present"/>
-        <expression value="name.family.exists() xor name.extension('http://hl7.org/fhir/StructureDefinition/data-absent-reason').exists()"/>
-      </constraint>
-    </element>
-    <element id="Patient.extension:indigenousStatus">
-      <path value="Patient.extension"/>
-      <sliceName value="indigenousStatus"/>
-      <mustSupport value="true"/>
-    </element>
-    <element id="Patient.extension:genderIdentity">
-      <path value="Patient.extension" />
-      <sliceName value="genderIdentity" />
-      <short value="Gender identity shall be a member of the Gender Identity Response value set if any codes within that value set can apply"/>
-      <mustSupport value="true"/>
-    </element>
-    <element id="Patient.extension:individualPronouns">
-      <path value="Patient.extension"/>
-      <sliceName value="individualPronouns"/>
-      <short value="Pronouns shall be a member of the Australian Pronouns value set if any codes within that value set can apply"/>
-      <mustSupport value="true"/>
-    </element>
-    <element id="Patient.identifier">
-      <path value="Patient.identifier"/>
-      <slicing>
-        <discriminator>
-          <type value="pattern"/>
-          <path value="type"/>
-        </discriminator>
-        <rules value="open"/>
-      </slicing>
-      <min value="1"/>
-      <condition value="au-core-pat-01"/>
-      <mustSupport value="true"/>
-    </element>
-    <element id="Patient.identifier:ihi">
-      <path value="Patient.identifier"/>
-      <sliceName value="ihi"/>
-      <max value="1"/>
-      <type>
-        <code value="Identifier"/>
-        <profile value="http://hl7.org.au/fhir/StructureDefinition/au-ihi"/>
-      </type>
-      <mustSupport value="true"/>
-    </element>
-    <element id="Patient.identifier:medicare">
-      <path value="Patient.identifier"/>
-      <sliceName value="medicare"/>
-      <max value="1"/>
-      <type>
-        <code value="Identifier"/>
-        <profile value="http://hl7.org.au/fhir/StructureDefinition/au-medicarecardnumber"/>
-      </type>
-      <mustSupport value="true"/>
-    </element>
-    <element id="Patient.identifier:dva">
-      <path value="Patient.identifier"/>
-      <sliceName value="dva"/>
-      <max value="1"/>
-      <type>
-        <code value="Identifier"/>
-        <profile value="http://hl7.org.au/fhir/StructureDefinition/au-dvanumber"/>
-      </type>
-      <mustSupport value="true"/>
     </element>
     <element id="Patient.name">
       <path value="Patient.name"/>
-      <min value="1"/>
-      <comment value="A patient may have multiple names with different uses or applicable periods. At least one name SHOULD be the name the patient is considered to have for administrative and record keeping purposes - family name is used to enable matching against patient records."/>
-      <condition value="au-core-pat-02"/>
-      <constraint>
-        <key value="au-core-pat-03"/> 
-        <severity value="error"/>
-        <human value="At least text, family name, or given name shall be present, or if neither is available, the Data Absent Reason extension shall be present"/>
-        <expression value="(text.exists() or family.exists() or given.exists()) xor extension('http://hl7.org/fhir/StructureDefinition/data-absent-reason').exists()"/>
-      </constraint>
       <constraint>
         <key value="ips-pat-1"/> 
         <severity value="error"/>
         <human value="Patient.name.given, Patient.name.family or Patient.name.text SHALL be present"/>
         <expression value="family.exists() or given.exists() or text.exists()"/>
       </constraint>
-      <mustSupport value="true"/>
-    </element>
-    <element id="Patient.name.use">
-      <path value="Patient.name.use"/>
-      <mustSupport value="true"/>
-    </element>
-    <element id="Patient.name.text">
-      <path value="Patient.name.text"/>
-      <mustSupport value="true"/>
-    </element>
-    <element id="Patient.name.family">
-      <path value="Patient.name.family"/>
-      <mustSupport value="true"/>
-    </element>
-    <element id="Patient.name.given">
-      <path value="Patient.name.given"/>
-      <mustSupport value="true"/>
-    </element>
-    <element id="Patient.telecom">
-      <path value="Patient.telecom"/>
-      <mustSupport value="true"/>
-    </element>
-    <element id="Patient.gender">
-      <path value="Patient.gender"/>
-      <min value="1"/>
-      <mustSupport value="true"/>
-    </element>
-    <element id="Patient.birthDate">
-      <path value="Patient.birthDate"/>
-      <min value="1"/>
-      <mustSupport value="true"/>
-    </element>
-    <element id="Patient.address">
-      <path value="Patient.address"/>
       <mustSupport value="true"/>
     </element>
     <element id="Patient.contact">
@@ -159,18 +41,6 @@
 				<code value="CodeableConcept"/>
 				<profile value="http://hl7.org/fhir/uv/ips/StructureDefinition/CodeableConcept-uv-ips"/>
 			</type>
-    </element>
-    <element id="Patient.communication">
-      <path value="Patient.communication"/>
-      <mustSupport value="true"/>
-    </element>
-    <element id="Patient.communication.language">
-      <path value="Patient.communication.language"/>
-      <mustSupport value="true"/>
-    </element>
-    <element id="Patient.communication.preferred">
-      <path value="Patient.communication.preferred"/>
-      <mustSupport value="true"/>
     </element>
     <element id="Patient.generalPractitioner">
       <path value="Patient.generalPractitioner"/>

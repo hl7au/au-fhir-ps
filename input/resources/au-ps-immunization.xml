@@ -7,26 +7,19 @@
   <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-compliesWithProfile">
     <valueCanonical value="http://hl7.org/fhir/uv/ips/StructureDefinition/Immunization-uv-ips"/>
   </extension>
-  <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-compliesWithProfile">
-    <valueCanonical value="http://hl7.org.au/fhir/core/StructureDefinition/au-core-immunization"/>
-  </extension>
   <url value="http://hl7.org.au/fhir/ps/StructureDefinition/au-ps-immunization"/>
   <name value="AUPSImmunization"/>
   <title value="AU PS Immunization"/>
   <status value="draft"/>
-  <description value="This profile sets minimum expectations for an Immunization resource in the context of a patient summary in an Australian context. It is based on the [AU Base Immunisation](http://build.fhir.org/ig/hl7au/au-fhir-base/StructureDefinition-au-immunization.html) profile, and applies the constraints of [AU Core Immunization](http://hl7.org.au/fhir/core/StructureDefinition/au-core-immunization) and [Immunization (IPS)](http://hl7.org/fhir/uv/ips/StructureDefinition/Immunization-uv-ips)." />
+  <description value="This profile sets minimum expectations for an Immunization resource in the context of a patient summary in an Australian context. It is based on the [AU Core Immunization](https://build.fhir.org/ig/hl7au/au-fhir-core/StructureDefinition-au-core-immunization.html) profile, and applies the additional requirements from [Immunization (IPS)](http://hl7.org/fhir/uv/ips/StructureDefinition/Immunization-uv-ips)." />
   <kind value="resource"/>
   <abstract value="false"/>
   <type value="Immunization"/>
-  <baseDefinition value="http://hl7.org.au/fhir/StructureDefinition/au-immunization"/>
+  <baseDefinition value="http://hl7.org.au/fhir/core/StructureDefinition/au-core-immunization"/>
   <derivation value="constraint"/>
   <differential>
     <element id="Immunization">
       <path value="Immunization"/>
-    </element>
-    <element id="Immunization.status">
-      <path value="Immunization.status"/>
-      <mustSupport value="true"/>
     </element>
     <element id="Immunization.vaccineCode">
       <path value="Immunization.vaccineCode"/>
@@ -34,38 +27,6 @@
 				<code value="CodeableConcept"/>
 				<profile value="http://hl7.org/fhir/uv/ips/StructureDefinition/CodeableConcept-uv-ips"/>
 			</type>
-      <mustSupport value="true"/>
-    </element>
-    <element id="Immunization.vaccineCode.coding">
-      <path value="Immunization.vaccineCode.coding" />
-      <slicing>
-        <discriminator>
-          <type value="pattern" />
-          <path value="$this" />
-        </discriminator>
-        <ordered value="false" />
-        <rules value="open" />
-      </slicing>
-    </element>
-    <element id="Immunization.vaccineCode.coding:amtVaccineCode">
-      <path value="Immunization.vaccineCode.coding" />
-      <sliceName value="amtVaccineCode" />
-      <max value="1" />
-      <binding>
-        <strength value="required" />
-        <valueSet value="https://healthterminologies.gov.au/fhir/ValueSet/amt-vaccine-1" />
-      </binding>
-      <mustSupport value="true"/>
-    </element>
-    <element id="Immunization.vaccineCode.coding:airVaccineCode">
-      <path value="Immunization.vaccineCode.coding" />
-      <sliceName value="airVaccineCode" />
-      <max value="1" />
-      <binding>
-        <strength value="required" />
-        <valueSet value="https://healthterminologies.gov.au/fhir/ValueSet/australian-immunisation-register-vaccine-1" />
-      </binding>
-      <mustSupport value="true"/>
     </element>
     <element id="Immunization.patient">
       <path value="Immunization.patient"/>
@@ -73,23 +34,10 @@
         <code value="Reference"/>
         <targetProfile value="http://hl7.org.au/fhir/ps/StructureDefinition/au-ps-patient"/>
       </type>
-      <mustSupport value="true"/>
     </element>
     <element id="Immunization.patient.reference">
       <path value="Immunization.patient.reference"/>
       <min value="1"/>
-      <mustSupport value="true"/>
-    </element>
-    <element id="Immunization.occurrence[x]">
-      <path value="Immunization.occurrence[x]"/>
-      <mustSupport value="true"/>
-    </element>
-    <element id="Immunization.primarySource">
-      <path value="Immunization.primarySource"/>
-      <mustSupport value="true"/>
-    </element>
-    <element id="Immunization.lotNumber">
-      <path value="Immunization.lotNumber"/>
       <mustSupport value="true"/>
     </element>
     <element id="Immunization.site">
@@ -105,10 +53,6 @@
 				<code value="CodeableConcept"/>
 				<profile value="http://hl7.org/fhir/uv/ips/StructureDefinition/CodeableConcept-uv-ips"/>
 			</type>
-    </element>
-    <element id="Immunization.note">
-      <path value="Immunization.note"/>
-      <mustSupport value="true"/>
     </element>
   </differential>
 </StructureDefinition>
