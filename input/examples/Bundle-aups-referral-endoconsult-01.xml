@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!--WIP. 
 1. use case decisions still to be made including attestation. 
-2. More immunization history to be added. 
 3. Diagnostic Results to be added.  --> 
 <Bundle xmlns="http://hl7.org/fhir">
   <id value="aups-referral-endoconsult-01"/>
@@ -213,8 +212,20 @@
                     <td>1/6/2022</td>
                   </tr>
                   <tr>
+                    <td>Covid vaccine - Pfizer</td>
+                    <td>2/2/2022</td>
+                  </tr>
+                  <tr>
+                    <td>Covid vaccine - Pfizer</td>
+                    <td>20/7/2021</td>
+                  </tr>
+                  <tr>
                     <td>Influenza vaccine</td>
                     <td>17/5/2021</td>
+                  </tr>
+                  <tr>
+                    <td>Covid vaccine - Pfizer</td>
+                    <td>27/4/2021</td>
                   </tr>
                 </tbody>
               </table>
@@ -236,7 +247,16 @@
             <reference value="urn:uuid:62eb70e3-e814-4785-80d3-8aa45b1fc367"/>
           </entry>
           <entry>
+            <reference value="urn:uuid:fac8c42e-4d2a-4cf5-bcc6-831c60e8230e"/>
+          </entry>
+          <entry>
+            <reference value="urn:uuid:40a0b552-b0ea-4283-b33e-a5d2e26ed20f"/>
+          </entry>
+          <entry>
             <reference value="urn:uuid:2f3537b2-f50c-4a2a-ab92-30fdcfe5fd96"/>
+          </entry>
+          <entry>
+            <reference value="urn:uuid:eb1f812e-41c6-4f8d-b9de-573428a94994"/>
           </entry>
         </section>
         <section>
@@ -592,6 +612,39 @@
     </resource>
   </entry>
   <entry>
+    <fullUrl value="urn:uuid:ad82d71b-ca1c-4db6-a726-cc70cf638306"/>
+    <resource>
+      <Observation>
+        <id value="ad82d71b-ca1c-4db6-a726-cc70cf638306"/>
+        <status value="final"/>
+        <category>
+          <coding>
+            <system value="http://terminology.hl7.org/CodeSystem/observation-category"/>
+            <code value="imaging"/>
+            <display value="Imaging"/>
+          </coding>
+        </category>
+        <code>
+          <coding>
+            <system value="http://snomed.info/sct"/>
+            <code value="161714006"/>
+            <display value="Estimated date of delivery"/>
+          </coding>
+          <coding>
+            <system value="http://loinc.org"/>
+            <code value="11781-2"/>
+            <display value="Delivery date US composite estimate"/>
+          </coding>
+        </code>
+        <subject>
+          <reference value="urn:uuid:85822a88-55b1-460c-bb7b-e8fc22d8568f"/>
+        </subject>
+        <effectiveDateTime value="2024-06-12"/>
+        <valueDateTime value="2025-02-03"/>
+      </Observation>
+    </resource>
+  </entry>
+  <entry>
     <fullUrl value="urn:uuid:f85ad223-7bed-46f3-893d-e89d6082f9a9"/>
     <resource>
       <Observation>
@@ -631,39 +684,6 @@
         <hasMember>
           <reference value="urn:uuid:ad82d71b-ca1c-4db6-a726-cc70cf638306"/>
         </hasMember>
-      </Observation>
-    </resource>
-  </entry>
-  <entry>
-    <fullUrl value="urn:uuid:ad82d71b-ca1c-4db6-a726-cc70cf638306"/>
-    <resource>
-      <Observation>
-        <id value="ad82d71b-ca1c-4db6-a726-cc70cf638306"/>
-        <status value="final"/>
-        <category>
-          <coding>
-            <system value="http://terminology.hl7.org/CodeSystem/observation-category"/>
-            <code value="imaging"/>
-            <display value="Imaging"/>
-          </coding>
-        </category>
-        <code>
-          <coding>
-            <system value="http://snomed.info/sct"/>
-            <code value="161714006"/>
-            <display value="Estimated date of delivery"/>
-          </coding>
-          <coding>
-            <system value="http://loinc.org"/>
-            <code value="11781-2"/>
-            <display value="Delivery date US composite estimate"/>
-          </coding>
-        </code>
-        <subject>
-          <reference value="urn:uuid:85822a88-55b1-460c-bb7b-e8fc22d8568f"/>
-        </subject>
-        <effectiveDateTime value="2024-06-12"/>
-        <valueDateTime value="2025-02-03"/>
       </Observation>
     </resource>
   </entry>
@@ -961,6 +981,131 @@
           <display value="ModernaTX, Inc."/>
         </manufacturer>
         <lotNumber value="RX00000F"/>
+      </Immunization>
+    </resource>
+  </entry>
+  <entry>
+    <fullUrl value="urn:uuid:40a0b552-b0ea-4283-b33e-a5d2e26ed20f"/>
+    <resource>
+      <Immunization>
+        <id value="40a0b552-b0ea-4283-b33e-a5d2e26ed20f"/>
+        <meta>
+          <profile value="http://hl7.org.au/fhir/ps/StructureDefinition/au-ps-immunization"/>
+        </meta>
+        <extension url="http://hl7.org.au/fhir/StructureDefinition/vaccine-serial-number">
+          <valueString value="vNo1111"/>
+        </extension>
+        <status value="completed"/>
+        <vaccineCode>
+          <coding>
+            <system value="https://www.humanservices.gov.au/organisations/health-professionals/enablers/air-vaccine-code-formats"/>
+            <code value="COMIRN"/>
+          </coding>
+          <coding>
+            <system value="http://snomed.info/sct"/>
+            <code value="1525011000168107"/>
+            <display value="Comirnaty"/>
+          </coding>
+          <text value="Pfizer Comirnaty"/>
+        </vaccineCode>
+        <patient>
+          <reference value="urn:uuid:85822a88-55b1-460c-bb7b-e8fc22d8568f"/>
+        </patient>
+        <occurrenceDateTime value="2021-07-20"/>
+        <primarySource value="true"/>
+        <manufacturer>
+          <display value="Pfizer Australia Ltd"/>
+        </manufacturer>
+        <lotNumber value="300000000P"/>
+        <site>
+          <coding>
+            <system value="http://snomed.info/sct"/>
+            <code value="368208006"/>
+            <display value="Left upper arm structure"/>
+          </coding>
+          <text value="Left upper arm"/>
+        </site>
+      </Immunization>
+    </resource>
+  </entry>
+  <entry>
+    <fullUrl value="urn:uuid:fac8c42e-4d2a-4cf5-bcc6-831c60e8230e"/>
+    <resource>
+      <Immunization>
+        <id value="fac8c42e-4d2a-4cf5-bcc6-831c60e8230e"/>
+        <meta>
+          <profile value="http://hl7.org.au/fhir/ps/StructureDefinition/au-ps-immunization"/>
+        </meta>
+        <identifier>
+          <system value="urn:ietf:rfc:3986"/>
+          <value value="urn:uuid:475db616-dfd5-43f3-b935-9f582233a38d"/>
+        </identifier>
+        <status value="completed"/>
+        <vaccineCode>
+          <coding>
+            <system value="https://www.humanservices.gov.au/organisations/health-professionals/enablers/air-vaccine-code-formats"/>
+            <code value="COMIRN"/>
+          </coding>
+          <text value="Pfizer Comirnaty"/>
+        </vaccineCode>
+        <patient>
+          <reference value="urn:uuid:85822a88-55b1-460c-bb7b-e8fc22d8568f"/>
+        </patient>
+        <occurrenceDateTime value="2022-02-02"/>
+        <primarySource value="true"/>
+        <manufacturer>
+          <display value="Pfizer Australia Ltd"/>
+        </manufacturer>
+        <lotNumber value="200000000P"/>
+        <site>
+          <coding>
+            <system value="http://snomed.info/sct"/>
+            <code value="368208006"/>
+            <display value="Left upper arm structure"/>
+          </coding>
+          <text value="Left upper arm"/>
+        </site>
+      </Immunization>
+    </resource>
+  </entry>
+  <entry>
+    <fullUrl value="urn:uuid:eb1f812e-41c6-4f8d-b9de-573428a94994"/>
+    <resource>
+      <Immunization>
+        <id value="eb1f812e-41c6-4f8d-b9de-573428a94994"/>
+        <meta>
+          <profile value="http://hl7.org.au/fhir/ps/StructureDefinition/au-ps-immunization"/>
+        </meta>
+        <status value="completed"/>
+        <vaccineCode>
+          <coding>
+            <system value="https://www.humanservices.gov.au/organisations/health-professionals/enablers/air-vaccine-code-formats"/>
+            <code value="COMIRN"/>
+          </coding>
+          <coding>
+            <system value="http://snomed.info/sct"/>
+            <code value="1525011000168107"/>
+            <display value="Comirnaty"/>
+          </coding>
+          <text value="Pfizer Comirnaty"/>
+        </vaccineCode>
+        <patient>
+          <reference value="urn:uuid:85822a88-55b1-460c-bb7b-e8fc22d8568f"/>
+        </patient>
+        <occurrenceDateTime value="2021-04-27"/>
+        <primarySource value="true"/>
+        <manufacturer>
+          <display value="Pfizer Australia Ltd"/>
+        </manufacturer>
+        <lotNumber value="200000000P"/>
+        <site>
+          <coding>
+            <system value="http://snomed.info/sct"/>
+            <code value="368208006"/>
+            <display value="Left upper arm structure"/>
+          </coding>
+          <text value="Left upper arm"/>
+        </site>
       </Immunization>
     </resource>
   </entry>
