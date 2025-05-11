@@ -6,7 +6,7 @@ This use case demonstrates use of patient summary during step 5 (Endocrinologist
 
 Joyce Johnson is a 39yo female who lives in New South Wales, Australia. Joyce is currently pregnant and has been recently diagnoses with gestational diabetes. Joyce’s general practitioner (GP), Dr Ginger Burrows, has decided to refer Joyce to an Endocrinologist and a Dietitian to provide Joyce for further evaluation and support.
 
-The referral includes an embedded patient summary containing Joyce's medical history and current medications at the time of referral. The embedded patient summary was authored by the GP (Dr. Ginger Burrows) through curation of a generated view of the data within their clinical information system.
+The referral includes an embedded patient summary containing Joyce's medical history and current medications at the time of referral. The embedded patient summary was authored by the GP (Dr. Ginger Burrows) through curation of a generated view of the data within their clinical information system, and was attested at the time of creation of the patient summary.
 
  Each health care provider has received and triaged the referral.
 
@@ -19,7 +19,6 @@ The Endocrinologist accesses and compares both patient summaries to verify the a
 #### Use Case Decisions to be confirmed for the patient summary embedded in referral
 The following decisions are to be confirmed:
 1. is it accessed by a QR code and/or link
-1. is it attested by provider at time of creation and is this 'legal' attestation
 
 The following is to be decided:
 1. what is the mechanism for embedding the patient summary
@@ -81,8 +80,8 @@ INSERT SEQUENCE DIAGRAM
 
 **TODO for Example 01 - patient summary embedded in a referral**
 This is a Work in Progress. To dos include:
-1. use case decisions still to be made including attestation (see above) - as decisions are made they will be reflected in the example
-2. Immunization history to be added. 
+1. use case decisions still to be made (see above) - as decisions are made they will be reflected in the example
+2. More immunization history to be added. 
 3. Diagnostic Results to be added. 
 
 _Note: the example data e.g. immunisation history, meds, etc. are provided by the AU Patient Summary Clinical Focus Group._

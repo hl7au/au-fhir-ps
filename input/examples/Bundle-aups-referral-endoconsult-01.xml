@@ -202,7 +202,6 @@
           <entry>
             <reference value="urn:uuid:2f3537b2-f50c-4a2a-ab92-30fdcfe5fd96"/>
           </entry>
-          <entry>
         </section>
         <section>
           <title value="Pregnancy Information"/>
@@ -900,8 +899,7 @@
     <resource>
       <Immunization>
         <extension url="http://hl7.org.au/fhir/StructureDefinition/vaccine-serial-number">
-          <!-- Vial serial number below does not conform to reporting requirements to avoid conflict with real world values -->
-          <valueString value="vNo12121"/>
+          <valueString value="vNo1111"/>
         </extension>
         <status value="completed"/>
         <vaccineCode>
@@ -919,13 +917,12 @@
         <patient>
           <reference value="urn:uuid:85822a88-55b1-460c-bb7b-e8fc22d8568f"/>
         </patient>
-        <occurrenceDateTime value="2023-5-15"/>
+        <occurrenceDateTime value="2023-05-15"/>
         <recorded value="2022-02-14"/>
         <primarySource value="true"/>
         <manufacturer>
           <display value="ModernaTX, Inc."/>
         </manufacturer>
-        <!-- Lot number below does not conform to batch number reporting requirements to avoid conflict with real world values -->
         <lotNumber value="RX00000F"/>
       </Immunization>
     </resource>
