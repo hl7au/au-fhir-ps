@@ -1021,7 +1021,6 @@
           <coding>
             <system value="http://snomed.info/sct"/>
             <code value="368208006"/>
-            <display value="Left upper arm structure"/>
           </coding>
           <text value="Left upper arm"/>
         </site>
@@ -1056,12 +1055,11 @@
         <manufacturer>
           <display value="Pfizer Australia Ltd"/>
         </manufacturer>
-        <lotNumber value="200000000P"/>
+        <lotNumber value="500000000P"/>
         <site>
           <coding>
             <system value="http://snomed.info/sct"/>
             <code value="368208006"/>
-            <display value="Left upper arm structure"/>
           </coding>
           <text value="Left upper arm"/>
         </site>
@@ -1102,7 +1100,6 @@
           <coding>
             <system value="http://snomed.info/sct"/>
             <code value="368208006"/>
-            <display value="Left upper arm structure"/>
           </coding>
           <text value="Left upper arm"/>
         </site>
