@@ -52,7 +52,7 @@ The following is to be decided:
 
 #### Systems
 1. GP Clinical Information System (CIS)
-2. Endocronoligst CIS
+2. Endocrinologist CIS
 3. External system to provide the most recent patient summary
 
 ### Precondition(s)
@@ -81,7 +81,6 @@ INSERT SEQUENCE DIAGRAM
 **TODO for Example 01 - patient summary embedded in a referral**
 This is a Work in Progress. To dos include:
 1. use case decisions still to be made (see above) - as decisions are made they will be reflected in the example
-2. More immunization history to be added. 
 3. Diagnostic Results to be added. 
 
 _Note: the example data e.g. immunisation history, meds, etc. are provided by the AU Patient Summary Clinical Focus Group._
