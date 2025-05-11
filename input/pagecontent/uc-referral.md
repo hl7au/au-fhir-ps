@@ -4,11 +4,11 @@ This use case demonstrates use of patient summary during step 5 (Endocrinologist
 
 ### Use Case Description
 
-Joyce Johnson is a 39yo female who lives in New South Wales, Australia. Joyce is currently pregnant and has been recently diagnoses with gestational diabetes. Joyce’s general practitioner (GP), Dr Ginger Burrows, has decided to refer Joyce to an Endocrinologist and a Dietitian to provide Joyce for further evaluation and support.
+Joyce Johnson is a 39yo female who lives in New South Wales, Australia. Joyce is currently pregnant and has been recently diagnosed with gestational diabetes. Joyce’s general practitioner (GP), Dr Ginger Burrows, has decided to refer Joyce to an Endocrinologist and a Dietitian to provide Joyce for further evaluation and support.
 
 The referral includes an embedded patient summary containing Joyce's medical history and current medications at the time of referral. The embedded patient summary was authored by the GP (Dr. Ginger Burrows) through curation of a generated view of the data within their clinical information system, and was attested at the time of creation of the patient summary.
 
- Each health care provider has received and triaged the referral.
+Each health care provider has received and triaged the referral.
 
 Joyce attends the consultation with the Endocrinologist. During the consultation, the Endocrinologist’s clinical system notifies them that a more recent patient summary is available from an external source, such as an updated version from the referring GP, a national health record system or another provider.
 
