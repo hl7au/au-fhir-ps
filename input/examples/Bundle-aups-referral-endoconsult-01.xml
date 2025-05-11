@@ -18,6 +18,7 @@
     <fullUrl value="urn:uuid:de2c9e3f-c4a8-4a65-b355-b08cd2c58c7c"/>
     <resource>
       <Composition>
+        <id value="de2c9e3f-c4a8-4a65-b355-b08cd2c58c7c"/>
         <meta>
           <profile value="http://hl7.org.au/fhir/ps/StructureDefinition/au-ps-composition"/>
         </meta>
@@ -260,6 +261,7 @@
     <fullUrl value="urn:uuid:85822a88-55b1-460c-bb7b-e8fc22d8568f"/>
     <resource>
       <Patient>
+        <id value="85822a88-55b1-460c-bb7b-e8fc22d8568f"/>
         <meta>
           <profile value="http://hl7.org.au/fhir/ps/StructureDefinition/au-ps-patient"/>
         </meta>
@@ -326,6 +328,7 @@
     <fullUrl value="urn:uuid:0baac8a9-69b8-4e99-9460-03df08f92c98"/>
     <resource>
       <AllergyIntolerance>
+        <id value="0baac8a9-69b8-4e99-9460-03df08f92c98"/>
         <meta>
           <profile value="http://hl7.org.au/fhir/ps/StructureDefinition/au-ps-allergyintolerance"/>
         </meta>
@@ -352,6 +355,7 @@
     <fullUrl value="urn:uuid:05292a9c-2bc9-43a7-b935-0a61ede063da"/>
     <resource>
       <MedicationStatement>
+        <id value="05292a9c-2bc9-43a7-b935-0a61ede063da"/>
         <meta>
           <profile value="http://hl7.org.au/fhir/ps/StructureDefinition/au-ps-medicationstatement"/>
         </meta>
@@ -410,6 +414,7 @@
     <fullUrl value="urn:uuid:166c2afe-c6fb-4928-88f0-1c1a1e5e65cd"/>
     <resource>
       <MedicationStatement>
+        <id value="166c2afe-c6fb-4928-88f0-1c1a1e5e65cd"/>
         <meta>
           <profile value="http://hl7.org.au/fhir/ps/StructureDefinition/au-ps-medicationstatement"/>
         </meta>
@@ -442,6 +447,7 @@
     <fullUrl value="urn:uuid:7193cc2f-d03e-42cb-ab55-4130904505d5"/>
     <resource>
       <MedicationStatement>
+        <id value="7193cc2f-d03e-42cb-ab55-4130904505d5"/>
         <meta>
           <profile value="http://hl7.org.au/fhir/ps/StructureDefinition/au-ps-medicationstatement"/>
         </meta>
@@ -466,6 +472,7 @@
     <fullUrl value="urn:uuid:1c4dd2b6-a9ee-4ba3-9b37-c1aff277c417"/>
     <resource>
       <MedicationStatement>
+        <id value="1c4dd2b6-a9ee-4ba3-9b37-c1aff277c417"/>
         <meta>
           <profile value="http://hl7.org.au/fhir/ps/StructureDefinition/au-ps-medicationstatement"/>
         </meta>
@@ -490,6 +497,7 @@
     <fullUrl value="urn:uuid:cb647933-b18c-42ef-a1c8-ae137921ba83"/>
     <resource>
       <Condition>
+        <id value="cb647933-b18c-42ef-a1c8-ae137921ba83"/>
         <meta>
           <profile value="http://hl7.org.au/fhir/ps/StructureDefinition/au-ps-condition"/>
         </meta>
@@ -527,6 +535,7 @@
     <fullUrl value="urn:uuid:78f75926-3ee1-44a7-9424-6178d905af63"/>
     <resource>
       <Condition>
+        <id value="78f75926-3ee1-44a7-9424-6178d905af63"/>
         <meta>
           <profile value="http://hl7.org.au/fhir/ps/StructureDefinition/au-ps-condition"/>
         </meta>
@@ -561,6 +570,10 @@
     <fullUrl value="urn:uuid:784ae7d5-22df-442d-b932-0c001720136c"/>
     <resource>
       <Immunization>
+        <id value="784ae7d5-22df-442d-b932-0c001720136c"/>
+        <meta>
+          <profile value="http://hl7.org.au/fhir/ps/StructureDefinition/au-ps-immunization"/>
+        </meta>
         <status value="completed"/>
         <vaccineCode>
           <coding>
@@ -582,6 +595,7 @@
     <fullUrl value="urn:uuid:f85ad223-7bed-46f3-893d-e89d6082f9a9"/>
     <resource>
       <Observation>
+        <id value="f85ad223-7bed-46f3-893d-e89d6082f9a9"/>
         <status value="final"/>
         <category>
           <coding>
@@ -624,6 +638,7 @@
     <fullUrl value="urn:uuid:ad82d71b-ca1c-4db6-a726-cc70cf638306"/>
     <resource>
       <Observation>
+        <id value="ad82d71b-ca1c-4db6-a726-cc70cf638306"/>
         <status value="final"/>
         <category>
           <coding>
@@ -656,6 +671,7 @@
     <fullUrl value="urn:uuid:afead11c-3bee-4020-af4f-44040abfa961"/>
     <resource>
       <PractitionerRole>
+        <id value="afead11c-3bee-4020-af4f-44040abfa961"/>
         <meta>
           <profile value="http://hl7.org.au/fhir/ps/StructureDefinition/au-ps-practitionerrole"/>
         </meta>
@@ -710,6 +726,7 @@
     <fullUrl value="urn:uuid:0c0e2c4f-a748-4cc7-afde-f09bdc2d6fa9"/>
     <resource>
       <Practitioner>
+        <id value="0c0e2c4f-a748-4cc7-afde-f09bdc2d6fa9"/>
         <meta>
           <profile value="http://hl7.org.au/fhir/ps/StructureDefinition/au-ps-practitioner"/>
         </meta>
@@ -751,6 +768,7 @@
     <fullUrl value="urn:uuid:14292353-98f0-43b3-a25b-406baf3f9175"/>
     <resource>
       <Organization>
+        <id value="14292353-98f0-43b3-a25b-406baf3f9175"/>
         <meta>
           <profile value="http://hl7.org.au/fhir/ps/StructureDefinition/au-ps-organization"/>
         </meta>
@@ -812,6 +830,10 @@
     <fullUrl value="urn:uuid:46624cc1-7d2e-4367-aa82-85d097ac423f"/>
     <resource>
       <Immunization>
+        <id value="46624cc1-7d2e-4367-aa82-85d097ac423f"/>
+        <meta>
+          <profile value="http://hl7.org.au/fhir/ps/StructureDefinition/au-ps-immunization"/>
+        </meta>
         <status value="completed"/>
         <vaccineCode>
           <coding>
@@ -831,7 +853,11 @@
   <entry>
     <fullUrl value="urn:uuid:5711e015-890f-489d-9f8f-49d9a7ff95cd"/>
     <resource>
-      <Immunization >
+      <Immunization>
+        <id value="5711e015-890f-489d-9f8f-49d9a7ff95cd"/>
+        <meta>
+          <profile value="http://hl7.org.au/fhir/ps/StructureDefinition/au-ps-immunization"/>
+        </meta>
         <status value="completed"/>
         <vaccineCode>
           <coding>
@@ -852,6 +878,10 @@
     <fullUrl value="urn:uuid:62eb70e3-e814-4785-80d3-8aa45b1fc367"/>
     <resource>
       <Immunization>
+        <id value="62eb70e3-e814-4785-80d3-8aa45b1fc367"/>
+        <meta>
+          <profile value="http://hl7.org.au/fhir/ps/StructureDefinition/au-ps-immunization"/>
+        </meta>
         <status value="completed"/>
         <vaccineCode>
           <coding>
@@ -872,6 +902,10 @@
     <fullUrl value="urn:uuid:2f3537b2-f50c-4a2a-ab92-30fdcfe5fd96"/>
     <resource>
       <Immunization>
+        <id value="2f3537b2-f50c-4a2a-ab92-30fdcfe5fd96"/>
+        <meta>
+          <profile value="http://hl7.org.au/fhir/ps/StructureDefinition/au-ps-immunization"/>
+        </meta>
         <extension url="http://hl7.org.au/fhir/StructureDefinition/vaccine-serial-number">
           <valueString value="SERIAL1234"/>
         </extension>
@@ -897,6 +931,10 @@
     <fullUrl value="urn:uuid:97767fb5-3be7-4d16-9ee8-76c47a4ab0ce"/>
     <resource>
       <Immunization>
+        <id value="97767fb5-3be7-4d16-9ee8-76c47a4ab0ce"/>
+        <meta>
+          <profile value="http://hl7.org.au/fhir/ps/StructureDefinition/au-ps-immunization"/>
+        </meta>
         <extension url="http://hl7.org.au/fhir/StructureDefinition/vaccine-serial-number">
           <valueString value="vNo1111"/>
         </extension>
