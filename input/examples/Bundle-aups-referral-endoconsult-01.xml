@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!--WIP. 
 1. use case decisions still to be made including attestation. 
-2. Immunization history to be added. 
+2. More immunization history to be added. 
 3. Diagnostic Results to be added.  --> 
 <Bundle xmlns="http://hl7.org/fhir">
   <id value="aups-referral-endoconsult-01"/>
@@ -36,6 +36,13 @@
           <reference value="urn:uuid:afead11c-3bee-4020-af4f-44040abfa961"/>
         </author>
         <title value="Patient Summary for Joyce Johnson as of 28 OCT 2024"/>
+        <attester>
+          <mode value="professional"/>
+          <time value="2024-10-28T11:57:11.269+11:00"/>
+          <party>
+            <reference value="urn:uuid:afead11c-3bee-4020-af4f-44040abfa961"/>
+          </party>
+        </attester>
         <custodian>
           <reference value="urn:uuid:14292353-98f0-43b3-a25b-406baf3f9175"/>
         </custodian>
@@ -180,6 +187,22 @@
           <entry>
             <reference value="urn:uuid:784ae7d5-22df-442d-b932-0c001720136c"/>
           </entry>
+          <entry>
+            <reference value="urn:uuid:46624cc1-7d2e-4367-aa82-85d097ac423f"/>
+          </entry>
+          <entry>
+            <reference value="urn:uuid:5711e015-890f-489d-9f8f-49d9a7ff95cd"/>
+          </entry>
+          <entry>
+            <reference value="urn:uuid:97767fb5-3be7-4d16-9ee8-76c47a4ab0ce"/>
+          </entry>
+          <entry>
+            <reference value="urn:uuid:62eb70e3-e814-4785-80d3-8aa45b1fc367"/>
+          </entry>
+          <entry>
+            <reference value="urn:uuid:2f3537b2-f50c-4a2a-ab92-30fdcfe5fd96"/>
+          </entry>
+          <entry>
         </section>
         <section>
           <title value="Pregnancy Information"/>
@@ -757,6 +780,154 @@
           <postalCode value="2480"/>
         </address>
       </Organization>
+    </resource>
+  </entry>
+  <entry>
+    <fullUrl value="urn:uuid:46624cc1-7d2e-4367-aa82-85d097ac423f"/>
+    <resource>
+      <Immunization>
+        <status value="completed"/>
+        <vaccineCode>
+          <coding>
+            <system value="https://www.humanservices.gov.au/organisations/health-professionals/enablers/air-vaccine-code-formats"/>
+            <code value="PANVAX"/>
+          </coding>
+          <text value="Panvax"/>
+        </vaccineCode>
+        <patient>
+          <reference value="urn:uuid:85822a88-55b1-460c-bb7b-e8fc22d8568f"/>
+        </patient>
+        <occurrenceDateTime value="2022-06-01"/>
+        <primarySource value="true"/>
+        <protocolApplied>
+          <targetDisease>
+            <text value="Influenza"/>
+          </targetDisease>
+          <doseNumberPositiveInt>
+            <extension url="http://hl7.org/fhir/StructureDefinition/data-absent-reason">
+              <valueCode value="unknown"/>
+            </extension>
+          </doseNumberPositiveInt>
+        </protocolApplied>
+      </Immunization>
+    </resource>
+  </entry>
+  <entry>
+    <fullUrl value="urn:uuid:5711e015-890f-489d-9f8f-49d9a7ff95cd"/>
+    <resource>
+      <Immunization >
+        <status value="completed"/>
+        <vaccineCode>
+          <coding>
+            <system value="https://www.humanservices.gov.au/organisations/health-professionals/enablers/air-vaccine-code-formats"/>
+            <code value="PANVAX"/>
+          </coding>
+          <text value="Panvax"/>
+        </vaccineCode>
+        <patient>
+          <reference value="urn:uuid:85822a88-55b1-460c-bb7b-e8fc22d8568f"/>
+        </patient>
+        <occurrenceDateTime value="2021-05-17"/>
+        <primarySource value="true"/>
+        <protocolApplied>
+          <targetDisease>
+            <text value="Influenza"/>
+          </targetDisease>
+          <doseNumberPositiveInt value="1"/>
+        </protocolApplied>
+      </Immunization>
+    </resource>
+  </entry>
+  <entry>
+    <fullUrl value="urn:uuid:62eb70e3-e814-4785-80d3-8aa45b1fc367"/>
+    <resource>
+      <Immunization>
+        <status value="completed"/>
+        <vaccineCode>
+          <coding>
+            <system value="https://www.humanservices.gov.au/organisations/health-professionals/enablers/air-vaccine-code-formats"/>
+            <code value="PANVAX"/>
+          </coding>
+          <text value="Panvax"/>
+        </vaccineCode>
+        <patient>
+          <reference value="urn:uuid:85822a88-55b1-460c-bb7b-e8fc22d8568f"/>
+        </patient>
+        <occurrenceDateTime value="2025-05-15"/>
+        <primarySource value="true"/>
+        <protocolApplied>
+          <targetDisease>
+            <text value="Influenza"/>
+          </targetDisease>
+          <doseNumberPositiveInt value="1"/>
+        </protocolApplied>
+      </Immunization>
+    </resource>
+  </entry>
+  <entry>
+    <fullUrl value="urn:uuid:2f3537b2-f50c-4a2a-ab92-30fdcfe5fd96"/>
+    <resource>
+      <Immunization>
+        <extension url="http://hl7.org.au/fhir/StructureDefinition/vaccine-serial-number">
+          <valueString value="SERIAL1234"/>
+        </extension>
+        <status value="completed"/>
+        <vaccineCode>
+          <coding>
+            <system value="https://www.humanservices.gov.au/organisations/health-professionals/enablers/air-vaccine-code-formats"/>
+            <code value="PANVAX"/>
+            <display value="Panvax"/>
+          </coding>
+          <text value="Panvax"/>
+        </vaccineCode>
+        <patient>
+          <reference value="urn:uuid:85822a88-55b1-460c-bb7b-e8fc22d8568f"/>
+        </patient>
+        <occurrenceDateTime value="2024-05-05"/>
+        <primarySource value="true"/>
+        <lotNumber value="lot001"/>
+        <protocolApplied>
+          <targetDisease>
+            <text value="Influenza"/>
+          </targetDisease>
+          <doseNumberPositiveInt value="1"/>
+        </protocolApplied>
+      </Immunization>
+    </resource>
+  </entry>
+  <entry>
+    <fullUrl value="urn:uuid:97767fb5-3be7-4d16-9ee8-76c47a4ab0ce"/>
+    <resource>
+      <Immunization>
+        <extension url="http://hl7.org.au/fhir/StructureDefinition/vaccine-serial-number">
+          <!-- Vial serial number below does not conform to reporting requirements to avoid conflict with real world values -->
+          <valueString value="vNo12121"/>
+        </extension>
+        <status value="completed"/>
+        <vaccineCode>
+          <coding>
+            <system value="https://www.humanservices.gov.au/organisations/health-professionals/enablers/air-vaccine-code-formats"/>
+            <code value="MODERN"/>
+          </coding>
+          <coding>
+            <system value="http://snomed.info/sct"/>
+            <code value="1730491000168104"/>
+            <display value="Spikevax 50 microgram/0.5 mL injection, 0.5 mL syringe"/>
+          </coding>
+          <text value="COVID-19 mRNA-1273 Vaccine (Moderna) injection, 0.5 mL syringe"/>
+        </vaccineCode>
+        <patient>
+          <reference value="urn:uuid:85822a88-55b1-460c-bb7b-e8fc22d8568f"/>
+        </patient>
+        <occurrenceDateTime value="2023-5-15"/>
+        <recorded value="2022-02-14"/>
+        <primarySource value="true"/>
+        <manufacturer>
+          <display value="ModernaTX, Inc."/>
+        </manufacturer>
+        <!-- Lot number below does not conform to batch number reporting requirements to avoid conflict with real world values -->
+        <lotNumber value="RX00000F"/>
+      </Immunization>
     </resource>
   </entry>
 </Bundle>
