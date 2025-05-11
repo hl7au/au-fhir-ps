@@ -182,7 +182,42 @@
             </coding>
           </code>
           <text>
-            <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml">TBD</div>
+            <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml">
+            <table border="1">
+                <thead>
+                  <tr>
+                    <th>Vaccine</th>
+                    <th>Date of administration</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <th>Diphtheria + tetanus + pertussis 5 component adolescent/adult vaccine injection, 0.5 mL syringe</th>
+                    <th>5/10/2024</th>
+                  </tr>
+                  <tr>
+                    <td>Influenza vaccine</td>
+                    <td>5/5/2024</td>
+                  </tr>
+                  <tr>
+                    <td>Influenza vaccine</td>
+                    <td>15/5/2023</td>
+                  </tr>
+                  <tr>
+                    <td>COVID-19 mRNA-1273 Vaccine (Moderna) injection, 0.5 mL syringe</td>
+                    <td>15/5/2023</td>
+                  </tr>
+                  <tr>
+                    <td>Influenza vaccine</td>
+                    <td>1/6/2022</td>
+                  </tr>
+                  <tr>
+                    <td>Influenza vaccine</td>
+                    <td>17/5/2021</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
           </text>
           <entry>
             <reference value="urn:uuid:784ae7d5-22df-442d-b932-0c001720136c"/>
@@ -798,16 +833,6 @@
         </patient>
         <occurrenceDateTime value="2022-06-01"/>
         <primarySource value="true"/>
-        <protocolApplied>
-          <targetDisease>
-            <text value="Influenza"/>
-          </targetDisease>
-          <doseNumberPositiveInt>
-            <extension url="http://hl7.org/fhir/StructureDefinition/data-absent-reason">
-              <valueCode value="unknown"/>
-            </extension>
-          </doseNumberPositiveInt>
-        </protocolApplied>
       </Immunization>
     </resource>
   </entry>
@@ -828,12 +853,6 @@
         </patient>
         <occurrenceDateTime value="2021-05-17"/>
         <primarySource value="true"/>
-        <protocolApplied>
-          <targetDisease>
-            <text value="Influenza"/>
-          </targetDisease>
-          <doseNumberPositiveInt value="1"/>
-        </protocolApplied>
       </Immunization>
     </resource>
   </entry>
@@ -854,12 +873,6 @@
         </patient>
         <occurrenceDateTime value="2025-05-15"/>
         <primarySource value="true"/>
-        <protocolApplied>
-          <targetDisease>
-            <text value="Influenza"/>
-          </targetDisease>
-          <doseNumberPositiveInt value="1"/>
-        </protocolApplied>
       </Immunization>
     </resource>
   </entry>
@@ -885,12 +898,6 @@
         <occurrenceDateTime value="2024-05-05"/>
         <primarySource value="true"/>
         <lotNumber value="lot001"/>
-        <protocolApplied>
-          <targetDisease>
-            <text value="Influenza"/>
-          </targetDisease>
-          <doseNumberPositiveInt value="1"/>
-        </protocolApplied>
       </Immunization>
     </resource>
   </entry>
