@@ -561,9 +561,6 @@
     <fullUrl value="urn:uuid:784ae7d5-22df-442d-b932-0c001720136c"/>
     <resource>
       <Immunization>
-        <meta>
-          <profile value="http://hl7.org.au/fhir/ps/StructureDefinition/au-ps-immunization"/>
-        </meta>
         <status value="completed"/>
         <vaccineCode>
           <coding>
