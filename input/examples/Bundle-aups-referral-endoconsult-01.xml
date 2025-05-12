@@ -393,6 +393,14 @@
               </coding>
               <text value="Metformin"/>
             </code>
+            <form>
+              <coding>
+                <system value="http://snomed.info/sct"/>
+                <code value="421026006"/>
+                <display value="Tablet"/>
+              </coding>
+              <text value="Tablet"/>
+            </form>
           </Medication>
         </contained>
         <status value="active"/>

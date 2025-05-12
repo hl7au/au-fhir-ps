@@ -4,7 +4,7 @@ This use case demonstrates use of patient summary during step 5 (Patient Summary
 
 ### Use Case Description
 
-Jeramy Ezra Banks is a 73-year-old male. Jeramy is a retired schoolteacher that lives in Mossy Point, NSW, Australia. Jeramy has chronic heart disease which was diagnosed 5 years ago and Jeramy's usual GP is Dr Abe Lowe. Comfortable with basic technology, Jeramy uses a smartphone app to manage his healthcare records.
+Jeramy Ezra Banks is a 73-year-old male. Jeramy is a retired schoolteacher that lives in New South Wales, Australia. Jeramy has chronic heart disease which was diagnosed 5 years ago and Jeramy's usual GP is Dr Abe Lowe. Comfortable with basic technology, Jeramy uses a smartphone app to manage his healthcare records.
 
 Jeramy travels interstate to Queensland for a holiday to visit his daughter. Jeramy checks that his patient summary has been updated by his usual GP (Dr Abe Lowe) following a recent admission to hospital prior to travelling.
 
@@ -13,6 +13,8 @@ During the trip Jeramy begins feeling unwell and books an appointment with a loc
 Jeramy attends the appointment with the local Queensland GP (Dr Wyatt Samuels). During the appointment, Jeramy alerts the attending GP (Dr Wyatt Samuels) that a patient summary is available. Jeramy provides access to his updated patient summary to the attending GP (Dr Wyatt Samuels). The attending GP's (Dr Wyatt Samuels) clinical system initiates a request to retrieve Jeramy’s most recent patient summary from the clinical system of the usual GP (Dr Abe Lowe) to ensure safe and informed care.
 
 The attending GP (Dr Wyatt Samuels) uses the patient summary to support care decisions during the consultation.
+
+INSERT CONSUMER JOURNEY DIAGRAM
 
 
 ### Actors
