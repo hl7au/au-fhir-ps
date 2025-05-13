@@ -1,10 +1,8 @@
 This use case demonstrates a scenario where, during a specialist consultation, the specialist accesses the patient summary created at the time of the referral and confirms the latest patient summary available for a patient.
 
-This use case demonstrates use of patient summary during step 5 (Endocrinologist Retrieval) of the [Referral to Specialist and Allied Health consumer journey](https://sparked.csiro.au/index.php/sparked-products-resources/au-patient-summary-consumer-journeys/).
-
 ### Use Case Description
 
-Joyce Johnson is a 39yo female who lives in New South Wales, Australia. Joyce is currently pregnant and has been recently diagnosed with gestational diabetes. Joyce’s general practitioner (GP), Dr Ginger Burrows, has decided to refer Joyce to an Endocrinologist and a Dietitian to provide Joyce for further evaluation and support.
+Joyce Johnson is a 39yo female who lives in New South Wales, Australia. Joyce is currently pregnant and has been recently diagnosed with gestational diabetes. Joyce’s general practitioner (GP), Dr Ginger Burrows, has decided to refer Joyce to an Endocrinologist and a Dietitian for further evaluation and support.
 
 The referral includes an embedded patient summary containing Joyce's medical history and current medications at the time of referral. The embedded patient summary was authored by the GP (Dr. Ginger Burrows) through curation of a generated view of the data within their clinical information system, and was attested at the time of creation of the patient summary.
 
@@ -14,7 +12,14 @@ Joyce attends the consultation with the Endocrinologist. During the consultation
 
 The Endocrinologist accesses and compares both patient summaries to verify the accuracy and currency of the clinical information. After reviewing the most recent data -  particularly Joyce’s current medication regimen - the Endocrinologist decides to adjust the insulin dosage and documents the decision. An updated treatment plan is shared with Joyce and the referring GP (Dr Ginger Burrows) to ensure continuity of care.
 
-INSERT CONSUMER JOURNEY DIAGRAM
+ <div> 
+    <img src="uc-referral-cj.png" alt="Referral to Specialist and Allied Health consumer journey" style="width:65%"/>
+  </div>
+*Figure 1: Referral to Specialist and Allied Health consumer journey*
+<br/>
+
+
+This use case demonstrates use of patient summary during step 4 (Endocrinologist Retrieval) of the [Referral to Specialist and Allied Health consumer journey](https://sparked.csiro.au/index.php/sparked-products-resources/au-patient-summary-consumer-journeys/).
 
 <div class="stu-note" markdown="1">
 
@@ -75,6 +80,10 @@ The following is to be decided:
 6. Based on the review and patient discussion, the Endocrinologist decides to increase Joyce’s insulin dose and documents this within their CIS.
 
 INSERT SEQUENCE DIAGRAM
+*Figure 2: Sequence Diagram TBD*
+<br/>
+
+### Examples
 
 **[EXAMPLE 01 - PATIENT SUMMARY EMBEDDED IN REFERRAL](Bundle-aups-referral-endoconsult-01.html)**
 
