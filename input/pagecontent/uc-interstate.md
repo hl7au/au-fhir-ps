@@ -1,7 +1,5 @@
 This use case describes a scenario where, during a general practitioner (GP) consultation with a new patient who resides in a different state and has a usual GP, the GP retrieves an up-to-date patient summary from the patient's usual GP. 
 
-This use case demonstrates use of patient summary during step 5 (Patient Summary Retrieval) of the [Interstate GP Visit consumer journey](https://sparked.csiro.au/index.php/sparked-products-resources/au-patient-summary-consumer-journeys/).
-
 ### Use Case Description
 
 Jeramy Ezra Banks is a 73-year-old male. Jeramy is a retired schoolteacher that lives in New South Wales, Australia. Jeramy has chronic heart disease which was diagnosed 5 years ago and Jeramy's usual GP is Dr Abe Lowe. Comfortable with basic technology, Jeramy uses a smartphone app to manage his healthcare records.
@@ -14,8 +12,13 @@ Jeramy attends the appointment with the local Queensland GP (Dr Wyatt Samuels). 
 
 The attending GP (Dr Wyatt Samuels) uses the patient summary to support care decisions during the consultation.
 
-INSERT CONSUMER JOURNEY DIAGRAM
+ <div> 
+    <img src="uc-interstate-cj.png" alt="Interstate GP Visit consumer journey" style="width:80%"/>
+  </div>
+*Figure 1: Interstate GP Visit consumer journey*
+<br/>
 
+This use case demonstrates use of patient summary during step 5 (Patient Summary Retrieval) of the [Interstate GP Visit consumer journey](https://sparked.csiro.au/index.php/sparked-products-resources/au-patient-summary-consumer-journeys/).
 
 ### Actors
 
@@ -26,7 +29,6 @@ INSERT CONSUMER JOURNEY DIAGRAM
 #### Systems
 1. Attending GP's Clinical Information System (CIS)
 1. Usual GP's Clinical Information System
-
 
 ### Precondition(s)
 1. Jeramy has provided consent for his health information to be shared between healthcare providers.
@@ -48,4 +50,9 @@ INSERT CONSUMER JOURNEY DIAGRAM
 1. The information supports clinical decision-making during the consultation.
 
 INSERT SEQUENCE DIAGRAM
+*Figure 2: Sequence Diagram TBD*
+<br/>
 
+### Examples
+
+TBD
