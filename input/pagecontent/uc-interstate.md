@@ -2,11 +2,11 @@ This use case describes an example scenario where, during a general practitioner
 
 ### Use Case Description
 
-Jeramy Ezra Banks is a 73-year-old male. Jeramy is a retired schoolteacher that lives in New South Wales, Australia. Jeramy has chronic heart disease which was diagnosed 5 years ago and Jeramy's usual GP is Dr Abe Lowe. Comfortable with basic technology, Jeramy uses a smartphone app to manage his healthcare records.
+Jeramy Ezra Banks is a 73-year-old male who lives in New South Wales, Australia. Jeramy has chronic heart disease which was diagnosed 5 years ago and Jeramy's usual GP is Dr Abe Lowe. Comfortable with basic technology, Jeramy uses a smartphone app to manage his healthcare records.
 
 Jeramy travels interstate to Queensland for a holiday to visit his daughter. Prior to travelling, Jeramy checks that his patient summary has been updated by his usual GP (Dr Abe Lowe) following a recent admission to hospital.
 
-During the trip Jeramy begins feeling unwell and books an appointment with a local Queensland GP (Dr Wyatt Samuels). Jeramy is gasping for breath and feels stiff after driving.
+During the trip Jeramy begins feeling unwell, he is gasping for breath and feels stiff after driving. Jeramy books an appointment with a local Queensland GP (Dr Wyatt Samuels).
 
 Jeramy attends the appointment with the local Queensland GP (Dr Wyatt Samuels). During the appointment, Jeramy alerts the attending GP (Dr Wyatt Samuels) that a patient summary from his usual GP is available. Jeramy provides access to his patient summary to the attending GP (Dr Wyatt Samuels). 
 
@@ -69,7 +69,8 @@ INSERT SEQUENCE DIAGRAM
 
 ### Examples
 
-The following example demonstrates technical and clinical use case aspects, conforming to the AU Patient Summary requirements. Data within this example, e.g. medications, is provided by the [Sparked Patient Summary Clinical Focus Group](https://sparked.csiro.au/index.php/design-groups/).
+The following example demonstrates technical and clinical use case aspects, conforming to the AU Patient Summary requirements. Data within this example, e.g. medications, is provided by the [Sparked Patient Summary Clinical Focus Group](https://sparked.csiro.au/index.php/design-groups/):
+* Patient Summary from Usual GP CIS: [Jeramy's Patient Summary as of 27 Feb 2025 (Bundle)](Bundle-aups-gpvisit-retrieval.html)
 
 <div class="stu-note" markdown="1">
 
@@ -78,5 +79,4 @@ The following example demonstrates technical and clinical use case aspects, conf
 
 </div>
 
-**[Example 01 Patient Summary from Usual GP CIS](Bundle-aups-gpvisit-retrieval.html)**
 

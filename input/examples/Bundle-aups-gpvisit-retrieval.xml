@@ -50,7 +50,7 @@
             </coding>
           </code>
           <text>
-            <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml">TBD</div>
+            <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml">Allergies: Nil Known</div>
           </text>
           <entry>
             <reference value="urn:uuid:eaf0788a-8fdf-4e21-b302-e529f3bd9d5f"/>
@@ -685,6 +685,14 @@
           <lastUpdated value="2025-02-25T11:17:03.285+11:00"/>
           <profile value="http://hl7.org.au/fhir/ps/StructureDefinition/au-ps-condition"/>
         </meta>
+        <clinicalStatus>
+          <coding>
+            <system value="http://terminology.hl7.org/CodeSystem/condition-clinical"/>
+            <code value="active"/>
+            <display value="Active"/>
+          </coding>
+          <text value="Active"/>
+        </clinicalStatus>
         <category>
           <coding>
             <system value="http://terminology.hl7.org/CodeSystem/condition-category"/>
@@ -716,6 +724,14 @@
           <lastUpdated value="2025-02-25T11:17:03.285+11:00"/>
           <profile value="http://hl7.org.au/fhir/ps/StructureDefinition/au-ps-condition"/>
         </meta>
+        <clinicalStatus>
+          <coding>
+            <system value="http://terminology.hl7.org/CodeSystem/condition-clinical"/>
+            <code value="active"/>
+            <display value="Active"/>
+          </coding>
+          <text value="Active"/>
+        </clinicalStatus>
         <category>
           <coding>
             <system value="http://terminology.hl7.org/CodeSystem/condition-category"/>
@@ -747,6 +763,14 @@
           <lastUpdated value="2025-02-25T11:17:03.285+11:00"/>
           <profile value="http://hl7.org.au/fhir/ps/StructureDefinition/au-ps-condition"/>
         </meta>
+        <clinicalStatus>
+          <coding>
+            <system value="http://terminology.hl7.org/CodeSystem/condition-clinical"/>
+            <code value="active"/>
+            <display value="Active"/>
+          </coding>
+          <text value="Active"/>
+        </clinicalStatus>
         <category>
           <coding>
             <system value="http://terminology.hl7.org/CodeSystem/condition-category"/>
@@ -781,10 +805,10 @@
         <clinicalStatus>
           <coding>
             <system value="http://terminology.hl7.org/CodeSystem/condition-clinical"/>
-            <code value="inactive"/>
-            <display value="Inactive"/>
+            <code value="active"/>
+            <display value="Active"/>
           </coding>
-          <text value="Inactive"/>
+          <text value="Active"/>
         </clinicalStatus>
         <category>
           <coding>

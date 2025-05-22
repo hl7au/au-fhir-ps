@@ -8,7 +8,7 @@ Joyce Johnson is a 39yo female who lives in New South Wales, Australia. Joyce is
 
 The referral includes an embedded patient summary containing Joyce's medical history and current medications at the time of referral. The embedded patient summary was authored by the GP (Dr. Ginger Burrows) through curation of a generated view of the data within their clinical information system, and was attested at the time of creation of the patient summary.
 
-Each health care provider has received and triaged the referral.
+Each health care provider (Endocrinologist and Dietician) receives and triages the referral.
 
 Joyce attends the consultation with the Endocrinologist. During the consultation, the Endocrinologist’s clinical system notifies them that a more recent patient summary is available from an external source, such as an updated version from the referring GP, a national health record system or another provider.
 
@@ -87,27 +87,19 @@ INSERT SEQUENCE DIAGRAM
 
 ### Examples
 
-The following examples demonstrate technical and clinical use case aspects, conforming to the AU Patient Summary requirements. Data within these examples, e.g. medications, is provided by the [Sparked Patient Summary Clinical Focus Group](https://sparked.csiro.au/index.php/design-groups/).
-
-**Example 01 Patient Summary Embedded in Referral: [Patient Summary for Joyce Johnson as of 28 OCT 2024 (Bundle)](Bundle-aups-referral-endoconsult-01.html)**
+The following examples demonstrate technical and clinical use case aspects, conforming to the AU Patient Summary requirements. Data within these examples, e.g. medications, is provided by the [Sparked Patient Summary Clinical Focus Group](https://sparked.csiro.au/index.php/design-groups/):
+1. Patient Summary Embedded in Referral: [Patient Summary for Joyce Johnson as of 28 OCT 2024 (Bundle)](Bundle-aups-referral-endoconsult-01.html)
+1. More recent Patient Summary: TBD
 
 <div class="stu-note" markdown="1">
 
-**TODO for Example 01 - patient summary embedded in a referral**
+**TODO for Examples**
+
+Example 01 - patient summary embedded in a referral:
 1. use case decisions still to be made (see above) - as decisions are made they will be reflected in the example
-3. Diagnostic Results to be added. 
+2. Diagnostic Results to be added. 
 
-</div>
-
-
-**TBD EXAMPLE O2 - MOST RECENT PATIENT SUMMARY**
-
-
-<div class="stu-note" markdown="1">
-
-**TODO FOR Example 02 More recent patient summary**
-
-Pre-requisite decisions to get started are:
+Example 02 More recent patient summary: 
 1. what external system to provide the most recent patient summary
 1. what kind of 'device' is considered to author this
 1. what data is in this 'most recent' - what's different to the patient summary at time of referral?
