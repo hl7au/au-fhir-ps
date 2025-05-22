@@ -41,7 +41,7 @@
           <reference value="urn:uuid:4d1e0ca1-4ea7-46a2-8f0f-af5225b73c3a"/>
         </custodian>
         <section>
-          <title value="Allergies and Intolerances"/>
+          <title value="Allergies/Adverse reactions"/>
           <code>
             <coding>
               <system value="http://loinc.org"/>
@@ -50,14 +50,14 @@
             </coding>
           </code>
           <text>
-            <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml">TBD</div>
+            <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml">Allergies: Nil Known</div>
           </text>
           <entry>
             <reference value="urn:uuid:eaf0788a-8fdf-4e21-b302-e529f3bd9d5f"/>
           </entry>
         </section>
         <section>
-          <title value="Medication List"/>
+          <title value="Current Medications"/>
           <code>
             <coding>
               <system value="http://loinc.org"/>
@@ -66,7 +66,15 @@
             </coding>
           </code>
           <text>
-            <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml">TBD</div>
+            <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml">
+            <ul><li><div><b>Medication Name</b>: Metformin 500mg</div><div>Instructions: twice daily</div></li></ul>
+            <ul><li><div><b>Medication Name</b>: Rosuvastatin 40mg &amp; ezetrol 10mg</div><div>Instructions: once daily</div></li></ul>
+            <ul><li><div><b>Medication Name</b>: Telmisartan, 80mg</div><div>Instructions: once daily</div></li></ul>
+            <ul><li><div><b>Medication Name</b>: Aspirin 100mg</div><div>Instructions: once daily</div></li></ul>
+            <ul><li><div><b>Medication Name</b>: Zyloprim, 300mg</div><div>Instructions: once daily</div></li></ul>
+            <ul><li><div><b>Medication Name</b>: Ventolin</div><div>Instructions: 2 puffs, 4 times per day, and as needed</div></li></ul>
+            <ul><li><div><b>Medication Name</b>: Spiriva</div><div>Instructions: once daily</div></li></ul>
+            </div>
           </text>
           <entry>
             <reference value="urn:uuid:d4ca61a6-5b55-41ab-9b1a-fba0daefe94d"/>
@@ -91,7 +99,7 @@
           </entry>
         </section>
         <section>
-          <title value="Problem list"/>
+          <title value="Current Medical Information"/>
           <code>
             <coding>
               <system value="http://loinc.org"/>
@@ -100,7 +108,14 @@
             </coding>
           </code>
           <text>
-            <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml">TBD</div>
+            <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml">
+            <ul>
+              <li>Hypertension</li>
+              <li>Diabetes</li>
+              <li>Hypercholesterolaemia</li>
+              <li>Gout, Left great toe. On allopurinol for uric acid control</li>
+              <li>COPD</li>
+            </ul></div>
           </text>
           <entry>
             <reference value="urn:uuid:96013c59-2a84-4e89-9aa4-96d04d367466"/>
@@ -119,7 +134,7 @@
           </entry>
         </section>
         <section>
-          <title value="History of Immunizations"/>
+          <title value="Vaccination/Immunisation history"/>
           <code>
             <coding>
               <system value="http://loinc.org"/>
@@ -141,7 +156,7 @@
           </entry>
         </section>
         <section>
-          <title value="History of Past Illness"/>
+          <title value="Past Medical History"/>
           <code>
             <coding>
               <system value="http://loinc.org"/>
@@ -285,10 +300,10 @@
         <medicationCodeableConcept>
           <coding>
             <system value="http://snomed.info/sct"/>
-            <code value="13029011000036109"/>
-            <display value="Ventolin Inhaler CFC-Free 100 microgram/actuation inhalation, 200 actuations"/>
+            <code value="34481000168108"/>
+            <display value="Ventolin"/>
           </coding>
-          <text value="Ventolin Inhaler CFC-Free 100 microgram/actuation inhalation, 200 actuations"/>
+          <text value="Ventolin"/>
         </medicationCodeableConcept>
         <subject>
           <reference value="urn:uuid:d1122188-f53f-417f-a84f-bc44479baa63"/>
@@ -304,6 +319,14 @@
           <type value="Practitioner"/>
         </requester>
         <dosageInstruction>
+          <text value="2 puffs, 4 times per day, and as needed"/>
+          <timing>
+            <repeat>
+              <frequency value="4"/>
+              <period value="1" />
+              <periodUnit value="d" />
+            </repeat>
+          </timing>
           <route>
             <coding>
               <system value="http://snomed.info/sct"/>
@@ -335,10 +358,10 @@
         <medicationCodeableConcept>
           <coding>
             <system value="http://snomed.info/sct"/>
-            <code value="11404011000036102"/>
-            <display value="Zyloprim 100 mg tablet, 200"/>
+            <code value="5690011000036107"/>
+            <display value="Zyloprim 300 mg tablet"/>
           </coding>
-          <text value="Zyloprim 100 mg tablet, 200"/>
+          <text value="Zyloprim 300 mg"/>
         </medicationCodeableConcept>
         <subject>
           <reference value="urn:uuid:d1122188-f53f-417f-a84f-bc44479baa63"/>
@@ -354,6 +377,14 @@
           <type value="Practitioner"/>
         </requester>
         <dosageInstruction>
+          <text value="once daily"/>
+          <timing>
+            <repeat>
+              <frequency value="1"/>
+              <period value="1" />
+              <periodUnit value="d" />
+            </repeat>
+          </timing>
           <route>
             <coding>
               <system value="http://snomed.info/sct"/>
@@ -385,10 +416,10 @@
         <medicationCodeableConcept>
           <coding>
             <system value="http://snomed.info/sct"/>
-            <code value="13826011000036104"/>
-            <display value="Spiriva 18 microgram powder for inhalation, 30 capsules"/>
+            <code value="3400011000036103"/>
+            <display value="Spiriva"/>
           </coding>
-          <text value="Spiriva 18 microgram powder for inhalation, 30 capsules"/>
+          <text value="Spiriva"/>
         </medicationCodeableConcept>
         <subject>
           <reference value="urn:uuid:d1122188-f53f-417f-a84f-bc44479baa63"/>
@@ -404,19 +435,14 @@
           <type value="Practitioner"/>
         </requester>
         <dosageInstruction>
-          <route>
-            <coding>
-              <system value="http://snomed.info/sct"/>
-              <code value="447694001"/>
-              <display value="Respiratory tract route"/>
-            </coding>
-            <text value="Respiratory tract route"/>
-          </route>
-          <doseAndRate>
-            <doseQuantity>
-              <value value="1"/>
-            </doseQuantity>
-          </doseAndRate>
+          <text value="once daily"/>
+          <timing>
+            <repeat>
+              <frequency value="1"/>
+              <period value="1" />
+              <periodUnit value="d" />
+            </repeat>
+          </timing>
         </dosageInstruction>
       </MedicationRequest>
     </resource>
@@ -438,7 +464,7 @@
             <code value="175151000036106"/>
             <display value="Ezetimibe 10 mg tablet [30] (&amp;) rosuvastatin 40 mg tablet [30], 60"/>
           </coding>
-          <text value="Ezetimibe 10 mg tablet [30] (&amp;) rosuvastatin 40 mg tablet [30], 60"/>
+          <text value="Rosuvastatin 40mg &amp; ezetrol 10mg"/>
         </medicationCodeableConcept>
         <subject>
           <reference value="urn:uuid:d1122188-f53f-417f-a84f-bc44479baa63"/>
@@ -454,19 +480,14 @@
           <type value="Practitioner"/>
         </requester>
         <dosageInstruction>
-          <route>
-            <coding>
-              <system value="http://snomed.info/sct"/>
-              <code value="26643006"/>
-              <display value="Oral route"/>
-            </coding>
-            <text value="Oral route"/>
-          </route>
-          <doseAndRate>
-            <doseQuantity>
-              <value value="1"/>
-            </doseQuantity>
-          </doseAndRate>
+          <text value="once daily"/>
+          <timing>
+            <repeat>
+              <frequency value="1"/>
+              <period value="1" />
+              <periodUnit value="d" />
+            </repeat>
+          </timing>
         </dosageInstruction>
       </MedicationRequest>
     </resource>
@@ -488,7 +509,7 @@
             <code value="929413011000036109"/>
             <display value="Metformin (Apo) 500 mg tablet"/>
           </coding>
-          <text value="Metformin (Apo) 500 mg tablet"/>
+          <text value="Metformin 500 mg"/>
         </medicationCodeableConcept>
         <subject>
           <reference value="urn:uuid:d1122188-f53f-417f-a84f-bc44479baa63"/>
@@ -504,19 +525,14 @@
           <type value="Practitioner"/>
         </requester>
         <dosageInstruction>
-          <route>
-            <coding>
-              <system value="http://snomed.info/sct"/>
-              <code value="26643006"/>
-              <display value="Oral route"/>
-            </coding>
-            <text value="Oral route"/>
-          </route>
-          <doseAndRate>
-            <doseQuantity>
-              <value value="1"/>
-            </doseQuantity>
-          </doseAndRate>
+          <text value="twice daily"/>
+          <timing>
+            <repeat>
+              <frequency value="2"/>
+              <period value="1" />
+              <periodUnit value="d" />
+            </repeat>
+          </timing>
         </dosageInstruction>
       </MedicationRequest>
     </resource>
@@ -538,7 +554,7 @@
             <code value="23173011000036104"/>
             <display value="Aspirin 100 mg tablet"/>
           </coding>
-          <text value="Aspirin 100 mg tablet"/>
+          <text value="Aspirin 100 mg"/>
         </medicationCodeableConcept>
         <subject>
           <reference value="urn:uuid:d1122188-f53f-417f-a84f-bc44479baa63"/>
@@ -554,19 +570,14 @@
           <type value="Practitioner"/>
         </requester>
         <dosageInstruction>
-          <route>
-            <coding>
-              <system value="http://snomed.info/sct"/>
-              <code value="26643006"/>
-              <display value="Oral route"/>
-            </coding>
-            <text value="Oral route"/>
-          </route>
-          <doseAndRate>
-            <doseQuantity>
-              <value value="1"/>
-            </doseQuantity>
-          </doseAndRate>
+          <text value="once daily"/>
+          <timing>
+            <repeat>
+              <frequency value="1"/>
+              <period value="1" />
+              <periodUnit value="d" />
+            </repeat>
+          </timing>
         </dosageInstruction>
       </MedicationRequest>
     </resource>
@@ -604,19 +615,14 @@
           <type value="Practitioner"/>
         </requester>
         <dosageInstruction>
-          <route>
-            <coding>
-              <system value="http://snomed.info/sct"/>
-              <code value="26643006"/>
-              <display value="Oral route"/>
-            </coding>
-            <text value="Oral route"/>
-          </route>
-          <doseAndRate>
-            <doseQuantity>
-              <value value="1"/>
-            </doseQuantity>
-          </doseAndRate>
+          <text value="once daily"/>
+          <timing>
+            <repeat>
+              <frequency value="1"/>
+              <period value="1" />
+              <periodUnit value="d" />
+            </repeat>
+          </timing>
         </dosageInstruction>
       </MedicationRequest>
     </resource>
@@ -685,6 +691,14 @@
           <lastUpdated value="2025-02-25T11:17:03.285+11:00"/>
           <profile value="http://hl7.org.au/fhir/ps/StructureDefinition/au-ps-condition"/>
         </meta>
+        <clinicalStatus>
+          <coding>
+            <system value="http://terminology.hl7.org/CodeSystem/condition-clinical"/>
+            <code value="active"/>
+            <display value="Active"/>
+          </coding>
+          <text value="Active"/>
+        </clinicalStatus>
         <category>
           <coding>
             <system value="http://terminology.hl7.org/CodeSystem/condition-category"/>
@@ -716,6 +730,14 @@
           <lastUpdated value="2025-02-25T11:17:03.285+11:00"/>
           <profile value="http://hl7.org.au/fhir/ps/StructureDefinition/au-ps-condition"/>
         </meta>
+        <clinicalStatus>
+          <coding>
+            <system value="http://terminology.hl7.org/CodeSystem/condition-clinical"/>
+            <code value="active"/>
+            <display value="Active"/>
+          </coding>
+          <text value="Active"/>
+        </clinicalStatus>
         <category>
           <coding>
             <system value="http://terminology.hl7.org/CodeSystem/condition-category"/>
@@ -747,6 +769,14 @@
           <lastUpdated value="2025-02-25T11:17:03.285+11:00"/>
           <profile value="http://hl7.org.au/fhir/ps/StructureDefinition/au-ps-condition"/>
         </meta>
+        <clinicalStatus>
+          <coding>
+            <system value="http://terminology.hl7.org/CodeSystem/condition-clinical"/>
+            <code value="active"/>
+            <display value="Active"/>
+          </coding>
+          <text value="Active"/>
+        </clinicalStatus>
         <category>
           <coding>
             <system value="http://terminology.hl7.org/CodeSystem/condition-category"/>
@@ -781,10 +811,10 @@
         <clinicalStatus>
           <coding>
             <system value="http://terminology.hl7.org/CodeSystem/condition-clinical"/>
-            <code value="inactive"/>
-            <display value="Inactive"/>
+            <code value="active"/>
+            <display value="Active"/>
           </coding>
-          <text value="Inactive"/>
+          <text value="Active"/>
         </clinicalStatus>
         <category>
           <coding>
@@ -799,7 +829,7 @@
             <code value="90560007"/>
             <display value="Gout"/>
           </coding>
-          <text value="Gout"/>
+          <text value="Gout, Left great toe"/>
         </code>
         <bodySite>
           <coding>
@@ -807,7 +837,7 @@
             <code value="723724004"/>
             <display value="Structure of left great toe"/>
           </coding>
-          <text value="Structure of left great toe"/>
+          <text value="Left great toe"/>
         </bodySite>
         <subject>
           <reference value="urn:uuid:d1122188-f53f-417f-a84f-bc44479baa63"/>
