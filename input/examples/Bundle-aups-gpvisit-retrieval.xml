@@ -1,0 +1,996 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Bundle xmlns="http://hl7.org/fhir">
+  <id value="aups-gpvisit-retrieval"/>
+  <meta>
+    <profile value="http://hl7.org.au/fhir/ps/StructureDefinition/au-ps-bundle"/>
+  </meta>
+  <identifier>
+    <system value="urn:ietf:rfc:3986"/>
+    <value value="urn:uuid:594f5ff3-133e-4cd9-816e-891f675ea864"/>
+  </identifier>
+  <type value="document"/>
+  <timestamp value="2025-02-27T11:57:37.051+11:00"/>
+  <entry>
+    <fullUrl value="urn:uuid:9a57361b-6ef5-45ba-b491-c9588b4604e4"/>
+    <resource>
+      <Composition>
+        <meta>
+          <profile value="http://hl7.org.au/fhir/ps/StructureDefinition/au-ps-composition"/>
+        </meta>
+        <identifier>
+          <system value="urn:ietf:rfc:3986"/>
+          <value value="urn:uuid:594f5ff3-133e-4cd9-816e-891f675ea864"/>
+        </identifier>
+        <status value="amended"/>
+        <type>
+          <coding>
+            <system value="http://loinc.org"/>
+            <code value="60591-5"/>
+            <display value="Patient summary Document"/>
+          </coding>
+        </type>
+        <subject>
+          <reference value="urn:uuid:d1122188-f53f-417f-a84f-bc44479baa63"/>
+        </subject>
+        <date value="2025-02-27T11:57:36.833+11:00"/>
+        <author>
+          <reference value="urn:uuid:ca779d48-9dd8-4fe1-829a-d48b12b492af"/>
+        </author>
+        <title value="Jeramy's Patient Summary"/>
+        <custodian>
+          <reference value="urn:uuid:4d1e0ca1-4ea7-46a2-8f0f-af5225b73c3a"/>
+        </custodian>
+        <section>
+          <title value="Allergies and Intolerances"/>
+          <code>
+            <coding>
+              <system value="http://loinc.org"/>
+              <code value="48765-2"/>
+              <display value="Allergies and adverse reactions Document"/>
+            </coding>
+          </code>
+          <text>
+            <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml">TBD</div>
+          </text>
+          <entry>
+            <reference value="urn:uuid:eaf0788a-8fdf-4e21-b302-e529f3bd9d5f"/>
+          </entry>
+        </section>
+        <section>
+          <title value="Medication List"/>
+          <code>
+            <coding>
+              <system value="http://loinc.org"/>
+              <code value="10160-0"/>
+              <display value="History of Medication use Narrative"/>
+            </coding>
+          </code>
+          <text>
+            <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml">TBD</div>
+          </text>
+          <entry>
+            <reference value="urn:uuid:d4ca61a6-5b55-41ab-9b1a-fba0daefe94d"/>
+          </entry>
+          <entry>
+            <reference value="urn:uuid:3f76e819-1f30-405d-b1ef-66c878b401c2"/>
+          </entry>
+          <entry>
+            <reference value="urn:uuid:e96d8d8d-8ef2-436b-8d04-4d136a731398"/>
+          </entry>
+          <entry>
+            <reference value="urn:uuid:96b7e47d-0487-4219-adbe-7c2dfb0b2deb"/>
+          </entry>
+          <entry>
+            <reference value="urn:uuid:d7351a16-8df1-47a4-9129-2c2d6c2238ec"/>
+          </entry>
+          <entry>
+            <reference value="urn:uuid:fbc14baf-d7bf-4fa0-9035-f8e4a73986d0"/>
+          </entry>
+          <entry>
+            <reference value="urn:uuid:cefeac7e-cf0c-4c14-917d-2a526516c3d1"/>
+          </entry>
+        </section>
+        <section>
+          <title value="Problem list"/>
+          <code>
+            <coding>
+              <system value="http://loinc.org"/>
+              <code value="11450-4"/>
+              <display value="Problem list Reported"/>
+            </coding>
+          </code>
+          <text>
+            <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml">TBD</div>
+          </text>
+          <entry>
+            <reference value="urn:uuid:96013c59-2a84-4e89-9aa4-96d04d367466"/>
+          </entry>
+          <entry>
+            <reference value="urn:uuid:8714f907-ddf9-4f21-9ea9-663e4ad0f99c"/>
+          </entry>
+          <entry>
+            <reference value="urn:uuid:bea49472-f812-4aa0-ad52-fb90fad2b0d1"/>
+          </entry>
+          <entry>
+            <reference value="urn:uuid:55e4f3ea-ed3c-4cef-badd-f582254a97dd"/>
+          </entry>
+          <entry>
+            <reference value="urn:uuid:604a5173-1cf4-4cf4-82a2-13b610ecc593"/>
+          </entry>
+        </section>
+        <section>
+          <title value="History of Immunizations"/>
+          <code>
+            <coding>
+              <system value="http://loinc.org"/>
+              <code value="11369-6"/>
+              <display value="History of Immunization Narrative"/>
+            </coding>
+          </code>
+          <text>
+            <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml">TBD</div>
+          </text>
+          <entry>
+            <reference value="urn:uuid:825a781b-e083-4351-a3d9-adf56f65d7e9"/>
+          </entry>
+          <entry>
+            <reference value="urn:uuid:1e0d5691-c20c-4e14-9261-20a1575ab065"/>
+          </entry>
+          <entry>
+            <reference value="urn:uuid:0d0d8c79-7f2f-4586-8b2e-f1a1942fe3ed"/>
+          </entry>
+        </section>
+        <section>
+          <title value="History of Past Illness"/>
+          <code>
+            <coding>
+              <system value="http://loinc.org"/>
+              <code value="11348-0"/>
+              <display value="History of Past illness Narrative"/>
+            </coding>
+          </code>
+          <text>
+            <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml">TBD</div>
+          </text>
+          <entry>
+            <reference value="urn:uuid:55e4f3ea-ed3c-4cef-badd-f582254a97dd"/>
+          </entry>
+        </section>
+      </Composition>
+    </resource>
+  </entry>
+  <entry>
+    <fullUrl value="urn:uuid:d1122188-f53f-417f-a84f-bc44479baa63"/>
+    <resource>
+      <Patient>
+        <meta>
+          <versionId value="1"/>
+          <lastUpdated value="2020-02-25T11:17:03.285+11:00"/>
+          <profile value="http://hl7.org.au/fhir/ps/StructureDefinition/au-ps-patient"/>
+        </meta>
+        <extension url="http://hl7.org.au/fhir/StructureDefinition/indigenous-status">
+          <valueCoding>
+            <system value="https://healthterminologies.gov.au/fhir/CodeSystem/australian-indigenous-status-1"/>
+            <code value="4"/>
+            <display value="Neither Aboriginal nor Torres Strait Islander origin"/>
+          </valueCoding>
+        </extension>
+        <identifier>
+          <extension url="http://hl7.org.au/fhir/StructureDefinition/ihi-status">
+            <valueCoding>
+              <system value="https://healthterminologies.gov.au/fhir/CodeSystem/ihi-status-1"/>
+              <code value="active"/>
+            </valueCoding>
+          </extension>
+          <extension url="http://hl7.org.au/fhir/StructureDefinition/ihi-record-status">
+            <valueCoding>
+              <system value="https://healthterminologies.gov.au/fhir/CodeSystem/ihi-record-status-1"/>
+              <code value="verified"/>
+              <display value="verified"/>
+            </valueCoding>
+          </extension>
+          <type>
+            <coding>
+              <system value="http://terminology.hl7.org/CodeSystem/v2-0203"/>
+              <code value="NI"/>
+            </coding>
+            <text value="IHI"/>
+          </type>
+          <system value="http://ns.electronichealth.net.au/id/hi/ihi/1.0"/>
+          <value value="8003608166980417"/>
+        </identifier>
+        <identifier>
+          <type>
+            <coding>
+              <system value="http://terminology.hl7.org/CodeSystem/v2-0203"/>
+              <code value="MC"/>
+            </coding>
+            <text value="Medicare Number"/>
+          </type>
+          <system value="http://ns.electronichealth.net.au/id/medicare-number"/>
+          <value value="29545410411"/>
+        </identifier>
+        <name>
+          <use value="official"/>
+          <family value="BANKS"/>
+          <given value="Jeramy"/>
+          <given value="EZRA"/>
+        </name>
+        <telecom>
+          <system value="phone"/>
+          <value value="0270107520"/>
+          <use value="home"/>
+        </telecom>
+        <telecom>
+          <system value="phone"/>
+          <value value="0491574118"/>
+          <use value="mobile"/>
+        </telecom>
+        <gender value="male"/>
+        <birthDate value="1971-05-14"/>
+        <address>
+          <line value="50 Sebastien St"/>
+          <city value="Minjary"/>
+          <state value="NSW"/>
+          <postalCode value="2720"/>
+          <country value="AU"/>
+        </address>
+        <generalPractitioner>
+          <reference value="urn:uuid:4d1e0ca1-4ea7-46a2-8f0f-af5225b73c3a"/>
+        </generalPractitioner>
+      </Patient>
+    </resource>
+  </entry>
+  <entry>
+    <fullUrl value="urn:uuid:eaf0788a-8fdf-4e21-b302-e529f3bd9d5f"/>
+    <resource>
+      <AllergyIntolerance>
+        <meta>
+          <versionId value="2"/>
+          <lastUpdated value="2025-02-25T11:39:15.709+11:00"/>
+          <profile value="http://hl7.org.au/fhir/ps/StructureDefinition/au-ps-allergyintolerance"/>
+        </meta>
+        <clinicalStatus>
+          <coding>
+            <system value="http://terminology.hl7.org/CodeSystem/allergyintolerance-clinical"/>
+            <code value="active"/>
+          </coding>
+        </clinicalStatus>
+        <code>
+          <coding>
+            <system value="http://snomed.info/sct"/>
+            <code value="716186003"/>
+            <display value="No known allergy"/>
+          </coding>
+          <text value="No known allergy"/>
+        </code>
+        <patient>
+          <reference value="urn:uuid:d1122188-f53f-417f-a84f-bc44479baa63"/>
+          <type value="Patient"/>
+        </patient>
+      </AllergyIntolerance>
+    </resource>
+  </entry>
+  <entry>
+    <fullUrl value="urn:uuid:d4ca61a6-5b55-41ab-9b1a-fba0daefe94d"/>
+    <resource>
+      <MedicationRequest>
+        <meta>
+          <versionId value="2"/>
+          <lastUpdated value="2025-02-25T11:17:03.285+11:00"/>
+          <profile value="http://hl7.org.au/fhir/ps/StructureDefinition/au-ps-medicationrequest"/>
+        </meta>
+        <status value="active"/>
+        <intent value="order"/>
+        <medicationCodeableConcept>
+          <coding>
+            <system value="http://snomed.info/sct"/>
+            <code value="13029011000036109"/>
+            <display value="Ventolin Inhaler CFC-Free 100 microgram/actuation inhalation, 200 actuations"/>
+          </coding>
+          <text value="Ventolin Inhaler CFC-Free 100 microgram/actuation inhalation, 200 actuations"/>
+        </medicationCodeableConcept>
+        <subject>
+          <reference value="urn:uuid:d1122188-f53f-417f-a84f-bc44479baa63"/>
+          <type value="Patient"/>
+        </subject>
+        <authoredOn>
+          <extension url="http://hl7.org/fhir/StructureDefinition/data-absent-reason">
+            <valueCode value="unknown"/>
+          </extension>
+        </authoredOn>
+        <requester>
+          <reference value="urn:uuid:ca779d48-9dd8-4fe1-829a-d48b12b492af"/>
+          <type value="Practitioner"/>
+        </requester>
+        <dosageInstruction>
+          <route>
+            <coding>
+              <system value="http://snomed.info/sct"/>
+              <code value="447694001"/>
+              <display value="Respiratory tract route"/>
+            </coding>
+            <text value="Respiratory tract route"/>
+          </route>
+          <doseAndRate>
+            <doseQuantity>
+              <value value="2"/>
+            </doseQuantity>
+          </doseAndRate>
+        </dosageInstruction>
+      </MedicationRequest>
+    </resource>
+  </entry>
+  <entry>
+    <fullUrl value="urn:uuid:3f76e819-1f30-405d-b1ef-66c878b401c2"/>
+    <resource>
+      <MedicationRequest>
+        <meta>
+          <versionId value="2"/>
+          <lastUpdated value="2025-02-25T11:17:03.285+11:00"/>
+          <profile value="http://hl7.org.au/fhir/ps/StructureDefinition/au-ps-medicationrequest"/>
+        </meta>
+        <status value="active"/>
+        <intent value="order"/>
+        <medicationCodeableConcept>
+          <coding>
+            <system value="http://snomed.info/sct"/>
+            <code value="11404011000036102"/>
+            <display value="Zyloprim 100 mg tablet, 200"/>
+          </coding>
+          <text value="Zyloprim 100 mg tablet, 200"/>
+        </medicationCodeableConcept>
+        <subject>
+          <reference value="urn:uuid:d1122188-f53f-417f-a84f-bc44479baa63"/>
+          <type value="Patient"/>
+        </subject>
+        <authoredOn>
+          <extension url="http://hl7.org/fhir/StructureDefinition/data-absent-reason">
+            <valueCode value="unknown"/>
+          </extension>
+        </authoredOn>
+        <requester>
+          <reference value="urn:uuid:ca779d48-9dd8-4fe1-829a-d48b12b492af"/>
+          <type value="Practitioner"/>
+        </requester>
+        <dosageInstruction>
+          <route>
+            <coding>
+              <system value="http://snomed.info/sct"/>
+              <code value="26643006"/>
+              <display value="Oral route"/>
+            </coding>
+            <text value="Oral route"/>
+          </route>
+          <doseAndRate>
+            <doseQuantity>
+              <value value="1"/>
+            </doseQuantity>
+          </doseAndRate>
+        </dosageInstruction>
+      </MedicationRequest>
+    </resource>
+  </entry>
+  <entry>
+    <fullUrl value="urn:uuid:e96d8d8d-8ef2-436b-8d04-4d136a731398"/>
+    <resource>
+      <MedicationRequest>
+        <meta>
+          <versionId value="2"/>
+          <lastUpdated value="2025-02-25T11:17:03.285+11:00"/>
+          <profile value="http://hl7.org.au/fhir/ps/StructureDefinition/au-ps-medicationrequest"/>
+        </meta>
+        <status value="active"/>
+        <intent value="order"/>
+        <medicationCodeableConcept>
+          <coding>
+            <system value="http://snomed.info/sct"/>
+            <code value="13826011000036104"/>
+            <display value="Spiriva 18 microgram powder for inhalation, 30 capsules"/>
+          </coding>
+          <text value="Spiriva 18 microgram powder for inhalation, 30 capsules"/>
+        </medicationCodeableConcept>
+        <subject>
+          <reference value="urn:uuid:d1122188-f53f-417f-a84f-bc44479baa63"/>
+          <type value="Patient"/>
+        </subject>
+        <authoredOn>
+          <extension url="http://hl7.org/fhir/StructureDefinition/data-absent-reason">
+            <valueCode value="unknown"/>
+          </extension>
+        </authoredOn>
+        <requester>
+          <reference value="urn:uuid:ca779d48-9dd8-4fe1-829a-d48b12b492af"/>
+          <type value="Practitioner"/>
+        </requester>
+        <dosageInstruction>
+          <route>
+            <coding>
+              <system value="http://snomed.info/sct"/>
+              <code value="447694001"/>
+              <display value="Respiratory tract route"/>
+            </coding>
+            <text value="Respiratory tract route"/>
+          </route>
+          <doseAndRate>
+            <doseQuantity>
+              <value value="1"/>
+            </doseQuantity>
+          </doseAndRate>
+        </dosageInstruction>
+      </MedicationRequest>
+    </resource>
+  </entry>
+  <entry>
+    <fullUrl value="urn:uuid:96b7e47d-0487-4219-adbe-7c2dfb0b2deb"/>
+    <resource>
+      <MedicationRequest>
+        <meta>
+          <versionId value="2"/>
+          <lastUpdated value="2025-02-25T11:17:03.285+11:00"/>
+          <profile value="http://hl7.org.au/fhir/ps/StructureDefinition/au-ps-medicationrequest"/>
+        </meta>
+        <status value="active"/>
+        <intent value="order"/>
+        <medicationCodeableConcept>
+          <coding>
+            <system value="http://snomed.info/sct"/>
+            <code value="175151000036106"/>
+            <display value="Ezetimibe 10 mg tablet [30] (&amp;) rosuvastatin 40 mg tablet [30], 60"/>
+          </coding>
+          <text value="Ezetimibe 10 mg tablet [30] (&amp;) rosuvastatin 40 mg tablet [30], 60"/>
+        </medicationCodeableConcept>
+        <subject>
+          <reference value="urn:uuid:d1122188-f53f-417f-a84f-bc44479baa63"/>
+          <type value="Patient"/>
+        </subject>
+        <authoredOn>
+          <extension url="http://hl7.org/fhir/StructureDefinition/data-absent-reason">
+            <valueCode value="unknown"/>
+          </extension>
+        </authoredOn>
+        <requester>
+          <reference value="urn:uuid:ca779d48-9dd8-4fe1-829a-d48b12b492af"/>
+          <type value="Practitioner"/>
+        </requester>
+        <dosageInstruction>
+          <route>
+            <coding>
+              <system value="http://snomed.info/sct"/>
+              <code value="26643006"/>
+              <display value="Oral route"/>
+            </coding>
+            <text value="Oral route"/>
+          </route>
+          <doseAndRate>
+            <doseQuantity>
+              <value value="1"/>
+            </doseQuantity>
+          </doseAndRate>
+        </dosageInstruction>
+      </MedicationRequest>
+    </resource>
+  </entry>
+  <entry>
+    <fullUrl value="urn:uuid:d7351a16-8df1-47a4-9129-2c2d6c2238ec"/>
+    <resource>
+      <MedicationRequest>
+        <meta>
+          <versionId value="2"/>
+          <lastUpdated value="2025-02-25T11:17:03.285+11:00"/>
+          <profile value="http://hl7.org.au/fhir/ps/StructureDefinition/au-ps-medicationrequest"/>
+        </meta>
+        <status value="active"/>
+        <intent value="order"/>
+        <medicationCodeableConcept>
+          <coding>
+            <system value="http://snomed.info/sct"/>
+            <code value="929413011000036109"/>
+            <display value="Metformin (Apo) 500 mg tablet"/>
+          </coding>
+          <text value="Metformin (Apo) 500 mg tablet"/>
+        </medicationCodeableConcept>
+        <subject>
+          <reference value="urn:uuid:d1122188-f53f-417f-a84f-bc44479baa63"/>
+          <type value="Patient"/>
+        </subject>
+        <authoredOn>
+          <extension url="http://hl7.org/fhir/StructureDefinition/data-absent-reason">
+            <valueCode value="unknown"/>
+          </extension>
+        </authoredOn>
+        <requester>
+          <reference value="urn:uuid:ca779d48-9dd8-4fe1-829a-d48b12b492af"/>
+          <type value="Practitioner"/>
+        </requester>
+        <dosageInstruction>
+          <route>
+            <coding>
+              <system value="http://snomed.info/sct"/>
+              <code value="26643006"/>
+              <display value="Oral route"/>
+            </coding>
+            <text value="Oral route"/>
+          </route>
+          <doseAndRate>
+            <doseQuantity>
+              <value value="1"/>
+            </doseQuantity>
+          </doseAndRate>
+        </dosageInstruction>
+      </MedicationRequest>
+    </resource>
+  </entry>
+  <entry>
+    <fullUrl value="urn:uuid:fbc14baf-d7bf-4fa0-9035-f8e4a73986d0"/>
+    <resource>
+      <MedicationRequest>
+        <meta>
+          <versionId value="2"/>
+          <lastUpdated value="2025-02-25T11:17:03.285+11:00"/>
+          <profile value="http://hl7.org.au/fhir/ps/StructureDefinition/au-ps-medicationrequest"/>
+        </meta>
+        <status value="active"/>
+        <intent value="order"/>
+        <medicationCodeableConcept>
+          <coding>
+            <system value="http://snomed.info/sct"/>
+            <code value="23173011000036104"/>
+            <display value="Aspirin 100 mg tablet"/>
+          </coding>
+          <text value="Aspirin 100 mg tablet"/>
+        </medicationCodeableConcept>
+        <subject>
+          <reference value="urn:uuid:d1122188-f53f-417f-a84f-bc44479baa63"/>
+          <type value="Patient"/>
+        </subject>
+        <authoredOn>
+          <extension url="http://hl7.org/fhir/StructureDefinition/data-absent-reason">
+            <valueCode value="unknown"/>
+          </extension>
+        </authoredOn>
+        <requester>
+          <reference value="urn:uuid:ca779d48-9dd8-4fe1-829a-d48b12b492af"/>
+          <type value="Practitioner"/>
+        </requester>
+        <dosageInstruction>
+          <route>
+            <coding>
+              <system value="http://snomed.info/sct"/>
+              <code value="26643006"/>
+              <display value="Oral route"/>
+            </coding>
+            <text value="Oral route"/>
+          </route>
+          <doseAndRate>
+            <doseQuantity>
+              <value value="1"/>
+            </doseQuantity>
+          </doseAndRate>
+        </dosageInstruction>
+      </MedicationRequest>
+    </resource>
+  </entry>
+  <entry>
+    <fullUrl value="urn:uuid:cefeac7e-cf0c-4c14-917d-2a526516c3d1"/>
+    <resource>
+      <MedicationRequest>
+        <meta>
+          <versionId value="2"/>
+          <lastUpdated value="2025-02-25T11:17:03.285+11:00"/>
+          <profile value="http://hl7.org.au/fhir/ps/StructureDefinition/au-ps-medicationrequest"/>
+        </meta>
+        <status value="active"/>
+        <intent value="order"/>
+        <medicationCodeableConcept>
+          <coding>
+            <system value="http://snomed.info/sct"/>
+            <code value="22969011000036102"/>
+            <display value="Telmisartan 80 mg tablet"/>
+          </coding>
+          <text value="Telmisartan 80 mg tablet"/>
+        </medicationCodeableConcept>
+        <subject>
+          <reference value="urn:uuid:d1122188-f53f-417f-a84f-bc44479baa63"/>
+          <type value="Patient"/>
+        </subject>
+        <authoredOn>
+          <extension url="http://hl7.org/fhir/StructureDefinition/data-absent-reason">
+            <valueCode value="unknown"/>
+          </extension>
+        </authoredOn>
+        <requester>
+          <reference value="urn:uuid:ca779d48-9dd8-4fe1-829a-d48b12b492af"/>
+          <type value="Practitioner"/>
+        </requester>
+        <dosageInstruction>
+          <route>
+            <coding>
+              <system value="http://snomed.info/sct"/>
+              <code value="26643006"/>
+              <display value="Oral route"/>
+            </coding>
+            <text value="Oral route"/>
+          </route>
+          <doseAndRate>
+            <doseQuantity>
+              <value value="1"/>
+            </doseQuantity>
+          </doseAndRate>
+        </dosageInstruction>
+      </MedicationRequest>
+    </resource>
+  </entry>
+  <entry>
+    <fullUrl value="urn:uuid:ca779d48-9dd8-4fe1-829a-d48b12b492af"/>
+    <resource>
+      <Practitioner>
+        <meta>
+          <versionId value="2"/>
+          <lastUpdated value="2025-02-25T11:17:03.285+11:00"/>
+          <profile value="http://hl7.org.au/fhir/core/StructureDefinition/au-ps-practitioner"/>
+        </meta>
+        <identifier>
+          <type>
+            <coding>
+              <system value="http://terminology.hl7.org/CodeSystem/v2-0203"/>
+              <code value="NPI"/>
+              <display value="National provider identifier"/>
+            </coding>
+            <text value="HPI-I"/>
+          </type>
+          <system value="http://ns.electronichealth.net.au/id/hi/hpii/1.0"/>
+          <value value="8003616566718832"/>
+        </identifier>
+        <identifier>
+          <type>
+            <coding>
+              <system value="http://terminology.hl7.org.au/CodeSystem/v2-0203"/>
+              <code value="PRES"/>
+              <display value="Prescriber Number"/>
+            </coding>
+          </type>
+          <system value="http://ns.electronichealth.net.au/id/medicare-prescriber-number"/>
+          <value value="8017196"/>
+        </identifier>
+        <name>
+          <family value="LOWE"/>
+          <given value="Abe"/>
+        </name>
+        <telecom>
+          <system value="phone"/>
+          <value value="0270102315"/>
+          <use value="work"/>
+        </telecom>
+        <telecom>
+          <system value="email"/>
+          <value value="abe.lowe@mossypointmc.example.net"/>
+        </telecom>
+        <address>
+          <line value="158 Warrego Cl"/>
+          <city value="Mossy Point"/>
+          <state value="NSW"/>
+          <postalCode value="2537"/>
+        </address>
+        <gender value="male"/>
+      </Practitioner>
+    </resource>
+  </entry>
+  <entry>
+    <fullUrl value="urn:uuid:96013c59-2a84-4e89-9aa4-96d04d367466"/>
+    <resource>
+      <Condition>
+        <meta>
+          <versionId value="2"/>
+          <lastUpdated value="2025-02-25T11:17:03.285+11:00"/>
+          <profile value="http://hl7.org.au/fhir/ps/StructureDefinition/au-ps-condition"/>
+        </meta>
+        <category>
+          <coding>
+            <system value="http://terminology.hl7.org/CodeSystem/condition-category"/>
+            <code value="problem-list-item"/>
+          </coding>
+          <text value="Problem"/>
+        </category>
+        <code>
+          <coding>
+            <system value="http://snomed.info/sct"/>
+            <code value="13644009"/>
+            <display value="Hypercholesterolaemia"/>
+          </coding>
+          <text value="Hypercholesterolaemia"/>
+        </code>
+        <subject>
+          <reference value="urn:uuid:d1122188-f53f-417f-a84f-bc44479baa63"/>
+          <type value="Patient"/>
+        </subject>
+      </Condition>
+    </resource>
+  </entry>
+  <entry>
+    <fullUrl value="urn:uuid:8714f907-ddf9-4f21-9ea9-663e4ad0f99c"/>
+    <resource>
+      <Condition>
+        <meta>
+          <versionId value="2"/>
+          <lastUpdated value="2025-02-25T11:17:03.285+11:00"/>
+          <profile value="http://hl7.org.au/fhir/ps/StructureDefinition/au-ps-condition"/>
+        </meta>
+        <category>
+          <coding>
+            <system value="http://terminology.hl7.org/CodeSystem/condition-category"/>
+            <code value="problem-list-item"/>
+          </coding>
+          <text value="Problem"/>
+        </category>
+        <code>
+          <coding>
+            <system value="http://snomed.info/sct"/>
+            <code value="44054006"/>
+            <display value="Type 2 diabetes mellitus"/>
+          </coding>
+          <text value="Type 2 diabetes mellitus"/>
+        </code>
+        <subject>
+          <reference value="urn:uuid:d1122188-f53f-417f-a84f-bc44479baa63"/>
+          <type value="Patient"/>
+        </subject>
+      </Condition>
+    </resource>
+  </entry>
+  <entry>
+    <fullUrl value="urn:uuid:bea49472-f812-4aa0-ad52-fb90fad2b0d1"/>
+    <resource>
+      <Condition>
+        <meta>
+          <versionId value="2"/>
+          <lastUpdated value="2025-02-25T11:17:03.285+11:00"/>
+          <profile value="http://hl7.org.au/fhir/ps/StructureDefinition/au-ps-condition"/>
+        </meta>
+        <category>
+          <coding>
+            <system value="http://terminology.hl7.org/CodeSystem/condition-category"/>
+            <code value="problem-list-item"/>
+          </coding>
+          <text value="Problem"/>
+        </category>
+        <code>
+          <coding>
+            <system value="http://snomed.info/sct"/>
+            <code value="38341003"/>
+            <display value="Hypertension"/>
+          </coding>
+          <text value="Hypertension"/>
+        </code>
+        <subject>
+          <reference value="urn:uuid:d1122188-f53f-417f-a84f-bc44479baa63"/>
+          <type value="Patient"/>
+        </subject>
+      </Condition>
+    </resource>
+  </entry>
+  <entry>
+    <fullUrl value="urn:uuid:55e4f3ea-ed3c-4cef-badd-f582254a97dd"/>
+    <resource>
+      <Condition>
+        <meta>
+          <versionId value="2"/>
+          <lastUpdated value="2025-02-25T11:17:03.285+11:00"/>
+          <profile value="http://hl7.org.au/fhir/ps/StructureDefinition/au-ps-condition"/>
+        </meta>
+        <clinicalStatus>
+          <coding>
+            <system value="http://terminology.hl7.org/CodeSystem/condition-clinical"/>
+            <code value="inactive"/>
+            <display value="Inactive"/>
+          </coding>
+          <text value="Inactive"/>
+        </clinicalStatus>
+        <category>
+          <coding>
+            <system value="http://terminology.hl7.org/CodeSystem/condition-category"/>
+            <code value="problem-list-item"/>
+          </coding>
+          <text value="Problem"/>
+        </category>
+        <code>
+          <coding>
+            <system value="http://snomed.info/sct"/>
+            <code value="90560007"/>
+            <display value="Gout"/>
+          </coding>
+          <text value="Gout"/>
+        </code>
+        <bodySite>
+          <coding>
+            <system value="http://snomed.info/sct"/>
+            <code value="723724004"/>
+            <display value="Structure of left great toe"/>
+          </coding>
+          <text value="Structure of left great toe"/>
+        </bodySite>
+        <subject>
+          <reference value="urn:uuid:d1122188-f53f-417f-a84f-bc44479baa63"/>
+          <type value="Patient"/>
+        </subject>
+        <note>
+          <text value="On allopurinol for uric acid control"/>
+        </note>
+      </Condition>
+    </resource>
+  </entry>
+  <entry>
+    <fullUrl value="urn:uuid:604a5173-1cf4-4cf4-82a2-13b610ecc593"/>
+    <resource>
+      <Condition>
+        <meta>
+          <versionId value="2"/>
+          <lastUpdated value="2025-02-25T11:17:03.285+11:00"/>
+          <profile value="http://hl7.org.au/fhir/ps/StructureDefinition/au-ps-condition"/>
+        </meta>
+        <category>
+          <coding>
+            <system value="http://terminology.hl7.org/CodeSystem/condition-category"/>
+            <code value="problem-list-item"/>
+          </coding>
+          <text value="Problem"/>
+        </category>
+        <code>
+          <coding>
+            <system value="http://snomed.info/sct"/>
+            <code value="13645005"/>
+            <display value="COPD"/>
+          </coding>
+          <text value="COPD"/>
+        </code>
+        <subject>
+          <reference value="urn:uuid:d1122188-f53f-417f-a84f-bc44479baa63"/>
+          <type value="Patient"/>
+        </subject>
+      </Condition>
+    </resource>
+  </entry>
+  <entry>
+    <fullUrl value="urn:uuid:825a781b-e083-4351-a3d9-adf56f65d7e9"/>
+    <resource>
+      <Immunization>
+        <meta>
+          <versionId value="3"/>
+          <lastUpdated value="2025-02-25T11:39:15.709+11:00"/>
+          <profile value="http://hl7.org.au/fhir/ps/StructureDefinition/au-ps-immunization"/>
+        </meta>
+        <status value="completed"/>
+        <vaccineCode>
+          <coding>
+            <system value="https://www.humanservices.gov.au/organisations/health-professionals/enablers/air-vaccine-code-formats"/>
+            <version value="20240207"/>
+            <code value="MMRCSL"/>
+            <display value="M-M-R II"/>
+          </coding>
+          <text value="M-M-R II"/>
+        </vaccineCode>
+        <patient>
+          <reference value="urn:uuid:d1122188-f53f-417f-a84f-bc44479baa63"/>
+          <type value="Patient"/>
+        </patient>
+        <occurrenceDateTime value="2021-06-17"/>
+      </Immunization>
+    </resource>
+  </entry>
+  <entry>
+    <fullUrl value="urn:uuid:1e0d5691-c20c-4e14-9261-20a1575ab065"/>
+    <resource>
+      <Immunization>
+        <meta>
+          <versionId value="3"/>
+          <lastUpdated value="2025-02-25T11:39:15.709+11:00"/>
+          <profile value="http://hl7.org.au/fhir/ps/StructureDefinition/au-ps-immunization"/>
+        </meta>
+        <status value="completed"/>
+        <vaccineCode>
+          <coding>
+            <system value="https://www.humanservices.gov.au/organisations/health-professionals/enablers/air-vaccine-code-formats"/>
+            <version value="20240207"/>
+            <code value="BOOST"/>
+            <display value="Boostrix"/>
+          </coding>
+          <text value="Boostrix"/>
+        </vaccineCode>
+        <patient>
+          <reference value="urn:uuid:d1122188-f53f-417f-a84f-bc44479baa63"/>
+          <type value="Patient"/>
+        </patient>
+        <occurrenceDateTime value="2021-06-17"/>
+      </Immunization>
+    </resource>
+  </entry>
+  <entry>
+    <fullUrl value="urn:uuid:0d0d8c79-7f2f-4586-8b2e-f1a1942fe3ed"/>
+    <resource>
+      <Immunization>
+        <meta>
+          <versionId value="3"/>
+          <lastUpdated value="2025-02-25T11:39:15.709+11:00"/>
+          <profile value="http://hl7.org.au/fhir/ps/StructureDefinition/au-ps-immunization"/>
+        </meta>
+        <status value="completed"/>
+        <vaccineCode>
+          <coding>
+            <system value="https://www.humanservices.gov.au/organisations/health-professionals/enablers/air-vaccine-code-formats"/>
+            <version value="20240207"/>
+            <code value="COVAST"/>
+            <display value="AstraZeneca Vaxzevria"/>
+          </coding>
+          <text value="AstraZeneca Vaxzevria"/>
+        </vaccineCode>
+        <patient>
+          <reference value="urn:uuid:d1122188-f53f-417f-a84f-bc44479baa63"/>
+          <type value="Patient"/>
+        </patient>
+        <occurrenceDateTime value="2021-06-17"/>
+      </Immunization>
+    </resource>
+  </entry>
+  <entry>
+  <fullUrl value="urn:uuid:4d1e0ca1-4ea7-46a2-8f0f-af5225b73c3a"/>
+  <resource>
+    <Organization>
+      <id value="4d1e0ca1-4ea7-46a2-8f0f-af5225b73c3a"/>
+      <meta>
+        <profile value="http://hl7.org.au/fhir/ps/StructureDefinition/au-ps-organization"/>
+      </meta>
+      <identifier>
+        <type>
+          <coding>
+            <system value="http://terminology.hl7.org.au/CodeSystem/v2-0203"/>
+            <code value="NOI"/>
+          </coding>
+          <text value="HPI-O"/>
+        </type>
+        <system value="http://ns.electronichealth.net.au/id/hi/hpio/1.0"/>
+        <value value="8003629900040367"/>
+      </identifier>
+      <identifier>
+        <type>
+          <coding>
+            <system value="http://terminology.hl7.org/CodeSystem/v2-0203"/>
+            <code value="XX"/>
+          </coding>
+          <text value="ABN"/>
+        </type>
+        <system value="http://hl7.org.au/id/abn"/>
+        <value value="81111751322"/>
+      </identifier>
+      <type>
+        <coding>
+          <system value="http://www.abs.gov.au/ausstats/abs@.nsf/mf/1292.0"/>
+          <code value="8511"/>
+          <display value="General Practice Medical Services"/>
+        </coding>
+        <coding>
+          <system value="http://snomed.info/sct"/>
+          <code value="788007007"/>
+          <display value="General practice service"/>
+        </coding>
+        <text value="General practice medical clinic service"/>
+      </type>
+      <name value="Loch Lomond Medical Clinic"/>
+      <telecom>
+        <system value="phone"/>
+        <value value="0755507646"/>
+        <use value="work"/>
+      </telecom>
+      <telecom>
+        <system value="email"/>
+        <value value="info@lochlomondmc.example.net"/>
+      </telecom>
+      <address>
+        <line value="32 Silver Cl"/>
+        <city value="Loch Lomond"/>
+        <state value="QLD"/>
+        <postalCode value="4370"/>
+      </address>
+    </Organization>
+  </resource>
+</entry>
+</Bundle>

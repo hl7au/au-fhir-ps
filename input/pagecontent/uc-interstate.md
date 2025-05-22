@@ -1,14 +1,16 @@
-This use case describes a scenario where, during a general practitioner (GP) consultation with a new patient who resides in a different state and has a usual GP, the GP retrieves an up-to-date patient summary from the patient's usual GP. 
+This use case describes an example scenario where, during a general practitioner (GP) consultation with a new patient who resides in a different state and has a usual GP, the GP retrieves an up-to-date patient summary from the patient's usual GP. 
 
 ### Use Case Description
 
 Jeramy Ezra Banks is a 73-year-old male. Jeramy is a retired schoolteacher that lives in New South Wales, Australia. Jeramy has chronic heart disease which was diagnosed 5 years ago and Jeramy's usual GP is Dr Abe Lowe. Comfortable with basic technology, Jeramy uses a smartphone app to manage his healthcare records.
 
-Jeramy travels interstate to Queensland for a holiday to visit his daughter. Jeramy checks that his patient summary has been updated by his usual GP (Dr Abe Lowe) following a recent admission to hospital prior to travelling.
+Jeramy travels interstate to Queensland for a holiday to visit his daughter. Prior to travelling, Jeramy checks that his patient summary has been updated by his usual GP (Dr Abe Lowe) following a recent admission to hospital.
 
 During the trip Jeramy begins feeling unwell and books an appointment with a local Queensland GP (Dr Wyatt Samuels). Jeramy is gasping for breath and feels stiff after driving.
 
-Jeramy attends the appointment with the local Queensland GP (Dr Wyatt Samuels). During the appointment, Jeramy alerts the attending GP (Dr Wyatt Samuels) that a patient summary is available. Jeramy provides access to his updated patient summary to the attending GP (Dr Wyatt Samuels). The attending GP's (Dr Wyatt Samuels) clinical system initiates a request to retrieve Jeramy’s most recent patient summary from the clinical system of the usual GP (Dr Abe Lowe) to ensure safe and informed care.
+Jeramy attends the appointment with the local Queensland GP (Dr Wyatt Samuels). During the appointment, Jeramy alerts the attending GP (Dr Wyatt Samuels) that a patient summary from his usual GP is available. Jeramy provides access to his patient summary to the attending GP (Dr Wyatt Samuels). 
+
+The attending GP's (Dr Wyatt Samuels) clinical system initiates a request to retrieve Jeramy’s most recent patient summary from the clinical system of the usual GP (Dr Abe Lowe) to ensure safe and informed care.
 
 The attending GP (Dr Wyatt Samuels) uses the patient summary to support care decisions during the consultation.
 
@@ -18,7 +20,19 @@ The attending GP (Dr Wyatt Samuels) uses the patient summary to support care dec
 *Figure 1: Interstate GP Visit consumer journey*
 <br/>
 
-This use case demonstrates use of patient summary during step 5 (Patient Summary Retrieval) of the [Interstate GP Visit consumer journey](https://sparked.csiro.au/index.php/sparked-products-resources/au-patient-summary-consumer-journeys/).
+This use case demonstrates use of patient summary during step 5. Patient Summary Retrieval of the [Interstate GP Visit consumer journey](https://sparked.csiro.au/index.php/sparked-products-resources/au-patient-summary-consumer-journeys/).
+
+<div class="stu-note" markdown="1">
+
+#### Use Case Decisions to be confirmed for the patient summary from Usual GP
+The following decisions are to be confirmed:
+1. is it accessed by a QR code and/or link
+
+The following is to be decided:
+1. what is the mechanism for embedding the patient summary
+1. is electronic signature present yes/no
+
+</div>
 
 ### Actors
 
@@ -55,4 +69,14 @@ INSERT SEQUENCE DIAGRAM
 
 ### Examples
 
-TBD
+The following example demonstrates technical and clinical use case aspects, conforming to the AU Patient Summary requirements. Data within this example, e.g. medications, is provided by the [Sparked Patient Summary Clinical Focus Group](https://sparked.csiro.au/index.php/design-groups/).
+
+<div class="stu-note" markdown="1">
+
+**TODO for Example 01 - Patient Summary from Usual GP**
+1. use case decisions still to be made (see above) - as decisions are made they will be reflected in the example 
+
+</div>
+
+**[Example 01 Patient Summary from Usual GP CIS](Bundle-aups-gpvisit-retrieval.html)**
+
