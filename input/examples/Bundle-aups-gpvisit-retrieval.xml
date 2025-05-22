@@ -143,7 +143,13 @@
             </coding>
           </code>
           <text>
-            <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml">TBD</div>
+            <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml">
+            <ul>
+              <li>M-M-R II</li>
+              <li>Boostrix</li>
+              <li>AstraZeneca Vaxzevria</li>
+            </ul>
+            </div>
           </text>
           <entry>
             <reference value="urn:uuid:825a781b-e083-4351-a3d9-adf56f65d7e9"/>
@@ -156,19 +162,25 @@
           </entry>
         </section>
         <section>
-          <title value="Past Medical History"/>
+          <title value="Past Medical History (Procedures)"/>
           <code>
             <coding>
               <system value="http://loinc.org"/>
-              <code value="11348-0"/>
-              <display value="History of Past illness Narrative"/>
+              <code value="47519-4"/>
+              <display value="History of Procedures Document"/>
             </coding>
           </code>
           <text>
-            <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml">TBD</div>
+            <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml">
+            <ul><li><div><b>Procedure Name</b>: Angiogram</div><div>Date: 22/02/2025</div></li></ul>
+            <ul><li><div><b>Procedure Name</b>: Chest x-ray</div><div>Date: 04/12/2024</div></li></ul>
+            </div>
           </text>
           <entry>
-            <reference value="urn:uuid:55e4f3ea-ed3c-4cef-badd-f582254a97dd"/>
+            <reference value="urn:uuid:9d9b67a1-15b0-42db-9108-78176017fbed"/>
+          </entry>
+          <entry>
+            <reference value="urn:uuid:4db923a9-f239-411e-911d-62b60b794313"/>
           </entry>
         </section>
       </Composition>
@@ -634,7 +646,7 @@
         <meta>
           <versionId value="2"/>
           <lastUpdated value="2025-02-25T11:17:03.285+11:00"/>
-          <profile value="http://hl7.org.au/fhir/core/StructureDefinition/au-ps-practitioner"/>
+          <profile value="http://hl7.org.au/fhir/ps/StructureDefinition/au-ps-practitioner"/>
         </meta>
         <identifier>
           <type>
@@ -903,7 +915,11 @@
           <reference value="urn:uuid:d1122188-f53f-417f-a84f-bc44479baa63"/>
           <type value="Patient"/>
         </patient>
-        <occurrenceDateTime value="2021-06-17"/>
+        <occurrenceDateTime>
+          <extension url="http://hl7.org/fhir/StructureDefinition/data-absent-reason">
+            <valueCode value="unknown"/>
+          </extension>
+        </occurrenceDateTime>
       </Immunization>
     </resource>
   </entry>
@@ -930,7 +946,11 @@
           <reference value="urn:uuid:d1122188-f53f-417f-a84f-bc44479baa63"/>
           <type value="Patient"/>
         </patient>
-        <occurrenceDateTime value="2021-06-17"/>
+        <occurrenceDateTime>
+          <extension url="http://hl7.org/fhir/StructureDefinition/data-absent-reason">
+            <valueCode value="unknown"/>
+          </extension>
+        </occurrenceDateTime>
       </Immunization>
     </resource>
   </entry>
@@ -957,8 +977,66 @@
           <reference value="urn:uuid:d1122188-f53f-417f-a84f-bc44479baa63"/>
           <type value="Patient"/>
         </patient>
-        <occurrenceDateTime value="2021-06-17"/>
+        <occurrenceDateTime>
+          <extension url="http://hl7.org/fhir/StructureDefinition/data-absent-reason">
+            <valueCode value="unknown"/>
+          </extension>
+        </occurrenceDateTime>
       </Immunization>
+    </resource>
+  </entry>
+  <entry>
+    <fullUrl value="urn:uuid:9d9b67a1-15b0-42db-9108-78176017fbed"/>
+    <resource>
+      <Procedure>
+      <id value="9d9b67a1-15b0-42db-9108-78176017fbed"/>
+      <meta>
+          <versionId value="1"/>
+          <lastUpdated value="2025-02-25T11:39:15.709+11:00"/>
+          <profile value="http://hl7.org.au/fhir/ps/StructureDefinition/au-ps-procedure"/>
+      </meta>
+      <status value="completed"/>
+      <code>
+          <coding>
+              <system value="http://snomed.info/sct"/>
+              <code value="77343006"/>
+              <display value="Angiography"/>
+          </coding>
+          <text value="Angiogram"/>
+      </code>
+      <subject>
+          <reference value="urn:uuid:d1122188-f53f-417f-a84f-bc44479baa63"/>
+          <type value="Patient"/>
+      </subject>
+      <performedDateTime value="2025-02-22"/>
+    </Procedure>
+  </resource>
+  </entry>
+  <entry>
+    <fullUrl value="urn:uuid:4db923a9-f239-411e-911d-62b60b794313"/>
+    <resource>
+      <Procedure>
+        <id value="4db923a9-f239-411e-911d-62b60b794313"/>
+        <meta>
+          <versionId value="1"/>
+          <lastUpdated value="2024-12-12T11:39:15.709+11:00"/>
+          <profile value="http://hl7.org.au/fhir/ps/StructureDefinition/au-ps-procedure"/>
+        </meta>
+        <status value="completed"/>
+        <code>
+          <coding>
+            <system value="http://snomed.info/sct"/>
+            <code value="399208008"/>
+            <display value="Plain X-ray of chest"/>
+          </coding>
+          <text value="Chest x-ray"/>
+        </code>
+        <subject>
+          <reference value="urn:uuid:d1122188-f53f-417f-a84f-bc44479baa63"/>
+          <type value="Patient"/>
+        </subject>
+        <performedDateTime value="2024-12-04"/>
+      </Procedure>
     </resource>
   </entry>
   <entry>
@@ -967,6 +1045,8 @@
     <Organization>
       <id value="4d1e0ca1-4ea7-46a2-8f0f-af5225b73c3a"/>
       <meta>
+          <versionId value="5"/>
+          <lastUpdated value="2024-02-25T11:39:15.709+11:00"/>
         <profile value="http://hl7.org.au/fhir/ps/StructureDefinition/au-ps-organization"/>
       </meta>
       <identifier>
