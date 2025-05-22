@@ -71,7 +71,7 @@
             <ul><li><div><b>Medication Name</b>: Rosuvastatin 40mg &amp; ezetrol 10mg</div><div>Instructions: once daily</div></li></ul>
             <ul><li><div><b>Medication Name</b>: Telmisartan, 80mg</div><div>Instructions: once daily</div></li></ul>
             <ul><li><div><b>Medication Name</b>: Aspirin 100mg</div><div>Instructions: once daily</div></li></ul>
-            <ul><li><div><b>Medication Name</b>: Zyloprim, 300mg</div><div>Instructions: daily</div></li></ul>
+            <ul><li><div><b>Medication Name</b>: Zyloprim, 300mg</div><div>Instructions: once daily</div></li></ul>
             <ul><li><div><b>Medication Name</b>: Ventolin</div><div>Instructions: 2 puffs, 4 times per day, and as needed</div></li></ul>
             <ul><li><div><b>Medication Name</b>: Spiriva</div><div>Instructions: once daily</div></li></ul>
             </div>
@@ -358,10 +358,10 @@
         <medicationCodeableConcept>
           <coding>
             <system value="http://snomed.info/sct"/>
-            <code value="11404011000036102"/>
-            <display value="Zyloprim 100 mg tablet, 200"/>
+            <code value="5690011000036107"/>
+            <display value="Zyloprim 300 mg tablet"/>
           </coding>
-          <text value="Zyloprim 100 mg tablet, 200"/>
+          <text value="Zyloprim 300 mg"/>
         </medicationCodeableConcept>
         <subject>
           <reference value="urn:uuid:d1122188-f53f-417f-a84f-bc44479baa63"/>
@@ -377,6 +377,14 @@
           <type value="Practitioner"/>
         </requester>
         <dosageInstruction>
+          <text value="once daily"/>
+          <timing>
+            <repeat>
+              <frequency value="1"/>
+              <period value="1" />
+              <periodUnit value="d" />
+            </repeat>
+          </timing>
           <route>
             <coding>
               <system value="http://snomed.info/sct"/>
@@ -408,10 +416,10 @@
         <medicationCodeableConcept>
           <coding>
             <system value="http://snomed.info/sct"/>
-            <code value="13826011000036104"/>
-            <display value="Spiriva 18 microgram powder for inhalation, 30 capsules"/>
+            <code value="3400011000036103"/>
+            <display value="Spiriva"/>
           </coding>
-          <text value="Spiriva 18 microgram powder for inhalation, 30 capsules"/>
+          <text value="Spiriva"/>
         </medicationCodeableConcept>
         <subject>
           <reference value="urn:uuid:d1122188-f53f-417f-a84f-bc44479baa63"/>
@@ -427,19 +435,14 @@
           <type value="Practitioner"/>
         </requester>
         <dosageInstruction>
-          <route>
-            <coding>
-              <system value="http://snomed.info/sct"/>
-              <code value="447694001"/>
-              <display value="Respiratory tract route"/>
-            </coding>
-            <text value="Respiratory tract route"/>
-          </route>
-          <doseAndRate>
-            <doseQuantity>
-              <value value="1"/>
-            </doseQuantity>
-          </doseAndRate>
+          <text value="once daily"/>
+          <timing>
+            <repeat>
+              <frequency value="1"/>
+              <period value="1" />
+              <periodUnit value="d" />
+            </repeat>
+          </timing>
         </dosageInstruction>
       </MedicationRequest>
     </resource>
@@ -477,19 +480,14 @@
           <type value="Practitioner"/>
         </requester>
         <dosageInstruction>
-          <route>
-            <coding>
-              <system value="http://snomed.info/sct"/>
-              <code value="26643006"/>
-              <display value="Oral route"/>
-            </coding>
-            <text value="Oral route"/>
-          </route>
-          <doseAndRate>
-            <doseQuantity>
-              <value value="1"/>
-            </doseQuantity>
-          </doseAndRate>
+          <text value="once daily"/>
+          <timing>
+            <repeat>
+              <frequency value="1"/>
+              <period value="1" />
+              <periodUnit value="d" />
+            </repeat>
+          </timing>
         </dosageInstruction>
       </MedicationRequest>
     </resource>
@@ -511,7 +509,7 @@
             <code value="929413011000036109"/>
             <display value="Metformin (Apo) 500 mg tablet"/>
           </coding>
-          <text value="Metformin (Apo) 500 mg tablet"/>
+          <text value="Metformin 500 mg"/>
         </medicationCodeableConcept>
         <subject>
           <reference value="urn:uuid:d1122188-f53f-417f-a84f-bc44479baa63"/>
@@ -527,19 +525,14 @@
           <type value="Practitioner"/>
         </requester>
         <dosageInstruction>
-          <route>
-            <coding>
-              <system value="http://snomed.info/sct"/>
-              <code value="26643006"/>
-              <display value="Oral route"/>
-            </coding>
-            <text value="Oral route"/>
-          </route>
-          <doseAndRate>
-            <doseQuantity>
-              <value value="1"/>
-            </doseQuantity>
-          </doseAndRate>
+          <text value="twice daily"/>
+          <timing>
+            <repeat>
+              <frequency value="2"/>
+              <period value="1" />
+              <periodUnit value="d" />
+            </repeat>
+          </timing>
         </dosageInstruction>
       </MedicationRequest>
     </resource>
@@ -561,7 +554,7 @@
             <code value="23173011000036104"/>
             <display value="Aspirin 100 mg tablet"/>
           </coding>
-          <text value="Aspirin 100 mg tablet"/>
+          <text value="Aspirin 100 mg"/>
         </medicationCodeableConcept>
         <subject>
           <reference value="urn:uuid:d1122188-f53f-417f-a84f-bc44479baa63"/>
@@ -577,19 +570,14 @@
           <type value="Practitioner"/>
         </requester>
         <dosageInstruction>
-          <route>
-            <coding>
-              <system value="http://snomed.info/sct"/>
-              <code value="26643006"/>
-              <display value="Oral route"/>
-            </coding>
-            <text value="Oral route"/>
-          </route>
-          <doseAndRate>
-            <doseQuantity>
-              <value value="1"/>
-            </doseQuantity>
-          </doseAndRate>
+          <text value="once daily"/>
+          <timing>
+            <repeat>
+              <frequency value="1"/>
+              <period value="1" />
+              <periodUnit value="d" />
+            </repeat>
+          </timing>
         </dosageInstruction>
       </MedicationRequest>
     </resource>
@@ -627,19 +615,14 @@
           <type value="Practitioner"/>
         </requester>
         <dosageInstruction>
-          <route>
-            <coding>
-              <system value="http://snomed.info/sct"/>
-              <code value="26643006"/>
-              <display value="Oral route"/>
-            </coding>
-            <text value="Oral route"/>
-          </route>
-          <doseAndRate>
-            <doseQuantity>
-              <value value="1"/>
-            </doseQuantity>
-          </doseAndRate>
+          <text value="once daily"/>
+          <timing>
+            <repeat>
+              <frequency value="1"/>
+              <period value="1" />
+              <periodUnit value="d" />
+            </repeat>
+          </timing>
         </dosageInstruction>
       </MedicationRequest>
     </resource>
