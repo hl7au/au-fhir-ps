@@ -1,4 +1,6 @@
-This use case demonstrates a scenario where, during a specialist consultation, the specialist accesses the patient summary created at the time of the referral and confirms the latest patient summary available for a patient.
+This use case demonstrates an example scenario where, during a specialist consultation, the specialist accesses the patient summary created at the time of the referral and confirms the latest patient summary available for a patient.
+
+This use case is provided as an example for illustration only, 
 
 ### Use Case Description
 
@@ -19,7 +21,7 @@ The Endocrinologist accesses and compares both patient summaries to verify the a
 <br/>
 
 
-This use case demonstrates use of patient summary during step 4 (Endocrinologist Retrieval) of the [Referral to Specialist and Allied Health consumer journey](https://sparked.csiro.au/index.php/sparked-products-resources/au-patient-summary-consumer-journeys/).
+This use case demonstrates use of patient summary during step 4. Endocrinologist Consultation of the [Referral to Specialist and Allied Health consumer journey](https://sparked.csiro.au/index.php/sparked-products-resources/au-patient-summary-consumer-journeys/).
 
 <div class="stu-note" markdown="1">
 
@@ -85,15 +87,15 @@ INSERT SEQUENCE DIAGRAM
 
 ### Examples
 
-**[EXAMPLE 01 - PATIENT SUMMARY EMBEDDED IN REFERRAL](Bundle-aups-referral-endoconsult-01.html)**
+The following examples demonstrate technical and clinical use case aspects, conforming to the AU Patient Summary requirements. Data within these examples, e.g. medications, is provided by the [Sparked Patient Summary Clinical Focus Group](https://sparked.csiro.au/index.php/design-groups/).
+
+**Example 01 Patient Summary Embedded in Referral: [Patient Summary for Joyce Johnson as of 28 OCT 2024 (Bundle)](Bundle-aups-referral-endoconsult-01.html)**
 
 <div class="stu-note" markdown="1">
 
 **TODO for Example 01 - patient summary embedded in a referral**
 1. use case decisions still to be made (see above) - as decisions are made they will be reflected in the example
 3. Diagnostic Results to be added. 
-
-_Note: the example data e.g. immunisation history, meds, etc. are provided by the AU Patient Summary Clinical Focus Group._
 
 </div>
 
@@ -103,7 +105,7 @@ _Note: the example data e.g. immunisation history, meds, etc. are provided by th
 
 <div class="stu-note" markdown="1">
 
-**TODO FOR Example 02 - more recent patient summary**
+**TODO FOR Example 02 More recent patient summary**
 
 Pre-requisite decisions to get started are:
 1. what external system to provide the most recent patient summary
