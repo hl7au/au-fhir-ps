@@ -1058,7 +1058,7 @@
           <text value="HPI-O"/>
         </type>
         <system value="http://ns.electronichealth.net.au/id/hi/hpio/1.0"/>
-        <value value="8003629900040367"/>
+        <value value="8003629900040425"/>
       </identifier>
       <identifier>
         <type>
@@ -1069,7 +1069,7 @@
           <text value="ABN"/>
         </type>
         <system value="http://hl7.org.au/id/abn"/>
-        <value value="81111751322"/>
+        <value value="81185378242"/>
       </identifier>
       <type>
         <coding>
@@ -1084,21 +1084,21 @@
         </coding>
         <text value="General practice medical clinic service"/>
       </type>
-      <name value="Loch Lomond Medical Clinic"/>
+      <name value="Mossy Point Medical Centre"/>
       <telecom>
         <system value="phone"/>
-        <value value="0755507646"/>
+        <value value="0255509415"/>
         <use value="work"/>
       </telecom>
       <telecom>
         <system value="email"/>
-        <value value="info@lochlomondmc.example.net"/>
+        <value value="reception@mossypointmc.example.net"/>
       </telecom>
       <address>
-        <line value="32 Silver Cl"/>
-        <city value="Loch Lomond"/>
-        <state value="QLD"/>
-        <postalCode value="4370"/>
+        <line value="192 Pheonix Jnc"/>
+        <city value="Mossy Point"/>
+        <state value="NSW"/>
+        <postalCode value="2537"/>
       </address>
     </Organization>
   </resource>
