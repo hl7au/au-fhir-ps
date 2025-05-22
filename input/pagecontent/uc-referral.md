@@ -1,7 +1,5 @@
 This use case demonstrates an example scenario where, during a specialist consultation, the specialist accesses the patient summary created at the time of the referral and confirms the latest patient summary available for a patient.
 
-This use case is provided as an example for illustration only, 
-
 ### Use Case Description
 
 Joyce Johnson is a 39yo female who lives in New South Wales, Australia. Joyce is currently pregnant and has been recently diagnosed with gestational diabetes. Joyce’s general practitioner (GP), Dr Ginger Burrows, has decided to refer Joyce to an Endocrinologist and a Dietitian for further evaluation and support.
