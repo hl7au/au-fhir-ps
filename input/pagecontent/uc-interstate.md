@@ -70,7 +70,7 @@ INSERT SEQUENCE DIAGRAM
 ### Examples
 
 The following example demonstrates technical and clinical use case aspects, conforming to the AU Patient Summary requirements. Data within this example, e.g. medications, is provided by the [Sparked Patient Summary Clinical Focus Group](https://sparked.csiro.au/index.php/design-groups/):
-* Patient Summary from Usual GP CIS: [Jeramy's Patient Summary as of 27 Feb 2025 (Bundle)](Bundle-aups-gpvisit-retrieval.html)
+* Patient Summary from Usual GP CIS: [Jeramy's Patient Summary as of 27 May 2025 (Bundle)](Bundle-aups-gpvisit-retrieval.html)
 
 <div class="stu-note" markdown="1">
 

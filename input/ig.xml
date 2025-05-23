@@ -157,7 +157,7 @@
 			<reference>
 				<reference value="Bundle/aups-gpvisit-retrieval"/>
 			</reference>
-			<name value="Bundle - Jeramy’s Patient Summary as of 27 Feb 2025"/>
+			<name value="Bundle - Jeramy’s Patient Summary as of 27 May 2025"/>
 			<description value="[Interstate GP use case](uc-interstate.html) example. Shows an example of a patient summary authored by the patient's usual GP that was updated after a recent admission to hospital. Example for the *AU Patient Summary Bundle* and *AU Patient Summary Composition* profile. Patient: Jeramy Ezra Banks."/>
 			<exampleCanonical value="http://hl7.org.au/fhir/ps/StructureDefinition/au-ps-bundle"/>
 		</resource>

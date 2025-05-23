@@ -96,25 +96,25 @@
                     <td>Prenatal vitamins</td>
                     <td>1 tablet daily</td>
                     <td>Active</td>
-                    <th>28/10/2024</th>
+                    <td>28/10/2024</td>
                   </tr>
                   <tr>
                     <td>Insulin (Humulin N)</td>
                     <td>10 units subcutaneously in the morning and evening</td>
                     <td>Active</td>
-                    <th>28/10/2024</th>
+                    <td>28/10/2024</td>
                   </tr>
                   <tr>
                     <td>Insulin (Humulin R)</td>
                     <td>5 units subcutaneously before each meal</td>
                     <td>Active</td>
-                    <th>28/10/2024</th>
+                    <td>28/10/2024</td>
                   </tr>
                   <tr>
                     <td>Metformin</td>
                     <td>500mg twice daily</td>
                     <td>Active</td>
-                    <th>28/10/2024</th>
+                    <td>28/10/2024</td>
                   </tr>
                 </tbody>
               </table>
@@ -283,19 +283,19 @@
                   <tr>
                     <td>Appendicitis</td>
                     <td>Resolved</td>
-                    <th>March 2000</th>
+                    <td>March 2000</td>
                     <td></td>
                   </tr>
                   <tr>
                     <td>Upper respiratory tract infection</td>
                     <td>Resolved</td>
-                    <th>October 2022</th>
+                    <td>October 2022</td>
                     <td></td>
                   </tr>
                   <tr>
                     <td>First degree burn, Upper shoulders and back</td>
                     <td>Resolved</td>
-                    <th>02 January 2025</th>
+                    <td>02 January 2025</td>
                     <td>Severe sunburn, upper shoulders and back</td>
                   </tr>
                 </tbody>
