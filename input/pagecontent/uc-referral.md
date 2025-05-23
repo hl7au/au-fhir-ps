@@ -37,13 +37,9 @@ The following is to be decided:
 
 #### Use Case Decisions to be confirmed for more recent patient summary
 The following decisions are to be confirmed:
-1. Attested by a digital signature by an authoritative source - and what that means
-1. how is discovery of the most recent undertaken - is this search using limited info or is this out of scope of this use case
+1. how is discovery of the most recent undertaken - is this search using limited info or is this out of scope of this example
 
 The following is to be decided:
-1. what external system to provide the most recent patient summary
-1. what kind of 'device' is considered to author this
-1. what data is in this 'most recent' - what's different to the patient summary at time of referral?
 1. what sort of link/QR code/RESTfulAPI can be used to access the summary
 1. how is currency detected? is it indicated in the payload? or is this out of scope?
 
@@ -86,8 +82,8 @@ INSERT SEQUENCE DIAGRAM
 ### Examples
 
 The following examples demonstrate technical and clinical use case aspects, conforming to the AU Patient Summary requirements. Data within these examples, e.g. medications, is provided by the [Sparked Patient Summary Clinical Focus Group](https://sparked.csiro.au/index.php/design-groups/):
-1. Patient Summary Embedded in Referral: [Patient Summary for Joyce Johnson as of 28 OCT 2024 (Bundle)](Bundle-aups-referral-endoconsult-01.html)
-1. More recent Patient Summary: TBD
+1. Patient Summary Embedded in Referral: [Patient Summary for Joyce Johnson as of 28 OCT 2024 (Bundle)](Bundle-aups-referral-endoconsult-curated.html)
+1. More recent Patient Summary: [Patient Summary for Joyce Johnson as of 13 NOV 2024 (Bundle)](Bundle-aups-referral-endoconsult-autogen.html)
 
 <div class="stu-note" markdown="1">
 
@@ -96,10 +92,5 @@ The following examples demonstrate technical and clinical use case aspects, conf
 Example 01 - patient summary embedded in a referral:
 1. use case decisions still to be made (see above) - as decisions are made they will be reflected in the example
 1. Diagnostic Results to be added
-
-Example 02 More recent patient summary: 
-1. what external system to provide the most recent patient summary
-1. what kind of 'device' is considered to author this
-1. what data is in this 'most recent' - what's different to the patient summary at time of referral?
 
 </div>

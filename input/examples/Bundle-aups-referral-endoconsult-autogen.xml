@@ -1,23 +1,24 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!--WIP. 
 1. use case decisions still to be made.
+2. keep or replace the uuids throughout the bundle?
 3. Diagnostic Results to be added.  --> 
 <Bundle xmlns="http://hl7.org/fhir">
-  <id value="aups-referral-endoconsult-01"/>
+  <id value="aups-referral-endoconsult-autogen"/>
   <meta>
     <profile value="http://hl7.org.au/fhir/ps/StructureDefinition/au-ps-bundle"/>
   </meta>
   <identifier>
     <system value="urn:ietf:rfc:3986"/>
-    <value value="urn:uuid:a78f146f-cadf-4c4a-84e2-c2e7dc41dd74"/>
+    <value value="urn:uuid:b1398367-c580-412f-a34e-a09bab5d0bf2"/>
   </identifier>
   <type value="document"/>
-  <timestamp value="2024-10-28T11:57:11.269+11:00"/>
+  <timestamp value="2024-11-13T10:02:11.269+11:00"/>
   <entry>
-    <fullUrl value="urn:uuid:de2c9e3f-c4a8-4a65-b355-b08cd2c58c7c"/>
+    <fullUrl value="urn:uuid:ecf18329-b2ae-4648-8888-01aff6dc8172"/>
     <resource>
       <Composition>
-        <id value="de2c9e3f-c4a8-4a65-b355-b08cd2c58c7c"/>
+        <id value="ecf18329-b2ae-4648-8888-01aff6dc8172"/>
         <meta>
           <profile value="http://hl7.org.au/fhir/ps/StructureDefinition/au-ps-composition"/>
         </meta>
@@ -31,18 +32,11 @@
         <subject>
           <reference value="urn:uuid:85822a88-55b1-460c-bb7b-e8fc22d8568f"/>
         </subject>
-        <date value="2024-10-28T11:57:10.868+11:00"/>
+        <date value="2024-11-13T10:02:10.868+11:00"/>
         <author>
-          <reference value="urn:uuid:afead11c-3bee-4020-af4f-44040abfa961"/>
+          <reference value="urn:uuid:40c3b2a7-e673-4f83-8dd8-2b112a88775e"/>
         </author>
         <title value="Patient Summary for Joyce Johnson as of 28 OCT 2024"/>
-        <attester>
-          <mode value="professional"/>
-          <time value="2024-10-28T11:57:11.269+11:00"/>
-          <party>
-            <reference value="urn:uuid:afead11c-3bee-4020-af4f-44040abfa961"/>
-          </party>
-        </attester>
         <custodian>
           <reference value="urn:uuid:14292353-98f0-43b3-a25b-406baf3f9175"/>
         </custodian>
@@ -54,7 +48,7 @@
             </coding>
           </code>
           <period>
-            <end value="2024-10-28T11:57:10+11:00"/>
+            <end value="2024-11-13T10:02:10+11:00"/>
           </period>
         </event>
         <section>
@@ -1272,6 +1266,34 @@
           <text value="Left upper arm"/>
         </site>
       </Immunization>
+    </resource>
+  </entry>
+  <entry>
+    <fullUrl value="urn:uuid:40c3b2a7-e673-4f83-8dd8-2b112a88775e"/>
+    <resource>
+      <Device>
+        <id value="40c3b2a7-e673-4f83-8dd8-2b112a88775e"/>
+        <meta>
+          <profile value="http://hl7.org.au/fhir/ps/StructureDefinition/au-ps-immunization"/>
+        </meta>
+       <identifier>
+        <system value="http://my.organization.example/devicesID"/>
+        <value value="12345"/>
+        </identifier>
+        <manufacturer value="Some Clinical Information System Manufacturer"/>
+        <deviceName>
+          <name value="Name of "/>
+          <type value="model-name"/>
+        </deviceName>
+        <modelNumber value="2.0.1"/>
+        <type>
+          <coding>
+            <system value="http://snomed.info/sct"/>
+            <code value="706593004"/>
+            <display value="Clinical information system"/>
+          </coding>
+        </type>
+      </Device>
     </resource>
   </entry>
 </Bundle>
