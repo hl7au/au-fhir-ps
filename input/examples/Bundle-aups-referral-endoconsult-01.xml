@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!--WIP. 
-1. use case decisions still to be made including attestation. 
+1. use case decisions still to be made.
 3. Diagnostic Results to be added.  --> 
 <Bundle xmlns="http://hl7.org/fhir">
   <id value="aups-referral-endoconsult-01"/>
@@ -257,6 +257,59 @@
           </entry>
           <entry>
             <reference value="urn:uuid:eb1f812e-41c6-4f8d-b9de-573428a94994"/>
+          </entry>
+        </section>
+        <section>
+          <title value="Past Medical History (Problems)"/>
+          <code>
+            <coding>
+              <system value="http://loinc.org"/>
+              <code value="11348-0"/>
+              <display value="History of Past illness Narrative"/>
+            </coding>
+          </code>
+          <text>
+            <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml">
+            <table border="1">
+                <thead>
+                  <tr>
+                    <th>Problem/Diagnosis</th>
+                    <th>Status</th>
+                    <th>Onset Date</th>
+                    <th>Comment</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>Appendicitis</td>
+                    <td>Resolved</td>
+                    <th>March 2000</th>
+                    <td></td>
+                  </tr>
+                  <tr>
+                    <td>Upper respiratory tract infection</td>
+                    <td>Resolved</td>
+                    <th>October 2022</th>
+                    <td></td>
+                  </tr>
+                  <tr>
+                    <td>First degree burn, Upper shoulders and back</td>
+                    <td>Resolved</td>
+                    <th>02 January 2025</th>
+                    <td>Severe sunburn, upper shoulders and back</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </text>
+          <entry>
+            <reference value="urn:uuid:289aff01-0b3e-4614-aee8-378d074fc3d2"/>
+          </entry>
+          <entry>
+            <reference value="urn:uuid:e6db9bbe-60c3-4f89-8f65-25c58771fe41"/>
+          </entry>
+          <entry>
+            <reference value="urn:uuid:dc422222-8b3a-4dd5-96b5-b7e0cf43b477"/>
           </entry>
         </section>
         <section>
@@ -590,6 +643,114 @@
         <subject>
           <reference value="urn:uuid:85822a88-55b1-460c-bb7b-e8fc22d8568f"/>
         </subject>
+      </Condition>
+    </resource>
+  </entry>
+  <entry>
+    <fullUrl value="urn:uuid:289aff01-0b3e-4614-aee8-378d074fc3d2"/>
+    <resource>
+      <Condition>
+        <id value="289aff01-0b3e-4614-aee8-378d074fc3d2"/>
+        <meta>
+          <profile value="http://hl7.org.au/fhir/ps/StructureDefinition/au-ps-condition"/>
+        </meta>
+        <clinicalStatus>
+          <coding>
+              <system value="http://terminology.hl7.org/CodeSystem/condition-clinical"/>
+              <code value="resolved"/>
+          </coding>
+        </clinicalStatus>
+        <category>
+          <coding>
+            <system value="http://terminology.hl7.org/CodeSystem/condition-category"/>
+            <code value="problem-list-item"/>
+          </coding>
+          <text value="Problem"/>
+        </category>
+        <code>
+          <coding>
+            <system value="http://snomed.info/sct"/>
+            <code value="74400008"/>
+            <display value="Appendicitis"/>
+          </coding>
+          <text value="Appendicitis"/>
+        </code>
+        <subject>
+          <reference value="urn:uuid:85822a88-55b1-460c-bb7b-e8fc22d8568f"/>
+        </subject>
+      </Condition>
+    </resource>
+  </entry>
+  <entry>
+    <fullUrl value="urn:uuid:e6db9bbe-60c3-4f89-8f65-25c58771fe41"/>
+    <resource>
+      <Condition>
+        <id value="e6db9bbe-60c3-4f89-8f65-25c58771fe41"/>
+        <meta>
+          <profile value="http://hl7.org.au/fhir/ps/StructureDefinition/au-ps-condition"/>
+        </meta>
+        <clinicalStatus>
+          <coding>
+              <system value="http://terminology.hl7.org/CodeSystem/condition-clinical"/>
+              <code value="resolved"/>
+          </coding>
+        </clinicalStatus>
+        <category>
+          <coding>
+            <system value="http://terminology.hl7.org/CodeSystem/condition-category"/>
+            <code value="problem-list-item"/>
+          </coding>
+          <text value="Problem"/>
+        </category>
+        <code>
+          <coding>
+            <system value="http://snomed.info/sct"/>
+            <code value="54150009"/>
+            <display value="Upper respiratory tract infection"/>
+          </coding>
+          <text value="Upper respiratory tract infection"/>
+        </code>
+        <subject>
+          <reference value="urn:uuid:85822a88-55b1-460c-bb7b-e8fc22d8568f"/>
+        </subject>
+      </Condition>
+    </resource>
+  </entry>
+  <entry>
+    <fullUrl value="urn:uuid:dc422222-8b3a-4dd5-96b5-b7e0cf43b477"/>
+    <resource>
+      <Condition>
+        <id value="dc422222-8b3a-4dd5-96b5-b7e0cf43b477"/>
+        <meta>
+          <profile value="http://hl7.org.au/fhir/ps/StructureDefinition/au-ps-condition"/>
+        </meta>
+        <clinicalStatus>
+          <coding>
+              <system value="http://terminology.hl7.org/CodeSystem/condition-clinical"/>
+              <code value="resolved"/>
+          </coding>
+        </clinicalStatus>
+        <category>
+          <coding>
+            <system value="http://terminology.hl7.org/CodeSystem/condition-category"/>
+            <code value="problem-list-item"/>
+          </coding>
+          <text value="Problem"/>
+        </category>
+        <code>
+          <coding>
+            <system value="http://snomed.info/sct"/>
+            <code value="403190006"/>
+            <display value="Epidermal burn of skin"/>
+          </coding>
+          <text value="First degree burn, Upper shoulders and back"/>
+        </code>
+        <subject>
+          <reference value="urn:uuid:85822a88-55b1-460c-bb7b-e8fc22d8568f"/>
+        </subject>
+        <note>
+          <text value="Severe sunburn, upper shoulders and back"/>
+        </note>
       </Condition>
     </resource>
   </entry>
