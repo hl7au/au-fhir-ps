@@ -1273,9 +1273,6 @@
     <resource>
       <Device>
         <id value="40c3b2a7-e673-4f83-8dd8-2b112a88775e"/>
-        <meta>
-          <profile value="http://hl7.org.au/fhir/ps/StructureDefinition/au-ps-immunization"/>
-        </meta>
        <identifier>
         <system value="http://my.organization.example/devicesID"/>
         <value value="12345"/>
