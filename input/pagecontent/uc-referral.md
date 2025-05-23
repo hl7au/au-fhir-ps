@@ -95,7 +95,7 @@ The following examples demonstrate technical and clinical use case aspects, conf
 
 Example 01 - patient summary embedded in a referral:
 1. use case decisions still to be made (see above) - as decisions are made they will be reflected in the example
-2. Diagnostic Results to be added. 
+1. Diagnostic Results to be added
 
 Example 02 More recent patient summary: 
 1. what external system to provide the most recent patient summary

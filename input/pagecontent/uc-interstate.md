@@ -76,7 +76,7 @@ The following example demonstrates technical and clinical use case aspects, conf
 
 **TODO for Example 01 - Patient Summary from Usual GP**
 1. use case decisions still to be made (see above) - as decisions are made they will be reflected in the example 
-1. Diagnostic Results to be added
+1. Seek additional values for other AUCDI patient summary clinical concepts
 
 </div>
 
