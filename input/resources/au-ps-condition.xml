@@ -11,7 +11,7 @@
   <name value="AUPSCondition"/>
   <title value="AU PS Condition"/>
   <status value="draft"/>
-  <description value="This profile sets minimum expectations for a Condition resource in the context of a patient summary in an Australian context. It is based on the [AU Core Condition](https://build.fhir.org/ig/hl7au/au-fhir-core/StructureDefinition-au-core-condition.html) profile, and complies with applies the additional requirements from [Condition (IPS)](http://hl7.org/fhir/uv/ips/StructureDefinition/Condition-uv-ips)." />
+  <description value="This profile sets minimum expectations for a Condition resource in the context of a patient summary in an Australian context. It is based on the [AU Core Condition](https://build.fhir.org/ig/hl7au/au-fhir-core/StructureDefinition-au-core-condition.html) profile, and applies the additional requirements from [Condition (IPS)](http://hl7.org/fhir/uv/ips/StructureDefinition/Condition-uv-ips)." />
   <kind value="resource"/>
   <abstract value="false"/>
   <type value="Condition"/>
