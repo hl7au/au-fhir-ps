@@ -1274,7 +1274,7 @@
       <Device>
         <id value="40c3b2a7-e673-4f83-8dd8-2b112a88775e"/>
        <identifier>
-        <system value="http://my.organization.example/devicesID"/>
+        <system value="http://example.com/CIS-ID"/>
         <value value="12345"/>
         </identifier>
         <manufacturer value="Some Clinical Information System Manufacturer"/>
