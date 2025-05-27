@@ -163,6 +163,7 @@
         </identifier>
         <name>
           <use value="usual"/>
+          <text value="Mr. Ronny Lawrence Irvine"/>
           <family value="Irvine"/>
           <given value="Ronny"/>
           <given value="Lawrence"/>
@@ -184,7 +185,7 @@
           <city value="Belmore River"/>
           <state value="NSW"/>
           <postalCode value="2440"/>
-          <country value="Australia"/>
+          <country value="AU"/>
         </address>
       </Patient>
     </resource>
@@ -192,29 +193,38 @@
   <entry>
     <fullUrl value="urn:uuid:715076f4-007a-4c9d-beed-c155cc46f765"/>
     <resource>
-      <Device>
+      <RelatedPerson>
         <id value="715076f4-007a-4c9d-beed-c155cc46f765"/>
-        <identifier>
-          <system value="http://example.com/emr-system"/>
-          <value value="emr-west"/>
-        </identifier>
-        <manufacturer value="Example Software"/>
-        <deviceName>
-          <name value="Example Medical Record"/>
-          <type value="user-friendly-name"/>
-        </deviceName>
-        <type>
+        <patient>
+          <reference value="urn:uuid:9be88cc6-09e8-4dc6-b058-88676240dbc7"/>
+        </patient>
+        <relationship>
           <coding>
-            <system value="http://snomed.info/sct"/>
-            <code value="706593004"/>
-            <display value="Clinical information system"/>
+            <system value="http://terminology.hl7.org/CodeSystem/v3-RoleCode"/>
+            <code value="SON"/>
           </coding>
-          <text value="Clinical Information System"/>
-        </type>
-        <version>
-          <value value="10.0.1"/>
-        </version>
-      </Device>
+          <text value="Son"/>
+        </relationship>
+        <name>
+          <use value="usual"/>
+          <text value="Mr. Sonny Irvine"/>
+          <family value="Irvine"/>
+          <given value="Sonny"/>
+        </name>
+        <telecom>
+         <system value="phone"/>
+          <value value="0491570737"/>
+          <use value="mobile"/>
+        </telecom>
+        <address>
+          <use value="home"/>
+          <line value="1415 Right Bank Rd"/>
+          <city value="Belmore River"/>
+          <state value="NSW"/>
+          <postalCode value="2440"/>
+          <country value="AU"/>
+        </address>
+      </RelatedPerson>
     </resource>
   </entry>
   <entry>
