@@ -797,6 +797,13 @@
           </coding>
           <text value="Active"/>
         </clinicalStatus>
+        <verificationStatus>
+          <coding>
+            <system value="http://terminology.hl7.org/CodeSystem/condition-ver-status"/>
+            <code value="confirmed"/>
+            <display value="Confirmed"/>
+          </coding>
+        </verificationStatus>
         <category>
           <coding>
             <system value="http://terminology.hl7.org/CodeSystem/condition-category"/>
@@ -836,6 +843,13 @@
           </coding>
           <text value="Active"/>
         </clinicalStatus>
+        <verificationStatus>
+          <coding>
+            <system value="http://terminology.hl7.org/CodeSystem/condition-ver-status"/>
+            <code value="confirmed"/>
+            <display value="Confirmed"/>
+          </coding>
+        </verificationStatus>
         <category>
           <coding>
             <system value="http://terminology.hl7.org/CodeSystem/condition-category"/>
@@ -875,6 +889,13 @@
           </coding>
           <text value="Active"/>
         </clinicalStatus>
+        <verificationStatus>
+          <coding>
+            <system value="http://terminology.hl7.org/CodeSystem/condition-ver-status"/>
+            <code value="confirmed"/>
+            <display value="Confirmed"/>
+          </coding>
+        </verificationStatus>
         <category>
           <coding>
             <system value="http://terminology.hl7.org/CodeSystem/condition-category"/>
@@ -914,6 +935,13 @@
           </coding>
           <text value="Active"/>
         </clinicalStatus>
+        <verificationStatus>
+          <coding>
+            <system value="http://terminology.hl7.org/CodeSystem/condition-ver-status"/>
+            <code value="confirmed"/>
+            <display value="Confirmed"/>
+          </coding>
+        </verificationStatus>
         <category>
           <coding>
             <system value="http://terminology.hl7.org/CodeSystem/condition-category"/>
