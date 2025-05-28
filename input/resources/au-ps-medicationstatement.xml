@@ -7,80 +7,34 @@
   <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-compliesWithProfile">
     <valueCanonical value="http://hl7.org/fhir/uv/ips/StructureDefinition/MedicationStatement-uv-ips"/>
   </extension>
-  <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-compliesWithProfile">
-    <valueCanonical value="http://hl7.org.au/fhir/core/StructureDefinition/au-core-medicationstatement"/>
-  </extension>
   <url value="http://hl7.org.au/fhir/ps/StructureDefinition/au-ps-medicationstatement"/>
   <name value="AUPSMedicationStatement"/>
   <title value="AU PS MedicationStatement"/>
   <status value="draft"/>
-  <description value="This profile sets minimum expectations for a MedicationStatement resource in the context of a patient summary in an Australian context. It is based on the [AU Base MedicationStatement](http://build.fhir.org/ig/hl7au/au-fhir-base/StructureDefinition-au-medicationstatement.html) profile, and applies the constraints of [AU Core MedicationStatement](https://build.fhir.org/ig/hl7au/au-fhir-core/StructureDefinition-au-core-medicationstatement.html) and [MedicationStatement (IPS)](http://hl7.org/fhir/uv/ips/StructureDefinition/MedicationStatement-uv-ips)." />
+  <description value="This profile sets minimum expectations for a MedicationStatement resource in the context of a patient summary in an Australian context. It is based on the [AU Core MedicationStatement](https://build.fhir.org/ig/hl7au/au-fhir-core/StructureDefinition-au-core-medicationstatement.html) profile, and applies the additional requirements from [MedicationStatement (IPS)](http://hl7.org/fhir/uv/ips/StructureDefinition/MedicationStatement-uv-ips)." />
   <kind value="resource"/>
   <abstract value="false"/>
   <type value="MedicationStatement"/>
-  <baseDefinition value="http://hl7.org.au/fhir/StructureDefinition/au-medicationstatement"/>
+  <baseDefinition value="http://hl7.org.au/fhir/core/StructureDefinition/au-core-medicationstatement"/>
   <derivation value="constraint"/>
   <differential>
     <element id="MedicationStatement">
       <path value="MedicationStatement"/>
     </element>
-    <element id="MedicationStatement.status">
-      <path value="MedicationStatement.status"/>
-      <mustSupport value="true"/>
-    </element>
-    <element id="MedicationStatement.medication[x]">
-      <path value="MedicationStatement.medication[x]"/>
-      <slicing>
-        <discriminator>
-          <type value="type"/>
-          <path value="$this"/>
-        </discriminator>
-        <rules value="closed"/>
-      </slicing>
-      <mustSupport value="true"/>
-    </element>
     <element id="MedicationStatement.medication[x]:medicationCodeableConcept">
       <path value="MedicationStatement.medication[x]"/>
-      <sliceName value="medicationCodeableConcept"/>
+       <sliceName value="medicationCodeableConcept"/>
       <type>
         <code value="CodeableConcept"/>
         <profile value="http://hl7.org/fhir/uv/ips/StructureDefinition/CodeableConcept-uv-ips"/>
       </type>
-    </element>
-    <element id="MedicationStatement.medication[x]:medicationCodeableConcept.coding">
-      <path value="MedicationStatement.medication[x].coding"/>
-      <slicing>
-        <discriminator>
-          <type value="pattern"/>
-          <path value="$this"/>
-        </discriminator>
-        <rules value="open"/>
-      </slicing>
-    </element>
-    <element id="MedicationStatement.medication[x]:medicationCodeableConcept.coding:pbs">
-      <path value="MedicationStatement.medication[x].coding"/>
-      <sliceName value="pbs"/>
-      <binding>
-        <strength value="required" />
-        <valueSet value="http://terminology.hl7.org.au/ValueSet/pbs-item" />
-      </binding>
-      <mustSupport value="true"/>
-    </element>
-    <element id="MedicationStatement.medication[x]:medicationCodeableConcept.coding:amt">
-      <path value="MedicationStatement.medication[x].coding"/>
-      <sliceName value="amt"/>
-      <binding>
-        <strength value="required" />
-        <valueSet value="https://healthterminologies.gov.au/fhir/ValueSet/australian-medication-1" />
-      </binding>
-      <mustSupport value="true"/>
     </element>
     <element id="MedicationStatement.medication[x]:medicationReference">
       <path value="MedicationStatement.medication[x]"/>
       <sliceName value="medicationReference"/>
       <type>
         <code value="Reference"/>
-        <targetProfile value="http://hl7.org.au/fhir/core/StructureDefinition/au-core-medication"/>
+        <targetProfile value="http://hl7.org.au/fhir/ps/StructureDefinition/au-ps-medication"/>
       </type>
     </element>
 		<element id="MedicationStatement.subject">
@@ -89,7 +43,6 @@
 				<code value="Reference"/>
 				<targetProfile value="http://hl7.org.au/fhir/ps/StructureDefinition/au-ps-patient"/>
 			</type>
-			<mustSupport value="true"/>
 		</element>
 		<element id="MedicationStatement.subject.reference">
 			<path value="MedicationStatement.subject.reference"/>
@@ -99,16 +52,7 @@
 		<element id="MedicationStatement.effective[x]">
 			<path value="MedicationStatement.effective[x]"/>
 			<min value="1"/>
-			<mustSupport value="true"/>
 		</element>
-    <element id="MedicationStatement.dateAsserted">
-      <path value="MedicationStatement.dateAsserted"/>
-      <mustSupport value="true"/>
-    </element>
-    <element id="MedicationStatement.reasonCode">
-      <path value="MedicationStatement.reasonCode"/>
-      <mustSupport value="true"/>
-    </element>
     <element id="MedicationStatement.reasonReference">
       <path value="MedicationStatement.reasonReference"/>
     <type>
@@ -117,16 +61,7 @@
         <targetProfile value="http://hl7.org/fhir/StructureDefinition/Observation"/>
         <targetProfile value="http://hl7.org/fhir/uv/ips/StructureDefinition/DiagnosticReport-uv-ips"/>
       </type>
-      <mustSupport value="true"/>
     </element>
-		<element id="MedicationStatement.dosage">
-			<path value="MedicationStatement.dosage"/>
-			<mustSupport value="true"/>
-		</element>
-		<element id="MedicationStatement.dosage.text">
-			<path value="MedicationStatement.dosage.text"/>
-			<mustSupport value="true"/>
-		</element>
 		<element id="MedicationStatement.dosage.timing">
 			<path value="MedicationStatement.dosage.timing"/>
 			<mustSupport value="true"/>
