@@ -2066,6 +2066,13 @@
         <period>
           <end value="2025-02-25"/>
         </period>
+        <reasonCode>
+           <coding>
+             <system value="http://snomed.info/sct"/>
+             <code value="185389009"/>
+             <display value="Follow-up visit"/>
+           </coding>
+        </reasonCode>
         <serviceProvider>
           <reference value="urn:uuid:4d1e0ca1-4ea7-46a2-8f0f-af5225b73c3a"/>
           <type value="Organization"/>
