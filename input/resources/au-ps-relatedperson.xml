@@ -8,7 +8,7 @@
   <name value="AUPSRelatedPerson"/>
   <title value="AU PS RelatedPerson"/>
   <status value="draft"/>
-  <description value="This profile sets minimum expectations for a RelatedPerson resource in the context of a patient summary in an Australian context. It is based on the [AU Core Related Person](https://build.fhir.org/ig/hl7au/au-fhir-core/StructureDefinition-au-core-relatedperson.html) profile, and applies the constraints from IPS."/>
+  <description value="This profile sets minimum expectations for a RelatedPerson resource in the context of a patient summary in an Australian context. It is based on the [AU Core Related Person](https://build.fhir.org/ig/hl7au/au-fhir-core/StructureDefinition-au-core-relatedperson.html) profile, and applies the additional constraints for use in a patient summary context, consistent with the intent of the IPS."/>
   <kind value="resource"/>
   <abstract value="false"/>
   <type value="RelatedPerson"/>

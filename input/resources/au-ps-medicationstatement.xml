@@ -21,9 +21,6 @@
     <element id="MedicationStatement">
       <path value="MedicationStatement"/>
     </element>
-   <element id="MedicationStatement.medication[x]">
-      <path value="MedicationStatement.medication[x]"/>
-    </element>
     <element id="MedicationStatement.medication[x]:medicationCodeableConcept">
       <path value="MedicationStatement.medication[x]"/>
        <sliceName value="medicationCodeableConcept"/>
