@@ -27,9 +27,6 @@ This use case demonstrates use of patient summary during step 5. Patient Summary
 #### Use Case Decisions to be confirmed for the patient summary from Usual GP
 The following decisions are to be confirmed:
 1. is it accessed by a QR code and/or link
-
-The following is to be decided:
-1. what is the mechanism for embedding the patient summary
 1. is electronic signature present yes/no
 
 </div>
@@ -73,10 +70,6 @@ The following example demonstrates technical and clinical use case aspects, conf
 * Patient Summary from Usual GP CIS: [Jeramy's Patient Summary as of 27 May 2025 (Bundle)](Bundle-aups-gpvisit-retrieval.html)
 
 <div class="stu-note" markdown="1">
-
-**TODO for Example 01 - Patient Summary from Usual GP**
-1. use case decisions still to be made (see above) - as decisions are made they will be reflected in the example 
-1. Seek additional values for other AUCDI patient summary clinical concepts
 
 </div>
 

@@ -26,8 +26,6 @@ This use case demonstrates use of patient summary during step 4. Endocrinologist
 #### Use Case Decisions to be confirmed for the patient summary embedded in referral
 The following decisions are to be confirmed:
 1. is it accessed by a QR code and/or link
-
-The following is to be decided:
 1. what is the mechanism for embedding the patient summary
 1. is electronic signature present yes/no
 
@@ -38,8 +36,6 @@ The following is to be decided:
 #### Use Case Decisions to be confirmed for more recent patient summary
 The following decisions are to be confirmed:
 1. how is discovery of the most recent undertaken - is this search using limited info or is this out of scope of this example
-
-The following is to be decided:
 1. what sort of link/QR code/RESTfulAPI can be used to access the summary
 1. how is currency detected? is it indicated in the payload? or is this out of scope?
 
@@ -92,5 +88,8 @@ The following examples demonstrate technical and clinical use case aspects, conf
 Example 01 - patient summary embedded in a referral:
 1. use case decisions still to be made (see above) - as decisions are made they will be reflected in the example
 1. Diagnostic Results to be added
+
+Example 02 - more recent patient summary:
+1. add Bundle.signature
 
 </div>
