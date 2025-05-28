@@ -8,5 +8,5 @@ See [Comparison with other national and international IGs](comparison.html) for 
 
 
 <div class="stu-note">
-This profile has been walked through, but conversion to derive from AU Core is delayed until the AU PS Encounter walk-through is complete, as referencing a dependent profile that has not yet been updated to derive from AU Core causes build errors.
+Conversion to derive from AU Core instead of AU Base is delayed until AU PS Encounter is converted due to build errors when publishing if this referenced profile does not derive from AU Core.
 </div>
