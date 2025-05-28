@@ -8,5 +8,5 @@ See [Comparison with other national and international IGs](comparison.html) for 
 
 
 <div class="stu-note">
-Implementers are advised that this profile has not yet been converted to derive from AU Core due to its reference to the AU PS Encounter profile, which currently derives from AU Base. Referencing this profile causes a build failure. Conversion will occur once the dependent profiles are updated to derive from AU Core.
+This profile has been walked through, but conversion to derive from AU Core is delayed until the AU PS Encounter walk-through is complete, as referencing a dependent profile that has not yet been updated to derive from AU Core causes build errors.
 </div>
