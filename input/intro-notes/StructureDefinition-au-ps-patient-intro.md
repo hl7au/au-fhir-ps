@@ -1,4 +1,4 @@
-See [Comparison with other national and international IGs](comparison.html) for a comparison between AU Core profiles and profiles in other implementation guides.
+{% include comparison-note-boilerplate.md %}
 
 ### Profile specific implementation guidance
 - An individual's IHI **SHOULD** be used in `Patient.identifier` if available, in preference to Medicare or DVA numbers.
