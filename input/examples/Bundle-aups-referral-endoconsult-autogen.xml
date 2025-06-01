@@ -1,8 +1,4 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!--WIP. 
-1. use case decisions still to be made.
-2. keep or replace the uuids throughout the bundle?
-3. Diagnostic Results to be added.  --> 
 <Bundle xmlns="http://hl7.org/fhir">
   <id value="aups-referral-endoconsult-autogen"/>
   <meta>
@@ -221,6 +217,10 @@
                     <td>Covid vaccine - Pfizer</td>
                     <td>27/4/2021</td>
                   </tr>
+                  <tr>
+                    <td>Influenza vaccine</td>
+                    <td>03/5/2020</td>
+                  </tr>
                 </tbody>
               </table>
             </div>
@@ -251,6 +251,9 @@
           </entry>
           <entry>
             <reference value="urn:uuid:eb1f812e-41c6-4f8d-b9de-573428a94994"/>
+          </entry>
+          <entry>
+            <reference value="urn:uuid:c4e7d351-cd85-435d-9fa5-2db04108651f"/>
           </entry>
         </section>
         <section>
@@ -319,6 +322,59 @@
           </text>
           <entry>
             <reference value="urn:uuid:f85ad223-7bed-46f3-893d-e89d6082f9a9"/>
+          </entry>
+        </section>
+        <section>
+          <title value="Result History"/>
+          <code>
+            <coding>
+              <system value="http://loinc.org"/>
+              <code value="30954-2"/>
+            </coding>
+          </code>
+          <text>
+            <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml">
+            <table border="1">
+                <thead>
+                  <tr>
+                    <th>Test Name</th>
+                    <th>Test Result</th>
+                    <th>Date</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>Glucose Tolerance Test (GTT) Fasting</td>
+                    <td>5.3 mmol/L</td>
+                    <td>21/10/24</td>
+                  </tr>
+                  <tr>
+                    <td>Glucose Tolerance Test (GTT) 1 hour</td>
+                    <td>10.0 mmol/L</td>
+]                   <td>21/10/24</td>
+                  </tr>
+                  <tr>
+                    <td>Glucose Tolerance Test (GTT) 2 hours</td>
+                    <td>8.6 mmol/L</td>
+                    <td>21/10/24</td>
+                  </tr>
+                  <tr>
+                    <td>Haemoglobin A1c</td>
+                    <td>5.8 %</td>
+                    <td>14/06/24</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </text>
+          <entry>
+            <reference value="urn:uuid:5f1b9790-4892-4af3-9b76-3cb4f854a5b1"/>
+          </entry>
+          <entry>
+            <reference value="urn:uuid:1bbd2e05-161d-4030-975c-0cca3ef97cdb"/>
+          </entry>
+          <entry>
+            <reference value="urn:uuid:27060cbf-e30e-4091-bd64-7d4ef40916ac"/>
           </entry>
         </section>
       </Composition>
@@ -1110,6 +1166,31 @@
     </resource>
   </entry>
   <entry>
+    <fullUrl value="urn:uuid:c4e7d351-cd85-435d-9fa5-2db04108651f"/>
+    <resource>
+      <Immunization>
+        <id value="c4e7d351-cd85-435d-9fa5-2db04108651f"/>
+        <meta>
+          <profile value="http://hl7.org.au/fhir/ps/StructureDefinition/au-ps-immunization"/>
+        </meta>
+        <status value="completed"/>
+        <vaccineCode>
+          <coding>
+            <system value="https://www.humanservices.gov.au/organisations/health-professionals/enablers/air-vaccine-code-formats"/>
+            <code value="PANVAX"/>
+            <display value="Panvax"/>
+          </coding>
+          <text value="Panvax"/>
+        </vaccineCode>
+        <patient>
+          <reference value="urn:uuid:85822a88-55b1-460c-bb7b-e8fc22d8568f"/>
+        </patient>
+        <occurrenceDateTime value="2020-05-03"/>
+        <primarySource value="true"/>
+      </Immunization>
+    </resource>
+  </entry>
+  <entry>
     <fullUrl value="urn:uuid:97767fb5-3be7-4d16-9ee8-76c47a4ab0ce"/>
     <resource>
       <Immunization>
@@ -1266,6 +1347,184 @@
           <text value="Left upper arm"/>
         </site>
       </Immunization>
+    </resource>
+  </entry>
+  <entry>
+    <fullUrl value="urn:uuid:5f1b9790-4892-4af3-9b76-3cb4f854a5b1"/>
+    <resource>
+      <Observation>
+        <id value="5f1b9790-4892-4af3-9b76-3cb4f854a5b1"/>
+        <meta>
+          <profile value="http://hl7.org.au/fhir/core/StructureDefinition/au-core-diagnosticresult-path"/>
+          <profile value="http://hl7.org/fhir/uv/ips/StructureDefinition/Observation-results-laboratory-pathology-uv-ips"/>
+        </meta>
+        <status value="final"/>
+        <category>
+          <coding>
+            <system value="http://terminology.hl7.org/CodeSystem/observation-category"/>
+            <code value="laboratory"/>
+            <display value="Laboratory"/>
+          </coding>
+        </category>
+        <code>
+          <coding>
+            <system value="http://snomed.info/sct"/>
+            <code value="113076002"/>
+            <display value="Glucose tolerance test"/>
+          </coding>
+          <coding>
+            <system value="http://snomed.info/sct"/>
+            <code value="123030002"/>
+            <display value="2 hours (qualifier value)"/>
+          </coding>
+          <text value="Glucose Tolerance Test (GTT) 2 hour"/>
+        </code>
+        <subject>
+          <reference value="urn:uuid:85822a88-55b1-460c-bb7b-e8fc22d8568f"/>
+        </subject>
+        <effectiveDateTime value="2024-10-21"/>
+        <performer>
+          <extension url="http://hl7.org/fhir/StructureDefinition/data-absent-reason">
+            <valueCode value="unknown"/>
+          </extension>
+        </performer>
+        <valueQuantity>
+          <value value="8.6"/>
+          <system value="http://unitsofmeasure.org"/>
+          <code value="mmol/L"/>
+        </valueQuantity>
+      </Observation>
+    </resource>
+  </entry>
+  <entry>
+    <fullUrl value="urn:uuid:1bbd2e05-161d-4030-975c-0cca3ef97cdb"/>
+    <resource>
+    <Observation>
+      <id value="1bbd2e05-161d-4030-975c-0cca3ef97cdb"/>
+      <meta>
+        <profile value="http://hl7.org.au/fhir/core/StructureDefinition/au-core-diagnosticresult-path"/>
+        <profile value="http://hl7.org/fhir/uv/ips/StructureDefinition/Observation-results-laboratory-pathology-uv-ips"/>
+      </meta>
+      <status value="final"/>
+      <category>
+        <coding>
+          <system value="http://terminology.hl7.org/CodeSystem/observation-category"/>
+          <code value="laboratory"/>
+          <display value="Laboratory"/>
+        </coding>
+      </category>
+      <code>
+        <coding>
+            <system value="http://snomed.info/sct"/>
+            <code value="113076002"/>
+            <display value="Glucose tolerance test"/>
+          </coding>
+        <coding>
+          <system value="http://snomed.info/sct"/>
+          <code value="792805006"/>
+          <display value="Fasting (regime/therapy)"/>
+        </coding>
+        <text value="Glucose Tolerance Test (GTT) fasting"/>
+      </code>
+      <subject>
+        <reference value="urn:uuid:85822a88-55b1-460c-bb7b-e8fc22d8568f"/>
+      </subject>
+      <effectiveDateTime value="2024-10-21"/>
+      <performer>
+        <extension url="http://hl7.org/fhir/StructureDefinition/data-absent-reason">
+          <valueCode value="unknown"/>
+        </extension>
+      </performer>
+      <valueQuantity>
+        <value value="5.3"/>
+        <system value="http://unitsofmeasure.org"/>
+        <code value="mmol/L"/>
+      </valueQuantity>
+    </Observation>
+    </resource>
+  </entry>
+  <entry>
+    <fullUrl value="urn:uuid:27060cbf-e30e-4091-bd64-7d4ef40916ac"/>
+    <resource>
+      <Observation>
+        <id value="27060cbf-e30e-4091-bd64-7d4ef40916ac"/>
+        <meta>
+          <profile value="http://hl7.org.au/fhir/core/StructureDefinition/au-core-diagnosticresult-path"/>
+          <profile value="http://hl7.org/fhir/uv/ips/StructureDefinition/Observation-results-laboratory-pathology-uv-ips"/>
+        </meta>
+        <status value="final"/>
+        <category>
+          <coding>
+            <system value="http://terminology.hl7.org/CodeSystem/observation-category"/>
+            <code value="laboratory"/>
+            <display value="Laboratory"/>
+          </coding>
+        </category>
+        <code>
+          <coding>
+            <system value="http://snomed.info/sct"/>
+            <code value="113076002"/>
+            <display value="Glucose tolerance test (procedure)"/>
+          </coding>
+          <text value="Glucose Tolerance Test (GTT) 1 hour"/>
+        </code>
+        <subject>
+          <reference value="urn:uuid:85822a88-55b1-460c-bb7b-e8fc22d8568f"/>
+        </subject>
+        <effectiveDateTime value="2024-10-21"/>
+        <performer>
+          <extension url="http://hl7.org/fhir/StructureDefinition/data-absent-reason">
+            <valueCode value="unknown"/>
+          </extension>
+        </performer>
+        <valueQuantity>
+          <value value="10"/>
+          <system value="http://unitsofmeasure.org"/>
+          <code value="mmol/L"/>
+        </valueQuantity>
+      </Observation>
+    </resource>
+  </entry>
+  <entry>
+    <fullUrl value="urn:uuid:3ce5b070-93c5-422f-b807-19449512198ba"/>
+    <resource>
+      <Observation>
+        <id value="3ce5b070-93c5-422f-b807-19449512198ba"/>
+        <meta>
+          <profile value="http://hl7.org.au/fhir/core/StructureDefinition/au-core-diagnosticresult-path"/>
+          <profile value="http://hl7.org/fhir/uv/ips/StructureDefinition/Observation-results-laboratory-pathology-uv-ips"/>
+        </meta>
+        <status value="final"/>
+        <category>
+            <coding>
+              <system value="http://terminology.hl7.org/CodeSystem/observation-category"/>
+              <code value="laboratory"/>
+              <display value="Laboratory"/>
+            </coding>
+          </category>
+        <code>
+          <coding>
+            <system value="http://loinc.org"/>
+            <code value="17856-6"/>
+            <display value="Hemoglobin A1c/Hemoglobin.total in Blood by HPLC"/>
+          </coding>
+          <text value="Haemoglobin A1c"/>
+        </code>
+        <subject>
+          <reference value="urn:uuid:85822a88-55b1-460c-bb7b-e8fc22d8568f"/>
+        </subject>
+        <effectiveDateTime value="2024-06-14"/>
+        <performer>
+          <extension url="http://hl7.org/fhir/StructureDefinition/data-absent-reason">
+            <valueCode value="unknown"/>
+          </extension>
+        </performer>
+        <valueQuantity>
+          <value value="5.8"/>
+          <system value="http://unitsofmeasure.org"/>
+          <code value="%"/>
+        </valueQuantity>
+      </Observation>
     </resource>
   </entry>
   <entry>
