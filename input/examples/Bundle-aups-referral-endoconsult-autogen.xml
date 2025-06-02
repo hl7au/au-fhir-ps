@@ -9,7 +9,7 @@
     <value value="urn:uuid:b1398367-c580-412f-a34e-a09bab5d0bf2"/>
   </identifier>
   <type value="document"/>
-  <timestamp value="2024-11-13T10:02:11.269+11:00"/>
+  <timestamp value="2024-11-07T10:02:11.269+11:00"/>
   <entry>
     <fullUrl value="urn:uuid:ecf18329-b2ae-4648-8888-01aff6dc8172"/>
     <resource>
@@ -28,7 +28,7 @@
         <subject>
           <reference value="urn:uuid:85822a88-55b1-460c-bb7b-e8fc22d8568f"/>
         </subject>
-        <date value="2024-11-13T10:02:10.868+11:00"/>
+        <date value="2024-11-07T10:02:10.868+11:00"/>
         <author>
           <reference value="urn:uuid:40c3b2a7-e673-4f83-8dd8-2b112a88775e"/>
         </author>
@@ -44,7 +44,7 @@
             </coding>
           </code>
           <period>
-            <end value="2024-11-13T10:02:10+11:00"/>
+            <end value="2024-11-07T10:02:10+11:00"/>
           </period>
         </event>
         <section>
@@ -354,7 +354,7 @@
                   <tr>
                     <td>Glucose Tolerance Test (GTT) 1 hour</td>
                     <td>10.0 mmol/L</td>
-]                   <td>21/10/24</td>
+                    <td>21/10/24</td>
                   </tr>
                   <tr>
                     <td>Glucose Tolerance Test (GTT) 2 hours</td>
@@ -850,6 +850,9 @@
     <resource>
       <Observation>
         <id value="ad82d71b-ca1c-4db6-a726-cc70cf638306"/>
+        <meta>
+          <profile value="http://hl7.org/fhir/uv/ips/StructureDefinition/Observation-pregnancy-edd-uv-ips"/>
+        </meta>
         <status value="final"/>
         <category>
           <coding>
@@ -866,8 +869,8 @@
           </coding>
           <coding>
             <system value="http://loinc.org"/>
-            <code value="11781-2"/>
-            <display value="Delivery date US composite estimate"/>
+            <code value="11778-8"/>
+            <display value="Delivery date Estimated"/>
           </coding>
         </code>
         <subject>
@@ -883,6 +886,9 @@
     <resource>
       <Observation>
         <id value="f85ad223-7bed-46f3-893d-e89d6082f9a9"/>
+        <meta>
+          <profile value="http://hl7.org/fhir/uv/ips/StructureDefinition/Observation-pregnancy-status-uv-ips"/>
+        </meta>
         <status value="final"/>
         <category>
           <coding>

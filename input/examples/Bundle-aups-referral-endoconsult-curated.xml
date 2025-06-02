@@ -1,7 +1,4 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!--WIP. 
-1. use case decisions still to be made.
-3. Diagnostic Results to be added.  --> 
 <Bundle xmlns="http://hl7.org/fhir">
   <id value="aups-referral-endoconsult-curated"/>
   <meta>
@@ -57,34 +54,6 @@
             <end value="2024-10-28T11:57:10+11:00"/>
           </period>
         </event>
-        <section>
-          <extension url="http://hl7.org/fhir/StructureDefinition/note">
-            <valueAnnotation>
-                <authorReference>
-                  <reference value="urn:uuid:0c0e2c4f-a748-4cc7-afde-f09bdc2d6fa9"/>
-                </authorReference>
-                <time value="2024-10-28T11:57:10.868+11:00"/>
-                <text value="Joyce is a 39-year-old woman who is currently pregnant and lives with her partner in a stable home environment. She works in an office-based job, which involves prolonged periods of sitting, but she attempting to increase her activity outside of work through regular walks and light exercise. She has a strong support system, including her partner, family, and close friends.&#xa;&#xa;Joyce does not smoke and does not consume alcohol during pregnancy. She follows a generally balanced diet but occasionally consumes convenience foods due to her busy work schedule. She has access to healthcare services and attends routine antenatal appointments as recommended.&#xa;&#xa;She reports moderate stress related to work responsibilities and preparing for the baby’s arrival but manages it through mindfulness techniques and social support. Financially, she and her partner are stable, with plans in place for parental leave and childcare. She has no history of substance use and is not exposed to occupational hazards that would pose a risk to her pregnancy.&#xa;&#xa;Overall, Joyce maintains a healthy and supportive lifestyle, with good access to medical care and a positive outlook on her pregnancy."/>
-            </valueAnnotation>
-        </extension>
-        <title value="Social History"/>
-          <code>
-            <coding>
-              <system value="http://loinc.org"/>
-              <code value="29762-2"/>
-            </coding>
-          </code>
-          <text>
-            <status value="extensions"/><div xmlns="http://www.w3.org/1999/xhtml">
-            Joyce is a 39-year-old woman who is currently pregnant and lives with her partner in a stable home environment. She works in an office-based job, which involves prolonged periods of sitting, but she attempting to increase her activity outside of work through regular walks and light exercise. She has a strong support system, including her partner, family, and close friends.&#xa;&#xa;
-Joyce does not smoke and does not consume alcohol during pregnancy. She follows a generally balanced diet but occasionally consumes convenience foods due to her busy work schedule. She has access to healthcare services and attends routine antenatal appointments as recommended.&#xa;&#xa;
-She reports moderate stress related to work responsibilities and preparing for the baby’s arrival but manages it through mindfulness techniques and social support. Financially, she and her partner are stable, with plans in place for parental leave and childcare. She has no history of substance use and is not exposed to occupational hazards that would pose a risk to her pregnancy.&#xa;&#xa;
-Overall, Joyce maintains a healthy and supportive lifestyle, with good access to medical care and a positive outlook on her pregnancy.</div>
-          </text>
-          <entry>
-            <reference value="urn:uuid:8924f910-53b3-4125-b0f2-58d0068f8983"/>
-          </entry>
-        </section>
         <section>
           <title value="Allergies and Intolerances"/>
           <code>
@@ -271,6 +240,34 @@ Overall, Joyce maintains a healthy and supportive lifestyle, with good access to
           </text>
           <entry>
             <reference value="urn:uuid:f85ad223-7bed-46f3-893d-e89d6082f9a9"/>
+          </entry>
+        </section>
+        <section>
+          <extension url="http://hl7.org/fhir/StructureDefinition/note">
+            <valueAnnotation>
+                <authorReference>
+                  <reference value="urn:uuid:0c0e2c4f-a748-4cc7-afde-f09bdc2d6fa9"/>
+                </authorReference>
+                <time value="2024-10-28T11:57:10.868+11:00"/>
+                <text value="Joyce is a 39-year-old woman who is currently pregnant and lives with her partner in a stable home environment. She works in an office-based job, which involves prolonged periods of sitting, but she attempting to increase her activity outside of work through regular walks and light exercise. She has a strong support system, including her partner, family, and close friends.&#xa;&#xa;Joyce does not smoke and does not consume alcohol during pregnancy. She follows a generally balanced diet but occasionally consumes convenience foods due to her busy work schedule. She has access to healthcare services and attends routine antenatal appointments as recommended.&#xa;&#xa;She reports moderate stress related to work responsibilities and preparing for the baby’s arrival but manages it through mindfulness techniques and social support. Financially, she and her partner are stable, with plans in place for parental leave and childcare. She has no history of substance use and is not exposed to occupational hazards that would pose a risk to her pregnancy.&#xa;&#xa;Overall, Joyce maintains a healthy and supportive lifestyle, with good access to medical care and a positive outlook on her pregnancy."/>
+            </valueAnnotation>
+        </extension>
+        <title value="Social History"/>
+          <code>
+            <coding>
+              <system value="http://loinc.org"/>
+              <code value="29762-2"/>
+            </coding>
+          </code>
+          <text>
+            <status value="extensions"/><div xmlns="http://www.w3.org/1999/xhtml">
+            Joyce is a 39-year-old woman who is currently pregnant and lives with her partner in a stable home environment. She works in an office-based job, which involves prolonged periods of sitting, but she attempting to increase her activity outside of work through regular walks and light exercise. She has a strong support system, including her partner, family, and close friends.&#xa;&#xa;
+Joyce does not smoke and does not consume alcohol during pregnancy. She follows a generally balanced diet but occasionally consumes convenience foods due to her busy work schedule. She has access to healthcare services and attends routine antenatal appointments as recommended.&#xa;&#xa;
+She reports moderate stress related to work responsibilities and preparing for the baby’s arrival but manages it through mindfulness techniques and social support. Financially, she and her partner are stable, with plans in place for parental leave and childcare. She has no history of substance use and is not exposed to occupational hazards that would pose a risk to her pregnancy.&#xa;&#xa;
+Overall, Joyce maintains a healthy and supportive lifestyle, with good access to medical care and a positive outlook on her pregnancy.</div>
+          </text>
+          <entry>
+            <reference value="urn:uuid:8924f910-53b3-4125-b0f2-58d0068f8983"/>
           </entry>
         </section>
       </Composition>
@@ -622,6 +619,9 @@ Overall, Joyce maintains a healthy and supportive lifestyle, with good access to
     <resource>
       <Observation>
         <id value="ad82d71b-ca1c-4db6-a726-cc70cf638306"/>
+        <meta>
+          <profile value="http://hl7.org/fhir/uv/ips/StructureDefinition/Observation-pregnancy-edd-uv-ips"/>
+        </meta>
         <status value="final"/>
         <category>
           <coding>
@@ -638,8 +638,8 @@ Overall, Joyce maintains a healthy and supportive lifestyle, with good access to
           </coding>
           <coding>
             <system value="http://loinc.org"/>
-            <code value="11781-2"/>
-            <display value="Delivery date US composite estimate"/>
+            <code value="11778-8"/>
+            <display value="Delivery date Estimated"/>
           </coding>
         </code>
         <subject>
@@ -655,6 +655,9 @@ Overall, Joyce maintains a healthy and supportive lifestyle, with good access to
     <resource>
       <Observation>
         <id value="f85ad223-7bed-46f3-893d-e89d6082f9a9"/>
+        <meta>
+          <profile value="http://hl7.org/fhir/uv/ips/StructureDefinition/Observation-pregnancy-status-uv-ips"/>
+        </meta>
         <status value="final"/>
         <category>
           <coding>
