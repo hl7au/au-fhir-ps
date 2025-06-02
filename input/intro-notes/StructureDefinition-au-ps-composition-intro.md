@@ -1,4 +1,4 @@
-See [Comparison with other national and international IGs](comparison.html) for a comparison between AU Core profiles and profiles in other implementation guides.
+{% include comparison-note-boilerplate.md %}
 
 ### Profile specific implementation guidance
 - See [Composition (IPS)](https://build.fhir.org/ig/HL7/fhir-ips/StructureDefinition-Composition-uv-ips.html) for the additional requirements imposed by IPS on the Composition resource e.g. for the mandatory sections (meds, allergies, etc.) constraint _**ips-comp-1:** Either section.entry or emptyReason are present_ is imposed.
