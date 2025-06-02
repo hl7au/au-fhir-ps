@@ -58,6 +58,34 @@
           </period>
         </event>
         <section>
+          <extension url="http://hl7.org/fhir/StructureDefinition/note">
+            <valueAnnotation>
+                <authorReference>
+                  <reference value="urn:uuid:0c0e2c4f-a748-4cc7-afde-f09bdc2d6fa9"/>
+                </authorReference>
+                <time value="2024-10-28T11:57:10.868+11:00"/>
+                <text value="Joyce is a 39-year-old woman who is currently pregnant and lives with her partner in a stable home environment. She works in an office-based job, which involves prolonged periods of sitting, but she attempting to increase her activity outside of work through regular walks and light exercise. She has a strong support system, including her partner, family, and close friends.&#xa;&#xa;Joyce does not smoke and does not consume alcohol during pregnancy. She follows a generally balanced diet but occasionally consumes convenience foods due to her busy work schedule. She has access to healthcare services and attends routine antenatal appointments as recommended.&#xa;&#xa;She reports moderate stress related to work responsibilities and preparing for the baby’s arrival but manages it through mindfulness techniques and social support. Financially, she and her partner are stable, with plans in place for parental leave and childcare. She has no history of substance use and is not exposed to occupational hazards that would pose a risk to her pregnancy.&#xa;&#xa;Overall, Joyce maintains a healthy and supportive lifestyle, with good access to medical care and a positive outlook on her pregnancy."/>
+            </valueAnnotation>
+        </extension>
+        <title value="Social History"/>
+          <code>
+            <coding>
+              <system value="http://loinc.org"/>
+              <code value="29762-2"/>
+            </coding>
+          </code>
+          <text>
+            <status value="extensions"/><div xmlns="http://www.w3.org/1999/xhtml">
+            Joyce is a 39-year-old woman who is currently pregnant and lives with her partner in a stable home environment. She works in an office-based job, which involves prolonged periods of sitting, but she attempting to increase her activity outside of work through regular walks and light exercise. She has a strong support system, including her partner, family, and close friends.&#xa;&#xa;
+Joyce does not smoke and does not consume alcohol during pregnancy. She follows a generally balanced diet but occasionally consumes convenience foods due to her busy work schedule. She has access to healthcare services and attends routine antenatal appointments as recommended.&#xa;&#xa;
+She reports moderate stress related to work responsibilities and preparing for the baby’s arrival but manages it through mindfulness techniques and social support. Financially, she and her partner are stable, with plans in place for parental leave and childcare. She has no history of substance use and is not exposed to occupational hazards that would pose a risk to her pregnancy.&#xa;&#xa;
+Overall, Joyce maintains a healthy and supportive lifestyle, with good access to medical care and a positive outlook on her pregnancy.</div>
+          </text>
+          <entry>
+            <reference value="urn:uuid:8924f910-53b3-4125-b0f2-58d0068f8983"/>
+          </entry>
+        </section>
+        <section>
           <title value="Allergies and Intolerances"/>
           <code>
             <coding>
@@ -976,6 +1004,50 @@
           <text value="Left upper arm"/>
         </site>
       </Immunization>
+    </resource>
+  </entry>
+  <entry>
+    <fullUrl value="urn:uuid:8924f910-53b3-4125-b0f2-58d0068f8983"/>
+    <resource>
+      <Observation>
+        <id value="8924f910-53b3-4125-b0f2-58d0068f8983"/>
+        <meta>
+          <profile value="http://hl7.org.au/fhir/core/StructureDefinition/au-core-smokingstatus"/>
+          <profile value="http://hl7.org/fhir/uv/ips/StructureDefinition/Observation-tobaccouse-uv-ips"/>
+        </meta>
+        <status value="final"/>
+        <category>
+          <coding>
+            <system value="http://terminology.hl7.org/CodeSystem/observation-category"/>
+            <code value="social-history"/>
+            <display value="Social History"/>
+          </coding>
+          <text value="Social History"/>
+        </category>
+        <code>
+        <coding>
+            <system value="http://snomed.info/sct"/>
+            <code value="1747861000168109" />
+          </coding>
+          <coding>
+            <system value="http://loinc.org"/>
+            <code value="72166-2" />
+          </coding>
+          <text value="Smoking status"/>
+        </code>
+        <subject>
+          <reference value="urn:uuid:85822a88-55b1-460c-bb7b-e8fc22d8568f"/>
+        </subject>
+        <effectiveDateTime value="2024-10-28"/>
+        <valueCodeableConcept>
+          <coding>
+            <system value="http://snomed.info/sct"/>
+            <code value="8517006"/>
+            <display value="Former smoker"/>
+          </coding>
+          <text value="Former smoker"/>
+        </valueCodeableConcept>
+      </Observation>
     </resource>
   </entry>
 </Bundle>

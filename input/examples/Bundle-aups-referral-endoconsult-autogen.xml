@@ -380,6 +380,19 @@
             <reference value="urn:uuid:27060cbf-e30e-4091-bd64-7d4ef40916ac"/>
           </entry>
         </section>
+        <section>
+          <title value="Social History"/>
+          <code>
+            <coding>
+              <system value="http://loinc.org"/>
+              <code value="29762-2"/>
+            </coding>
+          </code>
+          <text><status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml">Former smoker 28/10/2024</div></text>
+          <entry>
+            <reference value="urn:uuid:8924f910-53b3-4125-b0f2-58d0068f8983"/>
+          </entry>
+        </section>
       </Composition>
     </resource>
   </entry>
@@ -1531,6 +1544,50 @@
     </resource>
   </entry>
   <entry>
+    <fullUrl value="urn:uuid:8924f910-53b3-4125-b0f2-58d0068f8983"/>
+    <resource>
+      <Observation>
+        <id value="8924f910-53b3-4125-b0f2-58d0068f8983"/>
+        <meta>
+          <profile value="http://hl7.org.au/fhir/core/StructureDefinition/au-core-smokingstatus"/>
+          <profile value="http://hl7.org/fhir/uv/ips/StructureDefinition/Observation-tobaccouse-uv-ips"/>
+        </meta>
+        <status value="final"/>
+        <category>
+          <coding>
+            <system value="http://terminology.hl7.org/CodeSystem/observation-category"/>
+            <code value="social-history"/>
+            <display value="Social History"/>
+          </coding>
+          <text value="Social History"/>
+        </category>
+        <code>
+        <coding>
+            <system value="http://snomed.info/sct"/>
+            <code value="1747861000168109" />
+          </coding>
+          <coding>
+            <system value="http://loinc.org"/>
+            <code value="72166-2" />
+          </coding>
+          <text value="Smoking status"/>
+        </code>
+        <subject>
+          <reference value="urn:uuid:85822a88-55b1-460c-bb7b-e8fc22d8568f"/>
+        </subject>
+        <effectiveDateTime value="2024-10-28"/>
+        <valueCodeableConcept>
+          <coding>
+            <system value="http://snomed.info/sct"/>
+            <code value="8517006"/>
+            <display value="Former smoker"/>
+          </coding>
+          <text value="Former smoker"/>
+        </valueCodeableConcept>
+      </Observation>
+    </resource>
+  </entry>
+  <entry>
     <fullUrl value="urn:uuid:40c3b2a7-e673-4f83-8dd8-2b112a88775e"/>
     <resource>
       <Device>
@@ -1541,7 +1598,7 @@
         </identifier>
         <manufacturer value="Some Clinical Information System Manufacturer"/>
         <deviceName>
-          <name value="Name of "/>
+          <name value="Name of Device"/>
           <type value="model-name"/>
         </deviceName>
         <modelNumber value="2.0.1"/>
