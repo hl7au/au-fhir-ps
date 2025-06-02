@@ -79,7 +79,7 @@ INSERT SEQUENCE DIAGRAM
 
 The following examples demonstrate technical and clinical use case aspects, conforming to the AU Patient Summary requirements. Data within these examples, e.g. medications, is provided by the [Sparked Patient Summary Clinical Focus Group](https://sparked.csiro.au/index.php/design-groups/):
 1. Patient Summary Embedded in Referral: [Patient Summary for Joyce Johnson as of 28 OCT 2024 (Bundle)](Bundle-aups-referral-endoconsult-curated.html)
-1. More recent Patient Summary: [Patient Summary for Joyce Johnson as of 13 NOV 2024 (Bundle)](Bundle-aups-referral-endoconsult-autogen.html)
+1. More recent Patient Summary: [Patient Summary for Joyce Johnson as of 07 NOV 2024 (Bundle)](Bundle-aups-referral-endoconsult-autogen.html)
 
 <div class="stu-note" markdown="1">
 
