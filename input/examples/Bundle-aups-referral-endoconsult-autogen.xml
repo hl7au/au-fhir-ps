@@ -308,6 +308,9 @@
           <entry>
             <reference value="urn:uuid:dc422222-8b3a-4dd5-96b5-b7e0cf43b477"/>
           </entry>
+          <entry>
+            <reference value="urn:uuid:fc061f59-5410-41e9-945e-3f59664e8611"/>
+          </entry>
         </section>
         <section>
           <title value="Pregnancy Information"/>
@@ -1486,10 +1489,10 @@
     </resource>
   </entry>
   <entry>
-    <fullUrl value="urn:uuid:3ce5b070-93c5-422f-b807-19449512198ba"/>
+    <fullUrl value="urn:uuid:fc061f59-5410-41e9-945e-3f59664e8611"/>
     <resource>
       <Observation>
-        <id value="3ce5b070-93c5-422f-b807-19449512198ba"/>
+        <id value="fc061f59-5410-41e9-945e-3f59664e8611"/>
         <meta>
           <profile value="http://hl7.org.au/fhir/core/StructureDefinition/au-core-diagnosticresult-path"/>
           <profile value="http://hl7.org/fhir/uv/ips/StructureDefinition/Observation-results-laboratory-pathology-uv-ips"/>
