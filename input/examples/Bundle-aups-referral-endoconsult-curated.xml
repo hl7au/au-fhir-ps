@@ -412,14 +412,11 @@ Overall, Joyce maintains a healthy and supportive lifestyle, with good access to
         <dosage>
           <text value="500mg twice daily"/>
           <timing>
-            <code>
-              <coding>
-                <system value="http://terminology.hl7.org/CodeSystem/v3-GTSAbbreviation"/>
-                <code value="BID"/>
-                <display value="BID"/>
-              </coding>
-              <text value="BID"/>
-            </code>
+            <repeat>
+              <frequency value="2" />
+              <period value="1" />
+              <periodUnit value="d" />
+            </repeat>
           </timing>
           <route>
             <coding>
