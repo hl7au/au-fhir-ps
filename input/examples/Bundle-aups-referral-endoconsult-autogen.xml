@@ -781,7 +781,7 @@
         <verificationStatus>
           <coding>
             <system value="http://terminology.hl7.org/CodeSystem/condition-ver-status"/>
-            <code value="confirmed"/>
+            <code value="provisional"/>
           </coding>
         </verificationStatus>
         <category>
