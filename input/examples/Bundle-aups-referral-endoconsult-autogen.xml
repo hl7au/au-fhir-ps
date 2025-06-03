@@ -9,7 +9,7 @@
     <value value="urn:uuid:b1398367-c580-412f-a34e-a09bab5d0bf2"/>
   </identifier>
   <type value="document"/>
-  <timestamp value="2024-11-13T10:02:11.269+11:00"/>
+  <timestamp value="2024-11-07T10:02:11.269+11:00"/>
   <entry>
     <fullUrl value="urn:uuid:ecf18329-b2ae-4648-8888-01aff6dc8172"/>
     <resource>
@@ -28,7 +28,7 @@
         <subject>
           <reference value="urn:uuid:85822a88-55b1-460c-bb7b-e8fc22d8568f"/>
         </subject>
-        <date value="2024-11-13T10:02:10.868+11:00"/>
+        <date value="2024-11-07T10:02:10.868+11:00"/>
         <author>
           <reference value="urn:uuid:40c3b2a7-e673-4f83-8dd8-2b112a88775e"/>
         </author>
@@ -44,7 +44,7 @@
             </coding>
           </code>
           <period>
-            <end value="2024-11-13T10:02:10+11:00"/>
+            <end value="2024-11-07T10:02:10+11:00"/>
           </period>
         </event>
         <section>
@@ -77,6 +77,7 @@
                   <tr>
                     <th>Medicine</th>
                     <th>Dose</th>
+                    <th>Clinical Indication</th>
                     <th>Status</th>
                     <th>Last Updated</th>
                   </tr>
@@ -85,26 +86,37 @@
                   <tr>
                     <td>Prenatal vitamins</td>
                     <td>1 tablet daily</td>
+                    <td></td>
                     <td>Active</td>
                     <td>28/10/2024</td>
                   </tr>
                   <tr>
                     <td>Insulin (Humulin N)</td>
                     <td>10 units subcutaneously in the morning and evening</td>
+                    <td></td>
                     <td>Active</td>
                     <td>28/10/2024</td>
                   </tr>
                   <tr>
                     <td>Insulin (Humulin R)</td>
                     <td>5 units subcutaneously before each meal</td>
+                    <td></td>
                     <td>Active</td>
                     <td>28/10/2024</td>
                   </tr>
                   <tr>
                     <td>Metformin</td>
                     <td>500mg twice daily</td>
+                    <td></td>
                     <td>Active</td>
                     <td>28/10/2024</td>
+                  </tr>
+                  <tr>
+                    <td>Trimethoprim</td>
+                    <td>300mg daily for 3 days</td>
+                    <td>Urinary tract infection (UTI)</td>
+                    <td>Active</td>
+                    <td>04/11/2024</td>
                   </tr>
                 </tbody>
               </table>
@@ -121,6 +133,9 @@
           </entry>
           <entry>
             <reference value="urn:uuid:05292a9c-2bc9-43a7-b935-0a61ede063da"/>
+          </entry>
+          <entry>
+            <reference value="urn:uuid:cbe37f4b-e84b-4f34-8490-f21da27f1aa9"/>
           </entry>
         </section>
         <section>
@@ -152,6 +167,11 @@
                     <td>Active</td>
                     <td></td>
                   </tr>
+                  <tr>
+                    <td>Urinary tract infection (UTI)</td>
+                    <td>Active</td>
+                    <td>Patient reported symptoms of UTI. MSU to confirm</td>
+                  </tr>
                 </tbody>
               </table>
             </div>
@@ -161,6 +181,9 @@
           </entry>
           <entry>
             <reference value="urn:uuid:78f75926-3ee1-44a7-9424-6178d905af63"/>
+          </entry>
+          <entry>
+            <reference value="urn:uuid:07034a67-66ce-4d29-95ab-1ef7e964a873"/>
           </entry>
         </section>
         <section>
@@ -308,6 +331,9 @@
           <entry>
             <reference value="urn:uuid:dc422222-8b3a-4dd5-96b5-b7e0cf43b477"/>
           </entry>
+          <entry>
+            <reference value="urn:uuid:fc061f59-5410-41e9-945e-3f59664e8611"/>
+          </entry>
         </section>
         <section>
           <title value="Pregnancy Information"/>
@@ -351,7 +377,7 @@
                   <tr>
                     <td>Glucose Tolerance Test (GTT) 1 hour</td>
                     <td>10.0 mmol/L</td>
-]                   <td>21/10/24</td>
+                    <td>21/10/24</td>
                   </tr>
                   <tr>
                     <td>Glucose Tolerance Test (GTT) 2 hours</td>
@@ -375,6 +401,19 @@
           </entry>
           <entry>
             <reference value="urn:uuid:27060cbf-e30e-4091-bd64-7d4ef40916ac"/>
+          </entry>
+        </section>
+        <section>
+          <title value="Social History"/>
+          <code>
+            <coding>
+              <system value="http://loinc.org"/>
+              <code value="29762-2"/>
+            </coding>
+          </code>
+          <text><status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml">Former smoker 28/10/2024</div></text>
+          <entry>
+            <reference value="urn:uuid:8924f910-53b3-4125-b0f2-58d0068f8983"/>
           </entry>
         </section>
       </Composition>
@@ -474,6 +513,73 @@
     </resource>
   </entry>
   <entry>
+    <fullUrl value="urn:uuid:cbe37f4b-e84b-4f34-8490-f21da27f1aa9"/>
+    <resource>
+      <MedicationStatement>
+        <id value="cbe37f4b-e84b-4f34-8490-f21da27f1aa9"/>
+        <meta>
+          <profile value="http://hl7.org.au/fhir/ps/StructureDefinition/au-ps-medicationstatement"/>
+        </meta>
+        <contained>
+          <Medication>
+            <id value="trimethoprim"/>
+            <meta>
+              <profile value="http://hl7.org.au/fhir/ps/StructureDefinition/au-ps-medication"/>
+            </meta>
+            <code>
+              <coding>
+                <system value="http://snomed.info/sct"/>
+                <code value="32792001"/>
+                <display value="Trimethoprim"/>
+              </coding>
+              <text value="Trimethoprim"/>
+            </code>
+            <form>
+              <coding>
+                <system value="http://snomed.info/sct"/>
+                <code value="421026006"/>
+                <display value="Tablet"/>
+              </coding>
+              <text value="Tablet"/>
+            </form>
+          </Medication>
+        </contained>
+        <status value="active"/>
+        <medicationReference>
+          <reference value="#trimethoprim"/>
+        </medicationReference>
+        <subject>
+          <reference value="urn:uuid:85822a88-55b1-460c-bb7b-e8fc22d8568f"/>
+        </subject>
+        <effectivePeriod>
+          <start value="2024-11-04"/>
+        </effectivePeriod>
+        <dateAsserted value="2024-11-04"/>
+        <reasonReference>
+          <reference value="urn:uuid:07034a67-66ce-4d29-95ab-1ef7e964a873"/>
+        </reasonReference>
+        <dosage>
+          <text value="300mg daily for 3 days"/>
+          <timing>
+            <repeat>
+              <frequency value="3" />
+              <period value="1" />
+              <periodUnit value="d" />
+            </repeat>
+          </timing>
+          <route>
+            <coding>
+              <system value="http://snomed.info/sct"/>
+              <code value="26643006"/>
+              <display value="Oral route"/>
+            </coding>
+            <text value="Oral route"/>
+          </route>
+        </dosage>
+      </MedicationStatement>
+    </resource>
+  </entry>
+  <entry>
     <fullUrl value="urn:uuid:05292a9c-2bc9-43a7-b935-0a61ede063da"/>
     <resource>
       <MedicationStatement>
@@ -519,14 +625,11 @@
         <dosage>
           <text value="500mg twice daily"/>
           <timing>
-            <code>
-              <coding>
-                <system value="http://terminology.hl7.org/CodeSystem/v3-GTSAbbreviation"/>
-                <code value="BID"/>
-                <display value="BID"/>
-              </coding>
-              <text value="BID"/>
-            </code>
+            <repeat>
+              <frequency value="2" />
+              <period value="1" />
+              <periodUnit value="d" />
+            </repeat>
           </timing>
           <route>
             <coding>
@@ -657,6 +760,50 @@
         </subject>
         <note>
           <text value="Recent diagnosis, referring to Endo &amp; Dietitian"/>
+        </note>
+      </Condition>
+    </resource>
+  </entry>
+  <entry>
+    <fullUrl value="urn:uuid:07034a67-66ce-4d29-95ab-1ef7e964a873"/>
+    <resource>
+      <Condition>
+        <id value="07034a67-66ce-4d29-95ab-1ef7e964a873"/>
+        <meta>
+          <profile value="http://hl7.org.au/fhir/ps/StructureDefinition/au-ps-condition"/>
+        </meta>
+        <clinicalStatus>
+          <coding>
+            <system value="http://terminology.hl7.org/CodeSystem/condition-clinical"/>
+            <code value="active"/>
+          </coding>
+        </clinicalStatus>
+        <verificationStatus>
+          <coding>
+            <system value="http://terminology.hl7.org/CodeSystem/condition-ver-status"/>
+            <code value="confirmed"/>
+          </coding>
+        </verificationStatus>
+        <category>
+          <coding>
+            <system value="http://terminology.hl7.org/CodeSystem/condition-category"/>
+            <code value="problem-list-item"/>
+          </coding>
+          <text value="Problem"/>
+        </category>
+        <code>
+          <coding>
+            <system value="http://snomed.info/sct"/>
+            <code value="68566005"/>
+            <display value="Urinary tract infection"/>
+          </coding>
+          <text value="Urinary tract infection (UTI)"/>
+        </code>
+        <subject>
+          <reference value="urn:uuid:85822a88-55b1-460c-bb7b-e8fc22d8568f"/>
+        </subject>
+        <note>
+          <text value="Patient reported symptoms of UTI. MSU to confirm."/>
         </note>
       </Condition>
     </resource>
@@ -834,6 +981,9 @@
     <resource>
       <Observation>
         <id value="ad82d71b-ca1c-4db6-a726-cc70cf638306"/>
+        <meta>
+          <profile value="http://hl7.org/fhir/uv/ips/StructureDefinition/Observation-pregnancy-edd-uv-ips"/>
+        </meta>
         <status value="final"/>
         <category>
           <coding>
@@ -850,8 +1000,8 @@
           </coding>
           <coding>
             <system value="http://loinc.org"/>
-            <code value="11781-2"/>
-            <display value="Delivery date US composite estimate"/>
+            <code value="11778-8"/>
+            <display value="Delivery date Estimated"/>
           </coding>
         </code>
         <subject>
@@ -867,6 +1017,9 @@
     <resource>
       <Observation>
         <id value="f85ad223-7bed-46f3-893d-e89d6082f9a9"/>
+        <meta>
+          <profile value="http://hl7.org/fhir/uv/ips/StructureDefinition/Observation-pregnancy-status-uv-ips"/>
+        </meta>
         <status value="final"/>
         <category>
           <coding>
@@ -1486,10 +1639,10 @@
     </resource>
   </entry>
   <entry>
-    <fullUrl value="urn:uuid:3ce5b070-93c5-422f-b807-19449512198ba"/>
+    <fullUrl value="urn:uuid:fc061f59-5410-41e9-945e-3f59664e8611"/>
     <resource>
       <Observation>
-        <id value="3ce5b070-93c5-422f-b807-19449512198ba"/>
+        <id value="fc061f59-5410-41e9-945e-3f59664e8611"/>
         <meta>
           <profile value="http://hl7.org.au/fhir/core/StructureDefinition/au-core-diagnosticresult-path"/>
           <profile value="http://hl7.org/fhir/uv/ips/StructureDefinition/Observation-results-laboratory-pathology-uv-ips"/>
@@ -1528,6 +1681,50 @@
     </resource>
   </entry>
   <entry>
+    <fullUrl value="urn:uuid:8924f910-53b3-4125-b0f2-58d0068f8983"/>
+    <resource>
+      <Observation>
+        <id value="8924f910-53b3-4125-b0f2-58d0068f8983"/>
+        <meta>
+          <profile value="http://hl7.org.au/fhir/core/StructureDefinition/au-core-smokingstatus"/>
+          <profile value="http://hl7.org/fhir/uv/ips/StructureDefinition/Observation-tobaccouse-uv-ips"/>
+        </meta>
+        <status value="final"/>
+        <category>
+          <coding>
+            <system value="http://terminology.hl7.org/CodeSystem/observation-category"/>
+            <code value="social-history"/>
+            <display value="Social History"/>
+          </coding>
+          <text value="Social History"/>
+        </category>
+        <code>
+        <coding>
+            <system value="http://snomed.info/sct"/>
+            <code value="1747861000168109" />
+          </coding>
+          <coding>
+            <system value="http://loinc.org"/>
+            <code value="72166-2" />
+          </coding>
+          <text value="Smoking status"/>
+        </code>
+        <subject>
+          <reference value="urn:uuid:85822a88-55b1-460c-bb7b-e8fc22d8568f"/>
+        </subject>
+        <effectiveDateTime value="2024-10-28"/>
+        <valueCodeableConcept>
+          <coding>
+            <system value="http://snomed.info/sct"/>
+            <code value="8517006"/>
+            <display value="Former smoker"/>
+          </coding>
+          <text value="Former smoker"/>
+        </valueCodeableConcept>
+      </Observation>
+    </resource>
+  </entry>
+  <entry>
     <fullUrl value="urn:uuid:40c3b2a7-e673-4f83-8dd8-2b112a88775e"/>
     <resource>
       <Device>
@@ -1538,7 +1735,7 @@
         </identifier>
         <manufacturer value="Some Clinical Information System Manufacturer"/>
         <deviceName>
-          <name value="Name of "/>
+          <name value="Name of Device"/>
           <type value="model-name"/>
         </deviceName>
         <modelNumber value="2.0.1"/>
