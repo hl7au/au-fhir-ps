@@ -6,7 +6,7 @@ Patient Summary R1 (& AU Core R2) Target Release Timeline:
 * Continued updates on a yearly / 15-monthly cycle from then on
 
  <div> 
-    <img src="TargetTimeframes.png" alt="Yearly update of AU Core" style="width:75%"/>
+    <img src="TargetTimeframes.png" alt="AU Patient Summary R1 Target Release Time Frame" style="width:75%"/>
   </div>
 *Figure 1: AU Patient Summary R1 Target Release Time Frame*
 <br/>
@@ -21,7 +21,7 @@ Future updates of AU Patient Summary updates would reflect changes to:
 The first release of AU Patient Summary is an 18 month process from HL7 AU proposal to publication of the first release, outlined in the figure below:
 
  <div> 
-    <img src="R1Process.png" alt="AU Core R1 Development process" style="width:100%"/>
+    <img src="R1Process.png" alt="AU Patient Summary R1 Development process" style="width:100%"/>
   </div>
 *Figure 2: AU Patient Summary R1 Development process*
 <br/>
