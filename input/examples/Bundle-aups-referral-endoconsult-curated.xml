@@ -1042,10 +1042,9 @@ Overall, Joyce maintains a healthy and supportive lifestyle, with good access to
         <valueCodeableConcept>
           <coding>
             <system value="http://snomed.info/sct"/>
-            <code value="8517006"/>
-            <display value="Former smoker"/>
+            <code value="266919005"/>
           </coding>
-          <text value="Former smoker"/>
+          <text value="Lifetime non-smoker"/>
         </valueCodeableConcept>
       </Observation>
     </resource>
