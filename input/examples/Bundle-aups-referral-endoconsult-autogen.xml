@@ -411,7 +411,7 @@
               <code value="29762-2"/>
             </coding>
           </code>
-          <text><status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml">Former smoker 28/10/2024</div></text>
+          <text><status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml">Lifetime non-smoker 28/10/2024</div></text>
           <entry>
             <reference value="urn:uuid:8924f910-53b3-4125-b0f2-58d0068f8983"/>
           </entry>
@@ -781,7 +781,7 @@
         <verificationStatus>
           <coding>
             <system value="http://terminology.hl7.org/CodeSystem/condition-ver-status"/>
-            <code value="confirmed"/>
+            <code value="provisional"/>
           </coding>
         </verificationStatus>
         <category>
@@ -1716,10 +1716,9 @@
         <valueCodeableConcept>
           <coding>
             <system value="http://snomed.info/sct"/>
-            <code value="8517006"/>
-            <display value="Former smoker"/>
+            <code value="266919005"/>
           </coding>
-          <text value="Former smoker"/>
+          <text value="Lifetime non-smoker"/>
         </valueCodeableConcept>
       </Observation>
     </resource>

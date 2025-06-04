@@ -29,7 +29,7 @@ See [AUCDI](aucdi.html) for the relationship between the AUCDI data groups, elem
 The relationship of AU Patient Summary to AUCDI and other implementation guides is shown in the figure below.
 
  <div> 
-    <img src="context-colour.png" alt="Relationship to AU Core and Other IGs" style="width:75%"/>
+    <img src="context-colour.png" alt="Relationship to AUCDI and Other IGs" style="width:75%"/>
   </div>
 *Figure 3: Relationship to AUCDI and Other IGs*
 <br/>
