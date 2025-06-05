@@ -2,17 +2,15 @@ This use case describes an example scenario where, during a general practitioner
 
 ### Use Case Description
 
-Jeramy Ezra Banks is a 73-year-old male who lives in New South Wales, Australia. Jeramy has chronic heart disease which was diagnosed 5 years ago and Jeramy's usual GP is Dr Abe Lowe. Comfortable with basic technology, Jeramy uses a smartphone app to manage his healthcare records.
+Jeramy Ezra Banks, a 73-year-old man from New South Wales, has been managing chronic heart disease since his diagnosis five years ago. His regular general practitioner (GP), Dr Abe Lowe, oversees his ongoing care. Comfortable with basic technology, Jeramy uses a smartphone app to access and manage his health records.
 
-Jeramy travels interstate to Queensland for a holiday to visit his daughter. Prior to travelling, Jeramy checks that his patient summary has been updated by his usual GP (Dr Abe Lowe) following a recent admission to hospital.
+Before travelling to Queensland for a holiday to visit his daughter, Jeramy confirms via the app that his patient summary has been updated by Dr Lowe, following a recent hospital admission.
 
-During the trip Jeramy begins feeling unwell, he is gasping for breath and feels stiff after driving. Jeramy books an appointment with a local Queensland GP (Dr Wyatt Samuels).
+While on the road, Jeramy begins to feel unwell, he is gasping for breath and feels stiff after driving. He books an appointment with a local GP in Queensland, Dr Wyatt Samuels.
 
-Jeramy attends the appointment with the local Queensland GP (Dr Wyatt Samuels). During the appointment, Jeramy alerts the attending GP (Dr Wyatt Samuels) that a patient summary from his usual GP is available. Jeramy provides access to his patient summary to the attending GP (Dr Wyatt Samuels). 
+During the consultation, Jeramy lets Dr Samuels know that his health information is available via a patient summary shared by his regular GP. Jeramy provides access to his patient summary using a Smart Health Link, and Dr Samuels retrieves the most recent patient summary directly from Dr Lowe’s clinical system. That patient summary is curated by Dr Lowe and attested at time of update, ensuring its integrity and alignment with clinical standards. 
 
-The attending GP's (Dr Wyatt Samuels) clinical system initiates a request to retrieve Jeramy’s most recent patient summary from the clinical system of the usual GP (Dr Abe Lowe) to ensure safe and informed care.
-
-The attending GP (Dr Wyatt Samuels) uses the patient summary to support care decisions during the consultation.
+The summary enables Dr Samuels to quickly understand Jeramy’s condition, recent treatment, and current medications, supporting safe and informed clinical decision-making during the consultation.
 
  <div> 
     <img src="uc-interstate-cj.png" alt="Interstate GP Visit consumer journey" style="width:80%"/>

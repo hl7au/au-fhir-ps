@@ -2,15 +2,17 @@ This use case demonstrates an example scenario where, during a specialist consul
 
 ### Use Case Description
 
-Joyce Johnson is a 39yo female who lives in New South Wales, Australia. Joyce is currently pregnant and has been recently diagnosed with gestational diabetes. Joyce’s general practitioner (GP), Dr Ginger Burrows, has decided to refer Joyce to an Endocrinologist and a Dietitian for further evaluation and support.
+Joyce Johnson, a 39-year-old woman from New South Wales, is pregnant and has recently been diagnosed with gestational diabetes. To provide Joyce with more comprehensive support, her regular general practitioner (GP), Dr Ginger Burrows, refers Joyce to both an endocrinologist and a dietitian.
 
-The referral includes an embedded patient summary containing Joyce's medical history and current medications at the time of referral. The embedded patient summary was authored by the GP (Dr. Ginger Burrows) through curation of a generated view of the data within their clinical information system, and was attested at the time of creation of the patient summary.
+As part of the referral, Dr Burrows includes an embedded patient summary that captures Joyce’s medical history and current medications at the time. This embedded summary is curated from Dr Burrow's clinical information system and attested at the time of creation, ensuring its integrity and alignment with clinical standards.
 
-Each health care provider (Endocrinologist and Dietician) receives and triages the referral.
+The referral is received and triaged by both the endocrinologist and the dietitian. When Joyce later attends her appointment with the endocrinologist, the clinical information system alerts the provider that a more recent patient summary is available from an external source, in this case from the referring GP's clinical information system.
 
-Joyce attends the consultation with the Endocrinologist. During the consultation, the Endocrinologist’s clinical system notifies them that a more recent patient summary is available from an external source, such as an updated version from the referring GP, a national health record system or another provider.
+The endocrinologist accesses and compares both the original embedded summary and the newer version to verify the currency and accuracy of Joyce’s clinical information. The more recent patient summary has been generated at the time of request for access by Dr Burrow's clinical information system and digitally signed to ensure integrity in transit.
 
-The Endocrinologist accesses and compares both patient summaries to verify the accuracy and currency of the clinical information. After reviewing the most recent data -  particularly Joyce’s current medication regimen - the Endocrinologist decides to adjust the insulin dosage and documents the decision. An updated treatment plan is shared with Joyce and the referring GP (Dr Ginger Burrows) to ensure continuity of care.
+Based on updated data - particularly around Joyce's medication regimen - the endocrinologist adjusts Joyce’s insulin dosage and documents the decision.
+
+An updated treatment plan is then shared with Joyce and Dr Burrows to maintain continuity of care across providers.
 
  <div> 
     <img src="uc-referral-cj.png" alt="Referral to Specialist and Allied Health consumer journey" style="width:65%"/>
