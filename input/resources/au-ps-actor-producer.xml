@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ActorDefinition xmlns="http://hl7.org/fhir">
+  <id value="au-ps-actor-producer"/>
+  <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-fmm">
+    <valueInteger value="0"/> 
+  </extension>
+  <url value="http://hl7.org.au/fhir/ps//ActorDefinition/au-ps-actor-producer" />
+  <name value="AUPSProducer"/> 
+  <title value="AU PS Producer"/> 
+  <status value="draft"/>
+  <description value="An AU PS Producer is a system which creates or assembles an AU PS Bundle through automated generation or human curation of the patient summary content. This actor is based on the Producer (IPS) actor, and describes the additional requirements and documentation applied for the Australian context."/> 
+  <type value="system"/> 
+  <documentation value="An AU Patient Summary Consumer **SHALL** comply with the requirements of the [IPS Producer](https://build.fhir.org/ig/HL7/fhir-ips/ActorDefinition-Producer.html), and:&#xa;&#xa;
+- **SHALL** implement AU PS Bundle, AU PS Composition and AU PS Patient profiles&#xa;&#xa;
+- **SHALL** for each mandatory section in AU PS Composition, implement the AU PS profiles referenced by the corresponding section entry (i.e. AU PS AllergyIntolerance, AU PS Condition, AU PS MedicationStatement and AU PS MedicationRequest)&#xa;&#xa;
+- **SHOULD** for each recommended section in AU PS Composition, implement the profiles referenced by the corresponding section entry (e.g. AU PS Immunization, Observation Results - Radiology (IPS), AU PS Procedure, and DeviceUseStatement (IPS))
+- **SHALL** implement the requirements on Suppressed Data when an element is NOT allowed to be shared&#xa;&#xa;
+- **SHALL** implement the requirements on Missing Data when an element value is NOT known&#xa;&#xa;"/>
+  <derivedFrom value="http://hl7.org/fhir/uv/ips/ActorDefinition/Producer"/>
+</ActorDefinition>
