@@ -20,15 +20,6 @@ The summary enables Dr Samuels to quickly understand Jeramy’s condition, recen
 
 This use case demonstrates use of patient summary during step 5. Patient Summary Retrieval of the [Interstate GP Visit consumer journey](https://sparked.csiro.au/index.php/sparked-products-resources/au-patient-summary-consumer-journeys/).
 
-<div class="stu-note" markdown="1">
-
-#### Use Case Decisions to be confirmed for the patient summary from Usual GP
-The following decisions are to be confirmed:
-1. is it accessed by a QR code and/or link
-1. is electronic signature present yes/no
-
-</div>
-
 ### Actors
 
 #### People

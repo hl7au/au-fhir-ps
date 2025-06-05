@@ -23,27 +23,6 @@ An updated treatment plan is then shared with Joyce and Dr Burrows to maintain c
 
 This use case demonstrates use of patient summary during step 4. Endocrinologist Consultation of the [Referral to Specialist and Allied Health consumer journey](https://sparked.csiro.au/index.php/sparked-products-resources/au-patient-summary-consumer-journeys/).
 
-<div class="stu-note" markdown="1">
-
-#### Use Case Decisions to be confirmed for the patient summary embedded in referral
-The following decisions are to be confirmed:
-1. is it accessed by a QR code and/or link
-1. what is the mechanism for embedding the patient summary
-1. is electronic signature present yes/no
-
-</div>
-
-<div class="stu-note" markdown="1">
-
-#### Use Case Decisions to be confirmed for more recent patient summary
-The following decisions are to be confirmed:
-1. how is discovery of the most recent undertaken - is this search using limited info or is this out of scope of this example
-1. what sort of link/QR code/RESTfulAPI can be used to access the summary
-1. how is currency detected? is it indicated in the payload? or is this out of scope?
-
-</div>
-
-
 ### Actors
 
 #### People
@@ -82,16 +61,3 @@ INSERT SEQUENCE DIAGRAM
 The following examples demonstrate technical and clinical use case aspects, conforming to the AU Patient Summary requirements. Data within these examples, e.g. medications, is provided by the [Sparked Patient Summary Clinical Focus Group](https://sparked.csiro.au/index.php/design-groups/):
 1. Patient Summary Embedded in Referral: [Patient Summary for Joyce Johnson as of 28 OCT 2024 (Bundle)](Bundle-aups-referral-endoconsult-curated.html)
 1. More recent Patient Summary: [Patient Summary for Joyce Johnson as of 07 NOV 2024 (Bundle)](Bundle-aups-referral-endoconsult-autogen.html)
-
-<div class="stu-note" markdown="1">
-
-**TODO for Examples**
-
-Example 01 - patient summary embedded in a referral:
-1. use case decisions still to be made (see above) - as decisions are made they will be reflected in the example
-1. Diagnostic Results to be added
-
-Example 02 - more recent patient summary:
-1. add Bundle.signature
-
-</div>
