@@ -51,7 +51,7 @@ This guide is divided into several pages which are listed at the top of each pag
 - [Guidance](guidance.html): These pages list the guidance for this guide.
   - [General Guidance](general-guidance.html): This page provides guidance on using the profiles defined in this guide. 
   - [Sex and Gender](sex-and-gender.html): This page provides guidance on the representation of sex, gender, and related concepts.
-  - [AU Core Data for Interoperability](aucdi.html): This page maps AUCDI data groups and elements to FHIR artefacts in AU Patient Summary.
+  - [AUCDI](aucdi.html): This page maps AUCDI data groups and elements to FHIR artefacts in AU Patient Summary.
   - [Relationship with other IGs](relationship.html): This page provides guidance on the relationship between AU Patient Summary, AUCDI, and other implementation guides.
   - [AU Variance Statement](variance.html): This page documents the variance from AU Base and AU Core.
   - [Comparison with other national and international IGs](comparison.html): This page provides comparison between AU Patient Summary profiles and other national and international implementation guides.
