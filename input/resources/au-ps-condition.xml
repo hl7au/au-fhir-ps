@@ -22,6 +22,30 @@
       <path value="Condition"/>
     </element>
     <element id="Condition.clinicalStatus">
+      <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
+        <extension url="code">
+          <valueCode value="SHALL:populate-if-known"/>
+        </extension>
+        <extension url="actor">
+          <valueCanonical value="http://hl7.org.au.draft/fhir/aups/ActorDefinition/au-exp-ps-actor-producer"/>
+        </extension>
+      </extension>
+      <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
+        <extension url="code">
+          <valueCode value="SHALL:handle"/>
+        </extension>
+        <extension url="actor">
+          <valueCanonical value="http://hl7.org.au.draft/fhir/aups/ActorDefinition/au-exp-ps-actor-consumer"/>
+        </extension>
+      </extension>
+      <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
+        <extension url="code">
+          <valueCode value="SHOULD:display"/>
+        </extension>
+        <extension url="actor">
+          <valueCanonical value="http://hl7.org.au.draft/fhir/aups/ActorDefinition/au-exp-ps-actor-consumer"/>
+        </extension>
+      </extension>
       <path value="Condition.clinicalStatus"/>
       <type>
 				<code value="CodeableConcept"/>
@@ -29,6 +53,30 @@
 			</type>
     </element>
     <element id="Condition.verificationStatus">
+      <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
+        <extension url="code">
+          <valueCode value="SHALL:populate-if-known"/>
+        </extension>
+        <extension url="actor">
+          <valueCanonical value="http://hl7.org.au.draft/fhir/aups/ActorDefinition/au-exp-ps-actor-producer"/>
+        </extension>
+      </extension>
+      <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
+        <extension url="code">
+          <valueCode value="SHALL:handle"/>
+        </extension>
+        <extension url="actor">
+          <valueCanonical value="http://hl7.org.au.draft/fhir/aups/ActorDefinition/au-exp-ps-actor-consumer"/>
+        </extension>
+      </extension>
+      <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
+        <extension url="code">
+          <valueCode value="SHOULD:display"/>
+        </extension>
+        <extension url="actor">
+          <valueCanonical value="http://hl7.org.au.draft/fhir/aups/ActorDefinition/au-exp-ps-actor-consumer"/>
+        </extension>
+      </extension>
       <path value="Condition.verificationStatus"/>
       <type>
 				<code value="CodeableConcept"/>
@@ -36,6 +84,30 @@
 			</type>
     </element>
     <element id="Condition.category">
+      <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
+        <extension url="code">
+          <valueCode value="SHALL:populate-if-known"/>
+        </extension>
+        <extension url="actor">
+          <valueCanonical value="http://hl7.org.au.draft/fhir/aups/ActorDefinition/au-exp-ps-actor-producer"/>
+        </extension>
+      </extension>
+      <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
+        <extension url="code">
+          <valueCode value="SHALL:handle"/>
+        </extension>
+        <extension url="actor">
+          <valueCanonical value="http://hl7.org.au.draft/fhir/aups/ActorDefinition/au-exp-ps-actor-consumer"/>
+        </extension>
+      </extension>
+      <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
+        <extension url="code">
+          <valueCode value="SHOULD:display"/>
+        </extension>
+        <extension url="actor">
+          <valueCanonical value="http://hl7.org.au.draft/fhir/aups/ActorDefinition/au-exp-ps-actor-consumer"/>
+        </extension>
+      </extension>
       <path value="Condition.category"/>
       <type>
 				<code value="CodeableConcept"/>
@@ -43,6 +115,30 @@
 			</type>
     </element>
     <element id="Condition.severity">
+      <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
+        <extension url="code">
+          <valueCode value="SHALL:populate-if-known"/>
+        </extension>
+        <extension url="actor">
+          <valueCanonical value="http://hl7.org.au.draft/fhir/aups/ActorDefinition/au-exp-ps-actor-producer"/>
+        </extension>
+      </extension>
+      <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
+        <extension url="code">
+          <valueCode value="SHALL:handle"/>
+        </extension>
+        <extension url="actor">
+          <valueCanonical value="http://hl7.org.au.draft/fhir/aups/ActorDefinition/au-exp-ps-actor-consumer"/>
+        </extension>
+      </extension>
+      <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
+        <extension url="code">
+          <valueCode value="SHOULD:display"/>
+        </extension>
+        <extension url="actor">
+          <valueCanonical value="http://hl7.org.au.draft/fhir/aups/ActorDefinition/au-exp-ps-actor-consumer"/>
+        </extension>
+      </extension>
       <path value="Condition.severity"/>
       <type>
 				<code value="CodeableConcept"/>
@@ -50,6 +146,30 @@
 			</type>
     </element>
     <element id="Condition.code">
+      <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
+        <extension url="code">
+          <valueCode value="SHALL:populate-if-known"/>
+        </extension>
+        <extension url="actor">
+          <valueCanonical value="http://hl7.org.au.draft/fhir/aups/ActorDefinition/au-exp-ps-actor-producer"/>
+        </extension>
+      </extension>
+      <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
+        <extension url="code">
+          <valueCode value="SHALL:handle"/>
+        </extension>
+        <extension url="actor">
+          <valueCanonical value="http://hl7.org.au.draft/fhir/aups/ActorDefinition/au-exp-ps-actor-consumer"/>
+        </extension>
+      </extension>
+      <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
+        <extension url="code">
+          <valueCode value="SHOULD:display"/>
+        </extension>
+        <extension url="actor">
+          <valueCanonical value="http://hl7.org.au.draft/fhir/aups/ActorDefinition/au-exp-ps-actor-consumer"/>
+        </extension>
+      </extension>
       <path value="Condition.code"/>
       <type>
 				<code value="CodeableConcept"/>
@@ -64,6 +184,30 @@
 			</type>
     </element>
     <element id="Condition.subject">
+      <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
+        <extension url="code">
+          <valueCode value="SHALL:populate-if-known"/>
+        </extension>
+        <extension url="actor">
+          <valueCanonical value="http://hl7.org.au.draft/fhir/aups/ActorDefinition/au-exp-ps-actor-producer"/>
+        </extension>
+      </extension>
+      <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
+        <extension url="code">
+          <valueCode value="SHALL:handle"/>
+        </extension>
+        <extension url="actor">
+          <valueCanonical value="http://hl7.org.au.draft/fhir/aups/ActorDefinition/au-exp-ps-actor-consumer"/>
+        </extension>
+      </extension>
+      <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
+        <extension url="code">
+          <valueCode value="SHOULD:display"/>
+        </extension>
+        <extension url="actor">
+          <valueCanonical value="http://hl7.org.au.draft/fhir/aups/ActorDefinition/au-exp-ps-actor-consumer"/>
+        </extension>
+      </extension>
       <path value="Condition.subject"/>
       <type>
         <code value="Reference"/>
@@ -71,11 +215,59 @@
       </type>
     </element>
     <element id="Condition.subject.reference">
+      <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
+        <extension url="code">
+          <valueCode value="SHALL:populate-if-known"/>
+        </extension>
+        <extension url="actor">
+          <valueCanonical value="http://hl7.org.au.draft/fhir/aups/ActorDefinition/au-exp-ps-actor-producer"/>
+        </extension>
+      </extension>
+      <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
+        <extension url="code">
+          <valueCode value="SHALL:handle"/>
+        </extension>
+        <extension url="actor">
+          <valueCanonical value="http://hl7.org.au.draft/fhir/aups/ActorDefinition/au-exp-ps-actor-consumer"/>
+        </extension>
+      </extension>
+      <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
+        <extension url="code">
+          <valueCode value="SHOULD:display"/>
+        </extension>
+        <extension url="actor">
+          <valueCanonical value="http://hl7.org.au.draft/fhir/aups/ActorDefinition/au-exp-ps-actor-consumer"/>
+        </extension>
+      </extension>
       <path value="Condition.subject.reference"/>
       <min value="1"/>
       <mustSupport value="true"/>
     </element>
     <element id="Condition.onset[x]">
+      <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
+        <extension url="code">
+          <valueCode value="SHALL:populate-if-known"/>
+        </extension>
+        <extension url="actor">
+          <valueCanonical value="http://hl7.org.au.draft/fhir/aups/ActorDefinition/au-exp-ps-actor-producer"/>
+        </extension>
+      </extension>
+      <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
+        <extension url="code">
+          <valueCode value="SHALL:handle"/>
+        </extension>
+        <extension url="actor">
+          <valueCanonical value="http://hl7.org.au.draft/fhir/aups/ActorDefinition/au-exp-ps-actor-consumer"/>
+        </extension>
+      </extension>
+      <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
+        <extension url="code">
+          <valueCode value="SHOULD:display"/>
+        </extension>
+        <extension url="actor">
+          <valueCanonical value="http://hl7.org.au.draft/fhir/aups/ActorDefinition/au-exp-ps-actor-consumer"/>
+        </extension>
+      </extension>
       <path value="Condition.onset[x]"/>
       <type>
         <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-type-must-support">
@@ -92,6 +284,60 @@
       <type>
         <code value="Range"/>
       </type>
+    </element>
+    <element id="Condition.abatement[x]">
+      <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
+        <extension url="code">
+          <valueCode value="SHALL:populate-if-known"/>
+        </extension>
+        <extension url="actor">
+          <valueCanonical value="http://hl7.org.au.draft/fhir/aups/ActorDefinition/au-exp-ps-actor-producer"/>
+        </extension>
+      </extension>
+      <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
+        <extension url="code">
+          <valueCode value="SHALL:handle"/>
+        </extension>
+        <extension url="actor">
+          <valueCanonical value="http://hl7.org.au.draft/fhir/aups/ActorDefinition/au-exp-ps-actor-consumer"/>
+        </extension>
+      </extension>
+      <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
+        <extension url="code">
+          <valueCode value="SHOULD:display"/>
+        </extension>
+        <extension url="actor">
+          <valueCanonical value="http://hl7.org.au.draft/fhir/aups/ActorDefinition/au-exp-ps-actor-consumer"/>
+        </extension>
+      </extension>
+      <path value="Condition.abatement[x]"/>
+    </element>
+    <element id="Condition.note">
+      <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
+        <extension url="code">
+          <valueCode value="SHALL:populate-if-known"/>
+        </extension>
+        <extension url="actor">
+          <valueCanonical value="http://hl7.org.au.draft/fhir/aups/ActorDefinition/au-exp-ps-actor-producer"/>
+        </extension>
+      </extension>
+      <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
+        <extension url="code">
+          <valueCode value="SHALL:handle"/>
+        </extension>
+        <extension url="actor">
+          <valueCanonical value="http://hl7.org.au.draft/fhir/aups/ActorDefinition/au-exp-ps-actor-consumer"/>
+        </extension>
+      </extension>
+      <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
+        <extension url="code">
+          <valueCode value="SHOULD:display"/>
+        </extension>
+        <extension url="actor">
+          <valueCanonical value="http://hl7.org.au.draft/fhir/aups/ActorDefinition/au-exp-ps-actor-consumer"/>
+        </extension>
+      </extension>
+      <path value="Condition.note"/>
     </element>
   </differential>
 </StructureDefinition>
