@@ -50,17 +50,12 @@
           <type value="type"/>
           <path value="resource"/>
         </discriminator>
-        <discriminator>
-          <type value="profile"/>
-          <path value="resource"/>
-        </discriminator>
         <rules value="open"/>
       </slicing>
       <short value="Entry resource in the patient summary bundle"/>
       <definition value="An entry resource included in the patient summary document bundle resource."/>
       <comment value="The Composition is the first entry (only a single Composition resource instance can be included) and a Patient resource.  Additional constraints are specified in the AU PS Composition profile."/>
       <min value="2"/>
-      <mustSupport value="true"/>
     </element>
     <element id="Bundle.entry.fullUrl">
       <path value="Bundle.entry.fullUrl"/>
@@ -92,6 +87,7 @@
         <code value="Composition"/>
         <profile value="http://hl7.org.au/fhir/ps/StructureDefinition/au-ps-composition"/>
       </type>
+      <mustSupport value="true"/>
     </element>
     <element id="Bundle.entry:patient">
       <path value="Bundle.entry"/>
@@ -302,115 +298,25 @@
         <profile value="http://hl7.org.au/fhir/ps/StructureDefinition/au-ps-organization"/>
       </type>
     </element>
-    <element id="Bundle.entry:observation-pregnancy-edd">
+    <element id="Bundle.entry:observation">
       <path value="Bundle.entry"/>
-      <sliceName value="observation-pregnancy-edd"/>
+      <sliceName value="observation"/>
       <min value="0"/>
       <max value="*"/>
     </element>
-    <element id="Bundle.entry:observation-pregnancy-edd.resource">
+    <element id="Bundle.entry:observation.resource">
       <path value="Bundle.entry.resource"/>
       <min value="1"/>
       <type>
         <code value="Observation"/>
+        <profile value="http://hl7.org/fhir/StructureDefinition/Observation"/>
         <profile value="http://hl7.org/fhir/uv/ips/StructureDefinition/Observation-pregnancy-edd-uv-ips"/>
-      </type>
-    </element>
-    <element id="Bundle.entry:observation-pregnancy-outcome">
-      <path value="Bundle.entry"/>
-      <sliceName value="observation-pregnancy-outcome"/>
-      <min value="0"/>
-      <max value="*"/>
-    </element>
-    <element id="Bundle.entry:observation-pregnancy-outcome.resource">
-      <path value="Bundle.entry.resource"/>
-      <min value="1"/>
-      <type>
-        <code value="Observation"/>
         <profile value="http://hl7.org/fhir/uv/ips/StructureDefinition/Observation-pregnancy-outcome-uv-ips"/>
-      </type>
-    </element>
-    <element id="Bundle.entry:observation-pregnancy-status">
-      <path value="Bundle.entry"/>
-      <sliceName value="observation-pregnancy-status"/>
-      <min value="0"/>
-      <max value="*"/>
-    </element>
-    <element id="Bundle.entry:observation-pregnancy-status.resource">
-      <path value="Bundle.entry.resource"/>
-      <min value="1"/>
-      <type>
-        <code value="Observation"/>
         <profile value="http://hl7.org/fhir/uv/ips/StructureDefinition/Observation-pregnancy-status-uv-ips"/>
-      </type>
-    </element>
-    <element id="Bundle.entry:observation-alcohol-use">
-      <path value="Bundle.entry"/>
-      <sliceName value="observation-alcohol-use"/>
-      <min value="0"/>
-      <max value="*"/>
-    </element>
-    <element id="Bundle.entry:observation-alcohol-use.resource">
-      <path value="Bundle.entry.resource"/>
-      <min value="1"/>
-      <type>
-        <code value="Observation"/>
         <profile value="http://hl7.org/fhir/uv/ips/StructureDefinition/Observation-alcoholuse-uv-ips"/>
-      </type>
-    </element>
-    <element id="Bundle.entry:observation-tobacco-use">
-      <path value="Bundle.entry"/>
-      <sliceName value="observation-tobacco-use"/>
-      <min value="0"/>
-      <max value="*"/>
-    </element>
-    <element id="Bundle.entry:observation-tobacco-use.resource">
-      <path value="Bundle.entry.resource"/>
-      <min value="1"/>
-      <type>
-        <code value="Observation"/>
         <profile value="http://hl7.org/fhir/uv/ips/StructureDefinition/Observation-tobaccouse-uv-ips"/>
-      </type>
-    </element>
-    <element id="Bundle.entry:observation-results-laboratory-pathology">
-      <path value="Bundle.entry"/>
-      <sliceName value="observation-results-laboratory-pathology"/>
-      <min value="0"/>
-      <max value="*"/>
-    </element>
-    <element id="Bundle.entry:observation-results-laboratory-pathology.resource">
-      <path value="Bundle.entry.resource"/>
-      <min value="1"/>
-      <type>
-        <code value="Observation"/>
         <profile value="http://hl7.org/fhir/uv/ips/StructureDefinition/Observation-results-laboratory-pathology-uv-ips"/>
-      </type>
-    </element>
-    <element id="Bundle.entry:observation-results-radiology">
-      <path value="Bundle.entry"/>
-      <sliceName value="observation-results-radiology"/>
-      <min value="0"/>
-      <max value="*"/>
-    </element>
-    <element id="Bundle.entry:observation-results-radiology.resource">
-      <path value="Bundle.entry.resource"/>
-      <min value="1"/>
-      <type>
-        <code value="Observation"/>
         <profile value="http://hl7.org/fhir/uv/ips/StructureDefinition/Observation-results-radiology-uv-ips"/>
-      </type>
-    </element>
-    <element id="Bundle.entry:observation-vital-signs">
-      <path value="Bundle.entry"/>
-      <sliceName value="observation-vital-signs"/>
-      <min value="0"/>
-      <max value="*"/>
-    </element>
-    <element id="Bundle.entry:observation-vital-signs.resource">
-      <path value="Bundle.entry.resource"/>
-      <min value="1"/>
-      <type>
-        <code value="Observation"/>
         <profile value="http://hl7.org/fhir/StructureDefinition/vitalsigns"/>
       </type>
     </element>
