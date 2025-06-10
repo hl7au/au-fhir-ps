@@ -51,10 +51,11 @@ This use case demonstrates use of patient summary during step 4. Endocrinologist
 1. Dr Cruickshank notes updated clinical information, including changes to Joyce’s insulin regimen.
 1. Based on the review and discussion with Joyce, Dr Cruickshank decides to increase Joyce’s insulin dose and documents the decision in the CIS.
 
+#### Sequence Diagram
 <div> 
   <img src="uc-referral-seq.png" alt="Sequence Diagram" style="width:80%"/>
 </div>
-*Figure 2: Sequence Diagram*
+*Figure 2: Sequence diagram showing access to embedded and updated patient summaries, with secure retrieval using public key cryptography*
 <br/>
 
 ### Examples
