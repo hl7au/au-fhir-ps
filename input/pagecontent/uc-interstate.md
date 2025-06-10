@@ -34,7 +34,7 @@ This use case demonstrates use of patient summary during step 5. Patient Summary
 ### Precondition(s)
 1. Jeramy has provided consent for his health information to be shared between healthcare providers.
 1. Jeramy is registered with a usual GP (Dr Abe Lowe) whose clinical information system maintains a current patient summary.
-1. Dr Wyatt Samuels’ CIS is connected to a network that allows secure record exchange.
+1. Dr Wyatt Samuels’ CIS is Smart Health Link capable and connected to a network that allows secure record exchange.
 
 ### Postcondition(s)
 1. Dr Wyatt Samuels has accessed and reviewed Jeramy’s patient summary.
@@ -49,10 +49,11 @@ This use case demonstrates use of patient summary during step 5. Patient Summary
 1. Dr Samuels reviews the summary, which may include medications, problems, allergies, immunisations, observations, and recent care events.
 1. The summary supports clinical decision-making during the consultation.
 
+#### Sequence Diagram
 <div> 
   <img src="uc-interstate-seq.png" alt="Sequence Diagram" style="width:80%"/>
 </div>
-*Figure 2: Sequence Diagram*
+*Figure 2: Sequence diagram showing access to a patient summary via Smart Health Link*
 <br/>
 
 ### Examples
