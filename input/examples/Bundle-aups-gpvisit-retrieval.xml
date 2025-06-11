@@ -71,13 +71,13 @@
           </code>
           <text>
             <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml">
-            <ul><li><div><b>Medication Name</b>: Metformin 500mg</div><div>Instructions: twice daily</div></li></ul>
-            <ul><li><div><b>Medication Name</b>: Rosuvastatin 40mg &amp; ezetrol 10mg</div><div>Instructions: once daily</div></li></ul>
-            <ul><li><div><b>Medication Name</b>: Telmisartan 80mg</div><div>Instructions: once daily</div></li></ul>
-            <ul><li><div><b>Medication Name</b>: Aspirin 100mg</div><div>Instructions: once daily</div></li></ul>
-            <ul><li><div><b>Medication Name</b>: Zyloprim 300mg</div><div>Instructions: once daily</div></li></ul>
-            <ul><li><div><b>Medication Name</b>: Ventolin</div><div>Instructions: 2 puffs, 4 times per day, and as needed</div></li></ul>
-            <ul><li><div><b>Medication Name</b>: Spiriva</div><div>Instructions: once daily</div></li></ul>
+            <ul><li><div><b>Medication Name</b>: Metformin 500mg</div><div>Instructions: twice daily</div><div>Clinical indication: Type 2 diabetes mellitus</div></li></ul>
+            <ul><li><div><b>Medication Name</b>: Rosuvastatin 40mg &amp; ezetrol 10mg</div><div>Instructions: once daily</div><div>Clinical indication: Hypercholesterolaemia</div></li></ul>
+            <ul><li><div><b>Medication Name</b>: Telmisartan 80mg</div><div>Instructions: once daily</div><div>Clinical indication: Hypertension</div></li></ul>
+            <ul><li><div><b>Medication Name</b>: Aspirin 100mg</div><div>Instructions: once daily</div><div>Clinical indication: Cardiovascular disease</div></li></ul>
+            <ul><li><div><b>Medication Name</b>: Zyloprim 300mg</div><div>Instructions: once daily</div><div>Clinical indication: Gout</div></li></ul>
+            <ul><li><div><b>Medication Name</b>: Ventolin</div><div>Instructions: 2 puffs, 4 times per day, and as needed</div><div>Clinical indication: COPD</div></li></ul>
+            <ul><li><div><b>Medication Name</b>: Spiriva</div><div>Instructions: once daily</div><div>Clinical indication: COPD</div></li></ul>
             </div>
           </text>
           <entry>
@@ -176,7 +176,7 @@
           </code>
           <text>
             <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml">
-            <ul><li><div><b>Procedure Name</b>: Angiogram</div><div>Date: 22/05/2025</div></li></ul>
+            <ul><li><div><b>Procedure Name</b>: Angiogram</div><div>Reason: Recent chest pain</div><div>Date: 22/05/2025</div></li></ul>
             <ul><li><div><b>Procedure Name</b>: Chest x-ray</div><div>Date: 22/02/2025</div></li></ul>
             </div>
           </text>
