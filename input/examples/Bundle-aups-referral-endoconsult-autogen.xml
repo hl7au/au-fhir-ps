@@ -56,10 +56,33 @@
             </coding>
           </code>
           <text>
-            <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml">No known allergies.</div>
+            <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml">
+            <table border="1">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Substance</th>
+                    <th>Date/time of onset of first reaction</th>
+                    <th>Manifestation</th>
+                    <th>Severity of reaction</th>
+                    <th>Comment</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>Allergy</td>
+                    <td>Prawns</td>
+                    <td>18:50 02/11/2024</td>
+                    <td>Itchy throat</td>
+                    <td>Mild</td>
+                    <td>Pt stated had prawns with dinner and noticed itchy throat, never experienced this before</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
           </text>
           <entry>
-            <reference value="urn:uuid:0baac8a9-69b8-4e99-9460-03df08f92c98"/>
+            <reference value="urn:uuid:f7bd83e4-2a4e-40be-8467-8a29b667ef46"/>
           </entry>
         </section>
         <section>
@@ -485,10 +508,10 @@
     </resource>
   </entry>
   <entry>
-    <fullUrl value="urn:uuid:0baac8a9-69b8-4e99-9460-03df08f92c98"/>
+    <fullUrl value="urn:uuid:f7bd83e4-2a4e-40be-8467-8a29b667ef46"/>
     <resource>
       <AllergyIntolerance>
-        <id value="0baac8a9-69b8-4e99-9460-03df08f92c98"/>
+        <id value="urn:uuid:f7bd83e4-2a4e-40be-8467-8a29b667ef46"/>
         <meta>
           <profile value="http://hl7.org.au/fhir/ps/StructureDefinition/au-ps-allergyintolerance"/>
         </meta>
@@ -496,18 +519,39 @@
           <coding>
             <system value="http://terminology.hl7.org/CodeSystem/allergyintolerance-clinical"/>
             <code value="active"/>
+            <display value="Active"/>
           </coding>
         </clinicalStatus>
+        <verificationStatus>
+          <coding>
+            <system value="http://terminology.hl7.org/CodeSystem/allergyintolerance-verification"/>
+            <code value="unconfirmed"/>
+            <display value="Unconfirmed"/>
+          </coding>
+        </verificationStatus>
+        <type value="allergy"/>
         <code>
           <coding>
             <system value="http://snomed.info/sct"/>
-            <code value="716186003"/>
+            <code value="227151004"/>
+            <display value="Prawns"/>
           </coding>
-          <text value="No known allergy"/>
+          <text value="Prawns"/>
         </code>
         <patient>
           <reference value="urn:uuid:85822a88-55b1-460c-bb7b-e8fc22d8568f"/>
         </patient>
+        <onsetDateTime value="2024-11-02T18:50:00+11:00"/>
+        <recordedDate value="2024-11-04"/>
+        <note>
+          <text value="Pt stated had prawns with dinner and noticed itchy throat, never experienced this before"/>
+        </note>
+        <reaction>
+          <manifestation>
+            <text value="Itchy throat"/>  
+          </manifestation>
+          <severity value="mild"/>  
+        </reaction>
       </AllergyIntolerance>
     </resource>
   </entry>
