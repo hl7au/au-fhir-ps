@@ -103,6 +103,7 @@
                     <th>Clinical Indication</th>
                     <th>Status</th>
                     <th>Last Updated</th>
+                    <th>Comment</th>
                   </tr>
                 </thead>
                 <tbody>
@@ -112,6 +113,7 @@
                     <td></td>
                     <td>Active</td>
                     <td>28/10/2024</td>
+                    <td>Pt prefers Blackmores</td>
                   </tr>
                   <tr>
                     <td>Insulin (Humulin N)</td>
@@ -119,6 +121,7 @@
                     <td></td>
                     <td>Active</td>
                     <td>28/10/2024</td>
+                    <td></td>
                   </tr>
                   <tr>
                     <td>Insulin (Humulin R)</td>
@@ -126,6 +129,7 @@
                     <td></td>
                     <td>Active</td>
                     <td>28/10/2024</td>
+                    <td></td>
                   </tr>
                   <tr>
                     <td>Metformin</td>
@@ -133,6 +137,7 @@
                     <td></td>
                     <td>Active</td>
                     <td>28/10/2024</td>
+                    <td></td>
                   </tr>
                   <tr>
                     <td>Trimethoprim</td>
@@ -140,6 +145,7 @@
                     <td>Urinary tract infection (UTI)</td>
                     <td>Active</td>
                     <td>04/11/2024</td>
+                    <td></td>
                   </tr>
                 </tbody>
               </table>
@@ -238,6 +244,7 @@
                   <tr>
                     <td>Influenza vaccine</td>
                     <td>15/05/2023</td>
+                    <td>Pt reported localised redness and swelling post previous flu vax last year. Monitor for rxn.</td>
                   </tr>
                   <tr>
                     <td>COVID-19 mRNA-1273 Vaccine (Moderna) injection, 0.5 mL syringe</td>
@@ -511,7 +518,7 @@
     <fullUrl value="urn:uuid:f7bd83e4-2a4e-40be-8467-8a29b667ef46"/>
     <resource>
       <AllergyIntolerance>
-        <id value="urn:uuid:f7bd83e4-2a4e-40be-8467-8a29b667ef46"/>
+        <id value="f7bd83e4-2a4e-40be-8467-8a29b667ef46"/>
         <meta>
           <profile value="http://hl7.org.au/fhir/ps/StructureDefinition/au-ps-allergyintolerance"/>
         </meta>
@@ -705,6 +712,9 @@
           <start value="2024"/>
         </effectivePeriod>
         <dateAsserted value="2024-10-24"/>
+        <note>
+          <text value="Pt prefers Blackmores"/>
+        </note>
         <dosage>
           <text value="1 tablet daily"/>
           <route>
@@ -1329,6 +1339,9 @@
         </patient>
         <occurrenceDateTime value="2023-05-15"/>
         <primarySource value="true"/>
+        <note>
+          <text value="Pt reported localised redness and swelling post previous flu vax last year. Monitor for rxn."/>
+        </note>
       </Immunization>
     </resource>
   </entry>
