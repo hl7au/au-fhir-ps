@@ -2002,7 +2002,7 @@
         <serviceType>
           <coding>
             <system value="http://snomed.info/sct"/>
-            <code value="16.0045006"/>
+            <code value="1230045006"/>
             <display value="Cardiac diagnostic service"/>
           </coding>
         </serviceType>
