@@ -31,7 +31,7 @@
         <subject>
           <reference value="urn:uuid:9be88cc6-09e8-4dc6-b058-88676240dbc7"/>
         </subject>
-        <date value="2021-05-03"/>
+        <date value="2025-01-08"/>
         <author>
           <reference value="urn:uuid:715076f4-007a-4c9d-beed-c155cc46f765"/>
         </author>
@@ -60,7 +60,7 @@
             </coding>
           </code>
           <text>
-            <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml" lang="en-AU" xml:lang="en-AU">There is no information available regarding the consumer"s allergy conditions.</div>
+            <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml" lang="en-AU" xml:lang="en-AU">There is no information available regarding the consumer's allergy conditions.</div>
           </text>
           <emptyReason>
             <coding>
