@@ -32,7 +32,7 @@
         <author>
           <reference value="urn:uuid:40c3b2a7-e673-4f83-8dd8-2b112a88775e"/>
         </author>
-        <title value="Patient Summary for Joyce Johnson as of 28 OCT 2024"/>
+        <title value="Patient Summary for Joyce Johnson as of 07 NOV 2024"/>
         <custodian>
           <reference value="urn:uuid:14292353-98f0-43b3-a25b-406baf3f9175"/>
         </custodian>
@@ -206,43 +206,43 @@
                 <tbody>
                   <tr>
                     <td>Diphtheria + tetanus + pertussis 5 component adolescent/adult vaccine injection, 0.5 mL syringe</td>
-                    <td>5/10/2024</td>
+                    <td>05/10/2024</td>
                   </tr>
                   <tr>
                     <td>Influenza vaccine</td>
-                    <td>5/5/2024</td>
+                    <td>05/05/2024</td>
                   </tr>
                   <tr>
                     <td>Influenza vaccine</td>
-                    <td>15/5/2023</td>
+                    <td>15/05/2023</td>
                   </tr>
                   <tr>
                     <td>COVID-19 mRNA-1273 Vaccine (Moderna) injection, 0.5 mL syringe</td>
-                    <td>15/5/2023</td>
+                    <td>15/05/2023</td>
                   </tr>
                   <tr>
                     <td>Influenza vaccine</td>
-                    <td>1/6/2022</td>
+                    <td>01/06/2022</td>
                   </tr>
                   <tr>
                     <td>Covid vaccine - Pfizer</td>
-                    <td>2/2/2022</td>
+                    <td>02/02/2022</td>
                   </tr>
                   <tr>
                     <td>Covid vaccine - Pfizer</td>
-                    <td>20/7/2021</td>
+                    <td>20/07/2021</td>
                   </tr>
                   <tr>
                     <td>Influenza vaccine</td>
-                    <td>17/5/2021</td>
+                    <td>17/05/2021</td>
                   </tr>
                   <tr>
                     <td>Covid vaccine - Pfizer</td>
-                    <td>27/4/2021</td>
+                    <td>27/04/2021</td>
                   </tr>
                   <tr>
                     <td>Influenza vaccine</td>
-                    <td>03/5/2020</td>
+                    <td>03/05/2020</td>
                   </tr>
                 </tbody>
               </table>
@@ -285,7 +285,6 @@
             <coding>
               <system value="http://loinc.org"/>
               <code value="11348-0"/>
-              <display value="History of Past illness Narrative"/>
             </coding>
           </code>
           <text>
@@ -303,19 +302,19 @@
                   <tr>
                     <td>Appendicitis</td>
                     <td>Resolved</td>
-                    <td>March 2000</td>
+                    <td>03/2000</td>
                     <td></td>
                   </tr>
                   <tr>
                     <td>Upper respiratory tract infection</td>
                     <td>Resolved</td>
-                    <td>October 2022</td>
+                    <td>10/2022</td>
                     <td></td>
                   </tr>
                   <tr>
                     <td>First degree burn, Upper shoulders and back</td>
                     <td>Resolved</td>
-                    <td>02 January 2025</td>
+                    <td>02/01/2005</td>
                     <td>Severe sunburn, upper shoulders and back</td>
                   </tr>
                 </tbody>
@@ -330,9 +329,6 @@
           </entry>
           <entry>
             <reference value="urn:uuid:dc422222-8b3a-4dd5-96b5-b7e0cf43b477"/>
-          </entry>
-          <entry>
-            <reference value="urn:uuid:fc061f59-5410-41e9-945e-3f59664e8611"/>
           </entry>
         </section>
         <section>
@@ -372,22 +368,22 @@
                   <tr>
                     <td>Glucose Tolerance Test (GTT) Fasting</td>
                     <td>5.3 mmol/L</td>
-                    <td>21/10/24</td>
+                    <td>21/10/2024</td>
                   </tr>
                   <tr>
                     <td>Glucose Tolerance Test (GTT) 1 hour</td>
                     <td>10.0 mmol/L</td>
-                    <td>21/10/24</td>
+                    <td>21/10/2024</td>
                   </tr>
                   <tr>
-                    <td>Glucose Tolerance Test (GTT) 2 hours</td>
+                    <td>Glucose Tolerance Test (GTT) 2 hour</td>
                     <td>8.6 mmol/L</td>
-                    <td>21/10/24</td>
+                    <td>21/10/2024</td>
                   </tr>
                   <tr>
                     <td>Haemoglobin A1c</td>
                     <td>5.8 %</td>
-                    <td>14/06/24</td>
+                    <td>14/06/2024</td>
                   </tr>
                 </tbody>
               </table>
@@ -401,6 +397,9 @@
           </entry>
           <entry>
             <reference value="urn:uuid:27060cbf-e30e-4091-bd64-7d4ef40916ac"/>
+          </entry>
+          <entry>
+            <reference value="urn:uuid:fc061f59-5410-41e9-945e-3f59664e8611"/>
           </entry>
         </section>
         <section>
@@ -1526,6 +1525,11 @@
             <display value="Glucose tolerance test"/>
           </coding>
           <coding>
+            <system value="http://loinc.org"/>
+            <code value="14995-5"/>
+            <display value="Glucose [Moles/volume] in Serum or Plasma --2 hours post 75 g glucose PO"/>
+          </coding>
+          <coding>
             <system value="http://snomed.info/sct"/>
             <code value="123030002"/>
             <display value="2 hours (qualifier value)"/>
@@ -1577,7 +1581,12 @@
           <code value="792805006"/>
           <display value="Fasting (regime/therapy)"/>
         </coding>
-        <text value="Glucose Tolerance Test (GTT) fasting"/>
+        <coding>
+          <system value="http://loinc.org"/>
+          <code value="14996-3"/>
+          <display value="Glucose [Moles/volume] in Serum or Plasma --pre 75 g glucose PO"/>
+        </coding>
+        <text value="Glucose Tolerance Test (GTT) Fasting"/>
       </code>
       <subject>
         <reference value="urn:uuid:85822a88-55b1-460c-bb7b-e8fc22d8568f"/>
@@ -1619,6 +1628,11 @@
             <code value="113076002"/>
             <display value="Glucose tolerance test (procedure)"/>
           </coding>
+          <coding>
+            <system value="http://loinc.org"/>
+            <code value="51597-3"/>
+            <display value="Glucose [Moles/volume] in Serum or Plasma --1 hour post 75 g glucose PO"/>
+          </coding>
           <text value="Glucose Tolerance Test (GTT) 1 hour"/>
         </code>
         <subject>
@@ -1658,8 +1672,8 @@
         <code>
           <coding>
             <system value="http://loinc.org"/>
-            <code value="17856-6"/>
-            <display value="Hemoglobin A1c/Hemoglobin.total in Blood by HPLC"/>
+            <code value="4548-4"/>
+            <display value="Hemoglobin A1c/Hemoglobin.total in Blood"/>
           </coding>
           <text value="Haemoglobin A1c"/>
         </code>

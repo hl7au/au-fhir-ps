@@ -94,7 +94,7 @@
                 <tr>
                   <td>Chlorhexidine</td>
                   <td>12/01/2023</td>
-                  <td>12/01/2023</td>
+                  <td>09/09/2023</td>
                   <td>Hives</td>
                   <td>Mild</td>
                 </tr>
@@ -472,8 +472,8 @@
         <patient>
           <reference value="urn:uuid:9be88cc6-09e8-4dc6-b058-88676240dbc7"/>
         </patient>
-        <onsetDateTime value="2021-01-12"/>
-        <recordedDate value="2021-09-09"/>
+        <onsetDateTime value="2023-01-12"/>
+        <recordedDate value="2023-09-09"/>
         <reaction>
           <substance>
             <coding>

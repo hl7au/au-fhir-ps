@@ -73,9 +73,9 @@
             <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml">
             <ul><li><div><b>Medication Name</b>: Metformin 500mg</div><div>Instructions: twice daily</div></li></ul>
             <ul><li><div><b>Medication Name</b>: Rosuvastatin 40mg &amp; ezetrol 10mg</div><div>Instructions: once daily</div></li></ul>
-            <ul><li><div><b>Medication Name</b>: Telmisartan, 80mg</div><div>Instructions: once daily</div></li></ul>
+            <ul><li><div><b>Medication Name</b>: Telmisartan 80mg</div><div>Instructions: once daily</div></li></ul>
             <ul><li><div><b>Medication Name</b>: Aspirin 100mg</div><div>Instructions: once daily</div></li></ul>
-            <ul><li><div><b>Medication Name</b>: Zyloprim, 300mg</div><div>Instructions: once daily</div></li></ul>
+            <ul><li><div><b>Medication Name</b>: Zyloprim 300mg</div><div>Instructions: once daily</div></li></ul>
             <ul><li><div><b>Medication Name</b>: Ventolin</div><div>Instructions: 2 puffs, 4 times per day, and as needed</div></li></ul>
             <ul><li><div><b>Medication Name</b>: Spiriva</div><div>Instructions: once daily</div></li></ul>
             </div>
@@ -193,6 +193,7 @@
             <coding>
               <system value="http://loinc.org"/>
               <code value="30954-2"/>
+              <display value="Relevant diagnostic tests/laboratory data Narrative"/>
             </coding>
           </code>
           <text>
@@ -210,24 +211,24 @@
                 <tbody>
                   <tr>
                     <td>2025-03-17</td>
-                    <td>210 mg/dL</td>
-                    <td>60 mg/dL</td>
-                    <td>120 mg/dL</td>
-                    <td>150 mg/dL</td>
+                    <td>5.4 mmol/L</td>
+                    <td>1.55 mmol/L</td>
+                    <td>3.10 mmol/L</td>
+                    <td>1.7 mmol/L</td>
                   </tr>
                   <tr>
                     <td>2024-12-17</td>
-                    <td>220 mg/dL</td>
-                    <td>55 mg/dL</td>
-                    <td>130 mg/dL</td>
-                    <td>160 mg/dL</td>
+                    <td>5.7 mmol/L</td>
+                    <td>1.42 mmol/L</td>
+                    <td>3.36 mmol/L</td>
+                    <td>1.8 mmol/L</td>
                   </tr>
                   <tr>
                     <td>2024-09-17</td>
-                    <td>230 mg/dL</td>
-                    <td>50 mg/dL</td>
-                    <td>140 mg/dL</td>
-                    <td>170 mg/dL</td>
+                    <td>6.0 mmol/L</td>
+                    <td>1.29 mmol/L</td>
+                    <td>3.62 mmol/L</td>
+                    <td>1.9 mmol/L</td>
                   </tr>
                 </tbody>
               </table>
@@ -1000,6 +1001,21 @@
           <lastUpdated value="2025-05-25T11:17:03.285+11:00"/>
           <profile value="http://hl7.org.au/fhir/ps/StructureDefinition/au-ps-condition"/>
         </meta>
+        <clinicalStatus>
+          <coding>
+            <system value="http://terminology.hl7.org/CodeSystem/condition-clinical"/>
+            <code value="active"/>
+            <display value="Active"/>
+          </coding>
+          <text value="Active"/>
+        </clinicalStatus>
+        <verificationStatus>
+          <coding>
+            <system value="http://terminology.hl7.org/CodeSystem/condition-ver-status"/>
+            <code value="confirmed"/>
+            <display value="Confirmed"/>
+          </coding>
+        </verificationStatus>
         <category>
           <coding>
             <system value="http://terminology.hl7.org/CodeSystem/condition-category"/>
@@ -1119,7 +1135,6 @@
     <fullUrl value="urn:uuid:9d9b67a1-15b0-42db-9108-78176017fbed"/>
     <resource>
       <Procedure>
-      <id value="9d9b67a1-15b0-42db-9108-78176017fbed"/>
       <meta>
           <versionId value="1"/>
           <lastUpdated value="2025-05-27T11:39:15.709+11:00"/>
@@ -1149,10 +1164,9 @@
     <fullUrl value="urn:uuid:4db923a9-f239-411e-911d-62b60b794313"/>
     <resource>
       <Procedure>
-        <id value="4db923a9-f239-411e-911d-62b60b794313"/>
         <meta>
           <versionId value="1"/>
-          <lastUpdated value="2024-12-12T11:39:15.709+11:00"/>
+          <lastUpdated value="2025-02-27T11:39:15.709+11:00"/>
           <profile value="http://hl7.org.au/fhir/ps/StructureDefinition/au-ps-procedure"/>
         </meta>
         <status value="completed"/>
@@ -1176,7 +1190,6 @@
   <fullUrl value="urn:uuid:2862efc6-c7a9-41aa-9d36-f0dcba427635"/>
   <resource>
     <Observation>
-        <id value="2862efc6-c7a9-41aa-9d36-f0dcba427635" />
         <meta>
             <versionId value="1"/>
             <lastUpdated value="2025-05-27T11:39:15.709+11:00"/>
@@ -1218,10 +1231,10 @@
           </extension>
         </performer>
         <valueQuantity>
-            <value value="150" />
-            <unit value="mg/dL" />
+            <value value="1.7" />
+            <unit value="mmol/L" />
             <system value="http://unitsofmeasure.org" />
-            <code value="mg/dL" />
+            <code value="mmol/L" />
         </valueQuantity>
      </Observation>
   </resource>
@@ -1230,7 +1243,6 @@
   <fullUrl value="urn:uuid:6400636f-9f75-40f9-97a0-4255f02aecc6"/>
   <resource>
     <Observation>
-        <id value="6400636f-9f75-40f9-97a0-4255f02aecc6" />
         <meta>
             <versionId value="1"/>
             <lastUpdated value="2025-05-27T11:39:15.709+11:00"/>
@@ -1272,10 +1284,10 @@
         </extension>
     </performer>
     <valueQuantity>
-        <value value="60" />
-        <unit value="mg/dL" />
+        <value value="1.55" />
+        <unit value="mmol/L" />
         <system value="http://unitsofmeasure.org" />
-        <code value="mg/dL" />
+        <code value="mmol/L" />
     </valueQuantity>
   </Observation>
   </resource>
@@ -1284,7 +1296,6 @@
   <fullUrl value="urn:uuid:38045915-7f10-42b0-943e-f1b90356d3b9"/>
   <resource>
     <Observation>
-        <id value="38045915-7f10-42b0-943e-f1b90356d3b9" />
         <meta>
             <versionId value="1"/>
             <lastUpdated value="2025-05-27T11:39:15.709+11:00"/>
@@ -1326,10 +1337,10 @@
         </extension>
     </performer>
     <valueQuantity>
-        <value value="120" />
-        <unit value="mg/dL" />
+        <value value="3.10" />
+        <unit value="mmol/L" />
         <system value="http://unitsofmeasure.org" />
-        <code value="mg/dL" />
+        <code value="mmol/L" />
     </valueQuantity>
     </Observation>
   </resource>
@@ -1338,7 +1349,6 @@
   <fullUrl value="urn:uuid:c56a3eb6-d7e5-475f-831f-36530961013c"/>
   <resource>
     <Observation>
-        <id value="c56a3eb6-d7e5-475f-831f-36530961013c" />
         <meta>
             <versionId value="1"/>
             <lastUpdated value="2025-05-27T11:39:15.709+11:00"/>
@@ -1364,10 +1374,10 @@
     <code>
         <coding>
             <system value="http://loinc.org" />
-            <code value="32309-7" />
-            <display value="Cholesterol.total/Cholesterol in HDL [Molar ratio] in Serum or Plasma" />
+            <code value="14647-2" />
+            <display value="Cholesterol [Moles/volume] in Serum or Plasma" />
         </coding>
-        <text value="Total Chol/HDL" />
+        <text value="Total Cholesterol" />
     </code>
     <subject>
         <reference value="urn:uuid:d1122188-f53f-417f-a84f-bc44479baa63"/>
@@ -1380,10 +1390,10 @@
       </extension>
     </performer>
     <valueQuantity>
-        <value value="210" />
-        <unit value="mg/dL" />
+        <value value="5.4" />
+        <unit value="mmol/L" />
         <system value="http://unitsofmeasure.org" />
-        <code value="mg/dL" />
+        <code value="mmol/L" />
     </valueQuantity>
     </Observation>
   </resource>
@@ -1392,7 +1402,6 @@
   <fullUrl value="urn:uuid:25f95f9c-391c-4e35-ad70-7d4cff3178f1"/>
   <resource>
     <Observation>
-        <id value="25f95f9c-391c-4e35-ad70-7d4cff3178f1" />
         <meta>
             <versionId value="1"/>
             <lastUpdated value="2025-01-27T11:39:15.709+11:00"/>
@@ -1418,10 +1427,10 @@
     <code>
         <coding>
             <system value="http://loinc.org" />
-            <code value="32309-7" />
-            <display value="Cholesterol.total/Cholesterol in HDL [Molar ratio] in Serum or Plasma" />
+            <code value="14647-2" />
+            <display value="Cholesterol [Moles/volume] in Serum or Plasma" />
         </coding>
-        <text value="Total Chol/HDL" />
+        <text value="Total Cholesterol" />
     </code>
     <subject>
         <reference value="urn:uuid:d1122188-f53f-417f-a84f-bc44479baa63"/>
@@ -1434,10 +1443,10 @@
             </extension>
         </performer>
     <valueQuantity>
-        <value value="220" />
-        <unit value="mg/dL" />
+        <value value="5.7" />
+        <unit value="mmol/L" />
         <system value="http://unitsofmeasure.org" />
-        <code value="mg/dL" />
+        <code value="mmol/L" />
     </valueQuantity>
     </Observation>
   </resource>
@@ -1446,7 +1455,6 @@
   <fullUrl value="urn:uuid:437947c1-6b9b-4213-94b9-19a801bf3113"/>
   <resource>
     <Observation>
-        <id value="437947c1-6b9b-4213-94b9-19a801bf3113" />
         <meta>
             <versionId value="1"/>
             <lastUpdated value="2025-01-27T11:39:15.709+11:00"/>
@@ -1488,10 +1496,10 @@
         </extension>
     </performer>
     <valueQuantity>
-        <value value="55" />
-        <unit value="mg/dL" />
+        <value value="1.42" />
+        <unit value="mmol/L" />
         <system value="http://unitsofmeasure.org" />
-        <code value="mg/dL" />
+        <code value="mmol/L" />
     </valueQuantity>
     </Observation>
   </resource>
@@ -1500,7 +1508,6 @@
   <fullUrl value="urn:uuid:28204a08-571b-4c5e-b234-00b65e2e63cf"/>
   <resource>
     <Observation>
-        <id value="28204a08-571b-4c5e-b234-00b65e2e63cf" />
         <meta>
             <versionId value="1"/>
             <lastUpdated value="2025-01-27T11:39:15.709+11:00"/>
@@ -1542,10 +1549,10 @@
             </extension>
     </performer>
     <valueQuantity>
-        <value value="130" />
-        <unit value="mg/dL" />
+        <value value="3.36" />
+        <unit value="mmol/L" />
         <system value="http://unitsofmeasure.org" />
-        <code value="mg/dL" />
+        <code value="mmol/L" />
     </valueQuantity>
     </Observation>
   </resource>
@@ -1554,7 +1561,6 @@
   <fullUrl value="urn:uuid:e50ef658-5b84-44f4-a40c-f1777830e1dd"/>
   <resource>
     <Observation>
-        <id value="e50ef658-5b84-44f4-a40c-f1777830e1dd" />
         <meta>
             <versionId value="1"/>
             <lastUpdated value="2025-01-27T11:39:15.709+11:00"/>
@@ -1596,10 +1602,10 @@
             </extension>
         </performer>
         <valueQuantity>
-            <value value="160" />
-            <unit value="mg/dL" />
+            <value value="1.8" />
+            <unit value="mmol/L" />
             <system value="http://unitsofmeasure.org" />
-            <code value="mg/dL" />
+            <code value="mmol/L" />
         </valueQuantity>
      </Observation>
   </resource>
@@ -1608,7 +1614,6 @@
   <fullUrl value="urn:uuid:bf2ee7c5-39b8-4b35-8b49-7a5815bc45a1"/>
   <resource>
     <Observation>
-        <id value="bf2ee7c5-39b8-4b35-8b49-7a5815bc45a1" />
         <meta>
             <versionId value="1"/>
             <lastUpdated value="2024-10-27T11:39:15.709+11:00"/>
@@ -1634,10 +1639,10 @@
     <code>
         <coding>
             <system value="http://loinc.org" />
-            <code value="32309-7" />
-            <display value="Cholesterol.total/Cholesterol in HDL [Molar ratio] in Serum or Plasma" />
+            <code value="14647-2" />
+            <display value="Cholesterol [Moles/volume] in Serum or Plasma" />
         </coding>
-        <text value="Total Chol/HDL" />
+        <text value="Total Cholesterol" />
     </code>
     <subject>
         <reference value="urn:uuid:d1122188-f53f-417f-a84f-bc44479baa63"/>
@@ -1650,10 +1655,10 @@
         </extension>
     </performer>
     <valueQuantity>
-        <value value="230" />
-        <unit value="mg/dL" />
+        <value value="6.0" />
+        <unit value="mmol/L" />
         <system value="http://unitsofmeasure.org" />
-        <code value="mg/dL" />
+        <code value="mmol/L" />
     </valueQuantity>
     </Observation>
   </resource>
@@ -1662,7 +1667,6 @@
   <fullUrl value="urn:uuid:1e9a7f3b-e353-4a5e-baaa-68a344fc03ba"/>
   <resource>
     <Observation>
-        <id value="1e9a7f3b-e353-4a5e-baaa-68a344fc03ba" />
         <meta>
             <versionId value="1"/>
             <lastUpdated value="2024-10-27T11:39:15.709+11:00"/>
@@ -1704,10 +1708,10 @@
         </extension>
     </performer>
     <valueQuantity>
-        <value value="50" />
-        <unit value="mg/dL" />
+        <value value="1.29" />
+        <unit value="mmol/L" />
         <system value="http://unitsofmeasure.org" />
-        <code value="mg/dL" />
+        <code value="mmol/L" />
     </valueQuantity>
     </Observation>
   </resource>
@@ -1716,7 +1720,6 @@
   <fullUrl value="urn:uuid:0d390cb3-5d12-4051-ad50-bbc5423cb9fa"/>
   <resource>
     <Observation>
-        <id value="0d390cb3-5d12-4051-ad50-bbc5423cb9fa" />
         <meta>
             <versionId value="1"/>
             <lastUpdated value="2024-10-27T11:39:15.709+11:00"/>
@@ -1758,10 +1761,10 @@
             </extension>
     </performer>
     <valueQuantity>
-        <value value="140" />
-        <unit value="mg/dL" />
+        <value value="3.62" />
+        <unit value="mmol/L" />
         <system value="http://unitsofmeasure.org" />
-        <code value="mg/dL" />
+        <code value="mmol/L" />
     </valueQuantity>
     </Observation>
   </resource>
@@ -1770,7 +1773,6 @@
   <fullUrl value="urn:uuid:12388761-b69d-4d4f-a19a-82b13ae3d960"/>
   <resource>
     <Observation>
-        <id value="12388761-b69d-4d4f-a19a-82b13ae3d960" />
         <meta>
             <versionId value="1"/>
             <lastUpdated value="2024-10-27T11:39:15.709+11:00"/>
@@ -1812,10 +1814,10 @@
             </extension>
         </performer>
         <valueQuantity>
-            <value value="170" />
-            <unit value="mg/dL" />
+            <value value="1.9" />
+            <unit value="mmol/L" />
             <system value="http://unitsofmeasure.org" />
-            <code value="mg/dL" />
+            <code value="mmol/L" />
         </valueQuantity>
      </Observation>
   </resource>
@@ -1824,7 +1826,6 @@
     <fullUrl value="urn:uuid:4d1e0ca1-4ea7-46a2-8f0f-af5225b73c3a"/>
     <resource>
       <Organization>
-        <id value="4d1e0ca1-4ea7-46a2-8f0f-af5225b73c3a"/>
         <meta>
           <versionId value="5"/>
           <lastUpdated value="2024-02-27T11:39:15.709+11:00"/>
@@ -1885,7 +1886,7 @@
     </resource>
   </entry>
   <entry>
-    <fullUrl value="urn:89fc11f9-a586-4bea-9393-d50e88952a7e"/>
+    <fullUrl value="urn:uuid:89fc11f9-a586-4bea-9393-d50e88952a7e"/>
     <resource>
       <Organization>
         <meta>
@@ -1944,7 +1945,7 @@
   <entry>
     <fullUrl value="urn:uuid:e28c5ed1-6092-44cc-b1a9-2ddf4ea550e1"/>
     <resource>
-        <Location xmlns="http://hl7.org/fhir">
+        <Location>
             <meta>
                 <versionId value="2"/>
                 <lastUpdated value="2025-05-25T11:39:15.709+11:00"/>
@@ -1978,7 +1979,7 @@
                 </coding>
             </physicalType>
             <managingOrganization>
-                <reference value="urn:89fc11f9-a586-4bea-9393-d50e88952a7e"/>
+                <reference value="urn:uuid:89fc11f9-a586-4bea-9393-d50e88952a7e"/>
             </managingOrganization>
         </Location>
     </resource>
@@ -1986,7 +1987,7 @@
   <entry>
     <fullUrl value="urn:uuid:f7aaf2d5-c105-4652-8b4c-e555903593a7"/>
     <resource>
-      <Encounter xmlns="http://hl7.org/fhir">
+      <Encounter>
         <meta>
           <versionId value="1"/>
           <lastUpdated value="2025-05-25T11:39:15.709+11:00"/>
@@ -2019,7 +2020,7 @@
           </location>
         </location>
         <serviceProvider>
-          <reference value="urn:89fc11f9-a586-4bea-9393-d50e88952a7e"/>
+          <reference value="urn:uuid:89fc11f9-a586-4bea-9393-d50e88952a7e"/>
         </serviceProvider>
       </Encounter>
     </resource>

@@ -190,19 +190,19 @@
                 <tbody>
                   <tr>
                     <td>Diphtheria + tetanus + pertussis 5 component adolescent/adult vaccine injection, 0.5 mL syringe</td>
-                    <td>5/10/2024</td>
+                    <td>05/10/2024</td>
                   </tr>
                   <tr>
                     <td>Influenza vaccine</td>
-                    <td>5/5/2024</td>
+                    <td>05/05/2024</td>
                   </tr>
                   <tr>
                     <td>Influenza vaccine</td>
-                    <td>15/5/2023</td>
+                    <td>15/05/2023</td>
                   </tr>
                   <tr>
                     <td>COVID-19 mRNA-1273 Vaccine (Moderna) injection, 0.5 mL syringe</td>
-                    <td>15/5/2023</td>
+                    <td>15/05/2023</td>
                   </tr>
                 </tbody>
               </table>
@@ -212,16 +212,10 @@
             <reference value="urn:uuid:784ae7d5-22df-442d-b932-0c001720136c"/>
           </entry>
           <entry>
-            <reference value="urn:uuid:46624cc1-7d2e-4367-aa82-85d097ac423f"/>
-          </entry>
-          <entry>
             <reference value="urn:uuid:97767fb5-3be7-4d16-9ee8-76c47a4ab0ce"/>
           </entry>
           <entry>
             <reference value="urn:uuid:62eb70e3-e814-4785-80d3-8aa45b1fc367"/>
-          </entry>
-          <entry>
-            <reference value="urn:uuid:fac8c42e-4d2a-4cf5-bcc6-831c60e8230e"/>
           </entry>
           <entry>
             <reference value="urn:uuid:2f3537b2-f50c-4a2a-ab92-30fdcfe5fd96"/>
@@ -853,31 +847,6 @@ Overall, Joyce maintains a healthy and supportive lifestyle, with good access to
     </resource>
   </entry>
   <entry>
-    <fullUrl value="urn:uuid:46624cc1-7d2e-4367-aa82-85d097ac423f"/>
-    <resource>
-      <Immunization>
-        <id value="46624cc1-7d2e-4367-aa82-85d097ac423f"/>
-        <meta>
-          <profile value="http://hl7.org.au/fhir/ps/StructureDefinition/au-ps-immunization"/>
-        </meta>
-        <status value="completed"/>
-        <vaccineCode>
-          <coding>
-            <system value="https://www.humanservices.gov.au/organisations/health-professionals/enablers/air-vaccine-code-formats"/>
-            <code value="PANVAX"/>
-          </coding>
-          <text value="Panvax"/>
-        </vaccineCode>
-        <patient>
-          <reference value="urn:uuid:85822a88-55b1-460c-bb7b-e8fc22d8568f"/>
-        </patient>
-        <occurrenceDateTime value="2022-06-01"/>
-        <primarySource value="true"/>
-      </Immunization>
-    </resource>
-  </entry>
-
-  <entry>
     <fullUrl value="urn:uuid:62eb70e3-e814-4785-80d3-8aa45b1fc367"/>
     <resource>
       <Immunization>
@@ -964,45 +933,6 @@ Overall, Joyce maintains a healthy and supportive lifestyle, with good access to
           <display value="ModernaTX, Inc."/>
         </manufacturer>
         <lotNumber value="RX00000F"/>
-      </Immunization>
-    </resource>
-  </entry>
-  <entry>
-    <fullUrl value="urn:uuid:fac8c42e-4d2a-4cf5-bcc6-831c60e8230e"/>
-    <resource>
-      <Immunization>
-        <id value="fac8c42e-4d2a-4cf5-bcc6-831c60e8230e"/>
-        <meta>
-          <profile value="http://hl7.org.au/fhir/ps/StructureDefinition/au-ps-immunization"/>
-        </meta>
-        <identifier>
-          <system value="urn:ietf:rfc:3986"/>
-          <value value="urn:uuid:475db616-dfd5-43f3-b935-9f582233a38d"/>
-        </identifier>
-        <status value="completed"/>
-        <vaccineCode>
-          <coding>
-            <system value="https://www.humanservices.gov.au/organisations/health-professionals/enablers/air-vaccine-code-formats"/>
-            <code value="COMIRN"/>
-          </coding>
-          <text value="Pfizer Comirnaty"/>
-        </vaccineCode>
-        <patient>
-          <reference value="urn:uuid:85822a88-55b1-460c-bb7b-e8fc22d8568f"/>
-        </patient>
-        <occurrenceDateTime value="2022-02-02"/>
-        <primarySource value="true"/>
-        <manufacturer>
-          <display value="Pfizer Australia Ltd"/>
-        </manufacturer>
-        <lotNumber value="500000000P"/>
-        <site>
-          <coding>
-            <system value="http://snomed.info/sct"/>
-            <code value="368208006"/>
-          </coding>
-          <text value="Left upper arm"/>
-        </site>
       </Immunization>
     </resource>
   </entry>
