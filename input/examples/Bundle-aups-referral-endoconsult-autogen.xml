@@ -1508,9 +1508,8 @@
       <Observation>
         <id value="5f1b9790-4892-4af3-9b76-3cb4f854a5b1"/>
         <meta>
-          <profile value="http://hl7.org.au/fhir/core/StructureDefinition/au-core-diagnosticresult-path"/>
-          <profile value="http://hl7.org/fhir/uv/ips/StructureDefinition/Observation-results-laboratory-pathology-uv-ips"/>
-        </meta>
+          <profile value="http://hl7.org.au/fhir/ps/StructureDefinition/au-ps-diagnosticresult-path"/>
+          </meta>
         <status value="final"/>
         <category>
           <coding>
@@ -1555,8 +1554,7 @@
     <Observation>
       <id value="1bbd2e05-161d-4030-975c-0cca3ef97cdb"/>
       <meta>
-        <profile value="http://hl7.org.au/fhir/core/StructureDefinition/au-core-diagnosticresult-path"/>
-        <profile value="http://hl7.org/fhir/uv/ips/StructureDefinition/Observation-results-laboratory-pathology-uv-ips"/>
+        <profile value="http://hl7.org.au/fhir/ps/StructureDefinition/au-ps-diagnosticresult-path"/>
       </meta>
       <status value="final"/>
       <category>
@@ -1602,9 +1600,8 @@
       <Observation>
         <id value="27060cbf-e30e-4091-bd64-7d4ef40916ac"/>
         <meta>
-          <profile value="http://hl7.org.au/fhir/core/StructureDefinition/au-core-diagnosticresult-path"/>
-          <profile value="http://hl7.org/fhir/uv/ips/StructureDefinition/Observation-results-laboratory-pathology-uv-ips"/>
-        </meta>
+          <profile value="http://hl7.org.au/fhir/ps/StructureDefinition/au-ps-diagnosticresult-path"/>
+          </meta>
         <status value="final"/>
         <category>
           <coding>
@@ -1644,8 +1641,7 @@
       <Observation>
         <id value="fc061f59-5410-41e9-945e-3f59664e8611"/>
         <meta>
-          <profile value="http://hl7.org.au/fhir/core/StructureDefinition/au-core-diagnosticresult-path"/>
-          <profile value="http://hl7.org/fhir/uv/ips/StructureDefinition/Observation-results-laboratory-pathology-uv-ips"/>
+          <profile value="http://hl7.org.au/fhir/ps/StructureDefinition/au-ps-diagnosticresult-path"/>
         </meta>
         <status value="final"/>
         <category>
@@ -1686,8 +1682,7 @@
       <Observation>
         <id value="8924f910-53b3-4125-b0f2-58d0068f8983"/>
         <meta>
-          <profile value="http://hl7.org.au/fhir/core/StructureDefinition/au-core-smokingstatus"/>
-          <profile value="http://hl7.org/fhir/uv/ips/StructureDefinition/Observation-tobaccouse-uv-ips"/>
+          <profile value="http://hl7.org.au/fhir/ps/StructureDefinition/au-ps-smokingstatus"/>
         </meta>
         <status value="final"/>
         <category>

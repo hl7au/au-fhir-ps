@@ -1012,9 +1012,8 @@ Overall, Joyce maintains a healthy and supportive lifestyle, with good access to
       <Observation>
         <id value="8924f910-53b3-4125-b0f2-58d0068f8983"/>
         <meta>
-          <profile value="http://hl7.org.au/fhir/core/StructureDefinition/au-core-smokingstatus"/>
-          <profile value="http://hl7.org/fhir/uv/ips/StructureDefinition/Observation-tobaccouse-uv-ips"/>
-        </meta>
+          <profile value="http://hl7.org.au/fhir/ps/StructureDefinition/au-ps-smokingstatus"/>
+          </meta>
         <status value="final"/>
         <category>
           <coding>
