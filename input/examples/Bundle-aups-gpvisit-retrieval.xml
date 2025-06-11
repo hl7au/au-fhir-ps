@@ -211,24 +211,24 @@
                 <tbody>
                   <tr>
                     <td>2025-03-17</td>
-                    <td>210 mg/dL</td>
-                    <td>60 mg/dL</td>
-                    <td>120 mg/dL</td>
-                    <td>150 mg/dL</td>
+                    <td>5.4 mmol/L</td>
+                    <td>1.55 mmol/L</td>
+                    <td>3.10 mmol/L</td>
+                    <td>1.7 mmol/L</td>
                   </tr>
                   <tr>
                     <td>2024-12-17</td>
-                    <td>220 mg/dL</td>
-                    <td>55 mg/dL</td>
-                    <td>130 mg/dL</td>
-                    <td>160 mg/dL</td>
+                    <td>5.7 mmol/L</td>
+                    <td>1.42 mmol/L</td>
+                    <td>3.36 mmol/L</td>
+                    <td>1.8 mmol/L</td>
                   </tr>
                   <tr>
                     <td>2024-09-17</td>
-                    <td>230 mg/dL</td>
-                    <td>50 mg/dL</td>
-                    <td>140 mg/dL</td>
-                    <td>170 mg/dL</td>
+                    <td>6.0 mmol/L</td>
+                    <td>1.29 mmol/L</td>
+                    <td>3.62 mmol/L</td>
+                    <td>1.9 mmol/L</td>
                   </tr>
                 </tbody>
               </table>
@@ -1231,10 +1231,10 @@
           </extension>
         </performer>
         <valueQuantity>
-            <value value="150" />
-            <unit value="mg/dL" />
+            <value value="1.7" />
+            <unit value="mmol/L" />
             <system value="http://unitsofmeasure.org" />
-            <code value="mg/dL" />
+            <code value="mmol/L" />
         </valueQuantity>
      </Observation>
   </resource>
@@ -1284,10 +1284,10 @@
         </extension>
     </performer>
     <valueQuantity>
-        <value value="60" />
-        <unit value="mg/dL" />
+        <value value="1.55" />
+        <unit value="mmol/L" />
         <system value="http://unitsofmeasure.org" />
-        <code value="mg/dL" />
+        <code value="mmol/L" />
     </valueQuantity>
   </Observation>
   </resource>
@@ -1337,10 +1337,10 @@
         </extension>
     </performer>
     <valueQuantity>
-        <value value="120" />
-        <unit value="mg/dL" />
+        <value value="3.10" />
+        <unit value="mmol/L" />
         <system value="http://unitsofmeasure.org" />
-        <code value="mg/dL" />
+        <code value="mmol/L" />
     </valueQuantity>
     </Observation>
   </resource>
@@ -1374,7 +1374,7 @@
     <code>
         <coding>
             <system value="http://loinc.org" />
-            <code value="32309-7" />
+            <code value="14647-2" />
             <display value="Cholesterol.total/Cholesterol in HDL [Molar ratio] in Serum or Plasma" />
         </coding>
         <text value="Total Chol/HDL" />
@@ -1390,10 +1390,10 @@
       </extension>
     </performer>
     <valueQuantity>
-        <value value="210" />
-        <unit value="mg/dL" />
+        <value value="5.4" />
+        <unit value="mmol/L" />
         <system value="http://unitsofmeasure.org" />
-        <code value="mg/dL" />
+        <code value="mmol/L" />
     </valueQuantity>
     </Observation>
   </resource>
@@ -1427,7 +1427,7 @@
     <code>
         <coding>
             <system value="http://loinc.org" />
-            <code value="32309-7" />
+            <code value="14647-2" />
             <display value="Cholesterol.total/Cholesterol in HDL [Molar ratio] in Serum or Plasma" />
         </coding>
         <text value="Total Chol/HDL" />
@@ -1443,10 +1443,10 @@
             </extension>
         </performer>
     <valueQuantity>
-        <value value="220" />
-        <unit value="mg/dL" />
+        <value value="5.7" />
+        <unit value="mmol/L" />
         <system value="http://unitsofmeasure.org" />
-        <code value="mg/dL" />
+        <code value="mmol/L" />
     </valueQuantity>
     </Observation>
   </resource>
@@ -1496,10 +1496,10 @@
         </extension>
     </performer>
     <valueQuantity>
-        <value value="55" />
-        <unit value="mg/dL" />
+        <value value="1.42" />
+        <unit value="mmol/L" />
         <system value="http://unitsofmeasure.org" />
-        <code value="mg/dL" />
+        <code value="mmol/L" />
     </valueQuantity>
     </Observation>
   </resource>
@@ -1549,10 +1549,10 @@
             </extension>
     </performer>
     <valueQuantity>
-        <value value="130" />
-        <unit value="mg/dL" />
+        <value value="3.36" />
+        <unit value="mmol/L" />
         <system value="http://unitsofmeasure.org" />
-        <code value="mg/dL" />
+        <code value="mmol/L" />
     </valueQuantity>
     </Observation>
   </resource>
@@ -1602,10 +1602,10 @@
             </extension>
         </performer>
         <valueQuantity>
-            <value value="160" />
-            <unit value="mg/dL" />
+            <value value="1.8" />
+            <unit value="mmol/L" />
             <system value="http://unitsofmeasure.org" />
-            <code value="mg/dL" />
+            <code value="mmol/L" />
         </valueQuantity>
      </Observation>
   </resource>
@@ -1639,7 +1639,7 @@
     <code>
         <coding>
             <system value="http://loinc.org" />
-            <code value="32309-7" />
+            <code value="14647-2" />
             <display value="Cholesterol.total/Cholesterol in HDL [Molar ratio] in Serum or Plasma" />
         </coding>
         <text value="Total Chol/HDL" />
@@ -1655,10 +1655,10 @@
         </extension>
     </performer>
     <valueQuantity>
-        <value value="230" />
-        <unit value="mg/dL" />
+        <value value="6.0" />
+        <unit value="mmol/L" />
         <system value="http://unitsofmeasure.org" />
-        <code value="mg/dL" />
+        <code value="mmol/L" />
     </valueQuantity>
     </Observation>
   </resource>
@@ -1708,10 +1708,10 @@
         </extension>
     </performer>
     <valueQuantity>
-        <value value="50" />
-        <unit value="mg/dL" />
+        <value value="1.29" />
+        <unit value="mmol/L" />
         <system value="http://unitsofmeasure.org" />
-        <code value="mg/dL" />
+        <code value="mmol/L" />
     </valueQuantity>
     </Observation>
   </resource>
@@ -1761,10 +1761,10 @@
             </extension>
     </performer>
     <valueQuantity>
-        <value value="140" />
-        <unit value="mg/dL" />
+        <value value="3.62" />
+        <unit value="mmol/L" />
         <system value="http://unitsofmeasure.org" />
-        <code value="mg/dL" />
+        <code value="mmol/L" />
     </valueQuantity>
     </Observation>
   </resource>
@@ -1814,10 +1814,10 @@
             </extension>
         </performer>
         <valueQuantity>
-            <value value="170" />
-            <unit value="mg/dL" />
+            <value value="1.9" />
+            <unit value="mmol/L" />
             <system value="http://unitsofmeasure.org" />
-            <code value="mg/dL" />
+            <code value="mmol/L" />
         </valueQuantity>
      </Observation>
   </resource>
@@ -2002,7 +2002,7 @@
         <serviceType>
           <coding>
             <system value="http://snomed.info/sct"/>
-            <code value="1230045006"/>
+            <code value="16.0045006"/>
             <display value="Cardiac diagnostic service"/>
           </coding>
         </serviceType>
