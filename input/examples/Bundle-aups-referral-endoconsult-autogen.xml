@@ -230,16 +230,19 @@
                   <tr>
                     <th>Vaccine</th>
                     <th>Date of administration</th>
+                    <th>Comment</th>
                   </tr>
                 </thead>
                 <tbody>
                   <tr>
                     <td>Diphtheria + tetanus + pertussis 5 component adolescent/adult vaccine injection, 0.5 mL syringe</td>
                     <td>05/10/2024</td>
+                    <td></td>
                   </tr>
                   <tr>
                     <td>Influenza vaccine</td>
                     <td>05/05/2024</td>
+                    <td></td>
                   </tr>
                   <tr>
                     <td>Influenza vaccine</td>
@@ -249,10 +252,12 @@
                   <tr>
                     <td>COVID-19 mRNA-1273 Vaccine (Moderna) injection, 0.5 mL syringe</td>
                     <td>15/05/2023</td>
+                    <td></td>
                   </tr>
                   <tr>
                     <td>Influenza vaccine</td>
                     <td>01/06/2022</td>
+                    <td></td>
                   </tr>
                   <tr>
                     <td>Covid vaccine - Pfizer</td>
