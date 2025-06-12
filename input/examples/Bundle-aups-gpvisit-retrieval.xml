@@ -71,13 +71,13 @@
           </code>
           <text>
             <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml">
-            <ul><li><div><b>Medication Name</b>: Metformin 500mg</div><div>Instructions: twice daily</div></li></ul>
-            <ul><li><div><b>Medication Name</b>: Rosuvastatin 40mg &amp; ezetrol 10mg</div><div>Instructions: once daily</div></li></ul>
-            <ul><li><div><b>Medication Name</b>: Telmisartan 80mg</div><div>Instructions: once daily</div></li></ul>
-            <ul><li><div><b>Medication Name</b>: Aspirin 100mg</div><div>Instructions: once daily</div></li></ul>
-            <ul><li><div><b>Medication Name</b>: Zyloprim 300mg</div><div>Instructions: once daily</div></li></ul>
-            <ul><li><div><b>Medication Name</b>: Ventolin</div><div>Instructions: 2 puffs, 4 times per day, and as needed</div></li></ul>
-            <ul><li><div><b>Medication Name</b>: Spiriva</div><div>Instructions: once daily</div></li></ul>
+            <ul><li><div><b>Medication Name</b>: Metformin 500mg</div><div>Instructions: twice daily</div><div>Clinical indication: Type 2 diabetes mellitus</div></li></ul>
+            <ul><li><div><b>Medication Name</b>: Rosuvastatin 40mg &amp; ezetrol 10mg</div><div>Instructions: once daily</div><div>Clinical indication: Hypercholesterolaemia</div></li></ul>
+            <ul><li><div><b>Medication Name</b>: Telmisartan 80mg</div><div>Instructions: once daily</div><div>Clinical indication: Hypertension</div></li></ul>
+            <ul><li><div><b>Medication Name</b>: Aspirin 100mg</div><div>Instructions: once daily</div><div>Clinical indication: Cardiovascular disease</div></li></ul>
+            <ul><li><div><b>Medication Name</b>: Zyloprim 300mg</div><div>Instructions: once daily</div><div>Clinical indication: Gout</div></li></ul>
+            <ul><li><div><b>Medication Name</b>: Ventolin</div><div>Instructions: 2 puffs, 4 times per day, and as needed</div><div>Clinical indication: COPD</div></li></ul>
+            <ul><li><div><b>Medication Name</b>: Spiriva</div><div>Instructions: once daily</div><div>Clinical indication: COPD</div></li></ul>
             </div>
           </text>
           <entry>
@@ -176,7 +176,7 @@
           </code>
           <text>
             <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml">
-            <ul><li><div><b>Procedure Name</b>: Angiogram</div><div>Date: 22/05/2025</div></li></ul>
+            <ul><li><div><b>Procedure Name</b>: Angiogram</div><div>Reason: Recent chest pain</div><div>Date: 22/05/2025</div></li></ul>
             <ul><li><div><b>Procedure Name</b>: Chest x-ray</div><div>Date: 22/02/2025</div></li></ul>
             </div>
           </text>
@@ -421,6 +421,14 @@
           <reference value="urn:uuid:ca779d48-9dd8-4fe1-829a-d48b12b492af"/>
           <type value="Practitioner"/>
         </requester>
+        <reasonCode>
+           <coding>
+             <system value="http://snomed.info/sct"/>
+             <code value="13645005"/>
+            <display value="COPD"/>
+           </coding>
+           <text value="COPD"/>
+        </reasonCode>
         <dosageInstruction>
           <text value="2 puffs, 4 times per day, and as needed"/>
           <timing>
@@ -482,6 +490,14 @@
           <reference value="urn:uuid:ca779d48-9dd8-4fe1-829a-d48b12b492af"/>
           <type value="Practitioner"/>
         </requester>
+        <reasonCode>
+           <coding>
+             <system value="http://snomed.info/sct"/>
+             <code value="90560007"/>
+            <display value="Gout"/>
+           </coding>
+           <text value="Gout"/>
+        </reasonCode>
         <dosageInstruction>
           <text value="once daily"/>
           <timing>
@@ -543,6 +559,14 @@
           <reference value="urn:uuid:ca779d48-9dd8-4fe1-829a-d48b12b492af"/>
           <type value="Practitioner"/>
         </requester>
+        <reasonCode>
+           <coding>
+             <system value="http://snomed.info/sct"/>
+             <code value="13645005"/>
+            <display value="COPD"/>
+           </coding>
+           <text value="COPD"/>
+        </reasonCode>
         <dosageInstruction>
           <text value="once daily"/>
           <timing>
@@ -591,6 +615,14 @@
           <reference value="urn:uuid:ca779d48-9dd8-4fe1-829a-d48b12b492af"/>
           <type value="Practitioner"/>
         </requester>
+        <reasonCode>
+           <coding>
+             <system value="http://snomed.info/sct"/>
+             <code value="13644009"/>
+            <display value="Hypercholesterolaemia"/>
+          </coding>
+          <text value="Hypercholesterolaemia"/>
+        </reasonCode>
         <dosageInstruction>
           <text value="once daily"/>
           <timing>
@@ -639,6 +671,14 @@
           <reference value="urn:uuid:ca779d48-9dd8-4fe1-829a-d48b12b492af"/>
           <type value="Practitioner"/>
         </requester>
+        <reasonCode>
+          <coding>
+            <system value="http://snomed.info/sct"/>
+            <code value="44054006"/>
+            <display value="Type 2 diabetes mellitus"/>
+          </coding>
+          <text value="Type 2 diabetes mellitus"/>
+        </reasonCode>
         <dosageInstruction>
           <text value="twice daily"/>
           <timing>
@@ -684,6 +724,14 @@
           <reference value="urn:uuid:ca779d48-9dd8-4fe1-829a-d48b12b492af"/>
           <type value="Practitioner"/>
         </requester>
+        <reasonCode>
+           <coding>
+             <system value="http://snomed.info/sct"/>
+             <code value="49601007"/>
+             <display value="Cardiovascular disease"/>
+           </coding>
+           <text value="Cardiovascular disease"/>
+        </reasonCode>
         <dosageInstruction>
           <text value="once daily"/>
           <timing>
@@ -714,7 +762,7 @@
             <code value="22969011000036102"/>
             <display value="Telmisartan 80 mg tablet"/>
           </coding>
-          <text value="Telmisartan 80 mg tablet"/>
+          <text value="Telmisartan 80 mg"/>
         </medicationCodeableConcept>
         <subject>
           <reference value="urn:uuid:d1122188-f53f-417f-a84f-bc44479baa63"/>
@@ -729,6 +777,14 @@
           <reference value="urn:uuid:ca779d48-9dd8-4fe1-829a-d48b12b492af"/>
           <type value="Practitioner"/>
         </requester>
+        <reasonCode>
+           <coding>
+             <system value="http://snomed.info/sct"/>
+             <code value="38341003"/>
+            <display value="Hypertension"/>
+          </coding>
+          <text value="Hypertension"/>
+        </reasonCode>
         <dosageInstruction>
           <text value="once daily"/>
           <timing>
@@ -1157,6 +1213,9 @@
         <reference value="urn:uuid:f7aaf2d5-c105-4652-8b4c-e555903593a7"/>
       </encounter>
       <performedDateTime value="2025-05-22"/>
+      <reasonCode>
+        <text value="Recent chest pain"/>
+      </reasonCode>
     </Procedure>
   </resource>
   </entry>
