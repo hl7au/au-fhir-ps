@@ -56,10 +56,33 @@
             </coding>
           </code>
           <text>
-            <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml">No known allergies.</div>
+            <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml">
+            <table border="1">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Substance</th>
+                    <th>Date/time of onset of first reaction</th>
+                    <th>Manifestation</th>
+                    <th>Severity of reaction</th>
+                    <th>Comment</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>Allergy</td>
+                    <td>Prawns</td>
+                    <td>18:50 02/11/2024</td>
+                    <td>Itchy throat</td>
+                    <td>Mild</td>
+                    <td>Pt stated had prawns with dinner and noticed itchy throat, never experienced this before</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
           </text>
           <entry>
-            <reference value="urn:uuid:0baac8a9-69b8-4e99-9460-03df08f92c98"/>
+            <reference value="urn:uuid:f7bd83e4-2a4e-40be-8467-8a29b667ef46"/>
           </entry>
         </section>
         <section>
@@ -80,6 +103,7 @@
                     <th>Clinical Indication</th>
                     <th>Status</th>
                     <th>Last Updated</th>
+                    <th>Comment</th>
                   </tr>
                 </thead>
                 <tbody>
@@ -89,6 +113,7 @@
                     <td></td>
                     <td>Active</td>
                     <td>28/10/2024</td>
+                    <td>Pt prefers Blackmores</td>
                   </tr>
                   <tr>
                     <td>Insulin (Humulin N)</td>
@@ -96,6 +121,7 @@
                     <td></td>
                     <td>Active</td>
                     <td>28/10/2024</td>
+                    <td></td>
                   </tr>
                   <tr>
                     <td>Insulin (Humulin R)</td>
@@ -103,6 +129,7 @@
                     <td></td>
                     <td>Active</td>
                     <td>28/10/2024</td>
+                    <td></td>
                   </tr>
                   <tr>
                     <td>Metformin</td>
@@ -110,6 +137,7 @@
                     <td></td>
                     <td>Active</td>
                     <td>28/10/2024</td>
+                    <td></td>
                   </tr>
                   <tr>
                     <td>Trimethoprim</td>
@@ -117,6 +145,7 @@
                     <td>Urinary tract infection (UTI)</td>
                     <td>Active</td>
                     <td>04/11/2024</td>
+                    <td></td>
                   </tr>
                 </tbody>
               </table>
@@ -201,48 +230,59 @@
                   <tr>
                     <th>Vaccine</th>
                     <th>Date of administration</th>
+                    <th>Comment</th>
                   </tr>
                 </thead>
                 <tbody>
                   <tr>
                     <td>Diphtheria + tetanus + pertussis 5 component adolescent/adult vaccine injection, 0.5 mL syringe</td>
                     <td>05/10/2024</td>
+                    <td></td>
                   </tr>
                   <tr>
                     <td>Influenza vaccine</td>
                     <td>05/05/2024</td>
+                    <td></td>
                   </tr>
                   <tr>
                     <td>Influenza vaccine</td>
                     <td>15/05/2023</td>
+                    <td>Pt reported localised redness and swelling post previous flu vax last year. Monitor for rxn.</td>
                   </tr>
                   <tr>
                     <td>COVID-19 mRNA-1273 Vaccine (Moderna) injection, 0.5 mL syringe</td>
                     <td>15/05/2023</td>
+                    <td></td>
                   </tr>
                   <tr>
                     <td>Influenza vaccine</td>
                     <td>01/06/2022</td>
+                    <td></td>
                   </tr>
                   <tr>
                     <td>Covid vaccine - Pfizer</td>
                     <td>02/02/2022</td>
+                    <td></td>
                   </tr>
                   <tr>
                     <td>Covid vaccine - Pfizer</td>
                     <td>20/07/2021</td>
+                    <td></td>
                   </tr>
                   <tr>
                     <td>Influenza vaccine</td>
                     <td>17/05/2021</td>
+                    <td></td>
                   </tr>
                   <tr>
                     <td>Covid vaccine - Pfizer</td>
                     <td>27/04/2021</td>
+                    <td></td>
                   </tr>
                   <tr>
                     <td>Influenza vaccine</td>
                     <td>03/05/2020</td>
+                    <td></td>
                   </tr>
                 </tbody>
               </table>
@@ -485,10 +525,10 @@
     </resource>
   </entry>
   <entry>
-    <fullUrl value="urn:uuid:0baac8a9-69b8-4e99-9460-03df08f92c98"/>
+    <fullUrl value="urn:uuid:f7bd83e4-2a4e-40be-8467-8a29b667ef46"/>
     <resource>
       <AllergyIntolerance>
-        <id value="0baac8a9-69b8-4e99-9460-03df08f92c98"/>
+        <id value="f7bd83e4-2a4e-40be-8467-8a29b667ef46"/>
         <meta>
           <profile value="http://hl7.org.au/fhir/ps/StructureDefinition/au-ps-allergyintolerance"/>
         </meta>
@@ -496,18 +536,39 @@
           <coding>
             <system value="http://terminology.hl7.org/CodeSystem/allergyintolerance-clinical"/>
             <code value="active"/>
+            <display value="Active"/>
           </coding>
         </clinicalStatus>
+        <verificationStatus>
+          <coding>
+            <system value="http://terminology.hl7.org/CodeSystem/allergyintolerance-verification"/>
+            <code value="unconfirmed"/>
+            <display value="Unconfirmed"/>
+          </coding>
+        </verificationStatus>
+        <type value="allergy"/>
         <code>
           <coding>
             <system value="http://snomed.info/sct"/>
-            <code value="716186003"/>
+            <code value="227151004"/>
+            <display value="Prawns"/>
           </coding>
-          <text value="No known allergy"/>
+          <text value="Prawns"/>
         </code>
         <patient>
           <reference value="urn:uuid:85822a88-55b1-460c-bb7b-e8fc22d8568f"/>
         </patient>
+        <onsetDateTime value="2024-11-02T18:50:00+11:00"/>
+        <recordedDate value="2024-11-04"/>
+        <note>
+          <text value="Pt stated had prawns with dinner and noticed itchy throat, never experienced this before"/>
+        </note>
+        <reaction>
+          <manifestation>
+            <text value="Itchy throat"/>  
+          </manifestation>
+          <severity value="mild"/>  
+        </reaction>
       </AllergyIntolerance>
     </resource>
   </entry>
@@ -661,6 +722,9 @@
           <start value="2024"/>
         </effectivePeriod>
         <dateAsserted value="2024-10-24"/>
+        <note>
+          <text value="Pt prefers Blackmores"/>
+        </note>
         <dosage>
           <text value="1 tablet daily"/>
           <route>
@@ -1285,6 +1349,9 @@
         </patient>
         <occurrenceDateTime value="2023-05-15"/>
         <primarySource value="true"/>
+        <note>
+          <text value="Pt reported localised redness and swelling post previous flu vax last year. Monitor for rxn."/>
+        </note>
       </Immunization>
     </resource>
   </entry>
