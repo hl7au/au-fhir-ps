@@ -762,7 +762,7 @@
             <code value="22969011000036102"/>
             <display value="Telmisartan 80 mg tablet"/>
           </coding>
-          <text value="Telmisartan 80 mg tablet"/>
+          <text value="Telmisartan 80 mg"/>
         </medicationCodeableConcept>
         <subject>
           <reference value="urn:uuid:d1122188-f53f-417f-a84f-bc44479baa63"/>
