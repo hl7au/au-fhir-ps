@@ -1037,7 +1037,7 @@
       <max value="1"/>
       <type>
         <code value="Reference"/>
-        <targetProfile value="http://hl7.org/fhir/uv/ips/StructureDefinition/Observation-tobaccouse-uv-ips"/>
+        <targetProfile value="http://hl7.org.au/fhir/ps/StructureDefinition/au-ps-smokingstatus"/>
       </type>
     </element>
     <element id="Composition.section:sectionSocialHistory.entry:alcoholUse">
