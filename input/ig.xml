@@ -143,7 +143,7 @@
 		<!-- EXAMPLES-->
 		<resource>
 			<reference>
-				<reference value="Bundle/section-emptyreason"/>
+				<reference value="Bundle/aups-section-emptyreason"/>
 			</reference>
 			<name value="Bundle - Section empty reason"/>
 			<description value="Shows an example of a software-assembled patient summary that demonstrates the system has no information for the sections: problems, allergies, medications, immunisations. Example for the *AU Patient Summary Bundle* and *AU Patient Summary Composition* profile. Patient: Ronny Lawrence Irvine."/>
@@ -151,7 +151,7 @@
 		</resource>
 		<resource>
 			<reference>
-				<reference value="Bundle/basicsummary"/>
+				<reference value="Bundle/aups-basicsummary"/>
 			</reference>
 			<name value="Bundle - Basic summary"/>
 			<description value="Shows an example of a provider curated patient summary that demonstrates no known problems or disabilities, current allergies and intolerances, and current medication use. Example for the *AU Patient Summary Bundle* and *AU Patient Summary Composition* profile. Patient: Mia Leanne Banks."/>
