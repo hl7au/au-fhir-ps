@@ -1005,8 +1005,8 @@ Overall, Joyce maintains a healthy and supportive lifestyle, with good access to
     <who>
       <reference value="urn:uuid:afead11c-3bee-4020-af4f-44040abfa961"/>
     </who>
-    <sigFormat value="image/png"/>
     <targetFormat value="application/fhir+xml"/>
+    <sigFormat value="image/png"/>
     <data value="
       iVBORw0KGgoAAAANSUhEUgAAAI4AAAB5CAYAAADvahmpAAAAAXNSR0IArs4c6QAAAIRlWElmTU0AKgAAAAgABQESAAMAAAABAAEAAAEaAAUAAAABAAAASgEbAAUAAAABAAAAUgEoAAMAAAABAAIAAIdpAAQAAAABAAAAWgAAAAAAAABIAAAAAQAAAEgAAAABAAOgAQAD
       AAAAAQABAACgAgAEAAAAAQAAAI6gAwAEAAAAAQAAAHkAAAAAv7SjzgAAAAlwSFlzAAALEwAACxMBAJqcGAAAAVlpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IlhNUCBDb3JlIDYuMC4w
