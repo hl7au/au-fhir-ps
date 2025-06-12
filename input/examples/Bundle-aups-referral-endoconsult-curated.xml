@@ -86,6 +86,7 @@
                     <th>Dose</th>
                     <th>Status</th>
                     <th>Last Updated</th>
+                    <th>Comment</th>
                   </tr>
                 </thead>
                 <tbody>
@@ -94,24 +95,28 @@
                     <td>1 tablet daily</td>
                     <td>Active</td>
                     <td>28/10/2024</td>
+                    <td>Pt prefers Blackmores</td>
                   </tr>
                   <tr>
                     <td>Insulin (Humulin N)</td>
                     <td>10 units subcutaneously in the morning and evening</td>
                     <td>Active</td>
                     <td>28/10/2024</td>
+                    <td></td>
                   </tr>
                   <tr>
                     <td>Insulin (Humulin R)</td>
                     <td>5 units subcutaneously before each meal</td>
                     <td>Active</td>
                     <td>28/10/2024</td>
+                    <td></td>
                   </tr>
                   <tr>
                     <td>Metformin</td>
                     <td>500mg twice daily</td>
                     <td>Active</td>
                     <td>28/10/2024</td>
+                    <td></td>
                   </tr>
                 </tbody>
               </table>
@@ -185,24 +190,29 @@
                   <tr>
                     <th>Vaccine</th>
                     <th>Date of administration</th>
+                    <th>Comment</th>
                   </tr>
                 </thead>
                 <tbody>
                   <tr>
                     <td>Diphtheria + tetanus + pertussis 5 component adolescent/adult vaccine injection, 0.5 mL syringe</td>
                     <td>05/10/2024</td>
+                    <td></td>
                   </tr>
                   <tr>
                     <td>Influenza vaccine</td>
                     <td>05/05/2024</td>
+                    <td></td>
                   </tr>
                   <tr>
                     <td>Influenza vaccine</td>
                     <td>15/05/2023</td>
+                    <td>Pt reported localised redness and swelling post previous flu vax last year. Monitor for rxn.</td>
                   </tr>
                   <tr>
                     <td>COVID-19 mRNA-1273 Vaccine (Moderna) injection, 0.5 mL syringe</td>
                     <td>15/05/2023</td>
+                    <td></td>
                   </tr>
                 </tbody>
               </table>
@@ -443,6 +453,9 @@ Overall, Joyce maintains a healthy and supportive lifestyle, with good access to
           <start value="2024"/>
         </effectivePeriod>
         <dateAsserted value="2024-10-24"/>
+        <note>
+          <text value="Pt prefers Blackmores"/>
+        </note>
         <dosage>
           <text value="1 tablet daily"/>
           <route>
@@ -867,6 +880,9 @@ Overall, Joyce maintains a healthy and supportive lifestyle, with good access to
         </patient>
         <occurrenceDateTime value="2023-05-15"/>
         <primarySource value="true"/>
+        <note>
+          <text value="Pt reported localised redness and swelling post previous flu vax last year. Monitor for rxn."/>
+        </note>
       </Immunization>
     </resource>
   </entry>

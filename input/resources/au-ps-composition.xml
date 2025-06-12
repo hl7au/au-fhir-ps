@@ -203,6 +203,7 @@
       <path value="Composition.section.extension"/>
       <sliceName value="section-note"/>
       <short value="Additional notes that apply to the section (but not to specific resource)."/>
+      <definition value="Additional notes that apply to the section (but not to specific resource)."/>
       <min value="0"/>
       <max value="1"/>
       <type>
@@ -470,18 +471,6 @@
       <max value="1"/>
       <mustSupport value="true"/>
     </element>
-    <element id="Composition.section:sectionResults.extension:section-note">
-      <path value="Composition.section.extension"/>
-      <sliceName value="section-note"/>
-      <short value="Additional notes that apply to the section (but not to specific resource)."/>
-      <definition value="Additional notes that apply to the section (but not to specific resource)."/>
-      <min value="0"/>
-      <max value="1"/>
-      <type>
-        <code value="Extension"/>
-        <profile value="http://hl7.org/fhir/StructureDefinition/note"/>
-      </type>
-    </element>
     <element id="Composition.section:sectionResults.code">
       <path value="Composition.section.code"/>
       <min value="1"/>
@@ -559,18 +548,6 @@
       <max value="1"/>
       <mustSupport value="true"/>
     </element>
-    <element id="Composition.section:sectionProceduresHx.extension:section-note">
-      <path value="Composition.section.extension"/>
-      <sliceName value="section-note"/>
-      <short value="Additional notes that apply to the section (but not to specific resource)."/>
-      <definition value="Additional notes that apply to the section (but not to specific resource)."/>
-      <min value="0"/>
-      <max value="1"/>
-      <type>
-        <code value="Extension"/>
-        <profile value="http://hl7.org/fhir/StructureDefinition/note"/>
-      </type>
-    </element>
     <element id="Composition.section:sectionProceduresHx.code">
       <path value="Composition.section.code"/>
       <min value="1"/>
@@ -622,18 +599,6 @@
       <max value="1"/>
       <mustSupport value="true"/>
     </element>
-    <element id="Composition.section:sectionMedicalDevices.extension:section-note">
-      <path value="Composition.section.extension"/>
-      <sliceName value="section-note"/>
-      <short value="Additional notes that apply to the section (but not to specific resource)."/>
-      <definition value="Additional notes that apply to the section (but not to specific resource)."/>
-      <min value="0"/>
-      <max value="1"/>
-      <type>
-        <code value="Extension"/>
-        <profile value="http://hl7.org/fhir/StructureDefinition/note"/>
-      </type>
-    </element>
     <element id="Composition.section:sectionMedicalDevices.code">
       <path value="Composition.section.code"/>
       <min value="1"/>
@@ -675,6 +640,466 @@
         <targetProfile value="http://hl7.org/fhir/uv/ips/StructureDefinition/DeviceUseStatement-uv-ips"/>
       </type>
       <mustSupport value="true"/>
+    </element>
+    <element id="Composition.section:sectionAdvanceDirectives">
+      <path value="Composition.section"/>
+      <sliceName value="sectionAdvanceDirectives"/>
+      <short value="IPS Advance Directives Section"/>
+      <definition value="The advance directives section contains a narrative description of patient's advance directive."/>
+      <min value="0"/>
+      <max value="1"/>
+      <mustSupport value="true"/>
+    </element>
+    <element id="Composition.section:sectionAdvanceDirectives.code">
+      <path value="Composition.section.code"/>
+      <min value="1"/>
+      <type>
+        <code value="CodeableConcept"/>
+        <profile value="http://hl7.org/fhir/uv/ips/StructureDefinition/CodeableConcept-uv-ips"/>
+      </type>
+      <patternCodeableConcept>
+        <coding>
+          <system value="http://loinc.org"/>
+          <code value="42348-3"/>
+        </coding>
+      </patternCodeableConcept>
+    </element>
+    <element id="Composition.section:sectionAdvanceDirectives.entry">
+      <path value="Composition.section.entry"/>
+      <slicing>
+        <discriminator>
+          <type value="profile"/>
+          <path value="resolve()"/>
+        </discriminator>
+        <rules value="open"/>
+      </slicing>
+      <short value="Narrative description of the patient's advance directive."/>
+      <definition value="Contains a narrative description or a Consent entry with information about the patient's advance directive."/>
+      <type>
+        <code value="Reference"/>
+        <targetProfile value="http://hl7.org/fhir/StructureDefinition/Consent"/>
+        <targetProfile value="http://hl7.org/fhir/StructureDefinition/DocumentReference"/>
+      </type>
+    </element>
+    <element id="Composition.section:sectionAdvanceDirectives.entry:advanceDirectivesConsent">
+      <path value="Composition.section.entry"/>
+      <sliceName value="advanceDirectivesConsent"/>
+      <min value="0"/>
+      <max value="*"/>
+      <type>
+        <code value="Reference"/>
+        <targetProfile value="http://hl7.org/fhir/StructureDefinition/Consent"/>
+      </type>
+    </element>
+    <element id="Composition.section:sectionAlerts">
+      <path value="Composition.section"/>
+      <sliceName value="sectionAlerts"/>
+      <short value="IPS Alerts Section"/>
+      <definition value="The alerts section flags potential concerns and/or dangers to/from the patient and may also include obstacles to care."/>
+      <min value="0"/>
+      <max value="1"/>
+      <mustSupport value="true"/>
+    </element>
+    <element id="Composition.section:sectionAlerts.code">
+      <path value="Composition.section.code"/>
+      <min value="1"/>
+      <type>
+        <code value="CodeableConcept"/>
+        <profile value="http://hl7.org/fhir/uv/ips/StructureDefinition/CodeableConcept-uv-ips"/>
+      </type>
+      <patternCodeableConcept>
+        <coding>
+          <system value="http://loinc.org"/>
+          <code value="104605-1"/>
+        </coding>
+      </patternCodeableConcept>
+    </element>
+    <element id="Composition.section:sectionAlerts.entry">
+      <path value="Composition.section.entry"/>
+      <slicing>
+        <discriminator>
+          <type value="profile"/>
+          <path value="resolve()"/>
+        </discriminator>
+        <rules value="open"/>
+      </slicing>
+      <short value="Alert information."/>
+      <definition value="Contains alert information to be communicated. May optionally reference other resources in IPS."/>
+      <type>
+        <code value="Reference"/>
+        <targetProfile value="http://hl7.org/fhir/StructureDefinition/Flag"/>
+        <targetProfile value="http://hl7.org/fhir/StructureDefinition/DocumentReference"/>
+      </type>
+    </element>
+    <element id="Composition.section:sectionAlerts.entry:alertsFlag">
+      <path value="Composition.section.entry"/>
+      <sliceName value="alertsFlag"/>
+      <min value="0"/>
+      <max value="*"/>
+      <type>
+        <code value="Reference"/>
+        <targetProfile value="http://hl7.org/fhir/uv/ips/StructureDefinition/Flag-alert-uv-ips"/>
+      </type>
+    </element>
+    <element id="Composition.section:sectionFunctionalStatus">
+      <path value="Composition.section"/>
+      <sliceName value="sectionFunctionalStatus"/>
+      <short value="IPS Functional Status"/>
+      <definition value="The functional status section shall contain a narrative description of capability of the patient to perform acts of daily living, including possible needs of the patient to be continuously assessed by third parties. The invalidity status may in fact influence decisions about how to administer treatments.&#xD;&#xA;Profiles to express disabilities and functional assessments will be specified by future versions of this guide."/>
+      <min value="0"/>
+      <max value="1"/>
+      <mustSupport value="true"/>
+    </element>
+    <element id="Composition.section:sectionFunctionalStatus.code">
+      <path value="Composition.section.code"/>
+      <min value="1"/>
+      <type>
+        <code value="CodeableConcept"/>
+        <profile value="http://hl7.org/fhir/uv/ips/StructureDefinition/CodeableConcept-uv-ips"/>
+      </type>
+      <patternCodeableConcept>
+        <coding>
+          <system value="http://loinc.org"/>
+          <code value="47420-5"/>
+        </coding>
+      </patternCodeableConcept>
+    </element>
+    <element id="Composition.section:sectionFunctionalStatus.entry">
+      <path value="Composition.section.entry"/>
+      <slicing>
+        <discriminator>
+          <type value="profile"/>
+          <path value="resolve()"/>
+        </discriminator>
+        <rules value="open"/>
+      </slicing>
+      <short value="Optional entry used to represent disabilities and functional assessments"/>
+      <definition value="It describes capabilities of the patient to perform acts of daily living, including possible needs of the patient to be continuously assessed by third parties. The invalidity status may in fact influence decisions about how to administer treatments.&#xD;&#xA;Profiles to express disabilities and functional assessments will be specified by future versions of this guide."/>
+      <type>
+        <code value="Reference"/>
+        <targetProfile value="http://hl7.org/fhir/StructureDefinition/Condition"/>
+        <targetProfile value="http://hl7.org/fhir/StructureDefinition/ClinicalImpression"/>
+        <targetProfile value="http://hl7.org/fhir/StructureDefinition/DocumentReference"/>
+      </type>
+    </element>
+    <element id="Composition.section:sectionFunctionalStatus.entry:disability">
+      <path value="Composition.section.entry"/>
+      <sliceName value="disability"/>
+      <min value="0"/>
+      <max value="*"/>
+      <type>
+        <code value="Reference"/>
+        <targetProfile value="http://hl7.org/fhir/uv/ips/StructureDefinition/Condition-uv-ips"/>
+      </type>
+    </element>
+    <element id="Composition.section:sectionFunctionalStatus.entry:functionalAssessment">
+      <path value="Composition.section.entry"/>
+      <sliceName value="functionalAssessment"/>
+      <min value="0"/>
+      <max value="*"/>
+      <type>
+        <code value="Reference"/>
+        <targetProfile value="http://hl7.org/fhir/StructureDefinition/ClinicalImpression"/>
+      </type>
+    </element>
+    <element id="Composition.section:sectionPastIllnessHx">
+      <path value="Composition.section"/>
+      <sliceName value="sectionPastIllnessHx"/>
+      <short value="IPS History of Past Illness Section"/>
+      <definition value="The History of Past Illness section contains a description of the conditions the patient suffered in the past."/>
+      <min value="0"/>
+      <max value="1"/>
+      <mustSupport value="true"/>
+    </element>
+    <element id="Composition.section:sectionPastIllnessHx.code">
+      <path value="Composition.section.code"/>
+      <min value="1"/>
+      <type>
+        <code value="CodeableConcept"/>
+        <profile value="http://hl7.org/fhir/uv/ips/StructureDefinition/CodeableConcept-uv-ips"/>
+      </type>
+      <patternCodeableConcept>
+        <coding>
+          <system value="http://loinc.org"/>
+          <code value="11348-0"/>
+        </coding>
+      </patternCodeableConcept>
+    </element>
+    <element id="Composition.section:sectionPastIllnessHx.entry">
+      <path value="Composition.section.entry"/>
+      <slicing>
+        <discriminator>
+          <type value="profile"/>
+          <path value="resolve()"/>
+        </discriminator>
+        <rules value="open"/>
+      </slicing>
+      <short value="Conditions the patient suffered in the past."/>
+      <definition value="It contains a description of the conditions the patient suffered in the past."/>
+      <type>
+        <code value="Reference"/>
+        <targetProfile value="http://hl7.org/fhir/StructureDefinition/Condition"/>
+        <targetProfile value="http://hl7.org/fhir/StructureDefinition/DocumentReference"/>
+      </type>
+    </element>
+    <element id="Composition.section:sectionPastIllnessHx.entry:pastProblem">
+      <path value="Composition.section.entry"/>
+      <sliceName value="pastProblem"/>
+      <min value="0"/>
+      <max value="*"/>
+      <type>
+        <code value="Reference"/>
+        <targetProfile value="http://hl7.org/fhir/uv/ips/StructureDefinition/Condition-uv-ips"/>
+      </type>
+    </element>
+    <element id="Composition.section:sectionPregnancyHx">
+      <path value="Composition.section"/>
+      <sliceName value="sectionPregnancyHx"/>
+      <short value="IPS History of Pregnancy Section"/>
+      <definition value="The history of pregnancy section shall contain information about whether the patient is currently pregnant or not.&#xD;&#xA;It may contain addition summarizing information about the outcome of earlier pregnancies."/>
+      <min value="0"/>
+      <max value="1"/>
+      <mustSupport value="true"/>
+    </element>
+    <element id="Composition.section:sectionPregnancyHx.code">
+      <path value="Composition.section.code"/>
+      <min value="1"/>
+      <type>
+        <code value="CodeableConcept"/>
+        <profile value="http://hl7.org/fhir/uv/ips/StructureDefinition/CodeableConcept-uv-ips"/>
+      </type>
+      <patternCodeableConcept>
+        <coding>
+          <system value="http://loinc.org"/>
+          <code value="10162-6"/>
+        </coding>
+      </patternCodeableConcept>
+    </element>
+    <element id="Composition.section:sectionPregnancyHx.entry">
+      <path value="Composition.section.entry"/>
+      <slicing>
+        <discriminator>
+          <type value="profile"/>
+          <path value="resolve()"/>
+        </discriminator>
+        <rules value="open"/>
+      </slicing>
+      <short value="Current pregnancy status and, optionally, information about the outcome of earlier pregnancies."/>
+      <definition value="It contains information about whether the patient is currently pregnant or not.&#xD;&#xA;It may contain addition summarizing information about the outcome of earlier pregnancies."/>
+      <type>
+        <code value="Reference"/>
+        <targetProfile value="http://hl7.org/fhir/StructureDefinition/Observation"/>
+        <targetProfile value="http://hl7.org/fhir/StructureDefinition/DocumentReference"/>
+      </type>
+    </element>
+    <element id="Composition.section:sectionPregnancyHx.entry:pregnancyStatus">
+      <path value="Composition.section.entry"/>
+      <sliceName value="pregnancyStatus"/>
+      <min value="0"/>
+      <max value="*"/>
+      <type>
+        <code value="Reference"/>
+        <targetProfile value="http://hl7.org/fhir/uv/ips/StructureDefinition/Observation-pregnancy-status-uv-ips"/>
+      </type>
+    </element>
+    <element id="Composition.section:sectionPregnancyHx.entry:pregnancyOutcome">
+      <path value="Composition.section.entry"/>
+      <sliceName value="pregnancyOutcome"/>
+      <min value="0"/>
+      <max value="*"/>
+      <type>
+        <code value="Reference"/>
+        <targetProfile value="http://hl7.org/fhir/uv/ips/StructureDefinition/Observation-pregnancy-outcome-uv-ips"/>
+      </type>
+    </element>
+    <element id="Composition.section:sectionPatientStory">
+      <path value="Composition.section"/>
+      <sliceName value="sectionPatientStory"/>
+      <short value="IPS Patient Story Section"/>
+      <definition value="The section contains narrative text along with optional resources that express what matters to a patient. This may include needs, strengths, values, concerns and preferences to others providing support and care. The patient’s story, provided here, may be told by the patient or by a proxy."/>
+      <min value="0"/>
+      <max value="1"/>
+      <mustSupport value="true"/>
+    </element>
+    <element id="Composition.section:sectionPatientStory.code">
+      <path value="Composition.section.code"/>
+      <min value="1"/>
+      <type>
+        <code value="CodeableConcept"/>
+        <profile value="http://hl7.org/fhir/uv/ips/StructureDefinition/CodeableConcept-uv-ips"/>
+      </type>
+      <patternCodeableConcept>
+        <coding>
+          <system value="http://loinc.org"/>
+          <code value="81338-6"/>
+        </coding>
+      </patternCodeableConcept>
+    </element>
+    <element id="Composition.section:sectionPatientStory.entry">
+      <path value="Composition.section.entry"/>
+      <short value="Patient Story resources."/>
+      <definition value="Contains resources to support the Patient Story. Instances of DocumentReference or any other suitable resource type may be used."/>
+    </element>
+    <element id="Composition.section:sectionPlanOfCare">
+      <path value="Composition.section"/>
+      <sliceName value="sectionPlanOfCare"/>
+      <short value="IPS Plan of Care Section"/>
+      <definition value="The plan of care section contains a narrative description of the expectations for care including proposals, goals, and order requests for monitoring, tracking, or improving the condition of the patient."/>
+      <min value="0"/>
+      <max value="1"/>
+      <mustSupport value="true"/>
+    </element>
+    <element id="Composition.section:sectionPlanOfCare.code">
+      <path value="Composition.section.code"/>
+      <min value="1"/>
+      <type>
+        <code value="CodeableConcept"/>
+        <profile value="http://hl7.org/fhir/uv/ips/StructureDefinition/CodeableConcept-uv-ips"/>
+      </type>
+      <patternCodeableConcept>
+        <coding>
+          <system value="http://loinc.org"/>
+          <code value="18776-5"/>
+        </coding>
+      </patternCodeableConcept>
+    </element>
+    <element id="Composition.section:sectionPlanOfCare.entry">
+      <path value="Composition.section.entry"/>
+      <slicing>
+        <discriminator>
+          <type value="profile"/>
+          <path value="resolve()"/>
+        </discriminator>
+        <rules value="open"/>
+      </slicing>
+      <short value="Optional entry used to represent structured care plans"/>
+      <definition value="Dynamic, personalized plan including identified needed healthcare activity, health objectives and healthcare goals, relating to one or more specified health issues in a healthcare process [Source EN ISO 13940]"/>
+      <type>
+        <code value="Reference"/>
+        <targetProfile value="http://hl7.org/fhir/StructureDefinition/CarePlan"/>
+        <targetProfile value="http://hl7.org/fhir/StructureDefinition/DocumentReference"/>
+      </type>
+    </element>
+    <element id="Composition.section:sectionPlanOfCare.entry:carePlan">
+      <path value="Composition.section.entry"/>
+      <sliceName value="carePlan"/>
+      <min value="0"/>
+      <max value="*"/>
+      <type>
+        <code value="Reference"/>
+        <targetProfile value="http://hl7.org/fhir/StructureDefinition/CarePlan"/>
+      </type>
+    </element>
+    <element id="Composition.section:sectionSocialHistory">
+      <path value="Composition.section"/>
+      <sliceName value="sectionSocialHistory"/>
+      <short value="IPS Social History Section"/>
+      <definition value="The social history section contains a description of the person’s Health related &quot;lifestyle factors&quot; or &quot;lifestyle observations&quot; (e.g. smoke habits; alcohol consumption; diets, risky habits.)"/>
+      <min value="0"/>
+      <max value="1"/>
+      <mustSupport value="true"/>
+    </element>
+    <element id="Composition.section:sectionSocialHistory.code">
+      <path value="Composition.section.code"/>
+      <min value="1"/>
+      <type>
+        <code value="CodeableConcept"/>
+        <profile value="http://hl7.org/fhir/uv/ips/StructureDefinition/CodeableConcept-uv-ips"/>
+      </type>
+      <patternCodeableConcept>
+        <coding>
+          <system value="http://loinc.org"/>
+          <code value="29762-2"/>
+        </coding>
+      </patternCodeableConcept>
+    </element>
+    <element id="Composition.section:sectionSocialHistory.entry">
+      <path value="Composition.section.entry"/>
+      <slicing>
+        <discriminator>
+          <type value="profile"/>
+          <path value="resolve()"/>
+        </discriminator>
+        <rules value="open"/>
+      </slicing>
+      <short value="Health related &quot;lifestyle factors&quot; or &quot;lifestyle observations&quot; (e.g. smoke habits; alcohol consumption; diets, risky habits.)"/>
+      <definition value="Description of the person’s Health related “lifestyle factors&quot; or &quot;lifestyle observations&quot; (e.g. smoke habits; alcohol consumption; diets, risky habits.)"/>
+      <type>
+        <code value="Reference"/>
+        <targetProfile value="http://hl7.org/fhir/StructureDefinition/Observation"/>
+        <targetProfile value="http://hl7.org/fhir/StructureDefinition/DocumentReference"/>
+      </type>
+    </element>
+    <element id="Composition.section:sectionSocialHistory.entry:smokingTobaccoUse">
+      <path value="Composition.section.entry"/>
+      <sliceName value="smokingTobaccoUse"/>
+      <min value="0"/>
+      <max value="1"/>
+      <type>
+        <code value="Reference"/>
+        <targetProfile value="http://hl7.org/fhir/uv/ips/StructureDefinition/Observation-tobaccouse-uv-ips"/>
+      </type>
+    </element>
+    <element id="Composition.section:sectionSocialHistory.entry:alcoholUse">
+      <path value="Composition.section.entry"/>
+      <sliceName value="alcoholUse"/>
+      <min value="0"/>
+      <max value="1"/>
+      <type>
+        <code value="Reference"/>
+        <targetProfile value="http://hl7.org/fhir/uv/ips/StructureDefinition/Observation-alcoholuse-uv-ips"/>
+      </type>
+    </element>
+    <element id="Composition.section:sectionVitalSigns">
+      <path value="Composition.section"/>
+      <sliceName value="sectionVitalSigns"/>
+      <label value="Vital signs"/>
+      <short value="IPS Vital Signs Section"/>
+      <definition value="The Vital signs section includes blood pressure, body temperature, heart rate, and respiratory rate. It may also include other clinical findings, such as height, weight, body mass index, head circumference, and pulse oximetry. In particular, notable vital signs or physical findings such as the most recent, maximum and/or minimum, baseline, or relevant trends may be included"/>
+      <min value="0"/>
+      <max value="1"/>
+      <mustSupport value="true"/>
+    </element>
+    <element id="Composition.section:sectionVitalSigns.code">
+      <path value="Composition.section.code"/>
+      <min value="1"/>
+      <type>
+        <code value="CodeableConcept"/>
+        <profile value="http://hl7.org/fhir/uv/ips/StructureDefinition/CodeableConcept-uv-ips"/>
+      </type>
+      <patternCodeableConcept>
+        <coding>
+          <system value="http://loinc.org"/>
+          <code value="8716-3"/>
+        </coding>
+      </patternCodeableConcept>
+    </element>
+    <element id="Composition.section:sectionVitalSigns.entry">
+      <path value="Composition.section.entry"/>
+      <slicing>
+        <discriminator>
+          <type value="profile"/>
+          <path value="resolve()"/>
+        </discriminator>
+        <rules value="open"/>
+      </slicing>
+      <short value="Notable vital signs or physical findings."/>
+      <definition value="Notable vital signs or physical findings as: blood pressure, body temperature, heart rate, and respiratory rate. It may also include other clinical findings, such as height, weight, body mass index, head circumference, and pulse oximetry. In particular, notable vital signs or physical findings such as the most recent, maximum and/or minimum, baseline, or relevant trends may be included"/>
+      <type>
+        <code value="Reference"/>
+        <targetProfile value="http://hl7.org/fhir/StructureDefinition/Observation"/>
+        <targetProfile value="http://hl7.org/fhir/StructureDefinition/DocumentReference"/>
+      </type>
+    </element>
+    <element id="Composition.section:sectionVitalSigns.entry:vitalSign">
+      <path value="Composition.section.entry"/>
+      <sliceName value="vitalSign"/>
+      <min value="0"/>
+      <max value="*"/>
+      <type>
+        <code value="Reference"/>
+        <targetProfile value="http://hl7.org/fhir/StructureDefinition/vitalsigns"/>
+      </type>
     </element>
   </differential>
 </StructureDefinition>

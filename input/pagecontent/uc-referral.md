@@ -4,7 +4,7 @@ This use case demonstrates an example scenario where, during a specialist consul
 
 Joyce Johnson, a 39-year-old woman from New South Wales, is pregnant and has recently been diagnosed with gestational diabetes. To provide Joyce with more comprehensive support, her regular general practitioner (GP), Dr Ginger Burrows, refers Joyce to both an endocrinologist and a dietitian.
 
-As part of the referral, Dr Burrows includes an embedded patient summary that captures Joyce’s medical history and current medications at the time. This embedded summary is curated from Dr Burrow's clinical information system (CIS) and attested at the time of creation, ensuring its integrity and alignment with clinical standards.
+As part of the referral, Dr Burrows includes an embedded patient summary that captures Joyce’s medical history and current medications at the time. This embedded summary is curated from Dr Burrows' clinical information system (CIS) and attested at the time of creation, ensuring its integrity and alignment with clinical standards.
 
 The referral is received and triaged by both the endocrinologist (Dr Bryce Cruickshank) and the dietitian. When Joyce later attends her appointment with Dr Cruickshank, the endocrinologist's CIS alerts the provider that a more recent patient summary is available from an external source - in this case, Dr Burrows’ CIS.
 
@@ -30,7 +30,7 @@ This use case demonstrates use of patient summary during step 4. Endocrinologist
 1. Endocrinologist - Dr Bryce Cruickshank
 
 #### Systems
-1. GP Clinical Information System (CIS)
+1. GP CIS
 1. Endocrinologist CIS
 
 ### Precondition(s)
