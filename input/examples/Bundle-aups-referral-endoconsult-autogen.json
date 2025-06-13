@@ -1938,9 +1938,9 @@
         "display": "Verification Signature"
       }
     ],
-    "when": "2025-06-13T07:04:35.883Z",
+    "when": "2024-11-07T10:02:11.269+11:00",
     "who": {
-      "reference": "Practitioner/123"
+      "reference": "urn:uuid:40c3b2a7-e673-4f83-8dd8-2b112a88775e"
     },
     "targetFormat": "application/fhir+json",
     "sigFormat": "application/jose",
