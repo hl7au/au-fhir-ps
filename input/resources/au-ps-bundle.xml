@@ -315,8 +315,8 @@
         <profile value="http://hl7.org/fhir/uv/ips/StructureDefinition/Observation-pregnancy-outcome-uv-ips"/>
         <profile value="http://hl7.org/fhir/uv/ips/StructureDefinition/Observation-pregnancy-status-uv-ips"/>
         <profile value="http://hl7.org/fhir/uv/ips/StructureDefinition/Observation-alcoholuse-uv-ips"/>
-        <profile value="http://hl7.org/fhir/uv/ips/StructureDefinition/Observation-tobaccouse-uv-ips"/>
-        <profile value="http://hl7.org/fhir/uv/ips/StructureDefinition/Observation-results-laboratory-pathology-uv-ips"/>
+        <profile value="http://hl7.org.au/fhir/ps/StructureDefinition/au-ps-smokingstatus"/>
+        <profile value="http://hl7.org.au/fhir/ps/StructureDefinition/au-ps-diagnosticresult-path"/>
         <profile value="http://hl7.org/fhir/uv/ips/StructureDefinition/Observation-results-radiology-uv-ips"/>
         <profile value="http://hl7.org/fhir/StructureDefinition/vitalsigns"/>
       </type>

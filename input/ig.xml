@@ -128,6 +128,18 @@
 			</reference>
 			<exampleBoolean value="false"/>
 		</resource>
+		<resource>
+			<reference>
+				<reference value="StructureDefinition/au-ps-smokingstatus"/>
+			</reference>
+			<exampleBoolean value="false"/>
+		</resource>
+		<resource>
+			<reference>
+				<reference value="StructureDefinition/au-ps-diagnosticresult-path"/>
+			</reference>
+			<exampleBoolean value="false"/>
+		</resource>
 		<!-- EXAMPLES-->
 		<resource>
 			<reference>
