@@ -32,7 +32,7 @@
         <author>
           <reference value="urn:uuid:40c3b2a7-e673-4f83-8dd8-2b112a88775e"/>
         </author>
-        <title value="Patient Summary for Joyce Johnson as of 28 OCT 2024"/>
+        <title value="Patient Summary for Joyce Johnson as of 07 NOV 2024"/>
         <custodian>
           <reference value="urn:uuid:14292353-98f0-43b3-a25b-406baf3f9175"/>
         </custodian>
@@ -56,10 +56,33 @@
             </coding>
           </code>
           <text>
-            <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml">No known allergies.</div>
+            <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml">
+            <table border="1">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Substance</th>
+                    <th>Date/time of onset of first reaction</th>
+                    <th>Manifestation</th>
+                    <th>Severity of reaction</th>
+                    <th>Comment</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>Allergy</td>
+                    <td>Prawns</td>
+                    <td>18:50 02/11/2024</td>
+                    <td>Itchy throat</td>
+                    <td>Mild</td>
+                    <td>Pt stated had prawns with dinner and noticed itchy throat, never experienced this before</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
           </text>
           <entry>
-            <reference value="urn:uuid:0baac8a9-69b8-4e99-9460-03df08f92c98"/>
+            <reference value="urn:uuid:f7bd83e4-2a4e-40be-8467-8a29b667ef46"/>
           </entry>
         </section>
         <section>
@@ -80,6 +103,7 @@
                     <th>Clinical Indication</th>
                     <th>Status</th>
                     <th>Last Updated</th>
+                    <th>Comment</th>
                   </tr>
                 </thead>
                 <tbody>
@@ -89,6 +113,7 @@
                     <td></td>
                     <td>Active</td>
                     <td>28/10/2024</td>
+                    <td>Pt prefers Blackmores</td>
                   </tr>
                   <tr>
                     <td>Insulin (Humulin N)</td>
@@ -96,6 +121,7 @@
                     <td></td>
                     <td>Active</td>
                     <td>28/10/2024</td>
+                    <td></td>
                   </tr>
                   <tr>
                     <td>Insulin (Humulin R)</td>
@@ -103,6 +129,7 @@
                     <td></td>
                     <td>Active</td>
                     <td>28/10/2024</td>
+                    <td></td>
                   </tr>
                   <tr>
                     <td>Metformin</td>
@@ -110,6 +137,7 @@
                     <td></td>
                     <td>Active</td>
                     <td>28/10/2024</td>
+                    <td></td>
                   </tr>
                   <tr>
                     <td>Trimethoprim</td>
@@ -117,6 +145,7 @@
                     <td>Urinary tract infection (UTI)</td>
                     <td>Active</td>
                     <td>04/11/2024</td>
+                    <td></td>
                   </tr>
                 </tbody>
               </table>
@@ -201,48 +230,59 @@
                   <tr>
                     <th>Vaccine</th>
                     <th>Date of administration</th>
+                    <th>Comment</th>
                   </tr>
                 </thead>
                 <tbody>
                   <tr>
                     <td>Diphtheria + tetanus + pertussis 5 component adolescent/adult vaccine injection, 0.5 mL syringe</td>
-                    <td>5/10/2024</td>
+                    <td>05/10/2024</td>
+                    <td></td>
                   </tr>
                   <tr>
                     <td>Influenza vaccine</td>
-                    <td>5/5/2024</td>
+                    <td>05/05/2024</td>
+                    <td></td>
                   </tr>
                   <tr>
                     <td>Influenza vaccine</td>
-                    <td>15/5/2023</td>
+                    <td>15/05/2023</td>
+                    <td>Pt reported localised redness and swelling post previous flu vax last year. Monitor for rxn.</td>
                   </tr>
                   <tr>
                     <td>COVID-19 mRNA-1273 Vaccine (Moderna) injection, 0.5 mL syringe</td>
-                    <td>15/5/2023</td>
+                    <td>15/05/2023</td>
+                    <td></td>
                   </tr>
                   <tr>
                     <td>Influenza vaccine</td>
-                    <td>1/6/2022</td>
+                    <td>01/06/2022</td>
+                    <td></td>
                   </tr>
                   <tr>
                     <td>Covid vaccine - Pfizer</td>
-                    <td>2/2/2022</td>
+                    <td>02/02/2022</td>
+                    <td></td>
                   </tr>
                   <tr>
                     <td>Covid vaccine - Pfizer</td>
-                    <td>20/7/2021</td>
+                    <td>20/07/2021</td>
+                    <td></td>
                   </tr>
                   <tr>
                     <td>Influenza vaccine</td>
-                    <td>17/5/2021</td>
+                    <td>17/05/2021</td>
+                    <td></td>
                   </tr>
                   <tr>
                     <td>Covid vaccine - Pfizer</td>
-                    <td>27/4/2021</td>
+                    <td>27/04/2021</td>
+                    <td></td>
                   </tr>
                   <tr>
                     <td>Influenza vaccine</td>
-                    <td>03/5/2020</td>
+                    <td>03/05/2020</td>
+                    <td></td>
                   </tr>
                 </tbody>
               </table>
@@ -285,7 +325,6 @@
             <coding>
               <system value="http://loinc.org"/>
               <code value="11348-0"/>
-              <display value="History of Past illness Narrative"/>
             </coding>
           </code>
           <text>
@@ -303,19 +342,19 @@
                   <tr>
                     <td>Appendicitis</td>
                     <td>Resolved</td>
-                    <td>March 2000</td>
+                    <td>03/2000</td>
                     <td></td>
                   </tr>
                   <tr>
                     <td>Upper respiratory tract infection</td>
                     <td>Resolved</td>
-                    <td>October 2022</td>
+                    <td>10/2022</td>
                     <td></td>
                   </tr>
                   <tr>
                     <td>First degree burn, Upper shoulders and back</td>
                     <td>Resolved</td>
-                    <td>02 January 2025</td>
+                    <td>02/01/2005</td>
                     <td>Severe sunburn, upper shoulders and back</td>
                   </tr>
                 </tbody>
@@ -330,9 +369,6 @@
           </entry>
           <entry>
             <reference value="urn:uuid:dc422222-8b3a-4dd5-96b5-b7e0cf43b477"/>
-          </entry>
-          <entry>
-            <reference value="urn:uuid:fc061f59-5410-41e9-945e-3f59664e8611"/>
           </entry>
         </section>
         <section>
@@ -372,22 +408,22 @@
                   <tr>
                     <td>Glucose Tolerance Test (GTT) Fasting</td>
                     <td>5.3 mmol/L</td>
-                    <td>21/10/24</td>
+                    <td>21/10/2024</td>
                   </tr>
                   <tr>
                     <td>Glucose Tolerance Test (GTT) 1 hour</td>
                     <td>10.0 mmol/L</td>
-                    <td>21/10/24</td>
+                    <td>21/10/2024</td>
                   </tr>
                   <tr>
-                    <td>Glucose Tolerance Test (GTT) 2 hours</td>
+                    <td>Glucose Tolerance Test (GTT) 2 hour</td>
                     <td>8.6 mmol/L</td>
-                    <td>21/10/24</td>
+                    <td>21/10/2024</td>
                   </tr>
                   <tr>
                     <td>Haemoglobin A1c</td>
                     <td>5.8 %</td>
-                    <td>14/06/24</td>
+                    <td>14/06/2024</td>
                   </tr>
                 </tbody>
               </table>
@@ -401,6 +437,9 @@
           </entry>
           <entry>
             <reference value="urn:uuid:27060cbf-e30e-4091-bd64-7d4ef40916ac"/>
+          </entry>
+          <entry>
+            <reference value="urn:uuid:fc061f59-5410-41e9-945e-3f59664e8611"/>
           </entry>
         </section>
         <section>
@@ -486,10 +525,10 @@
     </resource>
   </entry>
   <entry>
-    <fullUrl value="urn:uuid:0baac8a9-69b8-4e99-9460-03df08f92c98"/>
+    <fullUrl value="urn:uuid:f7bd83e4-2a4e-40be-8467-8a29b667ef46"/>
     <resource>
       <AllergyIntolerance>
-        <id value="0baac8a9-69b8-4e99-9460-03df08f92c98"/>
+        <id value="f7bd83e4-2a4e-40be-8467-8a29b667ef46"/>
         <meta>
           <profile value="http://hl7.org.au/fhir/ps/StructureDefinition/au-ps-allergyintolerance"/>
         </meta>
@@ -497,18 +536,39 @@
           <coding>
             <system value="http://terminology.hl7.org/CodeSystem/allergyintolerance-clinical"/>
             <code value="active"/>
+            <display value="Active"/>
           </coding>
         </clinicalStatus>
+        <verificationStatus>
+          <coding>
+            <system value="http://terminology.hl7.org/CodeSystem/allergyintolerance-verification"/>
+            <code value="unconfirmed"/>
+            <display value="Unconfirmed"/>
+          </coding>
+        </verificationStatus>
+        <type value="allergy"/>
         <code>
           <coding>
             <system value="http://snomed.info/sct"/>
-            <code value="716186003"/>
+            <code value="227151004"/>
+            <display value="Prawns"/>
           </coding>
-          <text value="No known allergy"/>
+          <text value="Prawns"/>
         </code>
         <patient>
           <reference value="urn:uuid:85822a88-55b1-460c-bb7b-e8fc22d8568f"/>
         </patient>
+        <onsetDateTime value="2024-11-02T18:50:00+11:00"/>
+        <recordedDate value="2024-11-04"/>
+        <note>
+          <text value="Pt stated had prawns with dinner and noticed itchy throat, never experienced this before"/>
+        </note>
+        <reaction>
+          <manifestation>
+            <text value="Itchy throat"/>  
+          </manifestation>
+          <severity value="mild"/>  
+        </reaction>
       </AllergyIntolerance>
     </resource>
   </entry>
@@ -662,6 +722,9 @@
           <start value="2024"/>
         </effectivePeriod>
         <dateAsserted value="2024-10-24"/>
+        <note>
+          <text value="Pt prefers Blackmores"/>
+        </note>
         <dosage>
           <text value="1 tablet daily"/>
           <route>
@@ -1286,6 +1349,9 @@
         </patient>
         <occurrenceDateTime value="2023-05-15"/>
         <primarySource value="true"/>
+        <note>
+          <text value="Pt reported localised redness and swelling post previous flu vax last year. Monitor for rxn."/>
+        </note>
       </Immunization>
     </resource>
   </entry>
@@ -1508,9 +1574,8 @@
       <Observation>
         <id value="5f1b9790-4892-4af3-9b76-3cb4f854a5b1"/>
         <meta>
-          <profile value="http://hl7.org.au/fhir/core/StructureDefinition/au-core-diagnosticresult-path"/>
-          <profile value="http://hl7.org/fhir/uv/ips/StructureDefinition/Observation-results-laboratory-pathology-uv-ips"/>
-        </meta>
+          <profile value="http://hl7.org.au/fhir/ps/StructureDefinition/au-ps-diagnosticresult-path"/>
+          </meta>
         <status value="final"/>
         <category>
           <coding>
@@ -1524,6 +1589,11 @@
             <system value="http://snomed.info/sct"/>
             <code value="113076002"/>
             <display value="Glucose tolerance test"/>
+          </coding>
+          <coding>
+            <system value="http://loinc.org"/>
+            <code value="14995-5"/>
+            <display value="Glucose [Moles/volume] in Serum or Plasma --2 hours post 75 g glucose PO"/>
           </coding>
           <coding>
             <system value="http://snomed.info/sct"/>
@@ -1555,8 +1625,7 @@
     <Observation>
       <id value="1bbd2e05-161d-4030-975c-0cca3ef97cdb"/>
       <meta>
-        <profile value="http://hl7.org.au/fhir/core/StructureDefinition/au-core-diagnosticresult-path"/>
-        <profile value="http://hl7.org/fhir/uv/ips/StructureDefinition/Observation-results-laboratory-pathology-uv-ips"/>
+        <profile value="http://hl7.org.au/fhir/ps/StructureDefinition/au-ps-diagnosticresult-path"/>
       </meta>
       <status value="final"/>
       <category>
@@ -1577,7 +1646,12 @@
           <code value="792805006"/>
           <display value="Fasting (regime/therapy)"/>
         </coding>
-        <text value="Glucose Tolerance Test (GTT) fasting"/>
+        <coding>
+          <system value="http://loinc.org"/>
+          <code value="14996-3"/>
+          <display value="Glucose [Moles/volume] in Serum or Plasma --pre 75 g glucose PO"/>
+        </coding>
+        <text value="Glucose Tolerance Test (GTT) Fasting"/>
       </code>
       <subject>
         <reference value="urn:uuid:85822a88-55b1-460c-bb7b-e8fc22d8568f"/>
@@ -1602,9 +1676,8 @@
       <Observation>
         <id value="27060cbf-e30e-4091-bd64-7d4ef40916ac"/>
         <meta>
-          <profile value="http://hl7.org.au/fhir/core/StructureDefinition/au-core-diagnosticresult-path"/>
-          <profile value="http://hl7.org/fhir/uv/ips/StructureDefinition/Observation-results-laboratory-pathology-uv-ips"/>
-        </meta>
+          <profile value="http://hl7.org.au/fhir/ps/StructureDefinition/au-ps-diagnosticresult-path"/>
+          </meta>
         <status value="final"/>
         <category>
           <coding>
@@ -1618,6 +1691,11 @@
             <system value="http://snomed.info/sct"/>
             <code value="113076002"/>
             <display value="Glucose tolerance test (procedure)"/>
+          </coding>
+          <coding>
+            <system value="http://loinc.org"/>
+            <code value="51597-3"/>
+            <display value="Glucose [Moles/volume] in Serum or Plasma --1 hour post 75 g glucose PO"/>
           </coding>
           <text value="Glucose Tolerance Test (GTT) 1 hour"/>
         </code>
@@ -1644,8 +1722,7 @@
       <Observation>
         <id value="fc061f59-5410-41e9-945e-3f59664e8611"/>
         <meta>
-          <profile value="http://hl7.org.au/fhir/core/StructureDefinition/au-core-diagnosticresult-path"/>
-          <profile value="http://hl7.org/fhir/uv/ips/StructureDefinition/Observation-results-laboratory-pathology-uv-ips"/>
+          <profile value="http://hl7.org.au/fhir/ps/StructureDefinition/au-ps-diagnosticresult-path"/>
         </meta>
         <status value="final"/>
         <category>
@@ -1658,8 +1735,8 @@
         <code>
           <coding>
             <system value="http://loinc.org"/>
-            <code value="17856-6"/>
-            <display value="Hemoglobin A1c/Hemoglobin.total in Blood by HPLC"/>
+            <code value="4548-4"/>
+            <display value="Hemoglobin A1c/Hemoglobin.total in Blood"/>
           </coding>
           <text value="Haemoglobin A1c"/>
         </code>
@@ -1686,8 +1763,7 @@
       <Observation>
         <id value="8924f910-53b3-4125-b0f2-58d0068f8983"/>
         <meta>
-          <profile value="http://hl7.org.au/fhir/core/StructureDefinition/au-core-smokingstatus"/>
-          <profile value="http://hl7.org/fhir/uv/ips/StructureDefinition/Observation-tobaccouse-uv-ips"/>
+          <profile value="http://hl7.org.au/fhir/ps/StructureDefinition/au-ps-smokingstatus"/>
         </meta>
         <status value="final"/>
         <category>

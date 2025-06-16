@@ -2,71 +2,63 @@ This use case describes an example scenario where, during a general practitioner
 
 ### Use Case Description
 
-Jeramy Ezra Banks is a 73-year-old male who lives in New South Wales, Australia. Jeramy has chronic heart disease which was diagnosed 5 years ago and Jeramy's usual GP is Dr Abe Lowe. Comfortable with basic technology, Jeramy uses a smartphone app to manage his healthcare records.
+Jeramy Ezra Banks, a 73-year-old man from New South Wales, has been managing chronic heart disease since his diagnosis five years ago. His regular GP, Dr Abe Lowe, oversees his ongoing care. Comfortable with basic technology, Jeramy uses a smartphone app to access and manage his health records.
 
-Jeramy travels interstate to Queensland for a holiday to visit his daughter. Prior to travelling, Jeramy checks that his patient summary has been updated by his usual GP (Dr Abe Lowe) following a recent admission to hospital.
+Before travelling to Queensland for a holiday to visit his daughter, Jeramy confirms via the app that his patient summary has been updated by Dr Lowe following a recent hospital admission.
 
-During the trip Jeramy begins feeling unwell, he is gasping for breath and feels stiff after driving. Jeramy books an appointment with a local Queensland GP (Dr Wyatt Samuels).
+While on the road, Jeramy begins to feel unwell - he is gasping for breath and feels stiff after driving. He books an appointment with a local GP in Queensland, Dr Wyatt Samuels.
 
-Jeramy attends the appointment with the local Queensland GP (Dr Wyatt Samuels). During the appointment, Jeramy alerts the attending GP (Dr Wyatt Samuels) that a patient summary from his usual GP is available. Jeramy provides access to his patient summary to the attending GP (Dr Wyatt Samuels). 
+During the consultation, Jeramy informs Dr Samuels that his health information is available via a patient summary shared by his regular GP. Jeramy provides access using a Smart Health Link presented via his smartphone app. Dr Samuels retrieves the most recent patient summary directly from Dr Lowe’s clinical information system (CIS). The patient summary has been curated by Dr Lowe and attested at the time of update, ensuring its integrity and alignment with clinical standards. 
 
-The attending GP's (Dr Wyatt Samuels) clinical system initiates a request to retrieve Jeramy’s most recent patient summary from the clinical system of the usual GP (Dr Abe Lowe) to ensure safe and informed care.
+The summary enables Dr Samuels to quickly understand Jeramy’s condition, recent treatment, and current medications - supporting safe and informed clinical decision-making during the consultation.
 
-The attending GP (Dr Wyatt Samuels) uses the patient summary to support care decisions during the consultation.
-
- <div> 
-    <img src="uc-interstate-cj.png" alt="Interstate GP Visit consumer journey" style="width:80%"/>
-  </div>
+<div> 
+  <img src="uc-interstate-cj.png" alt="Interstate GP Visit consumer journey" style="width:80%"/>
+</div>
 *Figure 1: Interstate GP Visit consumer journey*
 <br/>
 
 This use case demonstrates use of patient summary during step 5. Patient Summary Retrieval of the [Interstate GP Visit consumer journey](https://sparked.csiro.au/index.php/sparked-products-resources/au-patient-summary-consumer-journeys/).
 
-<div class="stu-note" markdown="1">
-
-#### Use Case Decisions to be confirmed for the patient summary from Usual GP
-The following decisions are to be confirmed:
-1. is it accessed by a QR code and/or link
-1. is electronic signature present yes/no
-
-</div>
-
 ### Actors
 
 #### People
-1. Attending GP (Dr Wyatt Samuels)
-1. Patient (Jeramy)
+1. Patient - Jeramy Ezra Banks
+1. Usual GP - Dr Abe Lowe
+1. Attending GP - Dr Wyatt Samuels
 
 #### Systems
-1. Attending GP's Clinical Information System (CIS)
-1. Usual GP's Clinical Information System
+1. Attending GP's CIS
+1. Usual GP's CIS
 
 ### Precondition(s)
 1. Jeramy has provided consent for his health information to be shared between healthcare providers.
-1. Jeramy is registered with a usual GP whose system maintains a current patient summary.
-1. The attending GP system is connected to a network that allows secure record exchange.
+1. Jeramy is registered with a usual GP (Dr Abe Lowe) whose CIS maintains a current patient summary.
+1. Dr Wyatt Samuels’ CIS is Smart Health Link capable and connected to a network that allows secure record exchange.
 
 ### Postcondition(s)
-1. The attending GP has accessed and reviewed Jeramy’s patient summary.
-1. Any updates resulting from the consultation may be recorded in the attending GP’s system 
-1. Resulting updates may be communicated back to the usual GP and patient.
+1. Dr Wyatt Samuels has accessed and reviewed Jeramy’s patient summary.
+1. Any updates resulting from the consultation may be recorded in Dr Samuels’ CIS. 
+1. Resulting updates may be communicated back to Dr Lowe and Jeramy to maintain continuity of care.
 
 ### Flow
 1. Jeramy presents at a general practice that is not his usual clinic.
-1. The attending GP verifies Jeramy’s identity and obtains consent to access external records.
-1. The attending GP system initiates a query to locate Jeramy’s usual GP.
-1. The system securely requests Jeramy’s latest patient summary from the usual GP system (directly or via an exchange).
-1. The usual GP system authenticates the request and returns the patient summary.
-1. The attending GP reviews the summary, which may include medications, problems, allergies, immunisations, observations, and recent care events.
-1. The information supports clinical decision-making during the consultation.
+1. The attending GP (Dr Wyatt Samuels) verifies Jeramy’s identity and obtains consent to access external records.
+1. Jeramy presents a QR code, generated by his usual GP system or health app, that encodes a Smart Health Link to his patient summary.
+1. Dr Samuels’ CIS scans the QR code and accesses the patient summary via the Smart Health Link.
+1. Dr Samuels reviews the summary, which may include medications, problems, allergies, immunisations, observations, and recent care events.
+1. The summary supports clinical decision-making during the consultation.
 
-INSERT SEQUENCE DIAGRAM
-*Figure 2: Sequence Diagram TBD*
+#### Sequence Diagram
+<div> 
+  <img src="uc-interstate-seq.png" alt="Sequence Diagram" style="width:80%"/>
+</div>
+*Figure 2: Sequence diagram showing access to a patient summary via Smart Health Link*
 <br/>
 
 ### Examples
 
-The following example demonstrates technical and clinical use case aspects, conforming to the AU Patient Summary requirements. Data within this example, e.g. medications, is provided by the [Sparked Patient Summary Clinical Focus Group](https://sparked.csiro.au/index.php/design-groups/):
+The following example demonstrates both technical and clinical aspects of the use case, conforming to the AU Patient Summary requirements. Data within this example, e.g. medications, is provided by the [Sparked Patient Summary Clinical Focus Group](https://sparked.csiro.au/index.php/design-groups/):
 * Patient Summary from Usual GP CIS: [Jeramy's Patient Summary as of 27 May 2025 (Bundle)](Bundle-aups-gpvisit-retrieval.html)
 
 

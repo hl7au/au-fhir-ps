@@ -12,7 +12,7 @@ Patient Summary R1 (& AU Core R2) Target Release Timeline:
 <br/>
 
 Future updates of AU Patient Summary updates would reflect changes to:
- - Australian Core Data for Interoperability (AUCDI)
+ - AUCDI
  - AU Core
  - International Patient Summary
  - requests from the AU FHIR community

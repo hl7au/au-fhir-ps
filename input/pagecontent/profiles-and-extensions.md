@@ -16,7 +16,6 @@ In addition to the profiles defined in this implementation guide, the following 
 - [Device (IPS)](https://build.fhir.org/ig/HL7/fhir-ips/StructureDefinition-Device-uv-ips.html)
 * [DeviceUseStatement (IPS)](https://build.fhir.org/ig/HL7/fhir-ips/StructureDefinition-DeviceUseStatement-uv-ips.html)
 * [DiagnosticReport (IPS)](https://build.fhir.org/ig/HL7/fhir-ips/StructureDefinition-DiagnosticReport-uv-ips.html)
-* [Observation Results - Laboratory/Pathology (IPS)](https://build.fhir.org/ig/HL7/fhir-ips/StructureDefinition-Observation-results-laboratory-pathology-uv-ips.html)
 * [Observation Results - Radiology (IPS)](https://build.fhir.org/ig/HL7/fhir-ips/StructureDefinition-Observation-results-radiology-uv-ips.html)
 
 

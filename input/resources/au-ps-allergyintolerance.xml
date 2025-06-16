@@ -7,18 +7,15 @@
   <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-compliesWithProfile">
     <valueCanonical value="http://hl7.org/fhir/uv/ips/StructureDefinition/AllergyIntolerance-uv-ips"/>
   </extension>
-  <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-compliesWithProfile">
-    <valueCanonical value="http://hl7.org.au/fhir/core/StructureDefinition/au-core-allergyintolerance"/>
-  </extension>
   <url value="http://hl7.org.au/fhir/ps/StructureDefinition/au-ps-allergyintolerance"/>
   <name value="AUPSAllergyIntolerance"/>
   <title value="AU PS AllergyIntolerance"/>
   <status value="draft"/>
-  <description value="This profile sets minimum expectations for an AllergyIntolerance resource in the context of a patient summary in an Australian context. It is based on the [AU Base AllergyIntolerance](http://build.fhir.org/ig/hl7au/au-fhir-base/StructureDefinition-au-allergyintolerance.html) profile, and applies the constraints of [AU Core AllergyIntolerance](http://hl7.org.au/fhir/core/StructureDefinition/au-core-allergyintolerance) and [AllergyIntolerance (IPS)](http://hl7.org/fhir/uv/ips/StructureDefinition/AllergyIntolerance-uv-ips)."/>
+  <description value="This profile sets minimum expectations for an AllergyIntolerance resource in the context of a patient summary in an Australian context. It is based on the [AU Core AllergyIntolerance](https://build.fhir.org/ig/hl7au/au-fhir-core/StructureDefinition-au-core-allergyintolerance.html) profile, and applies the additional requirements from [AllergyIntolerance (IPS)](http://hl7.org/fhir/uv/ips/StructureDefinition/AllergyIntolerance-uv-ips)."/>
   <kind value="resource"/>
   <abstract value="false"/>
   <type value="AllergyIntolerance"/>
-  <baseDefinition value="http://hl7.org.au/fhir/StructureDefinition/au-allergyintolerance"/>
+  <baseDefinition value="http://hl7.org.au/fhir/core/StructureDefinition/au-core-allergyintolerance"/>
   <derivation value="constraint"/>
   <differential>
     <element id="AllergyIntolerance">
@@ -30,7 +27,6 @@
 				<code value="CodeableConcept"/>
 				<profile value="http://hl7.org/fhir/uv/ips/StructureDefinition/CodeableConcept-uv-ips"/>
 			</type>
-      <mustSupport value="true"/>
     </element>
     <element id="AllergyIntolerance.verificationStatus">
       <path value="AllergyIntolerance.verificationStatus"/>
@@ -38,7 +34,6 @@
 				<code value="CodeableConcept"/>
 				<profile value="http://hl7.org/fhir/uv/ips/StructureDefinition/CodeableConcept-uv-ips"/>
 			</type>
-      <mustSupport value="true"/>
     </element>
     <element id="AllergyIntolerance.type">
       <path value="AllergyIntolerance.type"/>
@@ -46,27 +41,10 @@
     </element>
     <element id="AllergyIntolerance.code">
       <path value="AllergyIntolerance.code"/>
-      <min value="1"/>
       <type>
 				<code value="CodeableConcept"/>
 				<profile value="http://hl7.org/fhir/uv/ips/StructureDefinition/CodeableConcept-uv-ips"/>
 			</type>
-      <mustSupport value="true"/>
-      <binding>
-        <extension url="http://hl7.org/fhir/tools/StructureDefinition/additional-binding">
-          <extension url="purpose">
-            <valueCode value="candidate"/>
-          </extension>
-          <extension url="valueSet">
-            <valueCanonical value="https://healthterminologies.gov.au/fhir/ValueSet/adverse-reaction-substances-and-negated-findings-1"/>
-          </extension>
-          <extension url="documentation">
-            <valueMarkdown value="The Adverse Reaction Substances and Negated Findings value set comprises terms used to identify a predisposition to adverse reactions to substances, as well as negated findings."/>
-          </extension>          
-        </extension>
-        <strength value="extensible" />
-        <valueSet value="https://healthterminologies.gov.au/fhir/ValueSet/indicator-hypersensitivity-intolerance-to-substance-2"/>
-      </binding>
     </element>
     <element id="AllergyIntolerance.patient">
       <path value="AllergyIntolerance.patient"/>
@@ -74,7 +52,6 @@
         <code value="Reference"/>
         <targetProfile value="http://hl7.org.au/fhir/ps/StructureDefinition/au-ps-patient"/>
       </type>
-      <mustSupport value="true"/>
     </element>
     <element id="AllergyIntolerance.patient.reference">
       <path value="AllergyIntolerance.patient.reference"/>
@@ -98,11 +75,9 @@
       <type>
         <code value="Range"/>
       </type>
-      <mustSupport value="true"/>
     </element>
     <element id="AllergyIntolerance.reaction">
       <path value="AllergyIntolerance.reaction"/>
-      <mustSupport value="true"/>
     </element>
     <element id="AllergyIntolerance.reaction.manifestation">
       <path value="AllergyIntolerance.reaction.manifestation"/>
@@ -110,11 +85,6 @@
 				<code value="CodeableConcept"/>
 				<profile value="http://hl7.org/fhir/uv/ips/StructureDefinition/CodeableConcept-uv-ips"/>
 			</type>
-      <mustSupport value="true"/>
-    </element>
-    <element id="AllergyIntolerance.reaction.severity">
-      <path value="AllergyIntolerance.reaction.severity"/>
-      <mustSupport value="true"/>
     </element>
   </differential>
 </StructureDefinition>
