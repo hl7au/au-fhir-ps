@@ -4,61 +4,32 @@
   <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-fmm">
     <valueInteger value="0"/>
   </extension>
-  <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-compliesWithProfile">
-    <valueCanonical value="http://hl7.org.au/fhir/core/StructureDefinition/au-core-encounter"/>
-  </extension>
   <url value="http://hl7.org.au/fhir/ps/StructureDefinition/au-ps-encounter"/>
   <name value="AUPSEncounter"/>
   <title value="AU PS Encounter"/>
   <status value="draft"/>
-  <description value="This profile sets minimum expectations for an Encounter resource in the context of a patient summary in an Australian context. It is based on the [AU Base Encounter](http://build.fhir.org/ig/hl7au/au-fhir-base/StructureDefinition-au-encounter.html) profile, and applies the constraints of [AU Core Encounter](http://hl7.org.au/fhir/core/StructureDefinition/au-core-encounter) and IPS." />
+  <description value="This profile sets minimum expectations for an Encounter resource in the context of a patient summary in an Australian context. It is based on the [AU Core Encounter](https://build.fhir.org/ig/hl7au/au-fhir-core/StructureDefinition-au-core-encounter.html) profile, and applies the additional constraints for use in a patient summary context consistent with the profiling conventions of [IPS](https://build.fhir.org/ig/HL7/fhir-ips/)." />
   <kind value="resource"/>
   <abstract value="false"/>
   <type value="Encounter"/>
-  <baseDefinition value="http://hl7.org.au/fhir/StructureDefinition/au-encounter"/>
+  <baseDefinition value="http://hl7.org.au/fhir/core/StructureDefinition/au-core-encounter"/>
   <derivation value="constraint"/>
   <differential>
     <element id="Encounter">
       <path value="Encounter"/>
     </element>
-    <element id="Encounter.status">
-      <path value="Encounter.status"/>
-      <mustSupport value="true"/>
-    </element>
-    <element id="Encounter.class">
-      <path value="Encounter.class"/>
-      <mustSupport value="true"/>
-    </element>
-    <element id="Encounter.serviceType">
-      <path value="Encounter.serviceType"/>
-      <mustSupport value="true"/>
-      <binding>
-        <strength value="preferred"/>
-        <valueSet value="https://healthterminologies.gov.au/fhir/ValueSet/service-type-1"/>
-      </binding>
-    </element>
     <element id="Encounter.subject">
       <path value="Encounter.subject"/>
-      <min value="1"/>
       <type>
         <code value="Reference"/>
         <targetProfile value="http://hl7.org.au/fhir/ps/StructureDefinition/au-ps-patient"/>
       </type>
-      <mustSupport value="true"/>
     </element>
     <!--<element id="Encounter.subject.reference">
       <path value="Encounter.subject.reference"/>
       <min value="1"/>
       <mustSupport value="true"/>
     </element>-->
-    <element id="Encounter.participant">
-      <path value="Encounter.participant"/>
-      <mustSupport value="true"/>
-    </element>
-    <element id="Encounter.participant.type">
-      <path value="Encounter.participant.type"/>
-      <mustSupport value="true"/>
-    </element>
     <element id="Encounter.participant.individual">
       <path value="Encounter.participant.individual"/>
       <type>
@@ -67,15 +38,6 @@
         <targetProfile value="http://hl7.org.au/fhir/ps/StructureDefinition/au-ps-practitionerrole"/>
         <targetProfile value="http://hl7.org.au/fhir/ps/StructureDefinition/au-ps-relatedperson"/>
       </type>
-      <mustSupport value="true"/>
-    </element>
-    <element id="Encounter.period">
-      <path value="Encounter.period"/>
-      <mustSupport value="true"/>
-    </element>
-    <element id="Encounter.reasonCode">
-      <path value="Encounter.reasonCode"/>
-      <mustSupport value="true"/>
     </element>
     <element id="Encounter.reasonReference">
       <path value="Encounter.reasonReference"/>
@@ -85,19 +47,6 @@
         <targetProfile value="http://hl7.org/fhir/StructureDefinition/Observation"/>
         <targetProfile value="http://hl7.org.au/fhir/ps/StructureDefinition/au-ps-procedure"/>
       </type>
-      <mustSupport value="true"/>
-    </element>
-    <element id="Encounter.location">
-      <path value="Encounter.location"/>
-      <mustSupport value="true"/>
-    </element>
-    <element id="Encounter.location.location">
-      <path value="Encounter.location.location"/>
-      <type>
-        <code value="Reference"/>
-        <targetProfile value="http://hl7.org.au/fhir/core/StructureDefinition/au-core-location"/>
-      </type>
-      <mustSupport value="true"/>
     </element>
     <element id="Encounter.serviceProvider">
       <path value="Encounter.serviceProvider"/>
@@ -105,7 +54,6 @@
         <code value="Reference"/>
         <targetProfile value="http://hl7.org.au/fhir/ps/StructureDefinition/au-ps-organization"/>
       </type>
-      <mustSupport value="true"/>
     </element>
   </differential>
 </StructureDefinition>
