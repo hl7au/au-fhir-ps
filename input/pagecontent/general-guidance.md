@@ -4,6 +4,8 @@ AU PS profiles will by design:
 * support additional requirements agreed as necessary to support patient summaries in an Australian healthcare context
 * support varied stakeholder needs and use of AU Patient Summary artefacts e.g. government policy, implementers, tooling developers, testers, IG authors/maintainers etc.
 
+**AU PS Profile Design Principles**
+
  AU PS profile design to ensure compliance with AU Core and IPS is agreed to as follows. AU PS profiles:
 * **SHALL** ensure resources validate against both IPS and AU Core profiles (where both profiles exist)
    - Cardinality
@@ -16,9 +18,11 @@ AU PS profiles will by design:
    * IPS profile (where only the IPS profile exists)
    * AU Core profile (where only the AU Core profile exists)
 * AU PS profiles **SHALL** validate reference elements against AU PS profile where defined
-* In AU PS profiles, AU Core profile value sets are preferred over IPS profile value sets:
+* In AU PS profiles, inherited AU Core profile value sets are preferred over equivalent IPS profile value sets:
    - where an element has a required binding, the element **SHALL** apply the intersection of both value sets (AU Core and IPS)
    - where an element has a lesser binding, use the AU Core value set and binding strength (where AU Core is equivalent or stronger) or use the IPS value set where the binding strength is stronger
+
+**Profiling Context**
 
 When managing profile complexity and requirements in the [national and international context for AU Patient Summary](relationship.html#relationship-to-aucdi-and-other-igs), the following mechanisms are available:
 1. [Derived from Profiles (derive)](https://build.fhir.org/structuredefinition-definitions.html#StructureDefinition.baseDefinition)
@@ -34,7 +38,7 @@ For a human, the main differences with use of imposeProfile are:
 - does not visually show human reader of the source profile any rules from the target profile, i.e. a human reader must view and understand both profiles to understand the rules
 - where two or more profiles offer optional alternatives (e.g. differing preferred bindings or data type choices) does not in the profile preference one over another
 
-While only AU Patient Summary Composition currently uses imposeProfile, to support future maintenance it is under consideration that all AU Patient Summary profiles derive from AU Core, where available, and use imposeProfile to apply IPS rules. That would mean that a number of IPS-imposed requirements including cardinality, terminology, and flagging of <i>Must Support</i> would not be directly visible in the formal views within this guide.
+Currently no AU Patient Summary profile uses imposeProfile. To support future maintenance it is under consideration that all AU Patient Summary profiles derive from AU Core, where available, and use imposeProfile to apply IPS rules. That would mean that a number of IPS-imposed requirements including cardinality, terminology, and flagging of <i>Must Support</i> would not be directly visible in the formal views within this guide. Or, if visible, would be repeated from a validation sense.
 
 Users of this implementation guide are encouraged to provide their feedback about the potential use of imposeProfile.
 </div><!-- stu-note -->

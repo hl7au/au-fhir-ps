@@ -6,8 +6,12 @@ A Patient Summary is:
 * designed for supporting use case scenarios including planned and unplanned care, continuity of care and transition of care.
 
 AU Patient Summary will:
+* support the consumers on their healthcare journey providing the consumer and their healthcare providers with timely and current access to relevant health information.
+* provide a future pathway for individuals to share their healthcare information when travelling internationally.
 * be compliant with AU Core and IPS, localised to meet Australian requirements and aligned to the IPS specification.
 * be easy to implement and support patient summary use case specialisation for clinical workflows without requiring redevelopment.
+
+The first iteration of the AU PS will be based upon the IPS, but is NOT the IPS, allowing for localisations required to meet Australian requirements while  ensuring alignment to the IPS specification.
 
 ### Project background
 
