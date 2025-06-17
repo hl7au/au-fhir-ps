@@ -271,7 +271,6 @@
         <targetProfile value="http://hl7.org/fhir/StructureDefinition/Condition"/>
         <targetProfile value="http://hl7.org/fhir/StructureDefinition/DocumentReference"/>
       </type>
-      <mustSupport value="true"/>
     </element>
     <element id="Composition.section:sectionProblems.entry:problem">
       <path value="Composition.section.entry"/>
@@ -454,7 +453,6 @@
         <targetProfile value="http://hl7.org/fhir/StructureDefinition/Immunization"/>
         <targetProfile value="http://hl7.org/fhir/StructureDefinition/DocumentReference"/>
       </type>
-      <mustSupport value="true"/>
     </element>
     <element id="Composition.section:sectionImmunizations.entry:immunization">
       <path value="Composition.section.entry"/>

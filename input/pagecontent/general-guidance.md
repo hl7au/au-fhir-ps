@@ -32,13 +32,12 @@ These mechanisms offer differing capabilities and advantages. Typically HL7 AU p
 For a human, the main differences with use of imposeProfile are:
 - does not rely on humans to maintain compliance rules from the target profile
 - does not visually show human reader of the source profile any rules from the target profile, i.e. a human reader must view and understand both profiles to understand the rules
+- where two or more profiles offer optional alternatives (e.g. differing preferred bindings or data type choices) does not in the profile preference one over another
 
 While only AU Patient Summary Composition currently uses imposeProfile, to support future maintenance it is under consideration that all AU Patient Summary profiles derive from AU Core, where available, and use imposeProfile to apply IPS rules. That would mean that a number of IPS-imposed requirements including cardinality, terminology, and flagging of <i>Must Support</i> would not be directly visible in the formal views within this guide.
 
 Users of this implementation guide are encouraged to provide their feedback about the potential use of imposeProfile.
 </div><!-- stu-note -->
-
-
 
 AU PS Composition currently:
 * derives from AU Base
