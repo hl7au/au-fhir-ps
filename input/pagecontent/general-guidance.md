@@ -42,3 +42,24 @@ Currently no AU Patient Summary profile uses imposeProfile. To support future ma
 
 Users of this implementation guide are encouraged to provide their feedback about the potential use of imposeProfile.
 </div><!-- stu-note -->
+
+#### AU PS Profiling Approach
+
+AU PS profiles are:
+* based on the AU Core profile (where it exists) 
+* additional requirements inherited from IPS are applied (as determined by the AU PS Profile Design Principles) 
+* additional requirements as agreed by this project are applied
+* use compliesWithProfile to assert compliance with IPS
+
+The differential view therefore shows the patient summary requirements that are additional to AU Core. In some profiles e.g. [AU PS Organization](StructureDefinition-au-ps-organization.html), there are no requirements additional to AU Core.
+
+<div> 
+    <img src="aupspatient-profilingapproach.png" alt="AU Patient Summary Patient current profiling approach" style="width:45%"/>
+  </div>
+*Figure 1: Profiling approach for AU PS Patient profile*
+<br/><br/>
+
+<div class="stu-note" markdown="1">
+AU PS profiles will apply Obligations in the near future. Work is underway in the [AU PS Conformance Sessions](https://confluence.hl7.org/spaces/HAFWG/pages/345082204/AU+Patient+Summary+Conformance+Sessions) on a [proposal for conformance](https://confluence.hl7.org/spaces/HAFWG/pages/345545963/AU+PS+Conformance+Requirements), including the definition of Obligations. Once agreed, AU PS profiles will be updated to include Obligations.
+</div><!-- stu-note -->
+
