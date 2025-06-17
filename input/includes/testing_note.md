@@ -8,6 +8,6 @@ Testing plays a crucial role in the development of AU Patient Summary. It helps 
 
 Testing AU Patient Summary helps identify issues, challenges, or gaps in the specification, enabling its improvement. During testing, implementers test their FHIR resources, software products, and/or proof of concepts with AU Patient Summary and provide essential feedback.
 
-To learn more about testing AU Patient Summary or express your interest in participating, see [AU Core FHIR IG Testing](https://confluence.hl7.org/display/HAFWG/AU+Patient+Summary+FHIR+IG+Testing).
+To learn more about testing AU Patient Summary or express your interest in participating, see [AU Patient Summary FHIR IG Testing](https://confluence.hl7.org/display/HAFWG/AU+Patient+Summary+FHIR+IG+Testing).
 
 </div>
