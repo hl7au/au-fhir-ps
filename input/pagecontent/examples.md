@@ -20,6 +20,14 @@ The following examples demonstrate technical and clinical use case aspects, conf
 
 </div><!-- stu-note -->
 
+## Bundle
+* [Bundle - Basic summary](Bundle-aups-basicsummary.html) {% include examplebutton.html example="aups-gpvisit-retrieval" b_title = "Bundle - Jeramy’s Patient Summary as of 27 May 2025 characteristics" %}
+* [Bundle - Jeramy's Patient Summary as of 27 May 2025 (Bundle)](Bundle-aups-gpvisit-retrieval.html)
+* [Bundle - Patient Summary for Joyce Johnson as of 28 OCT 2024 (Bundle)](Bundle-aups-referral-endoconsult-curated.html)
+* [Bundle - Patient Summary for Joyce Johnson as of 07 NOV 2024 (Bundle)](Bundle-aups-referral-endoconsult-autogen.html)
+* [Bundle - Section empty reason](Bundle-aups-basicsummary.html) 
+
+
 {% include example-list-generator.md %}
 <!-- ================================================ -->
 
