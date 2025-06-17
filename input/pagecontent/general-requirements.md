@@ -3,7 +3,7 @@
 <div class="stu-note" markdown="1">
 Work is underway in the [AU PS Conformance Sessions](https://confluence.hl7.org/spaces/HAFWG/pages/345082204/AU+Patient+Summary+Conformance+Sessions) on a [proposal for conformance](https://confluence.hl7.org/spaces/HAFWG/pages/345545963/AU+PS+Conformance+Requirements), including the definition of AU PS actors and obligations. Once agreed, this page will be updated, AU PS actors will be introduced, and AU PS profiles will be updated to include Obligations.
 
-NOTE: There is no expectation that AU PS R1 will introduce capability statements/
+NOTE: There is no expectation that AU PS R1 will introduce capability statements
 </div><!-- stu-note -->
 
 

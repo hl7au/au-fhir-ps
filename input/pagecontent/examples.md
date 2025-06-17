@@ -21,7 +21,11 @@ The following examples demonstrate technical and clinical use case aspects, conf
 </div><!-- stu-note -->
 
 {% include example-list-generator.md %}
-<!-- ================================================ -->
+
+<div class="stu-note" markdown="1">
+Only the JSON format for [Bundle - Patient Summary for Joyce Johnson as of 07 NOV 2024 (with digital signature)](Bundle-aups-referral-endoconsult-autogen.html) can be validated using [keys.zip](https://github.com/user-attachments/files/20766635/keys.zip).
+
+</div><!-- stu-note --><!-- ================================================ -->
 
 
 
