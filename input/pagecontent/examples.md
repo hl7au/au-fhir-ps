@@ -15,8 +15,8 @@ The examples [Bundle - Basic summary](Bundle-aups-basicsummary.html) and [Bundle
 
 The following examples demonstrate technical and clinical use case aspects, conforming to the AU Patient Summary requirements. Data within these examples, e.g. medications, is provided by the [Sparked Patient Summary Clinical Focus Group](https://sparked.csiro.au/index.php/design-groups/).
 * [Jeramy's Patient Summary as of 27 May 2025 (Bundle)](Bundle-aups-gpvisit-retrieval.html)
-* [Patient Summary for Joyce Johnson as of 28 OCT 2024 (Bundle)](Bundle-aups-referral-endoconsult-curated.html)
-* [Patient Summary for Joyce Johnson as of 07 NOV 2024 (Bundle)](Bundle-aups-referral-endoconsult-autogen.html)
+* [Patient Summary for Joyce Johnson as of 28 OCT 2024 (Bundle with electronic signature)](Bundle-aups-referral-endoconsult-curated.html)
+* [Patient Summary for Joyce Johnson as of 07 NOV 2024 (Bundle with digital signature)](Bundle-aups-referral-endoconsult-autogen.html)
 
 </div><!-- stu-note -->
 
