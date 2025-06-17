@@ -1,19 +1,22 @@
 ### Profiling Approach
 AU PS profiles will by design:
-* ensure compliance with AU Core and IPS
+* ensure resource compliance with AU Core and IPS
 * support additional requirements agreed as necessary to support patient summaries in an Australian healthcare context
 * support varied stakeholder needs and use of AU Patient Summary artefacts e.g. government policy, implementers, tooling developers, testers, IG authors/maintainers etc.
 
- Profile compliance with AU Core and IPS is agreed to as:
-* **SHALL** validate against both IPS and AU Core profiles when both profiles defined
+ AU PS profile design to ensure compliance with AU Core and IPS is agreed to as follows. AU PS profiles:
+* **SHALL** ensure resources validate against both IPS and AU Core profiles (where both profiles exist)
    - Cardinality
    - *Must Support*
    - Fixed values and patterns
    - Data type sub-elements and profiles
    - Data type choices
    - Invariants
-* **SHALL** validate reference elements against AU PS profile where defined
-* AU Core profile value sets are preferred over IPS profile value sets:
+* Where both AU Core and IPS profiles do not exist, **SHALL** ensure resources validate against:
+   * IPS profile (where only the IPS profile exists)
+   * AU Core profile (where only the AU Core profile exists)
+* AU PS profiles **SHALL** validate reference elements against AU PS profile where defined
+* In AU PS profiles, AU Core profile value sets are preferred over IPS profile value sets:
    - where an element has a required binding, the element **SHALL** apply the intersection of both value sets (AU Core and IPS)
    - where an element has a lesser binding, use the AU Core value set and binding strength (where AU Core is equivalent or stronger) or use the IPS value set where the binding strength is stronger
 
