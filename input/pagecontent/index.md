@@ -11,11 +11,7 @@ AU Patient Summary will:
 * be compliant with AU Core and IPS, localised to meet Australian requirements and aligned to the IPS specification.
 * be easy to implement and support patient summary use case specialisation for clinical workflows without requiring redevelopment.
 
-### Project background
-
-This implementation guide is under development through the [AU Patient Summary FHIR IG project](https://confluence.hl7.org/display/HAFWG/AU+Patient+Summary+FHIR+IG+Project) as part of the [Sparked AU FHIR Accelerator](https://sparked.csiro.au). 
-
-The Sparked AU FHIR Accelerator is a community comprising government, technology vendors, provider organisations, peak bodies, practitioners, and domain experts, to accelerate the creation and use of national FHIR standards in health care information exchange.
+The first iteration of the AU PS will be based upon the IPS, but is NOT the IPS, allowing for localisations required to meet Australian requirements while  ensuring alignment to the IPS specification.
 
 #### What is a patient summary?
 A patient summary is a standardised collection of patient information. Rather than an entire patient health record, it is the necessary minimum and sufficient data to ensure safe patient care. Patient summaries can enhance patient safety by ensuring critical information is readily accessible when it’s needed most and enables clinicians across different health sectors and health domains to provide more informed, consistent care.
@@ -24,6 +20,12 @@ The AU Patient Summary will support the consumer on their healthcare journey, pr
 
 #### International Patient Summary
 The International Patient Summary is a globally recognised patient summary standard. In 2021, the G7 nations committed to working towards the adoption of the International Patient Summary (IPS) with several international efforts being currently underway to drive adoption, including the European Union, USA, Canada and New Zealand. Multinational vendors with presence in Australia are at various stages of implementation of the IPS.
+
+### Project background
+
+This implementation guide is under development through the [AU Patient Summary FHIR IG project](https://confluence.hl7.org/display/HAFWG/AU+Patient+Summary+FHIR+IG+Project) as part of the [Sparked AU FHIR Accelerator](https://sparked.csiro.au). 
+
+The Sparked AU FHIR Accelerator is a community comprising government, technology vendors, provider organisations, peak bodies, practitioners, and domain experts, to accelerate the creation and use of national FHIR standards in health care information exchange.
 
 #### AU Patient Summary Development Context
  <div> 
