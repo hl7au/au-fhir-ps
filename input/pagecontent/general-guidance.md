@@ -7,7 +7,7 @@ AU PS profiles will by design:
 AU PS profiles:
 * are based on the AU Core profile (where it exists) 
 * have additional requirements inherited from IPS applied (as determined by the [AU PS Profile Design Principles](general-guidance.html#au-ps-profile-design-principles)) 
-* have additional requirements as agreed by this project are applied
+* have additional requirements as agreed by this project applied
 * use compliesWithProfile to assert compliance with IPS
 
 The differential view therefore shows the patient summary requirements that are additional to AU Core. In some profiles, e.g. [AU PS Organization](StructureDefinition-au-ps-organization.html), there are no requirements additional to AU Core.
@@ -49,7 +49,7 @@ When managing profile complexity and requirements in the [national and internati
 1. [Complies With Profile (compliesWith)](https://hl7.org/fhir/extensions/StructureDefinition-structuredefinition-compliesWithProfile.html)
 1. [Dependent Profiles (imposeProfile)](https://hl7.org/fhir/extensions/StructureDefinition-structuredefinition-imposeProfile.html)
 
-These mechanisms offer differing capabilities and advantages. Typically HL7 AU profiles have used derivation to manage compliance within HL7 AU inheritance. However, AU Patient Summary will comply to both HL7 AU (AU Core) and IPS and therefore additional mechanism(s) are required.
+These mechanisms offer differing capabilities and advantages. Typically HL7 AU profiles have used derivation to manage compliance within HL7 AU inheritance. However, AU Patient Summary will comply to both HL7 AU (AU Core) and IPS and therefore additional mechanism(s) on top of derivation from the base HL7 AU profile are required. At this time additional requirements are included in profiles via informal alignment.
 
 <div class="stu-note" markdown="1">
 For a human, the main differences with use of imposeProfile are:
