@@ -13,7 +13,7 @@ AU PS profiles:
 The differential view therefore shows the patient summary requirements that are additional to AU Core. In some profiles, e.g. [AU PS Organization](StructureDefinition-au-ps-organization.html), there are no requirements additional to AU Core.
 
 <div> 
-    <img src="aupspatient-profilingapproach.png" alt="AU Patient Summary Patient current profiling approach" style="width:45%"/>
+    <img src="aupspatient-profilingapproach.png" alt="AU Patient Summary Patient current profiling approach" style="width:40%"/>
   </div>
 *Figure 1: Profiling approach for AU PS Patient profile*
 <br/><br/>
