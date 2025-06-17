@@ -1,4 +1,4 @@
 {% include comparison-note-boilerplate.md %}
 
 ### Profile specific implementation guidance
-- The Encounter resource can represent a clinical indication with `Encounter.reasonCode`, or a reference with `Encounter.reasonReference` to a Condition or other resource.
+- See the [guidance on implementing the Encounter resource](https://build.fhir.org/ig/hl7au/au-fhir-core/StructureDefinition-au-core-encounter.html#profile-specific-implementation-guidance) in AU Core.
