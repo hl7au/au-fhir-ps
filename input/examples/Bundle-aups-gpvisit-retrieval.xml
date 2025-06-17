@@ -1252,8 +1252,7 @@
         <meta>
             <versionId value="1"/>
             <lastUpdated value="2025-05-27T11:39:15.709+11:00"/>
-            <profile value="http://hl7.org.au/fhir/core/StructureDefinition/au-core-diagnosticresult-path"/>
-            <profile value="http://hl7.org/fhir/uv/ips/StructureDefinition/Observation-results-laboratory-pathology-uv-ips"/>
+            <profile value="http://hl7.org.au/fhir/ps/StructureDefinition/au-ps-diagnosticresult-path"/>
         </meta>
         <status value="final" />
         <category>
@@ -1305,8 +1304,7 @@
         <meta>
             <versionId value="1"/>
             <lastUpdated value="2025-05-27T11:39:15.709+11:00"/>
-            <profile value="http://hl7.org.au/fhir/core/StructureDefinition/au-core-diagnosticresult-path"/>
-            <profile value="http://hl7.org/fhir/uv/ips/StructureDefinition/Observation-results-laboratory-pathology-uv-ips"/>
+            <profile value="http://hl7.org.au/fhir/ps/StructureDefinition/au-ps-diagnosticresult-path"/>
         </meta>
     <status value="final" />
     <category>
@@ -1358,8 +1356,7 @@
         <meta>
             <versionId value="1"/>
             <lastUpdated value="2025-05-27T11:39:15.709+11:00"/>
-            <profile value="http://hl7.org.au/fhir/core/StructureDefinition/au-core-diagnosticresult-path"/>
-            <profile value="http://hl7.org/fhir/uv/ips/StructureDefinition/Observation-results-laboratory-pathology-uv-ips"/>
+            <profile value="http://hl7.org.au/fhir/ps/StructureDefinition/au-ps-diagnosticresult-path"/>
         </meta>
     <status value="final" />
     <category>
@@ -1411,8 +1408,7 @@
         <meta>
             <versionId value="1"/>
             <lastUpdated value="2025-05-27T11:39:15.709+11:00"/>
-            <profile value="http://hl7.org.au/fhir/core/StructureDefinition/au-core-diagnosticresult-path"/>
-            <profile value="http://hl7.org/fhir/uv/ips/StructureDefinition/Observation-results-laboratory-pathology-uv-ips"/>
+            <profile value="http://hl7.org.au/fhir/ps/StructureDefinition/au-ps-diagnosticresult-path"/>
         </meta>
     <status value="final" />
     <category>
@@ -1464,8 +1460,7 @@
         <meta>
             <versionId value="1"/>
             <lastUpdated value="2025-01-27T11:39:15.709+11:00"/>
-            <profile value="http://hl7.org.au/fhir/core/StructureDefinition/au-core-diagnosticresult-path"/>
-            <profile value="http://hl7.org/fhir/uv/ips/StructureDefinition/Observation-results-laboratory-pathology-uv-ips"/>
+            <profile value="http://hl7.org.au/fhir/ps/StructureDefinition/au-ps-diagnosticresult-path"/> 
         </meta>
     <status value="final" />
     <category>
@@ -1517,8 +1512,7 @@
         <meta>
             <versionId value="1"/>
             <lastUpdated value="2025-01-27T11:39:15.709+11:00"/>
-            <profile value="http://hl7.org.au/fhir/core/StructureDefinition/au-core-diagnosticresult-path"/>
-            <profile value="http://hl7.org/fhir/uv/ips/StructureDefinition/Observation-results-laboratory-pathology-uv-ips"/>
+            <profile value="http://hl7.org.au/fhir/ps/StructureDefinition/au-ps-diagnosticresult-path"/>
         </meta>
     <status value="final" />
     <category>
@@ -1570,8 +1564,7 @@
         <meta>
             <versionId value="1"/>
             <lastUpdated value="2025-01-27T11:39:15.709+11:00"/>
-            <profile value="http://hl7.org.au/fhir/core/StructureDefinition/au-core-diagnosticresult-path"/>
-            <profile value="http://hl7.org/fhir/uv/ips/StructureDefinition/Observation-results-laboratory-pathology-uv-ips"/>
+            <profile value="http://hl7.org.au/fhir/ps/StructureDefinition/au-ps-diagnosticresult-path"/>
         </meta>
     <status value="final" />
     <category>
@@ -1623,8 +1616,7 @@
         <meta>
             <versionId value="1"/>
             <lastUpdated value="2025-01-27T11:39:15.709+11:00"/>
-            <profile value="http://hl7.org.au/fhir/core/StructureDefinition/au-core-diagnosticresult-path"/>
-            <profile value="http://hl7.org/fhir/uv/ips/StructureDefinition/Observation-results-laboratory-pathology-uv-ips"/>
+            <profile value="http://hl7.org.au/fhir/ps/StructureDefinition/au-ps-diagnosticresult-path"/>
         </meta>
         <status value="final" />
         <category>
@@ -1676,8 +1668,7 @@
         <meta>
             <versionId value="1"/>
             <lastUpdated value="2024-10-27T11:39:15.709+11:00"/>
-            <profile value="http://hl7.org.au/fhir/core/StructureDefinition/au-core-diagnosticresult-path"/>
-            <profile value="http://hl7.org/fhir/uv/ips/StructureDefinition/Observation-results-laboratory-pathology-uv-ips"/>
+            <profile value="http://hl7.org.au/fhir/ps/StructureDefinition/au-ps-diagnosticresult-path"/>
         </meta>
     <status value="final" />
     <category>
@@ -1729,8 +1720,7 @@
         <meta>
             <versionId value="1"/>
             <lastUpdated value="2024-10-27T11:39:15.709+11:00"/>
-            <profile value="http://hl7.org.au/fhir/core/StructureDefinition/au-core-diagnosticresult-path"/>
-            <profile value="http://hl7.org/fhir/uv/ips/StructureDefinition/Observation-results-laboratory-pathology-uv-ips"/>
+            <profile value="http://hl7.org.au/fhir/ps/StructureDefinition/au-ps-diagnosticresult-path"/>
         </meta>
     <status value="final" />
     <category>
@@ -1782,8 +1772,7 @@
         <meta>
             <versionId value="1"/>
             <lastUpdated value="2024-10-27T11:39:15.709+11:00"/>
-            <profile value="http://hl7.org.au/fhir/core/StructureDefinition/au-core-diagnosticresult-path"/>
-            <profile value="http://hl7.org/fhir/uv/ips/StructureDefinition/Observation-results-laboratory-pathology-uv-ips"/>
+            <profile value="http://hl7.org.au/fhir/ps/StructureDefinition/au-ps-diagnosticresult-path"/>
         </meta>
     <status value="final" />
     <category>
@@ -1835,8 +1824,7 @@
         <meta>
             <versionId value="1"/>
             <lastUpdated value="2024-10-27T11:39:15.709+11:00"/>
-            <profile value="http://hl7.org.au/fhir/core/StructureDefinition/au-core-diagnosticresult-path"/>
-            <profile value="http://hl7.org/fhir/uv/ips/StructureDefinition/Observation-results-laboratory-pathology-uv-ips"/>
+            <profile value="http://hl7.org.au/fhir/ps/StructureDefinition/au-ps-diagnosticresult-path"/>
         </meta>
         <status value="final" />
         <category>
