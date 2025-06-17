@@ -1,10 +1,9 @@
 {% include comparison-note-boilerplate.md %}
 
 ### Profile specific implementation guidance
-- See [Composition (IPS)](https://build.fhir.org/ig/HL7/fhir-ips/StructureDefinition-Composition-uv-ips.html) for the additional requirements imposed by IPS on the Composition resource e.g. for the mandatory sections (meds, allergies, etc.) constraint _**ips-comp-1:** Either section.entry or emptyReason are present_ is imposed.
 - See guidance on how to represent [Empty & Known Absent Sections](https://build.fhir.org/ig/HL7/fhir-ips/Design-Conventions.html#empty-sections--missing-data) in IPS.
 - See [Narrative Content Guidance](https://build.fhir.org/ig/HL7/fhir-ips/Design-Conventions.html#narrative-content-guidance) in IPS.
-- See guidance on reprenting medications information in the Medications Summary section on the [Medication Lists in the IPS](https://build.fhir.org/ig/HL7/fhir-ips/Design-Conventions.html#narrative-content-guidance) section in IPS.
+- See guidance on representing medications information in the Medications Summary section on the [Medication Lists in the IPS](https://build.fhir.org/ig/HL7/fhir-ips/Design-Conventions.html#narrative-content-guidance) section in IPS.
 - The patient summary document may be constructed by a human or an automated process, regardless of whether the patient summary contains some content of both kinds. In all instances, document level authorship information is required. As per the guidance in [IPS](https://build.fhir.org/ig/HL7/fhir-ips/Design-Conventions.html#provenance):
    - The distinction between the two types of IPS, human-curated or software-assembled, is based on the authors recorded in the composition: the author shall be a human (e.g. Practitioner), if the IPS provenance type is "human-curated", or a device if the IPS provenance type is "software-assembled". In the case of a software-assembled IPS that is then verified by a human, the document provenance type shall be "software-assembled" and the author shall be the device or system that constructed the IPS document, but an additional attester identity shall name the human who performed this check.
    - Additional provenance information below the document level is optional. There are no Provenance profiles currently defined by this guide, or by IPS or AU Core.
