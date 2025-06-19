@@ -1,5 +1,3 @@
-{% include testing_note.md -%}
-
 ### Introduction
 AU Patient Summary is provided to support the use of patient summaries in HL7® FHIR®© in an Australian context. It complies with the requirements defined in [IPS](https://build.fhir.org/ig/HL7/fhir-ips/) and [AU Core](https://build.fhir.org/ig/hl7au/au-fhir-core), and sets the minimum expectations on FHIR resources to support conformance and implementation in systems.
 
