@@ -337,7 +337,6 @@
         </extension>
       </extension>
       <path value="MedicationStatement.reasonCode"/>
-			<min value="1"/>
 		</element>
     <element id="MedicationStatement.reasonReference">
       <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
