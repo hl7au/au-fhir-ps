@@ -104,13 +104,6 @@
       <sliceName value="socialHistory"/>
     </element>
     <element id="Observation.code">
-      <path value="Observation.code" />
-      <type>
-        <code value="CodeableConcept"/>
-        <profile value="http://hl7.org/fhir/uv/ips/StructureDefinition/CodeableConcept-uv-ips"/>
-      </type>
-    </element>
-    <element id="Observation.code.coding:loincSmokingStatus">
       <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
         <extension url="code">
           <valueCode value="SHALL:populate-if-known"/>
@@ -135,9 +128,11 @@
           <valueCanonical value="http://hl7.org.au/fhir/ps/ActorDefinition/au-ps-actor-consumer"/>
         </extension>
       </extension>
-      <path value="Observation.code.coding" />
-      <sliceName value="loincSmokingStatus" />
-      <min value="1"/>
+      <path value="Observation.code" />
+      <type>
+        <code value="CodeableConcept"/>
+        <profile value="http://hl7.org/fhir/uv/ips/StructureDefinition/CodeableConcept-uv-ips"/>
+      </type>
     </element>
     <element id="Observation.subject">
       <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
