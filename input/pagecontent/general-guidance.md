@@ -19,7 +19,9 @@ The differential view therefore shows the patient summary requirements that are 
 <br/><br/>
 
 <div class="stu-note" markdown="1">
-AU PS profiles will apply Obligations in the near future. Work is underway in the [AU PS Conformance Sessions](https://confluence.hl7.org/spaces/HAFWG/pages/345082204/AU+Patient+Summary+Conformance+Sessions) on a [proposal for conformance](https://confluence.hl7.org/spaces/HAFWG/pages/345545963/AU+PS+Conformance+Requirements), including the definition of Obligations. Once agreed, AU PS profiles will be updated to include Obligations.
+1. AU PS is undertaking a series of profile walkthroughs with the community, and to support that activity some profiles do not yet have this approach applied. Instead rules from AU Core and IPS are applied via human authoring. This is to support the human-centric design discussions early in the AU Patient Summary project. Post the walkthrough of each profile, it is coverted to the target approach, and any additional local requirements identified during that walkthrough are applied.
+
+2. AU PS profiles will apply Obligations in the near future. Work is underway in the [AU PS Conformance Sessions](https://confluence.hl7.org/spaces/HAFWG/pages/345082204/AU+Patient+Summary+Conformance+Sessions) on a [proposal for conformance](https://confluence.hl7.org/spaces/HAFWG/pages/345545963/AU+PS+Conformance+Requirements), including the definition of Obligations. Once agreed, AU PS profiles will be updated to include Obligations.
 </div><!-- stu-note -->
 
 

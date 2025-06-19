@@ -2,6 +2,10 @@
 
 Systems claiming conformance to AU Patient Summary will represent digital health information using the content models of AU Patient Summary profiles AND implement the requirements for an [AU PS actor](actors.html).
 
+NOTE: There is no expectation that AU PS R1 will introduce capability statements
+</div><!-- stu-note -->
+
+
 The requirements of the FHIR standard and [FHIR Conformance Rules](http://hl7.org/fhir/conformance-rules.html) apply, and define the use of terms in this guide including the conformance verbs - **SHALL**, **SHALL NOT**, **SHOULD**, **SHOULD NOT**, **MAY**.
 
 Implementers are advised to be familiar with the requirements of the FHIR standard and IPS when implementing AU PS, in particular:
