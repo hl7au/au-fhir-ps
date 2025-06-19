@@ -1,8 +1,8 @@
 This page addresses how sex and gender related concepts can be structured in FHIR and conformant to AU Patient Summary (AU PS).
 
-AU PS references AU Base and AU Core profiles which represent sex and gender concepts. AU PS places *Must Support* on some concepts through the application of AU Core rules and inherits sex and gender related elements localised in AU Base, which has considered the logical data element models provided by [HL7 International’s Cross Paradigm Implementation Guide: Gender Harmony - Sex and Gender Representation, Edition 1 specification](https://hl7.org/xprod/ig/uv/gender-harmony/informative1/).
+AU PS is based on AU Core profiles which represent sex and gender concepts. AU PS places *Must Support* on some concepts through the application of AU Core rules and inherits sex and gender related elements localised in AU Base, which has considered the logical data element models provided by [HL7 International’s Cross Paradigm Implementation Guide: Gender Harmony - Sex and Gender Representation, Edition 1 specification](https://hl7.org/xprod/ig/uv/gender-harmony/informative1/).
 
-The table below provides an overview of the sex and gender concepts that are included in AU PS through definition, or by reference to AU Base.
+The table below provides an overview of the sex and gender concepts that are included in AU PS through iheritance from AU Core and compliant to IPS.
 
 **Legend:**
 
