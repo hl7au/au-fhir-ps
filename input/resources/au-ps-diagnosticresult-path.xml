@@ -23,12 +23,6 @@
       <constraint>
         <key value="ips-2"/>
         <severity value="error"/>
-        <human value="At least one of these Observation elements shall be provided: &quot;value &quot;,  &quot;dataAbsentReason &quot;,  &quot;hasMember &quot; or  &quot;component &quot;"/>
-        <expression value="value.exists() or hasMember.exists() or component.exists() or dataAbsentReason.exists()"/>
-      </constraint>
-      <constraint>
-      <key value="ips-3"/>
-        <severity value="error"/>
         <human value="If observation has components, at least one of these Observation.component elements shall be provided: &quot;value&quot;, or &quot;dataAbsentReason &quot;"/>
         <expression value="component.exists() implies (component.value.exists() or component.dataAbsentReason.exists())"/>
       </constraint>
