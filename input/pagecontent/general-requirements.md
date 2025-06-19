@@ -54,9 +54,41 @@ TBD
 #### Interpreting profile elements labelled Must Support
 TBD
 
-### Missing Data
+### Missing Data and Empty Sections
 
-There are situations when information for a particular data element is missing and the source system (producer) does not know the reason for the absence of data. 
+There are situations when information is missing, this could be at the section level where a source system does not have information on a patient's medical devices, or may be at an element level within a resource. 
+
+Where data is missing for an element within a resource and the reason is not known, systems **SHALL** implement the requirements of the [Missing Data](general-requirements.html#missing-data) section.
+
+Where data is missing at the section level and the reason is not known, systems **SHALL** TBD.
+
+Missing data is distinct from a known absence of data for either:
+* no known x - where it is known, for example, that there are no known allergies for a patient
+* workflow reasons the information is not available
+
+#### No known x
+
+
+#### Known absence of data due to workflow
+Workflow can be represented 
+
+* Prefer not to answer may be represented by sending the Data Absent Reason code “asked-declined”
+* Asked but not known may be represented by sending the Data Absent Reason code “asked-unknown”
+* Not stated or inadequately described may be represented by sending the Data Absent Reason code “unknown”
+* Where the workflow does not support obtaining the information, it may be represented by sending the Data Absent * Reason code “not-asked”
+
+
+Workflow
+
+
+ where it is known and recorded that a patient does not have 
+
+Where a system does not know the reason for the absence of data .
+
+Where a 
+or  and the source system (producer) does not know the reason for the absence of data. 
+
+for a particular data element is missing and the 
 
 #### Missing Must Support and Optional Data
 
