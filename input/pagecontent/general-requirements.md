@@ -106,43 +106,48 @@ An AU PS Producer **SHOULD** omit non-mandatory sections when the section does n
 
 If the section is a mandatory section (minimum cardinality is > 0), the section **SHALL** be present *even if* the source system does not have any information for that section or know the reason the information is absent. In this circumstance, an AU PS Producer **SHALL**:
 
-    - use the code `unavailable` from the [List Empty Reasons](http://terminology.hl7.org/CodeSystem/list-empty-reason) code system
-    - AU PS Consumers are advised that other meaningful values can be captured in `Composition.section.emptyReason` beyond missing or suppressed.
+* use the code `unavailable` from the [List Empty Reasons](http://terminology.hl7.org/CodeSystem/list-empty-reason) code system
+* AU PS Consumers are advised that other meaningful values can be captured in `Composition.section.emptyReason` beyond missing or suppressed.
   
     Example: AU Patient Summary - Allergies and Intolerances Section where the patient's allergy information is not available.
     ~~~
-    ...
-    "section" : [
-          {
-            "title" : "Allergies and Intolerances",
-            "code" : {
-              "coding" : [
-                {
-                  "system" : "http://loinc.org",
-                  "code" : "48765-2",
-                  "display" : "Allergies and adverse reactions Document"
+        ...
+        "section" : [
+            {
+                "title" : "Allergies and Intolerances",
+                "code" : {
+                "coding" : [
+                    {
+                    "system" : "http://loinc.org",
+                    "code" : "48765-2",
+                    "display" : "Allergies and adverse reactions Document"
+                    }
+                ]
+                },
+                "text" : {
+                "status" : "generated",
+                "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\" xml:lang=\"en-AU\" lang=\"en-AU\">There is no information available regarding the consumer's allergy conditions.</div>"
+                },
+                "emptyReason" : {
+                "coding" : [
+                    {
+                    "system" : "http://terminology.hl7.org/CodeSystem/list-empty-reason",
+                    "code" : "unavailable",
+                    "display" : "Unavailable"
+                    }
+                ],
+                "text" : "No information available"
                 }
-              ]
             },
-            "text" : {
-              "status" : "generated",
-              "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\" xml:lang=\"en-AU\" lang=\"en-AU\">There is no information available regarding the consumer's allergy conditions.</div>"
-            },
-            "emptyReason" : {
-              "coding" : [
-                {
-                  "system" : "http://terminology.hl7.org/CodeSystem/list-empty-reason",
-                  "code" : "unavailable",
-                  "display" : "Unavailable"
-                }
-              ],
-              "text" : "No information available"
-            }
-        },
-    ...
+        ...
     ~~~
 
-### Suppressed Data (TBD what about section-level?)
-In some circumstances, specific pieces of data may be hidden due to security or privacy reasons and in these circumstances the requirements defined by AU Core for [Suppressed Data](https://build.fhir.org/ig/hl7au/au-fhir-core/general-requirements.html#suppressed-data) **SHALL** be applied:
-* requirements of AU Core Responder apply to AU Patient Summary Producer
-* requirements of AU Core Requester apply to AU Patient Summary Consumer
+### Suppressed Data
+In some circumstances, specific pieces of data, are hidden due to security or privacy reasons:
+* if an optional section, resource, or element (minimum cardinality = 0) is not able to be shared it **SHALL** be omitted
+* if a mandatory section (minimum cardinality > 0) is not able to be shared:
+  * where a consumer does not have access rights to know that section is suppressed use the code `unavailable` from the [List Empty Reason](https://hl7.org/fhir/R4/codesystem-list-empty-reason.html) following the section on [Missing Data](#missing-data).
+  * where a consumer may know that the section is suppressed use the code `withheld` from the [List Empty Reason](https://hl7.org/fhir/R4/codesystem-list-empty-reason.html) following the section on [Missing Data](#missing-data).
+* if a mandatory individual resource or element (minimum cardinality > 0) is not able to be shared:
+  * where a consumer does not have access rights to know that data is suppressed use the code `unknown` from the [DataAbsentReason Code System](http://terminology.hl7.org/CodeSystem/data-absent-reason) following the section on [Missing Data](#missing-data).
+  * where a consumer may know that the data is suppressed use the code `masked` from the [DataAbsentReason Code System](http://terminology.hl7.org/CodeSystem/data-absent-reason) following the section on [Missing Data](#missing-data).
