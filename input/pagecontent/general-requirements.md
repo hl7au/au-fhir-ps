@@ -73,7 +73,7 @@ Where data is missing at the section level and the reason is not known, systems 
 
 Missing data is distinct from a known absence of data for either:
 * no known x - where it is known, for example, that there are no known allergies for a patient
-* workflow - where there is a known workflow reason the information is not available
+* workflow - where there is a known workflow reason information for the section is not available
 
 #### No known x
 Where the source system can assert a known absence of data (no known x), the system **SHOULD** populate `Composition.section.entry` in accordance with the relevant profile specific implementation guidance for no known x. 
@@ -100,16 +100,16 @@ If the source system (producer) does not know the value for an optional element 
 If the data element is a mandatory element (minimum cardinality is > 0), the element **SHALL** be present *even if* the source system (producer) does not know the value or the reason the value is absent. In this circumstance the requirements defined by AU Core for [Missing Must Support and Mandatory Data](https://build.fhir.org/ig/hl7au/au-fhir-core/general-requirements.html#missing-must-support-and-mandatory-data) **SHALL** be applied:
 
 #### Empty Sections
+
+An AU PS producer **SHOULD** omit non-mandatory sections when the section does not have any information and does not know the reason is absent.
+
 If the section is a mandatory section (minimum cardinality is > 0), the section **SHALL** be present *even if* the source system does not have any information for that section or know the reason the information is absent.
 
-For mandatory sections in AU PS Composition, an AU PS Producer:
+In the circumstance where the system knows the reason for absence:
+
+An AU PS Producer:
 * **SHALL** populate the `Composition.section.emptyReason` with a clinically relevant code when the section entry element is empty
 * **MAY** populate the `Composition.section.entry` with a resource to assert known absence of data, e.g AllergyIntolerance with code representing ‘no known allergy’.
-
-For mandatory sections in AU PS Composition, an AU PS Consumer:
-* **SHALL** handle the section emptyReason when the entry element is empty
-
-* **SHALL** handle a section entry with no known data coding (e.g. AllergyIntolerance.code: 716186003|No known allergy)
 * **SHOULD** omit non-mandatory sections when the section does not have any information and does not know the reason is absent
 
 ### Suppressed Data
