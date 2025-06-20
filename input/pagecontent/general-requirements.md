@@ -110,13 +110,9 @@ If the section is a mandatory section (minimum cardinality is > 0), the section 
 
 ## Suppressed Data
 In some circumstances, specific pieces of data, are hidden due to security or privacy reasons:
-* if an optional section, resource, or element (minimum cardinality = 0) is not able to be shared the AU PS producer **SHALL** omit it
-* if a mandatory section (minimum cardinality > 0) is not able to be shared:
-  * where a consumer does not have access rights to know that section is suppressed the AU PS Producer **SHALL** use the code `unavailable` from the [List Empty Reason](https://hl7.org/fhir/R4/codesystem-list-empty-reason.html) in `Composition.section.emptyReason`.
-  * where a consumer may know that the section is suppressed use the AU PS Producer **SHALL** use code `withheld` from the [List Empty Reason](https://hl7.org/fhir/R4/codesystem-list-empty-reason.html) following the section on [Missing Data](#missing-data) in `Composition.section.emptyReason`.
-* if a mandatory individual resource or element (minimum cardinality > 0) is not able to be shared:
-  * where a consumer does not have access rights to know that data is suppressed the AU PS Producer **SHALL** use the code `unknown` from the [DataAbsentReason Code System](http://terminology.hl7.org/CodeSystem/data-absent-reason) following the section on [Missing Data](#missing-data).
-  * where a consumer may know that the data is suppressed use the AU PS Producer **SHALL** the code `masked` from the [DataAbsentReason Code System](http://terminology.hl7.org/CodeSystem/data-absent-reason) following the section on [Missing Data](#missing-data).
+* if an optional section, resource, or element (minimum cardinality = 0) is not able to be shared, it **SHALL** be omitted.
+* if a mandatory section (minimum cardinality > 0) is not able to be shared use the code `unavailable` or `withheld` from the [List Empty Reason](https://hl7.org/fhir/R4/codesystem-list-empty-reason.html) in `Composition.section.emptyReason`.
+* if a mandatory individual resource or element (minimum cardinality > 0) is not able to be shared use the code `unknown` or `masked` from the [DataAbsentReason Code System](http://terminology.hl7.org/CodeSystem/data-absent-reason) following the section on [Missing Data](#missing-data).
 
 ## Must Support and Obligation
 Labelling an element *[Must Support](https://www.hl7.org/fhir/conformance-rules.html#mustSupport)* means that systems that produce or consume resources **SHALL** provide support for the element in some meaningful way. The FHIR standard does not define exactly what 'meaningful' support for an element means, but indicates that a profile **SHALL** make clear exactly what kind of support is required when an element is labelled as *Must Support*.
