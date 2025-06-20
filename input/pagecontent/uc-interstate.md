@@ -8,7 +8,7 @@ Before travelling to Queensland for a holiday to visit his daughter, Jeramy conf
 
 While on the road, Jeramy begins to feel unwell - he is gasping for breath and feels stiff after driving. He books an appointment with a local GP in Queensland, Dr Wyatt Samuels.
 
-During the consultation, Jeramy informs Dr Samuels that his health information is available via a patient summary shared by his regular GP. Jeramy provides access using a Smart Health Link presented via his smartphone app. Dr Samuels retrieves the most recent patient summary directly from Dr Lowe’s clinical information system (CIS). The patient summary has been curated by Dr Lowe and attested at the time of update, ensuring its integrity and alignment with clinical standards. 
+During the consultation, Jeramy informs Dr Samuels that his health information is available via a patient summary shared by his regular GP. Jeramy provides access using a [Smart Health Link](https://build.fhir.org/ig/HL7/smart-health-cards-and-links/) presented via his smartphone app. Dr Samuels retrieves the most recent patient summary directly from Dr Lowe’s clinical information system (CIS). The patient summary has been curated by Dr Lowe and attested at the time of update, ensuring its integrity and alignment with clinical standards. 
 
 The summary enables Dr Samuels to quickly understand Jeramy’s condition, recent treatment, and current medications - supporting safe and informed clinical decision-making during the consultation.
 
@@ -30,6 +30,7 @@ This use case demonstrates use of patient summary during step 5. Patient Summary
 #### Systems
 1. Attending GP's CIS
 1. Usual GP's CIS
+1. Smart Health Link Server
 
 ### Precondition(s)
 1. Jeramy has provided consent for his health information to be shared between healthcare providers.
@@ -55,6 +56,12 @@ This use case demonstrates use of patient summary during step 5. Patient Summary
 </div>
 *Figure 2: Sequence diagram showing access to a patient summary via Smart Health Link*
 <br/>
+
+### Notes
+
+This example use case is provided for illustrative purposes only and is intended to support understanding of how patient summaries may be exchanged in practice. It does not prescribe technical requirements or mandate specific implementation workflows. 
+
+The use of Smart Health Links in this scenario reflects an emerging standard for secure sharing of patient summaries. At the time of publication, the [Smart Health Link specification](https://build.fhir.org/ig/HL7/smart-health-cards-and-links/) is still evolving, and implementers should refer to the latest guidance from HL7 International and the FHIR Infrastructure Workgroup. 
 
 ### Examples
 
