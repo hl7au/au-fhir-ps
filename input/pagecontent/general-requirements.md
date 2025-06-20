@@ -99,11 +99,13 @@ If the source system (producer) does not know the value for an optional element 
 
 If the data element is a mandatory element (minimum cardinality is > 0), the element **SHALL** be present *even if* the source system (producer) does not know the value or the reason the value is absent. In this circumstance the requirements defined by AU Core for [Missing Must Support and Mandatory Data](https://build.fhir.org/ig/hl7au/au-fhir-core/general-requirements.html#missing-must-support-and-mandatory-data) **SHALL** be applied:
 
-#### Empty Sections
+#### Empty Sections (very TBD)
 
 An AU PS producer **SHOULD** omit non-mandatory sections when the section does not have any information and does not know the reason is absent.
 
-If the section is a mandatory section (minimum cardinality is > 0), the section **SHALL** be present *even if* the source system does not have any information for that section or know the reason the information is absent.
+If the section is a mandatory section (minimum cardinality is > 0), the section **SHALL** be present *even if* the source system does not have any information for that section or know the reason the information is absent. 
+
+Refer to the guidance above for No known x
 
 In the circumstance where the system knows the reason for absence:
 
@@ -112,7 +114,7 @@ An AU PS Producer:
 * **MAY** populate the `Composition.section.entry` with a resource to assert known absence of data, e.g AllergyIntolerance with code representing ‘no known allergy’.
 * **SHOULD** omit non-mandatory sections when the section does not have any information and does not know the reason is absent
 
-### Suppressed Data
+### Suppressed Data (TBD what about section-level?)
 In some circumstances, specific pieces of data may be hidden due to security or privacy reasons and in these circumstances the requirements defined by AU Core for [Suppressed Data](https://build.fhir.org/ig/hl7au/au-fhir-core/general-requirements.html#suppressed-data) **SHALL** be applied:
 * requirements of AU Core Responder apply to AU Patient Summary Producer
 * requirements of AU Core Requester apply to AU Patient Summary Consumer
