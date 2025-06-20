@@ -2,7 +2,6 @@
 
 ### Profile specific implementation guidance
 - See the [guidance on implementing the MedicationRequest resource](https://build.fhir.org/ig/hl7au/au-fhir-core/StructureDefinition-au-core-medicationrequest.html#profile-specific-implementation-guidance) in AU Core.
-
-<div class="stu-note">
-Conversion to derive from AU Core instead of AU Base is delayed until AU PS Encounter is converted due to build errors when publishing if this referenced profile does not derive from AU Core.
-</div>
+- The MedicationRequest resource can represent the clinical indication as a code with `MedicationRequest.reasonCode`, or a reference with `MedicationRequest.reasonReference` to a Condition or other resource.
+  - Although both are marked as *Must Support*, producers are not required to support both a code and a reference, but they **SHALL** support *at least one* of these elements
+  - A consumer **SHALL** support both elements  
