@@ -1,4 +1,4 @@
-### Conforming to AU Patient Summary
+## Conforming to AU Patient Summary
 
 Systems claiming conformance to AU Patient Summary will represent digital health information using the content models of AU Patient Summary profiles AND implement the requirements for one or both [AU PS actors](actors.html).
 
@@ -14,24 +14,24 @@ Implementers are advised to be familiar with the requirements of the FHIR standa
 - [FHIR Resource formats](http://hl7.org/fhir/R4/resource.html)
 - [FHIR Data Types](http://hl7.org/fhir/R4/datatypes.html)
 
-### Conformance Artifacts
+## Conformance Artifacts
 
-#### AU PS Profiles and Extensions
+### AU PS Profiles and Extensions
 The [Profiles and Extensions](profiles-and-extensions.html) page lists the AU PS profiles and extensions defined for this implementation guide. An AU PS profile [StructureDefinition](http://hl7.org/fhir/R4/structuredefinition.html) defines the minimum elements, extensions, vocabularies and value sets that **SHALL** be present and constrains the way elements are used when conforming to the profile.
 
 AU PS profile elements include mandatory and *Must Support* requirements. [Mandatory elements](#mandatory-elements) are required and have a minimum cardinality of 1 (min=1). [Must Support](#must-support-and-obligation) elements have defined conformance obligations in AU PS.
 
-#### AU PS Actors
+### AU PS Actors
 The [Actor Definitions](actors.html) page lists the AU PS actors defined for this implementation guide and the requirements for implementing that actor. An AU PS profile [StructureDefinition](http://hl7.org/fhir/R4/structuredefinition.html) defines the obligations for an AU PS actor when implementing that profile.
 
-### Mandatory Elements
+## Mandatory Elements
 Mandatory elements are elements with minimum cardinality > 0. When an element is mandatory, the data is expected to always be present. Very rarely, it may not be, and in this circumstance the requirements defined by AU Core for [Missing Data](https://build.fhir.org/ig/hl7au/au-fhir-core/general-requirements.html#missing-data) **SHALL** be applied. 
 
 An element can be both *Must Support* and mandatory, in which case the requirements defined by AU Core for mandatory's Missing Data requirements **SHALL** be applied as described in [Missing Must Support and Mandatory Data](https://build.fhir.org/ig/hl7au/au-fhir-core/general-requirements.html#missing-must-support-and-mandatory-data).
 
 The convention in this guide is to mark all mandatory and conditionally mandatory elements as *Must Support* unless they are nested under an optional element.
 
-### Must Support and Obligation
+## Must Support and Obligation
 Labelling an element *[Must Support](https://www.hl7.org/fhir/conformance-rules.html#mustSupport)* means that systems that produce or consume resources **SHALL** provide support for the element in some meaningful way. The FHIR standard does not define exactly what 'meaningful' support for an element means, but indicates that a profile **SHALL** make clear exactly what kind of support is required when an element is labelled as *Must Support*.
 
 In AU PS, the meaning of *Must Support* is specified in terms of [Obligation Codes](https://hl7.org/fhir/extensions/CodeSystem-obligation.html) in [obligation extensions](https://hl7.org/fhir/extensions/StructureDefinition-obligation.html) on the element definition. The obligation codes used to define the minimum obligations of *Must Support* elements in this implementation guide are reiterated below.
@@ -50,7 +50,7 @@ Actor | Code | Definition | Notes
 
 *Must Support* elements are treated differently between [AU PS Consumer](ActorDefinition-au-ps-actor-consumer.html) and [AU PS Producer](ActorDefinition-au-ps-actor-producer.html) actors. *Must Support* on a profile element **SHALL** be interpreted as follows.
 
-#### Presentation of Must Support and obligation in profiles
+### Presentation of Must Support and obligation in profiles
 All elements with *Must Support* in AU PS are accompanied by an explicit obligation that identifies the expectations for one or more actors. When rendered in an implementation guide, each profile is presented in different formal views under tabs labelled "Differential Table", "Key Elements Table", and "Snapshot Table". Elements flagged with *Must Support* and stated obligations in these views are represented by <span style="padding-left: 3px; padding-right: 3px; color: white; background-color: red" title="This element must be supported">S</span><span style="padding-left: 3px; padding-right: 3px; color: white; background-color: red" title="This element has obligations">O</span> as shown below. 
 
  <div> 
@@ -62,10 +62,153 @@ All elements with *Must Support* in AU PS are accompanied by an explicit obligat
 Implementers need to refer to the "Key Elements Table" to see the full set of elements that are mandatory or *Must Support* with obligations, and the full set of terminology requirements.  Implementers need to be aware that the full set of constraints (i.e. invariants) are only presented in the "Detailed Descriptions" tab or the raw representation (e.g. XML or JSON) of the profile.
 
 
-#### Interpreting profile elements labelled Must Support
-TBD
+### Interpreting profile elements labelled Must Support
 
-### Missing Data and Empty Sections
+Profiles defined in this implementation publication flag *Must Support* on elements (e.g. `Patient.name`) and sub-elements of a data type (e.g. `Patient.name.use`). 
+The explanation on how to interpret *Must Support* for an element does not address rules defined in each profile - which may limit or extend what is allowed for each element.
+
+The sub-elements for each supported element in a profile are defined by a combination of the data type from the core specification and any additional rules included in the profile. A profile may include rules that:
+- limit what is considered 'valid'
+- extend the potential sub-elements by including an extension
+
+For example, the profile [AU PS Patient](StructureDefinition-au-ps-patient.html) limits what is considered valid for the element `Patient.name` with the invariant "**au-core-pat-02:** At least one patient name shall have a family name".
+
+Typically AU PS profiles will inherit extended sub-elements from the base HL7 AU Core profile (which itself is based on an HL7 AU Base profile), e.g. the element `Medication.code` in profile [AU PS Medication](StructureDefinition-au-ps-medication.html) is of type CodeableConcept and is extended by inheriting a medicine specific sub-element `Medication.code.coding.extension` [Medication Type extension](http://build.fhir.org/ig/hl7au/au-fhir-base/StructureDefinition-medication-type.html) from the source profile [AU Base Medication](https://build.fhir.org/ig/hl7au/au-fhir-base/StructureDefinition-au-medication.html). 
+
+The full set of sub-elements is visible in the "Key Elements Table" or "Snapshot Table" which shows the sub-elements defined in this profile (shown in the "Differential Table") and the sub-elements inherited from a base profile.
+
+
+##### Must Support - Primitive Elements
+Primitive elements are single elements with a primitive value. If a primitive element is labelled as *Must Support*: 
+- AU PS Producers **SHALL** correctly populate the element if a value is known. 
+- AU PS Consumers **SHALL** consume resources if the element is present and containing any valid value.
+
+For example, the AU PS Organization Profile `name` element is a primitive string datatype. Therefore, when claiming conformance to this profile:
+- AU PS Producers **SHALL** correctly populate a value in `Organization.name` if a value is known.
+- AU PS Consumers **SHALL** consume the Organization resource without error if `Organization.name` is present and containing any valid value.
+
+##### Must Support - Complex Elements
+Complex elements are composed of primitive and/or other complex elements. Elements may have additional rules defined in the profile that also apply, e.g. terminology binding, or invariants. 
+
+If a complex element is labelled as *Must Support*:
+- AU PS Producers **SHALL** correctly populate the element with at least one of the sub-element values if the value is known.
+- AU PS Consumers **SHALL** consume resources if the element is present and containing any valid sub-element.
+
+For example, the AU PS MedicationRequest Profile `note` element is labelled *Must Support* and has no *Must Support* sub-elements. When claiming conformance to this profile:
+- AU PS Producers **SHALL** correctly populate a value in any valid `MedicationRequest.note` sub-element if a value is known e.g. `MedicationRequest.note.text`.
+- AU PS Consumers **SHALL** consume the MedicationRequest resource without error if `MedicationRequest.note` is present and containing any valid sub-elements.
+
+If a sub-element is labelled as *Must Support*: 
+- AU PS Producers **SHALL** correctly populate the element with all *Must Support* sub-elements for which a value is known. 
+- AU PS Consumers **SHALL** consume resources if *Must Support* sub-elements are present and containing any valid value.
+
+For example, in the AU PS Practitioner Profile, the `name` element is labelled *Must Support* and has *Must Support* sub-elements `family` and `given`. When claiming conformance to this profile:
+- AU PS Producers **SHALL** correctly populate a value in `Practitioner.name.family` and `Practitioner.name.given` if the value for those sub-elements is known.
+- AU PS Consumers **SHALL** consume a Patient resource without error if `Practitioner.name` is present and contains valid values in `Practitioner.name.family` and `Practitioner.name.given` sub-elements.
+
+##### Must Support - Resource References
+Some elements labelled as *Must Support* reference multiple resource types or profiles such as `Observation.performer`. In such cases: 
+- AU PS Producers **SHALL** correctly populate the element with at least one referenced resource or allowed profile if the value is known. 
+- AU PS Consumers **SHALL** consume resources if the element is present and containing any valid referenced resource or profiles.
+
+The table below provides a list of AU PS profile elements that allow multiple referenced resource types or profiles.
+
+AU PS Profile |Must Support Element|Reference
+---|---|---
+AU PS Encounter|Encounter.participant.individual|AU PS Practitioner, AU PS PractitionerRole, AU PS RelatedPerson
+AU PS Encounter|Encounter.reasonReference|AU PS Condition, Observation, AU PS Procedure
+AU PS Pathology Result Observation|Observation.performer|AU PS Practitioner, AU PS PractitionerRole, AU PS Organization, AU PS Patient, AU PS RelatedPerson
+AU PS Procedure|Procedure.reasonReference|AU PS Condition, Observation, AU PS Procedure, DocumentReference
+AU PS MedicationRequest|MedicationRequest.requester|AU PS Practitioner, AU PS PractitionerRole, AU PS Organization, AU PS Patient, AU PS RelatedPerson
+AU PS MedicationRequest|MedicationRequest.reasonReference|AU PS Condition, Observation
+AU PS MedicationStatement|MedicationStatement.reasonReference|AU PS Condition, Observation, AU Base Diagnostic Report
+{:.grid}
+
+
+##### Must Support - Choice of Data Types
+Some elements labelled as *Must Support* allow different data types such as `Observation.effective[x]`. In such cases:
+- AU PS Producers **SHALL** correctly populate the element with at least one data type allowed by the element definition if the value is known.
+- AU PS Consumers **SHALL** consume resources if the element is present and containing any valid data type allowed by the element definition.
+
+The table below provides a list of AU PS profile elements that allow multiple data types.
+
+AU PS Profile |Must Support Element|Data Types
+---|---|---
+AU PS AllergyIntolerance|AllergyIntolerance.onset[x]|dateTime, age, Period, Range
+AU PS Condition|Condition.onset[x]|dateTime, age, Period, Range
+AU PS Condition|Condition.abatement[x]|dateTime, age, Period, Range
+AU PS Pathology Result Observation|Observation.effective[x]|dateTime, Period, Timing, instant
+AU PS Pathology Result Observation|Observation.value[x]|Quantity, CodeableConcept, string, boolean, integer, Range, Ratio, SampledData, time, dateTime, Period
+AU PS Pathology Result Observation|Observation.component.value[x]|Quantity, CodeableConcept, string, boolean, integer, Range, Ratio, SampledData, time, dateTime, Period
+AU PS Immunization|Immunization.occurrence[x]|dateTime, string
+AU PS MedicationRequest|MedicationRequest.medication[x]|CodeableConcept, Reference
+AU PS MedicationStatement|MedicationStatement.medication[x]|CodeableConcept, Reference
+AU PS Procedure|Procedure.performed[x]|dateTime, Period, string, Age, Range
+{:.grid}
+
+##### Must Support - Choice of Identifiers
+A profile may support one or more than one identifier type and will include the supported identifiers in a profile by slicing the element and placing *Must Support* on each identifier slice. In such cases:
+- AU PS Producers **SHALL** correctly populate the element with identifiers from any supported identifier type where the identifier is known.
+- AU PS Consumers **SHALL** consume resources if the element is present and containing any identifier type allowed by the element definition.
+
+The table below provides a list of AU PS profile elements that allow multiple identifier types.
+
+AU PS Profile |Must Support Element|Supported Identifiers
+---|---|---
+AU PS Organization|Organization.identifier|HPI-O, Australian Business Number
+AU PS Patient|Patient.identifier|IHI, Medicare Card Number, DVA Number
+AU PS Practitioner|Practitioner.identifier|HPI-I
+AU PS PractitionerRole|PractitionerRole.identifier|Medicare Provider Number
+{:.grid}
+
+For example, the profile [AU PS Patient](StructureDefinition-au-ps-patient.html) requires support for the following choices `Patient.identifier` defined in [AU Base Patient](https://build.fhir.org/ig/hl7au/au-fhir-base/StructureDefinition-au-patient.html) to support Individual Healthcare Identifier (IHI), Medicare Card Number, Department of Veterans' Affairs (DVA) Number. When claiming conformance to the AU PS Patient Profile:
+- AU PS Producers **SHALL** correctly populate `Patient.identifier` with an IHI, or Medicare Care Number, or DVA Number, or any combination of them.
+- AU PS Consumers **SHALL** consume Patient resource if `Patient.identifier` is present containing any valid value. A valid value may be an IHI, Medicare Care Number, or DVA Number identifier, or may be some other allowed identifier.
+
+Systems **MAY** support populating and processing other identifiers, but this is not a requirement of AU PS.
+
+##### Must Support - Choice of Profile Elements
+
+A resource may support two elements that are used to indicate a reason, e.g. `Encounter.reasonCode` and `Encounter.reasonReference` in the profile [AU PS Encounter](StructureDefinition-au-ps-encounter.html). In such cases:
+- AU PS Producers **SHALL** correctly populate at least one element choice if the value is known.
+- AU PS Consumers **SHALL** consume resources if any element allowed by the profile is present and containing any valid value. 
+
+The table below lists the applicable profiles and elements in AU PS.
+
+AU PS Profile |Must Support Choice Elements
+---|---
+AU PS Encounter|Encounter.reasonCode, Encounter.reasonReference
+AU PS Procedure|Procedure.reasonCode, Procedure.reasonReference
+AU PS MedicationRequest|MedicationRequest.reasonCode, MedicationRequest.reasonReference
+AU PS MedicationStatement|MedicationStatement.reasonCode, MedicationStatement.reasonReference
+{:.grid}
+
+
+##### Must Support - Choice of Terminology
+
+In AU PS, elements that define support for more than one value set only apply to the [Coding](http://hl7.org/fhir/R4/datatypes.html#Coding) part of the element and are not intended to prevent systems from supplying only a text value. In such cases:
+- AU PS Producers **SHALL** correctly populate the element with concepts from each supported value set where the applicable concept is known.
+- AU PS Consumers **SHALL** accept consume if the element is present and containing any valid value. 
+
+The table below lists the applicable profiles and elements in AU PS that support multiple value sets.
+
+AU PS Profile |Must Support Sub-Element|Terminology Choices
+---|---
+AU PS Immunization|Immunization.code.coding|[Australian Medicines Terminology Vaccine](https://healthterminologies.gov.au/fhir/ValueSet/amt-vaccine-1), [Australian Immunisation Register Vaccine](https://healthterminologies.gov.au/fhir/ValueSet/australian-immunisation-register-vaccine-1)
+AU PS Medication|Medication.code.coding|[Australian Medication](https://healthterminologies.gov.au/fhir/ValueSet/australian-medication-1), [PBS Item Codes](https://build.fhir.org/ig/hl7au/au-fhir-base//ValueSet-pbs-item.html)
+AU PS MedicationRequest|MedicationRequest.code.coding|[Australian Medication](https://healthterminologies.gov.au/fhir/ValueSet/australian-medication-1), [PBS Item Codes](https://build.fhir.org/ig/hl7au/au-fhir-base//ValueSet-pbs-item.html)
+AU PS MedicationStatement|MedicationStatement.code.coding|[Australian Medication](https://healthterminologies.gov.au/fhir/ValueSet/australian-medication-1), [PBS Item Codes](https://build.fhir.org/ig/hl7au/au-fhir-base//ValueSet-pbs-item.html)
+{:.grid}
+
+For example, the profile [AU PS Medication](StructureDefinition-au-ps-medication.html) requires support for the following terminology choices `Medication.code.coding` defined in [AU Base Medication](https://build.fhir.org/ig/hl7au/au-fhir-base/StructureDefinition-au-medication.html) to support [Australian Medication](https://healthterminologies.gov.au/fhir/ValueSet/australian-medication-1) and [PBS Item Codes](https://build.fhir.org/ig/hl7au/au-fhir-base//ValueSet-pbs-item.html) as indicated by flagging *Must Support* on those two terminology slices.
+
+When claiming conformance to the AU PS Medication profile: 
+- AU PS Producers **SHALL** correctly populate `Medication.code.coding` with either a code from [Australian Medication](https://healthterminologies.gov.au/fhir/ValueSet/australian-medication-1) or [PBS Item Codes](https://build.fhir.org/ig/hl7au/au-fhir-base//ValueSet-pbs-item.html), or both, if a coded value is known.
+- AU PS Consumers **SHALL** consume a Medication resource if `Medication.code.coding` is present and containing any valid value. A valid value may be text, or may be a code from [Australian Medication](https://healthterminologies.gov.au/fhir/ValueSet/australian-medication-1) or [PBS Item Codes](https://build.fhir.org/ig/hl7au/au-fhir-base//ValueSet-pbs-item.html), or both, or some other code.
+
+Systems **MAY** populate and accept other code systems but this is not a requirement of AU PS.
+
+## Missing Data and Empty Sections
 
 There are situations when information is missing, this could be at the section level where a source system does not have information on a patient's medical devices, or may be at an element level within a resource. 
 
@@ -77,30 +220,30 @@ Missing data is distinct from a known absence of data for either:
 * no known x - where it is known, for example, that there are no known allergies for a patient
 * workflow - where there is a known workflow reason information for the section is not available
 
-#### No known x
+### No known x
 Where the source system can assert a known absence of data (no known x), the system **SHOULD** populate `Composition.section.entry` in accordance with the relevant profile specific implementation guidance for no known x. 
 
 This is in preference to population of `Composition.section.emptyReason` due to the widely known and implemented patterns established within FHIR generally to assert known absence.
 
 For example, to represent that a patient does not have an allergy or category of allergies, an appropriate negation code (e.g. 716186003 \|No known allergy\| or 1003774007 \|No known Hevea brasiliensis latex allergy\|) is used in `AllergyIntolerance.code`.
 
-#### Known absence of data due to workflow
+### Known absence of data due to workflow
 Where the source system does not have information for a particular section and there is a known workflow reason, the system **SHALL** represent that reason by populating `Composition.section.emptyReason`:
 * Prefer not to answer may be represented by sending the [Data Absent Reason](http://terminology.hl7.org/CodeSystem/data-absent-reason) code "asked-declined"
 * Asked but not known may be represented by sending the [Data Absent Reason](http://terminology.hl7.org/CodeSystem/data-absent-reason) code "asked-unknown"
 * Where the workflow does not support obtaining the information, it may be represented by sending the [List Empty Reason](https://hl7.org/fhir/R4/codesystem-list-empty-reason.html) code "notasked"
 
-#### Missing Data
+### Missing Data
 
-##### Missing Must Support and Optional Data
+#### Missing Must Support and Optional Data
 
 If the source system (producer) does not know the value for an optional element (minimum cardinality = 0), including elements labelled *Must Support*, as per the requirements defined in [AU Core](https://build.fhir.org/ig/hl7au/au-fhir-core/general-requirements.html#missing-must-support-and-optional-data), the data element **SHALL** be omitted from the resource.  
 
-##### Missing Must Support and Mandatory Data
+#### Missing Must Support and Mandatory Data
 
 If the data element is a mandatory element (minimum cardinality is > 0), the element **SHALL** be present *even if* the source system (producer) does not know the value or the reason the value is absent. In this circumstance the requirements defined by AU Core for [Missing Must Support and Mandatory Data](https://build.fhir.org/ig/hl7au/au-fhir-core/general-requirements.html#missing-must-support-and-mandatory-data) **SHALL** be applied:
 
-#### Empty Sections
+### Empty Sections
 
 An AU PS Producer **SHOULD** omit non-mandatory sections when the section does not have any information and does not know the reason is absent.
 
@@ -142,7 +285,7 @@ If the section is a mandatory section (minimum cardinality is > 0), the section 
         ...
     ~~~
 
-### Suppressed Data
+## Suppressed Data
 In some circumstances, specific pieces of data, are hidden due to security or privacy reasons:
 * if an optional section, resource, or element (minimum cardinality = 0) is not able to be shared it **SHALL** be omitted
 * if a mandatory section (minimum cardinality > 0) is not able to be shared:
