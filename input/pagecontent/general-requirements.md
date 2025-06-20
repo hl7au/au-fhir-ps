@@ -46,13 +46,13 @@ Actor | Code | Definition | Notes
 |  [MAY:able-to-populate](https://hl7.org/fhir/extensions/CodeSystem-obligation.html#obligation-MAY.58able-to-populate)| Conformant applications producing resources MAY be able to correctly populate this element. | Typically, this means that an application needs to demonstrate during some conformance testing process that there are some conditions under which it populates the element with a correct value. (i.e. not a data-absent-reason or equivalent.) 
 
 
-*Must Support* elements are treated differently between [AU PS Consumer](ActorDefinition-au-ps-actor-consumer.html) and [AU PS Responder](ActorDefinition-au-ps-actor-responder.html) actors. *Must Support* on a profile element **SHALL** be interpreted as follows.
+*Must Support* elements are treated differently between [AU PS Consumer](ActorDefinition-au-ps-actor-consumer.html) and [AU PS Producer](ActorDefinition-au-ps-actor-producer.html) actors. *Must Support* on a profile element **SHALL** be interpreted as follows.
 
 #### Presentation of Must Support and obligation in profiles
 All elements with *Must Support* in AU PS are accompanied by an explicit obligation that identifies the expectations for one or more actors. When rendered in an implementation guide, each profile is presented in different formal views under tabs labelled "Differential Table", "Key Elements Table", and "Snapshot Table". Elements flagged with *Must Support* and stated obligations in these views are represented by <span style="padding-left: 3px; padding-right: 3px; color: white; background-color: red" title="This element must be supported">S</span><span style="padding-left: 3px; padding-right: 3px; color: white; background-color: red" title="This element has obligations">O</span> as shown below. 
 
  <div> 
-    <img src="allergyintolerance-keyelementstable.png" alt="AU PS AllergyIntolerance Key Elements Table" style="width:100%"/>
+    <img src="allergyintolerance-keyelementstable.png" alt="AU PS AllergyIntolerance Key Elements Table" style="width:85%"/>
   </div>
 *Figure 1: Key Elements Table View*
 <br/>
@@ -69,7 +69,7 @@ There are situations when information is missing, this could be at the section l
 
 Where data is missing for an element within a resource and the reason is not known, systems **SHALL** implement the requirements of the [Missing Data](general-requirements.html#missing-data) section.
 
-Where data is missing at the section level and the reason is not known, systems **SHALL** implement the requiremens of the [Empty Section](general-requirements.html#empty-section) section.
+Where data is missing at the section level and the reason is not known, systems **SHALL** implement the requirements of the [Empty Sections](general-requirements.html#empty-sections) section.
 
 Missing data is distinct from a known absence of data for either:
 * no known x - where it is known, for example, that there are no known allergies for a patient

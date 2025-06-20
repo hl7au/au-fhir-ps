@@ -17,6 +17,7 @@
 - **SHOULD** for each optional or undefined section, implement profiles referenced in the AU PS Bundle, otherwise implement an AU Core or AU Base profile where applicable
 - **SHALL** implement the AU PS Producer obligations defined in the implemented profiles. Where an IPS profile is referenced in the AU PS Bundle the obligations of the Producer (IPS) actor SHALL apply
 - **SHALL** implement the requirements on Suppressed Data when an element is NOT allowed to be shared&#xa;&#xa;
-- **SHALL** implement the requirements on Missing Data when an element value is NOT known&#xa;&#xa;"/>
+- **SHALL** implement the requirements on Missing Data when an element value is NOT known&#xa;&#xa;
+- **SHALL** implement the requirements on Empty Sections when information for a section is NOT known&#xa;&#xa;"/>
   <derivedFrom value="http://hl7.org/fhir/uv/ips/ActorDefinition/Producer"/>
 </ActorDefinition>
