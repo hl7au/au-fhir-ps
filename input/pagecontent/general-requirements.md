@@ -39,17 +39,26 @@ In AU PS, the meaning of *Must Support* is specified in terms of [Obligation Cod
 Actor | Code | Definition | Notes
 --- | --- | --- | ---
 [AU PS Consumer actor](ActorDefinition-au-ps-actor-consumer.html) | [SHALL:handle](https://hl7.org/fhir/extensions/CodeSystem-obligation.html#obligation-SHALL.58handle) | Conformant applications SHOULD display the value of this element when presenting the data from the resource to a human user |  This rule is vague in that doesn't specify any particular handling of the element. But it's important because an application that ignores this element is non-conformant. A good example would be a status code of 'entered-in-error' - how exactly a Resource Consumer handles this depends on the use case etc., but the application can never simply ignore such a status code. Note that whether the resource or information from it is stored for later use is irrelevant - when the resource or information in it is processed, the consequences of the element are considered.
-| | [SHOULD:display](https://hl7.org/fhir/extensions/CodeSystem-obligation.html#obligation-SHOULD.58display) | Conformant applications SHOULD display the value of this element when presenting the data from the resource to a human user. | Exactly how it is displayed is not specified, but it means that a human looking at the content of the resource is made aware of the value of the element so that they can consider the meaning of the resource.
+| [SHOULD:display](https://hl7.org/fhir/extensions/CodeSystem-obligation.html#obligation-SHOULD.58display) | Conformant applications SHOULD display the value of this element when presenting the data from the resource to a human user. | Exactly how it is displayed is not specified, but it means that a human looking at the content of the resource is made aware of the value of the element so that they can consider the meaning of the resource.
 [AU PS Producer actor](ActorDefinition-au-ps-actor-producer.html) |[SHALL:populate](https://hl7.org/fhir/extensions/CodeSystem-obligation.html#obligation-SHALL.58populate)|Conformant applications producing resources SHALL include this element if a value is known and allowed to be shared| This implementation obligation means that whenever the producer knows the correct value for an element, it populates it. This is NOT the same as cardinality, as a 'populate' element can be omitted if no data exists or the data that exists is prohibited from being shared.
-|  | [SHALL:populate-if-known](https://hl7.org/fhir/extensions/CodeSystem-obligation.html#obligation-SHALL.58populate-if-known) | Conformant applications producing resources SHALL correctly populate this element if they know a value for the element, but it is acceptable if the system is unable to ever know a value for the element. | This obligation does not impose a requirement to be able to know a value, unlike populate and able-to-populate which do. 'Knowing' an element means that a value for the element is available in memory, persistent store, or is otherwise available within the system claiming conformance.
-| | [SHOULD:populate](https://hl7.org/fhir/extensions/CodeSystem-obligation.html#obligation-SHOULD.58populate)|Conformant applications producing resources SHOULD include this element if a value is known and allowed to be shared.| This implementation obligation means that whenever the producer knows the correct value for an element, it should populate it.
-|  | [MAY:able-to-populate](https://hl7.org/fhir/extensions/CodeSystem-obligation.html#obligation-MAY.58able-to-populate)| Conformant applications producing resources MAY be able to correctly populate this element. | Typically, this means that an application needs to demonstrate during some conformance testing process that there are some conditions under which it populates the element with a correct value. (i.e. not a data-absent-reason or equivalent.) 
+| [SHALL:populate-if-known](https://hl7.org/fhir/extensions/CodeSystem-obligation.html#obligation-SHALL.58populate-if-known) | Conformant applications producing resources SHALL correctly populate this element if they know a value for the element, but it is acceptable if the system is unable to ever know a value for the element. | This obligation does not impose a requirement to be able to know a value, unlike populate and able-to-populate which do. 'Knowing' an element means that a value for the element is available in memory, persistent store, or is otherwise available within the system claiming conformance.
+| [SHOULD:populate](https://hl7.org/fhir/extensions/CodeSystem-obligation.html#obligation-SHOULD.58populate)|Conformant applications producing resources SHOULD include this element if a value is known and allowed to be shared.| This implementation obligation means that whenever the producer knows the correct value for an element, it should populate it.
+|  [MAY:able-to-populate](https://hl7.org/fhir/extensions/CodeSystem-obligation.html#obligation-MAY.58able-to-populate)| Conformant applications producing resources MAY be able to correctly populate this element. | Typically, this means that an application needs to demonstrate during some conformance testing process that there are some conditions under which it populates the element with a correct value. (i.e. not a data-absent-reason or equivalent.) 
 
 
 *Must Support* elements are treated differently between [AU PS Consumer](ActorDefinition-au-ps-actor-consumer.html) and [AU PS Responder](ActorDefinition-au-ps-actor-responder.html) actors. *Must Support* on a profile element **SHALL** be interpreted as follows.
 
 #### Presentation of Must Support and obligation in profiles
-TBD
+All elements with *Must Support* in AU PS are accompanied by an explicit obligation that identifies the expectations for one or more actors. When rendered in an implementation guide, each profile is presented in different formal views under tabs labelled "Differential Table", "Key Elements Table", and "Snapshot Table". Elements flagged with *Must Support* and stated obligations in these views are represented by <span style="padding-left: 3px; padding-right: 3px; color: white; background-color: red" title="This element must be supported">S</span><span style="padding-left: 3px; padding-right: 3px; color: white; background-color: red" title="This element has obligations">O</span> as shown below. 
+
+ <div> 
+    <img src="allergyintolerance-keyelementstable.png" alt="AU PS AllergyIntolerance Key Elements Table" style="width:100%"/>
+  </div>
+*Figure 1: Key Elements Table View*
+<br/>
+
+Implementers need to refer to the "Key Elements Table" to see the full set of elements that are mandatory or *Must Support* with obligations, and the full set of terminology requirements.  Implementers need to be aware that the full set of constraints (i.e. invariants) are only presented in the "Detailed Descriptions" tab or the raw representation (e.g. XML or JSON) of the profile.
+
 
 #### Interpreting profile elements labelled Must Support
 TBD
@@ -60,7 +69,7 @@ There are situations when information is missing, this could be at the section l
 
 Where data is missing for an element within a resource and the reason is not known, systems **SHALL** implement the requirements of the [Missing Data](general-requirements.html#missing-data) section.
 
-Where data is missing at the section level and the reason is not known, systems **SHALL** TBD.
+Where data is missing at the section level and the reason is not known, systems **SHALL** implement the requiremens of the [Empty Section](general-requirements.html#empty-section) section.
 
 Missing data is distinct from a known absence of data for either:
 * no known x - where it is known, for example, that there are no known allergies for a patient
@@ -90,15 +99,30 @@ or  and the source system (producer) does not know the reason for the absence of
 
 for a particular data element is missing and the 
 
-#### Missing Must Support and Optional Data
+#### Missing Data
+
+##### Missing Must Support and Optional Data
 
 If the source system (producer) does not know the value for an optional element (minimum cardinality = 0), including elements labelled *Must Support*, as per the requirements defined in [AU Core](https://build.fhir.org/ig/hl7au/au-fhir-core/general-requirements.html#missing-must-support-and-optional-data), the data element **SHALL** be omitted from the resource.  
 
-#### Missing Must Support and Mandatory Data
+##### Missing Must Support and Mandatory Data
 
 If the data element is a mandatory element (minimum cardinality is > 0), the element **SHALL** be present *even if* the source system (producer) does not know the value or the reason the value is absent and the requirements defined by AU Core for [Missing Must Support and Mandatory Data](https://build.fhir.org/ig/hl7au/au-fhir-core/general-requirements.html#missing-must-support-and-mandatory-data) **SHALL** be applied:
 * requirements of AU Core Responder apply to AU Patient Summary Producer
 * requirements of AU Core Requester apply to AU Patient Summary Consumer
+
+#### Empty Sections
+Mandatory sections in AU PS Composition have a minimum cardinality of 1, these sections have to exist, but may not include structured data and the section entry element is empty. In this circumstance, the section emptyReason must be populated as required by the section constraint rule.
+
+For mandatory sections in AU PS Composition, an AU PS Producer:
+* **SHALL** populate the `Composition.section.emptyReason` with a clinically relevant code when the section entry element is empty
+* **MAY** populate the `Composition.section.entry` with a resource to assert known absence of data, e.g AllergyIntolerance with code representing ‘no known allergy’.
+
+For mandatory sections in AU PS Composition, an AU PS Consumer:
+* **SHALL** handle the section emptyReason when the entry element is empty
+
+* **SHALL** handle a section entry with no known data coding (e.g. AllergyIntolerance.code: 716186003|No known allergy)
+For non-mandatory sections in AU PS Composition, an AU PS Producer MAY omit the section when data is not known.
 
 ### Suppressed Data
 In some circumstances, specific pieces of data may be hidden due to security or privacy reasons and in these circumstances the requirements defined by AU Core for [Suppressed Data](https://build.fhir.org/ig/hl7au/au-fhir-core/general-requirements.html#suppressed-data) **SHALL** be applied:
