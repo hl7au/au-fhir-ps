@@ -80,13 +80,12 @@ Where the source system can assert a known absence of data (no known x), the sys
 
 This is in preference to population of `Composition.section.emptyReason` due to the widely known and implemented patterns established within FHIR generally to assert known absence.
 
-For example, to represent that a patient does not have an allergy or category of allergies, an appropriate negation code (e.g. 716186003 |No known allergy| or 1003774007 |No known Hevea brasiliensis latex allergy|) is used in `AllergyIntolerance.code`.
+For example, to represent that a patient does not have an allergy or category of allergies, an appropriate negation code (e.g. 716186003 \|No known allergy\| or 1003774007 \|No known Hevea brasiliensis latex allergy\|) is used in `AllergyIntolerance.code`.
 
 #### Known absence of data due to workflow
-Where the source system does not have information for a particular section and there is a known workflow reason, the system **MAY** represent that reason by populating `Composition.section.emptyReason`:
+Where the source system does not have information for a particular section and there is a known workflow reason, the system **SHALL** represent that reason by populating `Composition.section.emptyReason`:
 * Prefer not to answer may be represented by sending the [Data Absent Reason](http://terminology.hl7.org/CodeSystem/data-absent-reason) code "asked-declined"
 * Asked but not known may be represented by sending the [Data Absent Reason](http://terminology.hl7.org/CodeSystem/data-absent-reason) code "asked-unknown"
-* Not stated or inadequately described may be represented by sending the [List Empty Reason](https://hl7.org/fhir/R4/codesystem-list-empty-reason.html) code "unknown"
 * Where the workflow does not support obtaining the information, it may be represented by sending the [List Empty Reason](https://hl7.org/fhir/R4/codesystem-list-empty-reason.html) code "notasked"
 
 #### Missing Data
@@ -101,13 +100,45 @@ If the data element is a mandatory element (minimum cardinality is > 0), the ele
 
 #### Empty Sections (very TBD)
 
-An AU PS producer **SHOULD** omit non-mandatory sections when the section does not have any information and does not know the reason is absent.
+An AU PS Producer **SHOULD** omit non-mandatory sections when the section does not have any information and does not know the reason is absent.
 
-If the section is a mandatory section (minimum cardinality is > 0), the section **SHALL** be present *even if* the source system does not have any information for that section or know the reason the information is absent. 
+If the section is a mandatory section (minimum cardinality is > 0), the section **SHALL** be present *even if* the source system does not have any information for that section or know the reason the information is absent. In this circumstance, an AU PS Producer **SHALL**:
+    - use the code `unavailable` from the [List Empty Reasons](http://terminology.hl7.org/CodeSystem/list-empty-reason) code system
+    - AU PS Consumers are advised that other meaningful values can be captured in `Composition.section.emptyReason` beyond missing or suppressed.
+  
+    Example: AU Patient Summary - Allergies and Intolerances Section where the patient's allergy information is not available.
+    ~~~
+    ...
+    "section" : [
+          {
+            "title" : "Allergies and Intolerances",
+            "code" : {
+              "coding" : [
+                {
+                  "system" : "http://loinc.org",
+                  "code" : "48765-2",
+                  "display" : "Allergies and adverse reactions Document"
+                }
+              ]
+            },
+            "text" : {
+              "status" : "generated",
+              "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\" xml:lang=\"en-AU\" lang=\"en-AU\">There is no information available regarding the consumer's allergy conditions.</div>"
+            },
+            "emptyReason" : {
+              "coding" : [
+                {
+                  "system" : "http://terminology.hl7.org/CodeSystem/list-empty-reason",
+                  "code" : "unavailable",
+                  "display" : "Unavailable"
+                }
+              ],
+              "text" : "No information available"
+            }
+        },
+    ...
+    ~~~
 
-Refer to the guidance above for No known x
-
-In the circumstance where the system knows the reason for absence:
 
 An AU PS Producer:
 * **SHALL** populate the `Composition.section.emptyReason` with a clinically relevant code when the section entry element is empty
