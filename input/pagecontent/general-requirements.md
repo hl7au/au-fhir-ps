@@ -73,31 +73,21 @@ Where data is missing at the section level and the reason is not known, systems 
 
 Missing data is distinct from a known absence of data for either:
 * no known x - where it is known, for example, that there are no known allergies for a patient
-* workflow reasons the information is not available
+* workflow - where there is a known workflow reason the information is not available
 
 #### No known x
+Where the source system can assert a known absence of data (no known x), the system **SHOULD** populate `Composition.section.entry` in accordance with the relevant profile specific implementation guidance for no known x. 
 
+This is in preference to population of `Composition.section.emptyReason` due to the widely known and implemented patterns established within FHIR generally to assert known absence.
+
+For example, to represent that a patient does not have an allergy or category of allergies, an appropriate negation code (e.g. 716186003 |No known allergy| or 1003774007 |No known Hevea brasiliensis latex allergy|) is used in `AllergyIntolerance.code`.
 
 #### Known absence of data due to workflow
-Workflow can be represented 
-
-* Prefer not to answer may be represented by sending the Data Absent Reason code “asked-declined”
-* Asked but not known may be represented by sending the Data Absent Reason code “asked-unknown”
-* Not stated or inadequately described may be represented by sending the Data Absent Reason code “unknown”
-* Where the workflow does not support obtaining the information, it may be represented by sending the Data Absent * Reason code “not-asked”
-
-
-Workflow
-
-
- where it is known and recorded that a patient does not have 
-
-Where a system does not know the reason for the absence of data .
-
-Where a 
-or  and the source system (producer) does not know the reason for the absence of data. 
-
-for a particular data element is missing and the 
+Where the source system does not have information for a particular section and there is a known workflow reason, the system **MAY** represent that reason by populating `Composition.section.emptyReason`:
+* Prefer not to answer may be represented by sending the [Data Absent Reason](http://terminology.hl7.org/CodeSystem/data-absent-reason) code "asked-declined"
+* Asked but not known may be represented by sending the [Data Absent Reason](http://terminology.hl7.org/CodeSystem/data-absent-reason) code "asked-unknown"
+* Not stated or inadequately described may be represented by sending the [List Empty Reason](https://hl7.org/fhir/R4/codesystem-list-empty-reason.html) code "unknown"
+* Where the workflow does not support obtaining the information, it may be represented by sending the [List Empty Reason](https://hl7.org/fhir/R4/codesystem-list-empty-reason.html) code "notasked"
 
 #### Missing Data
 
@@ -107,12 +97,10 @@ If the source system (producer) does not know the value for an optional element 
 
 ##### Missing Must Support and Mandatory Data
 
-If the data element is a mandatory element (minimum cardinality is > 0), the element **SHALL** be present *even if* the source system (producer) does not know the value or the reason the value is absent and the requirements defined by AU Core for [Missing Must Support and Mandatory Data](https://build.fhir.org/ig/hl7au/au-fhir-core/general-requirements.html#missing-must-support-and-mandatory-data) **SHALL** be applied:
-* requirements of AU Core Responder apply to AU Patient Summary Producer
-* requirements of AU Core Requester apply to AU Patient Summary Consumer
+If the data element is a mandatory element (minimum cardinality is > 0), the element **SHALL** be present *even if* the source system (producer) does not know the value or the reason the value is absent. In this circumstance the requirements defined by AU Core for [Missing Must Support and Mandatory Data](https://build.fhir.org/ig/hl7au/au-fhir-core/general-requirements.html#missing-must-support-and-mandatory-data) **SHALL** be applied:
 
 #### Empty Sections
-Mandatory sections in AU PS Composition have a minimum cardinality of 1, these sections have to exist, but may not include structured data and the section entry element is empty. In this circumstance, the section emptyReason must be populated as required by the section constraint rule.
+If the section is a mandatory section (minimum cardinality is > 0), the section **SHALL** be present *even if* the source system does not have any information for that section or know the reason the information is absent.
 
 For mandatory sections in AU PS Composition, an AU PS Producer:
 * **SHALL** populate the `Composition.section.emptyReason` with a clinically relevant code when the section entry element is empty
@@ -122,7 +110,7 @@ For mandatory sections in AU PS Composition, an AU PS Consumer:
 * **SHALL** handle the section emptyReason when the entry element is empty
 
 * **SHALL** handle a section entry with no known data coding (e.g. AllergyIntolerance.code: 716186003|No known allergy)
-For non-mandatory sections in AU PS Composition, an AU PS Producer MAY omit the section when data is not known.
+* **SHOULD** omit non-mandatory sections when the section does not have any information and does not know the reason is absent
 
 ### Suppressed Data
 In some circumstances, specific pieces of data may be hidden due to security or privacy reasons and in these circumstances the requirements defined by AU Core for [Suppressed Data](https://build.fhir.org/ig/hl7au/au-fhir-core/general-requirements.html#suppressed-data) **SHALL** be applied:
