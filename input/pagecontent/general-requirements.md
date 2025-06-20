@@ -200,12 +200,15 @@ Some elements labelled as *Must Support* reference multiple resource types or pr
 
 The table below provides a list of AU PS profile elements that allow multiple referenced resource types or profiles.
 
-AU PS Profile |Must Support Element|Reference
+Profile |Must Support Element|Reference
 ---|---|---
 AU PS Composition|Composition.author|AU PS Practitioner, AU PS PractitionerRole, Device, AU PS Patient, AU PS RelatedPerson, AU PS Organization
 AU PS Composition|Composition.author|AU PS Patient, AU PS RelatedPerson, AU PS Practitioner, AU PS PractitionerRole, AU PS Organization
 AU PS Composition|Composition.section.entry:medicationStatementOrRequest|AU PS MedicationStatement, AU PS MedicationRequest
+DiagnosticReport (IPS)|DiagnosticReport.subject|Patient (IPS), Group
+DiagnosticReport (IPS)|DiagnosticReport.performer|Practitioner (IPS), PractitionerRole (IPS), Organization (IPS), CareTeam
 AU PS Encounter|Encounter.participant.individual|AU PS Practitioner, AU PS PractitionerRole, AU PS RelatedPerson
+DiagnosticReport (IPS)|DiagnosticReport.result:observation-results|Observation Results - Laboratory/Pathology (IPS), Observation Results - Radiology (IPS)
 AU PS Encounter|Encounter.reasonReference|AU PS Condition, Observation, AU PS Procedure
 AU PS Pathology Result Observation|Observation.performer|AU PS Practitioner, AU PS PractitionerRole, AU PS Organization, AU PS Patient, AU PS RelatedPerson
 AU PS Procedure|Procedure.reasonReference|AU PS Condition, Observation, AU PS Procedure, DocumentReference
@@ -222,17 +225,19 @@ Some elements labelled as *Must Support* allow different data types such as `Obs
 
 The table below provides a list of AU PS profile elements that allow multiple data types.
 
-AU PS Profile |Must Support Element|Data Types
+Profile |Must Support Element|Data Types
 ---|---|---
 AU PS AllergyIntolerance|AllergyIntolerance.onset[x]|dateTime, age, Period, Range
 AU PS Condition|Condition.onset[x]|dateTime, age, Period, Range
 AU PS Condition|Condition.abatement[x]|dateTime, age, Period, Range
-AU PS Pathology Result Observation|Observation.effective[x]|dateTime, Period, Timing, instant
-AU PS Pathology Result Observation|Observation.value[x]|Quantity, CodeableConcept, string, boolean, integer, Range, Ratio, SampledData, time, dateTime, Period
-AU PS Pathology Result Observation|Observation.component.value[x]|Quantity, CodeableConcept, string, boolean, integer, Range, Ratio, SampledData, time, dateTime, Period
 AU PS Immunization|Immunization.occurrence[x]|dateTime, string
 AU PS MedicationRequest|MedicationRequest.medication[x]|CodeableConcept, Reference
 AU PS MedicationStatement|MedicationStatement.medication[x]|CodeableConcept, Reference
+Observation Results - Radiology (IPS)|Observation.effective[x]|dateTime, Period, Timing, instant
+Observation Results - Radiology (IPS)|Observation.value[x]|Quantity, CodeableConcept, string, boolean, integer, Range, Ratio, SampledData, time, dateTime, Period
+AU PS Pathology Result Observation|Observation.effective[x]|dateTime, Period,
+AU PS Pathology Result Observation|Observation.value[x]|Quantity, CodeableConcept, string, boolean, integer, Range, Ratio, SampledData, time, dateTime, Period
+AU PS Pathology Result Observation|Observation.component.value[x]|Quantity, CodeableConcept, string, boolean, integer, Range, Ratio, SampledData, time, dateTime, Period
 AU PS Procedure|Procedure.performed[x]|dateTime, Period, string, Age, Range
 {:.grid}
 
@@ -243,7 +248,7 @@ A profile may support one or more than one identifier type and will include the 
 
 The table below provides a list of AU PS profile elements that allow multiple identifier types.
 
-AU PS Profile |Must Support Element|Supported Identifiers
+Profile |Must Support Element|Supported Identifiers
 ---|---|---
 AU PS Organization|Organization.identifier|HPI-O, Australian Business Number
 AU PS Patient|Patient.identifier|IHI, Medicare Card Number, DVA Number
@@ -265,7 +270,7 @@ A resource may support two elements that are used to indicate a reason, e.g. `En
 
 The table below lists the applicable profiles and elements in AU PS.
 
-AU PS Profile |Must Support Choice Elements
+Profile |Must Support Choice Elements
 ---|---
 AU PS Encounter|Encounter.reasonCode, Encounter.reasonReference
 AU PS Procedure|Procedure.reasonCode, Procedure.reasonReference
@@ -282,7 +287,7 @@ In AU PS, elements that define support for more than one value set only apply to
 
 The table below lists the applicable profiles and elements in AU PS that support multiple value sets.
 
-AU PS Profile |Must Support Sub-Element|Terminology Choices
+Profile |Must Support Sub-Element|Terminology Choices
 ---|---
 AU PS Immunization|Immunization.code.coding|[Australian Medicines Terminology Vaccine](https://healthterminologies.gov.au/fhir/ValueSet/amt-vaccine-1), [Australian Immunisation Register Vaccine](https://healthterminologies.gov.au/fhir/ValueSet/australian-immunisation-register-vaccine-1)
 AU PS Medication|Medication.code.coding|[Australian Medication](https://healthterminologies.gov.au/fhir/ValueSet/australian-medication-1), [PBS Item Codes](https://build.fhir.org/ig/hl7au/au-fhir-base//ValueSet-pbs-item.html)
