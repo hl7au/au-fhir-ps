@@ -1,3 +1,7 @@
+<div class="stu-note" markdown="1">
+The heading numbering on this page is a temporary workaround to drive the page TOC widget on the right. Work will be undertaken on the template to have both correct heading levels and display 2 levels of headings in page TOC widgets.
+</div><!-- stu-note -->
+
 ## General Requirements
 
 Systems claiming conformance to AU Patient Summary will represent digital health information using the content models of AU Patient Summary profiles AND implement the requirements for one or both [AU PS actors](actors.html).
