@@ -47,10 +47,10 @@ Missing data is distinct from a known absence of data for either:
 * no known x - where it is known, for example, that there are no known allergies for a patient
 * workflow - where there is a known workflow reason information for the section is not available
 
-### No known x
-Where the source system can assert a known absence of data (no known x), the system **SHOULD** populate `Composition.section.entry` in accordance with the relevant profile specific implementation guidance for no known x. 
+### Assertion statement of known absence of data
+Where the source system can assert a known absence of data (No known X), the system **SHOULD** populate `Composition.section.entry` in accordance with the relevant profile specific implementation guidance for no known x. 
 
-This is in preference to population of `Composition.section.emptyReason` due to the widely known and implemented patterns established within FHIR generally to assert known absence.
+In AU PS this approach is preferred to using `Composition.section.emptyReason` due to the widely known and implemented patterns established within FHIR, and in AU Core, to assert known absence of clinical data.
 
 For example, to represent that a patient does not have an allergy or category of allergies, an appropriate negation code (e.g. 716186003 \|No known allergy\| or 1003774007 \|No known Hevea brasiliensis latex allergy\|) is used in `AllergyIntolerance.code`.
 
@@ -74,7 +74,7 @@ If the data element is a mandatory element (minimum cardinality is > 0), the ele
 
 An AU PS Producer **SHOULD** omit non-mandatory sections when the source system does not have any information and does not know the reason the information is absent.
 
-If the section is a mandatory section (minimum cardinality is > 0), the section **SHALL** be present *even if* the source system does not have any information for that section or know the reason the information is absent. In this circumstance, an AU PS Producer **SHALL**:
+For a mandatory section (minimum cardinality is > 0), the section **SHALL** be present *even if* the source system does not have any information for that section or know the reason the information is absent. In this circumstance, an AU PS Producer **SHALL**:
 
 * use the code `unavailable` from the [List Empty Reasons](http://terminology.hl7.org/CodeSystem/list-empty-reason) code system
 * AU PS Consumers are advised that other meaningful values can be captured in `Composition.section.emptyReason` beyond missing or suppressed.
