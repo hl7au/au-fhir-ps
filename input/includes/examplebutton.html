@@ -2,7 +2,7 @@
 {% assign file_type = include.example | split: "." | last %}
 
 <p>
-  <button class="btn btn-info btn-lg active" type="button" title="Click to Open or Close Example"
+  <button class="btn btn-info btn-block active" type="button" title="Click to Open or Close Example"
     data-toggle="collapse" data-target="#{{target}}" aria-expanded="false" aria-controls="collapseExample">
     {{include.b_title | default: "Example" }}
   </button>

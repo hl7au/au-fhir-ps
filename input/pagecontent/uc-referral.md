@@ -62,4 +62,6 @@ This use case demonstrates use of patient summary during step 4. Endocrinologist
 
 The following examples demonstrate technical and clinical use case aspects, conforming to the AU Patient Summary requirements. Data within these examples, e.g. medications, is provided by the [Sparked Patient Summary Clinical Focus Group](https://sparked.csiro.au/index.php/design-groups/):
 1. Patient Summary Embedded in Referral: [Patient Summary for Joyce Johnson as of 28 OCT 2024 (Bundle)](Bundle-aups-referral-endoconsult-curated.html)
+{% include examplebutton.html example="aups-referral-endoconsult-curated" b_title = "Patient Summary for Joyce Johnson as of 28 OCT 2024 (Bundle)" %}
 1. More recent Patient Summary: [Patient Summary for Joyce Johnson as of 07 NOV 2024 (Bundle)](Bundle-aups-referral-endoconsult-autogen.html)
+{% include examplebutton.html example="aups-referral-endoconsult-autogen" b_title = "Patient Summary for Joyce Johnson as of 07 NOV 2024 (Bundle)" %}
