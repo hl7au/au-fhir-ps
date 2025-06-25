@@ -58,6 +58,10 @@ This use case demonstrates use of patient summary during step 4. Endocrinologist
 *Figure 2: Sequence diagram showing access to embedded and updated patient summaries, with secure retrieval using public key cryptography*
 <br/>
 
+### Notes
+
+This example use case is provided for illustrative purposes only and is intended to support understanding of how patient summaries may be exchanged in practice. It does not prescribe technical requirements or mandate specific implementation workflows. 
+
 ### Examples
 
 The following examples demonstrate technical and clinical use case aspects, conforming to the AU Patient Summary requirements. Data within these examples, e.g. medications, is provided by the [Sparked Patient Summary Clinical Focus Group](https://sparked.csiro.au/index.php/design-groups/):
