@@ -37,6 +37,7 @@
     <element id="Bundle.type">
       <path value="Bundle.type"/>
       <fixedCode value="document"/>
+      <mustSupport value="true"/>
     </element>
     <element id="Bundle.timestamp">
       <path value="Bundle.timestamp"/>
@@ -95,6 +96,7 @@
       <sliceName value="patient"/>
       <min value="1"/>
       <max value="1"/>
+      <mustSupport value="true"/>
     </element>
     <element id="Bundle.entry:patient.resource">
       <path value="Bundle.entry.resource"/>
@@ -103,6 +105,7 @@
         <code value="Patient"/>
         <profile value="http://hl7.org.au/fhir/ps/StructureDefinition/au-ps-patient"/>
       </type>
+      <mustSupport value="true"/>
     </element>
     <element id="Bundle.entry:allergyintolerance">
       <path value="Bundle.entry"/>
