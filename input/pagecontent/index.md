@@ -1,5 +1,6 @@
 
-<p class="stu-note">Through the May and June <a href="https://confluence.hl7.org/spaces/HAFWG/pages/345082204/AU+Patient+Summary+Conformance+Sessions">AU PS Conformance Sessions</a> we have developed a proposal for AU PS Conformance for discussion and voting with the intention to incorporate an agreed proposal into the August Ballot for Comment.
+<div class="stu-note" markdown="1">
+Through the May and June <a href="https://confluence.hl7.org/spaces/HAFWG/pages/345082204/AU+Patient+Summary+Conformance+Sessions">AU PS Conformance Sessions</a> we have developed a proposal for AU PS Conformance for discussion and voting with the intention to incorporate an agreed proposal into the August Ballot for Comment.
 
 The proposal incorporates a conformance approach that ensures compliance with IPS and AU Core through:
 <ul>
@@ -15,7 +16,7 @@ This proposal will be the major focus of the next AU PS FHIR IG Call this Friday
 </ul>
 
 You can also raise questions on <a href="https://chat.fhir.org/#narrow/channel/179173-australia/topic/AU.20Patient.20Summary.20Conformance/with/519935470">#australia > AU Patient Summary Conformance</a>.
-</p>
+</div><!-- stu-note -->
 
 ### Introduction
 AU Patient Summary is provided to support the use of patient summaries in HL7® FHIR®© in an Australian context. It complies with the requirements defined in [IPS](https://build.fhir.org/ig/HL7/fhir-ips/) and [AU Core](https://build.fhir.org/ig/hl7au/au-fhir-core), and sets the minimum expectations on FHIR resources to support conformance and implementation in systems.
