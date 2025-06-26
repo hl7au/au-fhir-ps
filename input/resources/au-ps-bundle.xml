@@ -53,6 +53,7 @@
     <element id="Bundle.type">
       <path value="Bundle.type"/>
       <fixedCode value="document"/>
+      <mustSupport value="true"/>
     </element>
     <element id="Bundle.timestamp">
       <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
@@ -191,6 +192,7 @@
       <sliceName value="patient"/>
       <min value="1"/>
       <max value="1"/>
+      <mustSupport value="true"/>
     </element>
     <element id="Bundle.entry:patient.resource">
       <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
@@ -215,6 +217,7 @@
         <code value="Patient"/>
         <profile value="http://hl7.org.au/fhir/ps/StructureDefinition/au-ps-patient"/>
       </type>
+      <mustSupport value="true"/>
     </element>
     <element id="Bundle.entry:allergyintolerance">
       <path value="Bundle.entry"/>
