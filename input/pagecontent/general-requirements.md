@@ -122,7 +122,7 @@ Typically AU PS profiles will inherit extended sub-elements from the base HL7 AU
 The full set of sub-elements is visible in the "Key Elements Table" or "Snapshot Table" which shows the sub-elements defined in this profile (shown in the "Differential Table") and the sub-elements inherited from a base profile.
 
 
-###### Must Support - Primitive Elements
+##### Must Support - Primitive Elements
 Primitive elements are single elements with a primitive value. If a primitive element is labelled as *Must Support*: 
 - AU PS Producers **SHALL** correctly populate the element if a value is known. 
 - AU PS Consumers **SHALL** consume resources if the element is present and containing any valid value, and **SHOULD** display the value of this element when presenting the data from the resource to a human user.
@@ -150,7 +150,7 @@ For example, in the AU PS Practitioner Profile, the `name` element is labelled *
 - AU PS Producers **SHALL** correctly populate a value in `Practitioner.name.family` and `Practitioner.name.given` if the value for those sub-elements is known.
 - AU PS Consumers **SHALL** consume a Patient resource if `Practitioner.name` is present and contains valid values in `Practitioner.name.family` and `Practitioner.name.given` sub-elements, and **SHOULD** display the value of at least the sub elements`Practitioner.name.family` and `Practitioner.name.given` when presenting the data from the resource to a human user.
 
-###### Must Support - Resource References
+##### Must Support - Resource References
 Some elements labelled as *Must Support* reference multiple resource types or profiles such as `Observation.performer`. In such cases: 
 - AU PS Producers **SHALL** correctly populate the element with at least one referenced resource or allowed profile if the value is known. 
 - AU PS Consumers **SHALL** consume resources if the element is present and containing any valid referenced resource or profiles, and **SHOULD** display the value of this element when presenting the data from the resource to a human user.
@@ -175,7 +175,7 @@ AU PS MedicationStatement|MedicationStatement.reasonReference|AU PS Condition, O
 {:.grid}
 
 
-###### Must Support - Choice of Data Types
+##### Must Support - Choice of Data Types
 Some elements labelled as *Must Support* allow different data types such as `Observation.effective[x]`. In such cases:
 - AU PS Producers **SHALL** correctly populate the element with at least one data type allowed by the element definition if the value is known.
 - AU PS Consumers **SHALL** consume resources if the element is present and containing any valid data type allowed by the element definition, and **SHOULD** display the value of this element when presenting the data from the resource to a human user.
@@ -198,7 +198,7 @@ AU PS Pathology Result Observation|Observation.component.value[x]|Quantity, Code
 AU PS Procedure|Procedure.performed[x]|dateTime, Period, string, Age, Range
 {:.grid}
 
-###### Must Support - Choice of Identifiers
+##### Must Support - Choice of Identifiers
 A profile may support one or more than one identifier type and will include the supported identifiers in a profile by slicing the element and placing *Must Support* on each identifier slice. In such cases:
 - AU PS Producers **SHALL** correctly populate the element with identifiers from any supported identifier type where the identifier is known.
 - AU PS Consumers **SHALL** consume resources if the element is present and containing any identifier type allowed by the element definition, and **SHOULD** display the value of each populated identifier when presenting the data from the resource to a human user.
@@ -219,7 +219,7 @@ For example, the profile [AU PS Patient](StructureDefinition-au-ps-patient.html)
 
 Systems **MAY** support populating other identifiers, but this is not a requirement of AU PS.
 
-###### Must Support - Choice of Profile Elements
+##### Must Support - Choice of Profile Elements
 
 A resource may support two elements that are used to indicate a reason, e.g. `Encounter.reasonCode` and `Encounter.reasonReference` in the profile [AU PS Encounter](StructureDefinition-au-ps-encounter.html). In such cases:
 - AU PS Producers **SHALL** correctly populate at least one element choice if the value is known.
@@ -236,7 +236,7 @@ AU PS MedicationStatement|MedicationStatement.reasonCode, MedicationStatement.re
 {:.grid}
 
 
-###### Must Support - Choice of Terminology (This needs to be worked on to account for IPS data type profiles)
+##### Must Support - Choice of Terminology (This needs to be worked on to account for IPS data type profiles)
 
 In AU PS, elements that define support for more than one value set only apply to the [Coding](http://hl7.org/fhir/R4/datatypes.html#Coding) part of the element and are not intended to prevent systems from supplying only a text value. In such cases:
 - AU PS Producers **SHALL** correctly populate the element with concepts from each supported value set where the applicable concept is known.
