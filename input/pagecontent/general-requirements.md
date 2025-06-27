@@ -1,4 +1,4 @@
-### Conforming to AU PS
+### Conforming to AU Patient Summary
 
 Systems claiming conformance to AU Patient Summary will represent digital health information using the content models of AU Patient Summary profiles AND implement the requirements for one or both [AU PS actors](actors.html).
 
