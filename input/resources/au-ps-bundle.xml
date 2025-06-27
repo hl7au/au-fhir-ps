@@ -30,16 +30,64 @@
         </constraint>
     </element>
     <element id="Bundle.identifier">
+      <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
+        <extension url="code">
+          <valueCode value="SHALL:able-to-populate"/>
+        </extension>
+        <extension url="actor">
+          <valueCanonical value="http://hl7.org.au/fhir/ps/ActorDefinition/au-ps-actor-producer"/>
+        </extension>
+      </extension>
+      <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
+        <extension url="code">
+          <valueCode value="SHALL:handle"/>
+        </extension>
+        <extension url="actor">
+          <valueCanonical value="http://hl7.org.au/fhir/ps/ActorDefinition/au-ps-actor-consumer"/>
+        </extension>
+      </extension>
       <path value="Bundle.identifier"/>
       <min value="1"/>
       <mustSupport value="true"/>
     </element>
     <element id="Bundle.type">
+      <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
+        <extension url="code">
+          <valueCode value="SHALL:able-to-populate"/>
+        </extension>
+        <extension url="actor">
+          <valueCanonical value="http://hl7.org.au/fhir/ps/ActorDefinition/au-ps-actor-producer"/>
+        </extension>
+      </extension>
+      <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
+        <extension url="code">
+          <valueCode value="SHALL:handle"/>
+        </extension>
+        <extension url="actor">
+          <valueCanonical value="http://hl7.org.au/fhir/ps/ActorDefinition/au-ps-actor-consumer"/>
+        </extension>
+      </extension>
       <path value="Bundle.type"/>
       <fixedCode value="document"/>
       <mustSupport value="true"/>
     </element>
     <element id="Bundle.timestamp">
+      <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
+        <extension url="code">
+          <valueCode value="SHALL:able-to-populate"/>
+        </extension>
+        <extension url="actor">
+          <valueCanonical value="http://hl7.org.au/fhir/ps/ActorDefinition/au-ps-actor-producer"/>
+        </extension>
+      </extension>
+      <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
+        <extension url="code">
+          <valueCode value="SHALL:handle"/>
+        </extension>
+        <extension url="actor">
+          <valueCanonical value="http://hl7.org.au/fhir/ps/ActorDefinition/au-ps-actor-consumer"/>
+        </extension>
+      </extension>
       <path value="Bundle.timestamp"/>
       <min value="1"/>
       <mustSupport value="true"/>
@@ -59,6 +107,22 @@
       <min value="2"/>
     </element>
     <element id="Bundle.entry.fullUrl">
+      <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
+        <extension url="code">
+          <valueCode value="SHALL:able-to-populate"/>
+        </extension>
+        <extension url="actor">
+          <valueCanonical value="http://hl7.org.au/fhir/ps/ActorDefinition/au-ps-actor-producer"/>
+        </extension>
+      </extension>
+      <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
+        <extension url="code">
+          <valueCode value="SHALL:handle"/>
+        </extension>
+        <extension url="actor">
+          <valueCanonical value="http://hl7.org.au/fhir/ps/ActorDefinition/au-ps-actor-consumer"/>
+        </extension>
+      </extension>
       <path value="Bundle.entry.fullUrl"/>
       <min value="1"/>
       <mustSupport value="true"/>
@@ -76,6 +140,22 @@
       <max value="0"/>
     </element>
     <element id="Bundle.entry:composition">
+      <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
+        <extension url="code">
+          <valueCode value="SHALL:able-to-populate"/>
+        </extension>
+        <extension url="actor">
+          <valueCanonical value="http://hl7.org.au/fhir/ps/ActorDefinition/au-ps-actor-producer"/>
+        </extension>
+      </extension>
+      <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
+        <extension url="code">
+          <valueCode value="SHALL:handle"/>
+        </extension>
+        <extension url="actor">
+          <valueCanonical value="http://hl7.org.au/fhir/ps/ActorDefinition/au-ps-actor-consumer"/>
+        </extension>
+      </extension>
       <path value="Bundle.entry"/>
       <sliceName value="composition"/>
       <min value="1"/>
@@ -83,6 +163,22 @@
       <mustSupport value="true"/>
     </element>
     <element id="Bundle.entry:composition.resource">
+      <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
+        <extension url="code">
+          <valueCode value="SHALL:able-to-populate"/>
+        </extension>
+        <extension url="actor">
+          <valueCanonical value="http://hl7.org.au/fhir/ps/ActorDefinition/au-ps-actor-producer"/>
+        </extension>
+      </extension>
+      <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
+        <extension url="code">
+          <valueCode value="SHALL:handle"/>
+        </extension>
+        <extension url="actor">
+          <valueCanonical value="http://hl7.org.au/fhir/ps/ActorDefinition/au-ps-actor-consumer"/>
+        </extension>
+      </extension>
       <path value="Bundle.entry.resource"/>
       <min value="1"/>
       <type>
@@ -92,6 +188,22 @@
       <mustSupport value="true"/>
     </element>
     <element id="Bundle.entry:patient">
+      <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
+        <extension url="code">
+          <valueCode value="SHALL:able-to-populate"/>
+        </extension>
+        <extension url="actor">
+          <valueCanonical value="http://hl7.org.au/fhir/ps/ActorDefinition/au-ps-actor-producer"/>
+        </extension>
+      </extension>
+      <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
+        <extension url="code">
+          <valueCode value="SHALL:handle"/>
+        </extension>
+        <extension url="actor">
+          <valueCanonical value="http://hl7.org.au/fhir/ps/ActorDefinition/au-ps-actor-consumer"/>
+        </extension>
+      </extension>
       <path value="Bundle.entry"/>
       <sliceName value="patient"/>
       <min value="1"/>
@@ -99,6 +211,22 @@
       <mustSupport value="true"/>
     </element>
     <element id="Bundle.entry:patient.resource">
+      <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
+        <extension url="code">
+          <valueCode value="SHALL:able-to-populate"/>
+        </extension>
+        <extension url="actor">
+          <valueCanonical value="http://hl7.org.au/fhir/ps/ActorDefinition/au-ps-actor-producer"/>
+        </extension>
+      </extension>
+      <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
+        <extension url="code">
+          <valueCode value="SHALL:handle"/>
+        </extension>
+        <extension url="actor">
+          <valueCanonical value="http://hl7.org.au/fhir/ps/ActorDefinition/au-ps-actor-consumer"/>
+        </extension>
+      </extension>
       <path value="Bundle.entry.resource"/>
       <min value="1"/>
       <type>
