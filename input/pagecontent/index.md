@@ -66,6 +66,7 @@ This guide is divided into several pages which are listed at the top of each pag
   - [Artefacts Summary](artifacts.html): This page lists the FHIR artefacts defined in this guide.
   - [Profiles and Extensions](profiles-and-extensions.html): This page describes the profiles and extensions that are defined in this guide to exchange data. Each profile page includes a narrative description and guidance, and formal definition. Guidance typically focuses on the profiled elements but can include guidance on un-profiled elements to aid with implementation.
   - [Terminology](terminology.html): This page lists the value sets and code systems supported in this guide.
+  - [Actor Definitions](actors.html): This page defines the AU PS actors, AU PS Consumer and AU PS Producer.
 - [Examples](examples.html): This page lists all the examples used in this guide.
 - [Support](downloads.html): These pages provide supporting material for implementation of AU Patient Summary.
   - [Downloads](downloads.html): This page provides links to downloadable artefacts.
