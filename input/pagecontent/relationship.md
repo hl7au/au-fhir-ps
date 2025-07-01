@@ -16,15 +16,14 @@ This layering of IGs balances relative adoption and implementation maturity of F
 <br/>
 
 ### Relationship to AUCDI and other IGs
-The primary intent of the [Australian Core Data for Interoperability (AUCDI)](https://sparked.csiro.au/index.php/sparked-products-resources/australian-core-data-for-interoperability/aucdi-release-1/) is to design and govern a collection of coherent, reusable building blocks known as ‘data groups’. These data groups specify “what” the clinical requirements of the clinical information that should be included for data entry, data use, and sharing of information supporting healthcare delivery. However, it does not specify “how” the data is exchanged; this is the role fulfilled by the FHIR standard. AUCDI is not required to be implemented as a whole single product. Parts can be implemented as required for specific use cases.
+The primary intent of the [AUCDI](https://sparked.csiro.au/index.php/sparked-products-resources/aucdi/) is to design and govern a collection of coherent, reusable building blocks known as data groups. These data groups specify “what” the clinical requirements of the clinical information that should be included for data entry, data use, and sharing of information supporting healthcare delivery. However, it does not specify “how” the data is exchanged; this is the role fulfilled by the FHIR standard. AUCDI is not required to be implemented as a whole single product. Parts can be
+implemented as required for specific use cases.
 
-AUCDI is focused on an agreement of “the core of the core” common data elements; minimum data required to support standardised clinical information capture at the point of care as well as enable the safe and meaningful exchange of information to other care providers. AUCDI Release 2 (R2) will identify a set of core data groups and elements considered important for a minimal patient summary.
+AUCDI R1 (published in June 2024) concentrated on identifying essential "core of the core" data elements; already present within most existing clinical systems. These data elements represented the absolute minimum data required to support standardised clinical information capture at the point of care and for safe and meaningful exchange of information to other care providers. AUCDI R2 builds upon R1, expanding on the initial "core", introducing additional data groups to support different use cases including "Patient summary".
 
-With AUCDI defining clinical data requirements, AU Core defining the minimum core digital health and administrative FHIR-based profiles, and AU Patient Summary providing detailed FHIR-based profiles for meeting patient summary requirements, an interpretation of AUCDI is necessary which is undertaken through the community.
+AU Patient Summary is a technical specification that addresses constraints and obligations on data representation for exchange. AU Patient Summary enables system data to be mapped to an agreed FHIR format, produced, and consumed by systems in Australia.
 
-Updates to AU Patient Summary depend upon community input and we encourage our audience to submit questions and feedback to AU Patient Summary specifications by clicking on the Propose a change link in the footer of every page. In addition, we encourage requesting any necessary clarifications to AUCDI through the <a href="https://sparked.csiro.au/index.php/sparked-products-resources/australian-core-data-for-interoperability/">AUCDI process</a> that helps inform future updates to AU Patient Summary.
-
-See [AUCDI](aucdi.html) for the relationship between the AUCDI data groups, elements, AU Core profiles, and AU Patient Summary profiles.
+See [AUCDI](aucdi.html) for the relationship between the "Patient summary" AUCDI data groups, elements, AU Core profiles, and AU Patient Summary profiles.
 
 The relationship of AU Patient Summary to AUCDI and other implementation guides is shown in the figure below.
 
