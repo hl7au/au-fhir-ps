@@ -4,7 +4,7 @@ AUCDI defines data groups comprising one or more data elements and references cl
 
 AU Patient Summary is a technical specification that addresses constraints and obligations on data representation for exchange. AU Patient Summary enables system data to be mapped to an agreed FHIR format, produced, and consumed by systems in Australia.
 
-AUCDI R2 builds upon R1, expanding on the initial “core”, introducing additional data groups to support different use cases including "Patient summary". 
+AUCDI R2 builds upon R1, expanding on the initial “core”, introducing additional data groups to support different use cases including "Patient summary":
 
 AUCDI Version | AU Core Version
 ---|---
