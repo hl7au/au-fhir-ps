@@ -162,12 +162,12 @@ Profile |Must Support Element|Reference
 AU PS Composition|Composition.author|AU PS Practitioner, AU PS PractitionerRole, Device, AU PS Patient, AU PS RelatedPerson, AU PS Organization
 AU PS Composition|Composition.attester.party|AU PS Patient, AU PS RelatedPerson, AU PS Practitioner, AU PS PractitionerRole, AU PS Organization
 AU PS Composition|Composition.section.entry:medicationStatementOrRequest|AU PS MedicationStatement, AU PS MedicationRequest
-DiagnosticReport (IPS)|DiagnosticReport.subject|Patient (IPS), Group
-DiagnosticReport (IPS)|DiagnosticReport.performer|Practitioner (IPS), PractitionerRole (IPS), Organization (IPS), CareTeam
-DiagnosticReport (IPS)|DiagnosticReport.result:observation-results|Observation Results - Laboratory/Pathology (IPS), Observation Results - Radiology (IPS)
+DiagnosticReport (IPS)|DiagnosticReport.subject|AU PS Patient, Group
+DiagnosticReport (IPS)|DiagnosticReport.performer|AU PS Practitioner, AU PS PractitionerRole, AU PS Organization, CareTeam
+DiagnosticReport (IPS)|DiagnosticReport.result:observation-results|AU PS Pathology Result Observation, Observation Results - Radiology (IPS)
 AU PS Encounter|Encounter.participant.individual|AU PS Practitioner, AU PS PractitionerRole, AU PS RelatedPerson
 AU PS Encounter|Encounter.reasonReference|AU PS Condition, Observation, AU PS Procedure
-Observation Results - Radiology (IPS)|Observation.performer|AU PS Practitioner, AU PS PractitionerRole, U PS Organization, CareTeam, AU PS Patient, AU PS RelatedPerson
+Observation Results - Radiology (IPS)|Observation.performer|AU PS Practitioner, AU PS PractitionerRole, AU PS Organization, CareTeam, AU PS Patient, AU PS RelatedPerson
 AU PS Patient|Patient.generalPractitioner|AU PS Organization, AU PS Practitioner, AU PS PractitionerRole
 AU PS Pathology Result Observation|Observation.performer|AU PS Practitioner, AU PS PractitionerRole, AU PS Organization, AU PS Patient, AU PS RelatedPerson
 AU PS Procedure|Procedure.reasonReference|AU PS Condition, Observation, AU PS Procedure, DocumentReference
