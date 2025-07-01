@@ -173,7 +173,7 @@ AU PS Pathology Result Observation|Observation.performer|AU PS Practitioner, AU 
 AU PS Procedure|Procedure.reasonReference|AU PS Condition, Observation, AU PS Procedure, DocumentReference
 AU PS MedicationRequest|MedicationRequest.requester|AU PS Practitioner, AU PS PractitionerRole, AU PS Organization, AU PS Patient, AU PS RelatedPerson
 AU PS MedicationRequest|MedicationRequest.reasonReference|AU PS Condition, Observation
-AU PS MedicationStatement|MedicationStatement.reasonReference|AU PS Condition, Observation, ADiagnosticReport (IPS)
+AU PS MedicationStatement|MedicationStatement.reasonReference|AU PS Condition, Observation, DiagnosticReport (IPS)
 {:.grid}
 
 
