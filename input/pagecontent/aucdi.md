@@ -1,6 +1,15 @@
-[Australian Clinical Data for Interoperability (AUCDI)](https://sparked.csiro.au/index.php/sparked-products-resources/aucdi/) is the product of a national clinician focussed requirements gathering project operating as part of the [Sparked AU FHIR Accelerator](https://sparked.csiro.au/).  The AUCDI outputs form a set of data requirements to be considered and referred to as part of the development and definition of AU Patient Summary. 
+[Australian Clinical Data for Interoperability (AUCDI)](https://sparked.csiro.au/index.php/sparked-products-resources/aucdi/) and AU Patient Summary complement each other assisting in common understanding of clinical data concepts when implemented in systems and exchanged between systems.  
 
-[AUCDI Release 2 Patient Summary component – Draft for Community Comment](https://sparked.csiro.au/index.php/sparked-products-resources/aucdi/aucdi-release-2-patient-summary-community-comment/) has been released for review. This component version of AUCDI contains only Patient Summary content to allow a focused review and support an iterative development process of AUCDI. A full AUCDI Release 2, which supersedes AUCDI Release 1, will be published in June 2025, containing all of the content from AUCDI Release 1 plus the content from this component release. 
+AUCDI defines data groups comprising one or more data elements and references clinical terminology concepts, forming the foundation of a common language to allow systems to exchange semantically accurate data more efficiently. AUCDI defines clinical requirements for the data required to support the provision of care, exchange, aggregation for analysis, and to support clinical decision support. AUCDI may define requirements that are future focussed and as yet do not align with system implementation of the clinical concept.
+
+AU Patient Summary is a technical specification that addresses constraints and obligations on data representation for exchange. AU Patient Summary enables system data to be mapped to an agreed FHIR format, produced, and consumed by systems in Australia.
+
+AUCDI R2 builds upon R1, expanding on the initial “core”, introducing additional data groups to support different use cases including "Patient summary". 
+
+AUCDI Version | AU Core Version
+---|---
+R2 (Patient summary)|1.0.0
+{:.grid}
 
   <div> 
     <img src="aucdi2ps.png" alt="AUCDI and AU Patient Summary Development Approach" style="width:55%"/>
@@ -14,9 +23,9 @@ An interpretation of AUCDI clinical information requirements through community c
 * AU Patient Summary includes exchange for clinical concepts not yet included in AUCDI, e.g. MedicationRequest, which are included through reference to IPS or AU Core
 * AU Patient Summary includes data elements not included in AUCDI that are required to make FHIR implementable e.g. Observation.status, MedicationRequest.intent, Provenance.
 
-### AUCDI mappings into AU Patient Summary
+### AUCDI (Patient summary) mappings into AU Patient Summary
 
-The table below shows the relationship between the AUCDI Data Groups and Elements included in [AUCDI Release 2 Patient Summary component – Draft for Community Comment](https://sparked.csiro.au/index.php/sparked-products-resources/australian-core-data-for-interoperability/aucdi-release-2-patient-summary-community-comment/), AU Core profiles, and AU Patient Summary profiles.<br/>
+The table below shows the relationship between data defined in the "Patient summary" AUCDI Data Groups and Elements, AU Core profiles, and AU Patient Summary profiles.<br/>
 
 Column attribute descriptions are as follows:
 - **AUCDI Data Group**: The name of the AUCDI data group.
