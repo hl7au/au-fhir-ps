@@ -44,7 +44,7 @@ It is proposed that missing data is distinct from a known absence of data for ei
 * no known x - where it is known, for example, that there are no known allergies for a patient
 * workflow - where there is a known workflow reason information for the section is not available
 
-See the proposal AU PS Conformance Proposal: <a href="https://build.fhir.org/ig/hl7au/au-fhir-ps/branches/ft_conf-proposal/general-requirements.html">Narrative conformance requirements</a> e.g. Missing Data, Empty Sections</li>.
+See the proposal AU PS Conformance Proposal: <a href="https://build.fhir.org/ig/hl7au/au-fhir-ps/branches/ft_conf-proposal/general-requirements.html">Narrative conformance requirements</a> e.g. Missing Data, Empty Sections.
 
 This proposal will be voted on in next AU PS FHIR IG Call this Friday: <a href="https://confluence.hl7.org/spaces/HAFWG/pages/358878850/2025-07-11+AU+Patient+Summary+FHIR+IG+Agenda+Minutes">2025-07-11 AU Patient Summary FHIR IG Agenda/Minutes</a>.
 </div><!-- stu-note -->
@@ -62,7 +62,7 @@ If the data element is a mandatory element (minimum cardinality is > 0), the ele
 #### Empty Sections
 
 <div class="stu-note" markdown="1">
-The proposal on empty sections is available: <a href="https://build.fhir.org/ig/hl7au/au-fhir-ps/branches/ft_conf-proposal/general-requirements.html">Narrative conformance requirements</a> e.g. Missing Data, Empty Sections</li>.
+The proposal on empty sections is available: <a href="https://build.fhir.org/ig/hl7au/au-fhir-ps/branches/ft_conf-proposal/general-requirements.html">Narrative conformance requirements</a> e.g. Missing Data, Empty Sections.
 
 This proposal will be voted on in next AU PS FHIR IG Call this Friday: <a href="https://confluence.hl7.org/spaces/HAFWG/pages/358878850/2025-07-11+AU+Patient+Summary+FHIR+IG+Agenda+Minutes">2025-07-11 AU Patient Summary FHIR IG Agenda/Minutes</a>.
 </div><!-- stu-note -->
@@ -70,7 +70,7 @@ This proposal will be voted on in next AU PS FHIR IG Call this Friday: <a href="
 ### Suppressed Data
 
 <div class="stu-note" markdown="1">
-The proposal on suppressed data is available: <a href="https://build.fhir.org/ig/hl7au/au-fhir-ps/branches/ft_conf-proposal/general-requirements.html">Narrative conformance requirements</a> e.g. Missing Data, Empty Sections</li>.
+The proposal on suppressed data is available: <a href="https://build.fhir.org/ig/hl7au/au-fhir-ps/branches/ft_conf-proposal/general-requirements.html">Narrative conformance requirements</a> e.g. Missing Data, Empty Sections.
 
 This proposal will be voted on in next AU PS FHIR IG Call this Friday: <a href="https://confluence.hl7.org/spaces/HAFWG/pages/358878850/2025-07-11+AU+Patient+Summary+FHIR+IG+Agenda+Minutes">2025-07-11 AU Patient Summary FHIR IG Agenda/Minutes</a>.
 </div><!-- stu-note -->
@@ -160,18 +160,20 @@ The table below provides a list of AU PS profile elements that allow multiple re
 Profile |Must Support Element|Reference
 ---|---|---
 AU PS Composition|Composition.author|AU PS Practitioner, AU PS PractitionerRole, Device, AU PS Patient, AU PS RelatedPerson, AU PS Organization
-AU PS Composition|Composition.author|AU PS Patient, AU PS RelatedPerson, AU PS Practitioner, AU PS PractitionerRole, AU PS Organization
+AU PS Composition|Composition.attester.party|AU PS Patient, AU PS RelatedPerson, AU PS Practitioner, AU PS PractitionerRole, AU PS Organization
 AU PS Composition|Composition.section.entry:medicationStatementOrRequest|AU PS MedicationStatement, AU PS MedicationRequest
 DiagnosticReport (IPS)|DiagnosticReport.subject|Patient (IPS), Group
 DiagnosticReport (IPS)|DiagnosticReport.performer|Practitioner (IPS), PractitionerRole (IPS), Organization (IPS), CareTeam
-AU PS Encounter|Encounter.participant.individual|AU PS Practitioner, AU PS PractitionerRole, AU PS RelatedPerson
 DiagnosticReport (IPS)|DiagnosticReport.result:observation-results|Observation Results - Laboratory/Pathology (IPS), Observation Results - Radiology (IPS)
+AU PS Encounter|Encounter.participant.individual|AU PS Practitioner, AU PS PractitionerRole, AU PS RelatedPerson
 AU PS Encounter|Encounter.reasonReference|AU PS Condition, Observation, AU PS Procedure
+Observation Results - Radiology (IPS)|Observation.performer|AU PS Practitioner, AU PS PractitionerRole, U PS Organization, CareTeam, AU PS Patient, AU PS RelatedPerson
+AU PS Patient|Patient.generalPractitioner|AU PS Organization, AU PS Practitioner, AU PS PractitionerRole
 AU PS Pathology Result Observation|Observation.performer|AU PS Practitioner, AU PS PractitionerRole, AU PS Organization, AU PS Patient, AU PS RelatedPerson
 AU PS Procedure|Procedure.reasonReference|AU PS Condition, Observation, AU PS Procedure, DocumentReference
 AU PS MedicationRequest|MedicationRequest.requester|AU PS Practitioner, AU PS PractitionerRole, AU PS Organization, AU PS Patient, AU PS RelatedPerson
 AU PS MedicationRequest|MedicationRequest.reasonReference|AU PS Condition, Observation
-AU PS MedicationStatement|MedicationStatement.reasonReference|AU PS Condition, Observation, AU Base Diagnostic Report
+AU PS MedicationStatement|MedicationStatement.reasonReference|AU PS Condition, Observation, ADiagnosticReport (IPS)
 {:.grid}
 
 
@@ -187,15 +189,18 @@ Profile |Must Support Element|Data Types
 AU PS AllergyIntolerance|AllergyIntolerance.onset[x]|dateTime, age, Period, Range
 AU PS Condition|Condition.onset[x]|dateTime, age, Period, Range
 AU PS Condition|Condition.abatement[x]|dateTime, age, Period, Range
+DiagnosticReport (IPS)|DiagnosticReport.effective[x]|dateTime, Period
 AU PS Immunization|Immunization.occurrence[x]|dateTime, string
 AU PS MedicationRequest|MedicationRequest.medication[x]|CodeableConcept, Reference
 AU PS MedicationStatement|MedicationStatement.medication[x]|CodeableConcept, Reference
-Observation Results - Radiology (IPS)|Observation.effective[x]|dateTime, Period, Timing, instant
+AU PS MedicationStatement|MedicationStatement.effective[x]|dateTime, Period
+Observation Results - Radiology (IPS)|Observation.effective[x]|dateTime, Period
 Observation Results - Radiology (IPS)|Observation.value[x]|Quantity, CodeableConcept, string, boolean, integer, Range, Ratio, SampledData, time, dateTime, Period
 AU PS Pathology Result Observation|Observation.effective[x]|dateTime, Period,
 AU PS Pathology Result Observation|Observation.value[x]|Quantity, CodeableConcept, string, boolean, integer, Range, Ratio, SampledData, time, dateTime, Period
 AU PS Pathology Result Observation|Observation.component.value[x]|Quantity, CodeableConcept, string, boolean, integer, Range, Ratio, SampledData, time, dateTime, Period
 AU PS Procedure|Procedure.performed[x]|dateTime, Period, string, Age, Range
+DeviceUseStatement (IPS)|DeviceUseStatement.timing[x]|Period, dateTime
 {:.grid}
 
 ##### Must Support - Choice of Identifiers
