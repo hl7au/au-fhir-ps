@@ -228,6 +228,3 @@ Systems implementing AU Patient Summary **MAY** implement interactions defined o
         </tr>
     </tbody>
 </table>
-
-##### Missing and Suppressed Data
-AU PS compliant resources are compliant with IPA requirements for Missing Data. IPA does not include requirements for Suppressed Data.
