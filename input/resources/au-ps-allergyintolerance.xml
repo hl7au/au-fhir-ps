@@ -261,9 +261,6 @@
             <valueCanonical value="http://hl7.org.au/fhir/ps/ActorDefinition/au-ps-actor-consumer"/>
           </extension>
         </extension>
-        <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-type-must-support">
-					<valueBoolean value="true" />
-				</extension>
         <code value="dateTime"/>
       </type>
       <type>
