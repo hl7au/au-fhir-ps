@@ -1,3 +1,5 @@
+{::options toc_levels="1..4"/}
+
 ### Profiling Approach
 AU PS profiles will by design:
 * ensure resource compliance with AU Core and IPS
