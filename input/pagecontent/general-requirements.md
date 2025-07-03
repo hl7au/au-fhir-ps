@@ -171,13 +171,13 @@ DiagnosticReport (IPS)|DiagnosticReport.performer|AU PS Practitioner, AU PS Prac
 DiagnosticReport (IPS)|DiagnosticReport.result:observation-results|AU PS Pathology Result Observation, Observation Results - Radiology (IPS)
 AU PS Encounter|Encounter.participant.individual|AU PS Practitioner, AU PS PractitionerRole, AU PS RelatedPerson
 AU PS Encounter|Encounter.reasonReference|AU PS Condition, Observation, AU PS Procedure
+AU PS MedicationRequest|MedicationRequest.requester|AU PS Practitioner, AU PS PractitionerRole, AU PS Organization, AU PS Patient, AU PS RelatedPerson
+AU PS MedicationRequest|MedicationRequest.reasonReference|AU PS Condition, Observation
+AU PS MedicationStatement|MedicationStatement.reasonReference|AU PS Condition, Observation, DiagnosticReport (IPS)
 Observation Results - Radiology (IPS)|Observation.performer|AU PS Practitioner, AU PS PractitionerRole, AU PS Organization, CareTeam, AU PS Patient, AU PS RelatedPerson
 AU PS Patient|Patient.generalPractitioner|AU PS Organization, AU PS Practitioner, AU PS PractitionerRole
 AU PS Pathology Result Observation|Observation.performer|AU PS Practitioner, AU PS PractitionerRole, AU PS Organization, AU PS Patient, AU PS RelatedPerson
 AU PS Procedure|Procedure.reasonReference|AU PS Condition, Observation, AU PS Procedure, DocumentReference
-AU PS MedicationRequest|MedicationRequest.requester|AU PS Practitioner, AU PS PractitionerRole, AU PS Organization, AU PS Patient, AU PS RelatedPerson
-AU PS MedicationRequest|MedicationRequest.reasonReference|AU PS Condition, Observation
-AU PS MedicationStatement|MedicationStatement.reasonReference|AU PS Condition, Observation, DiagnosticReport (IPS)
 {:.grid}
 
 
@@ -218,15 +218,15 @@ AU PS AllergyIntolerance|AllergyIntolerance.onsetDateTime
 AU PS Condition|Condition.onsetDateTime
 DiagnosticReport (IPS)|DiagnosticReport.effectiveDateTime
 AU PS Immunization|Immunization.occurrenceDateTime
-AU PS Observation Results - Radiology (IPS)|Observation.effectiveDateTime
 AU PS MedicationStatement|MedicationStatement.effectiveDateTime
+AU PS Observation Results - Radiology (IPS)|Observation.effectiveDateTime
 AU PS Pathology Result Observation|Observation.effectiveDateTime
 AU PS Procedure|Procedure.performedDateTime
 {:.grid}
 
 ##### Must Support - Choice of Identifiers
 A profile may support one or more than one identifier type and will include the supported identifiers in a profile by slicing the element and placing *Must Support* on each identifier slice. In such cases:
-- AU PS Producers **SHALL** correctly populate the element with identifiers from any supported identifier type where the identifier is known.
+- AU PS Producers **SHALL** correctly populate the element with identifiers from at least one supported identifier type where the identifier is known.
 - AU PS Consumers **SHALL** consume resources if the element is present and containing any identifier type allowed by the element definition, and **SHOULD** display the value of each populated identifier when presenting the data from the resource to a human user.
 
 The table below provides a list of AU PS profile elements that allow multiple identifier types.
@@ -240,7 +240,7 @@ AU PS PractitionerRole|PractitionerRole.identifier|Medicare Provider Number
 {:.grid}
 
 For example, the profile [AU PS Patient](StructureDefinition-au-ps-patient.html) requires support for the following choices `Patient.identifier` defined in [AU Base Patient](https://build.fhir.org/ig/hl7au/au-fhir-base/StructureDefinition-au-patient.html) to support Individual Healthcare Identifier (IHI), Medicare Card Number, Department of Veterans' Affairs (DVA) Number. When claiming conformance to the AU PS Patient Profile:
-- AU PS Producers **SHALL** correctly populate `Patient.identifier` with an IHI, or Medicare Care Number, or DVA Number, or any combination of them.
+- AU PS Producers **SHALL** correctly populate `Patient.identifier` with an IHI, or Medicare Care Number, or DVA Number, or any combination of them where the identifier is known.
 - AU PS Consumers **SHALL** consume Patient resource if `Patient.identifier` is present containing any valid value. A valid value may be an IHI, Medicare Care Number, or DVA Number identifier, or may be some other allowed identifier. The AU PS Consumer **SHOULD** display the value of each populated identifier type (IHI, Medicare Number, DVA Number, or some other identifier) when presenting the data from the resource to a human user.
 
 Systems **MAY** support populating other identifiers, but this is not a requirement of AU PS.
@@ -256,9 +256,9 @@ The table below lists the applicable profiles and elements in AU PS.
 Profile |Must Support Choice Elements
 ---|---
 AU PS Encounter|Encounter.reasonCode, Encounter.reasonReference
-AU PS Procedure|Procedure.reasonCode, Procedure.reasonReference
 AU PS MedicationRequest|MedicationRequest.reasonCode, MedicationRequest.reasonReference
 AU PS MedicationStatement|MedicationStatement.reasonCode, MedicationStatement.reasonReference
+AU PS Procedure|Procedure.reasonCode, Procedure.reasonReference
 {:.grid}
 
 
@@ -272,7 +272,7 @@ The table below lists the applicable profiles and elements in AU PS that support
 
 Profile |Must Support Sub-Element|Terminology Choices
 ---|---
-AU PS Immunization|Immunization.code.coding|[Australian Medicines Terminology Vaccine](https://healthterminologies.gov.au/fhir/ValueSet/amt-vaccine-1), [Australian Immunisation Register Vaccine](https://healthterminologies.gov.au/fhir/ValueSet/australian-immunisation-register-vaccine-1)
+AU PS Immunization|Immunization.vaccineCode.coding|[Australian Medicines Terminology Vaccine](https://healthterminologies.gov.au/fhir/ValueSet/amt-vaccine-1), [Australian Immunisation Register Vaccine](https://healthterminologies.gov.au/fhir/ValueSet/australian-immunisation-register-vaccine-1)
 AU PS Medication|Medication.code.coding|[Australian Medication](https://healthterminologies.gov.au/fhir/ValueSet/australian-medication-1), [PBS Item Codes](https://build.fhir.org/ig/hl7au/au-fhir-base//ValueSet-pbs-item.html)
 AU PS MedicationRequest|MedicationRequest.code.coding|[Australian Medication](https://healthterminologies.gov.au/fhir/ValueSet/australian-medication-1), [PBS Item Codes](https://build.fhir.org/ig/hl7au/au-fhir-base//ValueSet-pbs-item.html)
 AU PS MedicationStatement|MedicationStatement.code.coding|[Australian Medication](https://healthterminologies.gov.au/fhir/ValueSet/australian-medication-1), [PBS Item Codes](https://build.fhir.org/ig/hl7au/au-fhir-base//ValueSet-pbs-item.html)
