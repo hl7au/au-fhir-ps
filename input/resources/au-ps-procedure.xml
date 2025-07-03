@@ -195,6 +195,56 @@
         </extension>
       </extension>
       <path value="Procedure.performed[x]"/>
+      <type>
+        <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
+          <extension url="code">
+            <valueCode value="SHALL:populate-if-known"/>
+          </extension>
+          <extension url="actor">
+            <valueCanonical value="http://hl7.org.au/fhir/ps/ActorDefinition/au-ps-actor-producer"/>
+          </extension>
+        </extension>
+        <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
+          <extension url="code">
+            <valueCode value="SHOULD:able-to-populate"/>
+          </extension>
+          <extension url="actor">
+            <valueCanonical value="http://hl7.org.au/fhir/ps/ActorDefinition/au-ps-actor-producer"/>
+          </extension>
+        </extension>
+        <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
+          <extension url="code">
+            <valueCode value="SHALL:handle"/>
+          </extension>
+          <extension url="actor">
+            <valueCanonical value="http://hl7.org.au/fhir/ps/ActorDefinition/au-ps-actor-consumer"/>
+          </extension>
+        </extension>
+        <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
+          <extension url="code">
+            <valueCode value="SHOULD:display"/>
+          </extension>
+          <extension url="actor">
+            <valueCanonical value="http://hl7.org.au/fhir/ps/ActorDefinition/au-ps-actor-consumer"/>
+          </extension>
+        </extension>
+        <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-type-must-support">
+          <valueBoolean value="true"/>
+        </extension>
+        <code value="dateTime"/>
+      </type>
+      <type>
+        <code value="Period"/>
+      </type>
+      <type>
+        <code value="string"/>
+      </type>
+      <type>
+        <code value="Age"/>
+      </type>
+      <type>
+        <code value="Range"/>
+      </type>
       <min value="1"/>
     </element>
     <element id="Procedure.performer.actor">
