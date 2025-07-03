@@ -10,7 +10,7 @@ Implementers are advised to be familiar with the requirements of the FHIR standa
 - [IPS Generation and Data Inclusion](https://build.fhir.org/ig/HL7/fhir-ips/Generation-and-Data-Inclusion.html#generation-and-data-inclusion)
 - [IPS Narrative and Language Translation](https://build.fhir.org/ig/HL7/fhir-ips/Design-Conventions.html#narrative-and-language-translation)
 - [FHIR Terminology requirements](http://hl7.org/fhir/R4/terminologies.html)
-- [FHIR Documents](https://hl7.org/fhir/R4/documents.html) 
+- [FHIR Documents](https://hl7.org/fhir/R4/documents.html) and [FHIR Clinical Documents](https://hl7.org/fhir/uv/fhir-clinical-document/)
 - [FHIR RESTful API](http://hl7.org/fhir/R4/http.html) 
 - [FHIR Search](http://hl7.org/fhir/R4/search.html)
 - [FHIR Resource formats](http://hl7.org/fhir/R4/resource.html)
