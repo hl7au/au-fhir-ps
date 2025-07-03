@@ -193,6 +193,7 @@ Profile |Must Support Element|Data Types
 AU PS AllergyIntolerance|AllergyIntolerance.onset[x]|dateTime, age, Period, Range
 AU PS Condition|Condition.onset[x]|dateTime, age, Period, Range
 AU PS Condition|Condition.abatement[x]|dateTime, age, Period, Range
+DeviceUseStatement (IPS)|DeviceUseStatement.timing[x]|Period, dateTime
 DiagnosticReport (IPS)|DiagnosticReport.effective[x]|dateTime, Period
 AU PS Immunization|Immunization.occurrence[x]|dateTime, string
 AU PS MedicationRequest|MedicationRequest.medication[x]|CodeableConcept, Reference
@@ -216,6 +217,7 @@ Profile |Must Support Data Type
 ---|---
 AU PS AllergyIntolerance|AllergyIntolerance.onsetDateTime
 AU PS Condition|Condition.onsetDateTime
+DeviceUseStatement (IPS)|DeviceUseStatement.timingDateTime
 DiagnosticReport (IPS)|DiagnosticReport.effectiveDateTime
 AU PS Immunization|Immunization.occurrenceDateTime
 AU PS MedicationStatement|MedicationStatement.effectiveDateTime
