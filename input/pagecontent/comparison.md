@@ -146,7 +146,7 @@ The table below provides a profile only comparison from AU PS to profiles in key
     </tbody>
 </table>
 
-#### International Patient Access
+#### IPA profile additional requirements
 [IPA 1.1.0](https://hl7.org/fhir/uv/ipa/STU1.1/) describes how an application acting on behalf of a patient can access patient information from a clinical records system using a FHIR-based API.
 
 ##### Additional requirements
