@@ -37,26 +37,35 @@ The convention in this guide is to mark all mandatory and conditionally mandator
 
 There are situations when information is missing, this could be at the section level where a source system does not have information on a patient's medical devices, or may be at an element level within a resource. 
 
-Where data is missing for an element within a resource and the reason is not known, systems **SHALL** implement the requirements of the [Missing Data](general-requirements.html#missing-data) section.
-
 Where data is missing at the section level and the reason is not known, systems **SHALL** implement the requirements of the [Empty Sections](general-requirements.html#empty-sections) section.
+
+Where data is missing for an element within a resource and the reason is not known, systems **SHALL** implement the requirements of the [Missing Data](general-requirements.html#missing-data) section.`Composition.section`, is treated as _Empty Section_ not _Missing Data_.
 
 Missing data is distinct from a known absence of data for either:
 * no known x - where it is known, for example, that there are no known allergies for a patient
 * workflow - where there is a known workflow reason information for the section is not available
 
 #### Assertion statement of known absence of data
-Where the source system can assert a known absence of data (No known X), the system **SHOULD** populate `Composition.section.entry` in accordance with the relevant profile specific implementation guidance for no known x. 
 
-In AU PS this approach is preferred to using `Composition.section.emptyReason` due to the widely known and implemented patterns established within FHIR, and in AU Core, to assert known absence of clinical data.
+Where the source system can assert a known absence of data (No known X), the system **SHOULD** populate `Composition.section.entry` in accordance with the relevant profile specific implementation guidance for no known x. 
 
 For example, to represent that a patient does not have an allergy or category of allergies, an appropriate negation code (e.g. 716186003 \|No known allergy\| or 1003774007 \|No known Hevea brasiliensis latex allergy\|) is used in `AllergyIntolerance.code`.
 
+In AU PS this approach is preferred to using `Composition.section.emptyReason` due to the widely known and implemented patterns established within FHIR, and in AU Core, to assert known absence of clinical data.
+
+There is no differentiation in guidance between mandatory and optional sections.
+
 #### Known absence of data due to workflow
+
 Where the source system does not have information for a particular section and there is a known workflow reason, the system **SHALL** represent that reason by populating `Composition.section.emptyReason`:
 * Prefer not to answer may be represented by sending the [Data Absent Reason](http://terminology.hl7.org/CodeSystem/data-absent-reason) code "asked-declined"
 * Asked but not known may be represented by sending the [Data Absent Reason](http://terminology.hl7.org/CodeSystem/data-absent-reason) code "asked-unknown"
 * Where the workflow does not support obtaining the information, it may be represented by sending the [List Empty Reason](https://hl7.org/fhir/R4/codesystem-list-empty-reason.html) code "notasked"
+
+There is no differentiation in guidance between mandatory and optional sections noting that: 
+* mandatory sections **SHALL** be populated in the Composition
+* recommended sections **SHOULD** be populated in the Composition 
+* optional sections **MAY** be populated in the Composition
 
 #### Missing Data
 
@@ -112,9 +121,44 @@ For a mandatory section (minimum cardinality is > 0), the section **SHALL** be p
 
 ### Suppressed Data
 In some circumstances, specific pieces of data, are hidden due to security or privacy reasons:
-* if an optional section, resource, or element (minimum cardinality = 0) is not able to be shared, it **SHALL** be omitted.
+* if an optional section (minimum cardinality = 0) is not able to be shared it **MAY** be omitted but if provided use the code `unavailable` or `withheld` from the [List Empty Reason](https://hl7.org/fhir/R4/codesystem-list-empty-reason.html) in `Composition.section.emptyReason`.
 * if a mandatory section (minimum cardinality > 0) is not able to be shared use the code `unavailable` or `withheld` from the [List Empty Reason](https://hl7.org/fhir/R4/codesystem-list-empty-reason.html) in `Composition.section.emptyReason`.
-* if a mandatory individual resource or element (minimum cardinality > 0) is not able to be shared use the code `unknown` or `masked` from the [DataAbsentReason Code System](http://terminology.hl7.org/CodeSystem/data-absent-reason) following the section on [Missing Data](#missing-data).
+* if an optional element (minimum cardinality = 0) is not able to be shared, it **SHALL** be omitted.
+* if a mandatory element (minimum cardinality > 0) is not able to be shared use the code `unknown` or `masked` from the [DataAbsentReason Code System](http://terminology.hl7.org/CodeSystem/data-absent-reason) following the section on [Missing Data](#missing-data).
+
+Example: AU Patient Summary - Allergies and Intolerances Section where the patient's allergy information is not to be allowed shared.
+
+    ~~~
+        ...
+        "section" : [
+            {
+                "title" : "Allergies and Intolerances",
+                "code" : {
+                "coding" : [
+                    {
+                    "system" : "http://loinc.org",
+                    "code" : "48765-2",
+                    "display" : "Allergies and adverse reactions Document"
+                    }
+                ]
+                },
+                "text" : {
+                "status" : "generated",
+                "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\" xml:lang=\"en-AU\" lang=\"en-AU\">This information is withheld.</div>"
+                },
+                "emptyReason" : {
+                "coding" : [
+                    {
+                    "system" : "http://terminology.hl7.org/CodeSystem/list-empty-reason",
+                    "code" : "withheld",
+                    "display" : "Withheld"
+                    }
+                ],
+                "text" : "Withheld"
+                }
+            },
+        ...
+    ~~~
 
 ### Must Support and Obligation
 
