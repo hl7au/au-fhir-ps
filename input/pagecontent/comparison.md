@@ -5,7 +5,7 @@ AU Patient Summary (AU PS) complies with, and/or leverages, national and interna
 - [International Patient Summary Implementation Guide 2.0.0](https://build.fhir.org/ig/HL7/fhir-ips/)
 - [AU Core Implementation Guide 2.0.0](https://build.fhir.org/ig/hl7au/au-fhir-core/)
 
-Relationships between AU PS, AU Core, AUCDI, and the above key implementation guides is described in [Relationship with other IGs](relationship.html). 
+Relationships between AU PS, AU Core, AUCDI, and the above key implementation guides are described in [Relationship with other IGs](relationship.html). 
 
 International Patient Access (IPA) and International Patient Summary (IPS) are specifically referenced, as these are the international specifications intended for use in patient summary use cases.
 
@@ -155,10 +155,10 @@ The following IPA profile(s) contain additional requirements. Implementers are a
 <table border="1" style="width: 100%; margin: auto; border-collapse: collapse;">
     <thead>
         <tr>
-            <th style="width: 25%;">AU PS</th>
-            <th style="width: 25%;">IPA 1.1.0</th>
+            <th style="width: 25%;">AU PS Profile</th>
+            <th style="width: 25%;">IPA 1.1.0 Profile</th>
             <th style="width: 25%;">Element</th>
-            <th style="width: 25%;">Additional requirements</th>
+            <th style="width: 25%;">IPA Profile Additional requirements</th>
         </tr>
     </thead>
     <tbody>
