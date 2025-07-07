@@ -132,6 +132,8 @@ Obligations vary significantly for elements in the AU PS Composition profile, in
 - For all recommended sections AU PS Producers **SHOULD** correctly populate the section if a value is known. 
 - For all optional or undefined sections AU PS Producers **MAY** correctly populate the section if a value is known. 
 
+See [Structure of the Australian Patient Summary (AU PS)](file:///C:/work/git/au-fhir-ps/output/general-guidance.html#structure-of-the-australian-patient-summary-au-ps) for information on the mandatory, recommended, and optional sections.
+
 ##### Must Support - Primitive Elements
 Primitive elements are single elements with a primitive value. If a primitive element is labelled as *Must Support*: 
 - AU PS Producers **SHALL** correctly populate the element if a value is known. 

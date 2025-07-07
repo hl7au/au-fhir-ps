@@ -1,37 +1,40 @@
-[Australian Clinical Data for Interoperability (AUCDI)](https://sparked.csiro.au/index.php/sparked-products-resources/aucdi/) and AU Patient Summary complement each other assisting in common understanding of clinical data concepts when implemented in systems and exchanged between systems.  
+[Australian Clinical Data for Interoperability (AUCDI)](https://sparked.csiro.au/index.php/sparked-products-resources/aucdi/) and AU Patient Summary (AU PS) complement each other assisting in common understanding of clinical data concepts when implemented in systems and exchanged between systems.  
 
 AUCDI defines data groups comprising one or more data elements and references clinical terminology concepts, forming the foundation of a common language to allow systems to exchange semantically accurate data more efficiently. AUCDI defines clinical requirements for the data required to support the provision of care, exchange, aggregation for analysis, and to support clinical decision support. AUCDI may define requirements that are future focussed and as yet do not align with system implementation of the clinical concept.
 
-AU Patient Summary is a technical specification that addresses constraints and obligations on data representation for exchange. AU Patient Summary enables system data to be mapped to an agreed FHIR format, produced, and consumed by systems in Australia.
-
-AUCDI R2 builds upon R1, expanding on the initial “core”, introducing additional data groups to support different use cases including "Patient summary":
-
-AUCDI Version | AU Core Version
----|---
-R2 (Patient summary)|1.0.0
-{:.grid}
+AU PS is a technical specification that addresses constraints and obligations on data representation for exchange. AU PS enables system data to be mapped to an agreed FHIR format, produced, and consumed by systems in Australia.
 
   <div> 
     <img src="aucdi2ps.png" alt="AUCDI and AU Patient Summary Development Approach" style="width:55%"/>
   </div>
-*Figure 1: AUCDI and AU Patient Summary Development Approach*
+*Figure 1: AUCDI and AU PS Development Approach*
 <br/><br/>
 
 An interpretation of AUCDI clinical information requirements through community consensus is undertaken to define support for the exchange of clinical and administrative data within technical constraints. Note that:
-* In any particular release, AU Core or AU Patient Summary may not cover all AUCDI data concepts, especially when AUCDI data concepts are not supported in existing systems.
-* AU Patient Summary includes exchange for concepts that are commonly implemented in systems and not included in AUCDI e.g. Patient.name, Practitioner.identifier, Procedure.encounter. 
-* AU Patient Summary includes exchange for clinical concepts not yet included in AUCDI, e.g. MedicationRequest, which are included through reference to IPS or AU Core
-* AU Patient Summary includes data elements not included in AUCDI that are required to make FHIR implementable e.g. Observation.status, MedicationRequest.intent, Provenance.
+* In any particular release, AU Core or AU PS may not cover all AUCDI data concepts, especially when AUCDI data concepts are not supported in existing systems.
+* AU PS includes exchange for concepts that are commonly implemented in systems and not included in AUCDI e.g. Patient.name, Practitioner.identifier, Procedure.encounter. 
+* AU PS includes exchange for clinical concepts not yet included in AUCDI, e.g. MedicationRequest, which are included through reference to IPS or AU Core
+* AU PS includes data elements not included in AUCDI that are required to make FHIR implementable e.g. Observation.status, MedicationRequest.intent, Provenance.
 
-### AUCDI (Patient summary) mappings into AU Patient Summary
+### AUCDI and AU PS versions
 
-The table below shows the relationship between data defined in the "Patient summary" AUCDI Data Groups and Elements, AU Core profiles, and AU Patient Summary profiles.<br/>
+AUCDI R2 builds upon R1, expanding on the initial “core”, introducing additional data groups to support different use cases including "Patient summary":
+
+AUCDI Version | AU PS Version
+---|---
+R1| -
+R2 (Patient summary)|1.0.0
+{:.grid}
+
+### AUCDI (Patient summary) mappings into AU PS
+
+The table below shows the relationship between data defined in the "Patient summary" AUCDI Data Groups and Elements, AU Core profiles, and AU PS profiles.<br/>
 
 Column attribute descriptions are as follows:
 - **AUCDI Data Group**: The name of the AUCDI data group.
 - **AUCDI Data Element**: The name of the AUCDI data element within an AUCDI data group.
 - **AU Core Profile(s)**: The title of the AU Core profile relevant for exchange.
-- **AU Patient Summary Profile(s)**: The title of the AU Patient Summary profile relevant for exchange.
+- **AU PS Profile(s)**: The title of the AU PS profile relevant for exchange.
 - **FHIR Path**: The [FHIRPath expression](https://build.fhir.org/ig/HL7/FHIRPath/) to the FHIR element relevant for exchange, i.e. the FHIR element that can be populated with data from a source system that represents the clinical concept expressed in the AUCDI data element. 
 - **Comment**: Additional information about the mapping including an explanation of where an element or group is not yet mapped.
 
@@ -41,7 +44,7 @@ Column attribute descriptions are as follows:
     <th>AUCDI Data Group</th>
     <th colspan="2">AUCDI Data Element</th>
     <th>AU Core Profile(s)</th>
-    <th>AU Patient Summary Profile(s)</th>
+    <th>AU PS Profile(s)</th>
     <th>FHIR Path</th>
     <th>Comment</th>
   </tr>
