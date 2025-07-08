@@ -17,13 +17,13 @@ In the AU PS document:
 * Optional sections are Advance Directives, Functional Status, History of Pregnancy, Plan of Care, Alerts, History of Past Problems, Patient Story, Social History, and Vital Signs
 * Undefined sections are "additional" sections not defined by the AU PS Composition
 
-See the description of each section in IPS [Sections description](https://build.fhir.org/ig/HL7/fhir-ips/Structure-of-the-International-Patient-Summary.html#sections-description).
+See the description of each defined section in IPS [Sections description](https://build.fhir.org/ig/HL7/fhir-ips/Structure-of-the-International-Patient-Summary.html#sections-description).
 
 ### Profiling Approach
 AU PS profiles will by design:
 * ensure resource compliance with AU Core and IPS
 * support additional requirements agreed as necessary to support patient summaries in an Australian healthcare context
-* support varied stakeholder needs and use of AU Patient Summary artefacts e.g. government policy, implementers, tooling developers, testers, IG authors/maintainers etc.
+* support varied stakeholder needs and use of AU PS artefacts e.g. government policy, implementers, tooling developers, testers, IG authors/maintainers etc.
 
 AU PS profiles:
 * are based on the AU Core profile (where it exists) 
@@ -34,13 +34,13 @@ AU PS profiles:
 The differential view therefore shows the patient summary requirements that are additional to AU Core. In some profiles, e.g. [AU PS Organization](StructureDefinition-au-ps-organization.html), there are no requirements additional to AU Core.
 
 <div> 
-    <img src="aupspatient-profilingapproach.png" alt="AU Patient Summary Patient current profiling approach" style="width:40%"/>
+    <img src="aupspatient-profilingapproach.png" alt="AU PS Patient current profiling approach" style="width:40%"/>
   </div>
 *Figure 1: Profiling approach for AU PS Patient profile*
 <br/><br/>
 
 <div class="stu-note" markdown="1">
-AU PS is undertaking a series of profile walkthroughs with the community, and to support that activity some profiles do not yet have this approach applied. Instead rules from AU Core and IPS are applied via human authoring. This is to support the human-centric design discussions early in the AU Patient Summary project. Post the walkthrough of each profile, it is converted to the target approach, and any additional local requirements identified during that walkthrough are applied.
+AU PS is undertaking a series of profile walkthroughs with the community, and to support that activity some profiles do not yet have this approach applied. Instead rules from AU Core and IPS are applied via human authoring. This is to support the human-centric design discussions early in the AU PS project. Post the walkthrough of each profile, it is converted to the target approach, and any additional local requirements identified during that walkthrough are applied.
 </div><!-- stu-note -->
 
 #### AU PS Profile Design Principles
@@ -65,13 +65,13 @@ Adopting the approach in both IPS and AU Core, AU PS profiles are 'open' and all
 
 #### Profiling Options
 
-When managing profile complexity and requirements in the [national and international context for AU Patient Summary](relationship.html#relationship-to-aucdi-and-other-igs), the following mechanisms are available:
+When managing profile complexity and requirements in the [national and international context for AU PS](relationship.html#relationship-to-aucdi-and-other-igs), the following mechanisms are available:
 1. [Derived from Profiles (derive)](https://build.fhir.org/structuredefinition-definitions.html#StructureDefinition.baseDefinition)
 1. Informal alignment (humans authoring rules in a profile)
 1. [Complies With Profile (compliesWith)](https://hl7.org/fhir/extensions/StructureDefinition-structuredefinition-compliesWithProfile.html)
 1. [Dependent Profiles (imposeProfile)](https://hl7.org/fhir/extensions/StructureDefinition-structuredefinition-imposeProfile.html)
 
-These mechanisms offer differing capabilities and advantages. Typically HL7 AU profiles have used derivation to manage compliance within HL7 AU inheritance. However, AU Patient Summary will comply to both HL7 AU (AU Core) and IPS and therefore additional mechanism(s) on top of derivation from the base HL7 AU profile are required. At this time additional requirements are included in profiles via informal alignment.
+These mechanisms offer differing capabilities and advantages. Typically HL7 AU profiles have used derivation to manage compliance within HL7 AU inheritance. However, AU PS will comply to both HL7 AU (AU Core) and IPS and therefore additional mechanism(s) on top of derivation from the base HL7 AU profile are required. At this time additional requirements are included in profiles via informal alignment.
 
 <div class="stu-note" markdown="1">
 For a human, the main differences with use of imposeProfile are:
@@ -79,7 +79,7 @@ For a human, the main differences with use of imposeProfile are:
 - does not visually show human reader of the source profile any rules from the target profile, i.e. a human reader must view and understand both profiles to understand the rules
 - where two or more profiles offer optional alternatives (e.g. differing preferred bindings or data type choices) does not in the profile preference one over another
 
-Currently no AU Patient Summary profile uses imposeProfile. To support future maintenance it is under consideration that all AU Patient Summary profiles derive from AU Core, where available, and use imposeProfile to apply IPS rules. That would mean that a number of IPS-imposed requirements including cardinality, terminology, and flagging of <i>Must Support</i> would not be directly visible in the formal views within this guide. Or, if we chose to make the additional IPS constraints visible + use imposeProfile, those constraints would be repeated from a validation sense and be an additional validation burden.
+Currently no AU PS profile uses imposeProfile. To support future maintenance it is under consideration that all AU PS profiles derive from AU Core, where available, and use imposeProfile to apply IPS rules. That would mean that a number of IPS-imposed requirements including cardinality, terminology, and flagging of <i>Must Support</i> would not be directly visible in the formal views within this guide. Or, if we chose to make the additional IPS constraints visible + use imposeProfile, those constraints would be repeated from a validation sense and be an additional validation burden.
 
 Users of this implementation guide are encouraged to provide their feedback about the potential use of imposeProfile.
 </div><!-- stu-note -->
