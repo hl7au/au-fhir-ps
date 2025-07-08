@@ -179,7 +179,7 @@ Column attribute descriptions are as follows:
     <td></td>
   </tr>
   <tr>
-    <td rowspan="4">Vaccination administered event</td>
+    <td rowspan="4">Vaccination</td>
     <td colspan="2">Vaccine name</td>
     <td><a href="https://build.fhir.org/ig/hl7au/au-fhir-core/StructureDefinition-au-core-immunization.html">AU Core Immunization</a></td>
     <td><a href="StructureDefinition-au-ps-immunization.html">AU PS Immunization</a></td>
@@ -293,6 +293,38 @@ Column attribute descriptions are as follows:
     <td>This AUCDI element is a Future Candidate Requirement Under Consideration. Future versions of AU Core will develop and test approaches to addressing Last Updated.</td>
   </tr>
   <tr>
+    <td rowspan="5">Estimated date of delivery summary</td>
+    <td colspan="2">EDD by menstrual cycle</td>
+    <td>TBD</td>
+    <td>TBD</td>
+    <td>TBD</td>
+    <td rowspan="5">This data group is added to AUCDI R2 and does not yet have an agreed mapping to AU Core. Outcomes from the scoping workshops for AU Core R2 and Patient Summary R1 indicate that this data group will be deferred to a later release.</td>
+  </tr>
+  <tr>
+    <td colspan="2">Date of ultrasound</td>
+    <td>TBD</td>
+    <td>TBD</td>
+    <td>TBD</td>
+  </tr>
+  <tr>
+    <td colspan="2">Gestation by ultrasound</td>
+    <td>TBD</td>
+    <td>TBD</td>
+    <td>TBD</td>
+  </tr>
+  <tr>
+    <td colspan="2">EDD by ultrasound</td>
+    <td>TBD</td>
+    <td>TBD</td>
+    <td>TBD</td>
+  </tr>
+  <tr>
+    <td colspan="2">Last update</td>
+    <td>TBD</td>
+    <td>TBD</td>
+    <td>TBD</td>
+  </tr>
+  <tr>
     <td rowspan="3">Last menstrual period assertion</td>
     <td colspan="2">Date of onset</td>
     <td>TBD</td>
@@ -328,26 +360,6 @@ Column attribute descriptions are as follows:
   </tr>
   <tr>
     <td colspan="2">Date of assertion</td>
-    <td>TBD</td>
-    <td>TBD</td>
-    <td>TBD</td>
-  </tr>
-  <tr>
-    <td rowspan="3">Estimated date of delivery summary</td>
-    <td colspan="2">EDD by cycle</td>
-    <td>TBD</td>
-    <td>TBD</td>
-    <td>TBD</td>
-    <td rowspan="3">This data group is added to AUCDI R2 and does not yet have an agreed mapping to AU Core. Outcomes from the scoping workshops for AU Core R2 and Patient Summary R1 indicate that this data group will be deferred to a later release.</td>
-  </tr>
-  <tr>
-    <td colspan="2">EDD by ultrasound</td>
-    <td>TBD</td>
-    <td>TBD</td>
-    <td>TBD</td>
-  </tr>
-  <tr>
-    <td colspan="2">Last update</td>
     <td>TBD</td>
     <td>TBD</td>
     <td>TBD</td>
