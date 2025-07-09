@@ -56,13 +56,13 @@ Column attribute descriptions are as follows:
     <td rowspan="6">Allergies and Intolerances</td>
     <td><a href="StructureDefinition-au-ps-allergyintolerance.html">AU PS AllergyIntolerance</a></td>
     <td>AllergyIntolerance.code</td>
-    </td>
+    <td></td>
   </tr>
   <tr>
     <td colspan="2">Date/time of onset of first reaction</td>
     <td><a href="StructureDefinition-au-ps-allergyintolerance.html">AU PS AllergyIntolerance</a></td>
     <td>TBD</td>
-    <td>This data element is added to AUCDI R2; work is underway to map to AU Core.</td>
+    <td>Work is underway to map to AU PS. Feedback is requested on the potential mapping options for this AUCDI element: TBD.</td>
   </tr>
   <tr>
     <td colspan="2">Manifestation</td>
@@ -74,7 +74,7 @@ Column attribute descriptions are as follows:
     <td colspan="2">Severity of reaction</td>
     <td><a href="StructureDefinition-au-ps-allergyintolerance.html">AU PS AllergyIntolerance</a></td>
     <td>TBD</td>
-    <td>This data element is added to AUCDI R2; work is underway to map to AU Core.</td>
+    <td>Work is underway to map to AU PS. Feedback is requested on the proposed mapping: TBD</td>
   </tr>
   <tr>
     <td colspan="2">Comment</td>
@@ -106,13 +106,13 @@ Column attribute descriptions are as follows:
     <td colspan="2">Date/time of onset</td>
     <td><a href="StructureDefinition-au-ps-condition.html">AU PS Condition</a></td>
     <td>TBD</td>
-    <td>This data element is added to AUCDI R2; work is underway to map to AU Core.</td>
+    <td>Work is underway to map to AU PS. Feedback is requested on the proposed mapping: TBD</td>
   </tr>
   <tr>
     <td colspan="2">Date/time of resolution</td>
     <td><a href="StructureDefinition-au-ps-condition.html">AU PS Condition</a></td>
     <td>TBD</td>
-    <td>This data element is added to AUCDI R2; work is underway to map to AU Core.</td>
+    <td>Work is underway to map to AU PS. Feedback is requested on the proposed mapping: TBD</td>
   </tr>
   <tr>
     <td colspan="2">Status</td>
@@ -270,7 +270,7 @@ Column attribute descriptions are as follows:
     <td rowspan="5">History of pregnancy</td>
     <td>TBD</td>
     <td>TBD</td>
-    <td rowspan="5">This data group is added to AUCDI R2 and does not yet have an agreed mapping to AU Core. Outcomes from the scoping workshops for AU Core R2 and Patient Summary R1 indicate that this data group will be deferred to a later release.</td>
+    <td rowspan="5">Outcomes from the scoping workshops for AU Core R2 and Patient Summary R1 indicate that this data group will be deferred to a later release. Feedback is requested on whether the mapping to the IPS profile is correct and the proposed deferral for an AU PS profile: TBD.</td>
   </tr>
   <tr>
     <td colspan="2">Date of ultrasound</td>
@@ -297,7 +297,8 @@ Column attribute descriptions are as follows:
     <td colspan="2">Date of onset</td>
     <td rowspan="3">History of pregnancy</td>
     <td>TBD</td>
-    <td rowspan="3">This data group is added to AUCDI R2 and does not yet have an agreed mapping to AU Core. Outcomes from the scoping workshops for AU Core R2 and Patient Summary R1 indicate that this data group will be deferred to a later release.</td>
+    <td>TBD</td>
+    <td rowspan="3">Outcomes from the scoping workshops for AU Core R2 and Patient Summary R1 indicate that an this data group will be deferred to a later release. Feedback is requested on the proposed deferral for an AU PS profile: TBD.</td>
   </tr>
   <tr>
     <td colspan="2">Certainty</td>
@@ -315,7 +316,7 @@ Column attribute descriptions are as follows:
     <td rowspan="3">History of pregnancy</td>
     <td>TBD</td>
     <td>TBD</td>
-    <td rowspan="3">This data group is added to AUCDI R2 and does not yet have an agreed mapping to AU Core. Outcomes from the scoping workshops for AU Core R2 and Patient Summary R1 indicate that this data group will be deferred to a later release.</td>
+    <td rowspan="3">Outcomes from the scoping workshops for AU Core R2 and Patient Summary R1 indicate that this data group will be deferred to a later release. Feedback is requested on whether the mapping to the IPS profile is correct and the proposed deferral for an AU PS profile: TBD.</td>
   </tr>
   <tr>
     <td colspan="2">Justification</td>
