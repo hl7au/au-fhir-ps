@@ -106,6 +106,9 @@ Depending on local requirements, a consumer (i.e. client application) may ignore
 ### Structuring Terminology Choices
 TBD. Write to be AU that is consistent with guidance in IPS.
 
+### SNOMED CT Australian Edition
+See the guidance defined in AU Base [SNOMED CT Australian Edition](generalguidance.html#snomed-ct-australian-edition).
+
 ### Patient Safety in IPS Context
 See the guidance defined in IPS [Patient Safety in IPS Context](https://build.fhir.org/ig/HL7/fhir-ips/General-Principles.html#patient-safety-in-ips-context).
 
