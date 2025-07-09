@@ -74,7 +74,7 @@ Column attribute descriptions are as follows:
     <td colspan="2">Severity of reaction</td>
     <td><a href="StructureDefinition-au-ps-allergyintolerance.html">AU PS AllergyIntolerance</a></td>
     <td>TBD</td>
-    <td>Work is underway to map to AU PS. Feedback is requested on the proposed mapping: TBD</td>
+    <td>Work is underway to map to AU PS. Feedback is requested on the proposed mapping on <a href="https://confluence.hl7.org/spaces/HAFWG/pages/288069416/AUCDI+R2+in+AU+PS+R1">this page</a></td>
   </tr>
   <tr>
     <td colspan="2">Comment</td>
@@ -106,13 +106,13 @@ Column attribute descriptions are as follows:
     <td colspan="2">Date/time of onset</td>
     <td><a href="StructureDefinition-au-ps-condition.html">AU PS Condition</a></td>
     <td>TBD</td>
-    <td>Work is underway to map to AU PS. Feedback is requested on the proposed mapping: TBD</td>
+    <td>Work is underway to map to AU PS. Feedback is requested on the proposed mapping on <a href="https://confluence.hl7.org/spaces/HAFWG/pages/288069416/AUCDI+R2+in+AU+PS+R1">this page</a></td>
   </tr>
   <tr>
     <td colspan="2">Date/time of resolution</td>
     <td><a href="StructureDefinition-au-ps-condition.html">AU PS Condition</a></td>
     <td>TBD</td>
-    <td>Work is underway to map to AU PS. Feedback is requested on the proposed mapping: TBD</td>
+    <td>Work is underway to map to AU PS. Feedback is requested on the proposed mapping on <a href="https://confluence.hl7.org/spaces/HAFWG/pages/288069416/AUCDI+R2+in+AU+PS+R1">this page</a></td>
   </tr>
   <tr>
     <td colspan="2">Status</td>
@@ -270,7 +270,7 @@ Column attribute descriptions are as follows:
     <td rowspan="5">History of pregnancy</td>
     <td>TBD</td>
     <td>TBD</td>
-    <td rowspan="5">Outcomes from the scoping workshops for AU Core R2 and Patient Summary R1 indicate that this data group will be deferred to a later release. Feedback is requested on whether the mapping to the IPS profile is correct and the proposed deferral for an AU PS profile: TBD.</td>
+    <td rowspan="5">Outcomes from the scoping workshops for AU Core R2 and Patient Summary R1 indicate that this data group will be deferred to a later release. Feedback is requested on whether the mapping to the IPS profile is correct and the proposed deferral for an AU PS profile on <a href="https://confluence.hl7.org/spaces/HAFWG/pages/288069416/AUCDI+R2+in+AU+PS+R1">this page</a>.</td>
   </tr>
   <tr>
     <td colspan="2">Date of ultrasound</td>
@@ -298,7 +298,7 @@ Column attribute descriptions are as follows:
     <td rowspan="3">History of pregnancy</td>
     <td>TBD</td>
     <td>TBD</td>
-    <td rowspan="3">Outcomes from the scoping workshops for AU Core R2 and Patient Summary R1 indicate that an this data group will be deferred to a later release. Feedback is requested on the proposed deferral for an AU PS profile: TBD.</td>
+    <td rowspan="3">Outcomes from the scoping workshops for AU Core R2 and Patient Summary R1 indicate that an this data group will be deferred to a later release. Feedback is requested on the proposed deferral for an AU PS profile on <a href="https://confluence.hl7.org/spaces/HAFWG/pages/288069416/AUCDI+R2+in+AU+PS+R1">this page</a>.</td>
   </tr>
   <tr>
     <td colspan="2">Certainty</td>
@@ -316,7 +316,7 @@ Column attribute descriptions are as follows:
     <td rowspan="3">History of pregnancy</td>
     <td>TBD</td>
     <td>TBD</td>
-    <td rowspan="3">Outcomes from the scoping workshops for AU Core R2 and Patient Summary R1 indicate that this data group will be deferred to a later release. Feedback is requested on whether the mapping to the IPS profile is correct and the proposed deferral for an AU PS profile: TBD.</td>
+    <td rowspan="3">Outcomes from the scoping workshops for AU Core R2 and Patient Summary R1 indicate that this data group will be deferred to a later release. Feedback is requested on whether the mapping to the IPS profile is correct and the proposed deferral for an AU PS profile on <a href="https://confluence.hl7.org/spaces/HAFWG/pages/288069416/AUCDI+R2+in+AU+PS+R1">this page</a>.</td>
   </tr>
   <tr>
     <td colspan="2">Justification</td>
