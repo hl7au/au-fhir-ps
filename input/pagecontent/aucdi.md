@@ -62,7 +62,7 @@ Column attribute descriptions are as follows:
     <td colspan="2">Date/time of onset of first reaction</td>
     <td><a href="StructureDefinition-au-ps-allergyintolerance.html">AU PS AllergyIntolerance</a></td>
     <td>TBD</td>
-    <td>Work is underway to map to AU PS. Feedback is requested on the potential mapping options for this AUCDI element: TBD.</td>
+    <td>Work is underway to map to AU PS. Feedback is requested on the potential mapping options for this AUCDI element on <a href="https://confluence.hl7.org/spaces/HAFWG/pages/288069416/AUCDI+R2+in+AU+PS+R1">this page</a>.</td>
   </tr>
   <tr>
     <td colspan="2">Manifestation</td>
