@@ -587,11 +587,18 @@
       <min value="0"/>
       <max value="*"/>
     </element>
-    <element id="Bundle.entry:careteam.resource">
+    <element id="Bundle.entry:immunizationRecommendation.resource">
       <path value="Bundle.entry.resource"/>
       <min value="1"/>
       <type>
-        <code value="CareTeam"/>
+        <code value="ImmunizationRecommendation"/>
+      </type>
+    </element>
+    <element id="Bundle.entry:immunizationRecommendation.resource">
+      <path value="Bundle.entry.resource"/>
+      <min value="1"/>
+      <type>
+        <code value="ImmunizationRecommendation"/>
       </type>
     </element>
   </differential>

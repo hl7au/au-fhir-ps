@@ -2063,6 +2063,16 @@
         <targetProfile value="http://hl7.org/fhir/StructureDefinition/CarePlan"/>
       </type>
     </element>
+    <element id="Composition.section:sectionPlanOfCare.entry:immunizationRecommendation">
+      <path value="Composition.section.entry"/>
+      <sliceName value="immunizationRecommendation"/>
+      <min value="0"/>
+      <max value="*"/>
+      <type>
+        <code value="Reference"/>
+        <targetProfile value="http://hl7.org/fhir/StructureDefinition/ImmunizationRecommendation"/>
+      </type>
+    </element>
     <element id="Composition.section:sectionSocialHistory">
       <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
         <extension url="code">
