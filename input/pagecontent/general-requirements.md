@@ -229,7 +229,7 @@ DeviceUseStatement (IPS)|DeviceUseStatement.timingDateTime
 DiagnosticReport (IPS)|DiagnosticReport.effectiveDateTime
 AU PS Immunization|Immunization.occurrenceDateTime
 AU PS MedicationStatement|MedicationStatement.effectiveDateTime
-AU PS Observation Results - Radiology (IPS)|Observation.effectiveDateTime
+AU PS Observation Results - Radiology (IPS)|Observation.effectiveDateTime, Observation.valueString
 AU PS Pathology Result Observation|Observation.effectiveDateTime
 AU PS Procedure|Procedure.performedDateTime
 {:.grid}
