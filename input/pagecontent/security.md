@@ -1,10 +1,9 @@
 ### Security and Privacy
 
-When implementing AU PS, implementers need to be aware of [FHIR security considerations](https://hl7.org/fhir/R4/security.html) and implement measures to protect information privacy and prevent exploitation by malicious actors.
+Implementers of AU PS are advised to be aware of FHIR security and safety considerations and take appropriate measures to protect information privacy and prevent exploitation by malicious actors. In particular, implementers are advised to review:
 
-Those implementing AU PS are also advised to review the [FHIR Implementer Safety Checklist](https://hl7.org/fhir/R4/safety.html) for important considerations in secure and safe system implementation.
-
-Implementers are further advised to be familiar with the requirements of IPS and AU Core when implementing AU PS, in particular:
+- [FHIR Security Considerations](https://hl7.org/fhir/R4/security.html)
+- [FHIR Implementer Safety Checklist](https://hl7.org/fhir/R4/safety.html)
 - [IPS Privacy and Security Considerations](https://build.fhir.org/ig/HL7/fhir-ips/Privacy-and-Security-Considerations.html)
 - [AU Core Security and Privacy](https://build.fhir.org/ig/hl7au/au-fhir-core/security.html)
 
