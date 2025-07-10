@@ -2,104 +2,68 @@ This use case demonstrates an example scenario where, during a specialist consul
 
 ### Use Case Description
 
-Joyce Johnson is a 39yo female who lives in New South Wales, Australia. Joyce is currently pregnant and has been recently diagnosed with gestational diabetes. Joyce’s general practitioner (GP), Dr Ginger Burrows, has decided to refer Joyce to an Endocrinologist and a Dietitian for further evaluation and support.
+Joyce Johnson, a 39-year-old woman from New South Wales, is pregnant and has recently been diagnosed with gestational diabetes. To provide Joyce with more comprehensive support, her regular general practitioner (GP), Dr Ginger Burrows, refers Joyce to both an endocrinologist and a dietitian.
 
-The referral includes an embedded patient summary containing Joyce's medical history and current medications at the time of referral. The embedded patient summary was authored by the GP (Dr. Ginger Burrows) through curation of a generated view of the data within their clinical information system, and was attested at the time of creation of the patient summary.
+As part of the referral, Dr Burrows includes an embedded patient summary that captures Joyce’s medical history and current medications at the time. This embedded summary is curated from Dr Burrows' clinical information system (CIS) and attested at the time of creation, ensuring its integrity and alignment with clinical standards.
 
-Each health care provider (Endocrinologist and Dietician) receives and triages the referral.
+The referral is received and triaged by both the endocrinologist (Dr Bryce Cruickshank) and the dietitian. When Joyce later attends her appointment with Dr Cruickshank, the endocrinologist's CIS alerts the provider that a more recent patient summary is available from an external source - in this case, Dr Burrows’ CIS.
 
-Joyce attends the consultation with the Endocrinologist. During the consultation, the Endocrinologist’s clinical system notifies them that a more recent patient summary is available from an external source, such as an updated version from the referring GP, a national health record system or another provider.
+Dr Cruickshank accesses and compares both the original embedded summary and the newer version to verify the currency and accuracy of Joyce’s clinical information. The more recent patient summary has been generated at the time of request for access by Dr Burrows' CIS and digitally signed to ensure integrity in transit.
 
-The Endocrinologist accesses and compares both patient summaries to verify the accuracy and currency of the clinical information. After reviewing the most recent data -  particularly Joyce’s current medication regimen - the Endocrinologist decides to adjust the insulin dosage and documents the decision. An updated treatment plan is shared with Joyce and the referring GP (Dr Ginger Burrows) to ensure continuity of care.
+Based on updated data - particularly around Joyce's medication regimen - Dr Cruickshank adjusts Joyce’s insulin dosage and documents the decision.
 
- <div> 
-    <img src="uc-referral-cj.png" alt="Referral to Specialist and Allied Health consumer journey" style="width:65%"/>
-  </div>
+An updated treatment plan is then shared with Joyce and Dr Burrows to maintain continuity of care across providers.
+
+<div> 
+  <img src="uc-referral-cj.png" alt="Referral to Specialist and Allied Health consumer journey" style="width:65%"/>
+</div>
 *Figure 1: Referral to Specialist and Allied Health consumer journey*
 <br/>
 
-
 This use case demonstrates use of patient summary during step 4. Endocrinologist Consultation of the [Referral to Specialist and Allied Health consumer journey](https://sparked.csiro.au/index.php/sparked-products-resources/au-patient-summary-consumer-journeys/).
-
-<div class="stu-note" markdown="1">
-
-#### Use Case Decisions to be confirmed for the patient summary embedded in referral
-The following decisions are to be confirmed:
-1. is it accessed by a QR code and/or link
-
-The following is to be decided:
-1. what is the mechanism for embedding the patient summary
-1. is electronic signature present yes/no
-
-</div>
-
-<div class="stu-note" markdown="1">
-
-#### Use Case Decisions to be confirmed for more recent patient summary
-The following decisions are to be confirmed:
-1. Attested by a digital signature by an authoritative source - and what that means
-1. how is discovery of the most recent undertaken - is this search using limited info or is this out of scope of this use case
-
-The following is to be decided:
-1. what external system to provide the most recent patient summary
-1. what kind of 'device' is considered to author this
-1. what data is in this 'most recent' - what's different to the patient summary at time of referral?
-1. what sort of link/QR code/RESTfulAPI can be used to access the summary
-1. how is currency detected? is it indicated in the payload? or is this out of scope?
-
-</div>
-
 
 ### Actors
 
 #### People
-1. Endocrinologist
-2. Patient (Joyce Johnson)
-3. Referring GP (Dr. Ginger Burrows)
+1. Patient - Joyce Johnson
+1. Referring GP - Dr Ginger Burrows
+1. Endocrinologist - Dr Bryce Cruickshank
 
 #### Systems
-1. GP Clinical Information System (CIS)
-2. Endocrinologist CIS
-3. External system to provide the most recent patient summary
+1. GP CIS
+1. Endocrinologist CIS
 
 ### Precondition(s)
-1. The referral from the GP includes a patient summary at the time of referral.
-2. A more recent patient summary is available from an external source. This may be the original GP, or may be a national health record system.
-3. The Endocrinologist’s system can access both documents.
+1. The referral from Dr Ginger Burrows includes a patient summary at the time of referral.
+1. A more recent patient summary is available from Dr Burrows’ CIS at the time of consultation.
+1. Dr Cruickshank’s CIS is capable of accessing and displaying both the embedded and updated patient summaries.
 
 ### Postcondition(s)
-1. The Endocrinologist uses the information to guide clinical decisions.
-2. Treatment changes are recorded in the endocrinologist's system and are communicated back to the GP and patient.
+1. Dr Cruickshank uses the patient summary information to guide clinical decision-making.
+1. Treatment changes, including the updated insulin dose, are documented in the CIS.
+1. An updated treatment plan is shared with Joyce and Dr Burrows to support continuity of care.
 
 ### Flow
-1. Joyce attends her scheduled consultation with the Endocrinologist.
-2. The Endocrinologist opens the referral in their CIS, accesses and reviews the embedded patient summary.
-3. The Endocrinologist's CIS alerts that a more recent patient summary is available from another source.
-4. The Endocrinologist accesses the more recent patient summary, comparing the embedded patient summary to the more recent patient summary, and verifies consistency in medications and medical history.
-5. The Endocrinologist notes updated clinical information, including changes to Joyce’s insulin regimen.
-6. Based on the review and patient discussion, the Endocrinologist decides to increase Joyce’s insulin dose and documents this within their CIS.
+1. Joyce attends her scheduled consultation with Dr Cruickshank.
+1. Dr Cruickshank opens the referral in their CIS and accesses and reviews the embedded patient summary.
+1. The CIS alerts that a more recent patient summary is available.
+1. Dr Cruickshank accesses the more recent patient summary, comparing the embedded patient summary to the more recent patient summary, and verifies consistency in medications and medical history.
+1. Dr Cruickshank notes updated clinical information, including changes to Joyce’s insulin regimen.
+1. Based on the review and discussion with Joyce, Dr Cruickshank decides to increase Joyce’s insulin dose and documents the decision in the CIS.
 
-INSERT SEQUENCE DIAGRAM
-*Figure 2: Sequence Diagram TBD*
+#### Sequence Diagram
+<div> 
+  <img src="uc-referral-seq.png" alt="Sequence Diagram" style="width:80%"/>
+</div>
+*Figure 2: Sequence diagram showing access to embedded and updated patient summaries, with secure retrieval using public key cryptography*
 <br/>
+
+### Notes
+
+This example use case is provided for illustrative purposes only and is intended to support understanding of how patient summaries may be exchanged in practice. It does not prescribe technical requirements or mandate specific implementation workflows. 
 
 ### Examples
 
 The following examples demonstrate technical and clinical use case aspects, conforming to the AU Patient Summary requirements. Data within these examples, e.g. medications, is provided by the [Sparked Patient Summary Clinical Focus Group](https://sparked.csiro.au/index.php/design-groups/):
-1. Patient Summary Embedded in Referral: [Patient Summary for Joyce Johnson as of 28 OCT 2024 (Bundle)](Bundle-aups-referral-endoconsult-01.html)
-1. More recent Patient Summary: TBD
-
-<div class="stu-note" markdown="1">
-
-**TODO for Examples**
-
-Example 01 - patient summary embedded in a referral:
-1. use case decisions still to be made (see above) - as decisions are made they will be reflected in the example
-2. Diagnostic Results to be added. 
-
-Example 02 More recent patient summary: 
-1. what external system to provide the most recent patient summary
-1. what kind of 'device' is considered to author this
-1. what data is in this 'most recent' - what's different to the patient summary at time of referral?
-
-</div>
+1. Patient Summary Embedded in Referral: [Patient Summary for Joyce Johnson as of 28 OCT 2024 (Bundle)](Bundle-aups-referral-endoconsult-curated.html)
+1. More recent Patient Summary: [Patient Summary for Joyce Johnson as of 07 NOV 2024 (Bundle)](Bundle-aups-referral-endoconsult-autogen.html)

@@ -9,11 +9,7 @@ AU Patient Summary will:
 * be compliant with AU Core and IPS, localised to meet Australian requirements and aligned to the IPS specification.
 * be easy to implement and support patient summary use case specialisation for clinical workflows without requiring redevelopment.
 
-### Project background
-
-This implementation guide is under development through the [AU Patient Summary FHIR IG project](https://confluence.hl7.org/display/HAFWG/AU+Patient+Summary+FHIR+IG+Project) as part of the [Sparked AU FHIR Accelerator](https://sparked.csiro.au). 
-
-The Sparked AU FHIR Accelerator is a community comprising government, technology vendors, provider organisations, peak bodies, practitioners, and domain experts, to accelerate the creation and use of national FHIR standards in health care information exchange.
+The first iteration of the AU PS will be based upon the IPS, but is NOT the IPS, allowing for localisations required to meet Australian requirements while  ensuring alignment to the IPS specification.
 
 #### What is a patient summary?
 A patient summary is a standardised collection of patient information. Rather than an entire patient health record, it is the necessary minimum and sufficient data to ensure safe patient care. Patient summaries can enhance patient safety by ensuring critical information is readily accessible when it’s needed most and enables clinicians across different health sectors and health domains to provide more informed, consistent care.
@@ -22,6 +18,12 @@ The AU Patient Summary will support the consumer on their healthcare journey, pr
 
 #### International Patient Summary
 The International Patient Summary is a globally recognised patient summary standard. In 2021, the G7 nations committed to working towards the adoption of the International Patient Summary (IPS) with several international efforts being currently underway to drive adoption, including the European Union, USA, Canada and New Zealand. Multinational vendors with presence in Australia are at various stages of implementation of the IPS.
+
+### Project background
+
+This implementation guide is under development through the [AU Patient Summary FHIR IG project](https://confluence.hl7.org/display/HAFWG/AU+Patient+Summary+FHIR+IG+Project) as part of the [Sparked AU FHIR Accelerator](https://sparked.csiro.au). 
+
+The Sparked AU FHIR Accelerator is a community comprising government, technology vendors, provider organisations, peak bodies, practitioners, and domain experts, to accelerate the creation and use of national FHIR standards in health care information exchange.
 
 #### AU Patient Summary Development Context
  <div> 
@@ -51,19 +53,20 @@ This guide is divided into several pages which are listed at the top of each pag
 - [Guidance](guidance.html): These pages list the guidance for this guide.
   - [General Guidance](general-guidance.html): This page provides guidance on using the profiles defined in this guide. 
   - [Sex and Gender](sex-and-gender.html): This page provides guidance on the representation of sex, gender, and related concepts.
-  - [AU Core Data for Interoperability](aucdi.html): This page maps AUCDI data groups and elements to FHIR artefacts in AU Patient Summary.
+  - [AUCDI](aucdi.html): This page maps AUCDI data groups and elements to FHIR artefacts in AU Patient Summary.
   - [Relationship with other IGs](relationship.html): This page provides guidance on the relationship between AU Patient Summary, AUCDI, and other implementation guides.
   - [AU Variance Statement](variance.html): This page documents the variance from AU Base and AU Core.
   - [Comparison with other national and international IGs](comparison.html): This page provides comparison between AU Patient Summary profiles and other national and international implementation guides.
   - [Future of AU Patient Summary](future.html): This page outlines the approach to developing AU Patient Summary.
-- Use Cases: These pages document a set of example use cases that assist in understanding how to implement AU Patient Summary.
+- [Use Cases](usecase.html): These pages document a set of example use cases that assist in understanding how to implement AU Patient Summary.
    - [Interstate GP Visit](uc-interstate.html): This page documents the Interstate GP Visit - Patient Driven Patient Summary example use case.
-   - [Referral Specialist and Allied Health](uc-referral.html): This page documents the Referral to Specialist and Allied Health - Clinician Driven Patient Summary (as Supplemental Information) example use case.
+   - [Referral to Specialist and Allied Health](uc-referral.html): This page documents the Referral to Specialist and Allied Health - Clinician Driven Patient Summary (as Supplemental Information) example use case.
 - [Security and Privacy](security.html): This page documents the AU Patient Summary general security and privacy requirements and recommendations.
 - [FHIR Artefacts](artefacts.html): These pages provide detailed descriptions and formal definitions for all the FHIR artefacts defined in this guide.
   - [Artefacts Summary](artifacts.html): This page lists the FHIR artefacts defined in this guide.
   - [Profiles and Extensions](profiles-and-extensions.html): This page describes the profiles and extensions that are defined in this guide to exchange data. Each profile page includes a narrative description and guidance, and formal definition. Guidance typically focuses on the profiled elements but can include guidance on un-profiled elements to aid with implementation.
   - [Terminology](terminology.html): This page lists the value sets and code systems supported in this guide.
+  - [Actor Definitions](actors.html): This page defines the AU PS actors, AU PS Consumer and AU PS Producer.
 - [Examples](examples.html): This page lists all the examples used in this guide.
 - [Support](downloads.html): These pages provide supporting material for implementation of AU Patient Summary.
   - [Downloads](downloads.html): This page provides links to downloadable artefacts.

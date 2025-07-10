@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Bundle xmlns="http://hl7.org/fhir">
-  <id value="basicsummary"/>
+  <id value="aups-basicsummary"/>
   <meta>
     <profile value="http://hl7.org.au/fhir/ps/StructureDefinition/au-ps-bundle"/>
   </meta>
@@ -93,8 +93,8 @@
                 </tr>
                 <tr>
                   <td>Chlorhexidine</td>
-                  <td>12/01/2021</td>
                   <td>12/01/2023</td>
+                  <td>09/09/2023</td>
                   <td>Hives</td>
                   <td>Mild</td>
                 </tr>
@@ -417,6 +417,7 @@
           </coding>
           <text value="Active"/>
         </clinicalStatus>
+        <type value="intolerance"/>
         <code>
           <coding>
             <system value="http://snomed.info/sct"/>
@@ -471,8 +472,8 @@
         <patient>
           <reference value="urn:uuid:9be88cc6-09e8-4dc6-b058-88676240dbc7"/>
         </patient>
-        <onsetDateTime value="2021-01-12"/>
-        <recordedDate value="2021-09-09"/>
+        <onsetDateTime value="2023-01-12"/>
+        <recordedDate value="2023-09-09"/>
         <reaction>
           <substance>
             <coding>
@@ -509,6 +510,35 @@
               </coding>
               <text value="Bisoprolol 2.5mg tab"/>
             </code>
+            <form> 
+              <coding> 
+                <system value="http://snomed.info/sct"/> 
+                <code value="385055001"/> 
+                <display value="Tablet"/> 
+              </coding> 
+            </form>
+            <ingredient>
+              <itemCodeableConcept>
+                <coding>
+                  <system value="http://snomed.info/sct"/>
+                  <code value="386869006"/>
+                  <display value="Bisoprolol fumarate"/>
+                </coding>
+              </itemCodeableConcept>
+              <strength> 
+                <numerator> 
+                  <value value="2.5"/> 
+                  <system value="http://unitsofmeasure.org"/> 
+                  <code value="mg"/> 
+                </numerator> 
+                <denominator> 
+                  <value value="1"/> 
+                  <unit value="Tablet"/> 
+                  <system value="http://snomed.info/sct"/> 
+                  <code value="385055001"/> 
+                </denominator> 
+              </strength> 
+            </ingredient>
           </Medication>
         </contained>
         <status value="active"/>
@@ -518,6 +548,7 @@
         <subject>
             <reference value="urn:uuid:9be88cc6-09e8-4dc6-b058-88676240dbc7"/>
         </subject>
+        <effectiveDateTime value="2025-01-05"/>
         <dateAsserted value="2025-01-05"/>
         <dosage>
             <text value="1/2 tablet in the morning"/>
