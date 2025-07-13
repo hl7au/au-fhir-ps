@@ -1,7 +1,7 @@
 ### Generating & Accessing AU Patient Summary (AU PS) Documents
 AU PS is specified in this guide as a HL7 FHIR document (a Bundle including a Composition), composed by a set of potentially reusable "minimal" data blocks (the AU PS profiles). See [Structure of the Australian Patient Summary (AU PS)](general-guidance.html).
 
-As also described in the IPS, it is not in the scope of this version of AU PS to constrain solutions or strategies for the creation, sharing, syntactical and semantic mapping, translation, and use of AU PS Documents or IPS Documents. Options for access and exchange discussed during AU PS meetings are described in this guide with links to the source specifications. Recommendations on operations for IPS generation are included in this guide, although future implementation guides may provide alternative methods and further recommendations different than those outlined. In addition, Integrating the Healthcare Enterprise (IHE) has also published guidance on the IHE Sharing of IPS (sIPS) which may be a helpful reference.
+As also described in the IPS, it is not in the scope of this version of AU PS to constrain solutions or strategies for the creation, sharing, syntactical and semantic mapping, translation, and use of AU PS Documents or IPS Documents. Options for access and exchange that have been discussed during AU PS meetings are briefly described in this guide with links to the source specifications. While recommendations on operations from IPS on generation are included in this guide, future implementation guides may provide alternative methods and further recommendations different than those outlined. In addition, Integrating the Healthcare Enterprise (IHE) has also published guidance on the IHE Sharing of IPS (sIPS) which may be a helpful reference.
 
 When generating an AU PS Document, implementers are also advised to be familiar with the following IPS guidance:
 - [Narrative and Language Translation](https://build.fhir.org/ig/HL7/fhir-ips/Design-Conventions.html#narrative-and-language-translation). 
@@ -99,17 +99,39 @@ A system that produces a Patient Summary document internally can allow a Patient
 The Document Bundle and DocumentReference transaction is a simplified profile of the [IHE MHD Provide Document Bundle [ITI-65]](https://profiles.ihe.net/ITI/MHD/ITI-65.html) transaction, which also requires a List resource, providing document set metadata for the documents included in the transaction, to support IHE Cross-enterprise Document Shared (XDS) document repository implementations where multiple documents or document attachments are provided to a document store in a single transaction. This approach is suited to technical implementations based on XDS document repository but requires a Patient Summary Producer to also produce the necessary metadata resources to support this implementation even though there is usual only one Patient Summary document being provided in the transaction.
 
 ### IHE MHD Simplified Publish
-IHE provides an optional transaction profile, Simplified Publish [ITI-105]. This transaction allows a Patient Summary Producer to create a DocumentReference resource with an document Bundle instance that is base64 encoded and populated in the DocumentReference.content.attachment.data element. It is the responsibility of the Patient Summary Producer to populates the metadata of the document in the DocumentReference resource so to support document discover searches.
+IHE provides an optional transaction profile, [Simplified Publish [ITI-105]](https://profiles.ihe.net/ITI/MHD/ITI-105.html). This transaction allows a Patient Summary Producer to create a DocumentReference resource with an document Bundle instance that is base64 encoded and populated in `DocumentReference.content.attachment.data`. It is the responsibility of the Patient Summary Producer to populate the metadata of the document in the DocumentReference resource in a way that supports document discover searches.
 
-The Patient Summary Server accepts the DocumentReference resource, extracts and decodes the document Bundle from DocumentReference.content.attachment.data  and persists Bundle resource. The reference to the Bundle is populated in the DocumentReference.content.attachment.url, replacing the Attachment.data  element, and DocumentReference is persisted.
+The Patient Summary Server accepts the DocumentReference resource, extracts and decodes the document Bundle from `DocumentReference.content.attachment.data` and persists Bundle resource. The reference to the Bundle is populated in the `DocumentReference.content.attachment.url`, replacing the `attachment.data` element, and DocumentReference is persisted.
 
-Where the DocumentReference is included in the Create DocumentReference response, the persisted version is returned containing the DocumentReference.content.attachment.url element. Similarly, search responses containing the DocumentReference will return the attachment.url and a Read Bundle request will be required to retrieve the Patient Summary document.
-
-MHDSimplifiedPublish
+Where the DocumentReference is included in the Create DocumentReference response, the persisted version is returned containing the `DocumentReference.content.attachment.url`. Similarly, search responses containing the DocumentReference will return the `attachment.url` and a Read Bundle request will be required to retrieve the Patient Summary document.
 
 <div> 
     <img src="MHDSimplifiedPublish.png" alt="IHE MHD Simplified Publish" style="width:45%"/>
   </div>
 *Figure 5: IHE MHD Simplified Publish*
+<br/>
+
+### Encrypted File Exchange
+There are scenarios where Patient Summary document exchange is not capable using a FHIR API and trusted user authentication is not available. In these cases, it is necessary to ensure secure exchange of Patient Summary documents as files when using insecure exchange media such as email, USB or DVD.
+
+Public Key Infrastructure (PKI) is an established approach to ensure end to end security of Patient Summary document by encrypting document file being exchanged using the public key of the intended recipient. Once the file is delivered to the intended recipient, the file can be decrypted using the recipient's private key. The decrypted file can then be uploaded into the Patient Summary Consumer system for processing.
+
+<div> 
+    <img src="encryptfileexchange.png" alt="Encrypted File Exchange" style="width:45%"/>
+  </div>
+*Figure 6: Encrypted File Exchange*
+<br/>
+
+### SMART Health Links
+There are scenarios where Patient Summary document exchange is not capable using a FHIR API and it is unknown who the recipient will be. In this case, it may be desirable to have a method for the Patient or other trusted part to provide a link to the Patient Summary document. [SMART Health Links](https://build.fhir.org/ig/HL7/smart-health-cards-and-links/) is an in progress FHIR implementation guide that supports this use case, but it is necessary that the SMART Health Link itself is secured as it literally contains the key to access the Patient Summary document. 
+
+A user that wants to share a Patient Summary document retrieves a SMART Health Link (SHL) from a SHL Sharing Application. The method of retrieving the SHL is not specified, only the representation of the link which contains encoded data including a URL to retrieve a file manifest, encryption key and description of the link. The user has the option to specify a passcode that will be required to access the file manifest, which is the only authorization challenge to access the Patient Summary document. The SHL may be prefixed with a URL to a SHL Receiving Application to assist in the retrieval and processing of the Patient Summary, and this full URL can be encoded as a QR code to aid in the exchange of the SHL.
+
+When the Receiving User submits the SHL to the SHL Receiving Application, the decoded data from the link, along with the passcode provided by the Sharing User, is used to retrieve the manifest file from the SHL Sharing Application.  The returned manifest contains a set of files, with either a location URL to the file or embedded file data. When the file is retrieved or decoded, the file is then decrypted using the key encoded in the SHL.  The decrypted file contains the Patient Summary document Bundle resource, which can then be processed by the SHL Receiving Application.
+
+<div> 
+    <img src="SMARTHealthLinks.png" alt="SMART Health Links Patient Summary Exchange" style="width:45%"/>
+  </div>
+*Figure 7: SMART Health Links Patient Summary Exchange*
 <br/>
 
