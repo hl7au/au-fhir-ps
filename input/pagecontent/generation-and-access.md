@@ -3,7 +3,7 @@ AU PS is specified in this guide as a HL7 FHIR document (a Bundle including a Co
 
 As in the IPS, it is not in the scope of this version of AU PS to constrain solutions or strategies for the creation, sharing, translation, and use of AU PS Documents or IPS Documents. 
 
-Options for access and exchange that have been discussed during AU PS meetings are briefly described in this guide with links to the source specifications. While recommendations on operations from IPS on generation are included in this guide, future implementation guides may provide alternative methods and further recommendations different than those outlined. In addition, Integrating the Healthcare Enterprise (IHE) has also published guidance on the IHE Sharing of IPS (sIPS) which may be a helpful reference.
+Options for access and exchange that have been discussed during AU PS meetings are briefly described in this guide with links to the source specifications. While recommendations on operations from IPS on generation are included in this guide, future implementation guides may provide alternative methods and further recommendations different than those outlined. In addition, Integrating the Healthcare Enterprise (IHE) has also published guidance on the [IHE Sharing of IPS (sIPS)](https://profiles.ihe.net/ITI/sIPS/index.html) which may be a helpful reference.
 
 When generating an AU PS Document, implementers are also advised to be familiar with the following IPS guidance:
 - [Narrative and Language Translation](https://build.fhir.org/ig/HL7/fhir-ips/Design-Conventions.html#narrative-and-language-translation). 
