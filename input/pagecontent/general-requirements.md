@@ -33,23 +33,18 @@ An element can be both *Must Support* and mandatory and in this circumstance the
 
 The convention in this guide is to mark all mandatory and conditionally mandatory elements as *Must Support* unless they are nested under an optional element.
 
-### Missing Data and Empty Sections
+### Missing Data, Empty Sections, Known Absence of Data
+It is important to differentiate between:
+* affirmatively stating that a patient has "no known x" or "history of x" (for example that a patient has no known allergies) versus 
+* not having data in the record for a particular section (for example where a source system does not have information on a patient's medical devices) versus 
+* asserting that this data is not available due to a workflow reason (for example allergies not were not reviewed and are unknown) versus 
+* not having data for a particular element (for example the onset date of a particular allergy is not available in the system and the system does not know the reason for the absence).
 
-There are situations when information is missing, this could be at the section level where a source system does not have information on a patient's medical devices, or may be at an element level within a resource. 
-
-Where data is missing for an element within a resource and the reason is not known, systems **SHALL** implement the requirements of the [Missing Data](general-requirements.html#missing-data) section.
-
-Where data is missing at the section level and the reason is not known, systems **SHALL** implement the requirements of the [Empty Sections](general-requirements.html#empty-sections) section.
-
-<div class="stu-note" markdown="1">
-It is proposed that missing data is distinct from a known absence of data for either:
-* no known x - where it is known, for example, that there are no known allergies for a patient
-* workflow - where there is a known workflow reason information for the section is not available
-
-See the proposal AU PS Conformance Proposal: <a href="https://build.fhir.org/ig/hl7au/au-fhir-ps/branches/ft_conf-proposal/general-requirements.html">Narrative conformance requirements</a> e.g. Missing Data, Empty Sections.
-
-This proposal will be voted on in next AU PS FHIR IG Call this Friday: <a href="https://confluence.hl7.org/spaces/HAFWG/pages/358878850/2025-07-11+AU+Patient+Summary+FHIR+IG+Agenda+Minutes">2025-07-11 AU Patient Summary FHIR IG Agenda/Minutes</a>.
-</div><!-- stu-note -->
+In the above circumstances the following is applied:
+* Where data is missing for an element within a resource and the reason is not known, systems **SHALL** implement the requirements of the [Missing Data](general-requirements.html#missing-data) section.
+* Where data is missing for a section and the reason is not known, systems **SHALL** implement the requirements of the [Empty Sections](general-requirements.html#empty-sections) section.
+* Where data is not available due to a known workflow reason, systems **SHOULD** implement the requirements of the [Known absence due to workflow]() section.
+* When stating "no known x" or "no history of x", systems **SHOULD** implement the guidance of the [No known x] section.
 
 #### Missing Data
 
@@ -60,6 +55,34 @@ If the source system (producer) does not know the value for an optional element 
 ##### Missing Must Support and Mandatory Data
 
 If the data element is a mandatory element (minimum cardinality is > 0), the element **SHALL** be present *even if* the source system (producer) does not know the value or the reason the value is absent. In this circumstance, the requirements defined by AU Core for [Missing Must Support and Mandatory Data](https://build.fhir.org/ig/hl7au/au-fhir-core/general-requirements.html#missing-must-support-and-mandatory-data) **SHALL** be applied.
+
+    Example: MedicationRequest resource where status and requester are missing
+    ~~~
+    {
+      "resourceType" : "MedicationRequest",
+      "status" : "unknown",
+      "intent" : "order",
+      "medicationCodeableConcept" : {
+        "coding" : [
+          {
+            "system" : "http://snomed.info/sct",
+            "code" : "79115011000036100",
+            "display" : "Paracetamol 500 mg + codeine phosphate hemihydrate 30 mg tablet"
+          }
+        ]
+      },
+      ...
+      "authoredOn" : "2018-07-15",
+        "requester" : {
+          "extension" : [
+            {
+              "url" : "http://hl7.org/fhir/StructureDefinition/data-absent-reason",
+              "valueCode" : "unknown"
+            }
+          ]
+        },
+    ...
+    ~~~
 
 #### Empty Sections
 
@@ -102,6 +125,21 @@ For a mandatory section (minimum cardinality is > 0), the section **SHALL** be p
             },
         ...
     ~~~
+
+### Known absence of data due to workflow
+
+Where the system does not have information for a particular section and there is a known workflow reason (for example the patient preferred not to answer), the system **SHOULD** represent that reason by populating `Composition.section.emptyReason`:
+* Prefer not to answer may be represented by sending the [Data Absent Reason](http://terminology.hl7.org/CodeSystem/data-absent-reason) code "asked-declined"
+* Asked but not known may be represented by sending the [Data Absent Reason](http://terminology.hl7.org/CodeSystem/data-absent-reason) code "asked-unknown"
+* Where the workflow does not support obtaining the information, it may be represented by sending the [List Empty Reason](https://hl7.org/fhir/R4/codesystem-list-empty-reason.html) code "notasked"
+
+### No Known X
+
+Where the system can assert "no known X" (for example no known conditions) or "no history of X", the system **SHOULD** populate `Composition.section.entry` in accordance with the relevant profile specific implementation guidance. 
+
+For example, to represent that a patient does not have an allergy or category of allergies, an appropriate negation code (e.g. 716186003 \|No known allergy\| or 1003774007 \|No known Hevea brasiliensis latex allergy\|) is used in `AllergyIntolerance.code` as per the profile specific implementation guidance for [AU PS AllergyIntolerance](StructureDefinition-au-ps-allergyintolerance.html).
+
+In AU PS this approach is preferred to using `Composition.section.emptyReason` due to the widely known and implemented patterns established within FHIR, IPS, and AU Core, to assert "no known X" or "no history of X". 
 
 ### Suppressed Data
 
