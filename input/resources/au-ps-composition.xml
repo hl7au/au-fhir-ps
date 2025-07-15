@@ -650,7 +650,7 @@
     <element id="Composition.section.title">
       <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
         <extension url="code">
-          <valueCode value="SHALL:populate-if-known"/>
+          <valueCode value="SHALL:able-to-populate"/>
         </extension>
         <extension url="actor">
           <valueCanonical value="http://hl7.org.au/fhir/ps/ActorDefinition/au-ps-actor-producer"/>

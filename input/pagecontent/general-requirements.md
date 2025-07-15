@@ -29,27 +29,22 @@ The [Actor Definitions](actors.html) page lists the AU PS actors defined for thi
 ### Mandatory Elements
 Mandatory elements are elements with minimum cardinality > 0. When an element is mandatory, the data is expected to always be present. Very rarely, it may not be, and in this circumstance the requirements defined by AU Core for [Missing Data](https://build.fhir.org/ig/hl7au/au-fhir-core/general-requirements.html#missing-data) **SHALL** be applied. 
 
-An element can be both *Must Support* and mandatory, in which case the requirements defined by AU Core for mandatory's Missing Data requirements **SHALL** be applied as described in [Missing Must Support and Mandatory Data](https://build.fhir.org/ig/hl7au/au-fhir-core/general-requirements.html#missing-must-support-and-mandatory-data).
+An element can be both *Must Support* and mandatory and in this circumstance the requirements defined for [Missing Must Support and Mandatory Data](general-requirements.html#missing-must-support-and-mandatory-data) **SHALL** be applied.
 
 The convention in this guide is to mark all mandatory and conditionally mandatory elements as *Must Support* unless they are nested under an optional element.
 
-### Missing Data and Empty Sections
+### Missing Data, Empty Sections, Known Absence of Data
+It is important to differentiate between:
+* affirmatively stating that a patient has "no known x" or "history of x" (for example that a patient has no known allergies) versus 
+* not having data in the record for a particular section (for example where a source system does not have information on a patient's medical devices) versus 
+* asserting that this data is not available due to a workflow reason (for example allergies not were not reviewed and are unknown) versus 
+* not having data for a particular element (for example the onset date of a particular allergy is not available in the system and the system does not know the reason for the absence).
 
-There are situations when information is missing, this could be at the section level where a source system does not have information on a patient's medical devices, or may be at an element level within a resource. 
-
-Where data is missing for an element within a resource and the reason is not known, systems **SHALL** implement the requirements of the [Missing Data](general-requirements.html#missing-data) section.
-
-Where data is missing at the section level and the reason is not known, systems **SHALL** implement the requirements of the [Empty Sections](general-requirements.html#empty-sections) section.
-
-<div class="stu-note" markdown="1">
-It is proposed that missing data is distinct from a known absence of data for either:
-* no known x - where it is known, for example, that there are no known allergies for a patient
-* workflow - where there is a known workflow reason information for the section is not available
-
-See the proposal AU PS Conformance Proposal: <a href="https://build.fhir.org/ig/hl7au/au-fhir-ps/branches/ft_conf-proposal/general-requirements.html">Narrative conformance requirements</a> e.g. Missing Data, Empty Sections.
-
-This proposal will be voted on in next AU PS FHIR IG Call this Friday: <a href="https://confluence.hl7.org/spaces/HAFWG/pages/358878850/2025-07-11+AU+Patient+Summary+FHIR+IG+Agenda+Minutes">2025-07-11 AU Patient Summary FHIR IG Agenda/Minutes</a>.
-</div><!-- stu-note -->
+In the above circumstances the following is applied:
+* Where data is missing for an element within a resource and the reason is not known, systems **SHALL** implement the requirements of the [Missing Data](general-requirements.html#missing-data) section.
+* Where data is missing for a section and the reason is not known, systems **SHALL** implement the requirements of the [Empty Sections](general-requirements.html#empty-sections) section.
+* Where data is not available due to a known workflow reason, systems **SHOULD** implement the requirements of the [Known absence due to workflow](general-requirements.html#known-absence-of-data-due-to-workflow) section.
+* When stating "no known x" or "no history of x", systems **SHOULD** implement the guidance of the [No known x](general-requirements.html#no-known-x) section.
 
 #### Missing Data
 
@@ -59,23 +54,186 @@ If the source system (producer) does not know the value for an optional element 
 
 ##### Missing Must Support and Mandatory Data
 
-If the data element is a mandatory element (minimum cardinality is > 0), the element **SHALL** be present *even if* the source system (producer) does not know the value or the reason the value is absent. In this circumstance the requirements defined by AU Core for [Missing Must Support and Mandatory Data](https://build.fhir.org/ig/hl7au/au-fhir-core/general-requirements.html#missing-must-support-and-mandatory-data) **SHALL** be applied:
+If the data element is a mandatory element (minimum cardinality is > 0), the element **SHALL** be present *even if* the source system (producer) does not know the value or the reason the value is absent. In this circumstance, the requirements defined by AU Core for [Missing Must Support and Mandatory Data](https://build.fhir.org/ig/hl7au/au-fhir-core/general-requirements.html#missing-must-support-and-mandatory-data) **SHALL** be applied.
+
+    Example: MedicationRequest resource where status and requester are missing
+    ~~~
+    ...
+    {
+      "resourceType" : "MedicationRequest",
+      "status" : "unknown",
+      "intent" : "order",
+      "medicationCodeableConcept" : {
+        "coding" : [
+          {
+            "system" : "http://snomed.info/sct",
+            "code" : "79115011000036100",
+            "display" : "Paracetamol 500 mg + codeine phosphate hemihydrate 30 mg tablet"
+          }
+        ]
+      },
+      ...
+      "authoredOn" : "2018-07-15",
+        "requester" : {
+          "extension" : [
+            {
+              "url" : "http://hl7.org/fhir/StructureDefinition/data-absent-reason",
+              "valueCode" : "unknown"
+            }
+          ]
+        },
+    ...
+    ~~~
 
 #### Empty Sections
 
-<div class="stu-note" markdown="1">
-The proposal on empty sections is available: <a href="https://build.fhir.org/ig/hl7au/au-fhir-ps/branches/ft_conf-proposal/general-requirements.html">Narrative conformance requirements</a> e.g. Missing Data, Empty Sections.
+An AU PS Producer **SHOULD** omit non-mandatory sections when the source system does not have any information and does not know the reason the information is absent.
 
-This proposal will be voted on in next AU PS FHIR IG Call this Friday: <a href="https://confluence.hl7.org/spaces/HAFWG/pages/358878850/2025-07-11+AU+Patient+Summary+FHIR+IG+Agenda+Minutes">2025-07-11 AU Patient Summary FHIR IG Agenda/Minutes</a>.
-</div><!-- stu-note -->
+For a mandatory section (minimum cardinality is > 0), the section **SHALL** be present *even if* the source system does not have any information for that section or know the reason the information is absent. In this circumstance, an AU PS Producer **SHALL**:
+
+* use the code `unavailable` from the [List Empty Reasons](http://terminology.hl7.org/CodeSystem/list-empty-reason) code system
+* AU PS Consumers are advised that other meaningful values can be captured in `Composition.section.emptyReason` beyond missing or suppressed.
+  
+    Example: AU Patient Summary - Allergies and Intolerances Section where the patient's allergy information is not available.
+    ~~~
+        ...
+        "section" : [
+          {
+            "title" : "Allergies and Intolerances",
+            "code" : {
+            "coding" : [
+              {
+                "system" : "http://loinc.org",
+                "code" : "48765-2",
+                "display" : "Allergies and adverse reactions Document"
+              }
+            ]
+            },
+            "text" : {
+            "status" : "generated",
+            "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\" xml:lang=\"en-AU\" lang=\"en-AU\">There is no information available regarding the consumer's allergy conditions.</div>"
+            },
+            "emptyReason" : {
+              "coding" : [
+                {
+                "system" : "http://terminology.hl7.org/CodeSystem/list-empty-reason",
+                "code" : "unavailable",
+                "display" : "Unavailable"
+                }
+              ],
+              "text" : "No information available"
+            }
+          },
+        ...
+    ~~~
+
+#### Known absence of data due to workflow
+
+Where the system does not have information for a particular section and there is a known workflow reason (for example the patient preferred not to answer), the system **SHOULD** represent that reason by populating `Composition.section.emptyReason`:
+* Prefer not to answer may be represented by sending the [Data Absent Reason](http://terminology.hl7.org/CodeSystem/data-absent-reason) code "asked-declined"
+* Asked but not known may be represented by sending the [Data Absent Reason](http://terminology.hl7.org/CodeSystem/data-absent-reason) code "asked-unknown"
+* Where the workflow does not support obtaining the information, it may be represented by sending the [List Empty Reason](https://hl7.org/fhir/R4/codesystem-list-empty-reason.html) code "notasked"
+
+    Example: AU Patient Summary - Allergies and Intolerances Section where the patient's allergy information is not available.
+    ~~~
+        ...
+        "section" : [
+          {
+            "title" : "Allergies and Intolerances",
+            "code" : {
+            "coding" : [
+              {
+                "system" : "http://loinc.org",
+                "code" : "48765-2",
+                "display" : "Allergies and adverse reactions Document"
+              }
+            ]
+            },
+            "text" : {
+            "status" : "generated",
+            "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\" xml:lang=\"en-AU\" lang=\"en-AU\">The patient was not asked about allergies.</div>"
+            },
+            "emptyReason" : {
+              "coding" : [
+                {
+                "system" : "http://terminology.hl7.org/CodeSystem/list-empty-reason",
+                "code" : "notasked",
+                "display" : "Not Asked"
+                }
+              ],
+              "text" : "Patient was not asked"
+            }
+          },
+        ...
+    ~~~
+
+#### No Known X
+
+Where the system can assert "no known X" (for example no known conditions) or "no history of X", the system **SHOULD** populate `Composition.section.entry` in accordance with the relevant profile specific implementation guidance. 
+
+For example, to represent that a patient does not have an allergy or category of allergies, an appropriate negation code (e.g. 716186003 \|No known allergy\| or 1003774007 \|No known Hevea brasiliensis latex allergy\|) is used in `AllergyIntolerance.code` as per the profile specific implementation guidance for [AU PS AllergyIntolerance](StructureDefinition-au-ps-allergyintolerance.html).
+
+In AU PS this approach is preferred to using `Composition.section.emptyReason` due to the widely known and implemented patterns established within FHIR, IPS, and AU Core, to assert "no known X" or "no history of X". 
+
+    Example: Condition resource representing 'No Known Problems'
+    ~~~
+    ...
+    {
+      "resourceType" : "Condition",
+      "clinicalStatus" : "active",
+      "code" : {
+        "coding" : [
+          {
+            "system" : "http://snomed.info/sct",
+            "code" : "160245001",
+            "display" : "No current problems or disability"
+          }
+        ]
+      },
+    ...
+    ~~~
 
 ### Suppressed Data
 
-<div class="stu-note" markdown="1">
-The proposal on suppressed data is available: <a href="https://build.fhir.org/ig/hl7au/au-fhir-ps/branches/ft_conf-proposal/general-requirements.html">Narrative conformance requirements</a> e.g. Missing Data, Empty Sections.
+In some circumstances, specific pieces of data are hidden:
+* if an optional section (minimum cardinality = 0) is not able to be shared it **MAY** be omitted but if provided use the code `unavailable` or `withheld` from the [List Empty Reason](https://hl7.org/fhir/R4/codesystem-list-empty-reason.html) in `Composition.section.emptyReason`.
+* if a mandatory section (minimum cardinality > 0) is not able to be shared use the code `unavailable` or `withheld` from the [List Empty Reason](https://hl7.org/fhir/R4/codesystem-list-empty-reason.html) in `Composition.section.emptyReason`.
+* if an optional element (minimum cardinality = 0) is not able to be shared, it **SHALL** be omitted.
+* if a mandatory element (minimum cardinality > 0) is not able to be shared use the code `unknown` or `masked` from the [DataAbsentReason Code System](http://terminology.hl7.org/CodeSystem/data-absent-reason) following the section on [Missing Data](#missing-data).
 
-This proposal will be voted on in next AU PS FHIR IG Call this Friday: <a href="https://confluence.hl7.org/spaces/HAFWG/pages/358878850/2025-07-11+AU+Patient+Summary+FHIR+IG+Agenda+Minutes">2025-07-11 AU Patient Summary FHIR IG Agenda/Minutes</a>.
-</div><!-- stu-note -->
+    Example: AU Patient Summary - Allergies and Intolerances Section where the patient's allergy information is not to be allowed shared.
+    ~~~
+        ...
+        "section" : [
+            {
+                "title" : "Allergies and Intolerances",
+                "code" : {
+                "coding" : [
+                    {
+                    "system" : "http://loinc.org",
+                    "code" : "48765-2",
+                    "display" : "Allergies and adverse reactions Document"
+                    }
+                ]
+                },
+                "text" : {
+                "status" : "generated",
+                "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\" xml:lang=\"en-AU\" lang=\"en-AU\">This information is withheld.</div>"
+                },
+                "emptyReason" : {
+                "coding" : [
+                    {
+                    "system" : "http://terminology.hl7.org/CodeSystem/list-empty-reason",
+                    "code" : "withheld",
+                    "display" : "Withheld"
+                    }
+                ],
+                "text" : "Withheld"
+                }
+            },
+        ...
+    ~~~
+    
 
 ### Must Support and Obligation
 Labelling an element *[Must Support](https://www.hl7.org/fhir/conformance-rules.html#mustSupport)* means that systems that produce or consume resources **SHALL** provide support for the element in some meaningful way. The FHIR standard does not define exactly what 'meaningful' support for an element means, but indicates that a profile **SHALL** make clear exactly what kind of support is required when an element is labelled as *Must Support*.
