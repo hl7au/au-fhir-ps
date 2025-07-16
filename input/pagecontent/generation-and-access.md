@@ -23,10 +23,9 @@ The `$summary` operation returns a FHIR document Bundle resource containing a Co
 
 A Patient Summary Consumer can invoke the Patient `$summary` operation on a Patient Summary Server to retrieve an on-demand, system generated patient summary. The operation can also be used internally within a system to generate an initial Patient Summary document that a user can review, curate, assert, display, persist or take further action on.
 
-
- <div> 
-    <img src="summaryoperation.png" alt="IPS Summary Operation" style="width:35%"/>
-  </div>
+<div> 
+  <img src="ga-summaryoperation.png" alt="IPS Summary Operation" style="width:60%"/>
+</div>
 *Figure 1: The IPS Summary Operation*
 <br/>
 
@@ -55,8 +54,8 @@ The document metadata provided in the return DocumentReference resource can be u
 The `$docref` operation supports several document retrieval use cases, including retrieving a patient summary at previous point in time, a current patient summary and on-demand generation. The benefit of this operation is having a single endpoint to support these multiple scenarios, including other document types and formats such as HL7 CDA and PDF documents. This flexibility suggests that jurisdictional and implementation level profiles may be useful to clearly specify the supported input parameters, document capabilities and output behaviour of the operation. 
 
 <div> 
-    <img src="docrefoperation.png" alt="IPA Fetch DocumentReference Operation" style="width:40%"/>
-  </div>
+  <img src="ga-docrefoperation.png" alt="IPA Fetch DocumentReference Operation" style="width:60%"/>
+</div>
 *Figure 2: The IPA Fetch DocumentReference Operation*
 <br/>
 
@@ -70,8 +69,8 @@ The Bundle create interaction supports when a Patient Summary Producer wants to 
 A Patient Summary Producer can choose to upload the document directly to the Patient Summary Consumer using the Bundle create interaction so the Consumer can process or view the document. 
 
 <div> 
-    <img src="BundleInteractions.png" alt="Document Bundle Interactions" style="width:55%"/>
-  </div>
+  <img src="ga-bundleinteractions.png" alt="Document Bundle Interactions" style="width:80%"/>
+</div>
 *Figure 3: Document Bundle Interactions*
 <br/>
 
@@ -92,8 +91,8 @@ The Patient Summary Consumer can use the `content.attachment.url` element value 
 A system that produces a Patient Summary document internally can allow a Patient Summary Consumer to discover and retrieve documents using the DocumentReference search and Bundle read interactions as described above.   
 
 <div> 
-    <img src="BundleDocRefInteractions.png" alt="Document Bundle and Document Reference Interactions" style="width:60%"/>
-  </div>
+  <img src="ga-bundledocrefinteractions.png" alt="Document Bundle and Document Reference Interactions" style="width:80%"/>
+</div>
 *Figure 4: Document Bundle and Document Reference Interactions*
 <br/>
 
@@ -108,8 +107,8 @@ The Patient Summary Server accepts the DocumentReference resource, extracts and 
 Where the DocumentReference is included in the Create DocumentReference response, the persisted version is returned containing the `DocumentReference.content.attachment.url`. Similarly, search responses containing the DocumentReference will return the `attachment.url` and a Read Bundle request will be required to retrieve the Patient Summary document.
 
 <div> 
-    <img src="MHDSimplifiedPublish.png" alt="IHE MHD Simplified Publish" style="width:60%"/>
-  </div>
+  <img src="ga-mhdsimplifiedpublish.png" alt="IHE MHD Simplified Publish" style="width:100%"/>
+</div>
 *Figure 5: IHE MHD Simplified Publish*
 <br/>
 
@@ -119,8 +118,8 @@ There are scenarios where Patient Summary document exchange is not capable using
 Public Key Infrastructure (PKI) is an established approach to ensure end to end security of Patient Summary document by encrypting document file being exchanged using the public key of the intended recipient. Once the file is delivered to the intended recipient, the file can be decrypted using the recipient's private key. The decrypted file can then be uploaded into the Patient Summary Consumer system for processing.
 
 <div> 
-    <img src="encryptfileexchange.png" alt="Encrypted File Exchange" style="width:60%"/>
-  </div>
+  <img src="ga-encryptedfileexchange.png" alt="Encrypted File Exchange" style="width:60%"/>
+</div>
 *Figure 6: Encrypted File Exchange*
 <br/>
 
@@ -132,8 +131,8 @@ A user that wants to share a Patient Summary document retrieves a SMART Health L
 When the Receiving User submits the SHL to the SHL Receiving Application, the decoded data from the link, along with the passcode provided by the Sharing User, is used to retrieve the manifest file from the SHL Sharing Application.  The returned manifest contains a set of files, with either a location URL to the file or embedded file data. When the file is retrieved or decoded, the file is then decrypted using the key encoded in the SHL.  The decrypted file contains the Patient Summary document Bundle resource, which can then be processed by the SHL Receiving Application.
 
 <div> 
-    <img src="SMARTHealthLinks.png" alt="SMART Health Links Patient Summary Exchange" style="width:60%"/>
-  </div>
+  <img src="ga-smarthealthlinks.png" alt="SMART Health Links Patient Summary Exchange" style="width:100%"/>
+</div>
 *Figure 7: SMART Health Links Patient Summary Exchange*
 <br/>
 
