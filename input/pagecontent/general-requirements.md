@@ -269,9 +269,9 @@ Implementers need to refer to the "Key Elements Table" to see the full set of el
 
 #### Interpreting profile elements labelled Must Support
 
-The section is provided as additional support in understanding the application of *Must Support* and Obligations on elements in AU Patient Summary. This section does not override the Obligations defined for an actor - implementers should also read the profile specific implementation guidance for any qualifying requirements placed on the Obligations for a *Must Support* element.
+The section is provided as additional support in understanding the application of *Must Support* and Obligations on elements in AU Patient Summary. This section does not override the Obligations defined for an actor - implementers are recommended to also read the profile specific implementation guidance for any qualifying requirements placed on the Obligations for a *Must Support* element.
 
-Profiles defined in this implementation publication flag *Must Support* on elements (e.g. `Patient.name`) and sub-elements of a data type (e.g. `Patient.name.use`). The explanation on how to interpret *Must Support* for an element does not address rules defined in each profile - which may limit or extend what is allowed for each element.
+Profiles defined in this implementation guide flag *Must Support* on elements (e.g. `Patient.name`) and sub-elements of a data type (e.g. `Patient.name.use`). The explanation on how to interpret *Must Support* for an element does not address rules defined in each profile - which may limit or extend what is allowed for each element.
 
 The sub-elements for each supported element in a profile are defined by a combination of the data type from the core specification and any additional rules included in the profile. A profile may include rules that:
 - limit what is considered 'valid'
@@ -284,11 +284,11 @@ Typically AU PS profiles will inherit extended sub-elements from the base HL7 AU
 The full set of sub-elements is visible in the "Key Elements Table" or "Snapshot Table" which shows the sub-elements defined in this profile (shown in the "Differential Table") and the sub-elements inherited from a base profile.
 
 ##### Must Support - Composition Sections
-Obligations vary significantly for elements in the AU PS Composition profile, in particular obligations on `Composition.section` reflect the expectations of [The "IPS"](https://build.fhir.org/ig/HL7/fhir-ips/Structure-of-the-International-Patient-Summary.html) and  [ISO 27269](https://www.iso.org/standard/79491.html):
-- AU PS Consumers **SHALL** consume Compositions if a section is present and containing any valid value, and **SHOULD** display the value of this element (if the SHOULD:display Obligation is flagged) when presenting the data from the resource to a human user.
-- For all mandatory sections (`Composition.section` minimum cardinality > 0) AU PS Producers **SHALL** correctly populate the section if a value is known. 
-- For all recommended sections AU PS Producers **SHOULD** correctly populate the section if a value is known. 
-- For all optional or undefined sections AU PS Producers **MAY** correctly populate the section if a value is known. 
+Obligations vary significantly for elements in the AU PS Composition profile, in particular obligations on `Composition.section` reflect the expectations of [The "IPS"](https://build.fhir.org/ig/HL7/fhir-ips/Structure-of-the-International-Patient-Summary.html) and  [ISO 27269](https://www.iso.org/standard/79491.html). A summary is provided below:
+- AU PS Consumers **SHALL** consume Compositions if a section is present and containing any valid value, and **SHOULD** display the content of the section when presenting the data to a human user.
+- For all mandatory sections (`Composition.section` minimum cardinality > 0) AU PS Producers **SHALL** correctly populate the section if a value is known, and **SHALL** be capable of populating `Composition.section.entry` and **SHOULD** correctly populate `Composition.section.entry` is a value is known. 
+- For all recommended sections AU PS Producers **SHOULD** correctly populate the section if a value is known, and **SHOULD** correctly populate `Composition.section.entry` is a value is known. 
+- For all optional or undefined sections AU PS Producers **MAY** correctly populate the section if a value is known, and **MAY** correctly populate `Composition.section.entry` is a value is known. 
 
 See [Structure of the Australian Patient Summary (AU PS)](general-guidance.html#structure-of-the-australian-patient-summary-au-ps) for information on the mandatory, recommended, and optional sections.
 
