@@ -15,7 +15,7 @@
 - **SHALL** for each mandatory section in AU PS Composition, implement the AU PS profiles referenced by the corresponding section entry (i.e. AU PS AllergyIntolerance, AU PS Condition, and at least one of AU PS MedicationStatement and AU PS MedicationRequest)&#xa;&#xa;
 - **SHOULD** for each recommended section in AU PS Composition, implement the profiles referenced by the corresponding section entry (e.g. AU PS Immunization, Observation Results - Radiology (IPS), AU PS Procedure, and DeviceUseStatement (IPS))&#xa;&#xa;
 - **SHOULD** for each optional or undefined section, implement profiles referenced in the AU PS Bundle, otherwise implement an AU Core or AU Base profile where applicable&#xa;&#xa;
-- **SHALL** implement the AU PS Producer obligations defined in the implemented profiles. Where an IPS profile is referenced in the AU PS Bundle the obligations of the Producer (IPS) actor SHALL apply&#xa;&#xa;
+- **SHALL** implement the AU PS Producer obligations defined in the implemented profiles. Where an IPS profile is referenced in the AU PS Bundle the obligations of the Producer (IPS) actor **SHALL** apply&#xa;&#xa;
 - **SHALL** implement the requirements on [Suppressed Data](https://build.fhir.org/ig/hl7au/au-fhir-ps/branches/master/general-requirements.html#suppressed-data) when an data is NOT allowed to be shared&#xa;&#xa;
 - **SHALL** implement the requirements on [Missing Data, Empty Sections, Known Absence of Data](https://build.fhir.org/ig/hl7au/au-fhir-ps/branches/master/general-requirements.html#missing-data-empty-sections-known-absence-of-data)"/>
   <derivedFrom value="http://hl7.org/fhir/uv/ips/ActorDefinition/Creator"/>
