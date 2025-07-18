@@ -169,7 +169,7 @@ Where the system does not have information for a particular section and there is
 
 #### No Known X
 
-Where the system can assert "no known X" (for example no known conditions) or "no history of X", the system **SHOULD** populate `Composition.section.entry` in accordance with the relevant profile specific implementation guidance. 
+Where the system can assert "no known X" (for example no known conditions) or "no history of X" (for example no history of cardiovascular system disease), the system **SHOULD** populate `Composition.section.entry` in accordance with the relevant profile specific implementation guidance. 
 
 For example, to represent that a patient does not have an allergy or category of allergies, an appropriate negation code (e.g. 716186003 \|No known allergy\| or 1003774007 \|No known Hevea brasiliensis latex allergy\|) is used in `AllergyIntolerance.code` as per the profile specific implementation guidance for [AU PS AllergyIntolerance](StructureDefinition-au-ps-allergyintolerance.html).
 
