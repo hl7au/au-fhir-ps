@@ -58,31 +58,31 @@ If the data element is a mandatory element (minimum cardinality is > 0), the ele
 
     Example: MedicationRequest resource where status and requester are missing
     ~~~
-      ...
-      {
-        "resourceType" : "MedicationRequest",
-        "status" : "unknown",
-        "intent" : "order",
-        "medicationCodeableConcept" : {
-          "coding" : [
-            {
-              "system" : "http://snomed.info/sct",
-              "code" : "79115011000036100",
-              "display" : "Paracetamol 500 mg + codeine phosphate hemihydrate 30 mg tablet"
-            }
-          ]
-        },
         ...
-        "authoredOn" : "2018-07-15",
-        "requester" : {
-          "extension" : [
-            {
-              "url" : "http://hl7.org/fhir/StructureDefinition/data-absent-reason",
-              "valueCode" : "unknown"
-            }
-          ]
-        },
-      ...
+        {
+          "resourceType" : "MedicationRequest",
+          "status" : "unknown",
+          "intent" : "order",
+          "medicationCodeableConcept" : {
+            "coding" : [
+              {
+                "system" : "http://snomed.info/sct",
+                "code" : "79115011000036100",
+                "display" : "Paracetamol 500 mg + codeine phosphate hemihydrate 30 mg tablet"
+              }
+            ]
+          },
+          ...
+          "authoredOn" : "2018-07-15",
+          "requester" : {
+            "extension" : [
+              {
+                "url" : "http://hl7.org/fhir/StructureDefinition/data-absent-reason",
+                "valueCode" : "unknown"
+              }
+            ]
+          },
+        ...
     ~~~
 
 #### Empty Sections
@@ -177,20 +177,20 @@ In AU PS this approach is preferred to using `Composition.section.emptyReason` d
 
     Example: Condition resource representing 'No Known Problems'
     ~~~
-      ...
-      {
-        "resourceType" : "Condition",
-        "clinicalStatus" : "active",
-        "code" : {
-          "coding" : [
-            {
-              "system" : "http://snomed.info/sct",
-              "code" : "160245001",
-              "display" : "No current problems or disability"
-            }
-          ]
-        },
-      ...
+        ...
+        {
+          "resourceType" : "Condition",
+          "clinicalStatus" : "active",
+          "code" : {
+            "coding" : [
+              {
+                "system" : "http://snomed.info/sct",
+                "code" : "160245001",
+                "display" : "No current problems or disability"
+              }
+            ]
+          },
+        ...
     ~~~
 
 ### Suppressed Data
