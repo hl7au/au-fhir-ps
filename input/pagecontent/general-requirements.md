@@ -1,8 +1,8 @@
 {::options toc_levels="1..4"/}
 
-### Conforming to AU Patient Summary
+### Conforming to AU Patient Summary (AU PS)
 
-Systems claiming conformance to AU Patient Summary will represent digital health information using the content models of AU Patient Summary profiles AND implement the requirements for one or both [AU PS actors](actors.html).
+Systems claiming conformance to AU PS will represent digital health information using the content models of [AU PS profiles](profiles-and-extensions.html) AND implement the requirements of one or both [AU PS actors](actors.html).
 
 The requirements of the FHIR standard and [FHIR Conformance Rules](http://hl7.org/fhir/conformance-rules.html) apply, and define the use of terms in this guide including the conformance verbs - **SHALL**, **SHALL NOT**, **SHOULD**, **SHOULD NOT**, **MAY**.
 
@@ -36,7 +36,7 @@ The convention in this guide is to mark all mandatory and conditionally mandator
 ### Missing Data, Empty Sections, Known Absence of Data
 It is important to differentiate between:
 * affirmatively stating that a patient has "no known X" or "history of X" (for example that a patient has no known allergies) versus 
-* not having data in the record for a particular section (for example where a source system does not have information on a patient's medical devices) versus 
+* not having data in the record for a particular section (for example where a source system does not have information on a patient's allergies) versus 
 * asserting that this data is not available due to a workflow reason (for example allergies not were not reviewed and are unknown) versus 
 * not having data for a particular element (for example the onset date of a particular allergy is not available in the system and the system does not know the reason for the absence).
 
@@ -94,7 +94,7 @@ For a mandatory section (minimum cardinality is > 0), the section **SHALL** be p
 * use the code `unavailable` from the [List Empty Reasons](http://terminology.hl7.org/CodeSystem/list-empty-reason) code system
 * AU PS Consumers are advised that other meaningful values can be captured in `Composition.section.emptyReason` beyond missing or suppressed.
   
-    Example: AU Patient Summary - Allergies and Intolerances Section where the patient's allergy information is not available.
+    Example: AU PS - Allergies and Intolerances Section where the patient's allergy information is not available.
     ~~~
         ...
         "section" : [
@@ -134,7 +134,7 @@ Where the system does not have information for a particular section and there is
 * Asked but not known may be represented by sending the [Data Absent Reason](http://terminology.hl7.org/CodeSystem/data-absent-reason) code "asked-unknown"
 * Where the workflow does not support obtaining the information, it may be represented by sending the [List Empty Reason](https://hl7.org/fhir/R4/codesystem-list-empty-reason.html) code "notasked"
 
-    Example: AU Patient Summary - Allergies and Intolerances Section where the patient's allergy information is not available.
+    Example: AU PS - Allergies and Intolerances Section where the patient's allergy information is not available.
     ~~~
         ...
         "section" : [
@@ -201,7 +201,7 @@ In some circumstances, specific pieces of data are hidden:
 * if an optional element (minimum cardinality = 0) is not able to be shared, it **SHALL** be omitted.
 * if a mandatory element (minimum cardinality > 0) is not able to be shared, use the code `unknown` or `masked` from the [DataAbsentReason Code System](http://terminology.hl7.org/CodeSystem/data-absent-reason) following the section on [Missing Data](#missing-data).
 
-    Example: AU Patient Summary - Allergies and Intolerances Section where the patient's allergy information is not allowed to be shared.
+    Example: AU PS - Allergies and Intolerances Section where the patient's allergy information is not allowed to be shared.
     ~~~
         ...
         "section" : [
@@ -269,7 +269,7 @@ Implementers need to refer to the "Key Elements Table" to see the full set of el
 
 #### Interpreting profile elements labelled Must Support
 
-The section is provided as additional support in understanding the application of *Must Support* and Obligations on elements in AU Patient Summary. This section does not override the Obligations defined for an actor - implementers are recommended to also read the profile specific implementation guidance for any qualifying requirements placed on the Obligations for a *Must Support* element.
+The section is provided as additional support in understanding the application of *Must Support* and Obligations on elements in AU PS. This section does not override the Obligations defined for an actor - implementers are recommended to also read the profile specific implementation guidance for any qualifying requirements placed on the Obligations for a *Must Support* element.
 
 Profiles defined in this implementation guide flag *Must Support* on elements (e.g. `Patient.name`) and sub-elements of a data type (e.g. `Patient.name.use`). The explanation on how to interpret *Must Support* for an element does not address rules defined in each profile - which may limit or extend what is allowed for each element.
 
