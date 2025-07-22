@@ -162,4 +162,4 @@ Profile |Element|Additional fixed value
 
 ### Considerations when consuming IPS Documents in AU healthcare context
 
-<p class="request-for-feedback">Implementers are requested to contribute via comment on <a href="TBD">TBD</a> the functional limitations of receiving an IPS document that does not conform to national expectations e.g. does not include Australian identifiers, does not include clinical terminology from a national set (see specific localisations listed above), does not include mandatory elements.</p>
+<p class="request-for-feedback">Implementers are requested to contribute via comment on <a href="https://jira.hl7.org/browse/FHIR-51547">FHIR-51547</a> the functional limitations of receiving an IPS document that does not conform to national expectations e.g. does not include Australian identifiers, does not include clinical terminology from a national set (see specific localisations listed above), does not include mandatory elements.</p>
