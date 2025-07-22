@@ -6,19 +6,19 @@
 
 A patient summary is a standardised collection of patient information. Rather than an entire patient health record, it is the necessary minimum and sufficient data to ensure safe patient care. Patient summaries can enhance patient safety by ensuring critical information is readily accessible when it’s needed most and enables clinicians across different health sectors and health domains to provide more informed, consistent care.
 
-The International Patient Summary is a globally recognised patient summary standard. In 2021, the G7 nations committed to working towards the adoption of the International Patient Summary (IPS) with several international efforts being currently underway to drive adoption, including the European Union, USA, Canada and New Zealand. Multinational vendors with presence in Australia are at various stages of implementation of the IPS.
+The [IPS](https://build.fhir.org/ig/HL7/fhir-ips) is a globally recognised patient summary standard. In 2021, the G7 nations committed to working towards the adoption of the IPS with several international efforts being currently underway to drive adoption, including the European Union, USA, Canada and New Zealand. Multinational vendors with presence in Australia are at various stages of implementation of the IPS.
 
 The AU PS will support the consumer on their healthcare journey, providing the consumer and their healthcare providers with timely and current access to relevant health information. It will provide a future pathway for individuals to share their healthcare information when travelling internationally. An AU PS is intended to:
 * be an interoperable set of clinical data - it is an electronic health record extract containing essential healthcare information about a consumer
 * support individuals on their healthcare journey including transitions of care 
-* contain as up to date information as possible based on available sources at a point in time.
+* contain as up to date information as possible based on available sources at a point in time
 * be portable and accessible to the individual and their healthcare providers
-* be able to be used within an Australian state or territories borders, across state and territory borders, internationally
+* be able to be used within an Australian state or territory, across state and territory borders, internationally
 
 <div> 
    <img src="AU-context.png" alt="Context of AU PS across a Consumer's Healthcare Journey" style="width:70%"/>
   </div>
-*Figure 1: Context of AU PS across a Consumer's Healthcare Journey*
+*Figure 1: Context of AU PS across a Consumer's Healthcare Journey in Australia*
 <br/>
 
 A sample set of Consumer Journeys have been developed by the Sparked AU Patient Summary Clinical Focus Group to help illustrate the interactions and use of a patient summary during a consumer’s healthcare journey in the Australian healthcare context; available here: [AU Patient Summary Consumer Journeys](https://sparked.csiro.au/index.php/products-resources/au-ps-consumer-journeys/). The Consumer Journeys have been used to develop [two example use cases](usecase.html) to assist implementers in understanding how AU PS could be implemented.
@@ -57,7 +57,7 @@ The AU PS is based on [IPS](https://build.fhir.org/ig/HL7/fhir-ips/) and [AU Cor
 *Figure 3: The AU PS 'Passport'*
 <br/>
 
-While AU PS has no variance (i.e. fully compliant) from IPS Implementation Guide version 2.0.0-ci-build ([current](https://build.fhir.org/ig/HL7/fhir-ips)), AU PS does impose requirements additional to IPS to support requirements in the Australian healthcare context (primarily from AUCDI and AU Core). These additional requirements are intentionally limited to maximise interopability with IPS-aware systems. See [Comparison with other national and international IGs](comparison.html) and [Relationship with other IGs](relationship.html) for information on the national and international standards context of AU PS.
+While AU PS has no variance (i.e. fully compliant) from IPS Implementation Guide version 2.0.0-ci-build ([current](https://build.fhir.org/ig/HL7/fhir-ips)), AU PS does impose requirements additional to IPS to support requirements in the Australian healthcare context (these primarily come from AUCDI and AU Core). These additional requirements are intentionally limited to maximise interopability with IPS-aware systems. See [Comparison with other national and international IGs](comparison.html) and [Relationship with other IGs](relationship.html) for information on the national and international standards context of AU PS.
 
 Additional requirements include:
 * additionally profiled resources
@@ -69,7 +69,7 @@ Additional requirements include:
 * additional business rules
 * clarified expectations for missing data, empty sections, and suppressed data
 
-A summary of differences is provided in the sections below. These sections do not override the requirements defined in AU PS [Conformance](general-requirements.html), [Actors](actors.html), and [Profiles](profiles-and-extensions.html).
+A summary of differences is provided in the sections below. While every effort has been made to ensure this page is consistent with the requirements of AU PS this is not a normative part of the specification.
 
 
 #### Additionally Profiled Resources
@@ -147,7 +147,7 @@ Profile |Conditionally Mandatory Element defined in AU PS
 IPS does not provide recommendations on the types of identifiers used in resources, this is expected to be defined as needed in jurisdictional specifications. In AU PS, a number of optional national Australian healthcare identifiers are labelled with *Must Support*, see the table in the section [Must Support - Choice of Identifiers](general-requirements.html#must-support---choice-of-identifiers) for the full list and to interpret the support requirements for producers and consumers.
 
 #### Fixed values
-Vitals TBD
+AU PS includes additional fixed value constraints to some elements in profiles either directly in an AU PS profile or via reference to an AU Core profile. These additional fixed values are typically in Observation profiles and add a fixed SNOMED CT concept in `Observation.code` in addition to the LOINC code. See the table below:
 
 Profile |Element|Additional fixed value
 ---|---|---

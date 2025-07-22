@@ -37,6 +37,7 @@ This guide is divided into several pages which are listed at the top of each pag
 - [Conformance](conformance.html): These pages describe the set of rules to claim conformance to this guide including the expectations for *Must Support*  elements in AU PS profiles.
   - [General Requirements](general-requirements.html): This page defines requirements common to profiles used in this guide including the expectations for mandatory and *Must Support*  elements in AU PS profiles.
   - [Declaring Conformance](declaring-conformance.html): This page describes how to declare conformance to AU PS.
+- [The AU PS](the-aups.html): This page describes the AU PS including structure, context of use, and localisation of the IPS.
 - [Guidance](guidance.html): These pages list the guidance for this guide.
   - [General Guidance](general-guidance.html): This page provides guidance on using the profiles defined in this guide. 
   - [Sex and Gender](sex-and-gender.html): This page provides guidance on the representation of sex, gender, and related concepts.
@@ -45,7 +46,7 @@ This guide is divided into several pages which are listed at the top of each pag
   - [AU Variance Statement](variance.html): This page documents the variance from AU Base and AU Core.
   - [Comparison with other national and international IGs](comparison.html): This page provides comparison between AU PS profiles and other national and international implementation guides.
   - [Future of AU PS](future.html): This page outlines the approach to developing AU PS.
-- [Use Cases](usecase.html): These pages document a set of example use cases that assist in understanding how to implement AU PS.
+- [Example Use Cases](usecase.html): These pages document a set of example use cases that assist in understanding how to implement AU PS.
    - [Interstate GP Visit](uc-interstate.html): This page documents the Interstate GP Visit - Patient Driven Patient Summary example use case.
    - [Referral to Specialist and Allied Health](uc-referral.html): This page documents the Referral to Specialist and Allied Health - Clinician Driven Patient Summary (as Supplemental Information) example use case.
 - [Security and Privacy](security.html): This page documents the AU PS general security and privacy requirements and recommendations.
