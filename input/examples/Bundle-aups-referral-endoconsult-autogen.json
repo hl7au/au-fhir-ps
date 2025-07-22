@@ -1922,7 +1922,11 @@
       "fullUrl": "urn:uuid:cbfc61f0-81e7-4cfd-8089-f6b605c214e7",
       "resource": {
         "resourceType": "Observation",
-        "id": "cbfc61f0-81e7-4cfd-8089-f6b605c214e7",
+        "meta": {
+          "profile": [
+            "http://hl7.org.au/fhir/ps/StructureDefinition/au-ps-diagnosticresult-path"
+          ]
+        },
         "status": "final",
         "category": [
           {
@@ -1971,7 +1975,11 @@
       "fullUrl": "urn:uuid:743ff71f-ddc2-4fc7-8745-b3a15cb1a14c",
       "resource": {
         "resourceType": "Observation",
-        "id": "743ff71f-ddc2-4fc7-8745-b3a15cb1a14c",
+        "meta": {
+          "profile": [
+            "http://hl7.org.au/fhir/ps/StructureDefinition/au-ps-diagnosticresult-path"
+          ]
+        },
         "status": "final",
         "category": [
           {
@@ -2020,7 +2028,11 @@
       "fullUrl": "urn:uuid:0b585e1f-11a5-4a31-8883-37591ff9dc8b",
       "resource": {
         "resourceType": "Observation",
-        "id": "0b585e1f-11a5-4a31-8883-37591ff9dc8b",
+        "meta": {
+          "profile": [
+            "http://hl7.org.au/fhir/ps/StructureDefinition/au-ps-diagnosticresult-path"
+          ]
+        },
         "status": "final",
         "category": [
           {
@@ -2069,7 +2081,11 @@
       "fullUrl": "urn:uuid:5ae482c0-6ba0-4c95-8ee2-501accec3881",
       "resource": {
         "resourceType": "Observation",
-        "id": "5ae482c0-6ba0-4c95-8ee2-501accec3881",
+        "meta": {
+          "profile": [
+            "http://hl7.org.au/fhir/ps/StructureDefinition/au-ps-diagnosticresult-path"
+          ]
+        },
         "status": "final",
         "category": [
           {
@@ -2118,7 +2134,11 @@
       "fullUrl": "urn:uuid:ad2ff609-df59-4639-a5e1-f0f39f22fe71",
       "resource": {
         "resourceType": "Observation",
-        "id": "ad2ff609-df59-4639-a5e1-f0f39f22fe71",
+        "meta": {
+          "profile": [
+            "http://hl7.org.au/fhir/ps/StructureDefinition/au-ps-diagnosticresult-path"
+          ]
+        },
         "status": "final",
         "category": [
           {
@@ -2167,7 +2187,11 @@
       "fullUrl": "urn:uuid:b8d46cb5-03fb-4076-a1df-95bbc9711910",
       "resource": {
         "resourceType": "Observation",
-        "id": "b8d46cb5-03fb-4076-a1df-95bbc9711910",
+        "meta": {
+          "profile": [
+            "http://hl7.org.au/fhir/ps/StructureDefinition/au-ps-diagnosticresult-path"
+          ]
+        },
         "status": "final",
         "category": [
           {
@@ -2216,7 +2240,11 @@
       "fullUrl": "urn:uuid:f53009c0-b5a3-4a06-90ae-45bd397b6e54",
       "resource": {
         "resourceType": "Observation",
-        "id": "f53009c0-b5a3-4a06-90ae-45bd397b6e54",
+        "meta": {
+          "profile": [
+            "http://hl7.org.au/fhir/ps/StructureDefinition/au-ps-diagnosticresult-path"
+          ]
+        },       
         "status": "final",
         "category": [
           {
@@ -2260,7 +2288,11 @@
       "fullUrl": "urn:uuid:71503a48-c2cd-4e6a-9fb1-0d9f8d70a05e",
       "resource": {
         "resourceType": "Observation",
-        "id": "71503a48-c2cd-4e6a-9fb1-0d9f8d70a05e",
+        "meta": {
+          "profile": [
+            "http://hl7.org.au/fhir/ps/StructureDefinition/au-ps-diagnosticresult-path"
+          ]
+        },
         "status": "final",
         "category": [
           {
@@ -2304,7 +2336,11 @@
       "fullUrl": "urn:uuid:167e068e-26ab-4c3d-8477-88e70a143e62",
       "resource": {
         "resourceType": "Observation",
-        "id": "167e068e-26ab-4c3d-8477-88e70a143e62",
+        "meta": {
+          "profile": [
+            "http://hl7.org.au/fhir/ps/StructureDefinition/au-ps-diagnosticresult-path"
+          ]
+        },
         "status": "final",
         "category": [
           {
@@ -2350,7 +2386,11 @@
       "fullUrl": "urn:uuid:7dc87c3e-cf74-4648-85e7-90a9b5fd5bc1",
       "resource": {
         "resourceType": "Observation",
-        "id": "7dc87c3e-cf74-4648-85e7-90a9b5fd5bc1",
+        "meta": {
+          "profile": [
+            "http://hl7.org.au/fhir/ps/StructureDefinition/au-ps-diagnosticresult-path"
+          ]
+        },
         "status": "final",
         "category": [
           {
@@ -2396,7 +2436,11 @@
       "fullUrl": "urn:uuid:8c573f90-bd59-427b-b751-7d2fdd80925b",
       "resource": {
         "resourceType": "Observation",
-        "id": "8c573f90-bd59-427b-b751-7d2fdd80925b",
+        "meta": {
+          "profile": [
+            "http://hl7.org.au/fhir/ps/StructureDefinition/au-ps-diagnosticresult-path"
+          ]
+        },
         "status": "final",
         "category": [
           {
@@ -2440,7 +2484,11 @@
       "fullUrl": "urn:uuid:4f9ef0c2-b431-43b2-8085-2c0a8cd08637",
       "resource": {
         "resourceType": "Observation",
-        "id": "4f9ef0c2-b431-43b2-8085-2c0a8cd08637",
+        "meta": {
+          "profile": [
+            "http://hl7.org.au/fhir/ps/StructureDefinition/au-ps-diagnosticresult-path"
+          ]
+        },
         "status": "final",
         "category": [
           {
@@ -2484,7 +2532,11 @@
       "fullUrl": "urn:uuid:ef08a9b0-89a4-47f7-bd4c-72c4c27c53ae",
       "resource": {
         "resourceType": "Observation",
-        "id": "ef08a9b0-89a4-47f7-bd4c-72c4c27c53ae",
+        "meta": {
+          "profile": [
+            "http://hl7.org.au/fhir/ps/StructureDefinition/au-ps-diagnosticresult-path"
+          ]
+        },
         "status": "final",
         "category": [
           {
@@ -2528,7 +2580,11 @@
       "fullUrl": "urn:uuid:aecc0748-6c5d-4238-90ee-1af66f6c0c51",
       "resource": {
         "resourceType": "Observation",
-        "id": "aecc0748-6c5d-4238-90ee-1af66f6c0c51",
+        "meta": {
+          "profile": [
+            "http://hl7.org.au/fhir/ps/StructureDefinition/au-ps-diagnosticresult-path"
+          ]
+        },
         "status": "final",
         "category": [
           {
@@ -2572,7 +2628,11 @@
       "fullUrl": "urn:uuid:18b247c2-0c7e-4dcd-a19c-cf8205ce77cd",
       "resource": {
         "resourceType": "Observation",
-        "id": "18b247c2-0c7e-4dcd-a19c-cf8205ce77cd",
+        "meta": {
+          "profile": [
+            "http://hl7.org.au/fhir/ps/StructureDefinition/au-ps-diagnosticresult-path"
+          ]
+        },
         "status": "final",
         "category": [
           {
@@ -2616,7 +2676,11 @@
       "fullUrl": "urn:uuid:75c625ed-822e-4354-9827-aad8874a13ce",
       "resource": {
         "resourceType": "Observation",
-        "id": "75c625ed-822e-4354-9827-aad8874a13ce",
+        "meta": {
+          "profile": [
+            "http://hl7.org.au/fhir/ps/StructureDefinition/au-ps-diagnosticresult-path"
+          ]
+        },
         "status": "final",
         "category": [
           {
@@ -2662,7 +2726,11 @@
       "fullUrl": "urn:uuid:3ad4653a-f85c-4118-a7ff-c9dfa934eb56",
       "resource": {
         "resourceType": "Observation",
-        "id": "3ad4653a-f85c-4118-a7ff-c9dfa934eb56",
+        "meta": {
+          "profile": [
+            "http://hl7.org.au/fhir/ps/StructureDefinition/au-ps-diagnosticresult-path"
+          ]
+        },
         "status": "final",
         "category": [
           {
@@ -2706,7 +2774,11 @@
       "fullUrl": "urn:uuid:b2104279-70e1-4b49-805b-1193f9cfb63e",
       "resource": {
         "resourceType": "Observation",
-        "id": "b2104279-70e1-4b49-805b-1193f9cfb63e",
+        "meta": {
+          "profile": [
+            "http://hl7.org.au/fhir/ps/StructureDefinition/au-ps-diagnosticresult-path"
+          ]
+        },
         "status": "final",
         "category": [
           {
@@ -2750,7 +2822,11 @@
       "fullUrl": "urn:uuid:f5449417-bd88-451b-ba0e-61073d30f1a8",
       "resource": {
         "resourceType": "Observation",
-        "id": "f5449417-bd88-451b-ba0e-61073d30f1a8",
+        "meta": {
+          "profile": [
+            "http://hl7.org.au/fhir/ps/StructureDefinition/au-ps-diagnosticresult-path"
+          ]
+        },
         "status": "final",
         "category": [
           {
@@ -2794,7 +2870,11 @@
       "fullUrl": "urn:uuid:49b658b3-315d-4e83-b85c-d57547611dc5",
       "resource": {
         "resourceType": "Observation",
-        "id": "49b658b3-315d-4e83-b85c-d57547611dc5",
+        "meta": {
+          "profile": [
+            "http://hl7.org.au/fhir/ps/StructureDefinition/au-ps-diagnosticresult-path"
+          ]
+        },
         "status": "final",
         "category": [
           {
@@ -2854,7 +2934,11 @@
       "fullUrl": "urn:uuid:a0a0db9e-8922-40dd-ad6a-b3109ec3e4c2",
       "resource": {
         "resourceType": "Observation",
-        "id": "a0a0db9e-8922-40dd-ad6a-b3109ec3e4c2",
+        "meta": {
+          "profile": [
+            "http://hl7.org.au/fhir/ps/StructureDefinition/au-ps-diagnosticresult-path"
+          ]
+        },
         "status": "final",
         "category": [
           {
@@ -2914,7 +2998,11 @@
       "fullUrl": "urn:uuid:a4471b2a-cd87-41dd-921c-37e38d1f597c",
       "resource": {
         "resourceType": "Observation",
-        "id": "a4471b2a-cd87-41dd-921c-37e38d1f597c",
+        "meta": {
+          "profile": [
+            "http://hl7.org.au/fhir/ps/StructureDefinition/au-ps-diagnosticresult-path"
+          ]
+        },
         "status": "final",
         "category": [
           {
@@ -2958,7 +3046,11 @@
       "fullUrl": "urn:uuid:db32c14a-eca7-4998-bd7d-7b66dbc1fa23",
       "resource": {
         "resourceType": "Observation",
-        "id": "db32c14a-eca7-4998-bd7d-7b66dbc1fa23",
+        "meta": {
+          "profile": [
+            "http://hl7.org.au/fhir/ps/StructureDefinition/au-ps-diagnosticresult-path"
+          ]
+        },
         "status": "final",
         "category": [
           {
@@ -3002,7 +3094,11 @@
       "fullUrl": "urn:uuid:aaeaedd1-9f65-43e9-9569-c2a99c9488c9",
       "resource": {
         "resourceType": "Observation",
-        "id": "aaeaedd1-9f65-43e9-9569-c2a99c9488c9",
+        "meta": {
+          "profile": [
+            "http://hl7.org.au/fhir/ps/StructureDefinition/au-ps-diagnosticresult-path"
+          ]
+        },
         "status": "final",
         "category": [
           {
@@ -3046,7 +3142,11 @@
       "fullUrl": "urn:uuid:bafc1b41-323b-4cc6-971c-145608a96419",
       "resource": {
         "resourceType": "Observation",
-        "id": "bafc1b41-323b-4cc6-971c-145608a96419",
+        "meta": {
+          "profile": [
+            "http://hl7.org.au/fhir/ps/StructureDefinition/au-ps-diagnosticresult-path"
+          ]
+        },
         "status": "final",
         "category": [
           {
@@ -3098,7 +3198,11 @@
       "fullUrl": "urn:uuid:36b2e997-7b1c-4e94-b936-e8bd244da150",
       "resource": {
         "resourceType": "Observation",
-        "id": "36b2e997-7b1c-4e94-b936-e8bd244da150",
+        "meta": {
+          "profile": [
+            "http://hl7.org.au/fhir/ps/StructureDefinition/au-ps-diagnosticresult-path"
+          ]
+        },
         "status": "final",
         "category": [
           {
@@ -3150,7 +3254,11 @@
       "fullUrl": "urn:uuid:687e56d0-e45f-4bbd-b2e5-1df234f7d5e8",
       "resource": {
         "resourceType": "Observation",
-        "id": "687e56d0-e45f-4bbd-b2e5-1df234f7d5e8",
+        "meta": {
+          "profile": [
+            "http://hl7.org.au/fhir/ps/StructureDefinition/au-ps-diagnosticresult-path"
+          ]
+        },
         "status": "final",
         "category": [
           {
@@ -3202,7 +3310,11 @@
       "fullUrl": "urn:uuid:1e813570-e34f-49ae-9b78-c0ccaccbdb3b",
       "resource": {
         "resourceType": "Observation",
-        "id": "1e813570-e34f-49ae-9b78-c0ccaccbdb3b",
+        "meta": {
+          "profile": [
+            "http://hl7.org.au/fhir/ps/StructureDefinition/au-ps-diagnosticresult-path"
+          ]
+        },
         "status": "final",
         "category": [
           {
@@ -3254,7 +3366,11 @@
       "fullUrl": "urn:uuid:bd10f9e1-df70-4aef-bfaa-b65aca083868",
       "resource": {
         "resourceType": "Observation",
-        "id": "bd10f9e1-df70-4aef-bfaa-b65aca083868",
+        "meta": {
+          "profile": [
+            "http://hl7.org.au/fhir/ps/StructureDefinition/au-ps-diagnosticresult-path"
+          ]
+        },
         "status": "final",
         "category": [
           {
@@ -3306,7 +3422,11 @@
       "fullUrl": "urn:uuid:db34a194-c947-4624-b277-1d72ef9a5661",
       "resource": {
         "resourceType": "Observation",
-        "id": "db34a194-c947-4624-b277-1d72ef9a5661",
+        "meta": {
+          "profile": [
+            "http://hl7.org.au/fhir/ps/StructureDefinition/au-ps-diagnosticresult-path"
+          ]
+        },
         "status": "final",
         "category": [
           {
@@ -3358,7 +3478,11 @@
       "fullUrl": "urn:uuid:926c0a30-3f52-447d-89c5-e4c381580c3a",
       "resource": {
         "resourceType": "Observation",
-        "id": "926c0a30-3f52-447d-89c5-e4c381580c3a",
+        "meta": {
+          "profile": [
+            "http://hl7.org.au/fhir/ps/StructureDefinition/au-ps-diagnosticresult-path"
+          ]
+        },
         "status": "final",
         "category": [
           {
@@ -3405,8 +3529,7 @@
           ]
         }
       }
-    }
-    ,
+    },
     {
       "fullUrl": "urn:uuid:8924f910-53b3-4125-b0f2-58d0068f8983",
       "resource": {
