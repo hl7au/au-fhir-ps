@@ -78,7 +78,7 @@ AU PS profiles the following resources that are not profiled in IPS:
 
 - [AU PS Encounter](StructureDefinition-au-ps-encounter.html) profiles FHIR resource [Encounter](http://hl7.org/fhir/R4/encounter.html)
 - [AU PS RelatedPerson](StructureDefinition-au-ps-relatedperson.html) profiles FHIR resource [RelatedPerson](http://hl7.org/fhir/R4/relatedperson.html)
-- [AU Core Waist Circumference](StructureDefinition-au-core-waistcircum.html) profiles FHIR profile [VitalSigns](https://hl7.org/fhir/R4/vitalsigns.html)
+- [AU Core Waist Circumference](https://build.fhir.org/ig/hl7au/au-fhir-core/StructureDefinition-au-core-waistcircum.html) profiles FHIR profile [VitalSigns](https://hl7.org/fhir/R4/vitalsigns.html)
 
 In addition to the profiles defined in this implementation guide and in IPS, the following profiles defined elsewhere are used by AU PS as the target of a *Must Support* reference element in an AU PS profile:
 - [AU Core Location](https://build.fhir.org/ig/hl7au/au-fhir-core/StructureDefinition-au-core-location.html)
@@ -92,33 +92,33 @@ No extensions are labelled as *Must Support* in IPS. In AU PS the following exte
 #### Terminology
 AU PS adopts the clinical terminology defined in AU Core in preference to IPS where the IPS binding strength is equivalent or weaker. 
 
-In many cases the difference between value sets is the IPS use of international SNOMED CT concepts versus the AU Core use of international SNOMED CT and SNOMED CT-AU concepts. For these sets the binding strength in specifications is [preferred](https://hl7.org/fhir/R4/terminologies.html#extensible); these are recommendations for use in the Australian healthcare context but do not prevent other coding or text only representations. The full list is not provided here, refer to the AU PS profiles to understand the bindings recommended for use in AU PS.
+In many cases the difference between value sets is the IPS use of international SNOMED CT concepts versus the AU Core use of international SNOMED CT and SNOMED CT-AU concepts. For these sets the binding strength in specifications is [preferred](https://hl7.org/fhir/R4/terminologies.html#extensible); these are recommendations for use in the Australian healthcare context but do not prevent other coding or text only representations. A list of terminology differences is not provided on this page, refer to the AU PS profiles to understand the terminology recommended for use in AU PS.
 
-In AU PS, some elements define support (*Must Support*) for more than one value set, for the list see the table in the section [Must Support - Choice of Identifiers](general-requirements.html#must-support---choice-of-terminology).
+In AU PS, some elements define support for more than one value set, for this list and how producers and consumers are to interpret support, see the table in the section [Must Support - Choice of Terminology](general-requirements.html#must-support---choice-of-terminology).
 
-In the following circumstances the terminology constraint in AU PS (or referenced profile) is stronger than IPS:
+For a limited set of elements, the terminology constraint in AU PS (or referenced profile) is stronger than IPS, see the table below:
 
 Profile |Element
 ---|---
 [AU PS AllergyIntolerance](StructureDefinition-au-ps-allergyintolerance.html)|AllergyIntolerance.code - AU PS Binding: [Indicator of Hypersensitivity or Intolerance to Substance](https://healthterminologies.gov.au/fhir/ValueSet/indicator-hypersensitivity-intolerance-to-substance-2) (extensible)
-[AU Core Blood Pressure](StructureDefinition-au-core-bloodpressure.html)|Observation.bodySite - If a coded body site is provided, at least one coding shall be from SNOMED CT (au-core-obs-02)
-[AU Core Body Height](StructureDefinition-au-core-bodyheight.html)|Observation.bodySite - If a coded body site is provided, at least one coding shall be from SNOMED CT (au-core-obs-02)
-[AU Core Body Temperature](StructureDefinition-au-core-bodytemp.html)|Observation.bodySite - If a coded body site is provided, at least one coding shall be from SNOMED CT (au-core-obs-02)
-[AU Core Body Weight](StructureDefinition-au-core-bodyweight.html)|Observation.bodySite - If a coded body site is provided, at least one coding shall be from SNOMED CT (au-core-obs-02)
+[AU Core Blood Pressure](https://build.fhir.org/ig/hl7au/au-fhir-core/StructureDefinition-au-core-bloodpressure.html)|Observation.bodySite - If a coded body site is provided, at least one coding shall be from SNOMED CT (au-core-obs-02)
+[AU Core Body Height](https://build.fhir.org/ig/hl7au/au-fhir-core/StructureDefinition-au-core-bodyheight.html)|Observation.bodySite - If a coded body site is provided, at least one coding shall be from SNOMED CT (au-core-obs-02)
+[AU Core Body Temperature](https://build.fhir.org/ig/hl7au/au-fhir-core/StructureDefinition-au-core-bodytemp.html)|Observation.bodySite - If a coded body site is provided, at least one coding shall be from SNOMED CT (au-core-obs-02)
+[AU Core Body Weight](https://build.fhir.org/ig/hl7au/au-fhir-core/StructureDefinition-au-core-bodyweight.html)|Observation.bodySite - If a coded body site is provided, at least one coding shall be from SNOMED CT (au-core-obs-02)
 [AU PS Condition](StructureDefinition-au-ps-condition.html)|Condition.severity - AU PS Binding: [Condition/Diagnosis Severity](https://hl7.org/fhir/R4/valueset-condition-severity.html) (extensible)
 [AU PS Condition](StructureDefinition-au-ps-condition.html)|Condition.code - AU PS Binding: [Clinical Condition](https://healthterminologies.gov.au/fhir/ValueSet/clinical-condition-1) (extensible)
 [AU PS Condition](StructureDefinition-au-ps-condition.html)|Condition.bodySite - AU PS Binding: [Body Site](https://healthterminologies.gov.au/fhir/ValueSet/body-site-1) (extensible)
 [AU PS Diagnostic Result Observation](StructureDefinition-au-ps-diagnosticresult.html)|Observation.bodySite - If a coded body site is provided, at least one coding shall be from SNOMED CT (au-core-obs-02)
-[AU Core Heart Rate](StructureDefinition-au-core-heartrate.html)|Observation.bodySite - If a coded body site is provided, at least one coding shall be from SNOMED CT (au-core-obs-02)
+[AU Core Heart Rate](https://build.fhir.org/ig/hl7au/au-fhir-core/StructureDefinition-au-core-heartrate.html)|Observation.bodySite - If a coded body site is provided, at least one coding shall be from SNOMED CT (au-core-obs-02)
 [AU PS Pathology Result Observation](StructureDefinition-au-ps-diagnosticresult-path.html)|Observation.code - AU PS Binding: [RCPA SPIA Pathology Reporting](https://healthterminologies.gov.au/fhir/ValueSet/spia-pathology-reporting-1) (extensible)
 [AU PS Pathology Result Observation](StructureDefinition-au-ps-diagnosticresult-path.html)|Observation.component.code - AU PS Binding: [RCPA SPIA Pathology Reporting](https://healthterminologies.gov.au/fhir/ValueSet/spia-pathology-reporting-1) (extensible)
 [AU PS Patient](StructureDefinition-au-ps-patient.html)|Patient.extension:genderIdentity - AU PS Binding: Gender identity shall be a member of the Gender Identity Response value set if any codes within that value set can apply (inv-pat-1)
 [AU PS Patient](StructureDefinition-au-ps-patient.html)|Patient.extension:individualPronouns - Pronouns shall be a member of the Australian Pronouns value set if any codes within that value set can apply (inv-pat-2	)
 [AU PS Patient](StructureDefinition-au-ps-patient.html)|Patient.communication.language - AU PS Binding: [Common Languages in Australia](https://healthterminologies.gov.au/fhir/ValueSet/common-languages-australia-2) (extensible)
 [AU PS RelatedPerson](StructureDefinition-au-ps-relatedperson.html)|RelatedPerson.relationship - AU PS Binding: [Related Person Relationship Type](https://healthterminologies.gov.au/fhir/ValueSet/related-person-relationship-type-1) (extensible)
-[AU Core Respiration Rate](StructureDefinition-au-core-resprate.html)|Observation.bodySite - If a coded body site is provided, at least one coding shall be from SNOMED CT (au-core-obs-02)
+[AU Core Respiration Rate](https://build.fhir.org/ig/hl7au/au-fhir-core/StructureDefinition-au-core-resprate.html)|Observation.bodySite - If a coded body site is provided, at least one coding shall be from SNOMED CT (au-core-obs-02)
 [AU PS Smoking Status](StructureDefinition-au-ps-smokingstatus.html)|Observation.value - AU PS Binding: [Smoking Status](https://healthterminologies.gov.au/fhir/ValueSet/smoking-status-1) (extensible)
-[AU Core Waist Circumference](StructureDefinition-au-core-waistcircum.html)|Observation.bodySite - If a coded body site is provided, at least one coding shall be from SNOMED CT (au-core-obs-02)
+[AU Core Waist Circumference](https://build.fhir.org/ig/hl7au/au-fhir-core/StructureDefinition-au-core-waistcircum.html)|Observation.bodySite - If a coded body site is provided, at least one coding shall be from SNOMED CT (au-core-obs-02)
 {:.grid}
 
 
@@ -144,19 +144,19 @@ Profile |Conditionally Mandatory Element defined in AU PS
 {:.grid}
 
 #### Identifiers
-IPS does not provide recommendations or requirements on the types of identifiers used in resources in the patient summary document, this is expected to be defined as needed in jurisdictional specifications. In AU PS, a number of national Australian healthcare identifiers are labelled with *Must Support* as per the table in the section [Must Support - Choice of Identifiers](general-requirements.html#must-support---choice-of-identifiers).
+IPS does not provide recommendations on the types of identifiers used in resources, this is expected to be defined as needed in jurisdictional specifications. In AU PS, a number of optional national Australian healthcare identifiers are labelled with *Must Support*, see the table in the section [Must Support - Choice of Identifiers](general-requirements.html#must-support---choice-of-identifiers) for the full list and to interpret the support requirements for producers and consumers.
 
 #### Fixed values
 Vitals TBD
 
 Profile |Element|Additional fixed value
 ---|---|---
-[AU Core Blood Pressure](StructureDefinition-au-core-bloodpressure.html)|Observation.code|SNOMED CT code 75367002\|Blood pressure\|
-[AU Core Body Height](StructureDefinition-au-core-bodyheight.html)|Observation.code|SNOMED CT code 50373000\|Body height measure\|
-[AU Core Body Temperature](StructureDefinition-au-core-bodytemp.html)|Observation.code|SNOMED CT code 386725007\|Body temperature\|
-[AU Core Body Weight](StructureDefinition-au-core-bodyweight.html)|Observation.code|SNOMED CT code 27113001\|Body weight\|
-[AU Core Heart Rate](StructureDefinition-au-core-heartrate.html)|Observation.code|SNOMED CT code 364075005\|Heart rate\|
-[AU Core Respiration Rate](StructureDefinition-au-core-resprate.html)|Observation.code|SNOMED CT code 86290005\|Respiratory rate\|
+[AU Core Blood Pressure](https://build.fhir.org/ig/hl7au/au-fhir-core/StructureDefinition-au-core-bloodpressure.html)|Observation.code|SNOMED CT code 75367002\|Blood pressure\|
+[AU Core Body Height](https://build.fhir.org/ig/hl7au/au-fhir-core/StructureDefinition-au-core-bodyheight.html)|Observation.code|SNOMED CT code 50373000\|Body height measure\|
+[AU Core Body Temperature](https://build.fhir.org/ig/hl7au/au-fhir-core/StructureDefinition-au-core-bodytemp.html)|Observation.code|SNOMED CT code 386725007\|Body temperature\|
+[AU Core Body Weight](https://build.fhir.org/ig/hl7au/au-fhir-core/StructureDefinition-au-core-bodyweight.html)|Observation.code|SNOMED CT code 27113001\|Body weight\|
+[AU Core Heart Rate](https://build.fhir.org/ig/hl7au/au-fhir-core/StructureDefinition-au-core-heartrate.html)|Observation.code|SNOMED CT code 364075005\|Heart rate\|
+[AU Core Respiration Rate](https://build.fhir.org/ig/hl7au/au-fhir-core/StructureDefinition-au-core-resprate.html)|Observation.code|SNOMED CT code 86290005\|Respiratory rate\|
 [AU PS Smoking Status](StructureDefinition-au-ps-smokingstatus.html)|Observation.code|SNOMED CT code 1747861000168109\|Smoking status\|
 {:.grid}
 
