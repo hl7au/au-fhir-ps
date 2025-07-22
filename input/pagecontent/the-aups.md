@@ -108,7 +108,6 @@ Profile |Element
 [AU PS Condition](StructureDefinition-au-ps-condition.html)|Condition.severity - AU PS Binding: [Condition/Diagnosis Severity](https://hl7.org/fhir/R4/valueset-condition-severity.html) (extensible)
 [AU PS Condition](StructureDefinition-au-ps-condition.html)|Condition.code - AU PS Binding: [Clinical Condition](https://healthterminologies.gov.au/fhir/ValueSet/clinical-condition-1) (extensible)
 [AU PS Condition](StructureDefinition-au-ps-condition.html)|Condition.bodySite - AU PS Binding: [Body Site](https://healthterminologies.gov.au/fhir/ValueSet/body-site-1) (extensible)
-[AU PS Diagnostic Result Observation](StructureDefinition-au-ps-diagnosticresult.html)|Observation.bodySite - If a coded body site is provided, at least one coding shall be from SNOMED CT (au-core-obs-02)
 [AU Core Heart Rate](https://build.fhir.org/ig/hl7au/au-fhir-core/StructureDefinition-au-core-heartrate.html)|Observation.bodySite - If a coded body site is provided, at least one coding shall be from SNOMED CT (au-core-obs-02)
 [AU PS Pathology Result Observation](StructureDefinition-au-ps-diagnosticresult-path.html)|Observation.code - AU PS Binding: [RCPA SPIA Pathology Reporting](https://healthterminologies.gov.au/fhir/ValueSet/spia-pathology-reporting-1) (extensible)
 [AU PS Pathology Result Observation](StructureDefinition-au-ps-diagnosticresult-path.html)|Observation.component.code - AU PS Binding: [RCPA SPIA Pathology Reporting](https://healthterminologies.gov.au/fhir/ValueSet/spia-pathology-reporting-1) (extensible)
