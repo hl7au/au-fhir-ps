@@ -151,12 +151,12 @@ Vitals TBD
 
 Profile |Element|Additional fixed value
 ---|---|---
-[AU Core Blood Pressure](StructureDefinition-au-core-bloodpressure.html)|Observation.code|SNOMED CT code 75367002\|Blood pressure\|
-[AU Core Body Height](StructureDefinition-au-core-bodyheight.html)|Observation.code|SNOMED CT code 50373000\|Body height measure\|
-[AU Core Body Temperature](StructureDefinition-au-core-bodytemp.html)|Observation.code|SNOMED CT code 386725007\|Body temperature\|
-[AU Core Body Weight](StructureDefinition-au-core-bodyweight.html)|Observation.code|SNOMED CT code 27113001\|Body weight\|
-[AU Core Heart Rate](StructureDefinition-au-core-heartrate.html)|Observation.code|SNOMED CT code 364075005\|Heart rate\|
-[AU Core Respiration Rate](StructureDefinition-au-core-resprate.html)|Observation.code|SNOMED CT code 86290005\|Respiratory rate\|
+[AU Core Blood Pressure](https://build.fhir.org/ig/hl7au/au-fhir-core/StructureDefinition-au-core-bloodpressure.html)|Observation.code|SNOMED CT code 75367002\|Blood pressure\|
+[AU Core Body Height](https://build.fhir.org/ig/hl7au/au-fhir-core/StructureDefinition-au-core-bodyheight.html)|Observation.code|SNOMED CT code 50373000\|Body height measure\|
+[AU Core Body Temperature](https://build.fhir.org/ig/hl7au/au-fhir-core/StructureDefinition-au-core-bodytemp.html)|Observation.code|SNOMED CT code 386725007\|Body temperature\|
+[AU Core Body Weight](https://build.fhir.org/ig/hl7au/au-fhir-core/StructureDefinition-au-core-bodyweight.html)|Observation.code|SNOMED CT code 27113001\|Body weight\|
+[AU Core Heart Rate](https://build.fhir.org/ig/hl7au/au-fhir-core/StructureDefinition-au-core-heartrate.html)|Observation.code|SNOMED CT code 364075005\|Heart rate\|
+[AU Core Respiration Rate](https://build.fhir.org/ig/hl7au/au-fhir-core/StructureDefinition-au-core-resprate.html)|Observation.code|SNOMED CT code 86290005\|Respiratory rate\|
 [AU PS Smoking Status](StructureDefinition-au-ps-smokingstatus.html)|Observation.code|SNOMED CT code 1747861000168109\|Smoking status\|
 {:.grid}
 
