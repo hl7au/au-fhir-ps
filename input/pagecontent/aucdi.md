@@ -33,7 +33,7 @@ The table below shows the relationship between data defined in the "Patient summ
 Column attribute descriptions are as follows:
 - **AUCDI Data Group**: The name of the AUCDI data group.
 - **AUCDI Data Element**: The name of the AUCDI data element within an AUCDI data group.
-- **AU PS Document Section**: The AU PS Document section relevant for exchange (see [Structure of the Australian Patient Summary (AU PS)](general-guidance.html#structure-of-the-australian-patient-summary-au-ps)).
+- **AU PS Document Section**: The AU PS Document section relevant for exchange (see [Structure of the Australian Patient Summary (AU PS)](the-aups.html#structure-of-the-au-ps)).
 - **AU PS Profile(s)**: The title of the AU PS profile relevant for exchange.
 - **FHIR Path**: The [FHIRPath expression](https://build.fhir.org/ig/HL7/FHIRPath/) to the FHIR element relevant for exchange, i.e. the FHIR element that can be populated with data from a source system that represents the clinical concept expressed in the AUCDI data element. 
 - **Comment**: Additional information about the mapping including an explanation of where an element or group is not yet mapped.

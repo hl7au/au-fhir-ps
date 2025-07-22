@@ -1,4 +1,4 @@
-This guide is built on top of the FHIR standard and, where available, [AU Core](https://build.fhir.org/ig/hl7au/au-fhir-core/) and [AU Base](https://build.fhir.org/ig/hl7au/au-fhir-base/). It is compliant with the profile conformance requirements in [AU Core](https://build.fhir.org/ig/hl7au/au-fhir-core/) and [IPS](https://build.fhir.org/ig/HL7/fhir-ips/).
+This guide is built on top of the FHIR standard and, where available, [AU Core](https://build.fhir.org/ig/hl7au/au-fhir-core/), [IPS](https://build.fhir.org/ig/HL7/fhir-ips), and [AU Base](https://build.fhir.org/ig/hl7au/au-fhir-base/). It is compliant with the profile conformance requirements in [AU Core](https://build.fhir.org/ig/hl7au/au-fhir-core/) and [IPS](https://build.fhir.org/ig/HL7/fhir-ips/).
 
 
 The context of AU Patient Summary within the set of HL7 AU standards is shown in the figure below:
@@ -28,7 +28,7 @@ See [AUCDI](aucdi.html) for the relationship between the "Patient summary" AUCDI
 The relationship of AU Patient Summary to AUCDI and other implementation guides is shown in the figure below.
 
  <div> 
-    <img src="context-colour.png" alt="Relationship to AUCDI and Other IGs" style="width:75%"/>
+    <img src="context-colour.png" alt="Relationship to AUCDI and Other IGs" style="width:25%"/>
   </div>
 *Figure 3: Relationship to AUCDI and Other IGs*
 <br/>
