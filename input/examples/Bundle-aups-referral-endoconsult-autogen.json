@@ -243,115 +243,34 @@
                 }
               ]
             },
-            "text": {
+             "text": {
               "status": "generated",
-              "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n              <table border=\"1\">\n                <thead>\n                  <tr>\n                    <th>Test Name</th>\n                    <th>Test Result</th>\n                    <th>Date</th>\n                  </tr>\n                </thead>\n                <tbody>\n                  <tr>\n                    <td>pH</td>\n                    <td>7</td>\n                    <td>05/11/2024</td>\n                  </tr>\n                  <tr>\n                    <td>Protein</td>\n                    <td>Positive</td>\n                    <td>05/11/2024</td>\n                  </tr>\n                  <tr>\n                    <td>Blood</td>\n                    <td>Positive</td>\n                    <td>05/11/2024</td>\n                  </tr>\n                  <tr>\n                    <td>Glucose</td>\n                    <td>Positive</td>\n                    <td>05/11/2024</td>\n                  </tr>\n                  <tr>\n                    <td>Leucocytes</td>\n                    <td>370  x 10^6/L </td>\n                    <td>05/11/2024</td>\n                  </tr>\n                  <tr>\n                    <td>Erythrocytes</td>\n                    <td>150 x 10^6/L </td>\n                    <td>05/11/2024</td>\n                  </tr>\n                  <tr>\n                    <td>Epithelial cells</td>\n                    <td>Nil</td>\n                    <td>05/11/2024</td>\n                  </tr>\n                  <tr>\n                    <td> Organism 1</td>\n                    <td>Escherichia coli </td>\n                    <td>05/11/2024</td>\n                  </tr>\n                  <tr>\n                    <td> Colony count 1</td>\n                    <td>10^8  Organisms/L</td>\n                    <td>05/11/2024</td>\n                  </tr>\n                  <tr>\n                    <td> Amp/Amoxycillin</td>\n                    <td>Susceptible</td>\n                    <td>05/11/2024</td>\n                  </tr>\n                  <tr>\n                    <td> Amoxycillin/clav. acid</td>\n                    <td>Susceptible</td>\n                    <td>05/11/2024</td>\n                  </tr>\n                  <tr>\n                    <td> Cephalexin</td>\n                    <td>Susceptible</td>\n                    <td>05/11/2024</td>\n                  </tr>\n                  <tr>\n                    <td>  Trimethoprim</td>\n                    <td>Susceptible</td>\n                    <td>05/11/2024</td>\n                  </tr>\n                  <tr>\n                    <td>  Nitrofurantoin</td>\n                    <td>Susceptible</td>\n                    <td>05/11/2024</td>\n                  </tr>\n                  <tr>\n                    <td>  Gentamicin</td>\n                    <td>Susceptible</td>\n                    <td>05/11/2024</td>\n                  </tr>\n                  <tr>\n                    <td>  Norfloxacin</td>\n                    <td>Susceptible</td>\n                    <td>05/11/2024</td>\n                  </tr>\n                  <tr>\n                    <td>Glucose Tolerance Test (GTT) Fasting</td>\n                    <td>5.3 mmol/L</td>\n                    <td>21/10/2024</td>\n                  </tr>\n                  <tr>\n                    <td>Glucose Tolerance Test (GTT) 1 hour</td>\n                    <td>10 mmol/L</td>\n                    <td>21/10/2024</td>\n                  </tr>\n                  <tr>\n                    <td>Glucose Tolerance Test (GTT) 2 hour</td>\n                    <td>8.6 mmol/L</td>\n                    <td>21/10/2024</td>\n                  </tr>\n                  <tr>\n                    <td>Haemoglobin A1c</td>\n                    <td>5.8 %</td>\n                    <td>14/06/2024</td>\n                  </tr>\n                  <tr>\n                    <td>Beta-HCG</td>\n                    <td>16000 IU/L</td>\n                    <td>12/06/2024</td>\n                  </tr>\n                  <tr>\n                    <td> Haemoglobin</td>\n                    <td>125  g/L</td>\n                    <td>12/06/2024</td>\n                  </tr>\n                  <tr>\n                    <td> Haematocrit</td>\n                    <td>0.37  L/L</td>\n                    <td>12/06/2024</td>\n                  </tr>\n                  <tr>\n                    <td> White Blood Cell Count</td>\n                    <td>8 x 10^9/L</td>\n                    <td>12/06/2024</td>\n                  </tr>\n                  <tr>\n                    <td> Platelets</td>\n                    <td>250 x 10^9/L</td>\n                    <td>12/06/2024</td>\n                  </tr>\n                  <tr>\n                    <td>MCV</td>\n                    <td>85 fL</td>\n                    <td>12/06/2024</td>\n                  </tr>\n                  <tr>\n                    <td> Colour</td>\n                    <td>Light yellow</td>\n                    <td>03/06/2024</td>\n                  </tr>\n                  <tr>\n                    <td> Clarity</td>\n                    <td>Clear</td>\n                    <td>03/06/2024</td>\n                  </tr>\n                  <tr>\n                    <td> pH</td>\n                    <td>6</td>\n                    <td>03/06/2024</td>\n                  </tr>\n                  <tr>\n                    <td> Specific Gravity</td>\n                    <td>1.02</td>\n                    <td>03/06/2024</td>\n                  </tr>\n                  <tr>\n                    <td> Protein</td>\n                    <td>Negative</td>\n                    <td>03/06/2024</td>\n                  </tr>\n                  <tr>\n                    <td> Glucose</td>\n                    <td>Negative</td>\n                    <td>03/06/2024</td>\n                  </tr>\n                  <tr>\n                    <td> Ketones</td>\n                    <td>Negative</td>\n                    <td>03/06/2024</td>\n                  </tr>\n                  <tr>\n                    <td> Nitrites</td>\n                    <td>Negative</td>\n                    <td>03/06/2024</td>\n                  </tr>\n                  <tr>\n                    <td> Leukocyte Esterase</td>\n                    <td>Negative</td>\n                    <td>03/06/2024</td>\n                  </tr>\n                </tbody>\n              </table>\n            </div>"
+              "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><table><thead><tr><th colspan=\"3\">Midstream specimen of urine (MSU) - 05/11/2024</th></tr></thead><tbody><tr><td>pH</td><td>7</td><td/></tr><tr><td>Protein</td><td>Positive</td><td/></tr><tr><td>Blood</td><td>Positive</td><td/></tr><tr><td>Glucose</td><td>Positive</td><td/></tr><tr><td>Leucocytes</td><td>370  x 10^6/L </td><td/></tr><tr><td>Erythrocytes</td><td>150 x 10^6/L </td><td/></tr><tr><td>Epithelial cells</td><td>Nil</td><td/></tr><tr><td> Organism 1</td><td>Escherichia coli</td><td/></tr><tr><td> Colony count 1</td><td>> 10^8  Organisms/L</td><td/></tr><tr><td> Amp/Amoxycillin</td><td>Susceptible</td><td/></tr><tr><td> Amoxycillin/clav. acid</td><td>Susceptible</td><td/></tr><tr><td> Cephalexin</td><td>Susceptible</td><td/></tr><tr><td>  Trimethoprim</td><td>Susceptible</td><td/></tr><tr><td>  Nitrofurantoin</td><td>Susceptible</td><td/></tr><tr><td>  Gentamicin</td><td>Susceptible</td><td/></tr><tr><td>  Norfloxacin</td><td>Susceptible</td><td/></tr></tbody></table><table><thead><tr><th colspan=\"3\">Glucose Tolerance Test (GTT) - 21/10/2024</th></tr></thead><tbody><tr><td>Fasting Glucose</td><td>5.3 mmol/L</td><td/></tr><tr><td>1 hour Glucose</td><td>10 mmol/L</td><td/></tr><tr><td>2 hour Glucose</td><td>8.6 mmol/L</td><td/></tr></tbody></table><table><thead><tr><th colspan=\"3\">Haemoglobin A1c - 14/06/2024</th></tr></thead><tbody><tr><td>Haemoglobin A1c</td><td>5.8 %</td><td/></tr></tbody></table><table><thead><tr><th colspan=\"3\">Full Blood Count - 12/06/2024</th></tr></thead><tbody><tr><td> Haemoglobin</td><td>125  g/L</td><td/></tr><tr><td> Haematocrit</td><td>0.37  L/L</td><td/></tr><tr><td> White Blood Cell Count</td><td>8 x 10^9/L</td><td/></tr><tr><td> Platelets</td><td>250 x 10^9/L</td><td/></tr><tr><td>MCV</td><td>85 fL</td><td/></tr></tbody></table><table><thead><tr><th colspan=\"3\">Beta-HCG - 12/06/2024</th></tr></thead><tbody><tr><td>Beta-HCG</td><td>16000 IU/L</td><td/></tr></tbody></table><table><thead><tr><th colspan=\"3\">Urinalysis - 03/06/2024</th></tr></thead><tbody><tr><td> Colour</td><td>Light yellow</td><td/></tr><tr><td> Clarity</td><td>Clear</td><td/></tr><tr><td> pH</td><td>6</td><td/></tr><tr><td> Specific Gravity</td><td>1.02</td><td/></tr><tr><td> Protein</td><td>Negative</td><td/></tr><tr><td> Glucose</td><td>Negative</td><td/></tr><tr><td> Ketones</td><td>Negative</td><td/></tr><tr><td> Nitrites</td><td>Negative</td><td/></tr><tr><td> Leukocyte Esterase</td><td>Negative</td><td/></tr></tbody></table></div>"
             },
             "entry": [
               {
-                "reference": "urn:uuid:5f1b9790-4892-4af3-9b76-3cb4f854a5b1"
+                "reference": "urn:uuid:efd650d3-9131-4b15-b1ff-cb59b2593e99"
               },
               {
-                "reference": "urn:uuid:1bbd2e05-161d-4030-975c-0cca3ef97cdb"
+                "reference": "urn:uuid:1069cd62-324f-4a05-a7ac-28d20363e5be"
               },
               {
-                "reference": "urn:uuid:27060cbf-e30e-4091-bd64-7d4ef40916ac"
+                "reference": "urn:uuid:798de83c-a1dc-4b63-bb35-b7cfdbfeea22"
               },
               {
-                "reference": "urn:uuid:fc061f59-5410-41e9-945e-3f59664e8611"
+                "reference": "urn:uuid:fbff856a-3b2f-435d-806a-1b87ea2a6869"
               },
               {
-                "reference": "urn:uuid:cbfc61f0-81e7-4cfd-8089-f6b605c214e7"
+                "reference": "urn:uuid:bb4a02ff-9929-4f08-aa95-8290d114c208"
               },
               {
-                "reference": "urn:uuid:743ff71f-ddc2-4fc7-8745-b3a15cb1a14c"
+                "reference": "urn:uuid:8fa5fe84-b56e-4ee5-9522-af5519f28931"
               },
               {
-                "reference": "urn:uuid:0b585e1f-11a5-4a31-8883-37591ff9dc8b"
+                "reference": "urn:uuid:2ad9562b-a9ad-4773-818c-484b869b15c7"
               },
               {
-                "reference": "urn:uuid:5ae482c0-6ba0-4c95-8ee2-501accec3881"
-              },
-              {
-                "reference": "urn:uuid:ad2ff609-df59-4639-a5e1-f0f39f22fe71"
-              },
-              {
-                "reference": "urn:uuid:b8d46cb5-03fb-4076-a1df-95bbc9711910"
-              },
-              {
-                "reference": "urn:uuid:f53009c0-b5a3-4a06-90ae-45bd397b6e54"
-              },
-              {
-                "reference": "urn:uuid:71503a48-c2cd-4e6a-9fb1-0d9f8d70a05e"
-              },
-              {
-                "reference": "urn:uuid:167e068e-26ab-4c3d-8477-88e70a143e62"
-              },
-              {
-                "reference": "urn:uuid:7dc87c3e-cf74-4648-85e7-90a9b5fd5bc1"
-              },
-              {
-                "reference": "urn:uuid:8c573f90-bd59-427b-b751-7d2fdd80925b"
-              },
-              {
-                "reference": "urn:uuid:4f9ef0c2-b431-43b2-8085-2c0a8cd08637"
-              },
-              {
-                "reference": "urn:uuid:ef08a9b0-89a4-47f7-bd4c-72c4c27c53ae"
-              },
-              {
-                "reference": "urn:uuid:aecc0748-6c5d-4238-90ee-1af66f6c0c51"
-              },
-              {
-                "reference": "urn:uuid:18b247c2-0c7e-4dcd-a19c-cf8205ce77cd"
-              },
-              {
-                "reference": "urn:uuid:75c625ed-822e-4354-9827-aad8874a13ce"
-              },
-              {
-                "reference": "urn:uuid:3ad4653a-f85c-4118-a7ff-c9dfa934eb56"
-              },
-              {
-                "reference": "urn:uuid:b2104279-70e1-4b49-805b-1193f9cfb63e"
-              },
-              {
-                "reference": "urn:uuid:f5449417-bd88-451b-ba0e-61073d30f1a8"
-              },
-              {
-                "reference": "urn:uuid:49b658b3-315d-4e83-b85c-d57547611dc5"
-              },
-              {
-                "reference": "urn:uuid:a0a0db9e-8922-40dd-ad6a-b3109ec3e4c2"
-              },
-              {
-                "reference": "urn:uuid:a4471b2a-cd87-41dd-921c-37e38d1f597c"
-              },
-              {
-                "reference": "urn:uuid:db32c14a-eca7-4998-bd7d-7b66dbc1fa23"
-              },
-              {
-                "reference": "urn:uuid:aaeaedd1-9f65-43e9-9569-c2a99c9488c9"
-              },
-              {
-                "reference": "urn:uuid:bafc1b41-323b-4cc6-971c-145608a96419"
-              },
-              {
-                "reference": "urn:uuid:36b2e997-7b1c-4e94-b936-e8bd244da150"
-              },
-              {
-                "reference": "urn:uuid:687e56d0-e45f-4bbd-b2e5-1df234f7d5e8"
-              },
-              {
-                "reference": "urn:uuid:1e813570-e34f-49ae-9b78-c0ccaccbdb3b"
-              },
-              {
-                "reference": "urn:uuid:bd10f9e1-df70-4aef-bfaa-b65aca083868"
-              },
-              {
-                "reference": "urn:uuid:db34a194-c947-4624-b277-1d72ef9a5661"
-              },
-              {
-                "reference": "urn:uuid:926c0a30-3f52-447d-89c5-e4c381580c3a"
+                "reference": "urn:uuid:2d6de264-0d18-4049-834a-9eb2b3954e5f"
               }
             ]
           },
@@ -1710,8 +1629,8 @@
         }
       }
     },
-    {
-      "fullUrl": "urn:uuid:5f1b9790-4892-4af3-9b76-3cb4f854a5b1",
+     {
+      "fullUrl": "urn:uuid:61bb8832-3dd8-4fce-96fd-f781899ba76d",
       "resource": {
         "resourceType": "Observation",
         "meta": {
@@ -1735,970 +1654,8 @@
           "coding": [
             {
               "system": "http://loinc.org",
-              "code": "14995-5",
-              "display": "Glucose [Moles/volume] in Serum or Plasma --2 hours post 75 g glucose PO"
-            }
-          ],
-          "text": "Glucose Tolerance Test (GTT) 2 hour"
-        },
-        "subject": {
-          "reference": "urn:uuid:85822a88-55b1-460c-bb7b-e8fc22d8568f"
-        },
-        "effectiveDateTime": "2024-10-21",
-        "performer": [
-          {
-            "extension": [
-              {
-                "url": "http://hl7.org/fhir/StructureDefinition/data-absent-reason",
-                "valueCode": "unknown"
-              }
-            ]
-          }
-        ],
-        "valueQuantity": {
-          "value": 8.6,
-          "system": "http://unitsofmeasure.org",
-          "code": "mmol/L"
-        }
-      }
-    },
-    {
-      "fullUrl": "urn:uuid:1bbd2e05-161d-4030-975c-0cca3ef97cdb",
-      "resource": {
-        "resourceType": "Observation",
-        "meta": {
-          "profile": [
-            "http://hl7.org.au/fhir/ps/StructureDefinition/au-ps-diagnosticresult-path"
-          ]
-        },
-        "status": "final",
-        "category": [
-          {
-            "coding": [
-              {
-                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
-                "code": "laboratory",
-                "display": "Laboratory"
-              }
-            ]
-          }
-        ],
-        "code": {
-          "coding": [           
-            {
-              "system": "http://loinc.org",
-              "code": "14996-3",
-              "display": "Glucose [Moles/volume] in Serum or Plasma --pre 75 g glucose PO"
-            }
-          ],
-          "text": "Glucose Tolerance Test (GTT) Fasting"
-        },
-        "subject": {
-          "reference": "urn:uuid:85822a88-55b1-460c-bb7b-e8fc22d8568f"
-        },
-        "effectiveDateTime": "2024-10-21",
-        "performer": [
-          {
-            "extension": [
-              {
-                "url": "http://hl7.org/fhir/StructureDefinition/data-absent-reason",
-                "valueCode": "unknown"
-              }
-            ]
-          }
-        ],
-        "valueQuantity": {
-          "value": 5.3,
-          "system": "http://unitsofmeasure.org",
-          "code": "mmol/L"
-        }
-      }
-    },
-    {
-      "fullUrl": "urn:uuid:27060cbf-e30e-4091-bd64-7d4ef40916ac",
-      "resource": {
-        "resourceType": "Observation",
-        "meta": {
-          "profile": [
-            "http://hl7.org.au/fhir/ps/StructureDefinition/au-ps-diagnosticresult-path"
-          ]
-        },
-        "status": "final",
-        "category": [
-          {
-            "coding": [
-              {
-                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
-                "code": "laboratory",
-                "display": "Laboratory"
-              }
-            ]
-          }
-        ],
-        "code": {
-          "coding": [           
-            {
-              "system": "http://loinc.org",
-              "code": "51597-3",
-              "display": "Glucose [Moles/volume] in Serum or Plasma --1 hour post 75 g glucose PO"
-            }
-          ],
-          "text": "Glucose Tolerance Test (GTT) 1 hour"
-        },
-        "subject": {
-          "reference": "urn:uuid:85822a88-55b1-460c-bb7b-e8fc22d8568f"
-        },
-        "effectiveDateTime": "2024-10-21",
-        "performer": [
-          {
-            "extension": [
-              {
-                "url": "http://hl7.org/fhir/StructureDefinition/data-absent-reason",
-                "valueCode": "unknown"
-              }
-            ]
-          }
-        ],
-        "valueQuantity": {
-          "value": 10,
-          "system": "http://unitsofmeasure.org",
-          "code": "mmol/L"
-        }
-      }
-    },
-    {
-      "fullUrl": "urn:uuid:fc061f59-5410-41e9-945e-3f59664e8611",
-      "resource": {
-        "resourceType": "Observation",
-        "meta": {
-          "profile": [
-            "http://hl7.org.au/fhir/ps/StructureDefinition/au-ps-diagnosticresult-path"
-          ]
-        },
-        "status": "final",
-        "category": [
-          {
-            "coding": [
-              {
-                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
-                "code": "laboratory",
-                "display": "Laboratory"
-              }
-            ]
-          }
-        ],
-        "code": {
-          "coding": [
-            {
-              "system": "http://loinc.org",
-              "code": "4548-4",
-              "display": "Hemoglobin A1c/Hemoglobin.total in Blood"
-            }
-          ],
-          "text": "Haemoglobin A1c"
-        },
-        "subject": {
-          "reference": "urn:uuid:85822a88-55b1-460c-bb7b-e8fc22d8568f"
-        },
-        "effectiveDateTime": "2024-06-14",
-        "performer": [
-          {
-            "extension": [
-              {
-                "url": "http://hl7.org/fhir/StructureDefinition/data-absent-reason",
-                "valueCode": "unknown"
-              }
-            ]
-          }
-        ],
-        "valueQuantity": {
-          "value": 5.8,
-          "system": "http://unitsofmeasure.org",
-          "code": "%"
-        }
-      }
-    },
-    {
-      "fullUrl": "urn:uuid:cbfc61f0-81e7-4cfd-8089-f6b605c214e7",
-      "resource": {
-        "resourceType": "Observation",
-        "meta": {
-          "profile": [
-            "http://hl7.org.au/fhir/ps/StructureDefinition/au-ps-diagnosticresult-path"
-          ]
-        },
-        "status": "final",
-        "category": [
-          {
-            "coding": [
-              {
-                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
-                "code": "laboratory",
-                "display": "Laboratory"
-              }
-            ]
-          }
-        ],
-        "code": {
-          "coding": [
-            {
-              "system": "http://loinc.org",
-              "code": "21198-7",
-              "display": "Choriogonadotropin.beta subunit [Units/volume] in Serum or Plasma"
-            }
-          ],
-          "text": "Beta-HCG"
-        },
-        "subject": {
-          "reference": "urn:uuid:85822a88-55b1-460c-bb7b-e8fc22d8568f"
-        },
-        "performer": [
-          {
-            "extension": [
-              {
-                "url": "http://hl7.org/fhir/StructureDefinition/data-absent-reason",
-                "valueCode": "unknown"
-              }
-            ]
-          }
-        ],
-        "effectiveDateTime": "2024-06-12",
-        "valueQuantity": {
-          "value": 16000,
-          "system": "http://unitsofmeasure.org",
-          "code": "[IU]/L",
-          "unit": "IU/L"
-        }
-      }
-    },
-    {
-      "fullUrl": "urn:uuid:743ff71f-ddc2-4fc7-8745-b3a15cb1a14c",
-      "resource": {
-        "resourceType": "Observation",
-        "meta": {
-          "profile": [
-            "http://hl7.org.au/fhir/ps/StructureDefinition/au-ps-diagnosticresult-path"
-          ]
-        },
-        "status": "final",
-        "category": [
-          {
-            "coding": [
-              {
-                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
-                "code": "laboratory",
-                "display": "Laboratory"
-              }
-            ]
-          }
-        ],
-        "code": {
-          "coding": [
-            {
-              "system": "http://loinc.org",
-              "code": "718-7",
-              "display": "Hemoglobin [Mass/volume] in Blood"
-            }
-          ],
-          "text": "Haemoglobin"
-        },
-        "subject": {
-          "reference": "urn:uuid:85822a88-55b1-460c-bb7b-e8fc22d8568f"
-        },
-        "performer": [
-          {
-            "extension": [
-              {
-                "url": "http://hl7.org/fhir/StructureDefinition/data-absent-reason",
-                "valueCode": "unknown"
-              }
-            ]
-          }
-        ],
-        "effectiveDateTime": "2024-06-12",
-        "valueQuantity": {
-          "value": 125,
-          "system": "http://unitsofmeasure.org",
-          "code": "g/L",
-          "unit": "g/L"
-        }
-      }
-    },
-    {
-      "fullUrl": "urn:uuid:0b585e1f-11a5-4a31-8883-37591ff9dc8b",
-      "resource": {
-        "resourceType": "Observation",
-        "meta": {
-          "profile": [
-            "http://hl7.org.au/fhir/ps/StructureDefinition/au-ps-diagnosticresult-path"
-          ]
-        },
-        "status": "final",
-        "category": [
-          {
-            "coding": [
-              {
-                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
-                "code": "laboratory",
-                "display": "Laboratory"
-              }
-            ]
-          }
-        ],
-        "code": {
-          "coding": [
-            {
-              "system": "http://loinc.org",
-              "code": "4544-3",
-              "display": "Hematocrit [Volume Fraction] of Blood by Automated count"
-            }
-          ],
-          "text": "Haematocrit"
-        },
-        "subject": {
-          "reference": "urn:uuid:85822a88-55b1-460c-bb7b-e8fc22d8568f"
-        },
-        "performer": [
-          {
-            "extension": [
-              {
-                "url": "http://hl7.org/fhir/StructureDefinition/data-absent-reason",
-                "valueCode": "unknown"
-              }
-            ]
-          }
-        ],
-        "effectiveDateTime": "2024-06-12",
-        "valueQuantity": {
-          "value": 0.37,
-          "system": "http://unitsofmeasure.org",
-          "code": "L/L",
-          "unit": "L/L"
-        }
-      }
-    },
-    {
-      "fullUrl": "urn:uuid:5ae482c0-6ba0-4c95-8ee2-501accec3881",
-      "resource": {
-        "resourceType": "Observation",
-        "meta": {
-          "profile": [
-            "http://hl7.org.au/fhir/ps/StructureDefinition/au-ps-diagnosticresult-path"
-          ]
-        },
-        "status": "final",
-        "category": [
-          {
-            "coding": [
-              {
-                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
-                "code": "laboratory",
-                "display": "Laboratory"
-              }
-            ]
-          }
-        ],
-        "code": {
-          "coding": [
-            {
-              "system": "http://loinc.org",
-              "code": "6690-2",
-              "display": "Leukocytes [#/volume] in Blood by Automated count"
-            }
-          ],
-          "text": "White Blood Cell Count"
-        },
-        "subject": {
-          "reference": "urn:uuid:85822a88-55b1-460c-bb7b-e8fc22d8568f"
-        },
-        "performer": [
-          {
-            "extension": [
-              {
-                "url": "http://hl7.org/fhir/StructureDefinition/data-absent-reason",
-                "valueCode": "unknown"
-              }
-            ]
-          }
-        ],
-        "effectiveDateTime": "2024-06-12",
-        "valueQuantity": {
-          "value": 8.0,
-          "system": "http://unitsofmeasure.org",
-          "code": "10*9/L",
-          "unit": "x 10^9/L"
-        }
-      }
-    },
-    {
-      "fullUrl": "urn:uuid:ad2ff609-df59-4639-a5e1-f0f39f22fe71",
-      "resource": {
-        "resourceType": "Observation",
-        "meta": {
-          "profile": [
-            "http://hl7.org.au/fhir/ps/StructureDefinition/au-ps-diagnosticresult-path"
-          ]
-        },
-        "status": "final",
-        "category": [
-          {
-            "coding": [
-              {
-                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
-                "code": "laboratory",
-                "display": "Laboratory"
-              }
-            ]
-          }
-        ],
-        "code": {
-          "coding": [
-            {
-              "system": "http://loinc.org",
-              "code": "777-3",
-              "display": "Platelets [#/volume] in Blood by Automated count"
-            }
-          ],
-          "text": "Platelets"
-        },
-        "subject": {
-          "reference": "urn:uuid:85822a88-55b1-460c-bb7b-e8fc22d8568f"
-        },
-        "performer": [
-          {
-            "extension": [
-              {
-                "url": "http://hl7.org/fhir/StructureDefinition/data-absent-reason",
-                "valueCode": "unknown"
-              }
-            ]
-          }
-        ],
-        "effectiveDateTime": "2024-06-12",
-        "valueQuantity": {
-          "value": 250,
-          "system": "http://unitsofmeasure.org",
-          "code": "10*9/L",
-          "unit": "x 10^9/L"
-        }
-      }
-    },
-    {
-      "fullUrl": "urn:uuid:b8d46cb5-03fb-4076-a1df-95bbc9711910",
-      "resource": {
-        "resourceType": "Observation",
-        "meta": {
-          "profile": [
-            "http://hl7.org.au/fhir/ps/StructureDefinition/au-ps-diagnosticresult-path"
-          ]
-        },
-        "status": "final",
-        "category": [
-          {
-            "coding": [
-              {
-                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
-                "code": "laboratory",
-                "display": "Laboratory"
-              }
-            ]
-          }
-        ],
-        "code": {
-          "coding": [
-            {
-              "system": "http://loinc.org",
-              "code": "787-2",
-              "display": "MCV [Entitic mean volume] in Red Blood Cells by Automated count"
-            }
-          ],
-          "text": "MCV"
-        },
-        "subject": {
-          "reference": "urn:uuid:85822a88-55b1-460c-bb7b-e8fc22d8568f"
-        },
-        "performer": [
-          {
-            "extension": [
-              {
-                "url": "http://hl7.org/fhir/StructureDefinition/data-absent-reason",
-                "valueCode": "unknown"
-              }
-            ]
-          }
-        ],
-        "effectiveDateTime": "2024-06-12",
-        "valueQuantity": {
-          "value": 85,
-          "system": "http://unitsofmeasure.org",
-          "code": "fL",
-          "unit": "fL"
-        }
-      }
-    },
-    {
-      "fullUrl": "urn:uuid:f53009c0-b5a3-4a06-90ae-45bd397b6e54",
-      "resource": {
-        "resourceType": "Observation",
-        "meta": {
-          "profile": [
-            "http://hl7.org.au/fhir/ps/StructureDefinition/au-ps-diagnosticresult-path"
-          ]
-        },       
-        "status": "final",
-        "category": [
-          {
-            "coding": [
-              {
-                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
-                "code": "laboratory",
-                "display": "Laboratory"
-              }
-            ]
-          }
-        ],
-        "code": {
-          "coding": [
-            {
-              "system": "http://loinc.org",
-              "code": "5778-6",
-              "display": "Color of Urine"
-            }
-          ],
-          "text": "Colour"
-        },
-        "subject": {
-          "reference": "urn:uuid:85822a88-55b1-460c-bb7b-e8fc22d8568f"
-        },
-        "performer": [
-          {
-            "extension": [
-              {
-                "url": "http://hl7.org/fhir/StructureDefinition/data-absent-reason",
-                "valueCode": "unknown"
-              }
-            ]
-          }
-        ],
-        "effectiveDateTime": "2024-06-03",
-        "valueString": "Light yellow"
-      }
-    },
-    {
-      "fullUrl": "urn:uuid:71503a48-c2cd-4e6a-9fb1-0d9f8d70a05e",
-      "resource": {
-        "resourceType": "Observation",
-        "meta": {
-          "profile": [
-            "http://hl7.org.au/fhir/ps/StructureDefinition/au-ps-diagnosticresult-path"
-          ]
-        },
-        "status": "final",
-        "category": [
-          {
-            "coding": [
-              {
-                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
-                "code": "laboratory",
-                "display": "Laboratory"
-              }
-            ]
-          }
-        ],
-        "code": {
-          "coding": [
-            {
-              "system": "http://loinc.org",
-              "code": "32167-9",
-              "display": "Clarity of Urine"
-            }
-          ],
-          "text": "Clarity"
-        },
-        "subject": {
-          "reference": "urn:uuid:85822a88-55b1-460c-bb7b-e8fc22d8568f"
-        },
-        "performer": [
-          {
-            "extension": [
-              {
-                "url": "http://hl7.org/fhir/StructureDefinition/data-absent-reason",
-                "valueCode": "unknown"
-              }
-            ]
-          }
-        ],
-        "effectiveDateTime": "2024-06-03",
-        "valueString": "Clear"
-      }
-    },
-    {
-      "fullUrl": "urn:uuid:167e068e-26ab-4c3d-8477-88e70a143e62",
-      "resource": {
-        "resourceType": "Observation",
-        "meta": {
-          "profile": [
-            "http://hl7.org.au/fhir/ps/StructureDefinition/au-ps-diagnosticresult-path"
-          ]
-        },
-        "status": "final",
-        "category": [
-          {
-            "coding": [
-              {
-                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
-                "code": "laboratory",
-                "display": "Laboratory"
-              }
-            ]
-          }
-        ],
-        "code": {
-          "coding": [
-            {
-              "system": "http://loinc.org",
-              "code": "5803-2",
-              "display": "pH of Urine by Test strip"
-            }
-          ],
-          "text": "pH"
-        },
-        "subject": {
-          "reference": "urn:uuid:85822a88-55b1-460c-bb7b-e8fc22d8568f"
-        },
-        "performer": [
-          {
-            "extension": [
-              {
-                "url": "http://hl7.org/fhir/StructureDefinition/data-absent-reason",
-                "valueCode": "unknown"
-              }
-            ]
-          }
-        ],
-        "effectiveDateTime": "2024-06-03",
-        "valueQuantity": {
-          "value": 6.0
-        }
-      }
-    },
-    {
-      "fullUrl": "urn:uuid:7dc87c3e-cf74-4648-85e7-90a9b5fd5bc1",
-      "resource": {
-        "resourceType": "Observation",
-        "meta": {
-          "profile": [
-            "http://hl7.org.au/fhir/ps/StructureDefinition/au-ps-diagnosticresult-path"
-          ]
-        },
-        "status": "final",
-        "category": [
-          {
-            "coding": [
-              {
-                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
-                "code": "laboratory",
-                "display": "Laboratory"
-              }
-            ]
-          }
-        ],
-        "code": {
-          "coding": [
-            {
-              "system": "http://loinc.org",
-              "code": "5811-5",
-              "display": "Specific gravity of Urine by Test strip"
-            }
-          ],
-          "text": "Specific Gravity"
-        },
-        "subject": {
-          "reference": "urn:uuid:85822a88-55b1-460c-bb7b-e8fc22d8568f"
-        },
-        "performer": [
-          {
-            "extension": [
-              {
-                "url": "http://hl7.org/fhir/StructureDefinition/data-absent-reason",
-                "valueCode": "unknown"
-              }
-            ]
-          }
-        ],
-        "effectiveDateTime": "2024-06-03",
-        "valueQuantity": {
-          "value": 1.02
-        }
-      }
-    },
-    {
-      "fullUrl": "urn:uuid:8c573f90-bd59-427b-b751-7d2fdd80925b",
-      "resource": {
-        "resourceType": "Observation",
-        "meta": {
-          "profile": [
-            "http://hl7.org.au/fhir/ps/StructureDefinition/au-ps-diagnosticresult-path"
-          ]
-        },
-        "status": "final",
-        "category": [
-          {
-            "coding": [
-              {
-                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
-                "code": "laboratory",
-                "display": "Laboratory"
-              }
-            ]
-          }
-        ],
-        "code": {
-          "coding": [
-            {
-              "system": "http://loinc.org",
-              "code": "20454-5",
-              "display": "Protein [Presence] in Urine by Test strip"
-            }
-          ],
-          "text": "Protein"
-        },
-        "subject": {
-          "reference": "urn:uuid:85822a88-55b1-460c-bb7b-e8fc22d8568f"
-        },
-        "performer": [
-          {
-            "extension": [
-              {
-                "url": "http://hl7.org/fhir/StructureDefinition/data-absent-reason",
-                "valueCode": "unknown"
-              }
-            ]
-          }
-        ],
-        "effectiveDateTime": "2024-06-03",
-        "valueString": "Negative"
-      }
-    },
-    {
-      "fullUrl": "urn:uuid:4f9ef0c2-b431-43b2-8085-2c0a8cd08637",
-      "resource": {
-        "resourceType": "Observation",
-        "meta": {
-          "profile": [
-            "http://hl7.org.au/fhir/ps/StructureDefinition/au-ps-diagnosticresult-path"
-          ]
-        },
-        "status": "final",
-        "category": [
-          {
-            "coding": [
-              {
-                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
-                "code": "laboratory",
-                "display": "Laboratory"
-              }
-            ]
-          }
-        ],
-        "code": {
-          "coding": [
-            {
-              "system": "http://loinc.org",
-              "code": "25428-4",
-              "display": "Glucose [Presence] in Urine by Test strip"
-            }
-          ],
-          "text": "Glucose"
-        },
-        "subject": {
-          "reference": "urn:uuid:85822a88-55b1-460c-bb7b-e8fc22d8568f"
-        },
-        "performer": [
-          {
-            "extension": [
-              {
-                "url": "http://hl7.org/fhir/StructureDefinition/data-absent-reason",
-                "valueCode": "unknown"
-              }
-            ]
-          }
-        ],
-        "effectiveDateTime": "2024-06-03",
-        "valueString": "Negative"
-      }
-    },
-    {
-      "fullUrl": "urn:uuid:ef08a9b0-89a4-47f7-bd4c-72c4c27c53ae",
-      "resource": {
-        "resourceType": "Observation",
-        "meta": {
-          "profile": [
-            "http://hl7.org.au/fhir/ps/StructureDefinition/au-ps-diagnosticresult-path"
-          ]
-        },
-        "status": "final",
-        "category": [
-          {
-            "coding": [
-              {
-                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
-                "code": "laboratory",
-                "display": "Laboratory"
-              }
-            ]
-          }
-        ],
-        "code": {
-          "coding": [
-            {
-              "system": "http://loinc.org",
-              "code": "2514-8",
-              "display": "Ketones [Presence] in Urine by Test strip"
-            }
-          ],
-          "text": "Ketones"
-        },
-        "subject": {
-          "reference": "urn:uuid:85822a88-55b1-460c-bb7b-e8fc22d8568f"
-        },
-        "performer": [
-          {
-            "extension": [
-              {
-                "url": "http://hl7.org/fhir/StructureDefinition/data-absent-reason",
-                "valueCode": "unknown"
-              }
-            ]
-          }
-        ],
-        "effectiveDateTime": "2024-06-03",
-        "valueString": "Negative"
-      }
-    },
-    {
-      "fullUrl": "urn:uuid:aecc0748-6c5d-4238-90ee-1af66f6c0c51",
-      "resource": {
-        "resourceType": "Observation",
-        "meta": {
-          "profile": [
-            "http://hl7.org.au/fhir/ps/StructureDefinition/au-ps-diagnosticresult-path"
-          ]
-        },
-        "status": "final",
-        "category": [
-          {
-            "coding": [
-              {
-                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
-                "code": "laboratory",
-                "display": "Laboratory"
-              }
-            ]
-          }
-        ],
-        "code": {
-          "coding": [
-            {
-              "system": "http://loinc.org",
-              "code": "5802-4",
-              "display": "Nitrite [Presence] in Urine by Test strip"
-            }
-          ],
-          "text": "Nitrites"
-        },
-        "subject": {
-          "reference": "urn:uuid:85822a88-55b1-460c-bb7b-e8fc22d8568f"
-        },
-        "performer": [
-          {
-            "extension": [
-              {
-                "url": "http://hl7.org/fhir/StructureDefinition/data-absent-reason",
-                "valueCode": "unknown"
-              }
-            ]
-          }
-        ],
-        "effectiveDateTime": "2024-06-03",
-        "valueString": "Negative"
-      }
-    },
-    {
-      "fullUrl": "urn:uuid:18b247c2-0c7e-4dcd-a19c-cf8205ce77cd",
-      "resource": {
-        "resourceType": "Observation",
-        "meta": {
-          "profile": [
-            "http://hl7.org.au/fhir/ps/StructureDefinition/au-ps-diagnosticresult-path"
-          ]
-        },
-        "status": "final",
-        "category": [
-          {
-            "coding": [
-              {
-                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
-                "code": "laboratory",
-                "display": "Laboratory"
-              }
-            ]
-          }
-        ],
-        "code": {
-          "coding": [
-            {
-              "system": "http://loinc.org",
-              "code": "5799-2",
-              "display": "Leukocyte esterase [Presence] in Urine by Test strip"
-            }
-          ],
-          "text": "Leukocyte Esterase"
-        },
-        "subject": {
-          "reference": "urn:uuid:85822a88-55b1-460c-bb7b-e8fc22d8568f"
-        },
-        "performer": [
-          {
-            "extension": [
-              {
-                "url": "http://hl7.org/fhir/StructureDefinition/data-absent-reason",
-                "valueCode": "unknown"
-              }
-            ]
-          }
-        ],
-        "effectiveDateTime": "2024-06-03",
-        "valueString": "Negative"
-      }
-    },
-    {
-      "fullUrl": "urn:uuid:75c625ed-822e-4354-9827-aad8874a13ce",
-      "resource": {
-        "resourceType": "Observation",
-        "meta": {
-          "profile": [
-            "http://hl7.org.au/fhir/ps/StructureDefinition/au-ps-diagnosticresult-path"
-          ]
-        },
-        "status": "final",
-        "category": [
-          {
-            "coding": [
-              {
-                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
-                "code": "laboratory",
-                "display": "Laboratory"
-              }
-            ]
-          }
-        ],
-        "code": {
-          "coding": [
-            {
-              "system": "http://loinc.org",
-              "code": "5803-2",
-              "display": "pH of Urine by Test strip"
+              "code": "2756-5",
+              "display": "pH of Urine"
             }
           ],
           "text": "pH"
@@ -2723,7 +1680,7 @@
       }
     },
     {
-      "fullUrl": "urn:uuid:3ad4653a-f85c-4118-a7ff-c9dfa934eb56",
+      "fullUrl": "urn:uuid:fdbef95a-1fe7-416b-ad0c-805c556b49a1",
       "resource": {
         "resourceType": "Observation",
         "meta": {
@@ -2767,11 +1724,19 @@
           }
         ],
         "effectiveDateTime": "2024-11-05",
-        "valueString": "Positive"
+        "valueCodeableConcept": {
+          "coding": [
+            {
+              "system": "http://snomed.info/sct",
+              "code": "10828004",
+              "display": "Positive"
+            }
+          ]
+        }
       }
     },
     {
-      "fullUrl": "urn:uuid:b2104279-70e1-4b49-805b-1193f9cfb63e",
+      "fullUrl": "urn:uuid:cb0a3045-acab-4757-ab8e-eb1506873d8b",
       "resource": {
         "resourceType": "Observation",
         "meta": {
@@ -2815,11 +1780,19 @@
           }
         ],
         "effectiveDateTime": "2024-11-05",
-        "valueString": "Positive"
+        "valueCodeableConcept": {
+          "coding": [
+            {
+              "system": "http://snomed.info/sct",
+              "code": "10828004",
+              "display": "Positive"
+            }
+          ]
+        }
       }
     },
     {
-      "fullUrl": "urn:uuid:f5449417-bd88-451b-ba0e-61073d30f1a8",
+      "fullUrl": "urn:uuid:47e520fe-3fbe-41e2-b13f-ca4e1356f522",
       "resource": {
         "resourceType": "Observation",
         "meta": {
@@ -2863,11 +1836,19 @@
           }
         ],
         "effectiveDateTime": "2024-11-05",
-        "valueString": "Positive"
+        "valueCodeableConcept": {
+          "coding": [
+            {
+              "system": "http://snomed.info/sct",
+              "code": "10828004",
+              "display": "Positive"
+            }
+          ]
+        }
       }
     },
     {
-      "fullUrl": "urn:uuid:49b658b3-315d-4e83-b85c-d57547611dc5",
+      "fullUrl": "urn:uuid:9b86ccbe-6d8e-465e-aba1-8279afe0706c",
       "resource": {
         "resourceType": "Observation",
         "meta": {
@@ -2931,7 +1912,7 @@
       }
     },
     {
-      "fullUrl": "urn:uuid:a0a0db9e-8922-40dd-ad6a-b3109ec3e4c2",
+      "fullUrl": "urn:uuid:481d0824-bb27-42d5-8361-82bc90385318",
       "resource": {
         "resourceType": "Observation",
         "meta": {
@@ -2995,7 +1976,7 @@
       }
     },
     {
-      "fullUrl": "urn:uuid:a4471b2a-cd87-41dd-921c-37e38d1f597c",
+      "fullUrl": "urn:uuid:e733d1d8-37c1-4dce-aaf0-0670f12580fa",
       "resource": {
         "resourceType": "Observation",
         "meta": {
@@ -3039,11 +2020,19 @@
           }
         ],
         "effectiveDateTime": "2024-11-05",
-        "valueString": "Nil"
+        "valueCodeableConcept": {
+          "coding": [
+            {
+              "system": "http://snomed.info/sct",
+              "code": "260386005",
+              "display": "Nil"
+            }
+          ]
+        }
       }
     },
     {
-      "fullUrl": "urn:uuid:db32c14a-eca7-4998-bd7d-7b66dbc1fa23",
+      "fullUrl": "urn:uuid:90a60d9b-8840-4250-abff-8c1557aa8bfd",
       "resource": {
         "resourceType": "Observation",
         "meta": {
@@ -3087,11 +2076,19 @@
           }
         ],
         "effectiveDateTime": "2024-11-05",
-        "valueString": "Escherichia coli"
+        "valueCodeableConcept": {
+          "coding": [
+            {
+              "system": "http://snomed.info/sct",
+              "code": "112283007",
+              "display": "Escherichia coli"
+            }
+          ]
+        }
       }
     },
     {
-      "fullUrl": "urn:uuid:aaeaedd1-9f65-43e9-9569-c2a99c9488c9",
+      "fullUrl": "urn:uuid:d757f854-2634-4e4e-a03f-b32dd957612b",
       "resource": {
         "resourceType": "Observation",
         "meta": {
@@ -3135,11 +2132,11 @@
           }
         ],
         "effectiveDateTime": "2024-11-05",
-        "valueString": "10^8"
+        "valueString": "> 10^8"
       }
     },
     {
-      "fullUrl": "urn:uuid:bafc1b41-323b-4cc6-971c-145608a96419",
+      "fullUrl": "urn:uuid:744c34ca-c23a-4b5f-97f3-3e824b86bab9",
       "resource": {
         "resourceType": "Observation",
         "meta": {
@@ -3195,7 +2192,7 @@
       }
     },
     {
-      "fullUrl": "urn:uuid:36b2e997-7b1c-4e94-b936-e8bd244da150",
+      "fullUrl": "urn:uuid:c80f3820-3e4d-45a4-b73a-df96df72bfbb",
       "resource": {
         "resourceType": "Observation",
         "meta": {
@@ -3251,7 +2248,7 @@
       }
     },
     {
-      "fullUrl": "urn:uuid:687e56d0-e45f-4bbd-b2e5-1df234f7d5e8",
+      "fullUrl": "urn:uuid:35e95ae6-2c13-4a8d-8a25-4f374b98c46e",
       "resource": {
         "resourceType": "Observation",
         "meta": {
@@ -3307,7 +2304,7 @@
       }
     },
     {
-      "fullUrl": "urn:uuid:1e813570-e34f-49ae-9b78-c0ccaccbdb3b",
+      "fullUrl": "urn:uuid:913fcd83-4a12-4e6e-8ec7-8b8852189778",
       "resource": {
         "resourceType": "Observation",
         "meta": {
@@ -3363,7 +2360,7 @@
       }
     },
     {
-      "fullUrl": "urn:uuid:bd10f9e1-df70-4aef-bfaa-b65aca083868",
+      "fullUrl": "urn:uuid:e6eff8a2-3fcd-4a3e-9d63-670200918281",
       "resource": {
         "resourceType": "Observation",
         "meta": {
@@ -3419,7 +2416,7 @@
       }
     },
     {
-      "fullUrl": "urn:uuid:db34a194-c947-4624-b277-1d72ef9a5661",
+      "fullUrl": "urn:uuid:a72f350b-9c02-41d7-9907-413ab9a99ed1",
       "resource": {
         "resourceType": "Observation",
         "meta": {
@@ -3475,7 +2472,7 @@
       }
     },
     {
-      "fullUrl": "urn:uuid:926c0a30-3f52-447d-89c5-e4c381580c3a",
+      "fullUrl": "urn:uuid:8d43dab9-cf76-44eb-83b4-db7cd08f223e",
       "resource": {
         "resourceType": "Observation",
         "meta": {
@@ -3527,6 +2524,1421 @@
               "display": "Susceptible"
             }
           ]
+        }
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:efd650d3-9131-4b15-b1ff-cb59b2593e99",
+      "resource": {
+        "resourceType": "Observation",
+        "meta": {
+          "profile": [
+            "http://hl7.org.au/fhir/ps/StructureDefinition/au-ps-diagnosticresult-path"
+          ]
+        },
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "laboratory",
+                "display": "Laboratory"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "100904-2",
+              "display": "Urinary tract pathogens panel - Urine by Culture"
+            }
+          ],
+          "text": "Midstream specimen of urine (MSU)"
+        },
+        "subject": {
+          "reference": "urn:uuid:85822a88-55b1-460c-bb7b-e8fc22d8568f"
+        },
+        "performer": [
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/data-absent-reason",
+                "valueCode": "unknown"
+              }
+            ]
+          }
+        ],
+        "effectiveDateTime": "2024-11-05",
+        "hasMember": [
+          {
+            "reference": "urn:uuid:61bb8832-3dd8-4fce-96fd-f781899ba76d"
+          },
+          {
+            "reference": "urn:uuid:fdbef95a-1fe7-416b-ad0c-805c556b49a1"
+          },
+          {
+            "reference": "urn:uuid:cb0a3045-acab-4757-ab8e-eb1506873d8b"
+          },
+          {
+            "reference": "urn:uuid:47e520fe-3fbe-41e2-b13f-ca4e1356f522"
+          },
+          {
+            "reference": "urn:uuid:9b86ccbe-6d8e-465e-aba1-8279afe0706c"
+          },
+          {
+            "reference": "urn:uuid:481d0824-bb27-42d5-8361-82bc90385318"
+          },
+          {
+            "reference": "urn:uuid:e733d1d8-37c1-4dce-aaf0-0670f12580fa"
+          },
+          {
+            "reference": "urn:uuid:90a60d9b-8840-4250-abff-8c1557aa8bfd"
+          },
+          {
+            "reference": "urn:uuid:d757f854-2634-4e4e-a03f-b32dd957612b"
+          },
+          {
+            "reference": "urn:uuid:744c34ca-c23a-4b5f-97f3-3e824b86bab9"
+          },
+          {
+            "reference": "urn:uuid:c80f3820-3e4d-45a4-b73a-df96df72bfbb"
+          },
+          {
+            "reference": "urn:uuid:35e95ae6-2c13-4a8d-8a25-4f374b98c46e"
+          },
+          {
+            "reference": "urn:uuid:913fcd83-4a12-4e6e-8ec7-8b8852189778"
+          },
+          {
+            "reference": "urn:uuid:e6eff8a2-3fcd-4a3e-9d63-670200918281"
+          },
+          {
+            "reference": "urn:uuid:a72f350b-9c02-41d7-9907-413ab9a99ed1"
+          },
+          {
+            "reference": "urn:uuid:8d43dab9-cf76-44eb-83b4-db7cd08f223e"
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:e92695ed-b525-4b02-9764-1dfcad18f49a",
+      "resource": {
+        "resourceType": "Observation",
+        "meta": {
+          "profile": [
+            "http://hl7.org.au/fhir/ps/StructureDefinition/au-ps-diagnosticresult-path"
+          ]
+        },
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "laboratory",
+                "display": "Laboratory"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "14996-3",
+              "display": "Glucose [Moles/volume] in Serum or Plasma --pre 75 g glucose PO"
+            }
+          ],
+          "text": "Glucose Tolerance Test (GTT) Fasting"
+        },
+        "subject": {
+          "reference": "urn:uuid:85822a88-55b1-460c-bb7b-e8fc22d8568f"
+        },
+        "performer": [
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/data-absent-reason",
+                "valueCode": "unknown"
+              }
+            ]
+          }
+        ],
+        "effectiveDateTime": "2024-10-21",
+        "valueQuantity": {
+          "value": 5.3,
+          "system": "http://unitsofmeasure.org",
+          "code": "mmol/L",
+          "unit": "mmol/L"
+        }
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:1069cd62-324f-4a05-a7ac-28d20363e5be",
+      "resource": {
+        "resourceType": "Observation",
+        "meta": {
+          "profile": [
+            "http://hl7.org.au/fhir/ps/StructureDefinition/au-ps-diagnosticresult-path"
+          ]
+        },
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "laboratory",
+                "display": "Laboratory"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "72171-2",
+              "display": "Glucose tolerance 2 hours panel - Serum or Plasma"
+            }
+          ],
+          "text": "Glucose Tolerance Test (GTT) Fasting"
+        },
+        "subject": {
+          "reference": "urn:uuid:85822a88-55b1-460c-bb7b-e8fc22d8568f"
+        },
+        "performer": [
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/data-absent-reason",
+                "valueCode": "unknown"
+              }
+            ]
+          }
+        ],
+        "effectiveDateTime": "2024-10-21",
+        "hasMember": [
+          {
+            "reference": "urn:uuid:e92695ed-b525-4b02-9764-1dfcad18f49a"
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:c018d422-3f2a-4303-9a90-9328a5599d3b",
+      "resource": {
+        "resourceType": "Observation",
+        "meta": {
+          "profile": [
+            "http://hl7.org.au/fhir/ps/StructureDefinition/au-ps-diagnosticresult-path"
+          ]
+        },
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "laboratory",
+                "display": "Laboratory"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "51597-3",
+              "display": "Glucose [Moles/volume] in Serum or Plasma --1 hour post 75 g glucose PO"
+            }
+          ],
+          "text": "Glucose Tolerance Test (GTT) 1 hour"
+        },
+        "subject": {
+          "reference": "urn:uuid:85822a88-55b1-460c-bb7b-e8fc22d8568f"
+        },
+        "performer": [
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/data-absent-reason",
+                "valueCode": "unknown"
+              }
+            ]
+          }
+        ],
+        "effectiveDateTime": "2024-10-21",
+        "valueQuantity": {
+          "value": 10,
+          "system": "http://unitsofmeasure.org",
+          "code": "mmol/L",
+          "unit": "mmol/L"
+        }
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:798de83c-a1dc-4b63-bb35-b7cfdbfeea22",
+      "resource": {
+        "resourceType": "Observation",
+        "meta": {
+          "profile": [
+            "http://hl7.org.au/fhir/ps/StructureDefinition/au-ps-diagnosticresult-path"
+          ]
+        },
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "laboratory",
+                "display": "Laboratory"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "72171-2",
+              "display": "Glucose tolerance 2 hours panel - Serum or Plasma"
+            }
+          ],
+          "text": "Glucose Tolerance Test (GTT) 1 hour"
+        },
+        "subject": {
+          "reference": "urn:uuid:85822a88-55b1-460c-bb7b-e8fc22d8568f"
+        },
+        "performer": [
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/data-absent-reason",
+                "valueCode": "unknown"
+              }
+            ]
+          }
+        ],
+        "effectiveDateTime": "2024-10-21",
+        "hasMember": [
+          {
+            "reference": "urn:uuid:c018d422-3f2a-4303-9a90-9328a5599d3b"
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:02fea31a-3e9a-41f5-90ab-f7e6d3bbc30e",
+      "resource": {
+        "resourceType": "Observation",
+        "meta": {
+          "profile": [
+            "http://hl7.org.au/fhir/ps/StructureDefinition/au-ps-diagnosticresult-path"
+          ]
+        },
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "laboratory",
+                "display": "Laboratory"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "14995-5",
+              "display": "Glucose [Moles/volume] in Serum or Plasma --2 hours post 75 g glucose PO"
+            }
+          ],
+          "text": "Glucose Tolerance Test (GTT) 2 hour"
+        },
+        "subject": {
+          "reference": "urn:uuid:85822a88-55b1-460c-bb7b-e8fc22d8568f"
+        },
+        "performer": [
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/data-absent-reason",
+                "valueCode": "unknown"
+              }
+            ]
+          }
+        ],
+        "effectiveDateTime": "2024-10-21",
+        "valueQuantity": {
+          "value": 8.6,
+          "system": "http://unitsofmeasure.org",
+          "code": "mmol/L",
+          "unit": "mmol/L"
+        }
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:fbff856a-3b2f-435d-806a-1b87ea2a6869",
+      "resource": {
+        "resourceType": "Observation",
+        "meta": {
+          "profile": [
+            "http://hl7.org.au/fhir/ps/StructureDefinition/au-ps-diagnosticresult-path"
+          ]
+        },
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "laboratory",
+                "display": "Laboratory"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "72171-2",
+              "display": "Glucose tolerance 2 hours panel - Serum or Plasma"
+            }
+          ],
+          "text": "Glucose Tolerance Test (GTT) 2 hour"
+        },
+        "subject": {
+          "reference": "urn:uuid:85822a88-55b1-460c-bb7b-e8fc22d8568f"
+        },
+        "performer": [
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/data-absent-reason",
+                "valueCode": "unknown"
+              }
+            ]
+          }
+        ],
+        "effectiveDateTime": "2024-10-21",
+        "hasMember": [
+          {
+            "reference": "urn:uuid:02fea31a-3e9a-41f5-90ab-f7e6d3bbc30e"
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:4c72482f-0131-4928-a56c-abbefd7cb5e0",
+      "resource": {
+        "resourceType": "Observation",
+        "meta": {
+          "profile": [
+            "http://hl7.org.au/fhir/ps/StructureDefinition/au-ps-diagnosticresult-path"
+          ]
+        },
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "laboratory",
+                "display": "Laboratory"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "718-7",
+              "display": "Hemoglobin [Mass/volume] in Blood"
+            }
+          ],
+          "text": "Haemoglobin"
+        },
+        "subject": {
+          "reference": "urn:uuid:85822a88-55b1-460c-bb7b-e8fc22d8568f"
+        },
+        "performer": [
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/data-absent-reason",
+                "valueCode": "unknown"
+              }
+            ]
+          }
+        ],
+        "effectiveDateTime": "2024-06-12",
+        "valueQuantity": {
+          "value": 125,
+          "system": "http://unitsofmeasure.org",
+          "code": "g/L",
+          "unit": "g/L"
+        }
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:7d1eca67-c684-45b8-96d2-2099407fbbd9",
+      "resource": {
+        "resourceType": "Observation",
+        "meta": {
+          "profile": [
+            "http://hl7.org.au/fhir/ps/StructureDefinition/au-ps-diagnosticresult-path"
+          ]
+        },
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "laboratory",
+                "display": "Laboratory"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "4544-3",
+              "display": "Hematocrit [Volume Fraction] of Blood by Automated count"
+            }
+          ],
+          "text": "Haematocrit"
+        },
+        "subject": {
+          "reference": "urn:uuid:85822a88-55b1-460c-bb7b-e8fc22d8568f"
+        },
+        "performer": [
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/data-absent-reason",
+                "valueCode": "unknown"
+              }
+            ]
+          }
+        ],
+        "effectiveDateTime": "2024-06-12",
+        "valueQuantity": {
+          "value": 0.37,
+          "system": "http://unitsofmeasure.org",
+          "code": "L/L",
+          "unit": "L/L"
+        }
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:b9ed7650-35e5-4407-bcff-01574be0b657",
+      "resource": {
+        "resourceType": "Observation",
+        "meta": {
+          "profile": [
+            "http://hl7.org.au/fhir/ps/StructureDefinition/au-ps-diagnosticresult-path"
+          ]
+        },
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "laboratory",
+                "display": "Laboratory"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "6690-2",
+              "display": "Leukocytes [#/volume] in Blood by Automated count"
+            }
+          ],
+          "text": "White Blood Cell Count"
+        },
+        "subject": {
+          "reference": "urn:uuid:85822a88-55b1-460c-bb7b-e8fc22d8568f"
+        },
+        "performer": [
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/data-absent-reason",
+                "valueCode": "unknown"
+              }
+            ]
+          }
+        ],
+        "effectiveDateTime": "2024-06-12",
+        "valueQuantity": {
+          "value": 8.0,
+          "system": "http://unitsofmeasure.org",
+          "code": "10*9/L",
+          "unit": "x 10^9/L"
+        }
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:e45935c0-514f-4532-8ee5-19fba1d5e2d9",
+      "resource": {
+        "resourceType": "Observation",
+        "meta": {
+          "profile": [
+            "http://hl7.org.au/fhir/ps/StructureDefinition/au-ps-diagnosticresult-path"
+          ]
+        },
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "laboratory",
+                "display": "Laboratory"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "777-3",
+              "display": "Platelets [#/volume] in Blood by Automated count"
+            }
+          ],
+          "text": "Platelets"
+        },
+        "subject": {
+          "reference": "urn:uuid:85822a88-55b1-460c-bb7b-e8fc22d8568f"
+        },
+        "performer": [
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/data-absent-reason",
+                "valueCode": "unknown"
+              }
+            ]
+          }
+        ],
+        "effectiveDateTime": "2024-06-12",
+        "valueQuantity": {
+          "value": 250,
+          "system": "http://unitsofmeasure.org",
+          "code": "10*9/L",
+          "unit": "x 10^9/L"
+        }
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:05083d38-b34d-47c3-a843-6b958c46e33d",
+      "resource": {
+        "resourceType": "Observation",
+        "meta": {
+          "profile": [
+            "http://hl7.org.au/fhir/ps/StructureDefinition/au-ps-diagnosticresult-path"
+          ]
+        },
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "laboratory",
+                "display": "Laboratory"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "787-2",
+              "display": "MCV [Entitic mean volume] in Red Blood Cells by Automated count"
+            }
+          ],
+          "text": "MCV"
+        },
+        "subject": {
+          "reference": "urn:uuid:85822a88-55b1-460c-bb7b-e8fc22d8568f"
+        },
+        "performer": [
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/data-absent-reason",
+                "valueCode": "unknown"
+              }
+            ]
+          }
+        ],
+        "effectiveDateTime": "2024-06-12",
+        "valueQuantity": {
+          "value": 85,
+          "system": "http://unitsofmeasure.org",
+          "code": "fL",
+          "unit": "fL"
+        }
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:bb4a02ff-9929-4f08-aa95-8290d114c208",
+      "resource": {
+        "resourceType": "Observation",
+        "meta": {
+          "profile": [
+            "http://hl7.org.au/fhir/ps/StructureDefinition/au-ps-diagnosticresult-path"
+          ]
+        },
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "laboratory",
+                "display": "Laboratory"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "58410-2",
+              "display": "CBC panel - Blood by Automated count"
+            }
+          ],
+          "text": "Full Blood Count"
+        },
+        "subject": {
+          "reference": "urn:uuid:85822a88-55b1-460c-bb7b-e8fc22d8568f"
+        },
+        "performer": [
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/data-absent-reason",
+                "valueCode": "unknown"
+              }
+            ]
+          }
+        ],
+        "effectiveDateTime": "2024-06-12",
+        "hasMember": [
+          {
+            "reference": "urn:uuid:4c72482f-0131-4928-a56c-abbefd7cb5e0"
+          },
+          {
+            "reference": "urn:uuid:7d1eca67-c684-45b8-96d2-2099407fbbd9"
+          },
+          {
+            "reference": "urn:uuid:b9ed7650-35e5-4407-bcff-01574be0b657"
+          },
+          {
+            "reference": "urn:uuid:e45935c0-514f-4532-8ee5-19fba1d5e2d9"
+          },
+          {
+            "reference": "urn:uuid:05083d38-b34d-47c3-a843-6b958c46e33d"
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:766c7934-f1e4-4fa3-abf0-391d9e90f7a0",
+      "resource": {
+        "resourceType": "Observation",
+        "meta": {
+          "profile": [
+            "http://hl7.org.au/fhir/ps/StructureDefinition/au-ps-diagnosticresult-path"
+          ]
+        },
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "laboratory",
+                "display": "Laboratory"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "5778-6",
+              "display": "Color of Urine"
+            }
+          ],
+          "text": "Colour"
+        },
+        "subject": {
+          "reference": "urn:uuid:85822a88-55b1-460c-bb7b-e8fc22d8568f"
+        },
+        "performer": [
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/data-absent-reason",
+                "valueCode": "unknown"
+              }
+            ]
+          }
+        ],
+        "effectiveDateTime": "2024-06-03",
+        "valueCodeableConcept": {
+          "coding": [
+            {
+              "system": "http://snomed.info/sct",
+              "code": "1290436002",
+              "display": "Light yellow colour"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:aa66e1b3-1d30-4a8a-a3c5-9e5b0c11d03c",
+      "resource": {
+        "resourceType": "Observation",
+        "meta": {
+          "profile": [
+            "http://hl7.org.au/fhir/ps/StructureDefinition/au-ps-diagnosticresult-path"
+          ]
+        },
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "laboratory",
+                "display": "Laboratory"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "32167-9",
+              "display": "Clarity of Urine"
+            }
+          ],
+          "text": "Clarity"
+        },
+        "subject": {
+          "reference": "urn:uuid:85822a88-55b1-460c-bb7b-e8fc22d8568f"
+        },
+        "performer": [
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/data-absent-reason",
+                "valueCode": "unknown"
+              }
+            ]
+          }
+        ],
+        "effectiveDateTime": "2024-06-03",
+        "valueCodeableConcept": {
+          "coding": [
+            {
+              "system": "http://snomed.info/sct",
+              "code": "263707001",
+              "display": "Clear"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:08e2e9f8-3b56-40e9-850b-6b8f60bed0c8",
+      "resource": {
+        "resourceType": "Observation",
+        "meta": {
+          "profile": [
+            "http://hl7.org.au/fhir/ps/StructureDefinition/au-ps-diagnosticresult-path"
+          ]
+        },
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "laboratory",
+                "display": "Laboratory"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "5803-2",
+              "display": "pH of Urine by Test strip"
+            }
+          ],
+          "text": "pH"
+        },
+        "subject": {
+          "reference": "urn:uuid:85822a88-55b1-460c-bb7b-e8fc22d8568f"
+        },
+        "performer": [
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/data-absent-reason",
+                "valueCode": "unknown"
+              }
+            ]
+          }
+        ],
+        "effectiveDateTime": "2024-06-03",
+        "valueQuantity": {
+          "value": 6.0
+        }
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:76644f7c-bb5a-4945-9162-eeb51b94d9f9",
+      "resource": {
+        "resourceType": "Observation",
+        "meta": {
+          "profile": [
+            "http://hl7.org.au/fhir/ps/StructureDefinition/au-ps-diagnosticresult-path"
+          ]
+        },
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "laboratory",
+                "display": "Laboratory"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "5811-5",
+              "display": "Specific gravity of Urine by Test strip"
+            }
+          ],
+          "text": "Specific Gravity"
+        },
+        "subject": {
+          "reference": "urn:uuid:85822a88-55b1-460c-bb7b-e8fc22d8568f"
+        },
+        "performer": [
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/data-absent-reason",
+                "valueCode": "unknown"
+              }
+            ]
+          }
+        ],
+        "effectiveDateTime": "2024-06-03",
+        "valueQuantity": {
+          "value": 1.02
+        }
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:42ad609a-f459-41dd-aa5c-27710d2b313d",
+      "resource": {
+        "resourceType": "Observation",
+        "meta": {
+          "profile": [
+            "http://hl7.org.au/fhir/ps/StructureDefinition/au-ps-diagnosticresult-path"
+          ]
+        },
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "laboratory",
+                "display": "Laboratory"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "20454-5",
+              "display": "Protein [Presence] in Urine by Test strip"
+            }
+          ],
+          "text": "Protein"
+        },
+        "subject": {
+          "reference": "urn:uuid:85822a88-55b1-460c-bb7b-e8fc22d8568f"
+        },
+        "performer": [
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/data-absent-reason",
+                "valueCode": "unknown"
+              }
+            ]
+          }
+        ],
+        "effectiveDateTime": "2024-06-03",
+        "valueCodeableConcept": {
+          "coding": [
+            {
+              "system": "http://snomed.info/sct",
+              "code": "260385009",
+              "display": "Negative"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:bcf2bd52-8a72-4d35-9c2d-079538e0224c",
+      "resource": {
+        "resourceType": "Observation",
+        "meta": {
+          "profile": [
+            "http://hl7.org.au/fhir/ps/StructureDefinition/au-ps-diagnosticresult-path"
+          ]
+        },
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "laboratory",
+                "display": "Laboratory"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "25428-4",
+              "display": "Glucose [Presence] in Urine by Test strip"
+            }
+          ],
+          "text": "Glucose"
+        },
+        "subject": {
+          "reference": "urn:uuid:85822a88-55b1-460c-bb7b-e8fc22d8568f"
+        },
+        "performer": [
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/data-absent-reason",
+                "valueCode": "unknown"
+              }
+            ]
+          }
+        ],
+        "effectiveDateTime": "2024-06-03",
+        "valueCodeableConcept": {
+          "coding": [
+            {
+              "system": "http://snomed.info/sct",
+              "code": "260385009",
+              "display": "Negative"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:42d57797-cb7b-49e2-9b2f-518e79f65d22",
+      "resource": {
+        "resourceType": "Observation",
+        "meta": {
+          "profile": [
+            "http://hl7.org.au/fhir/ps/StructureDefinition/au-ps-diagnosticresult-path"
+          ]
+        },
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "laboratory",
+                "display": "Laboratory"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "2514-8",
+              "display": "Ketones [Presence] in Urine by Test strip"
+            }
+          ],
+          "text": "Ketones"
+        },
+        "subject": {
+          "reference": "urn:uuid:85822a88-55b1-460c-bb7b-e8fc22d8568f"
+        },
+        "performer": [
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/data-absent-reason",
+                "valueCode": "unknown"
+              }
+            ]
+          }
+        ],
+        "effectiveDateTime": "2024-06-03",
+        "valueCodeableConcept": {
+          "coding": [
+            {
+              "system": "http://snomed.info/sct",
+              "code": "260385009",
+              "display": "Negative"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:9e76b956-2675-431a-8e5e-0a7b3802320b",
+      "resource": {
+        "resourceType": "Observation",
+        "meta": {
+          "profile": [
+            "http://hl7.org.au/fhir/ps/StructureDefinition/au-ps-diagnosticresult-path"
+          ]
+        },
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "laboratory",
+                "display": "Laboratory"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "5802-4",
+              "display": "Nitrite [Presence] in Urine by Test strip"
+            }
+          ],
+          "text": "Nitrites"
+        },
+        "subject": {
+          "reference": "urn:uuid:85822a88-55b1-460c-bb7b-e8fc22d8568f"
+        },
+        "performer": [
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/data-absent-reason",
+                "valueCode": "unknown"
+              }
+            ]
+          }
+        ],
+        "effectiveDateTime": "2024-06-03",
+        "valueCodeableConcept": {
+          "coding": [
+            {
+              "system": "http://snomed.info/sct",
+              "code": "260385009",
+              "display": "Negative"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:913d1ef1-b122-45a8-84da-cef4d3066f02",
+      "resource": {
+        "resourceType": "Observation",
+        "meta": {
+          "profile": [
+            "http://hl7.org.au/fhir/ps/StructureDefinition/au-ps-diagnosticresult-path"
+          ]
+        },
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "laboratory",
+                "display": "Laboratory"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "5799-2",
+              "display": "Leukocyte esterase [Presence] in Urine by Test strip"
+            }
+          ],
+          "text": "Leukocyte Esterase"
+        },
+        "subject": {
+          "reference": "urn:uuid:85822a88-55b1-460c-bb7b-e8fc22d8568f"
+        },
+        "performer": [
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/data-absent-reason",
+                "valueCode": "unknown"
+              }
+            ]
+          }
+        ],
+        "effectiveDateTime": "2024-06-03",
+        "valueCodeableConcept": {
+          "coding": [
+            {
+              "system": "http://snomed.info/sct",
+              "code": "260385009",
+              "display": "Negative"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:8fa5fe84-b56e-4ee5-9522-af5519f28931",
+      "resource": {
+        "resourceType": "Observation",
+        "meta": {
+          "profile": [
+            "http://hl7.org.au/fhir/ps/StructureDefinition/au-ps-diagnosticresult-path"
+          ]
+        },
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "laboratory",
+                "display": "Laboratory"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "24357-6",
+              "display": "Urinalysis macro (dipstick) panel - Urine"
+            }
+          ],
+          "text": "Urinalysis"
+        },
+        "subject": {
+          "reference": "urn:uuid:85822a88-55b1-460c-bb7b-e8fc22d8568f"
+        },
+        "performer": [
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/data-absent-reason",
+                "valueCode": "unknown"
+              }
+            ]
+          }
+        ],
+        "effectiveDateTime": "2024-06-03",
+        "hasMember": [
+          {
+            "reference": "urn:uuid:766c7934-f1e4-4fa3-abf0-391d9e90f7a0"
+          },
+          {
+            "reference": "urn:uuid:aa66e1b3-1d30-4a8a-a3c5-9e5b0c11d03c"
+          },
+          {
+            "reference": "urn:uuid:08e2e9f8-3b56-40e9-850b-6b8f60bed0c8"
+          },
+          {
+            "reference": "urn:uuid:76644f7c-bb5a-4945-9162-eeb51b94d9f9"
+          },
+          {
+            "reference": "urn:uuid:42ad609a-f459-41dd-aa5c-27710d2b313d"
+          },
+          {
+            "reference": "urn:uuid:bcf2bd52-8a72-4d35-9c2d-079538e0224c"
+          },
+          {
+            "reference": "urn:uuid:42d57797-cb7b-49e2-9b2f-518e79f65d22"
+          },
+          {
+            "reference": "urn:uuid:9e76b956-2675-431a-8e5e-0a7b3802320b"
+          },
+          {
+            "reference": "urn:uuid:913d1ef1-b122-45a8-84da-cef4d3066f02"
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:2ad9562b-a9ad-4773-818c-484b869b15c7",
+      "resource": {
+        "resourceType": "Observation",
+        "meta": {
+          "profile": [
+            "http://hl7.org.au/fhir/ps/StructureDefinition/au-ps-diagnosticresult-path"
+          ]
+        },
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "laboratory",
+                "display": "Laboratory"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "4548-4",
+              "display": "Hemoglobin A1c/Hemoglobin.total in Blood"
+            }
+          ],
+          "text": "Haemoglobin A1c"
+        },
+        "subject": {
+          "reference": "urn:uuid:85822a88-55b1-460c-bb7b-e8fc22d8568f"
+        },
+        "performer": [
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/data-absent-reason",
+                "valueCode": "unknown"
+              }
+            ]
+          }
+        ],
+        "effectiveDateTime": "2024-06-14",
+        "valueQuantity": {
+          "value": 5.8,
+          "system": "http://unitsofmeasure.org",
+          "code": "%",
+          "unit": "%"
+        }
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:2d6de264-0d18-4049-834a-9eb2b3954e5f",
+      "resource": {
+        "resourceType": "Observation",
+        "meta": {
+          "profile": [
+            "http://hl7.org.au/fhir/ps/StructureDefinition/au-ps-diagnosticresult-path"
+          ]
+        },
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "laboratory",
+                "display": "Laboratory"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "21198-7",
+              "display": "Choriogonadotropin.beta subunit [Units/volume] in Serum or Plasma"
+            }
+          ],
+          "text": "Beta-HCG"
+        },
+        "subject": {
+          "reference": "urn:uuid:85822a88-55b1-460c-bb7b-e8fc22d8568f"
+        },
+        "performer": [
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/data-absent-reason",
+                "valueCode": "unknown"
+              }
+            ]
+          }
+        ],
+        "effectiveDateTime": "2024-06-12",
+        "valueQuantity": {
+          "value": 16000,
+          "system": "http://unitsofmeasure.org",
+          "code": "[IU]/L",
+          "unit": "IU/L"
         }
       }
     },
