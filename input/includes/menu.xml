@@ -13,6 +13,9 @@
       </li>
     </ul>
   </li>
+  <li>
+    <a href="the-aups.html">The AU PS</a>
+  </li>
   <li class="dropdown">
     <a data-toggle="dropdown" href="#" class="dropdown-toggle">Guidance
       <b class="caret"></b>
@@ -42,7 +45,7 @@
     </ul>
   </li>
   <li class="dropdown">
-    <a data-toggle="dropdown" href="#" class="dropdown-toggle">Use Cases
+    <a data-toggle="dropdown" href="#" class="dropdown-toggle">Example Use Cases
       <b class="caret"></b>
     </a>
      <ul class="dropdown-menu">

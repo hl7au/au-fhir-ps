@@ -1,24 +1,3 @@
-### Structure of the Australian Patient Summary (AU PS)
-AU PS is specified in this guide as a HL7 FHIR document (a Bundle including a Composition), composed by a set of potentially reusable "minimal" data blocks (the AU PS profiles).
-
-Based on IPS and AU Core, it defines a patient summary in the context of providing information to downstream providers. While profiled sections of the may have content that reflects intentions or orders of clinical care, the patient summary is meant as an informative document and is not intended to be directly actionable. For example, a MedicationRequest resource in the medications section or a CarePlan resource in the Plan of Care section, should not fulfilled or actioned from the IPS document.
-
-The AU PS Document shares the same structure as an IPS, shown below.
-
- <div> 
-    <img src="IPS_composition.png" alt="The IPS composition" style="width:60%"/>
-  </div>
-*Figure 1: The IPS composition (source: [IPS 2.0.0](https://build.fhir.org/ig/HL7/fhir-ips/Structure-of-the-International-Patient-Summary.html#structure-of-the-international-patient-summary))*
-<br/>
-
-In the AU PS document:
-* Required (Mandatory) sections are Problems, Allergies and Intolerances, and Medication Summary
-* Recommended sections are Immunizations, Results (Diagnostics), History of Procedures, and Medical Devices
-* Optional sections are Advance Directives, Functional Status, History of Pregnancy, Plan of Care, Alerts, History of Past Problems, Patient Story, Social History, and Vital Signs
-* Undefined sections are "additional" sections not defined by the AU PS Composition
-
-See the description of each defined section in IPS [Sections description](https://build.fhir.org/ig/HL7/fhir-ips/Structure-of-the-International-Patient-Summary.html#sections-description).
-
 ### Profiling Approach
 AU PS profiles will by design:
 * ensure resource compliance with AU Core and IPS
