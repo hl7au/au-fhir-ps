@@ -134,6 +134,15 @@
         <profile value="http://hl7.org/fhir/uv/ips/StructureDefinition/CodeableConcept-uv-ips"/>
       </type>
     </element>
+    <element id="Observation.code.coding">
+      <path value="Observation.code.coding" />
+      <min value="2" />
+    </element>
+    <element id="Observation.code.coding:loincSmokingStatus">
+      <path value="Observation.code.coding" />
+      <sliceName value="loincSmokingStatus" />    
+      <min value="1" />
+    </element>
     <element id="Observation.subject">
       <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
         <extension url="code">

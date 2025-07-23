@@ -219,6 +219,11 @@
 				</page>
 			</page>
 			<page>
+				<nameUrl value="the-aups.html"/>
+				<title value="The AU PS"/>
+				<generation value="markdown"/>
+			</page>
+			<page>
 				<nameUrl value="guidance.html"/>
 				<title value="Guidance"/>
 				<generation value="markdown"/>
@@ -260,7 +265,7 @@
 			</page>
 			<page>
 				<nameUrl value="usecase.html"/>
-				<title value="Use Cases"/>
+				<title value="Example Use Cases"/>
 				<generation value="markdown"/>
 				<page>
 					<nameUrl value="uc-interstate.html"/>

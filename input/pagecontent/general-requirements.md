@@ -290,7 +290,7 @@ Obligations vary significantly for elements in the AU PS Composition profile, in
 - For all recommended sections AU PS Producers **SHOULD** correctly populate the section if a value is known and **SHOULD** correctly populate `Composition.section.entry` if a value is known. 
 - For all optional or undefined sections AU PS Producers **MAY** correctly populate the section if a value is known and **MAY** correctly populate `Composition.section.entry` if a value is known. 
 
-See [Structure of the Australian Patient Summary (AU PS)](general-guidance.html#structure-of-the-australian-patient-summary-au-ps) for information on the mandatory, recommended, and optional sections.
+See [Structure of the Australian Patient Summary (AU PS)](the-aups.html#structure-of-the-au-ps) for information on the mandatory, recommended, and optional sections.
 
 ##### Must Support - Primitive Elements
 Primitive elements are single elements with a primitive value. If a primitive element is labelled as *Must Support*: 
@@ -401,10 +401,10 @@ The table below provides a list of AU PS profile elements that allow multiple id
 
 Profile |Must Support Element|Supported Identifiers
 ---|---|---
-AU PS Organization|Organization.identifier|HPI-O, Australian Business Number
-AU PS Patient|Patient.identifier|IHI, Medicare Card Number, DVA Number
-AU PS Practitioner|Practitioner.identifier|HPI-I
-AU PS PractitionerRole|PractitionerRole.identifier|Medicare Provider Number
+[AU PS Organization](StructureDefinition-au-ps-organization.html)|Organization.identifier|HPI-O, Australian Business Number
+[AU PS Patient](StructureDefinition-au-ps-patient.html)|Patient.identifier|IHI, Medicare Card Number, DVA Number
+[AU PS Practitioner](StructureDefinition-au-ps-practitioner.html)|Practitioner.identifier|HPI-I
+[AU PS PractitionerRole](StructureDefinition-au-ps-practitionerrole.html)|PractitionerRole.identifier|Medicare Provider Number
 {:.grid}
 
 For example, the profile [AU PS Patient](StructureDefinition-au-ps-patient.html) requires support for the following choices `Patient.identifier` defined in [AU Base Patient](https://build.fhir.org/ig/hl7au/au-fhir-base/StructureDefinition-au-patient.html) to support Individual Healthcare Identifier (IHI), Medicare Card Number, Department of Veterans' Affairs (DVA) Number. When claiming conformance to the AU PS Patient Profile:
@@ -430,7 +430,7 @@ AU PS Procedure|Procedure.reasonCode, Procedure.reasonReference
 {:.grid}
 
 
-##### Must Support - Choice of Terminology (This needs to be worked on to account for IPS data type profiles)
+##### Must Support - Choice of Terminology
 
 In AU PS, elements that define support for more than one value set only apply to the [Coding](http://hl7.org/fhir/R4/datatypes.html#Coding) part of the element and are not intended to prevent systems from supplying only a text value. In such cases:
 - AU PS Producers **SHALL** correctly populate the element with concepts from each supported value set where the applicable concept is known.
