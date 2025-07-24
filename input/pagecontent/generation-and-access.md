@@ -64,11 +64,11 @@ The `$docref` operation supports multiple document retrieval use cases, includin
 ### Document Bundle Interactions
 As the AU PS is a FHIR Bundle of type document, implementers can leverage standard FHIR REST API interactions. The document Bundle (AU PS Document) can be stored, discovered and retrieved using the REST interactions `Bundle create`, `search` and `read` interactions.
 
-The `search` and `read` interactions support the scenarios where an AU PS Producer stores the AU PS Document within their system and provides access to A consuming system.
+The `search` and `read` interactions support the scenarios where an AU PS Producer stores the AU PS Document within their system and provides access to a consuming system.
 
 The `create` interaction supports scenarios when an AU PS Producer stores the AU PS Document in a separate patient summary server. A consuming system can then access the AU PS Document using the `search` and `read` interactions.
 
-Alternatively, an AU PS Producer can choose to upload the AU PS Document directly to A consuming system using the `create` interaction, enabling the consuming system to process or view the AU PS Document.
+Alternatively, an AU PS Producer can choose to upload the AU PS Document directly to a consuming system using the `create` interaction, enabling the consuming system to process or view the AU PS Document.
 
 <div> 
   <img src="ga-bundleinteractions.png" alt="Document Bundle Interactions" style="width:80%"/>
@@ -90,7 +90,7 @@ A consuming system can discover an AU PS Document using a DocumentReference sear
 
 The consuming system can then retrieve a specific AU PS Document Bundle from the server by using the value in the `content.attachment.url` element of the selected DocumentReference.
 
-In systems where AU PS Documents are generated and stored internally, the DocumentReference search and Bundle read interactions can be used by A consuming system to discover and retrieve documents as described above.
+In systems where AU PS Documents are generated and stored internally, the DocumentReference search and Bundle read interactions can be used by a consuming system to discover and retrieve documents as described above.
 
 <div> 
   <img src="ga-bundledocrefinteractions.png" alt="Document Bundle and Document Reference Interactions" style="width:80%"/>
