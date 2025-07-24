@@ -90,7 +90,7 @@ A consuming system can discover an AU PS Document using a DocumentReference sear
 
 The consuming system can then retrieve a specific AU PS Document Bundle from the server by using the value in the `content.attachment.url` element of the selected DocumentReference.
 
-In systems where AU PS Documents are generated and stored internally, the DocumentReference search and Bundle read interactions can be used by A consuming system to discover and retrieve documents as described above.
+In systems where AU PS Documents are generated and stored internally, the DocumentReference search and Bundle read interactions can be used by a consuming system to discover and retrieve documents as described above.
 
 <div> 
   <img src="ga-bundledocrefinteractions.png" alt="Document Bundle and Document Reference Interactions" style="width:80%"/>
