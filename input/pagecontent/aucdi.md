@@ -298,19 +298,19 @@ Column attribute descriptions are as follows:
     <td rowspan="5">Estimated date of delivery summary</td>
     <td colspan="2">EDD by menstrual cycle</td>
     <td rowspan="5">History of pregnancy</td>
-    <td>Observation Pregnancy - Expected Delivery Date (IPS)</td>
+    <td><a href="https://build.fhir.org/ig/HL7/fhir-ips/StructureDefinition-Observation-pregnancy-edd-uv-ips.html">Observation Pregnancy - Expected Delivery Date (IPS)</a></td>
     <td><code>Observation.valueDateTime</code></td>
     <td>This data group maps to an IPS profile; This AUCDI data group is a <a href="future.html#future-candidate-requirements-under-consideration">Future Candidate Requirement Under Consideration</a>.</td>
   </tr>
   <tr>
     <td colspan="2">Date of ultrasound</td>
-    <td>Observation Pregnancy - Expected Delivery Date (IPS)</td>
+    <td><a href="https://build.fhir.org/ig/HL7/fhir-ips/StructureDefinition-Observation-pregnancy-edd-uv-ips.html">Observation Pregnancy - Expected Delivery Date (IPS)</a></td>
     <td><code>Observation.effectiveDateTime</code></td>
     <td rowspan="2">AUCDI elements Date of ultrasound and Estimated data of delivery by ultrasound would be grouped together in the same Observation, separate to Estimated data of delivery by menstrual cycle.</td>
   </tr>
   <tr>
     <td colspan="2">EDD by ultrasound</td>
-    <td>Observation Pregnancy - Expected Delivery Date (IPS)</td>
+    <td><a href="https://build.fhir.org/ig/HL7/fhir-ips/StructureDefinition-Observation-pregnancy-edd-uv-ips.html">Observation Pregnancy - Expected Delivery Date (IPS)</a></td>
     <td><code>Observation.valueDateTime</code></td>
   </tr>
   <tr>
@@ -329,18 +329,18 @@ Column attribute descriptions are as follows:
     <td rowspan="3">Pregnancy assertion</td>
     <td colspan="2">Pregnancy assertion</td>
     <td rowspan="3">History of pregnancy</td>
-    <td>Observation Pregnancy - Status (IPS)</td>
+    <td><a href="https://build.fhir.org/ig/HL7/fhir-ips/StructureDefinition-Observation-pregnancy-status-uv-ips.html">Observation Pregnancy - Status (IPS)</a></td>
     <td><code>Observation.valueCodeableConcept</code></td>
     <td rowspan="3">This data group maps to an IPS profile; This AUCDI data group is a <a href="future.html#future-candidate-requirements-under-consideration">Future Candidate Requirement Under Consideration</a>.</td>
   </tr>
   <tr>
     <td colspan="2">Justification</td>
-    <td>Observation Pregnancy - Status (IPS)</td>
+     | <td><a href="https://build.fhir.org/ig/HL7/fhir-ips/StructureDefinition-Observation-pregnancy-status-uv-ips.html">Observation Pregnancy - Status (IPS)</a></td>
     <td><code>Observation.note</code></td>
   </tr>
   <tr>
     <td colspan="2">Date of assertion</td>
-    <td>Observation Pregnancy - Status (IPS)</td>
+     | <td><a href="https://build.fhir.org/ig/HL7/fhir-ips/StructureDefinition-Observation-pregnancy-status-uv-ips.html">Observation Pregnancy - Status (IPS)</a></td>
     <td><code>Observation.effectiveDateTime</code></td>
   </tr>
 </tbody>
