@@ -12,9 +12,9 @@ AU PS is a technical specification that addresses constraints and obligations on
 
 An interpretation of AUCDI clinical information requirements through community consensus is undertaken to define support for the exchange of clinical and administrative data within technical constraints. Note that:
 * In any particular release, AU Core or AU PS may not cover all AUCDI data concepts, especially when AUCDI data concepts are not supported in existing systems.
-* AU PS includes exchange for concepts that are commonly implemented in systems and not included in AUCDI e.g. Patient.name, Practitioner.identifier, Procedure.encounter. 
-* AU PS includes exchange for clinical concepts not yet included in AUCDI, e.g. MedicationRequest, which are included through reference to IPS or AU Core
-* AU PS includes data elements not included in AUCDI that are required to make FHIR implementable e.g. Observation.status, MedicationRequest.intent, Provenance.
+* AU PS includes exchange for concepts that are commonly implemented in systems and not included in AUCDI e.g. `Patient.name`, `Practitioner.identifier`, `Procedure.encounter`. 
+* AU PS includes exchange for clinical concepts not yet included in AUCDI, e.g. MedicationRequest, which are included through reference to IPS or AU Core.
+* AU PS includes data elements not included in AUCDI that are required to make FHIR implementable e.g. `Observation.status`, `MedicationRequest.intent`, Provenance.
 
 ### AUCDI and AU PS versions
 
@@ -55,7 +55,7 @@ Column attribute descriptions are as follows:
     <td colspan="2">Substance name</td>
     <td rowspan="6">Allergies and Intolerances</td>
     <td><a href="StructureDefinition-au-ps-allergyintolerance.html">AU PS AllergyIntolerance</a></td>
-    <td>AllergyIntolerance.code</td>
+    <td><code>AllergyIntolerance.code</code></td>
     <td></td>
   </tr>
   <tr>
@@ -71,19 +71,19 @@ Column attribute descriptions are as follows:
   <tr>
     <td colspan="2">Manifestation</td>
     <td><a href="StructureDefinition-au-ps-allergyintolerance.html">AU PS AllergyIntolerance</a></td>
-    <td>AllergyInterolance.reaction</td>
+    <td><code>AllergyInterolance.reaction</code></td>
     <td></td>
   </tr>
   <tr>
     <td colspan="2">Severity of reaction</td>
     <td><a href="StructureDefinition-au-ps-allergyintolerance.html">AU PS AllergyIntolerance</a></td>
-    <td>AllergyIntolerance.reaction.severity</td>
+    <td><code>AllergyIntolerance.reaction.severity</code></td>
     <td></td>
   </tr>
   <tr>
     <td colspan="2">Comment</td>
     <td><a href="StructureDefinition-au-ps-allergyintolerance.html">AU PS AllergyIntolerance</a></td>
-    <td>AllergyIntolerance.note</td>
+    <td><code>AllergyIntolerance.note</code></td>
     <td></td>
   </tr>
   <tr>
@@ -115,85 +115,85 @@ Column attribute descriptions are as follows:
     <td colspan="2">Medication name</td>
     <td rowspan="9">Medication Summary</td>
     <td><a href="StructureDefinition-au-ps-medicationstatement.html">AU PS MedicationStatement</a> | <a href="StructureDefinition-au-ps-medication.html">AU PS Medication</a></td>
-    <td>MedicationStatement.medication[x] | Medication.code</td>
+    <td><code>MedicationStatement.medication[x]` | `Medication.code</code></td>
     <td rowspan="9">See the <a href="https://build.fhir.org/ig/hl7au/au-fhir-core/medicine-information.html">Medicine Information</a> guidance page in AU Core.</td>
   </tr>
   <tr>
     <td colspan="2">Clinical indication</td>
     <td><a href="StructureDefinition-au-ps-medicationstatement.html">AU PS MedicationStatement</a></td>
-    <td>MedicationStatement.reasonCode | MedicationStatement.reasonReference</td>
+    <td><code>MedicationStatement.reasonCode` | `MedicationStatement.reasonReference</code></td>
   </tr>
   <tr>
     <td colspan="2">Strength</td>
     <td><a href="StructureDefinition-au-ps-medicationstatement.html">AU PS MedicationStatement</a> | <a href="StructureDefinition-au-ps-medication.html">AU PS Medication</a></td>
-    <td>MedicationStatement.medication[x] | Medication.code | Medication.ingredient</td>
+    <td><code>MedicationStatement.medication[x]` | `Medication.code` | `Medication.ingredient</code></td>
   </tr>
   <tr>
     <td colspan="2">Form</td>
     <td><a href="StructureDefinition-au-ps-medicationstatement.html">AU PS MedicationStatement</a> | <a href="StructureDefinition-au-ps-medication.html">AU PS Medication</a></td>
-    <td>MedicationStatement.medication[x] | Medication.form</td>
+    <td><code>MedicationStatement.medication[x]` | `Medication.form</code></td>
   </tr>
   <tr>
     <td colspan="2">Dose amount</td>
     <td><a href="StructureDefinition-au-ps-medicationstatement.html">AU PS MedicationStatement</a></td>
-    <td>MedicationStatement.dosage.doseAndRate</td>
+    <td><code>MedicationStatement.dosage.doseAndRate</code></td>
   </tr>
   <tr>
     <td colspan="2">Route of administration</td>
     <td><a href="StructureDefinition-au-ps-medicationstatement.html">AU PS MedicationStatement</a></td>
-    <td>MedicationStatement.dosage.route</td>
+    <td><code>MedicationStatement.dosage.route</code></td>
   </tr>
   <tr>
     <td colspan="2">Dose timing</td>
     <td><a href="StructureDefinition-au-ps-medicationstatement.html">AU PS MedicationStatement</a></td>
-    <td>MedicationStatement.dosage.timing</td>
+    <td><code>MedicationStatement.dosage.timing</code></td>
   </tr>
   <tr>
     <td colspan="2">Comment</td>
     <td><a href="StructureDefinition-au-ps-medicationstatement.html">AU PS MedicationStatement</a></td>
-    <td>MedicationStatement.note</td>
+    <td><code>MedicationStatement.note</code></td>
   </tr>
   <tr>
     <td colspan="2">Date of assertion</td>
     <td><a href="StructureDefinition-au-ps-medicationstatement.html">AU PS MedicationStatement</a></td>
-    <td>MedicationStatement.dateAsserted</td>
+    <td><code>MedicationStatement.dateAsserted</code></td>
   </tr>
   <tr>
     <td rowspan="7">Problem/Diagnosis summary</td>
     <td colspan="2">Problem / Diagnosis name</td>
     <td rowspan="7">Problems | History of Past Problems</td>
     <td><a href="StructureDefinition-au-ps-condition.html">AU PS Condition</a></td>
-    <td>Condition.code</td>
+    <td><code>Condition.code</code></td>
     <td></td>
   </tr>
   <tr>
     <td colspan="2">Body site/laterality</td>
     <td><a href="StructureDefinition-au-ps-condition.html">AU PS Condition</a></td>
-    <td>Condition.code</td>
+    <td><code>Condition.code</code></td>
     <td></td>
   </tr>
   <tr>
     <td colspan="2">Date/time of onset</td>
     <td><a href="StructureDefinition-au-ps-condition.html">AU PS Condition</a></td>
-    <td>Condition.onsetDateTime</td>
+    <td><code>Condition.onsetDateTime</code></td>
     <td></td>
   </tr>
   <tr>
     <td colspan="2">Date/time of resolution</td>
     <td><a href="StructureDefinition-au-ps-condition.html">AU PS Condition</a></td>
-    <td>Condition.abatementDateTime</td>
+    <td><code>Condition.abatementDateTime</code></td>
     <td></td>
   </tr>
   <tr>
     <td colspan="2">Status</td>
     <td><a href="StructureDefinition-au-ps-condition.html">AU PS Condition</a></td>
-    <td>Condition.clinicalStatus</td>
+    <td><code>Condition.clinicalStatus</code></td>
     <td></td>
   </tr>
   <tr>
     <td colspan="2">Comment</td>
     <td><a href="StructureDefinition-au-ps-condition.html">AU PS Condition</a></td>
-    <td>Condition.note</td>
+    <td><code>Condition.note</code></td>
     <td></td>
   </tr>
   <tr>
@@ -207,31 +207,31 @@ Column attribute descriptions are as follows:
     <td colspan="2">Procedure name</td>
     <td rowspan="5">History of Procedures</td>
     <td><a href="StructureDefinition-au-ps-procedure.html">AU PS Procedure</a></td>
-    <td>Procedure.code</td>
+    <td><code>Procedure.code</code></td>
     <td></td>
   </tr>
   <tr>
     <td colspan="2">Clinical indication</td>
     <td><a href="StructureDefinition-au-ps-procedure.html">AU PS Procedure</a></td>
-    <td>Procedure.reasonCode | Procedure.reasonReference[x]</td>
+    <td><code>Procedure.reasonCode` | `Procedure.reasonReference[x]</code></td>
     <td></td>
   </tr>
   <tr>
     <td colspan="2">Body site/laterality</td>
     <td><a href="StructureDefinition-au-ps-procedure.html">AU PS Procedure</a></td>
-    <td>Procedure.code</td>
+    <td><code>Procedure.code</code></td>
     <td></td>
   </tr>
   <tr>
     <td colspan="2">Date performed</td>
     <td><a href="StructureDefinition-au-ps-procedure.html">AU PS Procedure</a></td>
-    <td>Procedure.performed[x] | Procedure.performedDateTime</td>
+    <td><code>Procedure.performed[x]` | `Procedure.performedDateTime</code></td>
     <td></td>
   </tr>
   <tr>
     <td colspan="2">Comment</td>
     <td><a href="StructureDefinition-au-ps-procedure.html">AU PS Procedure</a></td>
-    <td>Procedure.note</td>
+    <td><code>Procedure.note</code></td>
     <td></td>
   </tr>
   <tr>
@@ -239,19 +239,19 @@ Column attribute descriptions are as follows:
     <td colspan="2">Sex assigned at birth</td>
     <td rowspan="4">N/A</td>
     <td><a href="StructureDefinition-au-ps-patient.html">AU PS Patient</a></td>
-    <td>Patient.extension.where(url='http://hl7.org/fhir/StructureDefinition/individual-recordedSexOrGender')</td>
+    <td><code>Patient.extension.where(url='http://hl7.org/fhir/StructureDefinition/individual-recordedSexOrGender')</code></td>
     <td>The <a href="http://hl7.org/fhir/StructureDefinition/individual-recordedSexOrGender">Person Recorded Sex or Gender extension</a> is profiled by <a href="https://build.fhir.org/ig/hl7au/au-fhir-core/StructureDefinition-au-core-rsg-sexassignedab.html">AU Core Sex Assigned At Birth (RSG)</a> to represent the concept of Sex assigned at birth.</td>
   </tr>
   <tr>
     <td colspan="2">Gender identity</td>
     <td><a href="StructureDefinition-au-ps-patient.html">AU PS Patient</a></td>
-    <td>Patient.extension.where(url='http://hl7.org/fhir/StructureDefinition/individual-genderIdentity')</td>
+    <td><code>Patient.extension.where(url='http://hl7.org/fhir/StructureDefinition/individual-genderIdentity')</code></td>
     <td></td>
   </tr>
   <tr>
     <td colspan="2">Pronoun/s</td>
     <td><a href="StructureDefinition-au-ps-patient.html">AU PS Patient</a></td>
-    <td>Patient.extension.where(url='http://hl7.org/fhir/StructureDefinition/individual-pronouns')</td>
+    <td><code>Patient.extension.where(url='http://hl7.org/fhir/StructureDefinition/individual-pronouns')</code></td>
     <td></td>
   </tr>
   <tr>
@@ -265,25 +265,25 @@ Column attribute descriptions are as follows:
     <td colspan="2">Vaccine name</td>
     <td rowspan="4">Immunizations</td>
     <td><a href="StructureDefinition-au-ps-immunization.html">AU PS Immunization</a></td>
-    <td>Immunization.vaccineCode</td>
+    <td><code>Immunization.vaccineCode</code></td>
     <td></td>
   </tr>
   <tr>
     <td colspan="2">Sequence number</td>
     <td><a href="StructureDefinition-au-ps-immunization.html">AU PS Immunization</a></td>
-    <td>Immunization.protocolApplied.doseNumber[x]</td>
+    <td><code>Immunization.protocolApplied.doseNumber[x]</code></td>
     <td></td>
   </tr>
   <tr>
     <td colspan="2">Date of administration</td>
     <td><a href="StructureDefinition-au-ps-immunization.html">AU PS Immunization</a></td>
-    <td>Immunization.occurenceDateTime</td>
+    <td><code>Immunization.occurenceDateTime</code></td>
     <td></td>
   </tr>
   <tr>
     <td colspan="2">Comment</td>
     <td><a href="StructureDefinition-au-ps-immunization.html">AU PS Immunization</a></td>
-    <td>Immunization.note</td>
+    <td><code>Immunization.note</code></td>
     <td></td>
   </tr>
   <tr style="background-color: #f2f2f2;">
@@ -299,19 +299,19 @@ Column attribute descriptions are as follows:
     <td colspan="2">EDD by menstrual cycle</td>
     <td rowspan="5">History of pregnancy</td>
     <td>Observation Pregnancy - Expected Delivery Date (IPS)</td>
-    <td>Observation.valueDateTime</td>
+    <td><code>Observation.valueDateTime</code></td>
     <td>This data group maps to an IPS profile; This AUCDI data group is a <a href="future.html#future-candidate-requirements-under-consideration">Future Candidate Requirement Under Consideration</a>.</td>
   </tr>
   <tr>
     <td colspan="2">Date of ultrasound</td>
     <td>Observation Pregnancy - Expected Delivery Date (IPS)</td>
-    <td>Observation.effectiveDateTime</td>
+    <td><code>Observation.effectiveDateTime</code></td>
     <td rowspan="2">AUCDI elements Date of ultrasound and Estimated data of delivery by ultrasound would be grouped together in the same Observation, separate to Estimated data of delivery by menstrual cycle.</td>
   </tr>
   <tr>
     <td colspan="2">EDD by ultrasound</td>
     <td>Observation Pregnancy - Expected Delivery Date (IPS)</td>
-    <td>Observation.valueDateTime</td>
+    <td><code>Observation.valueDateTime</code></td>
   </tr>
   <tr>
     <td colspan="2">Last update</td>
@@ -330,18 +330,18 @@ Column attribute descriptions are as follows:
     <td colspan="2">Pregnancy assertion</td>
     <td rowspan="3">History of pregnancy</td>
     <td>Observation Pregnancy - Status (IPS)</td>
-    <td>Observation.valueCodeableConcept</td>
+    <td><code>Observation.valueCodeableConcept</code></td>
     <td rowspan="3">This data group maps to an IPS profile; This AUCDI data group is a <a href="future.html#future-candidate-requirements-under-consideration">Future Candidate Requirement Under Consideration</a>.</td>
   </tr>
   <tr>
     <td colspan="2">Justification</td>
     <td>Observation Pregnancy - Status (IPS)</td>
-    <td>Observation.note</td>
+    <td><code>Observation.note</code></td>
   </tr>
   <tr>
     <td colspan="2">Date of assertion</td>
     <td>Observation Pregnancy - Status (IPS)</td>
-    <td>Observation.effectiveDateTime</td>
+    <td><code>Observation.effectiveDateTime</code></td>
   </tr>
 </tbody>
 </table>
