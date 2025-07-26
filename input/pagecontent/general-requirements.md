@@ -56,35 +56,34 @@ If the source system (producer) does not know the value for an optional element 
 
 If the data element is a mandatory element (minimum cardinality is > 0), the element **SHALL** be present *even if* the source system (producer) does not know the value or the reason the value is absent. In this circumstance, the requirements defined by AU Core for [Missing Must Support and Mandatory Data](https://build.fhir.org/ig/hl7au/au-fhir-core/general-requirements.html#missing-must-support-and-mandatory-data) **SHALL** be applied.
 
-    Example: MedicationRequest resource where status and requester are missing
-    ~~~
-        ...
+Example: MedicationRequest resource where status and requester are missing
+~~~
+  ...
+  {
+    "resourceType" : "MedicationRequest",
+    "status" : "unknown",
+    "intent" : "order",
+    "medicationCodeableConcept" : {
+      "coding" : [
         {
-          "resourceType" : "MedicationRequest",
-          "status" : "unknown",
-          "intent" : "order",
-          "medicationCodeableConcept" : {
-            "coding" : [
-              {
-                "system" : "http://snomed.info/sct",
-                "code" : "79115011000036100",
-                "display" : "Paracetamol 500 mg + codeine phosphate hemihydrate 30 mg tablet"
-              }
-            ]
-          },
-          ...
-          "authoredOn" : "2018-07-15",
-          "requester" : {
-            "extension" : [
-              {
-                "url" : "http://hl7.org/fhir/StructureDefinition/data-absent-reason",
-                "valueCode" : "unknown"
-              }
-            ]
-          },
-        ...
-    ~~~
-
+          "system" : "http://snomed.info/sct",
+          "code" : "79115011000036100",
+          "display" : "Paracetamol 500 mg + codeine phosphate hemihydrate 30 mg tablet"
+        }
+      ]
+    },
+    ...
+    "authoredOn" : "2018-07-15",
+    "requester" : {
+      "extension" : [
+        {
+          "url" : "http://hl7.org/fhir/StructureDefinition/data-absent-reason",
+          "valueCode" : "unknown"
+        }
+      ]
+    },
+  ...
+~~~
 #### Empty Sections
 
 An AU PS Producer **SHOULD** omit non-mandatory sections when the source system does not have any information and does not know the reason the information is absent.
@@ -175,23 +174,24 @@ For example, to represent that a patient does not have an allergy or category of
 
 In AU PS this approach is preferred to using `Composition.section.emptyReason` due to the widely known and implemented patterns established within FHIR, IPS, and AU Core, to assert "no known X" or "no history of X". 
 
-    Example: Condition resource representing 'No Known Problems'
-    ~~~
-        ...
+
+Example: Condition resource representing 'No Known Problems'
+~~~
+  ...
+  {
+    "resourceType" : "Condition",
+    "clinicalStatus" : "active",
+    "code" : {
+      "coding" : [
         {
-          "resourceType" : "Condition",
-          "clinicalStatus" : "active",
-          "code" : {
-            "coding" : [
-              {
-                "system" : "http://snomed.info/sct",
-                "code" : "160245001",
-                "display" : "No current problems or disability"
-              }
-            ]
-          },
-        ...
-    ~~~
+          "system" : "http://snomed.info/sct",
+          "code" : "160245001",
+          "display" : "No current problems or disability"
+        }
+      ]
+    },
+  ...
+~~~
 
 ### Suppressed Data
 
@@ -290,7 +290,7 @@ Obligations vary significantly for elements in the AU PS Composition profile, in
 - For all recommended sections AU PS Producers **SHOULD** correctly populate the section if a value is known and **SHOULD** correctly populate `Composition.section.entry` if a value is known. 
 - For all optional or undefined sections AU PS Producers **MAY** correctly populate the section if a value is known and **MAY** correctly populate `Composition.section.entry` if a value is known. 
 
-See [Structure of the Australian Patient Summary (AU PS)](general-guidance.html#structure-of-the-australian-patient-summary-au-ps) for information on the mandatory, recommended, and optional sections.
+See [Structure of the Australian Patient Summary (AU PS)](the-aups.html#structure-of-the-au-ps) for information on the mandatory, recommended, and optional sections.
 
 ##### Must Support - Primitive Elements
 Primitive elements are single elements with a primitive value. If a primitive element is labelled as *Must Support*: 
@@ -401,10 +401,10 @@ The table below provides a list of AU PS profile elements that allow multiple id
 
 Profile |Must Support Element|Supported Identifiers
 ---|---|---
-AU PS Organization|Organization.identifier|HPI-O, Australian Business Number
-AU PS Patient|Patient.identifier|IHI, Medicare Card Number, DVA Number
-AU PS Practitioner|Practitioner.identifier|HPI-I
-AU PS PractitionerRole|PractitionerRole.identifier|Medicare Provider Number
+[AU PS Organization](StructureDefinition-au-ps-organization.html)|Organization.identifier|HPI-O, Australian Business Number
+[AU PS Patient](StructureDefinition-au-ps-patient.html)|Patient.identifier|IHI, Medicare Card Number, DVA Number
+[AU PS Practitioner](StructureDefinition-au-ps-practitioner.html)|Practitioner.identifier|HPI-I
+[AU PS PractitionerRole](StructureDefinition-au-ps-practitionerrole.html)|PractitionerRole.identifier|Medicare Provider Number
 {:.grid}
 
 For example, the profile [AU PS Patient](StructureDefinition-au-ps-patient.html) requires support for the following choices `Patient.identifier` defined in [AU Base Patient](https://build.fhir.org/ig/hl7au/au-fhir-base/StructureDefinition-au-patient.html) to support Individual Healthcare Identifier (IHI), Medicare Card Number, Department of Veterans' Affairs (DVA) Number. When claiming conformance to the AU PS Patient Profile:
@@ -430,7 +430,7 @@ AU PS Procedure|Procedure.reasonCode, Procedure.reasonReference
 {:.grid}
 
 
-##### Must Support - Choice of Terminology (This needs to be worked on to account for IPS data type profiles)
+##### Must Support - Choice of Terminology
 
 In AU PS, elements that define support for more than one value set only apply to the [Coding](http://hl7.org/fhir/R4/datatypes.html#Coding) part of the element and are not intended to prevent systems from supplying only a text value. In such cases:
 - AU PS Producers **SHALL** correctly populate the element with concepts from each supported value set where the applicable concept is known.

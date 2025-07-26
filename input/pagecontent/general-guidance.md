@@ -1,24 +1,3 @@
-### Structure of the Australian Patient Summary (AU PS)
-AU PS is specified in this guide as a HL7 FHIR document (a Bundle including a Composition), composed by a set of potentially reusable "minimal" data blocks (the AU PS profiles).
-
-Based on IPS and AU Core, it defines a patient summary in the context of providing information to downstream providers. While profiled sections of the may have content that reflects intentions or orders of clinical care, the patient summary is meant as an informative document and is not intended to be directly actionable. For example, a MedicationRequest resource in the medications section or a CarePlan resource in the Plan of Care section, should not fulfilled or actioned from the IPS document.
-
-The AU PS Document shares the same structure as an IPS, shown below.
-
- <div> 
-    <img src="IPS_composition.png" alt="The IPS composition" style="width:60%"/>
-  </div>
-*Figure 1: The IPS composition (source: [IPS 2.0.0](https://build.fhir.org/ig/HL7/fhir-ips/Structure-of-the-International-Patient-Summary.html#structure-of-the-international-patient-summary))*
-<br/>
-
-In the AU PS document:
-* Required (Mandatory) sections are Problems, Allergies and Intolerances, and Medication Summary
-* Recommended sections are Immunizations, Results (Diagnostics), History of Procedures, and Medical Devices
-* Optional sections are Advance Directives, Functional Status, History of Pregnancy, Plan of Care, Alerts, History of Past Problems, Patient Story, Social History, and Vital Signs
-* Undefined sections are "additional" sections not defined by the AU PS Composition
-
-See the description of each defined section in IPS [Sections description](https://build.fhir.org/ig/HL7/fhir-ips/Structure-of-the-International-Patient-Summary.html#sections-description).
-
 ### Profiling Approach
 AU PS profiles will by design:
 * ensure resource compliance with AU Core and IPS
@@ -91,6 +70,9 @@ As in IPS, a producer can send:
 
 Additional sections or elements are often required by other profiles the system may conform to, allowing local requirements, including technical and workflow context for the resource, to be reflected and extending the health information supported in exchanges. For this reason, extensibility is generally encouraged and expected in AU PS profiles. Only in some exceptionally rare use case profiles are rules tightened to limit the nature of additional information that can be sent. 
 
+Implementers intending to populate the AU PS with an unprofiled resoure type, e.g. MedicationAdministration, are recommended to consider the corresponding [AU Base](https://build.fhir.org/ig/hl7au/au-fhir-base/) profile, e.g. [AU Base MedicationAdministration](https://build.fhir.org/ig/hl7au/au-fhir-base/StructureDefinition-au-medicationadministration.html), as guidance for that resource type in an Australian healthcare context.
+
+
 #### Extensibility – “additional” sections
 Implementers should take note, the rules of the `Composition.section:All Slices` defined in the AU PS Composition profile apply to all sections, defined or undefined:
 - `Composition.section.title` is mandatory and has obligations defined for AU PS Producers and AU PS Consumers
@@ -111,17 +93,6 @@ See the guidance defined in AU Base [SNOMED CT Australian Edition](https://build
 
 ### Patient Safety in IPS Context
 See the guidance defined in IPS [Patient Safety in IPS Context](https://build.fhir.org/ig/HL7/fhir-ips/General-Principles.html#patient-safety-in-ips-context).
-
-### Data Included in IPS Documents
-See the guidance defined in IPS [Data Included in IPS Documents](https://build.fhir.org/ig/HL7/fhir-ips/Generation-and-Data-Inclusion.html#data-included-in-ips-documents).
-
-TBD: Revise to be AU Link to the new page on Generating and Accessing AU PS documents with link to IPS.
-
-### Publishing or Accessing the IPS
-See the guidance defined in IPS [Narrative and Language Translation](https://build.fhir.org/ig/HL7/fhir-ips/Design-Conventions.html#narrative-and-language-translation). 
-
-### Narrative and Language Translation
-See the guidance defined in IPS [Narrative and Language Translation](https://build.fhir.org/ig/HL7/fhir-ips/Design-Conventions.html#narrative-and-language-translation). 
 
 ### Medicinal Product Identification
 See the guidance defined in AU Core [Medicine Information](https://build.fhir.org/ig/hl7au/au-fhir-core/medicine-information.html). 
