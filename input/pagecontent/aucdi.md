@@ -115,23 +115,23 @@ Column attribute descriptions are as follows:
     <td colspan="2">Medication name</td>
     <td rowspan="9">Medication Summary</td>
     <td><a href="StructureDefinition-au-ps-medicationstatement.html">AU PS MedicationStatement</a> | <a href="StructureDefinition-au-ps-medication.html">AU PS Medication</a></td>
-    <td><code>MedicationStatement.medication[x]` | `Medication.code</code></td>
+    <td><code>MedicationStatement.medication[x] | Medication.code</code></td>
     <td rowspan="9">See the <a href="https://build.fhir.org/ig/hl7au/au-fhir-core/medicine-information.html">Medicine Information</a> guidance page in AU Core.</td>
   </tr>
   <tr>
     <td colspan="2">Clinical indication</td>
     <td><a href="StructureDefinition-au-ps-medicationstatement.html">AU PS MedicationStatement</a></td>
-    <td><code>MedicationStatement.reasonCode` | `MedicationStatement.reasonReference</code></td>
+    <td><code>MedicationStatement.reasonCode | MedicationStatement.reasonReference</code></td>
   </tr>
   <tr>
     <td colspan="2">Strength</td>
     <td><a href="StructureDefinition-au-ps-medicationstatement.html">AU PS MedicationStatement</a> | <a href="StructureDefinition-au-ps-medication.html">AU PS Medication</a></td>
-    <td><code>MedicationStatement.medication[x]` | `Medication.code` | `Medication.ingredient</code></td>
+    <td><code>MedicationStatement.medication[x] | Medication.code | Medication.ingredient</code></td>
   </tr>
   <tr>
     <td colspan="2">Form</td>
     <td><a href="StructureDefinition-au-ps-medicationstatement.html">AU PS MedicationStatement</a> | <a href="StructureDefinition-au-ps-medication.html">AU PS Medication</a></td>
-    <td><code>MedicationStatement.medication[x]` | `Medication.form</code></td>
+    <td><code>MedicationStatement.medication[x] | Medication.form</code></td>
   </tr>
   <tr>
     <td colspan="2">Dose amount</td>
@@ -213,7 +213,7 @@ Column attribute descriptions are as follows:
   <tr>
     <td colspan="2">Clinical indication</td>
     <td><a href="StructureDefinition-au-ps-procedure.html">AU PS Procedure</a></td>
-    <td><code>Procedure.reasonCode` | `Procedure.reasonReference[x]</code></td>
+    <td><code>Procedure.reasonCode | Procedure.reasonReference[x]</code></td>
     <td></td>
   </tr>
   <tr>
@@ -225,7 +225,7 @@ Column attribute descriptions are as follows:
   <tr>
     <td colspan="2">Date performed</td>
     <td><a href="StructureDefinition-au-ps-procedure.html">AU PS Procedure</a></td>
-    <td><code>Procedure.performed[x]` | `Procedure.performedDateTime</code></td>
+    <td><code>Procedure.performed[x] | Procedure.performedDateTime</code></td>
     <td></td>
   </tr>
   <tr>
