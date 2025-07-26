@@ -2,7 +2,7 @@
 
 AUCDI defines data groups comprising one or more data elements and references clinical terminology concepts, forming the foundation of a common language to allow systems to exchange semantically accurate data more efficiently. AUCDI defines clinical requirements for the data required to support the provision of care, exchange, aggregation for analysis, and to support clinical decision support. AUCDI may define requirements that are future focussed and as yet do not align with system implementation of the clinical concept.
 
-AU PS is a technical specification that addresses constraints and obligations on data representation for exchange. AU PS enables system data to be mapped to an agreed FHIR format, produced, and consumed by systems in Australia.
+AU PS is a technical specification that addresses constraints and obligations on data representation for generation, exchange, and consumption of patient summaries in the Australian healthcare context. AU PS enables system data to be mapped to an agreed FHIR format for systems in Australia.
 
   <div> 
     <img src="aucdi2ps.png" alt="AUCDI and AU Patient Summary Development Approach" style="width:55%"/>
@@ -62,7 +62,11 @@ Column attribute descriptions are as follows:
     <td colspan="2">Date/time of onset of first reaction</td>
     <td><a href="StructureDefinition-au-ps-allergyintolerance.html">AU PS AllergyIntolerance</a></td>
     <td>TBD</td>
-    <td>Work is underway to map to AU PS. Feedback is requested on the potential mapping options for this AUCDI element on <a href="https://confluence.hl7.org/spaces/HAFWG/pages/288069416/AUCDI+R2+in+AU+PS+R1">this page</a>.</td>
+    <td>There is no native FHIR element or extension available with this exact meaning. Possible options are to:
+<ul><li>map to AllergyIntolerance.onsetDateTime noting that allergies and intolerances may be identified without a reaction so this may not identify a first reaction.</li>
+<li>map to AllergyIntolerance.reaction.onsetDateTime and the first reaction is just understood as the earliest noting that not all reactions may be captured.</li>
+<li>develop a FHIR extension to capture the date time of the first reaction - to be submitted for consideration in the FHIR Extensions Pack.</li>
+</ul>&#xA;&#xA;Please provide your feedback on possible mapping options on <a href="https://confluence.hl7.org/spaces/HAFWG/pages/288069416/AUCDI+R2+in+AU+PS+R1">this page</a>.</td>
   </tr>
   <tr>
     <td colspan="2">Manifestation</td>
@@ -73,8 +77,8 @@ Column attribute descriptions are as follows:
   <tr>
     <td colspan="2">Severity of reaction</td>
     <td><a href="StructureDefinition-au-ps-allergyintolerance.html">AU PS AllergyIntolerance</a></td>
-    <td>TBD</td>
-    <td>Work is underway to map to AU PS. Feedback is requested on the proposed mapping on <a href="https://confluence.hl7.org/spaces/HAFWG/pages/288069416/AUCDI+R2+in+AU+PS+R1">this page</a></td>
+    <td>AllergyIntolerance.reaction.severity</td>
+    <td></td>
   </tr>
   <tr>
     <td colspan="2">Comment</td>
@@ -87,6 +91,72 @@ Column attribute descriptions are as follows:
     <td>-</td>
     <td>-</td>
     <td>This AUCDI element is a <a href="future.html#future-candidate-requirements-under-consideration">Future Candidate Requirement Under Consideration</a>.</td>
+  </tr>
+  <tr>
+    <td rowspan="3">Last menstrual period assertion</td>
+    <td colspan="2">Date of onset</td>
+    <td rowspan="3">History of pregnancy</td>
+    <td>-</td>
+    <td>-</td>
+    <td rowspan="3">This AUCDI data group is a <a href="future.html#future-candidate-requirements-under-consideration">Future Candidate Requirement Under Consideration</a>.</td>
+  </tr>
+  <tr>
+    <td colspan="2">Certainty</td>
+    <td>-</td>
+    <td>-</td>
+  </tr>
+  <tr>
+    <td colspan="2">Date of assertion</td>
+    <td>-</td>
+    <td>-</td>
+  </tr>
+  <tr>
+    <td rowspan="9">Medication use statement</td>
+    <td colspan="2">Medication name</td>
+    <td rowspan="9">Medication Summary</td>
+    <td><a href="StructureDefinition-au-ps-medicationstatement.html">AU PS MedicationStatement</a> | <a href="StructureDefinition-au-ps-medication.html">AU PS Medication</a></td>
+    <td>MedicationStatement.medication[x] | Medication.code</td>
+    <td rowspan="9">See the <a href="https://build.fhir.org/ig/hl7au/au-fhir-core/medicine-information.html">Medicine Information</a> guidance page in AU Core.</td>
+  </tr>
+  <tr>
+    <td colspan="2">Clinical indication</td>
+    <td><a href="StructureDefinition-au-ps-medicationstatement.html">AU PS MedicationStatement</a></td>
+    <td>MedicationStatement.reasonCode | MedicationStatement.reasonReference</td>
+  </tr>
+  <tr>
+    <td colspan="2">Strength</td>
+    <td><a href="StructureDefinition-au-ps-medicationstatement.html">AU PS MedicationStatement</a> | <a href="StructureDefinition-au-ps-medication.html">AU PS Medication</a></td>
+    <td>MedicationStatement.medication[x] | Medication.code | Medication.ingredient</td>
+  </tr>
+  <tr>
+    <td colspan="2">Form</td>
+    <td><a href="StructureDefinition-au-ps-medicationstatement.html">AU PS MedicationStatement</a> | <a href="StructureDefinition-au-ps-medication.html">AU PS Medication</a></td>
+    <td>MedicationStatement.medication[x] | Medication.form</td>
+  </tr>
+  <tr>
+    <td colspan="2">Dose amount</td>
+    <td><a href="StructureDefinition-au-ps-medicationstatement.html">AU PS MedicationStatement</a></td>
+    <td>MedicationStatement.dosage.doseAndRate</td>
+  </tr>
+  <tr>
+    <td colspan="2">Route of administration</td>
+    <td><a href="StructureDefinition-au-ps-medicationstatement.html">AU PS MedicationStatement</a></td>
+    <td>MedicationStatement.dosage.route</td>
+  </tr>
+  <tr>
+    <td colspan="2">Dose timing</td>
+    <td><a href="StructureDefinition-au-ps-medicationstatement.html">AU PS MedicationStatement</a></td>
+    <td>MedicationStatement.dosage.timing</td>
+  </tr>
+  <tr>
+    <td colspan="2">Comment</td>
+    <td><a href="StructureDefinition-au-ps-medicationstatement.html">AU PS MedicationStatement</a></td>
+    <td>MedicationStatement.note</td>
+  </tr>
+  <tr>
+    <td colspan="2">Date of assertion</td>
+    <td><a href="StructureDefinition-au-ps-medicationstatement.html">AU PS MedicationStatement</a></td>
+    <td>MedicationStatement.dateAsserted</td>
   </tr>
   <tr>
     <td rowspan="7">Problem/Diagnosis summary</td>
@@ -105,14 +175,14 @@ Column attribute descriptions are as follows:
   <tr>
     <td colspan="2">Date/time of onset</td>
     <td><a href="StructureDefinition-au-ps-condition.html">AU PS Condition</a></td>
-    <td>TBD</td>
-    <td>Work is underway to map to AU PS. Feedback is requested on the proposed mapping on <a href="https://confluence.hl7.org/spaces/HAFWG/pages/288069416/AUCDI+R2+in+AU+PS+R1">this page</a></td>
+    <td>Condition.onsetDateTime</td>
+    <td></td>
   </tr>
   <tr>
     <td colspan="2">Date/time of resolution</td>
     <td><a href="StructureDefinition-au-ps-condition.html">AU PS Condition</a></td>
-    <td>TBD</td>
-    <td>Work is underway to map to AU PS. Feedback is requested on the proposed mapping on <a href="https://confluence.hl7.org/spaces/HAFWG/pages/288069416/AUCDI+R2+in+AU+PS+R1">this page</a></td>
+    <td>Condition.abatementDateTime</td>
+    <td></td>
   </tr>
   <tr>
     <td colspan="2">Status</td>
@@ -165,80 +235,6 @@ Column attribute descriptions are as follows:
     <td></td>
   </tr>
   <tr>
-    <td rowspan="4">Vaccination</td>
-    <td colspan="2">Vaccine name</td>
-    <td rowspan="4">Immunizations</td>
-    <td><a href="StructureDefinition-au-ps-immunization.html">AU PS Immunization</a></td>
-    <td>Immunization.vaccineCode</td>
-    <td></td>
-  </tr>
-  <tr>
-    <td colspan="2">Sequence number</td>
-    <td><a href="StructureDefinition-au-ps-immunization.html">AU PS Immunization</a></td>
-    <td>Immunization.protocolApplied.doseNumber[x]</td>
-    <td></td>
-  </tr>
-  <tr>
-    <td colspan="2">Date of administration</td>
-    <td><a href="StructureDefinition-au-ps-immunization.html">AU PS Immunization</a></td>
-    <td>Immunization.occurenceDateTime</td>
-    <td></td>
-  </tr>
-  <tr>
-    <td colspan="2">Comment</td>
-    <td><a href="StructureDefinition-au-ps-immunization.html">AU PS Immunization</a></td>
-    <td>Immunization.note</td>
-    <td></td>
-  </tr>
-  <tr>
-    <td rowspan="9">Medication use statement</td>
-    <td colspan="2">Medication name</td>
-    <td rowspan="9">Medication Summary</td>
-    <td><a href="StructureDefinition-au-ps-medicationstatement.html">AU PS MedicationStatement</a> | <a href="StructureDefinition-au-ps-medication.html">AU PS Medication</a></td>
-    <td>MedicationStatement.medication[x] | Medication.code</td>
-    <td rowspan="9">See the <a href="https://build.fhir.org/ig/hl7au/au-fhir-core/medicine-information.html">Medicine Information</a> guidance page in AU Core.</td>
-  </tr>
-  <tr>
-    <td colspan="2">Clinical indication</td>
-    <td><a href="StructureDefinition-au-ps-medicationstatement.html">AU PS MedicationStatement</a></td>
-    <td>MedicationStatement.reasonCode | MedicationStatement.reasonReference</td>
-  </tr>
-  <tr>
-    <td colspan="2">Strength</td>
-    <td><a href="StructureDefinition-au-ps-medicationstatement.html">AU PS MedicationStatement</a> | <a href="StructureDefinition-au-ps-medication.html">AU PS Medication</a></td>
-    <td>MedicationStatement.medication[x] | Medication.code | Medication.ingredient</td>
-  </tr>
-  <tr>
-    <td colspan="2">Form</td>
-    <td><a href="StructureDefinition-au-ps-medicationstatement.html">AU PS MedicationStatement</a> | <a href="StructureDefinition-au-ps-medication.html">AU PS Medication</a></td>
-    <td>MedicationStatement.medication[x] | Medication.form</td>
-  </tr>
-  <tr>
-    <td colspan="2">Dose amount</td>
-    <td><a href="StructureDefinition-au-ps-medicationstatement.html">AU PS MedicationStatement</a></td>
-    <td>MedicationStatement.dosage.doseAndRate</td>
-  </tr>
-  <tr>
-    <td colspan="2">Route of administration</td>
-    <td><a href="StructureDefinition-au-ps-medicationstatement.html">AU PS MedicationStatement</a></td>
-    <td>MedicationStatement.dosage.route</td>
-  </tr>
-  <tr>
-    <td colspan="2">Dose timing</td>
-    <td><a href="StructureDefinition-au-ps-medicationstatement.html">AU PS MedicationStatement</a></td>
-    <td>MedicationStatement.dosage.timing</td>
-  </tr>
-  <tr>
-    <td colspan="2">Comment</td>
-    <td><a href="StructureDefinition-au-ps-medicationstatement.html">AU PS MedicationStatement</a></td>
-    <td>MedicationStatement.note</td>
-  </tr>
-  <tr>
-    <td colspan="2">Date of assertion</td>
-    <td><a href="StructureDefinition-au-ps-medicationstatement.html">AU PS MedicationStatement</a></td>
-    <td>MedicationStatement.dateAsserted</td>
-  </tr>
-  <tr>
     <td rowspan="4">Sex and gender summary</td>
     <td colspan="2">Sex assigned at birth</td>
     <td rowspan="4">N/A</td>
@@ -265,68 +261,87 @@ Column attribute descriptions are as follows:
     <td>This AUCDI element is a <a href="future.html#future-candidate-requirements-under-consideration">Future Candidate Requirement Under Consideration</a>.</td>
   </tr>
   <tr>
+    <td rowspan="4">Vaccination</td>
+    <td colspan="2">Vaccine name</td>
+    <td rowspan="4">Immunizations</td>
+    <td><a href="StructureDefinition-au-ps-immunization.html">AU PS Immunization</a></td>
+    <td>Immunization.vaccineCode</td>
+    <td></td>
+  </tr>
+  <tr>
+    <td colspan="2">Sequence number</td>
+    <td><a href="StructureDefinition-au-ps-immunization.html">AU PS Immunization</a></td>
+    <td>Immunization.protocolApplied.doseNumber[x]</td>
+    <td></td>
+  </tr>
+  <tr>
+    <td colspan="2">Date of administration</td>
+    <td><a href="StructureDefinition-au-ps-immunization.html">AU PS Immunization</a></td>
+    <td>Immunization.occurenceDateTime</td>
+    <td></td>
+  </tr>
+  <tr>
+    <td colspan="2">Comment</td>
+    <td><a href="StructureDefinition-au-ps-immunization.html">AU PS Immunization</a></td>
+    <td>Immunization.note</td>
+    <td></td>
+  </tr>
+  <tr style="background-color: #f2f2f2;">
+    <th>AUCDI Data Group</th>
+    <th colspan="2">AUCDI Data Element</th>
+    <th>AU PS Document Section</th>
+    <th>IPS Profile(s)</th>
+    <th>FHIR Path</th>
+    <th>Comment</th>
+  </tr>
+  <tr>
     <td rowspan="5">Estimated date of delivery summary</td>
     <td colspan="2">EDD by menstrual cycle</td>
     <td rowspan="5">History of pregnancy</td>
-    <td>TBD</td>
-    <td>TBD</td>
-    <td rowspan="5">Outcomes from the scoping workshops for AU Core R2 and Patient Summary R1 indicate that this data group will be deferred to a later release. Feedback is requested on whether the mapping to the IPS profile is correct and the proposed deferral for an AU PS profile on <a href="https://confluence.hl7.org/spaces/HAFWG/pages/288069416/AUCDI+R2+in+AU+PS+R1">this page</a>.</td>
+    <td>Observation Pregnancy - Expected Delivery Date (IPS)</td>
+    <td>Observation.valueDateTime</td>
+    <td>This data group maps to an IPS profile; This AUCDI data group is a <a href="future.html#future-candidate-requirements-under-consideration">Future Candidate Requirement Under Consideration</a>.</td>
   </tr>
   <tr>
     <td colspan="2">Date of ultrasound</td>
-    <td>TBD</td>
-    <td>TBD</td>
-  </tr>
-  <tr>
-    <td colspan="2">Gestation by ultrasound</td>
-    <td>TBD</td>
-    <td>TBD</td>
+    <td>Observation Pregnancy - Expected Delivery Date (IPS)</td>
+    <td>Observation.effectiveDateTime</td>
+    <td rowspan="2">AUCDI elements Date of ultrasound and Estimated data of delivery by ultrasound would be grouped together in the same Observation, separate to Estimated data of delivery by menstrual cycle.</td>
   </tr>
   <tr>
     <td colspan="2">EDD by ultrasound</td>
-    <td>TBD</td>
-    <td>TBD</td>
+    <td>Observation Pregnancy - Expected Delivery Date (IPS)</td>
+    <td>Observation.valueDateTime</td>
   </tr>
   <tr>
     <td colspan="2">Last update</td>
-    <td>TBD</td>
-    <td>TBD</td>
+    <td>-</td>
+    <td>-</td>
+    <td>This AUCDI element is a <a href="future.html#future-candidate-requirements-under-consideration">Future Candidate Requirement Under Consideration</a>.</td>
   </tr>
   <tr>
-    <td rowspan="3">Last menstrual period assertion</td>
-    <td colspan="2">Date of onset</td>
-    <td rowspan="3">History of pregnancy</td>
-    <td>TBD</td>
-    <td>TBD</td>
-    <td rowspan="3">Outcomes from the scoping workshops for AU Core R2 and Patient Summary R1 indicate that an this data group will be deferred to a later release. Feedback is requested on the proposed deferral for an AU PS profile on <a href="https://confluence.hl7.org/spaces/HAFWG/pages/288069416/AUCDI+R2+in+AU+PS+R1">this page</a>.</td>
-  </tr>
-  <tr>
-    <td colspan="2">Certainty</td>
-    <td>TBD</td>
-    <td>TBD</td>
-  </tr>
-  <tr>
-    <td colspan="2">Date of assertion</td>
-    <td>TBD</td>
-    <td>TBD</td>
+    <td colspan="2">Gestation by scan</td>
+    <td>-</td>
+    <td>-</td>
+    <td>This AUCDI element is a <a href="future.html#future-candidate-requirements-under-consideration">Future Candidate Requirement Under Consideration</a>.</td>
   </tr>
   <tr>
     <td rowspan="3">Pregnancy assertion</td>
     <td colspan="2">Pregnancy assertion</td>
     <td rowspan="3">History of pregnancy</td>
-    <td>TBD</td>
-    <td>TBD</td>
-    <td rowspan="3">Outcomes from the scoping workshops for AU Core R2 and Patient Summary R1 indicate that this data group will be deferred to a later release. Feedback is requested on whether the mapping to the IPS profile is correct and the proposed deferral for an AU PS profile on <a href="https://confluence.hl7.org/spaces/HAFWG/pages/288069416/AUCDI+R2+in+AU+PS+R1">this page</a>.</td>
+    <td>Observation Pregnancy - Status (IPS)</td>
+    <td>Observation.valueCodeableConcept</td>
+    <td rowspan="3">This data group maps to an IPS profile; This AUCDI data group is a <a href="future.html#future-candidate-requirements-under-consideration">Future Candidate Requirement Under Consideration</a>.</td>
   </tr>
   <tr>
     <td colspan="2">Justification</td>
-    <td>TBD</td>
-    <td>TBD</td>
+    <td>Observation Pregnancy - Status (IPS)</td>
+    <td>Observation.note</td>
   </tr>
   <tr>
     <td colspan="2">Date of assertion</td>
-    <td>TBD</td>
-    <td>TBD</td>
+    <td>Observation Pregnancy - Status (IPS)</td>
+    <td>Observation.effectiveDateTime</td>
   </tr>
 </tbody>
 </table>
