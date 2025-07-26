@@ -94,17 +94,6 @@ See the guidance defined in AU Base [SNOMED CT Australian Edition](https://build
 ### Patient Safety in IPS Context
 See the guidance defined in IPS [Patient Safety in IPS Context](https://build.fhir.org/ig/HL7/fhir-ips/General-Principles.html#patient-safety-in-ips-context).
 
-### Data Included in IPS Documents
-See the guidance defined in IPS [Data Included in IPS Documents](https://build.fhir.org/ig/HL7/fhir-ips/Generation-and-Data-Inclusion.html#data-included-in-ips-documents).
-
-TBD: Revise to be AU Link to the new page on Generating and Accessing AU PS documents with link to IPS.
-
-### Publishing or Accessing the IPS
-See the guidance defined in IPS [Narrative and Language Translation](https://build.fhir.org/ig/HL7/fhir-ips/Design-Conventions.html#narrative-and-language-translation). 
-
-### Narrative and Language Translation
-See the guidance defined in IPS [Narrative and Language Translation](https://build.fhir.org/ig/HL7/fhir-ips/Design-Conventions.html#narrative-and-language-translation). 
-
 ### Medicinal Product Identification
 See the guidance defined in AU Core [Medicine Information](https://build.fhir.org/ig/hl7au/au-fhir-core/medicine-information.html). 
 

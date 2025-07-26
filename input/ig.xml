@@ -233,6 +233,11 @@
 					<generation value="markdown"/>
 				</page>
 				<page>
+					<nameUrl value="generation-and-access.html"/>
+					<title value="Generation and Access"/>
+					<generation value="markdown"/>
+				</page>
+				<page>
 					<nameUrl value="sex-and-gender.html"/>
 					<title value="Sex and Gender"/>
 					<generation value="markdown"/>
