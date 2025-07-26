@@ -27,7 +27,7 @@ See [AUCDI](aucdi.html) for the relationship between the "Patient summary" AUCDI
 The relationship of AU PS to AUCDI and other implementation guides is shown in the figure below.
 
  <div> 
-    <img src="context-colour.png" alt="Relationship to AUCDI and Other IGs" style="width:25%"/>
+    <img src="context-colour.png" alt="Relationship to AUCDI and Other IGs" style="width:75%"/>
   </div>
 *Figure 3: Relationship to AUCDI and Other IGs*
 <br/>
