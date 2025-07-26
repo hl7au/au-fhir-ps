@@ -1,6 +1,5 @@
 This guide is built on top of the FHIR standard and, where available, [AU Core](https://build.fhir.org/ig/hl7au/au-fhir-core/), [IPS](https://build.fhir.org/ig/HL7/fhir-ips), and [AU Base](https://build.fhir.org/ig/hl7au/au-fhir-base/). AU Patient Summary (AU PS) is compliant with the conformance requirements in [IPS](https://build.fhir.org/ig/HL7/fhir-ips/) and the profile only conformance requirements in [AU Core](https://build.fhir.org/ig/hl7au/au-fhir-core/).
 
-
 The context of AU PS within the set of HL7 AU standards is shown in the figure below:
 - the **FHIR standard** is the foundation, which creates a common platform or foundation on which a variety of different solutions are implemented. References to the FHIR standard on this page include the HL7 International Core FHIR Specification, HL7 International Core Extensions FHIR Implementation Guide (Extensions Pack) and HL7 International HL7 Terminology (THO). 
 - **AU Base** defines local concepts for use in an Australian context introducing relevant identifiers, terminology, extensions. 
@@ -22,7 +21,13 @@ AUCDI R2 builds upon R1, expanding on the initial “core”, introducing additi
 
 AU PS is a technical specification that addresses constraints and obligations on data representation for exchange. AU PS enables system data to be mapped to an agreed FHIR format, produced, and consumed by systems in Australia.
 
-See [AUCDI](aucdi.html) for the relationship between the "Patient summary" AUCDI data groups, elements, AU Core profiles, and AU PS profiles.
+AU PS is based on, aligns to, and leverages, international standards and other national standards. Corresponding profiles included in relevant FHIR implementation guides were reviewed and considered during the development process to ensure alignment and to facilitate adoption of this standard. These implementation guides include:
+- [HL7 Cross Paradigm Implementation Guide: Gender Harmony - Sex and Gender Representation, Edition 1](https://hl7.org/xprod/ig/uv/gender-harmony/informative1/)
+- [International Patient Access 1.1.0](https://hl7.org/fhir/uv/ipa/STU1.1/)
+- [International Patient Summary 2.0.0](https://build.fhir.org/ig/HL7/fhir-ips/)
+- [AU Core 2.0.0](https://build.fhir.org/ig/hl7au/au-fhir-core/)
+
+See [AUCDI](aucdi.html) for the relationship between the "Patient summary" AUCDI data groups, elements, and AU PS profiles.
 
 The relationship of AU PS to AUCDI and other implementation guides is shown in the figure below.
 
