@@ -14,7 +14,7 @@ This layering of IGs balances relative adoption and implementation maturity of F
 *Figure 1: Context of AU PS within the set of HL7 AU standards*
 <br/>
 
-### Relationship to AUCDI and other IGs
+### Relationship to AUCDI and Other IGs
 The primary intent of the [AUCDI](https://sparked.csiro.au/index.php/sparked-products-resources/aucdi/) is to design and govern a collection of coherent, reusable building blocks known as data groups. These data groups specify “what” the clinical requirements of the clinical information that should be included for data entry, data use, and sharing of information supporting healthcare delivery. However, it does not specify 'how' the data is exchanged; this is the role fulfilled by the FHIR standard. AUCDI is not required to be implemented as a whole single product. Parts can be implemented as required for specific use cases. 
 
 AUCDI R2 builds upon R1, expanding on the initial 'core', introducing additional data groups and data elements to support different use cases including 'Patient summary'. These AUCDI 'Patient summary' data groups comprising one or more data elements, references clinical terminology concepts, forming the foundation of a common language to allow systems to exchange semantically accurate data more efficiently for patient summaries.

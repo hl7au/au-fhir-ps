@@ -7,7 +7,7 @@ AU PS is a technical specification that addresses constraints and obligations on
   <div> 
     <img src="aucdi2ps.png" alt="AUCDI and AU Patient Summary Development Approach" style="width:55%"/>
   </div>
-*Figure 1: AUCDI and AU PS Development Approach*
+*Figure 1: AUCDI and AU PS development approach*
 <br/><br/>
 
 An interpretation of AUCDI clinical information requirements through community consensus is undertaken to define support for the exchange of clinical and administrative data within technical constraints. Note that:
@@ -16,7 +16,7 @@ An interpretation of AUCDI clinical information requirements through community c
 * AU PS includes exchange for clinical concepts not yet included in AUCDI, e.g. MedicationRequest, which are included through reference to IPS or AU Core.
 * AU PS includes data elements not included in AUCDI that are required to make FHIR implementable e.g. `Observation.status`, `MedicationRequest.intent`, Provenance.
 
-### AUCDI and AU PS versions
+### AUCDI and AU PS Versions
 
 AUCDI R2 builds upon R1, expanding on the initial “core”, introducing additional data groups to support different use cases including "Patient summary":
 
@@ -26,7 +26,7 @@ R1| -
 R2 (Patient summary)|1.0.0
 {:.grid}
 
-### AUCDI (Patient summary) mappings into AU PS
+### AUCDI (Patient summary) Mappings Into AU PS
 
 The table below shows the relationship between data defined in the "Patient summary" AUCDI Data Groups and Elements, AU Core profiles, and AU PS profiles.<br/>
 
