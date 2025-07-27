@@ -1,4 +1,4 @@
-This use case describes an example scenario where, during a general practitioner (GP) consultation with a new patient who resides in a different state and has a usual GP, the GP retrieves an up-to-date patient summary from the patient's usual GP. 
+This example use case describes a possible scenario where, during a general practitioner (GP) consultation with a new patient who resides in a different state and has a usual GP, the GP retrieves an up-to-date patient summary from the patient's usual GP. 
 
 ### Use Case Description
 

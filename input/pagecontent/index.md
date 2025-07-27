@@ -7,7 +7,7 @@ A Patient Summary is:
 
 See [The AUPS](the-aups.html) for more information on the purpose, scope, context, and use of AU PS.
 
-### Project background
+### Project Background
 
 This implementation guide is under development through the [AU PS FHIR IG project](https://confluence.hl7.org/display/HAFWG/AU+Patient+Summary+FHIR+IG+Project) as part of the [Sparked AU FHIR Accelerator](https://sparked.csiro.au). 
 
@@ -29,7 +29,7 @@ Success of this project will depend on active participation from members of the 
 ### Dependencies
 {% include dependency-table.xhtml %}
 
-### How to read this guide
+### How to Read This Guide
 
 This guide is divided into several pages which are listed at the top of each page in the menu bar.
 
