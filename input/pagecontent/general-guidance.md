@@ -63,7 +63,7 @@ Currently no AU PS profile uses imposeProfile. To support future maintenance it 
 Users of this implementation guide are encouraged to provide their feedback about the potential use of imposeProfile.
 </div><!-- stu-note -->
 
-### Extensibility – “additional” sections or elements
+### Extensibility – “Additional” Sections or Elements
 As in IPS, a producer can send:
 - "additional" elements beyond those flagged with *Must Support* in a profile
 - "additional" sections (often referred to as "undefined" sections) beyond those defined in the AU PS Composition
@@ -73,14 +73,14 @@ Additional sections or elements are often required by other profiles the system 
 Implementers intending to populate the AU PS with an unprofiled resoure type, e.g. MedicationAdministration, are recommended to consider the corresponding [AU Base](https://build.fhir.org/ig/hl7au/au-fhir-base/) profile, e.g. [AU Base MedicationAdministration](https://build.fhir.org/ig/hl7au/au-fhir-base/StructureDefinition-au-medicationadministration.html), as guidance for that resource type in an Australian healthcare context.
 
 
-#### Extensibility – “additional” sections
+#### Extensibility – “Additional” Sections
 Implementers should take note, the rules of the `Composition.section:All Slices` defined in the AU PS Composition profile apply to all sections, defined or undefined:
 - `Composition.section.title` is mandatory and has obligations defined for AU PS Producers and AU PS Consumers
 - `Composition.section.text` is mandatory and has obligations defined for AU PS Producers and AU PS Consumers
 
 It is recommended that where a producing system intends to populate "additional" sections there is some definition available in a specification describing the intended contents and use of any additional sections. 
 
-#### Extensibility – “additional” elements
+#### Extensibility – “Additional” Elements
 Specification authors adopting AU PS are encouraged to enable greater interoperability and software re-use by avoiding reductions in an element's cardinality.
 
 Depending on local requirements, a consumer (i.e. client application) may ignore these "additional" elements, may treat the data as for rendering only, or be capable of recognising and using the element. 
@@ -97,7 +97,7 @@ See the guidance defined in IPS [Patient Safety in IPS Context](https://build.fh
 ### Medicinal Product Identification
 See the guidance defined in AU Core [Medicine Information](https://build.fhir.org/ig/hl7au/au-fhir-core/medicine-information.html). 
 
-### Representing body site, which may include laterality
+### Representing Body Site, Which may Include Laterality
 See the guidance defined in AU Core [Representing body site, which may include laterality](https://build.fhir.org/ig/hl7au/au-fhir-core/general-guidance.html#representing-body-site-which-may-include-laterality). 
 
 ### Provenance

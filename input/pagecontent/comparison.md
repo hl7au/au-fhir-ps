@@ -13,7 +13,7 @@ Corresponding profiles, conformance requirements, and capability statements incl
 
 The below comparison evaluates AU PS conformance requirements with the key implementation guides identifying where compliance with AU PS satisfies the expectations established by the referenced implementation guide. 
 
-### Profile comparison
+### Profile Comparison
 As part of profile comparison, the requirements, constraints, and standards specified in a particular FHIR profile are evaluated. These requirements can include mandatory elements, *Must Support* elements, cardinality constraints, data types, terminology bindings, usage rules, extensions, rules on missing or suppressed data. 
 
 The table below provides a profile only comparison from AU PS to profiles in key implementation guides. Compliance in the reverse direction is not guaranteed, i.e. a resource that is compliant with an International Patient Summary profile **MAY NOT** be compliant with AU PS.
@@ -146,10 +146,10 @@ The table below provides a profile only comparison from AU PS to profiles in key
     </tbody>
 </table>
 
-#### IPA profile additional requirements
+#### IPA Profile Additional Requirements
 [IPA 1.1.0](https://hl7.org/fhir/uv/ipa/STU1.1/) describes how an application acting on behalf of a patient can access patient information from a clinical records system using a FHIR-based API.
 
-##### Additional requirements
+##### Additional Requirements
 The following IPA profile(s) contain additional requirements. Implementers are advised to note that some code changes may be required to support these profiles.
 
 <table border="1" style="width: 100%; margin: auto; border-collapse: collapse;">
@@ -208,7 +208,7 @@ The following IPA profile(s) contain additional requirements. Implementers are a
 ##### Missing and Suppressed Data
 AU PS compliant resources are compliant with IPA requirements for Missing Data. IPA does not include requirements for Suppressed Data.
 
-### Capability statement comparison
+### Capability Statement Comparison
 
 No comparison is undertaken. AU PS does not define any FHIR specific interactions - no CapabilityStatement is defined. 
 

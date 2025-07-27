@@ -9,7 +9,7 @@ When generating an AU PS Document, implementers are also advised to be familiar 
 - [Narrative and Language Translation](https://build.fhir.org/ig/HL7/fhir-ips/Design-Conventions.html#narrative-and-language-translation). 
 - [Data Included in IPS Documents](https://build.fhir.org/ig/HL7/fhir-ips/Generation-and-Data-Inclusion.html#data-included-in-ips-documents).
 
-### IPS $summary FHIR operation
+### IPS $summary FHIR Operation
 The IPS defines the [IPS Summary](https://build.fhir.org/ig/HL7/fhir-ips/OperationDefinition-summary.html) (`$summary`) operation and [IPS Server Capability Statement](https://build.fhir.org/ig/HL7/fhir-ips/CapabilityStatement-ips-server.html), which recommends an IPS Server implement the `$summary` operation as an operation for generating an IPS Document.
 
 The `$summary` operation has two endpoint URLs based on the Patient resource:
@@ -26,10 +26,10 @@ A consuming system can invoke the Patient `$summary` operation on a server to re
 <div> 
   <img src="ga-summaryoperation.png" alt="IPS Summary Operation" style="width:60%"/>
 </div>
-*Figure 1: The IPS Summary Operation*
+*Figure 1: The IPS Summary operation*
 <br/>
 
-### IPA $docref FHIR operation
+### IPA $docref FHIR Operation
 The International Patient Access (IPA) defines the [IPA Fetch DocumentReference](https://hl7.org/fhir/uv/ipa/STU1.1/OperationDefinition-docref.html) (`$docref`) operation. FHIR Release 5 has incorporated the Fetch DocumentReference operation as a core FHIR operation.
 
 The [IPS Server Capability Statement](https://build.fhir.org/ig/HL7/fhir-ips/CapabilityStatement-ips-server.html) identifies the `$docref` operation as an option for an IPS Server to implement for generating an IPS document.
@@ -58,7 +58,7 @@ The `$docref` operation supports multiple document retrieval use cases, includin
 <div> 
   <img src="ga-docrefoperation.png" alt="IPA Fetch DocumentReference Operation" style="width:60%"/>
 </div>
-*Figure 2: The IPA Fetch DocumentReference Operation*
+*Figure 2: The IPA Fetch DocumentReference operation*
 <br/>
 
 ### Document Bundle Interactions
@@ -124,7 +124,7 @@ Public Key Infrastructure (PKI) is a well-established approach to ensure end-to-
 <div> 
   <img src="ga-encryptedfileexchange.png" alt="Encrypted File Exchange" style="width:60%"/>
 </div>
-*Figure 6: Encrypted File Exchange*
+*Figure 6: Encrypted file exchange*
 <br/>
 
 ### SMART Health Links 
