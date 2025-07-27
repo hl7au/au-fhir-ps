@@ -243,34 +243,34 @@
                 }
               ]
             },
-             "text": {
+            "text": {
               "status": "generated",
-              "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><table><thead><tr><th colspan=\"3\">Midstream specimen of urine (MSU) - 05/11/2024</th></tr></thead><tbody><tr><td>pH</td><td>7</td><td/></tr><tr><td>Protein</td><td>Positive</td><td/></tr><tr><td>Blood</td><td>Positive</td><td/></tr><tr><td>Glucose</td><td>Positive</td><td/></tr><tr><td>Leucocytes</td><td>370  x 10^6/L </td><td/></tr><tr><td>Erythrocytes</td><td>150 x 10^6/L </td><td/></tr><tr><td>Epithelial cells</td><td>Nil</td><td/></tr><tr><td> Organism 1</td><td>Escherichia coli</td><td/></tr><tr><td> Colony count 1</td><td>> 10^8  Organisms/L</td><td/></tr><tr><td> Amp/Amoxycillin</td><td>Susceptible</td><td/></tr><tr><td> Amoxycillin/clav. acid</td><td>Susceptible</td><td/></tr><tr><td> Cephalexin</td><td>Susceptible</td><td/></tr><tr><td>  Trimethoprim</td><td>Susceptible</td><td/></tr><tr><td>  Nitrofurantoin</td><td>Susceptible</td><td/></tr><tr><td>  Gentamicin</td><td>Susceptible</td><td/></tr><tr><td>  Norfloxacin</td><td>Susceptible</td><td/></tr></tbody></table><table><thead><tr><th colspan=\"3\">Glucose Tolerance Test (GTT) - 21/10/2024</th></tr></thead><tbody><tr><td>Fasting Glucose</td><td>5.3 mmol/L</td><td/></tr><tr><td>1 hour Glucose</td><td>10 mmol/L</td><td/></tr><tr><td>2 hour Glucose</td><td>8.6 mmol/L</td><td/></tr></tbody></table><table><thead><tr><th colspan=\"3\">Haemoglobin A1c - 14/06/2024</th></tr></thead><tbody><tr><td>Haemoglobin A1c</td><td>5.8 %</td><td/></tr></tbody></table><table><thead><tr><th colspan=\"3\">Full Blood Count - 12/06/2024</th></tr></thead><tbody><tr><td> Haemoglobin</td><td>125  g/L</td><td/></tr><tr><td> Haematocrit</td><td>0.37  L/L</td><td/></tr><tr><td> White Blood Cell Count</td><td>8 x 10^9/L</td><td/></tr><tr><td> Platelets</td><td>250 x 10^9/L</td><td/></tr><tr><td>MCV</td><td>85 fL</td><td/></tr></tbody></table><table><thead><tr><th colspan=\"3\">Beta-HCG - 12/06/2024</th></tr></thead><tbody><tr><td>Beta-HCG</td><td>16000 IU/L</td><td/></tr></tbody></table><table><thead><tr><th colspan=\"3\">Urinalysis - 03/06/2024</th></tr></thead><tbody><tr><td> Colour</td><td>Light yellow</td><td/></tr><tr><td> Clarity</td><td>Clear</td><td/></tr><tr><td> pH</td><td>6</td><td/></tr><tr><td> Specific Gravity</td><td>1.02</td><td/></tr><tr><td> Protein</td><td>Negative</td><td/></tr><tr><td> Glucose</td><td>Negative</td><td/></tr><tr><td> Ketones</td><td>Negative</td><td/></tr><tr><td> Nitrites</td><td>Negative</td><td/></tr><tr><td> Leukocyte Esterase</td><td>Negative</td><td/></tr></tbody></table></div>"
+              "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><table style=\"border-collapse: collapse; width: 100%;\">\n        <thead>\n            <tr>\n                <th style=\"border: 1px solid black; padding: 4px; background-color: #f0f0f0;\"><b>Name</b></th>\n                <th style=\"border: 1px solid black; padding: 4px; background-color: #f0f0f0;\"><b>Value</b></th>\n                <th style=\"border: 1px solid black; padding: 4px; background-color: #f0f0f0;\"><b>Date</b></th>\n            </tr>\n        </thead>\n        <tbody>\n            <tr><td style='border: 1px solid black; padding: 4px;'>Midstream specimen of urine (MSU) - pH</td><td style='border: 1px solid black; padding: 4px;'>7</td><td style='border: 1px solid black; padding: 4px;'>05/11/24</td></tr><tr><td style='border: 1px solid black; padding: 4px;'>Midstream specimen of urine (MSU) - Protein</td><td style='border: 1px solid black; padding: 4px;'>Positive</td><td style='border: 1px solid black; padding: 4px;'>05/11/24</td></tr><tr><td style='border: 1px solid black; padding: 4px;'>Midstream specimen of urine (MSU) - Blood</td><td style='border: 1px solid black; padding: 4px;'>Positive</td><td style='border: 1px solid black; padding: 4px;'>05/11/24</td></tr><tr><td style='border: 1px solid black; padding: 4px;'>Midstream specimen of urine (MSU) - Glucose</td><td style='border: 1px solid black; padding: 4px;'>Positive</td><td style='border: 1px solid black; padding: 4px;'>05/11/24</td></tr><tr><td style='border: 1px solid black; padding: 4px;'>Midstream specimen of urine (MSU) - Leucocytes</td><td style='border: 1px solid black; padding: 4px;'>370  x 10^6/L </td><td style='border: 1px solid black; padding: 4px;'>05/11/24</td></tr><tr><td style='border: 1px solid black; padding: 4px;'>Midstream specimen of urine (MSU) - Erythrocytes</td><td style='border: 1px solid black; padding: 4px;'>150 x 10^6/L </td><td style='border: 1px solid black; padding: 4px;'>05/11/24</td></tr><tr><td style='border: 1px solid black; padding: 4px;'>Midstream specimen of urine (MSU) - Epithelial cells</td><td style='border: 1px solid black; padding: 4px;'>Nil</td><td style='border: 1px solid black; padding: 4px;'>05/11/24</td></tr><tr><td style='border: 1px solid black; padding: 4px;'>Midstream specimen of urine (MSU) - Culture</td><td style='border: 1px solid black; padding: 4px;'>Org 1: Escherichia coli > 10^8  Organisms/L</td><td style='border: 1px solid black; padding: 4px;'>05/11/24</td></tr><tr><td style='border: 1px solid black; padding: 4px;'>Midstream specimen of urine (MSU) - Antimicrobial susceptibility</td><td style='border: 1px solid black; padding: 4px; white-space: pre-line;'>Org 1\nAmp/Amoxycillin: S\nAmoxycillin/clav. acid: S\nCephalexin: S\nTrimethoprim: S\nNitrofurantoin: S\nGentamicin: S\nNorfloxacin: S</td><td style='border: 1px solid black; padding: 4px;'>05/11/24</td></tr><tr><td style='border: 1px solid black; padding: 4px;'>Glucose Tolerance Test (GTT) - Fasting Glucose</td><td style='border: 1px solid black; padding: 4px;'>5.3 mmol/L</td><td style='border: 1px solid black; padding: 4px;'>21/10/24</td></tr><tr><td style='border: 1px solid black; padding: 4px;'>Glucose Tolerance Test (GTT) - 1 hour Glucose</td><td style='border: 1px solid black; padding: 4px;'>10 mmol/L</td><td style='border: 1px solid black; padding: 4px;'>21/10/24</td></tr><tr><td style='border: 1px solid black; padding: 4px;'>Glucose Tolerance Test (GTT) - 2 hour Glucose</td><td style='border: 1px solid black; padding: 4px;'>8.6 mmol/L</td><td style='border: 1px solid black; padding: 4px;'>21/10/24</td></tr><tr><td style='border: 1px solid black; padding: 4px;'>Haemoglobin A1c</td><td style='border: 1px solid black; padding: 4px;'>5.8 %</td><td style='border: 1px solid black; padding: 4px;'>14/06/24</td></tr><tr><td style='border: 1px solid black; padding: 4px;'>Full Blood Count -  Haemoglobin</td><td style='border: 1px solid black; padding: 4px;'>125  g/L</td><td style='border: 1px solid black; padding: 4px;'>12/06/24</td></tr><tr><td style='border: 1px solid black; padding: 4px;'>Full Blood Count -  Haematocrit</td><td style='border: 1px solid black; padding: 4px;'>0.37  L/L</td><td style='border: 1px solid black; padding: 4px;'>12/06/24</td></tr><tr><td style='border: 1px solid black; padding: 4px;'>Full Blood Count -  White Blood Cell Count</td><td style='border: 1px solid black; padding: 4px;'>8 x 10^9/L</td><td style='border: 1px solid black; padding: 4px;'>12/06/24</td></tr><tr><td style='border: 1px solid black; padding: 4px;'>Full Blood Count -  Platelets</td><td style='border: 1px solid black; padding: 4px;'>250 x 10^9/L</td><td style='border: 1px solid black; padding: 4px;'>12/06/24</td></tr><tr><td style='border: 1px solid black; padding: 4px;'>Full Blood Count - MCV</td><td style='border: 1px solid black; padding: 4px;'>85 fL</td><td style='border: 1px solid black; padding: 4px;'>12/06/24</td></tr><tr><td style='border: 1px solid black; padding: 4px;'>HCG</td><td style='border: 1px solid black; padding: 4px;'>16000 IU/L</td><td style='border: 1px solid black; padding: 4px;'>12/06/24</td></tr><tr><td style='border: 1px solid black; padding: 4px;'>Urinalysis -  Colour</td><td style='border: 1px solid black; padding: 4px;'>Light yellow colour</td><td style='border: 1px solid black; padding: 4px;'>03/06/24</td></tr><tr><td style='border: 1px solid black; padding: 4px;'>Urinalysis -  Clarity</td><td style='border: 1px solid black; padding: 4px;'>Clear</td><td style='border: 1px solid black; padding: 4px;'>03/06/24</td></tr><tr><td style='border: 1px solid black; padding: 4px;'>Urinalysis -  pH</td><td style='border: 1px solid black; padding: 4px;'>6</td><td style='border: 1px solid black; padding: 4px;'>03/06/24</td></tr><tr><td style='border: 1px solid black; padding: 4px;'>Urinalysis -  Specific Gravity</td><td style='border: 1px solid black; padding: 4px;'>1.02</td><td style='border: 1px solid black; padding: 4px;'>03/06/24</td></tr><tr><td style='border: 1px solid black; padding: 4px;'>Urinalysis -  Protein</td><td style='border: 1px solid black; padding: 4px;'>Negative</td><td style='border: 1px solid black; padding: 4px;'>03/06/24</td></tr><tr><td style='border: 1px solid black; padding: 4px;'>Urinalysis -  Glucose</td><td style='border: 1px solid black; padding: 4px;'>Negative</td><td style='border: 1px solid black; padding: 4px;'>03/06/24</td></tr><tr><td style='border: 1px solid black; padding: 4px;'>Urinalysis -  Ketones</td><td style='border: 1px solid black; padding: 4px;'>Negative</td><td style='border: 1px solid black; padding: 4px;'>03/06/24</td></tr><tr><td style='border: 1px solid black; padding: 4px;'>Urinalysis -  Nitrites</td><td style='border: 1px solid black; padding: 4px;'>Negative</td><td style='border: 1px solid black; padding: 4px;'>03/06/24</td></tr><tr><td style='border: 1px solid black; padding: 4px;'>Urinalysis -  Leukocyte Esterase</td><td style='border: 1px solid black; padding: 4px;'>Negative</td><td style='border: 1px solid black; padding: 4px;'>03/06/24</td></tr>\n        </tbody>\n    </table></div>"
             },
             "entry": [
               {
-                "reference": "urn:uuid:efd650d3-9131-4b15-b1ff-cb59b2593e99"
+                "reference": "urn:uuid:da0199e3-8e96-4661-a1c2-e3e853233d43"
               },
               {
-                "reference": "urn:uuid:1069cd62-324f-4a05-a7ac-28d20363e5be"
+                "reference": "urn:uuid:651afe77-cfb3-460c-b9e1-d0a96c449d08"
               },
               {
-                "reference": "urn:uuid:798de83c-a1dc-4b63-bb35-b7cfdbfeea22"
+                "reference": "urn:uuid:8cfd6c97-95d6-4e0d-8409-90e7427c085f"
               },
               {
-                "reference": "urn:uuid:fbff856a-3b2f-435d-806a-1b87ea2a6869"
+                "reference": "urn:uuid:141f055b-b227-4c41-b7e2-028693ef38d1"
               },
               {
-                "reference": "urn:uuid:bb4a02ff-9929-4f08-aa95-8290d114c208"
+                "reference": "urn:uuid:ac9903ce-9d63-43f5-90af-5ad634b75d1f"
               },
               {
-                "reference": "urn:uuid:8fa5fe84-b56e-4ee5-9522-af5519f28931"
+                "reference": "urn:uuid:d16fe30c-2c83-4cfb-b4a8-37163c9d71b8"
               },
               {
-                "reference": "urn:uuid:2ad9562b-a9ad-4773-818c-484b869b15c7"
+                "reference": "urn:uuid:9c991580-663f-4584-a41b-1995cce26dc6"
               },
               {
-                "reference": "urn:uuid:2d6de264-0d18-4049-834a-9eb2b3954e5f"
+                "reference": "urn:uuid:ebd03b93-7504-401e-9625-d47ed882c2a1"
               }
             ]
           },
@@ -1629,8 +1629,8 @@
         }
       }
     },
-     {
-      "fullUrl": "urn:uuid:61bb8832-3dd8-4fce-96fd-f781899ba76d",
+    {
+      "fullUrl": "urn:uuid:eb5f2ebf-e73d-4a45-8384-a7f74754824c",
       "resource": {
         "resourceType": "Observation",
         "meta": {
@@ -1680,7 +1680,7 @@
       }
     },
     {
-      "fullUrl": "urn:uuid:fdbef95a-1fe7-416b-ad0c-805c556b49a1",
+      "fullUrl": "urn:uuid:ee11ea24-5c20-48b3-b71b-3234f20d918f",
       "resource": {
         "resourceType": "Observation",
         "meta": {
@@ -1736,7 +1736,7 @@
       }
     },
     {
-      "fullUrl": "urn:uuid:cb0a3045-acab-4757-ab8e-eb1506873d8b",
+      "fullUrl": "urn:uuid:d7bcdccc-2198-4687-8b02-f9e167edd371",
       "resource": {
         "resourceType": "Observation",
         "meta": {
@@ -1792,7 +1792,7 @@
       }
     },
     {
-      "fullUrl": "urn:uuid:47e520fe-3fbe-41e2-b13f-ca4e1356f522",
+      "fullUrl": "urn:uuid:b40dadd0-1cf6-452d-90dd-7d0fd414e93b",
       "resource": {
         "resourceType": "Observation",
         "meta": {
@@ -1848,7 +1848,7 @@
       }
     },
     {
-      "fullUrl": "urn:uuid:9b86ccbe-6d8e-465e-aba1-8279afe0706c",
+      "fullUrl": "urn:uuid:b0f41e07-ad9c-42c1-8d12-409cfd11fd4e",
       "resource": {
         "resourceType": "Observation",
         "meta": {
@@ -1912,7 +1912,7 @@
       }
     },
     {
-      "fullUrl": "urn:uuid:481d0824-bb27-42d5-8361-82bc90385318",
+      "fullUrl": "urn:uuid:817fa8df-d526-4804-a493-9cb000ecbc77",
       "resource": {
         "resourceType": "Observation",
         "meta": {
@@ -1976,7 +1976,7 @@
       }
     },
     {
-      "fullUrl": "urn:uuid:e733d1d8-37c1-4dce-aaf0-0670f12580fa",
+      "fullUrl": "urn:uuid:1826199d-1b3f-4986-91ca-242150c6c5f6",
       "resource": {
         "resourceType": "Observation",
         "meta": {
@@ -2032,7 +2032,77 @@
       }
     },
     {
-      "fullUrl": "urn:uuid:90a60d9b-8840-4250-abff-8c1557aa8bfd",
+      "fullUrl": "urn:uuid:da0199e3-8e96-4661-a1c2-e3e853233d43",
+      "resource": {
+        "resourceType": "Observation",
+        "meta": {
+          "profile": [
+            "http://hl7.org.au/fhir/ps/StructureDefinition/au-ps-diagnosticresult-path"
+          ]
+        },
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "laboratory",
+                "display": "Laboratory"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "100904-2",
+              "display": "Urinary tract pathogens panel - Urine by Culture"
+            }
+          ],
+          "text": "Midstream specimen of urine (MSU)"
+        },
+        "subject": {
+          "reference": "urn:uuid:85822a88-55b1-460c-bb7b-e8fc22d8568f"
+        },
+        "performer": [
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/data-absent-reason",
+                "valueCode": "unknown"
+              }
+            ]
+          }
+        ],
+        "effectiveDateTime": "2024-11-05",
+        "hasMember": [
+          {
+            "reference": "urn:uuid:eb5f2ebf-e73d-4a45-8384-a7f74754824c"
+          },
+          {
+            "reference": "urn:uuid:ee11ea24-5c20-48b3-b71b-3234f20d918f"
+          },
+          {
+            "reference": "urn:uuid:d7bcdccc-2198-4687-8b02-f9e167edd371"
+          },
+          {
+            "reference": "urn:uuid:b40dadd0-1cf6-452d-90dd-7d0fd414e93b"
+          },
+          {
+            "reference": "urn:uuid:b0f41e07-ad9c-42c1-8d12-409cfd11fd4e"
+          },
+          {
+            "reference": "urn:uuid:817fa8df-d526-4804-a493-9cb000ecbc77"
+          },
+          {
+            "reference": "urn:uuid:1826199d-1b3f-4986-91ca-242150c6c5f6"
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:607db816-f1d5-477e-84df-a3cb6cad782c",
       "resource": {
         "resourceType": "Observation",
         "meta": {
@@ -2060,7 +2130,7 @@
               "display": "Bacteria identified in Urine by Culture"
             }
           ],
-          "text": "Organism 1"
+          "text": "Organism"
         },
         "subject": {
           "reference": "urn:uuid:85822a88-55b1-460c-bb7b-e8fc22d8568f"
@@ -2088,7 +2158,7 @@
       }
     },
     {
-      "fullUrl": "urn:uuid:d757f854-2634-4e4e-a03f-b32dd957612b",
+      "fullUrl": "urn:uuid:61872ff9-376d-43a8-865b-91b9049bde15",
       "resource": {
         "resourceType": "Observation",
         "meta": {
@@ -2116,7 +2186,7 @@
               "display": "Colony count [#/volume] in Urine"
             }
           ],
-          "text": "Colony count 1"
+          "text": "Colony count"
         },
         "subject": {
           "reference": "urn:uuid:85822a88-55b1-460c-bb7b-e8fc22d8568f"
@@ -2136,7 +2206,62 @@
       }
     },
     {
-      "fullUrl": "urn:uuid:744c34ca-c23a-4b5f-97f3-3e824b86bab9",
+      "fullUrl": "urn:uuid:651afe77-cfb3-460c-b9e1-d0a96c449d08",
+      "resource": {
+        "resourceType": "Observation",
+        "meta": {
+          "profile": [
+            "http://hl7.org.au/fhir/ps/StructureDefinition/au-ps-diagnosticresult-path"
+          ]
+        },
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "laboratory",
+                "display": "Laboratory"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "90077-9",
+              "display": "Urinary pathogens identified in Isolate by Organism specific culture"
+            }
+          ],
+          "text": "Midstream specimen of urine (MSU)"
+        },
+        "subject": {
+          "reference": "urn:uuid:85822a88-55b1-460c-bb7b-e8fc22d8568f"
+        },
+        "performer": [
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/data-absent-reason",
+                "valueCode": "unknown"
+              }
+            ]
+          }
+        ],
+        "effectiveDateTime": "2024-11-05",
+        "hasMember": [
+          {
+            "reference": "urn:uuid:607db816-f1d5-477e-84df-a3cb6cad782c"
+          },
+          {
+            "reference": "urn:uuid:61872ff9-376d-43a8-865b-91b9049bde15"
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:51132f02-89e8-49e6-89d1-b9d33737ff1d",
       "resource": {
         "resourceType": "Observation",
         "meta": {
@@ -2192,7 +2317,7 @@
       }
     },
     {
-      "fullUrl": "urn:uuid:c80f3820-3e4d-45a4-b73a-df96df72bfbb",
+      "fullUrl": "urn:uuid:edf8bf19-8001-46c7-8f31-d8530a21a49b",
       "resource": {
         "resourceType": "Observation",
         "meta": {
@@ -2248,7 +2373,7 @@
       }
     },
     {
-      "fullUrl": "urn:uuid:35e95ae6-2c13-4a8d-8a25-4f374b98c46e",
+      "fullUrl": "urn:uuid:fe06658f-e197-4c58-a96a-c13deccc1887",
       "resource": {
         "resourceType": "Observation",
         "meta": {
@@ -2304,7 +2429,7 @@
       }
     },
     {
-      "fullUrl": "urn:uuid:913fcd83-4a12-4e6e-8ec7-8b8852189778",
+      "fullUrl": "urn:uuid:ef9473c9-c553-4315-8d87-3199d03ed33c",
       "resource": {
         "resourceType": "Observation",
         "meta": {
@@ -2360,7 +2485,7 @@
       }
     },
     {
-      "fullUrl": "urn:uuid:e6eff8a2-3fcd-4a3e-9d63-670200918281",
+      "fullUrl": "urn:uuid:68190a63-2266-497c-9532-542d27b6effa",
       "resource": {
         "resourceType": "Observation",
         "meta": {
@@ -2416,7 +2541,7 @@
       }
     },
     {
-      "fullUrl": "urn:uuid:a72f350b-9c02-41d7-9907-413ab9a99ed1",
+      "fullUrl": "urn:uuid:0b49af84-6a48-46ce-98db-40d2673c9aa2",
       "resource": {
         "resourceType": "Observation",
         "meta": {
@@ -2472,7 +2597,7 @@
       }
     },
     {
-      "fullUrl": "urn:uuid:8d43dab9-cf76-44eb-83b4-db7cd08f223e",
+      "fullUrl": "urn:uuid:ce8cf897-7af6-4927-bd11-c29a122ddac1",
       "resource": {
         "resourceType": "Observation",
         "meta": {
@@ -2528,7 +2653,7 @@
       }
     },
     {
-      "fullUrl": "urn:uuid:efd650d3-9131-4b15-b1ff-cb59b2593e99",
+      "fullUrl": "urn:uuid:8cfd6c97-95d6-4e0d-8409-90e7427c085f",
       "resource": {
         "resourceType": "Observation",
         "meta": {
@@ -2552,8 +2677,8 @@
           "coding": [
             {
               "system": "http://loinc.org",
-              "code": "100904-2",
-              "display": "Urinary tract pathogens panel - Urine by Culture"
+              "code": "29576-6",
+              "display": "Bacterial susceptibility panel"
             }
           ],
           "text": "Midstream specimen of urine (MSU)"
@@ -2574,58 +2699,31 @@
         "effectiveDateTime": "2024-11-05",
         "hasMember": [
           {
-            "reference": "urn:uuid:61bb8832-3dd8-4fce-96fd-f781899ba76d"
+            "reference": "urn:uuid:51132f02-89e8-49e6-89d1-b9d33737ff1d"
           },
           {
-            "reference": "urn:uuid:fdbef95a-1fe7-416b-ad0c-805c556b49a1"
+            "reference": "urn:uuid:edf8bf19-8001-46c7-8f31-d8530a21a49b"
           },
           {
-            "reference": "urn:uuid:cb0a3045-acab-4757-ab8e-eb1506873d8b"
+            "reference": "urn:uuid:fe06658f-e197-4c58-a96a-c13deccc1887"
           },
           {
-            "reference": "urn:uuid:47e520fe-3fbe-41e2-b13f-ca4e1356f522"
+            "reference": "urn:uuid:ef9473c9-c553-4315-8d87-3199d03ed33c"
           },
           {
-            "reference": "urn:uuid:9b86ccbe-6d8e-465e-aba1-8279afe0706c"
+            "reference": "urn:uuid:68190a63-2266-497c-9532-542d27b6effa"
           },
           {
-            "reference": "urn:uuid:481d0824-bb27-42d5-8361-82bc90385318"
+            "reference": "urn:uuid:0b49af84-6a48-46ce-98db-40d2673c9aa2"
           },
           {
-            "reference": "urn:uuid:e733d1d8-37c1-4dce-aaf0-0670f12580fa"
-          },
-          {
-            "reference": "urn:uuid:90a60d9b-8840-4250-abff-8c1557aa8bfd"
-          },
-          {
-            "reference": "urn:uuid:d757f854-2634-4e4e-a03f-b32dd957612b"
-          },
-          {
-            "reference": "urn:uuid:744c34ca-c23a-4b5f-97f3-3e824b86bab9"
-          },
-          {
-            "reference": "urn:uuid:c80f3820-3e4d-45a4-b73a-df96df72bfbb"
-          },
-          {
-            "reference": "urn:uuid:35e95ae6-2c13-4a8d-8a25-4f374b98c46e"
-          },
-          {
-            "reference": "urn:uuid:913fcd83-4a12-4e6e-8ec7-8b8852189778"
-          },
-          {
-            "reference": "urn:uuid:e6eff8a2-3fcd-4a3e-9d63-670200918281"
-          },
-          {
-            "reference": "urn:uuid:a72f350b-9c02-41d7-9907-413ab9a99ed1"
-          },
-          {
-            "reference": "urn:uuid:8d43dab9-cf76-44eb-83b4-db7cd08f223e"
+            "reference": "urn:uuid:ce8cf897-7af6-4927-bd11-c29a122ddac1"
           }
         ]
       }
     },
     {
-      "fullUrl": "urn:uuid:e92695ed-b525-4b02-9764-1dfcad18f49a",
+      "fullUrl": "urn:uuid:d5bcdd26-5a2c-43c4-90fc-6e3ece662869",
       "resource": {
         "resourceType": "Observation",
         "meta": {
@@ -2653,7 +2751,7 @@
               "display": "Glucose [Moles/volume] in Serum or Plasma --pre 75 g glucose PO"
             }
           ],
-          "text": "Glucose Tolerance Test (GTT) Fasting"
+          "text": "Fasting Glucose"
         },
         "subject": {
           "reference": "urn:uuid:85822a88-55b1-460c-bb7b-e8fc22d8568f"
@@ -2678,59 +2776,7 @@
       }
     },
     {
-      "fullUrl": "urn:uuid:1069cd62-324f-4a05-a7ac-28d20363e5be",
-      "resource": {
-        "resourceType": "Observation",
-        "meta": {
-          "profile": [
-            "http://hl7.org.au/fhir/ps/StructureDefinition/au-ps-diagnosticresult-path"
-          ]
-        },
-        "status": "final",
-        "category": [
-          {
-            "coding": [
-              {
-                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
-                "code": "laboratory",
-                "display": "Laboratory"
-              }
-            ]
-          }
-        ],
-        "code": {
-          "coding": [
-            {
-              "system": "http://loinc.org",
-              "code": "72171-2",
-              "display": "Glucose tolerance 2 hours panel - Serum or Plasma"
-            }
-          ],
-          "text": "Glucose Tolerance Test (GTT) Fasting"
-        },
-        "subject": {
-          "reference": "urn:uuid:85822a88-55b1-460c-bb7b-e8fc22d8568f"
-        },
-        "performer": [
-          {
-            "extension": [
-              {
-                "url": "http://hl7.org/fhir/StructureDefinition/data-absent-reason",
-                "valueCode": "unknown"
-              }
-            ]
-          }
-        ],
-        "effectiveDateTime": "2024-10-21",
-        "hasMember": [
-          {
-            "reference": "urn:uuid:e92695ed-b525-4b02-9764-1dfcad18f49a"
-          }
-        ]
-      }
-    },
-    {
-      "fullUrl": "urn:uuid:c018d422-3f2a-4303-9a90-9328a5599d3b",
+      "fullUrl": "urn:uuid:ed6fa42b-f878-4f84-8c00-01e6c166ea3d",
       "resource": {
         "resourceType": "Observation",
         "meta": {
@@ -2758,7 +2804,7 @@
               "display": "Glucose [Moles/volume] in Serum or Plasma --1 hour post 75 g glucose PO"
             }
           ],
-          "text": "Glucose Tolerance Test (GTT) 1 hour"
+          "text": "1 hour Glucose"
         },
         "subject": {
           "reference": "urn:uuid:85822a88-55b1-460c-bb7b-e8fc22d8568f"
@@ -2783,59 +2829,7 @@
       }
     },
     {
-      "fullUrl": "urn:uuid:798de83c-a1dc-4b63-bb35-b7cfdbfeea22",
-      "resource": {
-        "resourceType": "Observation",
-        "meta": {
-          "profile": [
-            "http://hl7.org.au/fhir/ps/StructureDefinition/au-ps-diagnosticresult-path"
-          ]
-        },
-        "status": "final",
-        "category": [
-          {
-            "coding": [
-              {
-                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
-                "code": "laboratory",
-                "display": "Laboratory"
-              }
-            ]
-          }
-        ],
-        "code": {
-          "coding": [
-            {
-              "system": "http://loinc.org",
-              "code": "72171-2",
-              "display": "Glucose tolerance 2 hours panel - Serum or Plasma"
-            }
-          ],
-          "text": "Glucose Tolerance Test (GTT) 1 hour"
-        },
-        "subject": {
-          "reference": "urn:uuid:85822a88-55b1-460c-bb7b-e8fc22d8568f"
-        },
-        "performer": [
-          {
-            "extension": [
-              {
-                "url": "http://hl7.org/fhir/StructureDefinition/data-absent-reason",
-                "valueCode": "unknown"
-              }
-            ]
-          }
-        ],
-        "effectiveDateTime": "2024-10-21",
-        "hasMember": [
-          {
-            "reference": "urn:uuid:c018d422-3f2a-4303-9a90-9328a5599d3b"
-          }
-        ]
-      }
-    },
-    {
-      "fullUrl": "urn:uuid:02fea31a-3e9a-41f5-90ab-f7e6d3bbc30e",
+      "fullUrl": "urn:uuid:c5bbea11-3dd6-4287-ab96-730af62311aa",
       "resource": {
         "resourceType": "Observation",
         "meta": {
@@ -2863,7 +2857,7 @@
               "display": "Glucose [Moles/volume] in Serum or Plasma --2 hours post 75 g glucose PO"
             }
           ],
-          "text": "Glucose Tolerance Test (GTT) 2 hour"
+          "text": "2 hour Glucose"
         },
         "subject": {
           "reference": "urn:uuid:85822a88-55b1-460c-bb7b-e8fc22d8568f"
@@ -2888,7 +2882,7 @@
       }
     },
     {
-      "fullUrl": "urn:uuid:fbff856a-3b2f-435d-806a-1b87ea2a6869",
+      "fullUrl": "urn:uuid:141f055b-b227-4c41-b7e2-028693ef38d1",
       "resource": {
         "resourceType": "Observation",
         "meta": {
@@ -2916,7 +2910,7 @@
               "display": "Glucose tolerance 2 hours panel - Serum or Plasma"
             }
           ],
-          "text": "Glucose Tolerance Test (GTT) 2 hour"
+          "text": "Glucose Tolerance Test (GTT)"
         },
         "subject": {
           "reference": "urn:uuid:85822a88-55b1-460c-bb7b-e8fc22d8568f"
@@ -2934,13 +2928,19 @@
         "effectiveDateTime": "2024-10-21",
         "hasMember": [
           {
-            "reference": "urn:uuid:02fea31a-3e9a-41f5-90ab-f7e6d3bbc30e"
+            "reference": "urn:uuid:d5bcdd26-5a2c-43c4-90fc-6e3ece662869"
+          },
+          {
+            "reference": "urn:uuid:ed6fa42b-f878-4f84-8c00-01e6c166ea3d"
+          },
+          {
+            "reference": "urn:uuid:c5bbea11-3dd6-4287-ab96-730af62311aa"
           }
         ]
       }
     },
     {
-      "fullUrl": "urn:uuid:4c72482f-0131-4928-a56c-abbefd7cb5e0",
+      "fullUrl": "urn:uuid:2b3dfb37-7adb-4e60-a4d5-b1855b69455a",
       "resource": {
         "resourceType": "Observation",
         "meta": {
@@ -2993,7 +2993,7 @@
       }
     },
     {
-      "fullUrl": "urn:uuid:7d1eca67-c684-45b8-96d2-2099407fbbd9",
+      "fullUrl": "urn:uuid:e555ce7f-e16c-41b5-9af5-c4094a5b9629",
       "resource": {
         "resourceType": "Observation",
         "meta": {
@@ -3046,7 +3046,7 @@
       }
     },
     {
-      "fullUrl": "urn:uuid:b9ed7650-35e5-4407-bcff-01574be0b657",
+      "fullUrl": "urn:uuid:c5049cd9-2ca5-4ae7-b223-9900e52a5ae3",
       "resource": {
         "resourceType": "Observation",
         "meta": {
@@ -3099,7 +3099,7 @@
       }
     },
     {
-      "fullUrl": "urn:uuid:e45935c0-514f-4532-8ee5-19fba1d5e2d9",
+      "fullUrl": "urn:uuid:ca4d2a01-b939-445d-913a-80ed979d14fb",
       "resource": {
         "resourceType": "Observation",
         "meta": {
@@ -3152,7 +3152,7 @@
       }
     },
     {
-      "fullUrl": "urn:uuid:05083d38-b34d-47c3-a843-6b958c46e33d",
+      "fullUrl": "urn:uuid:53f9ad31-3096-4004-8fc4-8048ad69f8c7",
       "resource": {
         "resourceType": "Observation",
         "meta": {
@@ -3205,7 +3205,7 @@
       }
     },
     {
-      "fullUrl": "urn:uuid:bb4a02ff-9929-4f08-aa95-8290d114c208",
+      "fullUrl": "urn:uuid:ac9903ce-9d63-43f5-90af-5ad634b75d1f",
       "resource": {
         "resourceType": "Observation",
         "meta": {
@@ -3251,25 +3251,25 @@
         "effectiveDateTime": "2024-06-12",
         "hasMember": [
           {
-            "reference": "urn:uuid:4c72482f-0131-4928-a56c-abbefd7cb5e0"
+            "reference": "urn:uuid:2b3dfb37-7adb-4e60-a4d5-b1855b69455a"
           },
           {
-            "reference": "urn:uuid:7d1eca67-c684-45b8-96d2-2099407fbbd9"
+            "reference": "urn:uuid:e555ce7f-e16c-41b5-9af5-c4094a5b9629"
           },
           {
-            "reference": "urn:uuid:b9ed7650-35e5-4407-bcff-01574be0b657"
+            "reference": "urn:uuid:c5049cd9-2ca5-4ae7-b223-9900e52a5ae3"
           },
           {
-            "reference": "urn:uuid:e45935c0-514f-4532-8ee5-19fba1d5e2d9"
+            "reference": "urn:uuid:ca4d2a01-b939-445d-913a-80ed979d14fb"
           },
           {
-            "reference": "urn:uuid:05083d38-b34d-47c3-a843-6b958c46e33d"
+            "reference": "urn:uuid:53f9ad31-3096-4004-8fc4-8048ad69f8c7"
           }
         ]
       }
     },
     {
-      "fullUrl": "urn:uuid:766c7934-f1e4-4fa3-abf0-391d9e90f7a0",
+      "fullUrl": "urn:uuid:3c6a59b7-83df-4ad4-a6a7-86200639276f",
       "resource": {
         "resourceType": "Observation",
         "meta": {
@@ -3325,7 +3325,7 @@
       }
     },
     {
-      "fullUrl": "urn:uuid:aa66e1b3-1d30-4a8a-a3c5-9e5b0c11d03c",
+      "fullUrl": "urn:uuid:c3c35607-18f8-4f65-b7cc-4d760e789e6f",
       "resource": {
         "resourceType": "Observation",
         "meta": {
@@ -3381,7 +3381,7 @@
       }
     },
     {
-      "fullUrl": "urn:uuid:08e2e9f8-3b56-40e9-850b-6b8f60bed0c8",
+      "fullUrl": "urn:uuid:6e9fe8d3-0ede-49e3-b02f-04eacb204c8e",
       "resource": {
         "resourceType": "Observation",
         "meta": {
@@ -3431,7 +3431,7 @@
       }
     },
     {
-      "fullUrl": "urn:uuid:76644f7c-bb5a-4945-9162-eeb51b94d9f9",
+      "fullUrl": "urn:uuid:49a51177-d49f-466f-a40e-207f8b239a66",
       "resource": {
         "resourceType": "Observation",
         "meta": {
@@ -3481,7 +3481,7 @@
       }
     },
     {
-      "fullUrl": "urn:uuid:42ad609a-f459-41dd-aa5c-27710d2b313d",
+      "fullUrl": "urn:uuid:a3277b5c-5f8b-4e76-9fd7-7119dbe494fe",
       "resource": {
         "resourceType": "Observation",
         "meta": {
@@ -3537,7 +3537,7 @@
       }
     },
     {
-      "fullUrl": "urn:uuid:bcf2bd52-8a72-4d35-9c2d-079538e0224c",
+      "fullUrl": "urn:uuid:69dc7a1a-8003-4c18-94e5-7b6ff47c47c6",
       "resource": {
         "resourceType": "Observation",
         "meta": {
@@ -3593,7 +3593,7 @@
       }
     },
     {
-      "fullUrl": "urn:uuid:42d57797-cb7b-49e2-9b2f-518e79f65d22",
+      "fullUrl": "urn:uuid:87dd3d7f-0392-417a-aa79-b3e58eaf95ef",
       "resource": {
         "resourceType": "Observation",
         "meta": {
@@ -3649,7 +3649,7 @@
       }
     },
     {
-      "fullUrl": "urn:uuid:9e76b956-2675-431a-8e5e-0a7b3802320b",
+      "fullUrl": "urn:uuid:93582fd2-3f2a-409d-9bed-ed081b61216a",
       "resource": {
         "resourceType": "Observation",
         "meta": {
@@ -3705,7 +3705,7 @@
       }
     },
     {
-      "fullUrl": "urn:uuid:913d1ef1-b122-45a8-84da-cef4d3066f02",
+      "fullUrl": "urn:uuid:443622c5-20d2-4d04-bc16-8870ecc573f9",
       "resource": {
         "resourceType": "Observation",
         "meta": {
@@ -3761,7 +3761,7 @@
       }
     },
     {
-      "fullUrl": "urn:uuid:8fa5fe84-b56e-4ee5-9522-af5519f28931",
+      "fullUrl": "urn:uuid:d16fe30c-2c83-4cfb-b4a8-37163c9d71b8",
       "resource": {
         "resourceType": "Observation",
         "meta": {
@@ -3807,37 +3807,37 @@
         "effectiveDateTime": "2024-06-03",
         "hasMember": [
           {
-            "reference": "urn:uuid:766c7934-f1e4-4fa3-abf0-391d9e90f7a0"
+            "reference": "urn:uuid:3c6a59b7-83df-4ad4-a6a7-86200639276f"
           },
           {
-            "reference": "urn:uuid:aa66e1b3-1d30-4a8a-a3c5-9e5b0c11d03c"
+            "reference": "urn:uuid:c3c35607-18f8-4f65-b7cc-4d760e789e6f"
           },
           {
-            "reference": "urn:uuid:08e2e9f8-3b56-40e9-850b-6b8f60bed0c8"
+            "reference": "urn:uuid:6e9fe8d3-0ede-49e3-b02f-04eacb204c8e"
           },
           {
-            "reference": "urn:uuid:76644f7c-bb5a-4945-9162-eeb51b94d9f9"
+            "reference": "urn:uuid:49a51177-d49f-466f-a40e-207f8b239a66"
           },
           {
-            "reference": "urn:uuid:42ad609a-f459-41dd-aa5c-27710d2b313d"
+            "reference": "urn:uuid:a3277b5c-5f8b-4e76-9fd7-7119dbe494fe"
           },
           {
-            "reference": "urn:uuid:bcf2bd52-8a72-4d35-9c2d-079538e0224c"
+            "reference": "urn:uuid:69dc7a1a-8003-4c18-94e5-7b6ff47c47c6"
           },
           {
-            "reference": "urn:uuid:42d57797-cb7b-49e2-9b2f-518e79f65d22"
+            "reference": "urn:uuid:87dd3d7f-0392-417a-aa79-b3e58eaf95ef"
           },
           {
-            "reference": "urn:uuid:9e76b956-2675-431a-8e5e-0a7b3802320b"
+            "reference": "urn:uuid:93582fd2-3f2a-409d-9bed-ed081b61216a"
           },
           {
-            "reference": "urn:uuid:913d1ef1-b122-45a8-84da-cef4d3066f02"
+            "reference": "urn:uuid:443622c5-20d2-4d04-bc16-8870ecc573f9"
           }
         ]
       }
     },
     {
-      "fullUrl": "urn:uuid:2ad9562b-a9ad-4773-818c-484b869b15c7",
+      "fullUrl": "urn:uuid:9c991580-663f-4584-a41b-1995cce26dc6",
       "resource": {
         "resourceType": "Observation",
         "meta": {
@@ -3890,7 +3890,7 @@
       }
     },
     {
-      "fullUrl": "urn:uuid:2d6de264-0d18-4049-834a-9eb2b3954e5f",
+      "fullUrl": "urn:uuid:ebd03b93-7504-401e-9625-d47ed882c2a1",
       "resource": {
         "resourceType": "Observation",
         "meta": {
