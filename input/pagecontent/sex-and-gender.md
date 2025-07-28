@@ -196,6 +196,9 @@ AU PS supports the exchange of the Pronouns data element (as defined in the [HL7
 ### Gender Identity (GI)
 AU PS supports the exchange of the Gender Identity data element (as defined in the [HL7 Gender Harmony IG](https://hl7.org/xprod/ig/uv/gender-harmony/informative1/)), the [Individual Gender Identity](http://hl7.org/fhir/StructureDefinition/individual-genderIdentity) extension is a *Must Support* element in [AU PS Patient](StructureDefinition-au-ps-patient.html), with the value element of the extension constrained to be [Gender Identity Response](https://healthterminologies.gov.au/fhir/ValueSet/gender-identity-response-1) ([extensible](http://hl7.org/fhir/R4/terminologies.html#extensible)). AU PS adopts without change, the implementation guidance defined in the [Gender Identity (GI)](https://build.fhir.org/ig/hl7au/au-fhir-base/sexgender.html#gender-identity-gi) section of the AU Base [Sex and Gender](https://build.fhir.org/ig/hl7au/au-fhir-base/sexgender.html) page.
 
+### Recorded Sex or Gender
+In AU PS, Recorded Sex or Gender is not *Must SUpport*. See the implementation guidance defined in the [Recorded Sex or Gender](https://build.fhir.org/ig/hl7au/au-fhir-base/sexgender.html#recorded-sex-or-gender) section of the AU Base [Sex and Gender](https://build.fhir.org/ig/hl7au/au-fhir-base/sexgender.html) page for more information.
+
 ### Sex Assigned at Birth
 In AU PS, SPCU is not *Must SUpport*. See the implementation guidance defined in the [Sex Assigned at Birth](https://build.fhir.org/ig/hl7au/au-fhir-core/sexgender.html#sex-assigned-at-birth) section of the AU Core [Sex and Gender](https://build.fhir.org/ig/hl7au/au-fhir-core/sexgender.html) page for more information.
 
