@@ -92,8 +92,7 @@ The AU PS identifies a number of [terminologies](terminology.html) as *Must Supp
 
 Within the [AU PS](the-aups.html) context (i.e. the AU healthcare context), the AU localised value sets, developed and published by the [National Clinical Terminology Service](https://www.healthterminologies.gov.au) (NCTS) are preferenced over IPS value sets to support the consumer on their healthcare journey in the AU healthcare context. SNOMED CT Australian Edition (SNOMED CT-AU) extends SNOMED CT and includes 500,000+ concepts for use in Australia.
 
-In an IPS context, IPS proposes that to support interoperability of IPS content between organisations that use different SNOMED CT value set content, a "common proximal ancestor" strategy is used. That is, substituting any local concept with an ancestor that is shared between the exchanging parties, e.g., a concept in the IPS Terminology. The [SNOMED International IPS Terminology](https://confluence.ihtsdotools.org/display/DOCIPSTUG/1.+Introduction) provides a set of 15,000+ concepts for non-affiliates to use in their IPS. 
-This substitution can be performed using an ECL query, and detailed instructions are available in the [SNOMED ECL documentation](http://snomed.org/ecl).
+In an IPS context, IPS proposes that to support interoperability of IPS content between organisations that use different SNOMED CT value set content, a "common proximal ancestor" strategy is used. See IPS [Structuring Terminology Choices](https://build.fhir.org/ig/HL7/fhir-ips/General-Principles.html#structuring-terminology-choices) for more information.
  
 
 ### Patient Safety in IPS Context
