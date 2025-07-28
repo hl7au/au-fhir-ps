@@ -21,12 +21,12 @@ The AU PS will support the consumer on their healthcare journey, providing the c
 *Figure 1: Context of AU PS across a Consumer's Healthcare Journey in Australia*
 <br/>
 
-A sample set of Consumer Journeys have been developed by the Sparked AU Patient Summary Clinical Focus Group to help illustrate the interactions and use of a patient summary during a consumer’s healthcare journey in the Australian healthcare context; available here: [AU Patient Summary Consumer Journeys](https://sparked.csiro.au/index.php/products-resources/au-ps-consumer-journeys/). The Consumer Journeys have been used to develop [two example use cases](usecase.html) to assist implementers in understanding how AU PS could be implemented.
+A sample set of [Consumer Journeys](https://sparked.csiro.au/index.php/products-resources/au-ps-consumer-journeys/), developed by the Sparked AU Patient Summary Clinical Focus Group, help illustrate the interactions and use of a patient summary during a consumer’s healthcare journey in the Australian healthcare context. These Consumer Journeys have been used to develop [two example use cases](usecase.html) to assist implementers in understanding how AU PS could be implemented.
 
 ### Structure of the AU PS
 AU PS is specified in this guide as a HL7 FHIR document (a Bundle including a Composition), composed by a set of potentially reusable "minimal" data blocks (the AU PS profiles).
 
-Based on IPS and AU Core, AU PS defines a patient summary in the context of providing information to downstream providers. While profiled sections can have content that reflect intentions or orders of clinical care, the patient summary is meant as an informative document and is not intended to be directly actionable. For example, a MedicationRequest resource in the medications section or a CarePlan resource in the Plan of Care section, is not intended to provide authorisation for fulfilment or actioning from the AU PS (or IPS) document.
+Based on IPS and AU Core, AU PS defines a patient summary in the context of providing information to downstream providers. While profiled sections can have content that reflect intentions or orders of clinical care, the patient summary is meant as an informative document and is not intended to be directly actionable. For example, a MedicationRequest resource in the Medication Summary section or a CarePlan resource in the Plan of Care section, is not intended to provide authorisation for fulfilment or actioning from the AU PS (or IPS) document.
 
 The AU PS Document shares the same structure as an IPS, shown below.
 

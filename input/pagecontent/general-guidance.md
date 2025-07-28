@@ -74,7 +74,7 @@ Implementers intending to populate the AU PS with an unprofiled resoure type, e.
 
 
 #### Extensibility – “Additional” Sections
-Implementers should take note, the rules of the `Composition.section:All Slices` defined in the AU PS Composition profile apply to all sections, defined or undefined:
+Implementers need to be aware, the rules of the `Composition.section:All Slices` defined in the AU PS Composition profile apply to all sections, defined or undefined:
 - `Composition.section.title` is mandatory and has obligations defined for AU PS Producers and AU PS Consumers
 - `Composition.section.text` is mandatory and has obligations defined for AU PS Producers and AU PS Consumers
 
@@ -101,8 +101,8 @@ See the guidance defined in IPS [Patient Safety in IPS Context](https://build.fh
 ### Medicinal Product Identification
 See the guidance defined in AU Core [Medicine Information](https://build.fhir.org/ig/hl7au/au-fhir-core/medicine-information.html). 
 
-### Representing Body Site, Which may Include Laterality
-See the guidance defined in AU Core [Representing body site, which may include laterality](https://build.fhir.org/ig/hl7au/au-fhir-core/general-guidance.html#representing-body-site-which-may-include-laterality). 
+### Representing Body Site, Which May Include Laterality
+See the guidance defined in AU Core [Representing Body Site, Which May Include Laterality](https://build.fhir.org/ig/hl7au/au-fhir-core/general-guidance.html#representing-body-site-which-may-include-laterality). 
 
 ### Provenance
 See the guidance defined in IPS [Provenance](https://build.fhir.org/ig/HL7/fhir-ips/Design-Conventions.html#provenance). 
