@@ -1,6 +1,6 @@
 {% include comparison-note-boilerplate.md %}
 
-### Profile specific implementation guidance
+### Profile Specific Implementation Guidance
 - See the [guidance on implementing the Patient resource](https://build.fhir.org/ig/hl7au/au-fhir-core/StructureDefinition-au-core-patient.html#profile-specific-implementation-guidance) in AU Core.
 - When populating `Patient.identifier`, producers are not required to populate all known patient identifiers from the source system. Producers:
   - **SHALL** populate with at least one identifier

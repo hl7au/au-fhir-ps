@@ -1,6 +1,6 @@
 {% include comparison-note-boilerplate.md %}
 
-### Profile specific implementation guidance
+### Profile Specific Implementation Guidance
 - See the [guidance on implementing the Immunization resource](https://build.fhir.org/ig/hl7au/au-fhir-core/StructureDefinition-au-core-immunization.html#profile-specific-implementation-guidance) in AU Core.
 - When populating `Immunization.vaccineCode` producers **SHALL** correctly populate `Immunization.vaccineCode.coding` with either a code from [Australian Medicines Terminology Vaccine](https://healthterminologies.gov.au/fhir/ValueSet/amt-vaccine-1) or [Australian Immunisation Register Vaccine](https://healthterminologies.gov.au/fhir/ValueSet/australian-immunisation-register-vaccine-1), or both, if a coded value is known and **MAY** populate with a code from another code system.
   - Producers **MAY** populate with only text if no coded value is known.
