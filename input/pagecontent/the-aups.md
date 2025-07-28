@@ -83,7 +83,7 @@ AU PS profiles the following resources that are not profiled in IPS:
 In addition to the profiles defined in this implementation guide and in IPS, the following profiles defined elsewhere are used by AU PS as the target of a *Must Support* reference element in an AU PS profile:
 - [AU Core Location](https://build.fhir.org/ig/hl7au/au-fhir-core/StructureDefinition-au-core-location.html)
 
-#### Must Support extensions
+#### Must Support Extensions
 No extensions are labelled as *Must Support* in IPS. In AU PS the following extensions are labelled as *Must Support*:
 * [Australian Indigenous Status](https://build.fhir.org/ig/hl7au/au-fhir-base/StructureDefinition-indigenous-status.html) in [AU PS Patient](StructureDefinition-au-ps-patient.html)
 * [Individual Pronouns](https://hl7.org/fhir/extensions/5.1.0/StructureDefinition-individual-pronouns.html) in [AU PS Patient](StructureDefinition-au-ps-patient.html)
@@ -145,7 +145,7 @@ Profile |Conditionally Mandatory Element defined in AU PS
 #### Identifiers
 IPS does not provide recommendations on the types of identifiers used in resources, this is expected to be defined as needed in jurisdictional specifications. In AU PS, a number of optional national Australian healthcare identifiers are labelled with *Must Support*, see the table in the section [Must Support - Choice of Identifiers](general-requirements.html#must-support---choice-of-identifiers) for the full list and to interpret the support requirements for producers and consumers.
 
-#### Fixed values
+#### Fixed Values
 AU PS includes additional fixed value constraints to some elements in profiles either directly in an AU PS profile or via reference to an AU Core profile. These additional fixed values are typically in Observation profiles and add a fixed SNOMED CT concept in `Observation.code` in addition to the LOINC code. See the table below:
 
 Profile |Element|Additional fixed value
@@ -159,6 +159,6 @@ Profile |Element|Additional fixed value
 [AU PS Smoking Status](StructureDefinition-au-ps-smokingstatus.html)|Observation.code|SNOMED CT code 1747861000168109\|Smoking status\|
 {:.grid}
 
-### Considerations when consuming IPS Documents in AU healthcare context
+### Considerations When Consuming IPS Documents in AU Healthcare Context
 
 <p class="request-for-feedback">Implementers are requested to contribute via comment on <a href="https://jira.hl7.org/browse/FHIR-51547">FHIR-51547</a> the functional limitations of receiving an IPS document that does not conform to national expectations e.g. does not include Australian identifiers, does not include clinical terminology from a national set (see specific localisations listed above), does not include mandatory elements.</p>

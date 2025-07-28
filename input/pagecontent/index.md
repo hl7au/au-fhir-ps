@@ -7,7 +7,7 @@ A Patient Summary is:
 
 See [The AUPS](the-aups.html) for more information on the purpose, scope, context, and use of AU PS.
 
-### Project background
+### Project Background
 
 This implementation guide is under development through the [AU PS FHIR IG project](https://confluence.hl7.org/display/HAFWG/AU+Patient+Summary+FHIR+IG+Project) as part of the [Sparked AU FHIR Accelerator](https://sparked.csiro.au). 
 
@@ -29,7 +29,7 @@ Success of this project will depend on active participation from members of the 
 ### Dependencies
 {% include dependency-table.xhtml %}
 
-### How to read this guide
+### How to Read This Guide
 
 This guide is divided into several pages which are listed at the top of each page in the menu bar.
 
@@ -42,9 +42,9 @@ This guide is divided into several pages which are listed at the top of each pag
   - [General Guidance](general-guidance.html): This page provides guidance on using the profiles defined in this guide. 
   - [Sex and Gender](sex-and-gender.html): This page provides guidance on the representation of sex, gender, and related concepts.
   - [AUCDI](aucdi.html): This page maps AUCDI data groups and elements to FHIR artefacts in AU PS.
-  - [Relationship with other IGs](relationship.html): This page provides guidance on the relationship between AU PS, AUCDI, and other implementation guides.
+  - [Relationship With Other IGs](relationship.html): This page provides guidance on the relationship between AU PS, AUCDI, and other implementation guides.
   - [AU Variance Statement](variance.html): This page documents the variance from AU Base and AU Core.
-  - [Comparison with other national and international IGs](comparison.html): This page provides comparison between AU PS profiles and other national and international implementation guides.
+  - [Comparison With Other National and International IGs](comparison.html): This page provides comparison between AU PS profiles and other national and international implementation guides.
   - [Future of AU PS](future.html): This page outlines the approach to developing AU PS.
 - [Example Use Cases](usecase.html): These pages document a set of example use cases that assist in understanding how to implement AU PS.
    - [Interstate GP Visit](uc-interstate.html): This page documents the Interstate GP Visit - Patient Driven Patient Summary example use case.

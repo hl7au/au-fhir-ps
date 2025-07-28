@@ -63,53 +63,45 @@ Currently no AU PS profile uses imposeProfile. To support future maintenance it 
 Users of this implementation guide are encouraged to provide their feedback about the potential use of imposeProfile.
 </div><!-- stu-note -->
 
-### Extensibility – “additional” sections or elements
+### Extensibility – “Additional” Sections or Elements
 As in IPS, a producer can send:
 - "additional" elements beyond those flagged with *Must Support* in a profile
 - "additional" sections (often referred to as "undefined" sections) beyond those defined in the AU PS Composition
 
 Additional sections or elements are often required by other profiles the system may conform to, allowing local requirements, including technical and workflow context for the resource, to be reflected and extending the health information supported in exchanges. For this reason, extensibility is generally encouraged and expected in AU PS profiles. Only in some exceptionally rare use case profiles are rules tightened to limit the nature of additional information that can be sent. 
 
-#### Extensibility – “additional” sections
+Implementers intending to populate the AU PS with an unprofiled resoure type, e.g. MedicationAdministration, are recommended to consider the corresponding [AU Base](https://build.fhir.org/ig/hl7au/au-fhir-base/) profile, e.g. [AU Base MedicationAdministration](https://build.fhir.org/ig/hl7au/au-fhir-base/StructureDefinition-au-medicationadministration.html), as guidance for that resource type in an Australian healthcare context.
+
+
+#### Extensibility – “Additional” Sections
 Implementers should take note, the rules of the `Composition.section:All Slices` defined in the AU PS Composition profile apply to all sections, defined or undefined:
 - `Composition.section.title` is mandatory and has obligations defined for AU PS Producers and AU PS Consumers
 - `Composition.section.text` is mandatory and has obligations defined for AU PS Producers and AU PS Consumers
 
 It is recommended that where a producing system intends to populate "additional" sections there is some definition available in a specification describing the intended contents and use of any additional sections. 
 
-#### Extensibility – “additional” elements
+#### Extensibility – “Additional” Elements
 Specification authors adopting AU PS are encouraged to enable greater interoperability and software re-use by avoiding reductions in an element's cardinality.
 
 Depending on local requirements, a consumer (i.e. client application) may ignore these "additional" elements, may treat the data as for rendering only, or be capable of recognising and using the element. 
 
 ### Structuring Terminology Choices
-The AU Patient Summary shares the same structure as IPS and contains sections that can include coded elements in reusable “minimal” data blocks.
-The [SNOMED International IPS Terminology](https://confluence.ihtsdotools.org/display/DOCIPSTUG/1.+Introduction) provides a set of 15,000+ concepts for non-affiliates to use in their IPS. SNOMED CT Australian Edition (SNOMED CT-AU) extends SNOMED CT and includes 500,000+ concepts for use in Australia.
-To support interoperability of IPS content between organizations that used different SNOMED CT value set content, it is proposed to use a "common proximal ancestor" strategy, substituting any local concept with an ancestor that is shared between the exchanging parties, e.g., a concept in the IPS Terminology. This substitution can be performed using an ECL query, and detailed instructions are available in the [SNOMED ECL documentation](http://snomed.org/ecl).
- 
-Other primary terminologies used in this specification include LOINC for observations (e.g. pathology results and vital signs), UCUM for units of measure,  ISO 3166 for countries, Australian Immunisation Register codes for vaccines and FHIR defined CodeSystems.
+The AU PS shares the same structure as IPS and contains sections that can include coded elements in reusable “minimal” data blocks.
 
-### SNOMED CT Australian Edition
-See the guidance defined in AU Base [SNOMED CT Australian Edition](https://build.fhir.org/ig/hl7au/au-fhir-base/generalguidance.html#snomed-ct-australian-edition).
+The AU PS identifies a number of [terminologies](terminology.html) as *Must Support* for AU PS consumers and producers. Primary terminologies used in this specification include [SNOMED CT Australian Edition (SNOMED CT-AU)](https://build.fhir.org/ig/hl7au/au-fhir-base/generalguidance.html#snomed-ct-australian-edition) for clinical concepts (e.g. allergies, problems, procedures, medicines), LOINC for observation codes (e.g. pathology results and vital signs), UCUM for units of measure,  ISO 3166 for countries, PBS Item codes for medicines, Australian Immunisation Register codes for vaccines, and FHIR defined CodeSystems.
+
+Within the [AU PS](the-aups.html) context (i.e. the AU healthcare context), the AU localised value sets, developed and published by the [National Clinical Terminology Service](https://www.healthterminologies.gov.au) (NCTS) are preferenced over IPS value sets to support the consumer on their healthcare journey in the AU healthcare context. SNOMED CT Australian Edition (SNOMED CT-AU) extends SNOMED CT and includes 500,000+ concepts for use in Australia.
+
+In an IPS context, IPS proposes that to support interoperability of IPS content between organisations that use different SNOMED CT value set content, a "common proximal ancestor" strategy is used. See IPS [Structuring Terminology Choices](https://build.fhir.org/ig/HL7/fhir-ips/General-Principles.html#structuring-terminology-choices) for more information.
+ 
 
 ### Patient Safety in IPS Context
 See the guidance defined in IPS [Patient Safety in IPS Context](https://build.fhir.org/ig/HL7/fhir-ips/General-Principles.html#patient-safety-in-ips-context).
 
-### Data Included in IPS Documents
-See the guidance defined in IPS [Data Included in IPS Documents](https://build.fhir.org/ig/HL7/fhir-ips/Generation-and-Data-Inclusion.html#data-included-in-ips-documents).
-
-TBD: Revise to be AU Link to the new page on Generating and Accessing AU PS documents with link to IPS.
-
-### Publishing or Accessing the IPS
-See the guidance defined in IPS [Narrative and Language Translation](https://build.fhir.org/ig/HL7/fhir-ips/Design-Conventions.html#narrative-and-language-translation). 
-
-### Narrative and Language Translation
-See the guidance defined in IPS [Narrative and Language Translation](https://build.fhir.org/ig/HL7/fhir-ips/Design-Conventions.html#narrative-and-language-translation). 
-
 ### Medicinal Product Identification
 See the guidance defined in AU Core [Medicine Information](https://build.fhir.org/ig/hl7au/au-fhir-core/medicine-information.html). 
 
-### Representing body site, which may include laterality
+### Representing Body Site, Which may Include Laterality
 See the guidance defined in AU Core [Representing body site, which may include laterality](https://build.fhir.org/ig/hl7au/au-fhir-core/general-guidance.html#representing-body-site-which-may-include-laterality). 
 
 ### Provenance

@@ -1,6 +1,6 @@
 {% include comparison-note-boilerplate.md %}
 
-### Profile specific implementation guidance
+### Profile Specific Implementation Guidance
 - See the [guidance on implementing the pathology result Observation resource](https://build.fhir.org/ig/hl7au/au-fhir-core/StructureDefinition-au-core-diagnosticresult-path.html#profile-specific-implementation-guidance) in AU Core.
 - When implementing support for specimen information, the conformance expectations of the [Specimen (IPS)](http://hl7.org/fhir/uv/ips/StructureDefinition/Specimen-uv-ips) profile **SHALL** be met.
 

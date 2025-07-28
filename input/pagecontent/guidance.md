@@ -1,4 +1,5 @@
 - [General Guidance](general-guidance.html)
+- [Generation and Access](generation-and-access.html)
 - [Sex and Gender](sex-and-gender.html)
 - [AUCDI](aucdi.html)
 - [Relationship with other IGs](relationship.html)

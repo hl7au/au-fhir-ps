@@ -126,7 +126,7 @@ For a mandatory section (minimum cardinality is > 0), the section **SHALL** be p
         ...
     ~~~
 
-#### Known absence of data due to workflow
+#### Known Absence of Data Due to Workflow
 
 Where the system does not have information for a particular section and there is a known workflow reason (for example the patient preferred not to answer), the system **SHOULD** represent that reason by populating `Composition.section.emptyReason`:
 * Prefer not to answer may be represented by sending the [Data Absent Reason](http://terminology.hl7.org/CodeSystem/data-absent-reason) code "asked-declined"
@@ -255,7 +255,7 @@ Actor | Code | Definition | Notes
 
 *Must Support* elements are treated differently between [AU PS Consumer](ActorDefinition-au-ps-actor-consumer.html) and [AU PS Producer](ActorDefinition-au-ps-actor-producer.html) actors. *Must Support* on a profile element **SHALL** be interpreted as follows.
 
-#### Presentation of Must Support and obligation in profiles
+#### Presentation of Must Support and Obligation in Profiles
 All elements with *Must Support* in AU PS are accompanied by an explicit obligation that identifies the expectations for one or more actors. When rendered in an implementation guide, each profile is presented in different formal views under tabs labelled "Differential Table", "Key Elements Table", and "Snapshot Table". Elements labelled with *Must Support* and stated obligations in these views are represented by <span style="padding-left: 3px; padding-right: 3px; color: white; background-color: red" title="This element must be supported">S</span><span style="padding-left: 3px; padding-right: 3px; color: white; background-color: red" title="This element has obligations">O</span> as shown below. 
 
  <div> 
@@ -267,7 +267,7 @@ All elements with *Must Support* in AU PS are accompanied by an explicit obligat
 Implementers need to refer to the "Key Elements Table" to see the full set of elements that are mandatory or *Must Support* with obligations, and the full set of terminology requirements.  Implementers need to be aware that the full set of constraints (i.e. invariants) are only presented in the "Detailed Descriptions" tab or the raw representation (e.g. XML or JSON) of the profile.
 
 
-#### Interpreting profile elements labelled Must Support
+#### Interpreting Profile Elements Labelled Must Support
 
 The section is provided as additional support in understanding the application of *Must Support* and Obligations on elements in AU PS. This section does not override the Obligations defined for an actor - implementers are recommended to also read the profile specific implementation guidance for any qualifying requirements placed on the Obligations for a *Must Support* element.
 
