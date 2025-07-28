@@ -86,14 +86,15 @@ Specification authors adopting AU PS are encouraged to enable greater interopera
 Depending on local requirements, a consumer (i.e. client application) may ignore these "additional" elements, may treat the data as for rendering only, or be capable of recognising and using the element. 
 
 ### Structuring Terminology Choices
-The AU Patient Summary shares the same structure as IPS and contains sections that can include coded elements in reusable “minimal” data blocks.
-The [SNOMED International IPS Terminology](https://confluence.ihtsdotools.org/display/DOCIPSTUG/1.+Introduction) provides a set of 15,000+ concepts for non-affiliates to use in their IPS. SNOMED CT Australian Edition (SNOMED CT-AU) extends SNOMED CT and includes 500,000+ concepts for use in Australia.
-To support interoperability of IPS content between organizations that used different SNOMED CT value set content, it is proposed to use a "common proximal ancestor" strategy, substituting any local concept with an ancestor that is shared between the exchanging parties, e.g., a concept in the IPS Terminology. This substitution can be performed using an ECL query, and detailed instructions are available in the [SNOMED ECL documentation](http://snomed.org/ecl).
- 
-Other primary terminologies used in this specification include LOINC for observations (e.g. pathology results and vital signs), UCUM for units of measure,  ISO 3166 for countries, Australian Immunisation Register codes for vaccines and FHIR defined CodeSystems.
+The AU PS shares the same structure as IPS and contains sections that can include coded elements in reusable “minimal” data blocks.
 
-### SNOMED CT Australian Edition
-See the guidance defined in AU Base [SNOMED CT Australian Edition](https://build.fhir.org/ig/hl7au/au-fhir-base/generalguidance.html#snomed-ct-australian-edition).
+The AU PS identifies a number of [terminologies](terminology.html) as *Must Support* for AU PS consumers and producers. Primary terminologies used in this specification include [SNOMED CT Australian Edition (SNOMED CT-AU)](https://build.fhir.org/ig/hl7au/au-fhir-base/generalguidance.html#snomed-ct-australian-edition) for clinical concepts (e.g. allergies, problems, procedures, medicines), LOINC for observation codes (e.g. pathology results and vital signs), UCUM for units of measure,  ISO 3166 for countries, PBS Item codes for medicines, Australian Immunisation Register codes for vaccines, and FHIR defined CodeSystems.
+
+Within the [AU PS](the-aups.html) context (i.e. the AU healthcare context), the AU localised value sets, developed and published by the [National Clinical Terminology Service](https://www.healthterminologies.gov.au) (NCTS) are preferenced over IPS value sets to support the consumer on their healthcare journey in the AU healthcare context. SNOMED CT Australian Edition (SNOMED CT-AU) extends SNOMED CT and includes 500,000+ concepts for use in Australia.
+
+In an IPS context, IPS proposes that to support interoperability of IPS content between organisations that use different SNOMED CT value set content, a "common proximal ancestor" strategy is used. That is, substituting any local concept with an ancestor that is shared between the exchanging parties, e.g., a concept in the IPS Terminology. The [SNOMED International IPS Terminology](https://confluence.ihtsdotools.org/display/DOCIPSTUG/1.+Introduction) provides a set of 15,000+ concepts for non-affiliates to use in their IPS. 
+This substitution can be performed using an ECL query, and detailed instructions are available in the [SNOMED ECL documentation](http://snomed.org/ecl).
+ 
 
 ### Patient Safety in IPS Context
 See the guidance defined in IPS [Patient Safety in IPS Context](https://build.fhir.org/ig/HL7/fhir-ips/General-Principles.html#patient-safety-in-ips-context).
