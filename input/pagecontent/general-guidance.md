@@ -40,7 +40,7 @@ AU PS is undertaking a series of profile walkthroughs with the community, and to
    - where an element has a required binding, the element **SHALL** apply the intersection of both value sets (AU Core and IPS)
    - where an element has a lesser binding, use the AU Core value set and binding strength (where AU Core is equivalent or stronger) or use the IPS value set where the binding strength is stronger
 
-Adopting the approach in both IPS and AU Core, AU PS profiles are 'open' and allow for additional content undefined by the AU PS to be shared. See TBD for information on 
+Adopting the approach in both IPS and AU Core, AU PS profiles are 'open' and allow for additional content undefined by the AU PS to be shared. See the section [Extensibility – “Additional” Sections or Elements](general-guidance.html#extensibility--additional-sections-or-elements) for information. 
 
 #### Profiling Options
 
