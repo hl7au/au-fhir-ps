@@ -7,10 +7,10 @@ AU PS profiles will by design:
 AU PS profiles:
 * are based on the AU Core profile (where it exists) 
 * have additional requirements inherited from IPS applied (as determined by the [AU PS Profile Design Principles](general-guidance.html#au-ps-profile-design-principles)) 
-* have additional requirements as agreed by this project applied
+* have additional requirements as agreed by the AU PS project applied
 * use compliesWithProfile to assert compliance with IPS
 
-The differential view therefore shows the patient summary requirements that are additional to AU Core. In some profiles, e.g. [AU PS Organization](StructureDefinition-au-ps-organization.html), there are no requirements additional to AU Core.
+The differential view therefore shows the patient summary requirements that are additional to AU Core. In some profiles, e.g. [AU PS Organization](StructureDefinition-au-ps-organization.html), the only additional requirements from AU Core are the obligations for AU PS actors.
 
 <div> 
     <img src="aupspatient-profilingapproach.png" alt="AU PS Patient current profiling approach" style="width:40%"/>
@@ -40,25 +40,25 @@ AU PS is undertaking a series of profile walkthroughs with the community, and to
    - where an element has a required binding, the element **SHALL** apply the intersection of both value sets (AU Core and IPS)
    - where an element has a lesser binding, use the AU Core value set and binding strength (where AU Core is equivalent or stronger) or use the IPS value set where the binding strength is stronger
 
-Adopting the approach in both IPS and AU Core, AU PS profiles are 'open' and allow for additional content undefined by the AU PS to be shared. See the section [Extensibility – “Additional” Sections or Elements](general-guidance.html#extensibility--additional-sections-or-elements) for information. 
+Adopting the approach in both IPS and AU Core, AU PS profiles are 'open' and allow for additional content undefined by AU PS (and IPS) to be shared. See the section [Extensibility – “Additional” Sections or Elements](general-guidance.html#extensibility--additional-sections-or-elements) for information. 
 
 #### Profiling Options
 
-When managing profile complexity and requirements in the [national and international context for AU PS](relationship.html#relationship-to-aucdi-and-other-igs), the following mechanisms are available:
+When managing [profile complexity and requirements](relationship.html) in the [national and international context for AU PS](the-aups.html#the-au-ps-au-patient-summary), the following mechanisms are available:
 1. [Derived from Profiles (derive)](https://build.fhir.org/structuredefinition-definitions.html#StructureDefinition.baseDefinition)
-1. Informal alignment (humans authoring rules in a profile)
+1. Informal alignment (humans authoring of rules in a profile)
 1. [Complies With Profile (compliesWith)](https://hl7.org/fhir/extensions/StructureDefinition-structuredefinition-compliesWithProfile.html)
 1. [Dependent Profiles (imposeProfile)](https://hl7.org/fhir/extensions/StructureDefinition-structuredefinition-imposeProfile.html)
 
-These mechanisms offer differing capabilities and advantages. Typically HL7 AU profiles have used derivation to manage compliance within HL7 AU inheritance. However, AU PS will comply to both HL7 AU (AU Core) and IPS and therefore additional mechanism(s) on top of derivation from the base HL7 AU profile are required. At this time additional requirements are included in profiles via informal alignment.
+These mechanisms offer differing capabilities and advantages. Typically HL7 AU profiles use derivation to manage compliance within HL7 AU inheritance. However, AU PS will comply to both HL7 AU (AU Core) and IPS and therefore additional mechanism(s) on top of derivation from the underlying HL7 AU profile stack are required. At this time additional requirements are included in AU PS profiles via informal alignment (i.e. human authoring, human checking, and compliesWith checks).
 
 <div class="stu-note" markdown="1">
 For a human, the main differences with use of imposeProfile are:
 - does not rely on humans to maintain compliance rules from the target profile
 - does not visually show human reader of the source profile any rules from the target profile, i.e. a human reader must view and understand both profiles to understand the rules
-- where two or more profiles offer optional alternatives (e.g. differing preferred bindings or data type choices) does not in the profile preference one over another
+- where two or more profiles offer optional alternatives (e.g. differing preferred bindings or data type choices) does not preference one over another
 
-Currently no AU PS profile uses imposeProfile. To support future maintenance it is under consideration that all AU PS profiles derive from AU Core, where available, and use imposeProfile to apply IPS rules. That would mean that a number of IPS-imposed requirements including cardinality, terminology, and flagging of <i>Must Support</i> would not be directly visible in the formal views within this guide. Or, if we chose to make the additional IPS constraints visible + use imposeProfile, those constraints would be repeated from a validation sense and be an additional validation burden.
+Currently no AU PS profile uses imposeProfile. To support future maintenance it is under consideration that all AU PS profiles derive from AU Core, where available, and use imposeProfile to apply IPS rules. That would mean that a number of IPS-imposed requirements including cardinality, terminology, and flagging of <i>Must Support</i> would not be directly visible in the formal views within this guide. Or, if we chose to make the additional IPS constraints visible + use imposeProfile, those constraints would be repeated from a validation sense and could be an additional validation burden.
 
 Users of this implementation guide are encouraged to provide their feedback about the potential use of imposeProfile.
 </div><!-- stu-note -->
@@ -78,7 +78,7 @@ Implementers need to be aware, the rules of the `Composition.section:All Slices`
 - `Composition.section.title` is mandatory and has obligations defined for AU PS Producers and AU PS Consumers
 - `Composition.section.text` is mandatory and has obligations defined for AU PS Producers and AU PS Consumers
 
-It is recommended that where a producing system intends to populate "additional" sections there is some definition available in a specification describing the intended contents and use of any additional sections. 
+It is recommended that where a producing system intends to populate "additional" sections there is some definition available in a specification describing the intended contents and use of these additional sections. 
 
 #### Extensibility – “Additional” Elements
 Specification authors adopting AU PS are encouraged to enable greater interoperability and software re-use by avoiding reductions in an element's cardinality.
@@ -90,7 +90,7 @@ The AU PS shares the same structure as IPS and contains sections that can includ
 
 The AU PS identifies a number of [terminologies](terminology.html) as *Must Support* for AU PS consumers and producers. Primary terminologies used in this specification include [SNOMED CT Australian Edition (SNOMED CT-AU)](https://build.fhir.org/ig/hl7au/au-fhir-base/generalguidance.html#snomed-ct-australian-edition) for clinical concepts (e.g. allergies, problems, procedures, medicines), LOINC for observation codes (e.g. pathology results and vital signs), UCUM for units of measure,  ISO 3166 for countries, PBS Item codes for medicines, Australian Immunisation Register codes for vaccines, and FHIR defined CodeSystems.
 
-Within the [AU PS](the-aups.html) context (i.e. the AU healthcare context), the AU localised value sets, developed and published by the [National Clinical Terminology Service](https://www.healthterminologies.gov.au) (NCTS) and the HL7 AU FHIR Working Group are preferenced over IPS value sets to support the consumer on their healthcare journey in the AU healthcare context.
+Within [the AU PS](the-aups.html) context (i.e. the Australian healthcare context), the Australian localised value sets, developed and published by the [National Clinical Terminology Service](https://www.healthterminologies.gov.au) (NCTS) and the HL7 AU FHIR Working Group are preferred over IPS value sets to support the consumer on their healthcare journey in the AU healthcare context.
 
 In an IPS context, IPS proposes that to support interoperability of IPS content between organisations that use different SNOMED CT value set content, a "common proximal ancestor" strategy is used. See IPS [Structuring Terminology Choices](https://build.fhir.org/ig/HL7/fhir-ips/General-Principles.html#structuring-terminology-choices) for more information.
  
