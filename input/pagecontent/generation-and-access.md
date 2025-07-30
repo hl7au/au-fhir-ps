@@ -1,5 +1,5 @@
 ### Generating & Accessing AU Patient Summary (AU PS) Documents
-AU PS is specified in this guide as a HL7 FHIR document (a Bundle including a Composition), composed by a set of potentially reusable "minimal" data blocks (the AU PS profiles). See [Structure of the Australian Patient Summary (AU PS)](general-guidance.html).
+AU PS is specified in this guide as a HL7 FHIR document (a Bundle including a Composition), composed by a set of potentially reusable "minimal" data blocks (the AU PS profiles). See [Structure of the AU PS](the-aups.html#structure-of-the-au-ps).
 
 As in the IPS, it is not in the scope of this version of AU PS to constrain solutions or strategies for the creation, sharing, translation, and use of AU PS Documents or IPS Documents. 
 
