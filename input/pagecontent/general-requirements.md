@@ -43,8 +43,8 @@ It is important to differentiate between:
 In the above circumstances the following is applied:
 * Where data is missing for an element within a resource and the reason is not known, systems **SHALL** implement the requirements of the [Missing Data](general-requirements.html#missing-data) section.
 * Where data is missing for a section and the reason is not known, systems **SHALL** implement the requirements of the [Empty Sections](general-requirements.html#empty-sections) section.
-* Where data is not available due to a known workflow reason, systems **SHOULD** implement the requirements of the [Known absence of data due to workflow](general-requirements.html#known-absence-of-data-due-to-workflow) section.
-* When stating "no known X" or "no history of X", systems **SHOULD** implement the guidance of the [No known X](general-requirements.html#no-known-x) section.
+* Where data is not available due to a known workflow reason, systems **SHOULD** implement the requirements of the [Known Absence of Data Due to Workflow](general-requirements.html#known-absence-of-data-due-to-workflow) section.
+* When stating "no known X" or "no history of X", systems **SHOULD** implement the guidance of the [No Known X](general-requirements.html#no-known-x) section.
 
 #### Missing Data
 
