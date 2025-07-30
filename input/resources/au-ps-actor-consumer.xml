@@ -10,7 +10,7 @@
   <status value="draft"/>
   <description value="An AU PS Consumer is a system that consumes an AU PS Bundle and uses it to display or process patient summary content. This actor is based on the Consumer (IPS) actor, and describes the additional requirements and documentation applied for the Australian context."/> 
   <type value="system"/> 
-  <documentation value="An AU PS Consumer **SHALL** comply with the requirements of the [IPS Consumer](https://build.fhir.org/ig/HL7/fhir-ips/ActorDefinition-Consumer.html), and:&#xa;&#xa;
+  <documentation value="An AU PS Consumer **SHALL** comply with the requirements of the [Consumer (IPS)](https://build.fhir.org/ig/HL7/fhir-ips/ActorDefinition-Consumer.html), and:&#xa;&#xa;
 - **SHALL** implement the AU PS Bundle, AU PS Composition and AU PS Patient profiles&#xa;&#xa;
 - **SHALL** for each mandatory section in AU PS Composition, implement the AU PS profiles referenced by the section entry (i.e. AU PS AllergyIntolerance, AU PS Condition, AU PS MedicationStatement and AU PS MedicationRequest)&#xa;&#xa;
 - **SHOULD** for each recommended section in AU PS Composition, implement the profiles referenced by the section entry (e.g. AU PS Immunization, Observation Results - Radiology (IPS), AU PS Procedure, and DeviceUseStatement (IPS))&#xa;&#xa;
