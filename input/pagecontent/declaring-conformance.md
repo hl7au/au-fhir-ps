@@ -3,9 +3,9 @@ A system declaring conformance to AU Patient Summary **SHALL** implement the con
 - [AU PS Consumer](ActorDefinition-au-ps-actor-consumer.html)
 - [AU PS Producer](ActorDefinition-au-ps-actor-producer.html)
 
-AU PS does not define any FHIR specific interactions - no CapabilityStatement is defined. 
+AU PS does not define any FHIR-specific interactions and does not include a CapabilityStatement.
 
-Systems implementing AU Patient Summary **MAY** implement interactions defined other CapabilityStatements, for example:
+Systems implementing AU Patient Summary **MAY** implement interactions defined in other CapabilityStatements, for example:
 - [IPS Server Capability Statement](https://build.fhir.org/ig/HL7/fhir-ips/CapabilityStatement-ips-server.html)
 - [International Patient Access Server CapabilityStatement](https://hl7.org/fhir/uv/ipa/CapabilityStatement-ipa-server.html)
 - [International Patient Access Client CapabilityStatement](https://hl7.org/fhir/uv/ipa/CapabilityStatement-ipa-client.html)
