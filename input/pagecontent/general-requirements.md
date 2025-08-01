@@ -329,21 +329,21 @@ The table below provides a list of AU PS profile elements that allow multiple re
 
 Profile |Must Support Element|Reference
 ---|---|---
-AU PS Composition|Composition.author|AU PS Practitioner, AU PS PractitionerRole, Device, AU PS Patient, AU PS RelatedPerson, AU PS Organization
-AU PS Composition|Composition.attester.party|AU PS Patient, AU PS RelatedPerson, AU PS Practitioner, AU PS PractitionerRole, AU PS Organization
-AU PS Composition|Composition.section.entry:medicationStatementOrRequest|AU PS MedicationStatement, AU PS MedicationRequest
-DiagnosticReport (IPS)|DiagnosticReport.subject|AU PS Patient, Group
-DiagnosticReport (IPS)|DiagnosticReport.performer|AU PS Practitioner, AU PS PractitionerRole, AU PS Organization, CareTeam
-DiagnosticReport (IPS)|DiagnosticReport.result:observation-results|AU PS Pathology Result Observation, Observation Results - Radiology (IPS)
-AU PS Encounter|Encounter.participant.individual|AU PS Practitioner, AU PS PractitionerRole, AU PS RelatedPerson
-AU PS Encounter|Encounter.reasonReference|AU PS Condition, Observation, AU PS Procedure
-AU PS MedicationRequest|MedicationRequest.requester|AU PS Practitioner, AU PS PractitionerRole, AU PS Organization, AU PS Patient, AU PS RelatedPerson
-AU PS MedicationRequest|MedicationRequest.reasonReference|AU PS Condition, Observation
-AU PS MedicationStatement|MedicationStatement.reasonReference|AU PS Condition, Observation, DiagnosticReport (IPS)
-Observation Results - Radiology (IPS)|Observation.performer|AU PS Practitioner, AU PS PractitionerRole, AU PS Organization, CareTeam, AU PS Patient, AU PS RelatedPerson
-AU PS Patient|Patient.generalPractitioner|AU PS Organization, AU PS Practitioner, AU PS PractitionerRole
-AU PS Pathology Result Observation|Observation.performer|AU PS Practitioner, AU PS PractitionerRole, AU PS Organization, AU PS Patient, AU PS RelatedPerson
-AU PS Procedure|Procedure.reasonReference|AU PS Condition, Observation, AU PS Procedure, DocumentReference
+[AU PS Composition](StructureDefinition-au-ps-composition.html)|Composition.author|AU PS Practitioner, AU PS PractitionerRole, Device, AU PS Patient, AU PS RelatedPerson, AU PS Organization
+[AU PS Composition](StructureDefinition-au-ps-composition.html)|Composition.attester.party|AU PS Patient, AU PS RelatedPerson, AU PS Practitioner, AU PS PractitionerRole, AU PS Organization
+[AU PS Composition](StructureDefinition-au-ps-composition.html)|Composition.section.entry:medicationStatementOrRequest|AU PS MedicationStatement, AU PS MedicationRequest
+[DiagnosticReport (IPS)](https://build.fhir.org/ig/HL7/fhir-ips/StructureDefinition-DiagnosticReport-uv-ips.html)|DiagnosticReport.subject|AU PS Patient, Group
+[DiagnosticReport (IPS)](https://build.fhir.org/ig/HL7/fhir-ips/StructureDefinition-DiagnosticReport-uv-ips.html)|DiagnosticReport.performer|AU PS Practitioner, AU PS PractitionerRole, AU PS Organization, CareTeam
+[DiagnosticReport (IPS)](https://build.fhir.org/ig/HL7/fhir-ips/StructureDefinition-DiagnosticReport-uv-ips.html)|DiagnosticReport.result:observation-results|AU PS Pathology Result Observation, Observation Results - Radiology (IPS)
+[AU PS Encounter](StructureDefinition-au-ps-encounter.html)|Encounter.participant.individual|AU PS Practitioner, AU PS PractitionerRole, AU PS RelatedPerson
+[AU PS Encounter](StructureDefinition-au-ps-encounter.html)|Encounter.reasonReference|AU PS Condition, Observation, AU PS Procedure
+[AU PS MedicationRequest](StructureDefinition-au-ps-medicationrequest.html)|MedicationRequest.requester|AU PS Practitioner, AU PS PractitionerRole, AU PS Organization, AU PS Patient, AU PS RelatedPerson
+[AU PS MedicationRequest](StructureDefinition-au-ps-medicationrequest.html)|MedicationRequest.reasonReference|AU PS Condition, Observation
+[AU PS MedicationStatement](StructureDefinition-au-ps-medicationstatement.html)|MedicationStatement.reasonReference|AU PS Condition, Observation, DiagnosticReport (IPS)
+[Observation Results - Radiology (IPS)](https://build.fhir.org/ig/HL7/fhir-ips/StructureDefinition-Observation-results-radiology-uv-ips.html)|Observation.performer|AU PS Practitioner, AU PS PractitionerRole, AU PS Organization, CareTeam, AU PS Patient, AU PS RelatedPerson
+[AU PS Patient](StructureDefinition-au-ps-patient.html)|Patient.generalPractitioner|AU PS Organization, AU PS Practitioner, AU PS PractitionerRole
+[AU PS Pathology Result Observation](StructureDefinition-au-ps-diagnosticresult-path.html)|Observation.performer|AU PS Practitioner, AU PS PractitionerRole, AU PS Organization, AU PS Patient, AU PS RelatedPerson
+[AU PS Procedure](StructureDefinition-au-ps-procedure.html)|Procedure.reasonReference|AU PS Condition, Observation, AU PS Procedure, DocumentReference
 {:.grid}
 
 
@@ -356,22 +356,22 @@ The table below provides a list of AU PS profile elements that allow multiple da
 
 Profile |Must Support Element|Data Types
 ---|---|---
-AU PS AllergyIntolerance|AllergyIntolerance.onset[x]|dateTime, age, Period, Range
-AU PS Condition|Condition.onset[x]|dateTime, age, Period, Range
-AU PS Condition|Condition.abatement[x]|dateTime, age, Period, Range
-DeviceUseStatement (IPS)|DeviceUseStatement.timing[x]|Period, dateTime
-DiagnosticReport (IPS)|DiagnosticReport.effective[x]|dateTime, Period
-AU PS Immunization|Immunization.occurrence[x]|dateTime, string
-AU PS MedicationRequest|MedicationRequest.medication[x]|CodeableConcept, Reference
-AU PS MedicationStatement|MedicationStatement.medication[x]|CodeableConcept, Reference
-AU PS MedicationStatement|MedicationStatement.effective[x]|dateTime, Period
-Observation Results - Radiology (IPS)|Observation.effective[x]|dateTime, Period
-Observation Results - Radiology (IPS)|Observation.value[x]|Quantity, CodeableConcept, string, boolean, integer, Range, Ratio, SampledData, time, dateTime, Period
-AU PS Pathology Result Observation|Observation.effective[x]|dateTime, Period,
-AU PS Pathology Result Observation|Observation.value[x]|Quantity, CodeableConcept, string, boolean, integer, Range, Ratio, SampledData, time, dateTime, Period
-AU PS Pathology Result Observation|Observation.component.value[x]|Quantity, CodeableConcept, string, boolean, integer, Range, Ratio, SampledData, time, dateTime, Period
-AU PS Procedure|Procedure.performed[x]|dateTime, Period, string, Age, Range
-DeviceUseStatement (IPS)|DeviceUseStatement.timing[x]|Period, dateTime
+[AU PS AllergyIntolerance](StructureDefinition-au-ps-allergyintolerance.html)|AllergyIntolerance.onset[x]|dateTime, age, Period, Range
+[AU PS Condition](StructureDefinition-au-ps-condition.html)|Condition.onset[x]|dateTime, age, Period, Range
+[AU PS Condition](StructureDefinition-au-ps-condition.html)|Condition.abatement[x]|dateTime, age, Period, Range
+[DeviceUseStatement (IPS)](https://build.fhir.org/ig/HL7/fhir-ips/StructureDefinition-DeviceUseStatement-uv-ips.html)|DeviceUseStatement.timing[x]|Period, dateTime
+[DiagnosticReport (IPS)](https://build.fhir.org/ig/HL7/fhir-ips/StructureDefinition-DiagnosticReport-uv-ips.html)|DiagnosticReport.effective[x]|dateTime, Period
+[AU PS Immunization](StructureDefinition-au-ps-immunization.html)|Immunization.occurrence[x]|dateTime, string
+[AU PS MedicationRequest](StructureDefinition-au-ps-medicationrequest.html)|MedicationRequest.medication[x]|CodeableConcept, Reference
+[AU PS MedicationStatement](StructureDefinition-au-ps-medicationstatement.html)|MedicationStatement.medication[x]|CodeableConcept, Reference
+[AU PS MedicationStatement](StructureDefinition-au-ps-medicationstatement.html)|MedicationStatement.effective[x]|dateTime, Period
+[Observation Results - Radiology (IPS)](https://build.fhir.org/ig/HL7/fhir-ips/StructureDefinition-Observation-results-radiology-uv-ips.html)|Observation.effective[x]|dateTime, Period
+[Observation Results - Radiology (IPS)](https://build.fhir.org/ig/HL7/fhir-ips/StructureDefinition-Observation-results-radiology-uv-ips.html)|Observation.value[x]|Quantity, CodeableConcept, string, boolean, integer, Range, Ratio, SampledData, time, dateTime, Period
+[AU PS Pathology Result Observation](StructureDefinition-au-ps-diagnosticresult-path.html)|Observation.effective[x]|dateTime, Period,
+[AU PS Pathology Result Observation](StructureDefinition-au-ps-diagnosticresult-path.html)|Observation.value[x]|Quantity, CodeableConcept, string, boolean, integer, Range, Ratio, SampledData, time, dateTime, Period
+[AU PS Pathology Result Observation](StructureDefinition-au-ps-diagnosticresult-path.html)|Observation.component.value[x]|Quantity, CodeableConcept, string, boolean, integer, Range, Ratio, SampledData, time, dateTime, Period
+[AU PS Procedure](StructureDefinition-au-ps-procedure.html)|Procedure.performed[x]|dateTime, Period, string, Age, Range
+[DeviceUseStatement (IPS)](https://build.fhir.org/ig/HL7/fhir-ips/StructureDefinition-DeviceUseStatement-uv-ips.html)|DeviceUseStatement.timing[x]|Period, dateTime
 {:.grid}
 
 Some data type choices are labelled as *Must Support* and apply an additional obligation of [SHOULD:able-to-populate](https://hl7.org/fhir/extensions/CodeSystem-obligation.html#obligation-SHOULD.58able-to-populate). In such cases:
@@ -381,15 +381,15 @@ The table below provides a list of AU PS profile elements where a data type choi
 
 Profile |Must Support Data Type
 ---|---
-AU PS AllergyIntolerance|AllergyIntolerance.onsetDateTime
-AU PS Condition|Condition.onsetDateTime
-DeviceUseStatement (IPS)|DeviceUseStatement.timingDateTime
-DiagnosticReport (IPS)|DiagnosticReport.effectiveDateTime
-AU PS Immunization|Immunization.occurrenceDateTime
-AU PS MedicationStatement|MedicationStatement.effectiveDateTime
-AU PS Observation Results - Radiology (IPS)|Observation.effectiveDateTime
-AU PS Pathology Result Observation|Observation.effectiveDateTime
-AU PS Procedure|Procedure.performedDateTime
+[AU PS AllergyIntolerance](StructureDefinition-au-ps-allergyintolerance.html)|AllergyIntolerance.onsetDateTime
+[AU PS Condition](StructureDefinition-au-ps-condition.html)|Condition.onsetDateTime
+[DeviceUseStatement (IPS)](https://build.fhir.org/ig/HL7/fhir-ips/StructureDefinition-DeviceUseStatement-uv-ips.html)|DeviceUseStatement.timingDateTime
+[DiagnosticReport (IPS)](https://build.fhir.org/ig/HL7/fhir-ips/StructureDefinition-DiagnosticReport-uv-ips.html)|DiagnosticReport.effectiveDateTime
+[AU PS Immunization](StructureDefinition-au-ps-immunization.html)|Immunization.occurrenceDateTime
+[AU PS MedicationStatement](StructureDefinition-au-ps-medicationstatement.html)|MedicationStatement.effectiveDateTime
+[Observation Results - Radiology (IPS)](https://build.fhir.org/ig/HL7/fhir-ips/StructureDefinition-Observation-results-radiology-uv-ips.html)|Observation.effectiveDateTime
+[AU PS Pathology Result Observation](StructureDefinition-au-ps-diagnosticresult-path.html)|Observation.effectiveDateTime
+[AU PS Procedure](StructureDefinition-au-ps-procedure.html)|Procedure.performedDateTime
 {:.grid}
 
 ##### Must Support - Choice of Identifiers
@@ -423,10 +423,10 @@ The table below lists the applicable profiles and elements in AU PS.
 
 Profile |Must Support Choice Elements
 ---|---
-AU PS Encounter|Encounter.reasonCode, Encounter.reasonReference
-AU PS MedicationRequest|MedicationRequest.reasonCode, MedicationRequest.reasonReference
-AU PS MedicationStatement|MedicationStatement.reasonCode, MedicationStatement.reasonReference
-AU PS Procedure|Procedure.reasonCode, Procedure.reasonReference
+[AU PS Encounter](StructureDefinition-au-ps-encounter.html)|Encounter.reasonCode, Encounter.reasonReference
+[AU PS MedicationRequest](StructureDefinition-au-ps-medicationrequest.html)|MedicationRequest.reasonCode, MedicationRequest.reasonReference
+[AU PS MedicationStatement](StructureDefinition-au-ps-medicationstatement.html)|MedicationStatement.reasonCode, MedicationStatement.reasonReference
+[AU PS Procedure](StructureDefinition-au-ps-procedure.html)|Procedure.reasonCode, Procedure.reasonReference
 {:.grid}
 
 
@@ -440,10 +440,10 @@ The table below lists the applicable profiles and elements in AU PS that support
 
 Profile |Must Support Sub-Element|Terminology Choices
 ---|---
-AU PS Immunization|Immunization.vaccineCode.coding|[Australian Medicines Terminology Vaccine](https://healthterminologies.gov.au/fhir/ValueSet/amt-vaccine-1), [Australian Immunisation Register Vaccine](https://healthterminologies.gov.au/fhir/ValueSet/australian-immunisation-register-vaccine-1)
-AU PS Medication|Medication.code.coding|[Australian Medication](https://healthterminologies.gov.au/fhir/ValueSet/australian-medication-1), [PBS Item Codes](https://build.fhir.org/ig/hl7au/au-fhir-base//ValueSet-pbs-item.html)
-AU PS MedicationRequest|MedicationRequest.code.coding|[Australian Medication](https://healthterminologies.gov.au/fhir/ValueSet/australian-medication-1), [PBS Item Codes](https://build.fhir.org/ig/hl7au/au-fhir-base//ValueSet-pbs-item.html)
-AU PS MedicationStatement|MedicationStatement.code.coding|[Australian Medication](https://healthterminologies.gov.au/fhir/ValueSet/australian-medication-1), [PBS Item Codes](https://build.fhir.org/ig/hl7au/au-fhir-base//ValueSet-pbs-item.html)
+[AU PS Immunization](StructureDefinition-au-ps-immunization.html)|Immunization.vaccineCode.coding|[Australian Medicines Terminology Vaccine](https://healthterminologies.gov.au/fhir/ValueSet/amt-vaccine-1), [Australian Immunisation Register Vaccine](https://healthterminologies.gov.au/fhir/ValueSet/australian-immunisation-register-vaccine-1)
+[AU PS Medication](StructureDefinition-au-ps-medication.html)|Medication.code.coding|[Australian Medication](https://healthterminologies.gov.au/fhir/ValueSet/australian-medication-1), [PBS Item Codes](https://build.fhir.org/ig/hl7au/au-fhir-base//ValueSet-pbs-item.html)
+[AU PS MedicationRequest](StructureDefinition-au-ps-medicationrequest.html)|MedicationRequest.code.coding|[Australian Medication](https://healthterminologies.gov.au/fhir/ValueSet/australian-medication-1), [PBS Item Codes](https://build.fhir.org/ig/hl7au/au-fhir-base//ValueSet-pbs-item.html)
+[AU PS MedicationStatement](StructureDefinition-au-ps-medicationstatement.html)|MedicationStatement.code.coding|[Australian Medication](https://healthterminologies.gov.au/fhir/ValueSet/australian-medication-1), [PBS Item Codes](https://build.fhir.org/ig/hl7au/au-fhir-base//ValueSet-pbs-item.html)
 {:.grid}
 
 For example, the profile [AU PS Medication](StructureDefinition-au-ps-medication.html) requires support for the following terminology choices `Medication.code.coding` defined in [AU Base Medication](https://build.fhir.org/ig/hl7au/au-fhir-base/StructureDefinition-au-medication.html) to support [Australian Medication](https://healthterminologies.gov.au/fhir/ValueSet/australian-medication-1) and [PBS Item Codes](https://build.fhir.org/ig/hl7au/au-fhir-base//ValueSet-pbs-item.html) as indicated by flagging *Must Support* on those two terminology slices.
