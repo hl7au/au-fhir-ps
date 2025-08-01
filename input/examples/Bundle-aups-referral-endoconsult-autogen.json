@@ -245,32 +245,113 @@
             },
             "text": {
               "status": "generated",
-              "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><table style=\"border-collapse: collapse; width: 100%;\">\n        <thead>\n            <tr>\n                <th style=\"border: 1px solid black; padding: 4px; background-color: #f0f0f0;\"><b>Name</b></th>\n                <th style=\"border: 1px solid black; padding: 4px; background-color: #f0f0f0;\"><b>Value</b></th>\n                <th style=\"border: 1px solid black; padding: 4px; background-color: #f0f0f0;\"><b>Date</b></th>\n            </tr>\n        </thead>\n        <tbody>\n            <tr><td style='border: 1px solid black; padding: 4px;'>Midstream specimen of urine (MSU) - pH</td><td style='border: 1px solid black; padding: 4px;'>7</td><td style='border: 1px solid black; padding: 4px;'>05/11/24</td></tr><tr><td style='border: 1px solid black; padding: 4px;'>Midstream specimen of urine (MSU) - Protein</td><td style='border: 1px solid black; padding: 4px;'>Positive</td><td style='border: 1px solid black; padding: 4px;'>05/11/24</td></tr><tr><td style='border: 1px solid black; padding: 4px;'>Midstream specimen of urine (MSU) - Blood</td><td style='border: 1px solid black; padding: 4px;'>Positive</td><td style='border: 1px solid black; padding: 4px;'>05/11/24</td></tr><tr><td style='border: 1px solid black; padding: 4px;'>Midstream specimen of urine (MSU) - Glucose</td><td style='border: 1px solid black; padding: 4px;'>Positive</td><td style='border: 1px solid black; padding: 4px;'>05/11/24</td></tr><tr><td style='border: 1px solid black; padding: 4px;'>Midstream specimen of urine (MSU) - Leucocytes</td><td style='border: 1px solid black; padding: 4px;'>370  x 10^6/L </td><td style='border: 1px solid black; padding: 4px;'>05/11/24</td></tr><tr><td style='border: 1px solid black; padding: 4px;'>Midstream specimen of urine (MSU) - Erythrocytes</td><td style='border: 1px solid black; padding: 4px;'>150 x 10^6/L </td><td style='border: 1px solid black; padding: 4px;'>05/11/24</td></tr><tr><td style='border: 1px solid black; padding: 4px;'>Midstream specimen of urine (MSU) - Epithelial cells</td><td style='border: 1px solid black; padding: 4px;'>Nil</td><td style='border: 1px solid black; padding: 4px;'>05/11/24</td></tr><tr><td style='border: 1px solid black; padding: 4px;'>Midstream specimen of urine (MSU) - Culture</td><td style='border: 1px solid black; padding: 4px;'>Org 1: Escherichia coli > 10^8  Organisms/L</td><td style='border: 1px solid black; padding: 4px;'>05/11/24</td></tr><tr><td style='border: 1px solid black; padding: 4px;'>Midstream specimen of urine (MSU) - Antimicrobial susceptibility</td><td style='border: 1px solid black; padding: 4px; white-space: pre-line;'>Org 1\nAmp/Amoxycillin: S\nAmoxycillin/clav. acid: S\nCephalexin: S\nTrimethoprim: S\nNitrofurantoin: S\nGentamicin: S\nNorfloxacin: S</td><td style='border: 1px solid black; padding: 4px;'>05/11/24</td></tr><tr><td style='border: 1px solid black; padding: 4px;'>Glucose Tolerance Test (GTT) - Fasting Glucose</td><td style='border: 1px solid black; padding: 4px;'>5.3 mmol/L</td><td style='border: 1px solid black; padding: 4px;'>21/10/24</td></tr><tr><td style='border: 1px solid black; padding: 4px;'>Glucose Tolerance Test (GTT) - 1 hour Glucose</td><td style='border: 1px solid black; padding: 4px;'>10 mmol/L</td><td style='border: 1px solid black; padding: 4px;'>21/10/24</td></tr><tr><td style='border: 1px solid black; padding: 4px;'>Glucose Tolerance Test (GTT) - 2 hour Glucose</td><td style='border: 1px solid black; padding: 4px;'>8.6 mmol/L</td><td style='border: 1px solid black; padding: 4px;'>21/10/24</td></tr><tr><td style='border: 1px solid black; padding: 4px;'>Haemoglobin A1c</td><td style='border: 1px solid black; padding: 4px;'>5.8 %</td><td style='border: 1px solid black; padding: 4px;'>14/06/24</td></tr><tr><td style='border: 1px solid black; padding: 4px;'>Full Blood Count -  Haemoglobin</td><td style='border: 1px solid black; padding: 4px;'>125  g/L</td><td style='border: 1px solid black; padding: 4px;'>12/06/24</td></tr><tr><td style='border: 1px solid black; padding: 4px;'>Full Blood Count -  Haematocrit</td><td style='border: 1px solid black; padding: 4px;'>0.37  L/L</td><td style='border: 1px solid black; padding: 4px;'>12/06/24</td></tr><tr><td style='border: 1px solid black; padding: 4px;'>Full Blood Count -  White Blood Cell Count</td><td style='border: 1px solid black; padding: 4px;'>8 x 10^9/L</td><td style='border: 1px solid black; padding: 4px;'>12/06/24</td></tr><tr><td style='border: 1px solid black; padding: 4px;'>Full Blood Count -  Platelets</td><td style='border: 1px solid black; padding: 4px;'>250 x 10^9/L</td><td style='border: 1px solid black; padding: 4px;'>12/06/24</td></tr><tr><td style='border: 1px solid black; padding: 4px;'>Full Blood Count - MCV</td><td style='border: 1px solid black; padding: 4px;'>85 fL</td><td style='border: 1px solid black; padding: 4px;'>12/06/24</td></tr><tr><td style='border: 1px solid black; padding: 4px;'>HCG</td><td style='border: 1px solid black; padding: 4px;'>16000 IU/L</td><td style='border: 1px solid black; padding: 4px;'>12/06/24</td></tr><tr><td style='border: 1px solid black; padding: 4px;'>Urinalysis -  Colour</td><td style='border: 1px solid black; padding: 4px;'>Light yellow colour</td><td style='border: 1px solid black; padding: 4px;'>03/06/24</td></tr><tr><td style='border: 1px solid black; padding: 4px;'>Urinalysis -  Clarity</td><td style='border: 1px solid black; padding: 4px;'>Clear</td><td style='border: 1px solid black; padding: 4px;'>03/06/24</td></tr><tr><td style='border: 1px solid black; padding: 4px;'>Urinalysis -  pH</td><td style='border: 1px solid black; padding: 4px;'>6</td><td style='border: 1px solid black; padding: 4px;'>03/06/24</td></tr><tr><td style='border: 1px solid black; padding: 4px;'>Urinalysis -  Specific Gravity</td><td style='border: 1px solid black; padding: 4px;'>1.02</td><td style='border: 1px solid black; padding: 4px;'>03/06/24</td></tr><tr><td style='border: 1px solid black; padding: 4px;'>Urinalysis -  Protein</td><td style='border: 1px solid black; padding: 4px;'>Negative</td><td style='border: 1px solid black; padding: 4px;'>03/06/24</td></tr><tr><td style='border: 1px solid black; padding: 4px;'>Urinalysis -  Glucose</td><td style='border: 1px solid black; padding: 4px;'>Negative</td><td style='border: 1px solid black; padding: 4px;'>03/06/24</td></tr><tr><td style='border: 1px solid black; padding: 4px;'>Urinalysis -  Ketones</td><td style='border: 1px solid black; padding: 4px;'>Negative</td><td style='border: 1px solid black; padding: 4px;'>03/06/24</td></tr><tr><td style='border: 1px solid black; padding: 4px;'>Urinalysis -  Nitrites</td><td style='border: 1px solid black; padding: 4px;'>Negative</td><td style='border: 1px solid black; padding: 4px;'>03/06/24</td></tr><tr><td style='border: 1px solid black; padding: 4px;'>Urinalysis -  Leukocyte Esterase</td><td style='border: 1px solid black; padding: 4px;'>Negative</td><td style='border: 1px solid black; padding: 4px;'>03/06/24</td></tr>\n        </tbody>\n    </table></div>"
+              "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n              <table border=\"1\">\n                <thead>\n                  <tr>\n                    <th>Name</th>\n                    <th>Value</th>\n                    <th>Date</th>\n                  </tr>\n                </thead>\n                <tbody>\n                  <tr><td>Midstream specimen of urine (MSU) - pH</td><td>7</td><td>05/11/24</td></tr>\n                  <tr><td>Midstream specimen of urine (MSU) - Protein</td><td>Positive</td><td>05/11/24</td></tr>\n                  <tr><td>Midstream specimen of urine (MSU) - Blood</td><td>Positive</td><td>05/11/24</td></tr>\n                  <tr><td>Midstream specimen of urine (MSU) - Glucose</td><td>Positive</td><td>05/11/24</td></tr>\n                  <tr><td>Midstream specimen of urine (MSU) - Leucocytes</td><td>370  x 10^6/L </td><td>05/11/24</td></tr>\n                  <tr><td>Midstream specimen of urine (MSU) - Erythrocytes</td><td>150 x 10^6/L </td><td>05/11/24</td></tr>\n                  <tr><td>Midstream specimen of urine (MSU) - Epithelial cells</td><td>Nil</td><td>05/11/24</td></tr>\n                  <tr><td>Midstream specimen of urine (MSU) - Culture</td><td>Org 1: Escherichia coli &gt; 10^8  Organisms/L</td><td>05/11/24</td></tr>\n                  <tr><td>Midstream specimen of urine (MSU) - Antimicrobial susceptibility</td><td>Org 1\nAmp/Amoxycillin: S\nAmoxycillin/clav. acid: S\nCephalexin: S\nTrimethoprim: S\nNitrofurantoin: S\nGentamicin: S\nNorfloxacin: S</td><td>05/11/24</td></tr>\n                  <tr><td>Glucose Tolerance Test (GTT) - Fasting Glucose</td><td>5.3 mmol/L</td><td>21/10/24</td></tr>\n                  <tr><td>Glucose Tolerance Test (GTT) - 1 hour Glucose</td><td>10 mmol/L</td><td>21/10/24</td></tr>\n                  <tr><td>Glucose Tolerance Test (GTT) - 2 hour Glucose</td><td>8.6 mmol/L</td><td>21/10/24</td></tr>\n                  <tr><td>Haemoglobin A1c</td><td>5.8 %</td><td>14/06/24</td></tr>\n                  <tr><td>Full Blood Count -  Haemoglobin</td><td>125  g/L</td><td>12/06/24</td></tr>\n                  <tr><td>Full Blood Count -  Haematocrit</td><td>0.37  L/L</td><td>12/06/24</td></tr>\n                  <tr><td>Full Blood Count -  White Blood Cell Count</td><td>8 x 10^9/L</td><td>12/06/24</td></tr>\n                  <tr><td>Full Blood Count -  Platelets</td><td>250 x 10^9/L</td><td>12/06/24</td></tr>\n                  <tr><td>Full Blood Count - MCV</td><td>85 fL</td><td>12/06/24</td></tr>\n                  <tr><td>HCG</td><td>16000 IU/L</td><td>12/06/24</td></tr>\n                  <tr><td>Urinalysis -  Colour</td><td>Light yellow colour</td><td>03/06/24</td></tr>\n                  <tr><td>Urinalysis -  Clarity</td><td>Clear</td><td>03/06/24</td></tr>\n                  <tr><td>Urinalysis -  pH</td><td>6</td><td>03/06/24</td></tr>\n                  <tr><td>Urinalysis -  Specific Gravity</td><td>1.02</td><td>03/06/24</td></tr>\n                  <tr><td>Urinalysis -  Protein</td><td>Negative</td><td>03/06/24</td></tr>\n                  <tr><td>Urinalysis -  Glucose</td><td>Negative</td><td>03/06/24</td></tr>\n                  <tr><td>Urinalysis -  Ketones</td><td>Negative</td><td>03/06/24</td></tr>\n                  <tr><td>Urinalysis -  Nitrites</td><td>Negative</td><td>03/06/24</td></tr>\n                  <tr><td>Urinalysis -  Leukocyte Esterase</td><td>Negative</td><td>03/06/24</td></tr>\n                </tbody>\n              </table>\n            </div>"
             },
             "entry": [
               {
-                "reference": "urn:uuid:da0199e3-8e96-4661-a1c2-e3e853233d43"
+                "reference": "urn:uuid:2a3b309b-7a7b-422d-95c5-0691668d507b"
               },
               {
-                "reference": "urn:uuid:651afe77-cfb3-460c-b9e1-d0a96c449d08"
+                "reference": "urn:uuid:c4411a8a-248a-4ba7-abb3-5802426bcb2c"
               },
               {
-                "reference": "urn:uuid:8cfd6c97-95d6-4e0d-8409-90e7427c085f"
+                "reference": "urn:uuid:9c087eae-b04c-4a1f-8710-57397088f168"
               },
               {
-                "reference": "urn:uuid:141f055b-b227-4c41-b7e2-028693ef38d1"
+                "reference": "urn:uuid:fe8b2994-3985-4ca7-961d-9796c3c9789a"
               },
               {
-                "reference": "urn:uuid:ac9903ce-9d63-43f5-90af-5ad634b75d1f"
+                "reference": "urn:uuid:12e07d9a-e744-40f1-a17d-421076248029"
               },
               {
-                "reference": "urn:uuid:d16fe30c-2c83-4cfb-b4a8-37163c9d71b8"
+                "reference": "urn:uuid:365d9e85-d07e-415e-af07-dc1b17d4353d"
               },
               {
-                "reference": "urn:uuid:9c991580-663f-4584-a41b-1995cce26dc6"
+                "reference": "urn:uuid:5ab9050a-f7bf-4156-ae9a-8d5b586fcca2"
               },
               {
-                "reference": "urn:uuid:ebd03b93-7504-401e-9625-d47ed882c2a1"
+                "reference": "urn:uuid:6cdc5a8b-5123-4282-8cc6-3685a7702cd6"
+              },
+              {
+                "reference": "urn:uuid:934e0cc3-c46c-424e-9202-73db5c62fda3"
+              },
+              {
+                "reference": "urn:uuid:f84c1b1c-beca-4b0b-9a24-2766e3e23321"
+              },
+              {
+                "reference": "urn:uuid:c971a437-10f0-4d54-af1d-a7e561e29982"
+              },
+              {
+                "reference": "urn:uuid:29c62a29-0bff-4cb4-8a14-58e62443ed0a"
+              },
+              {
+                "reference": "urn:uuid:64a78d45-be0f-4ede-b366-812a3f5730e6"
+              },
+              {
+                "reference": "urn:uuid:6956a82e-8fc6-4319-a0d7-1694610bf702"
+              },
+              {
+                "reference": "urn:uuid:b21fbb5f-f70c-43cc-b2ac-b83d165ca441"
+              },
+              {
+                "reference": "urn:uuid:08675b3c-3fcd-48a9-b8af-f33de346d950"
+              },
+              {
+                "reference": "urn:uuid:1e28fa9e-6ba7-4769-bfc0-2e538172c8bd"
+              },
+              {
+                "reference": "urn:uuid:82ea95d9-655a-4b4c-9cb6-77a51f334961"
+              },
+              {
+                "reference": "urn:uuid:d23d7035-445e-46f5-98c5-cd0090ca4e1e"
+              },
+              {
+                "reference": "urn:uuid:bf44c576-7895-4be2-8cc8-874ddfeca6c4"
+              },
+              {
+                "reference": "urn:uuid:6b238ad4-e6e4-437e-969b-ec6eba692a6b"
+              },
+              {
+                "reference": "urn:uuid:219c91e9-8bb4-4471-ad17-edcfb5217756"
+              },
+              {
+                "reference": "urn:uuid:14ea1707-331d-40a6-81b4-60290b48f9e6"
+              },
+              {
+                "reference": "urn:uuid:adf87a05-c0da-4fb8-8bfb-48c7520f75f7"
+              },
+              {
+                "reference": "urn:uuid:6104dd65-0d07-4e09-a9f8-fa9efbe914eb"
+              },
+              {
+                "reference": "urn:uuid:cdf3ff1b-f8d8-4d71-82fe-800a2bbae806"
+              },
+              {
+                "reference": "urn:uuid:1e797de6-7e14-4e2e-9212-cd8c348bcbfb"
+              },
+              {
+                "reference": "urn:uuid:95714d9e-4cd2-4302-8434-dde69ceecaf4"
+              },
+              {
+                "reference": "urn:uuid:e54e9557-9b7a-419b-8d7a-60bf234f2c89"
+              },
+              {
+                "reference": "urn:uuid:22ff65cc-9a37-4b7b-b322-bd01c66c912d"
+              },
+              {
+                "reference": "urn:uuid:f920a073-9d1f-4deb-8a3d-f93ea6a39d8f"
+              },
+              {
+                "reference": "urn:uuid:6da18465-0949-47e1-a14b-4fde361e245c"
+              },
+              {
+                "reference": "urn:uuid:82e519ba-d02b-4c6e-8f5c-9b177c4b1bcc"
+              },
+              {
+                "reference": "urn:uuid:0e2758a5-5ddb-4b11-a1ae-328ab82a5aaf"
+              },
+              {
+                "reference": "urn:uuid:53f97f69-51a0-4961-ba5a-ca862bb01931"
               }
             ]
           },
@@ -1630,7 +1711,7 @@
       }
     },
     {
-      "fullUrl": "urn:uuid:eb5f2ebf-e73d-4a45-8384-a7f74754824c",
+      "fullUrl": "urn:uuid:2a3b309b-7a7b-422d-95c5-0691668d507b",
       "resource": {
         "resourceType": "Observation",
         "meta": {
@@ -1647,7 +1728,8 @@
                 "code": "laboratory",
                 "display": "Laboratory"
               }
-            ]
+            ],
+            "text": "Laboratory"
           }
         ],
         "code": {
@@ -1680,7 +1762,7 @@
       }
     },
     {
-      "fullUrl": "urn:uuid:ee11ea24-5c20-48b3-b71b-3234f20d918f",
+      "fullUrl": "urn:uuid:c4411a8a-248a-4ba7-abb3-5802426bcb2c",
       "resource": {
         "resourceType": "Observation",
         "meta": {
@@ -1697,7 +1779,8 @@
                 "code": "laboratory",
                 "display": "Laboratory"
               }
-            ]
+            ],
+            "text": "Laboratory"
           }
         ],
         "code": {
@@ -1731,12 +1814,13 @@
               "code": "10828004",
               "display": "Positive"
             }
-          ]
+          ],
+          "text": "Positive"
         }
       }
     },
     {
-      "fullUrl": "urn:uuid:d7bcdccc-2198-4687-8b02-f9e167edd371",
+      "fullUrl": "urn:uuid:9c087eae-b04c-4a1f-8710-57397088f168",
       "resource": {
         "resourceType": "Observation",
         "meta": {
@@ -1753,7 +1837,8 @@
                 "code": "laboratory",
                 "display": "Laboratory"
               }
-            ]
+            ],
+            "text": "Laboratory"
           }
         ],
         "code": {
@@ -1787,12 +1872,13 @@
               "code": "10828004",
               "display": "Positive"
             }
-          ]
+          ],
+          "text": "Positive"
         }
       }
     },
     {
-      "fullUrl": "urn:uuid:b40dadd0-1cf6-452d-90dd-7d0fd414e93b",
+      "fullUrl": "urn:uuid:fe8b2994-3985-4ca7-961d-9796c3c9789a",
       "resource": {
         "resourceType": "Observation",
         "meta": {
@@ -1809,7 +1895,8 @@
                 "code": "laboratory",
                 "display": "Laboratory"
               }
-            ]
+            ],
+            "text": "Laboratory"
           }
         ],
         "code": {
@@ -1843,12 +1930,13 @@
               "code": "10828004",
               "display": "Positive"
             }
-          ]
+          ],
+          "text": "Positive"
         }
       }
     },
     {
-      "fullUrl": "urn:uuid:b0f41e07-ad9c-42c1-8d12-409cfd11fd4e",
+      "fullUrl": "urn:uuid:12e07d9a-e744-40f1-a17d-421076248029",
       "resource": {
         "resourceType": "Observation",
         "meta": {
@@ -1865,7 +1953,8 @@
                 "code": "laboratory",
                 "display": "Laboratory"
               }
-            ]
+            ],
+            "text": "Laboratory"
           }
         ],
         "code": {
@@ -1900,19 +1989,13 @@
         },
         "referenceRange": [
           {
-            "high": {
-              "value": 10.0,
-              "system": "http://unitsofmeasure.org",
-              "code": "10*6/L",
-              "unit": "x 10^6/L"
-            },
             "text": "(<10)"
           }
         ]
       }
     },
     {
-      "fullUrl": "urn:uuid:817fa8df-d526-4804-a493-9cb000ecbc77",
+      "fullUrl": "urn:uuid:365d9e85-d07e-415e-af07-dc1b17d4353d",
       "resource": {
         "resourceType": "Observation",
         "meta": {
@@ -1929,7 +2012,8 @@
                 "code": "laboratory",
                 "display": "Laboratory"
               }
-            ]
+            ],
+            "text": "Laboratory"
           }
         ],
         "code": {
@@ -1964,19 +2048,13 @@
         },
         "referenceRange": [
           {
-            "high": {
-              "value": 10.0,
-              "system": "http://unitsofmeasure.org",
-              "code": "10*6/L",
-              "unit": "x 10^6/L"
-            },
             "text": "(<10)"
           }
         ]
       }
     },
     {
-      "fullUrl": "urn:uuid:1826199d-1b3f-4986-91ca-242150c6c5f6",
+      "fullUrl": "urn:uuid:5ab9050a-f7bf-4156-ae9a-8d5b586fcca2",
       "resource": {
         "resourceType": "Observation",
         "meta": {
@@ -1993,7 +2071,8 @@
                 "code": "laboratory",
                 "display": "Laboratory"
               }
-            ]
+            ],
+            "text": "Laboratory"
           }
         ],
         "code": {
@@ -2027,12 +2106,13 @@
               "code": "260386005",
               "display": "Nil"
             }
-          ]
+          ],
+          "text": "Nil"
         }
       }
     },
     {
-      "fullUrl": "urn:uuid:da0199e3-8e96-4661-a1c2-e3e853233d43",
+      "fullUrl": "urn:uuid:6cdc5a8b-5123-4282-8cc6-3685a7702cd6",
       "resource": {
         "resourceType": "Observation",
         "meta": {
@@ -2049,77 +2129,8 @@
                 "code": "laboratory",
                 "display": "Laboratory"
               }
-            ]
-          }
-        ],
-        "code": {
-          "coding": [
-            {
-              "system": "http://loinc.org",
-              "code": "100904-2",
-              "display": "Urinary tract pathogens panel - Urine by Culture"
-            }
-          ],
-          "text": "Midstream specimen of urine (MSU)"
-        },
-        "subject": {
-          "reference": "urn:uuid:85822a88-55b1-460c-bb7b-e8fc22d8568f"
-        },
-        "performer": [
-          {
-            "extension": [
-              {
-                "url": "http://hl7.org/fhir/StructureDefinition/data-absent-reason",
-                "valueCode": "unknown"
-              }
-            ]
-          }
-        ],
-        "effectiveDateTime": "2024-11-05",
-        "hasMember": [
-          {
-            "reference": "urn:uuid:eb5f2ebf-e73d-4a45-8384-a7f74754824c"
-          },
-          {
-            "reference": "urn:uuid:ee11ea24-5c20-48b3-b71b-3234f20d918f"
-          },
-          {
-            "reference": "urn:uuid:d7bcdccc-2198-4687-8b02-f9e167edd371"
-          },
-          {
-            "reference": "urn:uuid:b40dadd0-1cf6-452d-90dd-7d0fd414e93b"
-          },
-          {
-            "reference": "urn:uuid:b0f41e07-ad9c-42c1-8d12-409cfd11fd4e"
-          },
-          {
-            "reference": "urn:uuid:817fa8df-d526-4804-a493-9cb000ecbc77"
-          },
-          {
-            "reference": "urn:uuid:1826199d-1b3f-4986-91ca-242150c6c5f6"
-          }
-        ]
-      }
-    },
-    {
-      "fullUrl": "urn:uuid:607db816-f1d5-477e-84df-a3cb6cad782c",
-      "resource": {
-        "resourceType": "Observation",
-        "meta": {
-          "profile": [
-            "http://hl7.org.au/fhir/ps/StructureDefinition/au-ps-diagnosticresult-path"
-          ]
-        },
-        "status": "final",
-        "category": [
-          {
-            "coding": [
-              {
-                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
-                "code": "laboratory",
-                "display": "Laboratory"
-              }
-            ]
+            ],
+            "text": "Laboratory"
           }
         ],
         "code": {
@@ -2153,12 +2164,13 @@
               "code": "112283007",
               "display": "Escherichia coli"
             }
-          ]
+          ],
+          "text": "Escherichia coli"
         }
       }
     },
     {
-      "fullUrl": "urn:uuid:61872ff9-376d-43a8-865b-91b9049bde15",
+      "fullUrl": "urn:uuid:934e0cc3-c46c-424e-9202-73db5c62fda3",
       "resource": {
         "resourceType": "Observation",
         "meta": {
@@ -2175,7 +2187,8 @@
                 "code": "laboratory",
                 "display": "Laboratory"
               }
-            ]
+            ],
+            "text": "Laboratory"
           }
         ],
         "code": {
@@ -2206,7 +2219,7 @@
       }
     },
     {
-      "fullUrl": "urn:uuid:651afe77-cfb3-460c-b9e1-d0a96c449d08",
+      "fullUrl": "urn:uuid:f84c1b1c-beca-4b0b-9a24-2766e3e23321",
       "resource": {
         "resourceType": "Observation",
         "meta": {
@@ -2223,62 +2236,8 @@
                 "code": "laboratory",
                 "display": "Laboratory"
               }
-            ]
-          }
-        ],
-        "code": {
-          "coding": [
-            {
-              "system": "http://loinc.org",
-              "code": "90077-9",
-              "display": "Urinary pathogens identified in Isolate by Organism specific culture"
-            }
-          ],
-          "text": "Midstream specimen of urine (MSU)"
-        },
-        "subject": {
-          "reference": "urn:uuid:85822a88-55b1-460c-bb7b-e8fc22d8568f"
-        },
-        "performer": [
-          {
-            "extension": [
-              {
-                "url": "http://hl7.org/fhir/StructureDefinition/data-absent-reason",
-                "valueCode": "unknown"
-              }
-            ]
-          }
-        ],
-        "effectiveDateTime": "2024-11-05",
-        "hasMember": [
-          {
-            "reference": "urn:uuid:607db816-f1d5-477e-84df-a3cb6cad782c"
-          },
-          {
-            "reference": "urn:uuid:61872ff9-376d-43a8-865b-91b9049bde15"
-          }
-        ]
-      }
-    },
-    {
-      "fullUrl": "urn:uuid:51132f02-89e8-49e6-89d1-b9d33737ff1d",
-      "resource": {
-        "resourceType": "Observation",
-        "meta": {
-          "profile": [
-            "http://hl7.org.au/fhir/ps/StructureDefinition/au-ps-diagnosticresult-path"
-          ]
-        },
-        "status": "final",
-        "category": [
-          {
-            "coding": [
-              {
-                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
-                "code": "laboratory",
-                "display": "Laboratory"
-              }
-            ]
+            ],
+            "text": "Laboratory"
           }
         ],
         "code": {
@@ -2312,12 +2271,13 @@
               "code": "S",
               "display": "Susceptible"
             }
-          ]
+          ],
+          "text": "Susceptible"
         }
       }
     },
     {
-      "fullUrl": "urn:uuid:edf8bf19-8001-46c7-8f31-d8530a21a49b",
+      "fullUrl": "urn:uuid:c971a437-10f0-4d54-af1d-a7e561e29982",
       "resource": {
         "resourceType": "Observation",
         "meta": {
@@ -2334,7 +2294,8 @@
                 "code": "laboratory",
                 "display": "Laboratory"
               }
-            ]
+            ],
+            "text": "Laboratory"
           }
         ],
         "code": {
@@ -2368,12 +2329,13 @@
               "code": "S",
               "display": "Susceptible"
             }
-          ]
+          ],
+          "text": "Susceptible"
         }
       }
     },
     {
-      "fullUrl": "urn:uuid:fe06658f-e197-4c58-a96a-c13deccc1887",
+      "fullUrl": "urn:uuid:29c62a29-0bff-4cb4-8a14-58e62443ed0a",
       "resource": {
         "resourceType": "Observation",
         "meta": {
@@ -2390,7 +2352,8 @@
                 "code": "laboratory",
                 "display": "Laboratory"
               }
-            ]
+            ],
+            "text": "Laboratory"
           }
         ],
         "code": {
@@ -2424,12 +2387,13 @@
               "code": "S",
               "display": "Susceptible"
             }
-          ]
+          ],
+          "text": "Susceptible"
         }
       }
     },
     {
-      "fullUrl": "urn:uuid:ef9473c9-c553-4315-8d87-3199d03ed33c",
+      "fullUrl": "urn:uuid:64a78d45-be0f-4ede-b366-812a3f5730e6",
       "resource": {
         "resourceType": "Observation",
         "meta": {
@@ -2446,7 +2410,8 @@
                 "code": "laboratory",
                 "display": "Laboratory"
               }
-            ]
+            ],
+            "text": "Laboratory"
           }
         ],
         "code": {
@@ -2480,12 +2445,13 @@
               "code": "S",
               "display": "Susceptible"
             }
-          ]
+          ],
+          "text": "Susceptible"
         }
       }
     },
     {
-      "fullUrl": "urn:uuid:68190a63-2266-497c-9532-542d27b6effa",
+      "fullUrl": "urn:uuid:6956a82e-8fc6-4319-a0d7-1694610bf702",
       "resource": {
         "resourceType": "Observation",
         "meta": {
@@ -2502,7 +2468,8 @@
                 "code": "laboratory",
                 "display": "Laboratory"
               }
-            ]
+            ],
+            "text": "Laboratory"
           }
         ],
         "code": {
@@ -2536,12 +2503,13 @@
               "code": "S",
               "display": "Susceptible"
             }
-          ]
+          ],
+          "text": "Susceptible"
         }
       }
     },
     {
-      "fullUrl": "urn:uuid:0b49af84-6a48-46ce-98db-40d2673c9aa2",
+      "fullUrl": "urn:uuid:b21fbb5f-f70c-43cc-b2ac-b83d165ca441",
       "resource": {
         "resourceType": "Observation",
         "meta": {
@@ -2558,7 +2526,8 @@
                 "code": "laboratory",
                 "display": "Laboratory"
               }
-            ]
+            ],
+            "text": "Laboratory"
           }
         ],
         "code": {
@@ -2592,12 +2561,13 @@
               "code": "S",
               "display": "Susceptible"
             }
-          ]
+          ],
+          "text": "Susceptible"
         }
       }
     },
     {
-      "fullUrl": "urn:uuid:ce8cf897-7af6-4927-bd11-c29a122ddac1",
+      "fullUrl": "urn:uuid:08675b3c-3fcd-48a9-b8af-f33de346d950",
       "resource": {
         "resourceType": "Observation",
         "meta": {
@@ -2614,7 +2584,8 @@
                 "code": "laboratory",
                 "display": "Laboratory"
               }
-            ]
+            ],
+            "text": "Laboratory"
           }
         ],
         "code": {
@@ -2648,12 +2619,13 @@
               "code": "S",
               "display": "Susceptible"
             }
-          ]
+          ],
+          "text": "Susceptible"
         }
       }
     },
     {
-      "fullUrl": "urn:uuid:8cfd6c97-95d6-4e0d-8409-90e7427c085f",
+      "fullUrl": "urn:uuid:1e28fa9e-6ba7-4769-bfc0-2e538172c8bd",
       "resource": {
         "resourceType": "Observation",
         "meta": {
@@ -2670,77 +2642,8 @@
                 "code": "laboratory",
                 "display": "Laboratory"
               }
-            ]
-          }
-        ],
-        "code": {
-          "coding": [
-            {
-              "system": "http://loinc.org",
-              "code": "29576-6",
-              "display": "Bacterial susceptibility panel"
-            }
-          ],
-          "text": "Midstream specimen of urine (MSU)"
-        },
-        "subject": {
-          "reference": "urn:uuid:85822a88-55b1-460c-bb7b-e8fc22d8568f"
-        },
-        "performer": [
-          {
-            "extension": [
-              {
-                "url": "http://hl7.org/fhir/StructureDefinition/data-absent-reason",
-                "valueCode": "unknown"
-              }
-            ]
-          }
-        ],
-        "effectiveDateTime": "2024-11-05",
-        "hasMember": [
-          {
-            "reference": "urn:uuid:51132f02-89e8-49e6-89d1-b9d33737ff1d"
-          },
-          {
-            "reference": "urn:uuid:edf8bf19-8001-46c7-8f31-d8530a21a49b"
-          },
-          {
-            "reference": "urn:uuid:fe06658f-e197-4c58-a96a-c13deccc1887"
-          },
-          {
-            "reference": "urn:uuid:ef9473c9-c553-4315-8d87-3199d03ed33c"
-          },
-          {
-            "reference": "urn:uuid:68190a63-2266-497c-9532-542d27b6effa"
-          },
-          {
-            "reference": "urn:uuid:0b49af84-6a48-46ce-98db-40d2673c9aa2"
-          },
-          {
-            "reference": "urn:uuid:ce8cf897-7af6-4927-bd11-c29a122ddac1"
-          }
-        ]
-      }
-    },
-    {
-      "fullUrl": "urn:uuid:d5bcdd26-5a2c-43c4-90fc-6e3ece662869",
-      "resource": {
-        "resourceType": "Observation",
-        "meta": {
-          "profile": [
-            "http://hl7.org.au/fhir/ps/StructureDefinition/au-ps-diagnosticresult-path"
-          ]
-        },
-        "status": "final",
-        "category": [
-          {
-            "coding": [
-              {
-                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
-                "code": "laboratory",
-                "display": "Laboratory"
-              }
-            ]
+            ],
+            "text": "Laboratory"
           }
         ],
         "code": {
@@ -2776,7 +2679,7 @@
       }
     },
     {
-      "fullUrl": "urn:uuid:ed6fa42b-f878-4f84-8c00-01e6c166ea3d",
+      "fullUrl": "urn:uuid:82ea95d9-655a-4b4c-9cb6-77a51f334961",
       "resource": {
         "resourceType": "Observation",
         "meta": {
@@ -2793,7 +2696,8 @@
                 "code": "laboratory",
                 "display": "Laboratory"
               }
-            ]
+            ],
+            "text": "Laboratory"
           }
         ],
         "code": {
@@ -2829,7 +2733,7 @@
       }
     },
     {
-      "fullUrl": "urn:uuid:c5bbea11-3dd6-4287-ab96-730af62311aa",
+      "fullUrl": "urn:uuid:d23d7035-445e-46f5-98c5-cd0090ca4e1e",
       "resource": {
         "resourceType": "Observation",
         "meta": {
@@ -2846,7 +2750,8 @@
                 "code": "laboratory",
                 "display": "Laboratory"
               }
-            ]
+            ],
+            "text": "Laboratory"
           }
         ],
         "code": {
@@ -2882,7 +2787,7 @@
       }
     },
     {
-      "fullUrl": "urn:uuid:141f055b-b227-4c41-b7e2-028693ef38d1",
+      "fullUrl": "urn:uuid:bf44c576-7895-4be2-8cc8-874ddfeca6c4",
       "resource": {
         "resourceType": "Observation",
         "meta": {
@@ -2899,65 +2804,8 @@
                 "code": "laboratory",
                 "display": "Laboratory"
               }
-            ]
-          }
-        ],
-        "code": {
-          "coding": [
-            {
-              "system": "http://loinc.org",
-              "code": "72171-2",
-              "display": "Glucose tolerance 2 hours panel - Serum or Plasma"
-            }
-          ],
-          "text": "Glucose Tolerance Test (GTT)"
-        },
-        "subject": {
-          "reference": "urn:uuid:85822a88-55b1-460c-bb7b-e8fc22d8568f"
-        },
-        "performer": [
-          {
-            "extension": [
-              {
-                "url": "http://hl7.org/fhir/StructureDefinition/data-absent-reason",
-                "valueCode": "unknown"
-              }
-            ]
-          }
-        ],
-        "effectiveDateTime": "2024-10-21",
-        "hasMember": [
-          {
-            "reference": "urn:uuid:d5bcdd26-5a2c-43c4-90fc-6e3ece662869"
-          },
-          {
-            "reference": "urn:uuid:ed6fa42b-f878-4f84-8c00-01e6c166ea3d"
-          },
-          {
-            "reference": "urn:uuid:c5bbea11-3dd6-4287-ab96-730af62311aa"
-          }
-        ]
-      }
-    },
-    {
-      "fullUrl": "urn:uuid:2b3dfb37-7adb-4e60-a4d5-b1855b69455a",
-      "resource": {
-        "resourceType": "Observation",
-        "meta": {
-          "profile": [
-            "http://hl7.org.au/fhir/ps/StructureDefinition/au-ps-diagnosticresult-path"
-          ]
-        },
-        "status": "final",
-        "category": [
-          {
-            "coding": [
-              {
-                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
-                "code": "laboratory",
-                "display": "Laboratory"
-              }
-            ]
+            ],
+            "text": "Laboratory"
           }
         ],
         "code": {
@@ -2993,7 +2841,7 @@
       }
     },
     {
-      "fullUrl": "urn:uuid:e555ce7f-e16c-41b5-9af5-c4094a5b9629",
+      "fullUrl": "urn:uuid:6b238ad4-e6e4-437e-969b-ec6eba692a6b",
       "resource": {
         "resourceType": "Observation",
         "meta": {
@@ -3010,7 +2858,8 @@
                 "code": "laboratory",
                 "display": "Laboratory"
               }
-            ]
+            ],
+            "text": "Laboratory"
           }
         ],
         "code": {
@@ -3046,7 +2895,7 @@
       }
     },
     {
-      "fullUrl": "urn:uuid:c5049cd9-2ca5-4ae7-b223-9900e52a5ae3",
+      "fullUrl": "urn:uuid:219c91e9-8bb4-4471-ad17-edcfb5217756",
       "resource": {
         "resourceType": "Observation",
         "meta": {
@@ -3063,7 +2912,8 @@
                 "code": "laboratory",
                 "display": "Laboratory"
               }
-            ]
+            ],
+            "text": "Laboratory"
           }
         ],
         "code": {
@@ -3099,7 +2949,7 @@
       }
     },
     {
-      "fullUrl": "urn:uuid:ca4d2a01-b939-445d-913a-80ed979d14fb",
+      "fullUrl": "urn:uuid:14ea1707-331d-40a6-81b4-60290b48f9e6",
       "resource": {
         "resourceType": "Observation",
         "meta": {
@@ -3116,7 +2966,8 @@
                 "code": "laboratory",
                 "display": "Laboratory"
               }
-            ]
+            ],
+            "text": "Laboratory"
           }
         ],
         "code": {
@@ -3152,7 +3003,7 @@
       }
     },
     {
-      "fullUrl": "urn:uuid:53f9ad31-3096-4004-8fc4-8048ad69f8c7",
+      "fullUrl": "urn:uuid:adf87a05-c0da-4fb8-8bfb-48c7520f75f7",
       "resource": {
         "resourceType": "Observation",
         "meta": {
@@ -3169,7 +3020,8 @@
                 "code": "laboratory",
                 "display": "Laboratory"
               }
-            ]
+            ],
+            "text": "Laboratory"
           }
         ],
         "code": {
@@ -3205,7 +3057,7 @@
       }
     },
     {
-      "fullUrl": "urn:uuid:ac9903ce-9d63-43f5-90af-5ad634b75d1f",
+      "fullUrl": "urn:uuid:6104dd65-0d07-4e09-a9f8-fa9efbe914eb",
       "resource": {
         "resourceType": "Observation",
         "meta": {
@@ -3222,71 +3074,8 @@
                 "code": "laboratory",
                 "display": "Laboratory"
               }
-            ]
-          }
-        ],
-        "code": {
-          "coding": [
-            {
-              "system": "http://loinc.org",
-              "code": "58410-2",
-              "display": "CBC panel - Blood by Automated count"
-            }
-          ],
-          "text": "Full Blood Count"
-        },
-        "subject": {
-          "reference": "urn:uuid:85822a88-55b1-460c-bb7b-e8fc22d8568f"
-        },
-        "performer": [
-          {
-            "extension": [
-              {
-                "url": "http://hl7.org/fhir/StructureDefinition/data-absent-reason",
-                "valueCode": "unknown"
-              }
-            ]
-          }
-        ],
-        "effectiveDateTime": "2024-06-12",
-        "hasMember": [
-          {
-            "reference": "urn:uuid:2b3dfb37-7adb-4e60-a4d5-b1855b69455a"
-          },
-          {
-            "reference": "urn:uuid:e555ce7f-e16c-41b5-9af5-c4094a5b9629"
-          },
-          {
-            "reference": "urn:uuid:c5049cd9-2ca5-4ae7-b223-9900e52a5ae3"
-          },
-          {
-            "reference": "urn:uuid:ca4d2a01-b939-445d-913a-80ed979d14fb"
-          },
-          {
-            "reference": "urn:uuid:53f9ad31-3096-4004-8fc4-8048ad69f8c7"
-          }
-        ]
-      }
-    },
-    {
-      "fullUrl": "urn:uuid:3c6a59b7-83df-4ad4-a6a7-86200639276f",
-      "resource": {
-        "resourceType": "Observation",
-        "meta": {
-          "profile": [
-            "http://hl7.org.au/fhir/ps/StructureDefinition/au-ps-diagnosticresult-path"
-          ]
-        },
-        "status": "final",
-        "category": [
-          {
-            "coding": [
-              {
-                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
-                "code": "laboratory",
-                "display": "Laboratory"
-              }
-            ]
+            ],
+            "text": "Laboratory"
           }
         ],
         "code": {
@@ -3320,12 +3109,13 @@
               "code": "1290436002",
               "display": "Light yellow colour"
             }
-          ]
+          ],
+          "text": "Light yellow colour"
         }
       }
     },
     {
-      "fullUrl": "urn:uuid:c3c35607-18f8-4f65-b7cc-4d760e789e6f",
+      "fullUrl": "urn:uuid:cdf3ff1b-f8d8-4d71-82fe-800a2bbae806",
       "resource": {
         "resourceType": "Observation",
         "meta": {
@@ -3342,7 +3132,8 @@
                 "code": "laboratory",
                 "display": "Laboratory"
               }
-            ]
+            ],
+            "text": "Laboratory"
           }
         ],
         "code": {
@@ -3376,12 +3167,13 @@
               "code": "263707001",
               "display": "Clear"
             }
-          ]
+          ],
+          "text": "Clear"
         }
       }
     },
     {
-      "fullUrl": "urn:uuid:6e9fe8d3-0ede-49e3-b02f-04eacb204c8e",
+      "fullUrl": "urn:uuid:1e797de6-7e14-4e2e-9212-cd8c348bcbfb",
       "resource": {
         "resourceType": "Observation",
         "meta": {
@@ -3398,7 +3190,8 @@
                 "code": "laboratory",
                 "display": "Laboratory"
               }
-            ]
+            ],
+            "text": "Laboratory"
           }
         ],
         "code": {
@@ -3431,7 +3224,7 @@
       }
     },
     {
-      "fullUrl": "urn:uuid:49a51177-d49f-466f-a40e-207f8b239a66",
+      "fullUrl": "urn:uuid:95714d9e-4cd2-4302-8434-dde69ceecaf4",
       "resource": {
         "resourceType": "Observation",
         "meta": {
@@ -3448,7 +3241,8 @@
                 "code": "laboratory",
                 "display": "Laboratory"
               }
-            ]
+            ],
+            "text": "Laboratory"
           }
         ],
         "code": {
@@ -3481,7 +3275,7 @@
       }
     },
     {
-      "fullUrl": "urn:uuid:a3277b5c-5f8b-4e76-9fd7-7119dbe494fe",
+      "fullUrl": "urn:uuid:e54e9557-9b7a-419b-8d7a-60bf234f2c89",
       "resource": {
         "resourceType": "Observation",
         "meta": {
@@ -3498,7 +3292,8 @@
                 "code": "laboratory",
                 "display": "Laboratory"
               }
-            ]
+            ],
+            "text": "Laboratory"
           }
         ],
         "code": {
@@ -3532,12 +3327,13 @@
               "code": "260385009",
               "display": "Negative"
             }
-          ]
+          ],
+          "text": "Negative"
         }
       }
     },
     {
-      "fullUrl": "urn:uuid:69dc7a1a-8003-4c18-94e5-7b6ff47c47c6",
+      "fullUrl": "urn:uuid:22ff65cc-9a37-4b7b-b322-bd01c66c912d",
       "resource": {
         "resourceType": "Observation",
         "meta": {
@@ -3554,7 +3350,8 @@
                 "code": "laboratory",
                 "display": "Laboratory"
               }
-            ]
+            ],
+            "text": "Laboratory"
           }
         ],
         "code": {
@@ -3588,12 +3385,13 @@
               "code": "260385009",
               "display": "Negative"
             }
-          ]
+          ],
+          "text": "Negative"
         }
       }
     },
     {
-      "fullUrl": "urn:uuid:87dd3d7f-0392-417a-aa79-b3e58eaf95ef",
+      "fullUrl": "urn:uuid:f920a073-9d1f-4deb-8a3d-f93ea6a39d8f",
       "resource": {
         "resourceType": "Observation",
         "meta": {
@@ -3610,7 +3408,8 @@
                 "code": "laboratory",
                 "display": "Laboratory"
               }
-            ]
+            ],
+            "text": "Laboratory"
           }
         ],
         "code": {
@@ -3644,12 +3443,13 @@
               "code": "260385009",
               "display": "Negative"
             }
-          ]
+          ],
+          "text": "Negative"
         }
       }
     },
     {
-      "fullUrl": "urn:uuid:93582fd2-3f2a-409d-9bed-ed081b61216a",
+      "fullUrl": "urn:uuid:6da18465-0949-47e1-a14b-4fde361e245c",
       "resource": {
         "resourceType": "Observation",
         "meta": {
@@ -3666,7 +3466,8 @@
                 "code": "laboratory",
                 "display": "Laboratory"
               }
-            ]
+            ],
+            "text": "Laboratory"
           }
         ],
         "code": {
@@ -3700,12 +3501,13 @@
               "code": "260385009",
               "display": "Negative"
             }
-          ]
+          ],
+          "text": "Negative"
         }
       }
     },
     {
-      "fullUrl": "urn:uuid:443622c5-20d2-4d04-bc16-8870ecc573f9",
+      "fullUrl": "urn:uuid:82e519ba-d02b-4c6e-8f5c-9b177c4b1bcc",
       "resource": {
         "resourceType": "Observation",
         "meta": {
@@ -3722,7 +3524,8 @@
                 "code": "laboratory",
                 "display": "Laboratory"
               }
-            ]
+            ],
+            "text": "Laboratory"
           }
         ],
         "code": {
@@ -3756,12 +3559,13 @@
               "code": "260385009",
               "display": "Negative"
             }
-          ]
+          ],
+          "text": "Negative"
         }
       }
     },
     {
-      "fullUrl": "urn:uuid:d16fe30c-2c83-4cfb-b4a8-37163c9d71b8",
+      "fullUrl": "urn:uuid:0e2758a5-5ddb-4b11-a1ae-328ab82a5aaf",
       "resource": {
         "resourceType": "Observation",
         "meta": {
@@ -3778,83 +3582,8 @@
                 "code": "laboratory",
                 "display": "Laboratory"
               }
-            ]
-          }
-        ],
-        "code": {
-          "coding": [
-            {
-              "system": "http://loinc.org",
-              "code": "24357-6",
-              "display": "Urinalysis macro (dipstick) panel - Urine"
-            }
-          ],
-          "text": "Urinalysis"
-        },
-        "subject": {
-          "reference": "urn:uuid:85822a88-55b1-460c-bb7b-e8fc22d8568f"
-        },
-        "performer": [
-          {
-            "extension": [
-              {
-                "url": "http://hl7.org/fhir/StructureDefinition/data-absent-reason",
-                "valueCode": "unknown"
-              }
-            ]
-          }
-        ],
-        "effectiveDateTime": "2024-06-03",
-        "hasMember": [
-          {
-            "reference": "urn:uuid:3c6a59b7-83df-4ad4-a6a7-86200639276f"
-          },
-          {
-            "reference": "urn:uuid:c3c35607-18f8-4f65-b7cc-4d760e789e6f"
-          },
-          {
-            "reference": "urn:uuid:6e9fe8d3-0ede-49e3-b02f-04eacb204c8e"
-          },
-          {
-            "reference": "urn:uuid:49a51177-d49f-466f-a40e-207f8b239a66"
-          },
-          {
-            "reference": "urn:uuid:a3277b5c-5f8b-4e76-9fd7-7119dbe494fe"
-          },
-          {
-            "reference": "urn:uuid:69dc7a1a-8003-4c18-94e5-7b6ff47c47c6"
-          },
-          {
-            "reference": "urn:uuid:87dd3d7f-0392-417a-aa79-b3e58eaf95ef"
-          },
-          {
-            "reference": "urn:uuid:93582fd2-3f2a-409d-9bed-ed081b61216a"
-          },
-          {
-            "reference": "urn:uuid:443622c5-20d2-4d04-bc16-8870ecc573f9"
-          }
-        ]
-      }
-    },
-    {
-      "fullUrl": "urn:uuid:9c991580-663f-4584-a41b-1995cce26dc6",
-      "resource": {
-        "resourceType": "Observation",
-        "meta": {
-          "profile": [
-            "http://hl7.org.au/fhir/ps/StructureDefinition/au-ps-diagnosticresult-path"
-          ]
-        },
-        "status": "final",
-        "category": [
-          {
-            "coding": [
-              {
-                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
-                "code": "laboratory",
-                "display": "Laboratory"
-              }
-            ]
+            ],
+            "text": "Laboratory"
           }
         ],
         "code": {
@@ -3890,7 +3619,7 @@
       }
     },
     {
-      "fullUrl": "urn:uuid:ebd03b93-7504-401e-9625-d47ed882c2a1",
+      "fullUrl": "urn:uuid:53f97f69-51a0-4961-ba5a-ca862bb01931",
       "resource": {
         "resourceType": "Observation",
         "meta": {
@@ -3907,7 +3636,8 @@
                 "code": "laboratory",
                 "display": "Laboratory"
               }
-            ]
+            ],
+            "text": "Laboratory"
           }
         ],
         "code": {
