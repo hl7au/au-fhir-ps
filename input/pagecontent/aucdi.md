@@ -93,7 +93,7 @@ Column attribute descriptions are as follows:
     <td>This AUCDI element is a <a href="future.html#future-candidate-requirements-under-consideration">Future Candidate Requirement Under Consideration</a>.</td>
   </tr>
   <tr>
-    <td rowspan="3">Last menstrual period assertion</td>
+    <td rowspan="3">Last Menstrual Period (LMP) assertion</td>
     <td colspan="2">Date of onset</td>
     <td rowspan="3">History of pregnancy</td>
     <td>-</td>
@@ -167,7 +167,7 @@ Column attribute descriptions are as follows:
     <td></td>
   </tr>
   <tr>
-    <td colspan="2">Body site/laterality</td>
+    <td colspan="2">Body site</td>
     <td><a href="StructureDefinition-au-ps-condition.html">AU PS Condition</a></td>
     <td><code>Condition.code</code></td>
     <td></td>
@@ -223,7 +223,7 @@ Column attribute descriptions are as follows:
     <td></td>
   </tr>
   <tr>
-    <td colspan="2">Date performed</td>
+    <td colspan="2">Date/time performed</td>
     <td><a href="StructureDefinition-au-ps-procedure.html">AU PS Procedure</a></td>
     <td><code>Procedure.performed[x] | Procedure.performedDateTime</code></td>
     <td></td>
@@ -269,7 +269,7 @@ Column attribute descriptions are as follows:
     <td></td>
   </tr>
   <tr>
-    <td colspan="2">Sequence number</td>
+    <td colspan="2">Sequence</td>
     <td><a href="StructureDefinition-au-ps-immunization.html">AU PS Immunization</a></td>
     <td><code>Immunization.protocolApplied.doseNumber[x]</code></td>
     <td></td>
@@ -295,7 +295,7 @@ Column attribute descriptions are as follows:
     <th>Comment</th>
   </tr>
   <tr>
-    <td rowspan="5">Estimated date of delivery summary</td>
+    <td rowspan="5">Es@mated Date of Delivery (EDD) summary</td>
     <td colspan="2">EDD by menstrual cycle</td>
     <td rowspan="5">History of pregnancy</td>
     <td><a href="https://build.fhir.org/ig/HL7/fhir-ips/StructureDefinition-Observation-pregnancy-edd-uv-ips.html">Observation Pregnancy - Expected Delivery Date (IPS)</a></td>
@@ -320,7 +320,7 @@ Column attribute descriptions are as follows:
     <td>This AUCDI element is a <a href="future.html#future-candidate-requirements-under-consideration">Future Candidate Requirement Under Consideration</a>.</td>
   </tr>
   <tr>
-    <td colspan="2">Gestation by scan</td>
+    <td colspan="2">Gestation by ultrasound</td>
     <td>-</td>
     <td>-</td>
     <td>This AUCDI element is a <a href="future.html#future-candidate-requirements-under-consideration">Future Candidate Requirement Under Consideration</a>.</td>
