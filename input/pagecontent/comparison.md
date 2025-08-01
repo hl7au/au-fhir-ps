@@ -115,7 +115,7 @@ The table below provides a profile only comparison from AU PS to profiles in key
         </tr>
         <tr>
             <td style="width: 25%; text-align: left; vertical-align: middle;"><a href="StructureDefinition-au-ps-practitioner.html">AU PS Practitioner</a></td>
-            <td style="width: 25%; text-align: center; vertical-align: middle;"><img src="green_checkmark.png" width="20"/></td>
+            <td style="width: 25%; text-align: center; vertical-align: middle;"><img src="orange_checkmark.png" width="20"/></td>
             <td style="width: 25%; text-align: center; vertical-align: middle;"><img src="green_checkmark.png" width="20"/></td>
             <td style="width: 25%; text-align: center; vertical-align: middle;"><img src="green_checkmark.png" width="20"/></td>
         </tr>
@@ -169,9 +169,13 @@ The following IPA profile(s) contain additional requirements. Implementers are a
             <td style="width: 25%;">Requires category of 'problem-list-item'.</td>
         </tr>
         <tr>
-            <td style="width: 25%;"><a href="StructureDefinition-au-ps-medicationrequest.html">AU PS MedicationRequest</a></td>
-            <td style="width: 25%;"><a href="https://hl7.org/fhir/uv/ipa/STU1/StructureDefinition-ipa-medicationrequest.html">IPA-MedicationRequest</a></td>
+            <td rowspan="2" style="width: 25%;"><a href="StructureDefinition-au-ps-medicationrequest.html">AU PS MedicationRequest</a></td>
+            <td rowspan="2" style="width: 25%;"><a href="https://hl7.org/fhir/uv/ipa/STU1/StructureDefinition-ipa-medicationrequest.html">IPA-MedicationRequest</a></td>
             <td style="width: 25%;">MedicationRequest.reported[x]</td>
+            <td style="width: 25%;"><i>Must Support</i> element in IPA.</td>
+        </tr>
+        <tr>
+            <td style="width: 25%;">MedicationRequest.doNotPerfom</td>
             <td style="width: 25%;"><i>Must Support</i> element in IPA.</td>
         </tr>
         <tr>
@@ -189,18 +193,32 @@ The following IPA profile(s) contain additional requirements. Implementers are a
             <td style="width: 25%;"><i>Must Support</i> element in IPA.</td>
         </tr>
         <tr>
-            <td rowspan="3" style="width: 25%;"><a href="StructureDefinition-au-ps-patient.html">AU PS Patient</a></td>
-            <td rowspan="3" style="width: 25%;"><a href="https://hl7.org/fhir/uv/ipa/STU1/StructureDefinition-ipa-patient.html">IPA-Patient</a></td>
+            <td rowspan="5" style="width: 25%;"><a href="StructureDefinition-au-ps-patient.html">AU PS Patient</a></td>
+            <td rowspan="5" style="width: 25%;"><a href="https://hl7.org/fhir/uv/ipa/STU1/StructureDefinition-ipa-patient.html">IPA-Patient</a></td>
+            <td style="width: 25%;">Patient.identifier</td>
+            <td style="width: 25%;">IPA requires all identifiers to have value (1..1), and at least one of system, type or assigner (ipa-pat-1).</td>
+        </tr>
+        <tr>
             <td style="width: 25%;">Patient.identifier.value</td>
             <td style="width: 25%;"><i>Must Support</i> element in IPA.</td>
         </tr>
         <tr>
             <td style="width: 25%;">Patient.active</td>
-            <td style="width: 25%;"><i>Must Support</i> element in IPA.</td>
+            <td style="width: 25%;">Element SHOULD be present if Patient.link is present (ipa-pat-4). <i>Must Support</i> element in IPA.</td>
+        </tr>
+        <tr>
+            <td style="width: 25%;">Patient.name.text</td>
+            <td style="width: 25%;">Sub-element SHOULD be present (ipa-pat-3).</td>
         </tr>
         <tr>
             <td style="width: 25%;">Patient.link</td>
             <td style="width: 25%;"><i>Must Support</i> element in IPA.</td>
+        </tr>
+        <tr>
+            <td style="width: 25%;"><a href="StructureDefinition-au-ps-practitioner.html">AU PS Practitioner</a></td>
+            <td style="width: 25%;"><a href="https://hl7.org/fhir/uv/ipa/STU1.1/StructureDefinition-ipa-practitioner.html">IPA-Practitioner</a></td>
+            <td style="width: 25%;">Practitioner.name.text</td>
+            <td style="width: 25%;">Sub-element SHOULD be present (ipa-pract-1).</td>
         </tr>
     </tbody>
 </table>
