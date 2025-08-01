@@ -102,14 +102,14 @@ The table below provides a profile only comparison from AU PS to profiles in key
             <td style="width: 25%; text-align: center; vertical-align: middle;"><img src="green_checkmark.png" width="20"/></td>
         </tr>
         <tr>
-            <td style="width: 25%; text-align: left; vertical-align: middle;"><a href="StructureDefinition-au-ps-patient.html">AU PS Patient</a></td>
-            <td style="width: 25%; text-align: center; vertical-align: middle;"><img src="orange_checkmark.png" width="20"/></td>
+            <td style="width: 25%; text-align: left; vertical-align: middle;"><a href="StructureDefinition-au-ps-diagnosticresult-path.html">AU PS Pathology Result Observation</a></td>
+            <td style="width: 25%; text-align: center; vertical-align: middle;"><img src="green_checkmark.png" width="20"/></td>
             <td style="width: 25%; text-align: center; vertical-align: middle;"><img src="green_checkmark.png" width="20"/></td>
             <td style="width: 25%; text-align: center; vertical-align: middle;"><img src="green_checkmark.png" width="20"/></td>
         </tr>
         <tr>
-            <td style="width: 25%; text-align: left; vertical-align: middle;"><a href="StructureDefinition-au-ps-diagnosticresult-path.html">AU PS Pathology Result Observation</a></td>
-            <td style="width: 25%; text-align: center; vertical-align: middle;"><img src="green_checkmark.png" width="20"/></td>
+            <td style="width: 25%; text-align: left; vertical-align: middle;"><a href="StructureDefinition-au-ps-patient.html">AU PS Patient</a></td>
+            <td style="width: 25%; text-align: center; vertical-align: middle;"><img src="orange_checkmark.png" width="20"/></td>
             <td style="width: 25%; text-align: center; vertical-align: middle;"><img src="green_checkmark.png" width="20"/></td>
             <td style="width: 25%; text-align: center; vertical-align: middle;"><img src="green_checkmark.png" width="20"/></td>
         </tr>
