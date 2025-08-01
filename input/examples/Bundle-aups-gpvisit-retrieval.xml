@@ -14,6 +14,7 @@
     <fullUrl value="urn:uuid:9a57361b-6ef5-45ba-b491-c9588b4604e4"/>
     <resource>
       <Composition>
+        <id value="9a57361b-6ef5-45ba-b491-c9588b4604e4"/>
         <meta>
           <versionId value="3"/>
           <lastUpdated value="2025-05-27T11:39:15.709+11:00"/>
@@ -278,6 +279,7 @@
     <fullUrl value="urn:uuid:d1122188-f53f-417f-a84f-bc44479baa63"/>
     <resource>
       <Patient>
+        <id value="d1122188-f53f-417f-a84f-bc44479baa63"/>
         <meta>
           <versionId value="1"/>
           <lastUpdated value="2020-02-25T11:17:03.285+11:00"/>
@@ -360,6 +362,7 @@
     <fullUrl value="urn:uuid:eaf0788a-8fdf-4e21-b302-e529f3bd9d5f"/>
     <resource>
       <AllergyIntolerance>
+        <id value="eaf0788a-8fdf-4e21-b302-e529f3bd9d5f"/>
         <meta>
           <versionId value="2"/>
           <lastUpdated value="2025-05-25T11:39:15.709+11:00"/>
@@ -390,6 +393,7 @@
     <fullUrl value="urn:uuid:d4ca61a6-5b55-41ab-9b1a-fba0daefe94d"/>
     <resource>
       <MedicationRequest>
+        <id value="d4ca61a6-5b55-41ab-9b1a-fba0daefe94d"/>
         <meta>
           <versionId value="2"/>
           <lastUpdated value="2025-05-25T11:17:03.285+11:00"/>
@@ -459,6 +463,7 @@
     <fullUrl value="urn:uuid:3f76e819-1f30-405d-b1ef-66c878b401c2"/>
     <resource>
       <MedicationRequest>
+        <id value="3f76e819-1f30-405d-b1ef-66c878b401c2"/>
         <meta>
           <versionId value="2"/>
           <lastUpdated value="2025-05-25T11:17:03.285+11:00"/>
@@ -528,6 +533,7 @@
     <fullUrl value="urn:uuid:e96d8d8d-8ef2-436b-8d04-4d136a731398"/>
     <resource>
       <MedicationRequest>
+        <id value="e96d8d8d-8ef2-436b-8d04-4d136a731398"/>
         <meta>
           <versionId value="2"/>
           <lastUpdated value="2025-05-25T11:17:03.285+11:00"/>
@@ -584,6 +590,7 @@
     <fullUrl value="urn:uuid:96b7e47d-0487-4219-adbe-7c2dfb0b2deb"/>
     <resource>
       <MedicationRequest>
+        <id value="96b7e47d-0487-4219-adbe-7c2dfb0b2deb"/>
         <meta>
           <versionId value="2"/>
           <lastUpdated value="2025-05-25T11:17:03.285+11:00"/>
@@ -640,6 +647,7 @@
     <fullUrl value="urn:uuid:d7351a16-8df1-47a4-9129-2c2d6c2238ec"/>
     <resource>
       <MedicationRequest>
+        <id value="d7351a16-8df1-47a4-9129-2c2d6c2238ec"/>
         <meta>
           <versionId value="2"/>
           <lastUpdated value="2025-05-25T11:17:03.285+11:00"/>
@@ -696,6 +704,7 @@
     <fullUrl value="urn:uuid:fbc14baf-d7bf-4fa0-9035-f8e4a73986d0"/>
     <resource>
       <MedicationRequest>
+        <id value="fbc14baf-d7bf-4fa0-9035-f8e4a73986d0"/>
         <meta>
           <versionId value="2"/>
           <lastUpdated value="2025-05-25T11:17:03.285+11:00"/>
@@ -749,6 +758,7 @@
     <fullUrl value="urn:uuid:cefeac7e-cf0c-4c14-917d-2a526516c3d1"/>
     <resource>
       <MedicationRequest>
+        <id value="cefeac7e-cf0c-4c14-917d-2a526516c3d1"/>
         <meta>
           <versionId value="2"/>
           <lastUpdated value="2025-05-25T11:17:03.285+11:00"/>
@@ -802,6 +812,7 @@
     <fullUrl value="urn:uuid:ca779d48-9dd8-4fe1-829a-d48b12b492af"/>
     <resource>
       <Practitioner>
+        <id value="ca779d48-9dd8-4fe1-829a-d48b12b492af"/>
         <meta>
           <versionId value="2"/>
           <lastUpdated value="2025-05-25T11:17:03.285+11:00"/>
@@ -857,6 +868,7 @@
     <fullUrl value="urn:uuid:96013c59-2a84-4e89-9aa4-96d04d367466"/>
     <resource>
       <Condition>
+        <id value="96013c59-2a84-4e89-9aa4-96d04d367466"/>
         <meta>
           <versionId value="2"/>
           <lastUpdated value="2025-05-25T11:17:03.285+11:00"/>
@@ -903,6 +915,7 @@
     <fullUrl value="urn:uuid:8714f907-ddf9-4f21-9ea9-663e4ad0f99c"/>
     <resource>
       <Condition>
+        <id value="8714f907-ddf9-4f21-9ea9-663e4ad0f99c"/>
         <meta>
           <versionId value="2"/>
           <lastUpdated value="2025-05-25T11:17:03.285+11:00"/>
@@ -949,6 +962,7 @@
     <fullUrl value="urn:uuid:bea49472-f812-4aa0-ad52-fb90fad2b0d1"/>
     <resource>
       <Condition>
+        <id value="bea49472-f812-4aa0-ad52-fb90fad2b0d1"/>
         <meta>
           <versionId value="2"/>
           <lastUpdated value="2025-05-25T11:17:03.285+11:00"/>
@@ -995,6 +1009,7 @@
     <fullUrl value="urn:uuid:55e4f3ea-ed3c-4cef-badd-f582254a97dd"/>
     <resource>
       <Condition>
+        <id value="55e4f3ea-ed3c-4cef-badd-f582254a97dd"/>
         <meta>
           <versionId value="2"/>
           <lastUpdated value="2025-05-25T11:17:03.285+11:00"/>
@@ -1052,6 +1067,7 @@
     <fullUrl value="urn:uuid:604a5173-1cf4-4cf4-82a2-13b610ecc593"/>
     <resource>
       <Condition>
+        <id value="604a5173-1cf4-4cf4-82a2-13b610ecc593"/>
         <meta>
           <versionId value="2"/>
           <lastUpdated value="2025-05-25T11:17:03.285+11:00"/>
@@ -1098,6 +1114,7 @@
     <fullUrl value="urn:uuid:825a781b-e083-4351-a3d9-adf56f65d7e9"/>
     <resource>
       <Immunization>
+        <id value="825a781b-e083-4351-a3d9-adf56f65d7e9"/>
         <meta>
           <versionId value="3"/>
           <lastUpdated value="2025-05-25T11:39:15.709+11:00"/>
@@ -1129,6 +1146,7 @@
     <fullUrl value="urn:uuid:1e0d5691-c20c-4e14-9261-20a1575ab065"/>
     <resource>
       <Immunization>
+        <id value="1e0d5691-c20c-4e14-9261-20a1575ab065"/>
         <meta>
           <versionId value="3"/>
           <lastUpdated value="2025-05-25T11:39:15.709+11:00"/>
@@ -1160,6 +1178,7 @@
     <fullUrl value="urn:uuid:0d0d8c79-7f2f-4586-8b2e-f1a1942fe3ed"/>
     <resource>
       <Immunization>
+        <id value="0d0d8c79-7f2f-4586-8b2e-f1a1942fe3ed"/>
         <meta>
           <versionId value="3"/>
           <lastUpdated value="2025-05-25T11:39:15.709+11:00"/>
@@ -1191,38 +1210,40 @@
     <fullUrl value="urn:uuid:9d9b67a1-15b0-42db-9108-78176017fbed"/>
     <resource>
       <Procedure>
-      <meta>
-          <versionId value="1"/>
-          <lastUpdated value="2025-05-27T11:39:15.709+11:00"/>
-          <profile value="http://hl7.org.au/fhir/ps/StructureDefinition/au-ps-procedure"/>
-      </meta>
-      <status value="completed"/>
-      <code>
-          <coding>
-              <system value="http://snomed.info/sct"/>
-              <code value="77343006"/>
-              <display value="Angiography"/>
-          </coding>
-          <text value="Angiogram"/>
-      </code>
-      <subject>
-        <reference value="urn:uuid:d1122188-f53f-417f-a84f-bc44479baa63"/>
-        <type value="Patient"/>
-      </subject>
-      <encounter>
-        <reference value="urn:uuid:f7aaf2d5-c105-4652-8b4c-e555903593a7"/>
-      </encounter>
-      <performedDateTime value="2025-05-22"/>
-      <reasonCode>
-        <text value="Recent chest pain"/>
-      </reasonCode>
-    </Procedure>
-  </resource>
+        <id value="e96d8d8d-8ef2-436b-8d04-4d136a731398"/>
+        <meta>
+            <versionId value="1"/>
+            <lastUpdated value="2025-05-27T11:39:15.709+11:00"/>
+            <profile value="http://hl7.org.au/fhir/ps/StructureDefinition/au-ps-procedure"/>
+        </meta>
+        <status value="completed"/>
+        <code>
+            <coding>
+                <system value="http://snomed.info/sct"/>
+                <code value="77343006"/>
+                <display value="Angiography"/>
+            </coding>
+            <text value="Angiogram"/>
+        </code>
+        <subject>
+          <reference value="urn:uuid:d1122188-f53f-417f-a84f-bc44479baa63"/>
+          <type value="Patient"/>
+        </subject>
+        <encounter>
+          <reference value="urn:uuid:f7aaf2d5-c105-4652-8b4c-e555903593a7"/>
+        </encounter>
+        <performedDateTime value="2025-05-22"/>
+        <reasonCode>
+          <text value="Recent chest pain"/>
+        </reasonCode>
+      </Procedure>
+    </resource>
   </entry>
   <entry>
     <fullUrl value="urn:uuid:4db923a9-f239-411e-911d-62b60b794313"/>
     <resource>
       <Procedure>
+        <id value="4db923a9-f239-411e-911d-62b60b794313"/>
         <meta>
           <versionId value="1"/>
           <lastUpdated value="2025-02-27T11:39:15.709+11:00"/>
@@ -1249,102 +1270,104 @@
   <fullUrl value="urn:uuid:2862efc6-c7a9-41aa-9d36-f0dcba427635"/>
   <resource>
     <Observation>
-        <meta>
-            <versionId value="1"/>
-            <lastUpdated value="2025-05-27T11:39:15.709+11:00"/>
-            <profile value="http://hl7.org.au/fhir/ps/StructureDefinition/au-ps-diagnosticresult-path"/>
-        </meta>
-        <status value="final" />
-        <category>
-            <coding>
-                <system value="http://terminology.hl7.org/CodeSystem/observation-category" />
-                <code value="laboratory" />
-                <display value="Laboratory" />
-            </coding>
-        </category>
-        <category>
-            <coding>
-                <system value="http://terminology.hl7.org/CodeSystem/v2-0074" />
-                <code value="CH" />
-                <display value="Chemistry" />
-            </coding>
-            <text value="Chemistry" />
-        </category>
-        <code>
-            <coding>
-                <system value="http://loinc.org" />
-                <code value="14927-8" />
-                <display value="Triglyceride [Moles/volume] in Serum or Plasma" />
-            </coding>
-            <text value="Triglyceride" />
-        </code>
-        <subject>
-            <reference value="urn:uuid:d1122188-f53f-417f-a84f-bc44479baa63"/>
-            <type value="Patient"/>
-        </subject>
-        <effectiveDateTime value="2025-03-17" />
-        <performer>
-          <extension url="http://hl7.org/fhir/StructureDefinition/data-absent-reason">
-              <valueCode value="unknown"/>
-          </extension>
-        </performer>
-        <valueQuantity>
-            <value value="1.7" />
-            <unit value="mmol/L" />
-            <system value="http://unitsofmeasure.org" />
-            <code value="mmol/L" />
-        </valueQuantity>
-     </Observation>
-  </resource>
-</entry>
-<entry>
-  <fullUrl value="urn:uuid:6400636f-9f75-40f9-97a0-4255f02aecc6"/>
-  <resource>
-    <Observation>
-        <meta>
-            <versionId value="1"/>
-            <lastUpdated value="2025-05-27T11:39:15.709+11:00"/>
-            <profile value="http://hl7.org.au/fhir/ps/StructureDefinition/au-ps-diagnosticresult-path"/>
-        </meta>
-    <status value="final" />
-    <category>
+      <id value="2862efc6-c7a9-41aa-9d36-f0dcba427635"/>
+      <meta>
+        <versionId value="1"/>
+        <lastUpdated value="2025-05-27T11:39:15.709+11:00"/>
+        <profile value="http://hl7.org.au/fhir/ps/StructureDefinition/au-ps-diagnosticresult-path"/>
+      </meta>
+      <status value="final" />
+      <category>
         <coding>
             <system value="http://terminology.hl7.org/CodeSystem/observation-category" />
             <code value="laboratory" />
             <display value="Laboratory" />
         </coding>
-    </category>
-    <category>
+      </category>
+      <category>
         <coding>
             <system value="http://terminology.hl7.org/CodeSystem/v2-0074" />
             <code value="CH" />
             <display value="Chemistry" />
         </coding>
         <text value="Chemistry" />
-    </category>
-    <code>
+      </category>
+      <code>
         <coding>
             <system value="http://loinc.org" />
-            <code value="14646-4" />
-            <display value="Cholesterol in HDL [Moles/volume] in Serum or Plasma" />
+            <code value="14927-8" />
+            <display value="Triglyceride [Moles/volume] in Serum or Plasma" />
         </coding>
-        <text value="HDL" />
-    </code>
-    <subject>
+        <text value="Triglyceride" />
+      </code>
+      <subject>
         <reference value="urn:uuid:d1122188-f53f-417f-a84f-bc44479baa63"/>
         <type value="Patient"/>
-    </subject>
-    <effectiveDateTime value="2025-03-17" />
-    <performer>
+      </subject>
+      <effectiveDateTime value="2025-03-17" />
+      <performer>
         <extension url="http://hl7.org/fhir/StructureDefinition/data-absent-reason">
-            <valueCode value="unknown"/>
+          <valueCode value="unknown"/>
         </extension>
-    </performer>
-    <valueQuantity>
-        <value value="1.55" />
+      </performer>
+      <valueQuantity>
+        <value value="1.7" />
         <unit value="mmol/L" />
         <system value="http://unitsofmeasure.org" />
         <code value="mmol/L" />
+      </valueQuantity>
+    </Observation>
+  </resource>
+</entry>
+<entry>
+  <fullUrl value="urn:uuid:6400636f-9f75-40f9-97a0-4255f02aecc6"/>
+  <resource>
+    <Observation>
+      <id value="6400636f-9f75-40f9-97a0-4255f02aecc6"/>
+      <meta>
+        <versionId value="1"/>
+        <lastUpdated value="2025-05-27T11:39:15.709+11:00"/>
+        <profile value="http://hl7.org.au/fhir/ps/StructureDefinition/au-ps-diagnosticresult-path"/>
+      </meta>
+    <status value="final" />
+    <category>
+      <coding>
+        <system value="http://terminology.hl7.org/CodeSystem/observation-category" />
+        <code value="laboratory" />
+        <display value="Laboratory" />
+      </coding>
+    </category>
+    <category>
+      <coding>
+        <system value="http://terminology.hl7.org/CodeSystem/v2-0074" />
+        <code value="CH" />
+        <display value="Chemistry" />
+      </coding>
+      <text value="Chemistry" />
+    </category>
+    <code>
+      <coding>
+        <system value="http://loinc.org" />
+        <code value="14646-4" />
+        <display value="Cholesterol in HDL [Moles/volume] in Serum or Plasma" />
+      </coding>
+      <text value="HDL" />
+    </code>
+    <subject>
+      <reference value="urn:uuid:d1122188-f53f-417f-a84f-bc44479baa63"/>
+      <type value="Patient"/>
+    </subject>
+    <effectiveDateTime value="2025-03-17" />
+    <performer>
+      <extension url="http://hl7.org/fhir/StructureDefinition/data-absent-reason">
+        <valueCode value="unknown"/>
+      </extension>
+    </performer>
+    <valueQuantity>
+      <value value="1.55" />
+      <unit value="mmol/L" />
+      <system value="http://unitsofmeasure.org" />
+      <code value="mmol/L" />
     </valueQuantity>
   </Observation>
   </resource>
@@ -1353,51 +1376,52 @@
   <fullUrl value="urn:uuid:38045915-7f10-42b0-943e-f1b90356d3b9"/>
   <resource>
     <Observation>
-        <meta>
-            <versionId value="1"/>
-            <lastUpdated value="2025-05-27T11:39:15.709+11:00"/>
-            <profile value="http://hl7.org.au/fhir/ps/StructureDefinition/au-ps-diagnosticresult-path"/>
-        </meta>
-    <status value="final" />
-    <category>
+      <id value="38045915-7f10-42b0-943e-f1b90356d3b9"/>
+      <meta>
+        <versionId value="1"/>
+        <lastUpdated value="2025-05-27T11:39:15.709+11:00"/>
+        <profile value="http://hl7.org.au/fhir/ps/StructureDefinition/au-ps-diagnosticresult-path"/>
+      </meta>
+      <status value="final" />
+      <category>
         <coding>
-            <system value="http://terminology.hl7.org/CodeSystem/observation-category" />
-            <code value="laboratory" />
-            <display value="Laboratory" />
+          <system value="http://terminology.hl7.org/CodeSystem/observation-category" />
+          <code value="laboratory" />
+          <display value="Laboratory" />
         </coding>
-    </category>
-    <category>
+      </category>
+      <category>
         <coding>
-            <system value="http://terminology.hl7.org/CodeSystem/v2-0074" />
-            <code value="CH" />
-            <display value="Chemistry" />
+          <system value="http://terminology.hl7.org/CodeSystem/v2-0074" />
+          <code value="CH" />
+          <display value="Chemistry" />
         </coding>
         <text value="Chemistry" />
-    </category>
-    <code>
+      </category>
+      <code>
         <coding>
-            <system value="http://loinc.org" />
-            <code value="22748-8" />
-            <display value="Cholesterol in LDL [Moles/volume] in Serum or Plasma" />
+          <system value="http://loinc.org" />
+          <code value="22748-8" />
+          <display value="Cholesterol in LDL [Moles/volume] in Serum or Plasma" />
         </coding>
         <text value="LDL" />
-    </code>
-    <subject>
+      </code>
+      <subject>
         <reference value="urn:uuid:d1122188-f53f-417f-a84f-bc44479baa63"/>
         <type value="Patient"/>
-    </subject>
-    <effectiveDateTime value="2025-03-17" />
-    <performer>
+      </subject>
+      <effectiveDateTime value="2025-03-17" />
+      <performer>
         <extension url="http://hl7.org/fhir/StructureDefinition/data-absent-reason">
-            <valueCode value="unknown"/>
+          <valueCode value="unknown"/>
         </extension>
-    </performer>
-    <valueQuantity>
+      </performer>
+      <valueQuantity>
         <value value="3.10" />
         <unit value="mmol/L" />
         <system value="http://unitsofmeasure.org" />
         <code value="mmol/L" />
-    </valueQuantity>
+      </valueQuantity>
     </Observation>
   </resource>
 </entry>
@@ -1405,51 +1429,52 @@
   <fullUrl value="urn:uuid:c56a3eb6-d7e5-475f-831f-36530961013c"/>
   <resource>
     <Observation>
-        <meta>
-            <versionId value="1"/>
-            <lastUpdated value="2025-05-27T11:39:15.709+11:00"/>
-            <profile value="http://hl7.org.au/fhir/ps/StructureDefinition/au-ps-diagnosticresult-path"/>
-        </meta>
-    <status value="final" />
-    <category>
+      <id value="c56a3eb6-d7e5-475f-831f-36530961013c"/>
+      <meta>
+        <versionId value="1"/>
+        <lastUpdated value="2025-05-27T11:39:15.709+11:00"/>
+        <profile value="http://hl7.org.au/fhir/ps/StructureDefinition/au-ps-diagnosticresult-path"/>
+      </meta>
+      <status value="final" />
+      <category>
         <coding>
-            <system value="http://terminology.hl7.org/CodeSystem/observation-category" />
-            <code value="laboratory" />
-            <display value="Laboratory" />
+          <system value="http://terminology.hl7.org/CodeSystem/observation-category" />
+          <code value="laboratory" />
+          <display value="Laboratory" />
         </coding>
-    </category>
-    <category>
+      </category>
+      <category>
         <coding>
-            <system value="http://terminology.hl7.org/CodeSystem/v2-0074" />
-            <code value="CH" />
-            <display value="Chemistry" />
+          <system value="http://terminology.hl7.org/CodeSystem/v2-0074" />
+          <code value="CH" />
+          <display value="Chemistry" />
         </coding>
         <text value="Chemistry" />
-    </category>
-    <code>
+      </category>
+      <code>
         <coding>
-            <system value="http://loinc.org" />
-            <code value="14647-2" />
-            <display value="Cholesterol [Moles/volume] in Serum or Plasma" />
+          <system value="http://loinc.org" />
+          <code value="14647-2" />
+          <display value="Cholesterol [Moles/volume] in Serum or Plasma" />
         </coding>
         <text value="Total Cholesterol" />
-    </code>
-    <subject>
+      </code>
+      <subject>
         <reference value="urn:uuid:d1122188-f53f-417f-a84f-bc44479baa63"/>
         <type value="Patient"/>
-    </subject>
-    <effectiveDateTime value="2025-03-17" />
-    <performer>
-      <extension url="http://hl7.org/fhir/StructureDefinition/data-absent-reason">
+      </subject>
+      <effectiveDateTime value="2025-03-17" />
+      <performer>
+        <extension url="http://hl7.org/fhir/StructureDefinition/data-absent-reason">
           <valueCode value="unknown"/>
-      </extension>
-    </performer>
-    <valueQuantity>
+        </extension>
+      </performer>
+      <valueQuantity>
         <value value="5.4" />
         <unit value="mmol/L" />
         <system value="http://unitsofmeasure.org" />
         <code value="mmol/L" />
-    </valueQuantity>
+      </valueQuantity>
     </Observation>
   </resource>
   </entry>
@@ -1457,51 +1482,52 @@
   <fullUrl value="urn:uuid:25f95f9c-391c-4e35-ad70-7d4cff3178f1"/>
   <resource>
     <Observation>
-        <meta>
-            <versionId value="1"/>
-            <lastUpdated value="2025-01-27T11:39:15.709+11:00"/>
-            <profile value="http://hl7.org.au/fhir/ps/StructureDefinition/au-ps-diagnosticresult-path"/> 
-        </meta>
-    <status value="final" />
-    <category>
+      <id value="25f95f9c-391c-4e35-ad70-7d4cff3178f1"/>
+      <meta>
+        <versionId value="1"/>
+        <lastUpdated value="2025-01-27T11:39:15.709+11:00"/>
+        <profile value="http://hl7.org.au/fhir/ps/StructureDefinition/au-ps-diagnosticresult-path"/> 
+      </meta>
+      <status value="final" />
+      <category>
         <coding>
-            <system value="http://terminology.hl7.org/CodeSystem/observation-category" />
-            <code value="laboratory" />
-            <display value="Laboratory" />
+          <system value="http://terminology.hl7.org/CodeSystem/observation-category" />
+          <code value="laboratory" />
+          <display value="Laboratory" />
         </coding>
-    </category>
-    <category>
+      </category>
+      <category>
         <coding>
-            <system value="http://terminology.hl7.org/CodeSystem/v2-0074" />
-            <code value="CH" />
-            <display value="Chemistry" />
+          <system value="http://terminology.hl7.org/CodeSystem/v2-0074" />
+          <code value="CH" />
+          <display value="Chemistry" />
         </coding>
         <text value="Chemistry" />
-    </category>
-    <code>
+      </category>
+      <code>
         <coding>
-            <system value="http://loinc.org" />
-            <code value="14647-2" />
-            <display value="Cholesterol [Moles/volume] in Serum or Plasma" />
+          <system value="http://loinc.org" />
+          <code value="14647-2" />
+          <display value="Cholesterol [Moles/volume] in Serum or Plasma" />
         </coding>
         <text value="Total Cholesterol" />
-    </code>
-    <subject>
+      </code>
+      <subject>
         <reference value="urn:uuid:d1122188-f53f-417f-a84f-bc44479baa63"/>
         <type value="Patient"/>
-    </subject>
-    <effectiveDateTime value="2024-12-17" />
-    <performer>
-            <extension url="http://hl7.org/fhir/StructureDefinition/data-absent-reason">
-                <valueCode value="unknown"/>
-            </extension>
-        </performer>
-    <valueQuantity>
+      </subject>
+      <effectiveDateTime value="2024-12-17" />
+      <performer>
+        <extension url="http://hl7.org/fhir/StructureDefinition/data-absent-reason">
+          <valueCode value="unknown"/>
+        </extension>
+      </performer>
+      <valueQuantity>
         <value value="5.7" />
         <unit value="mmol/L" />
         <system value="http://unitsofmeasure.org" />
         <code value="mmol/L" />
-    </valueQuantity>
+      </valueQuantity>
     </Observation>
   </resource>
 </entry>
@@ -1509,51 +1535,52 @@
   <fullUrl value="urn:uuid:437947c1-6b9b-4213-94b9-19a801bf3113"/>
   <resource>
     <Observation>
+      <id value="437947c1-6b9b-4213-94b9-19a801bf3113"/>
         <meta>
-            <versionId value="1"/>
-            <lastUpdated value="2025-01-27T11:39:15.709+11:00"/>
-            <profile value="http://hl7.org.au/fhir/ps/StructureDefinition/au-ps-diagnosticresult-path"/>
+          <versionId value="1"/>
+          <lastUpdated value="2025-01-27T11:39:15.709+11:00"/>
+          <profile value="http://hl7.org.au/fhir/ps/StructureDefinition/au-ps-diagnosticresult-path"/>
         </meta>
-    <status value="final" />
-    <category>
+      <status value="final" />
+      <category>
         <coding>
-            <system value="http://terminology.hl7.org/CodeSystem/observation-category" />
-            <code value="laboratory" />
-            <display value="Laboratory" />
+          <system value="http://terminology.hl7.org/CodeSystem/observation-category" />
+          <code value="laboratory" />
+          <display value="Laboratory" />
         </coding>
-    </category>
-    <category>
+      </category>
+      <category>
         <coding>
-            <system value="http://terminology.hl7.org/CodeSystem/v2-0074" />
-            <code value="CH" />
-            <display value="Chemistry" />
+          <system value="http://terminology.hl7.org/CodeSystem/v2-0074" />
+          <code value="CH" />
+          <display value="Chemistry" />
         </coding>
         <text value="Chemistry" />
-    </category>
-    <code>
+      </category>
+      <code>
         <coding>
-            <system value="http://loinc.org" />
-            <code value="14646-4" />
-            <display value="Cholesterol in HDL [Moles/volume] in Serum or Plasma" />
+          <system value="http://loinc.org" />
+          <code value="14646-4" />
+          <display value="Cholesterol in HDL [Moles/volume] in Serum or Plasma" />
         </coding>
         <text value="HDL" />
-    </code>
-    <subject>
+      </code>
+      <subject>
         <reference value="urn:uuid:d1122188-f53f-417f-a84f-bc44479baa63"/>
         <type value="Patient"/>
-    </subject>
-    <effectiveDateTime value="2024-12-17" />
-    <performer>
+      </subject>
+      <effectiveDateTime value="2024-12-17" />
+      <performer>
         <extension url="http://hl7.org/fhir/StructureDefinition/data-absent-reason">
-            <valueCode value="unknown"/>
+          <valueCode value="unknown"/>
         </extension>
-    </performer>
-    <valueQuantity>
+      </performer>
+      <valueQuantity>
         <value value="1.42" />
         <unit value="mmol/L" />
         <system value="http://unitsofmeasure.org" />
         <code value="mmol/L" />
-    </valueQuantity>
+      </valueQuantity>
     </Observation>
   </resource>
 </entry>
@@ -1561,51 +1588,52 @@
   <fullUrl value="urn:uuid:28204a08-571b-4c5e-b234-00b65e2e63cf"/>
   <resource>
     <Observation>
-        <meta>
-            <versionId value="1"/>
-            <lastUpdated value="2025-01-27T11:39:15.709+11:00"/>
-            <profile value="http://hl7.org.au/fhir/ps/StructureDefinition/au-ps-diagnosticresult-path"/>
-        </meta>
-    <status value="final" />
-    <category>
+      <id value="28204a08-571b-4c5e-b234-00b65e2e63cf"/>
+      <meta>
+          <versionId value="1"/>
+          <lastUpdated value="2025-01-27T11:39:15.709+11:00"/>
+          <profile value="http://hl7.org.au/fhir/ps/StructureDefinition/au-ps-diagnosticresult-path"/>
+      </meta>
+      <status value="final" />
+      <category>
         <coding>
-            <system value="http://terminology.hl7.org/CodeSystem/observation-category" />
-            <code value="laboratory" />
-            <display value="Laboratory" />
+          <system value="http://terminology.hl7.org/CodeSystem/observation-category" />
+          <code value="laboratory" />
+          <display value="Laboratory" />
         </coding>
-    </category>
-    <category>
+      </category>
+      <category>
         <coding>
-            <system value="http://terminology.hl7.org/CodeSystem/v2-0074" />
-            <code value="CH" />
-            <display value="Chemistry" />
+          <system value="http://terminology.hl7.org/CodeSystem/v2-0074" />
+          <code value="CH" />
+          <display value="Chemistry" />
         </coding>
         <text value="Chemistry" />
-    </category>
-    <code>
+      </category>
+      <code>
         <coding>
-            <system value="http://loinc.org" />
-            <code value="22748-8" />
-            <display value="Cholesterol in LDL [Moles/volume] in Serum or Plasma" />
+          <system value="http://loinc.org" />
+          <code value="22748-8" />
+          <display value="Cholesterol in LDL [Moles/volume] in Serum or Plasma" />
         </coding>
         <text value="LDL" />
-    </code>
-    <subject>
+      </code>
+      <subject>
         <reference value="urn:uuid:d1122188-f53f-417f-a84f-bc44479baa63"/>
         <type value="Patient"/>
-    </subject>
-    <effectiveDateTime value="2024-12-17" />
-    <performer>
-            <extension url="http://hl7.org/fhir/StructureDefinition/data-absent-reason">
-                <valueCode value="unknown"/>
-            </extension>
-    </performer>
-    <valueQuantity>
+      </subject>
+      <effectiveDateTime value="2024-12-17" />
+      <performer>
+        <extension url="http://hl7.org/fhir/StructureDefinition/data-absent-reason">
+          <valueCode value="unknown"/>
+        </extension>
+      </performer>
+      <valueQuantity>
         <value value="3.36" />
         <unit value="mmol/L" />
         <system value="http://unitsofmeasure.org" />
         <code value="mmol/L" />
-    </valueQuantity>
+      </valueQuantity>
     </Observation>
   </resource>
 </entry>
@@ -1613,103 +1641,105 @@
   <fullUrl value="urn:uuid:e50ef658-5b84-44f4-a40c-f1777830e1dd"/>
   <resource>
     <Observation>
-        <meta>
-            <versionId value="1"/>
-            <lastUpdated value="2025-01-27T11:39:15.709+11:00"/>
-            <profile value="http://hl7.org.au/fhir/ps/StructureDefinition/au-ps-diagnosticresult-path"/>
-        </meta>
-        <status value="final" />
-        <category>
-            <coding>
-                <system value="http://terminology.hl7.org/CodeSystem/observation-category" />
-                <code value="laboratory" />
-                <display value="Laboratory" />
-            </coding>
-        </category>
-        <category>
-            <coding>
-                <system value="http://terminology.hl7.org/CodeSystem/v2-0074" />
-                <code value="CH" />
-                <display value="Chemistry" />
-            </coding>
-            <text value="Chemistry" />
-        </category>
-        <code>
-            <coding>
-                <system value="http://loinc.org" />
-                <code value="14927-8" />
-                <display value="Triglyceride [Moles/volume] in Serum or Plasma" />
-            </coding>
-            <text value="Triglyceride" />
-        </code>
-        <subject>
-            <reference value="urn:uuid:d1122188-f53f-417f-a84f-bc44479baa63"/>
-            <type value="Patient"/>
-        </subject>
-        <effectiveDateTime value="2024-12-17" />
-        <performer>
-            <extension url="http://hl7.org/fhir/StructureDefinition/data-absent-reason">
-                <valueCode value="unknown"/>
-            </extension>
-        </performer>
-        <valueQuantity>
-            <value value="1.8" />
-            <unit value="mmol/L" />
-            <system value="http://unitsofmeasure.org" />
-            <code value="mmol/L" />
-        </valueQuantity>
-     </Observation>
+      <id value="e50ef658-5b84-44f4-a40c-f1777830e1dd"/>
+      <meta>
+        <versionId value="1"/>
+        <lastUpdated value="2025-01-27T11:39:15.709+11:00"/>
+        <profile value="http://hl7.org.au/fhir/ps/StructureDefinition/au-ps-diagnosticresult-path"/>
+      </meta>
+      <status value="final" />
+      <category>
+        <coding>
+          <system value="http://terminology.hl7.org/CodeSystem/observation-category" />
+          <code value="laboratory" />
+          <display value="Laboratory" />
+        </coding>
+      </category>
+      <category>
+        <coding>
+          <system value="http://terminology.hl7.org/CodeSystem/v2-0074" />
+          <code value="CH" />
+          <display value="Chemistry" />
+        </coding>
+        <text value="Chemistry" />
+      </category>
+      <code>
+        <coding>
+          <system value="http://loinc.org" />
+          <code value="14927-8" />
+          <display value="Triglyceride [Moles/volume] in Serum or Plasma" />
+        </coding>
+        <text value="Triglyceride" />
+      </code>
+      <subject>
+        <reference value="urn:uuid:d1122188-f53f-417f-a84f-bc44479baa63"/>
+        <type value="Patient"/>
+      </subject>
+      <effectiveDateTime value="2024-12-17" />
+      <performer>
+        <extension url="http://hl7.org/fhir/StructureDefinition/data-absent-reason">
+          <valueCode value="unknown"/>
+        </extension>
+      </performer>
+      <valueQuantity>
+        <value value="1.8" />
+        <unit value="mmol/L" />
+        <system value="http://unitsofmeasure.org" />
+        <code value="mmol/L" />
+      </valueQuantity>
+    </Observation>
   </resource>
   </entry>
   <entry>
   <fullUrl value="urn:uuid:bf2ee7c5-39b8-4b35-8b49-7a5815bc45a1"/>
   <resource>
     <Observation>
-        <meta>
-            <versionId value="1"/>
-            <lastUpdated value="2024-10-27T11:39:15.709+11:00"/>
-            <profile value="http://hl7.org.au/fhir/ps/StructureDefinition/au-ps-diagnosticresult-path"/>
-        </meta>
-    <status value="final" />
-    <category>
+      <id value="bf2ee7c5-39b8-4b35-8b49-7a5815bc45a1"/>
+      <meta>
+        <versionId value="1"/>
+        <lastUpdated value="2024-10-27T11:39:15.709+11:00"/>
+        <profile value="http://hl7.org.au/fhir/ps/StructureDefinition/au-ps-diagnosticresult-path"/>
+      </meta>
+      <status value="final" />
+      <category>
         <coding>
-            <system value="http://terminology.hl7.org/CodeSystem/observation-category" />
-            <code value="laboratory" />
-            <display value="Laboratory" />
+          <system value="http://terminology.hl7.org/CodeSystem/observation-category" />
+          <code value="laboratory" />
+          <display value="Laboratory" />
         </coding>
-    </category>
-    <category>
+      </category>
+      <category>
         <coding>
-            <system value="http://terminology.hl7.org/CodeSystem/v2-0074" />
-            <code value="CH" />
-            <display value="Chemistry" />
+          <system value="http://terminology.hl7.org/CodeSystem/v2-0074" />
+          <code value="CH" />
+          <display value="Chemistry" />
         </coding>
         <text value="Chemistry" />
-    </category>
-    <code>
+      </category>
+      <code>
         <coding>
-            <system value="http://loinc.org" />
-            <code value="14647-2" />
-            <display value="Cholesterol [Moles/volume] in Serum or Plasma" />
+          <system value="http://loinc.org" />
+          <code value="14647-2" />
+          <display value="Cholesterol [Moles/volume] in Serum or Plasma" />
         </coding>
         <text value="Total Cholesterol" />
-    </code>
-    <subject>
+      </code>
+      <subject>
         <reference value="urn:uuid:d1122188-f53f-417f-a84f-bc44479baa63"/>
         <type value="Patient"/>
-    </subject>
-    <effectiveDateTime value="2024-09-17" />
-    <performer>
+      </subject>
+      <effectiveDateTime value="2024-09-17" />
+      <performer>
         <extension url="http://hl7.org/fhir/StructureDefinition/data-absent-reason">
-            <valueCode value="unknown"/>
+          <valueCode value="unknown"/>
         </extension>
-    </performer>
-    <valueQuantity>
+      </performer>
+      <valueQuantity>
         <value value="6.0" />
         <unit value="mmol/L" />
         <system value="http://unitsofmeasure.org" />
         <code value="mmol/L" />
-    </valueQuantity>
+      </valueQuantity>
     </Observation>
   </resource>
 </entry>
@@ -1717,51 +1747,52 @@
   <fullUrl value="urn:uuid:1e9a7f3b-e353-4a5e-baaa-68a344fc03ba"/>
   <resource>
     <Observation>
-        <meta>
-            <versionId value="1"/>
-            <lastUpdated value="2024-10-27T11:39:15.709+11:00"/>
-            <profile value="http://hl7.org.au/fhir/ps/StructureDefinition/au-ps-diagnosticresult-path"/>
-        </meta>
-    <status value="final" />
-    <category>
+      <id value="1e9a7f3b-e353-4a5e-baaa-68a344fc03ba"/>
+      <meta>
+        <versionId value="1"/>
+        <lastUpdated value="2024-10-27T11:39:15.709+11:00"/>
+        <profile value="http://hl7.org.au/fhir/ps/StructureDefinition/au-ps-diagnosticresult-path"/>
+      </meta>
+      <status value="final" />
+      <category>
         <coding>
-            <system value="http://terminology.hl7.org/CodeSystem/observation-category" />
-            <code value="laboratory" />
-            <display value="Laboratory" />
+          <system value="http://terminology.hl7.org/CodeSystem/observation-category" />
+          <code value="laboratory" />
+          <display value="Laboratory" />
         </coding>
-    </category>
-    <category>
+      </category>
+      <category>
         <coding>
-            <system value="http://terminology.hl7.org/CodeSystem/v2-0074" />
-            <code value="CH" />
-            <display value="Chemistry" />
+          <system value="http://terminology.hl7.org/CodeSystem/v2-0074" />
+          <code value="CH" />
+          <display value="Chemistry" />
         </coding>
         <text value="Chemistry" />
-    </category>
-    <code>
+      </category>
+      <code>
         <coding>
-            <system value="http://loinc.org" />
-            <code value="14646-4" />
-            <display value="Cholesterol in HDL [Moles/volume] in Serum or Plasma" />
+          <system value="http://loinc.org" />
+          <code value="14646-4" />
+           <display value="Cholesterol in HDL [Moles/volume] in Serum or Plasma" />
         </coding>
         <text value="HDL" />
-    </code>
-    <subject>
+      </code>
+      <subject>
         <reference value="urn:uuid:d1122188-f53f-417f-a84f-bc44479baa63"/>
         <type value="Patient"/>
-    </subject>
-    <effectiveDateTime value="2024-09-17" />
-    <performer>
+      </subject>
+      <effectiveDateTime value="2024-09-17" />
+      <performer>
         <extension url="http://hl7.org/fhir/StructureDefinition/data-absent-reason">
-            <valueCode value="unknown"/>
+          <valueCode value="unknown"/>
         </extension>
-    </performer>
-    <valueQuantity>
+      </performer>
+      <valueQuantity>
         <value value="1.29" />
         <unit value="mmol/L" />
         <system value="http://unitsofmeasure.org" />
         <code value="mmol/L" />
-    </valueQuantity>
+      </valueQuantity>
     </Observation>
   </resource>
 </entry>
@@ -1769,51 +1800,52 @@
   <fullUrl value="urn:uuid:0d390cb3-5d12-4051-ad50-bbc5423cb9fa"/>
   <resource>
     <Observation>
-        <meta>
-            <versionId value="1"/>
-            <lastUpdated value="2024-10-27T11:39:15.709+11:00"/>
-            <profile value="http://hl7.org.au/fhir/ps/StructureDefinition/au-ps-diagnosticresult-path"/>
-        </meta>
-    <status value="final" />
-    <category>
+      <id value="0d390cb3-5d12-4051-ad50-bbc5423cb9fa"/>
+      <meta>
+        <versionId value="1"/>
+        <lastUpdated value="2024-10-27T11:39:15.709+11:00"/>
+        <profile value="http://hl7.org.au/fhir/ps/StructureDefinition/au-ps-diagnosticresult-path"/>
+      </meta>
+      <status value="final" />
+      <category>
         <coding>
-            <system value="http://terminology.hl7.org/CodeSystem/observation-category" />
-            <code value="laboratory" />
-            <display value="Laboratory" />
+          <system value="http://terminology.hl7.org/CodeSystem/observation-category" />
+          <code value="laboratory" />
+          <display value="Laboratory" />
         </coding>
-    </category>
-    <category>
+      </category>
+      <category>
         <coding>
-            <system value="http://terminology.hl7.org/CodeSystem/v2-0074" />
-            <code value="CH" />
-            <display value="Chemistry" />
+          <system value="http://terminology.hl7.org/CodeSystem/v2-0074" />
+          <code value="CH" />
+          <display value="Chemistry" />
         </coding>
         <text value="Chemistry" />
-    </category>
-    <code>
+      </category>
+      <code>
         <coding>
-            <system value="http://loinc.org" />
-            <code value="22748-8" />
-            <display value="Cholesterol in LDL [Moles/volume] in Serum or Plasma" />
+          <system value="http://loinc.org" />
+          <code value="22748-8" />
+          <display value="Cholesterol in LDL [Moles/volume] in Serum or Plasma" />
         </coding>
         <text value="LDL" />
-    </code>
-    <subject>
+      </code>
+      <subject>
         <reference value="urn:uuid:d1122188-f53f-417f-a84f-bc44479baa63"/>
         <type value="Patient"/>
-    </subject>
-    <effectiveDateTime value="2024-09-17" />
-    <performer>
-            <extension url="http://hl7.org/fhir/StructureDefinition/data-absent-reason">
-                <valueCode value="unknown"/>
-            </extension>
-    </performer>
-    <valueQuantity>
+      </subject>
+      <effectiveDateTime value="2024-09-17" />
+      <performer>
+        <extension url="http://hl7.org/fhir/StructureDefinition/data-absent-reason">
+          <valueCode value="unknown"/>
+        </extension>
+      </performer>
+      <valueQuantity>
         <value value="3.62" />
         <unit value="mmol/L" />
         <system value="http://unitsofmeasure.org" />
         <code value="mmol/L" />
-    </valueQuantity>
+      </valueQuantity>
     </Observation>
   </resource>
 </entry>
@@ -1821,51 +1853,52 @@
   <fullUrl value="urn:uuid:12388761-b69d-4d4f-a19a-82b13ae3d960"/>
   <resource>
     <Observation>
-        <meta>
-            <versionId value="1"/>
-            <lastUpdated value="2024-10-27T11:39:15.709+11:00"/>
-            <profile value="http://hl7.org.au/fhir/ps/StructureDefinition/au-ps-diagnosticresult-path"/>
-        </meta>
-        <status value="final" />
-        <category>
-            <coding>
-                <system value="http://terminology.hl7.org/CodeSystem/observation-category" />
-                <code value="laboratory" />
-                <display value="Laboratory" />
-            </coding>
-        </category>
-        <category>
-            <coding>
-                <system value="http://terminology.hl7.org/CodeSystem/v2-0074" />
-                <code value="CH" />
-                <display value="Chemistry" />
-            </coding>
-            <text value="Chemistry" />
-        </category>
-        <code>
-            <coding>
-                <system value="http://loinc.org" />
-                <code value="14927-8" />
-                <display value="Triglyceride [Moles/volume] in Serum or Plasma" />
-            </coding>
-            <text value="Triglyceride" />
-        </code>
-        <subject>
-            <reference value="urn:uuid:d1122188-f53f-417f-a84f-bc44479baa63"/>
-            <type value="Patient"/>
-        </subject>
-        <effectiveDateTime value="2024-09-17" />
-        <performer>
-            <extension url="http://hl7.org/fhir/StructureDefinition/data-absent-reason">
-                <valueCode value="unknown"/>
-            </extension>
-        </performer>
-        <valueQuantity>
-            <value value="1.9" />
-            <unit value="mmol/L" />
-            <system value="http://unitsofmeasure.org" />
-            <code value="mmol/L" />
-        </valueQuantity>
+      <id value="12388761-b69d-4d4f-a19a-82b13ae3d960"/>
+      <meta>
+        <versionId value="1"/>
+        <lastUpdated value="2024-10-27T11:39:15.709+11:00"/>
+        <profile value="http://hl7.org.au/fhir/ps/StructureDefinition/au-ps-diagnosticresult-path"/>
+      </meta>
+      <status value="final" />
+      <category>
+        <coding>
+          <system value="http://terminology.hl7.org/CodeSystem/observation-category" />
+          <code value="laboratory" />
+          <display value="Laboratory" />
+        </coding>
+      </category>
+      <category>
+        <coding>
+          <system value="http://terminology.hl7.org/CodeSystem/v2-0074" />
+          <code value="CH" />
+          <display value="Chemistry" />
+        </coding>
+        <text value="Chemistry" />
+      </category>
+      <code>
+        <coding>
+          <system value="http://loinc.org" />
+          <code value="14927-8" />
+          <display value="Triglyceride [Moles/volume] in Serum or Plasma" />
+        </coding>
+        <text value="Triglyceride" />
+      </code>
+      <subject>
+        <reference value="urn:uuid:d1122188-f53f-417f-a84f-bc44479baa63"/>
+        <type value="Patient"/>
+      </subject>
+      <effectiveDateTime value="2024-09-17" />
+      <performer>
+        <extension url="http://hl7.org/fhir/StructureDefinition/data-absent-reason">
+          <valueCode value="unknown"/>
+        </extension>
+      </performer>
+      <valueQuantity>
+        <value value="1.9" />
+        <unit value="mmol/L" />
+        <system value="http://unitsofmeasure.org" />
+        <code value="mmol/L" />
+      </valueQuantity>
      </Observation>
   </resource>
   </entry>
@@ -1873,6 +1906,7 @@
     <fullUrl value="urn:uuid:4d1e0ca1-4ea7-46a2-8f0f-af5225b73c3a"/>
     <resource>
       <Organization>
+        <id value="4d1e0ca1-4ea7-46a2-8f0f-af5225b73c3a"/>
         <meta>
           <versionId value="5"/>
           <lastUpdated value="2024-02-27T11:39:15.709+11:00"/>
@@ -1936,6 +1970,7 @@
     <fullUrl value="urn:uuid:89fc11f9-a586-4bea-9393-d50e88952a7e"/>
     <resource>
       <Organization>
+        <id value="89fc11f9-a586-4bea-9393-d50e88952a7e"/>
         <meta>
           <versionId value="2"/>
           <lastUpdated value="2024-02-27T11:39:15.709+11:00"/>
@@ -1992,49 +2027,51 @@
   <entry>
     <fullUrl value="urn:uuid:e28c5ed1-6092-44cc-b1a9-2ddf4ea550e1"/>
     <resource>
-        <Location>
-            <meta>
-                <versionId value="2"/>
-                <lastUpdated value="2025-05-25T11:39:15.709+11:00"/>
-                <profile value="http://hl7.org.au/fhir/core/StructureDefinition/au-core-location"/>
-            </meta>
-            <name value="Kensington Public Hospital"/>
-            <type>
-                <coding>
-                    <system value="http://terminology.hl7.org/CodeSystem/v3-RoleCode"/>
-                    <code value="HOSP"/>
-                    <display value="Hospital"/>
-                </coding>
-                <coding>
-                    <system value="http://snomed.info/sct"/>
-                    <code value="22232009"/>
-                    <display value="Hospital"/>
-                </coding>
-            </type>
-            <address>
-                <line value="191 Jenkins Cct"/>
-                <city value="Kensington"/>
-                <state value="NSW"/>
-                <postalCode value="2033"/>
-                <country value="AU"/>
-            </address>
-            <physicalType>
-                <coding>
-                    <system value="http://terminology.hl7.org/CodeSystem/location-physical-type"/>
-                    <code value="si"/>
-                    <display value="Site"/>
-                </coding>
-            </physicalType>
-            <managingOrganization>
-                <reference value="urn:uuid:89fc11f9-a586-4bea-9393-d50e88952a7e"/>
-            </managingOrganization>
-        </Location>
+      <Location>
+        <id value="e28c5ed1-6092-44cc-b1a9-2ddf4ea550e1"/>
+        <meta>
+          <versionId value="2"/>
+          <lastUpdated value="2025-05-25T11:39:15.709+11:00"/>
+          <profile value="http://hl7.org.au/fhir/core/StructureDefinition/au-core-location"/>
+        </meta>
+        <name value="Kensington Public Hospital"/>
+        <type>
+          <coding>
+            <system value="http://terminology.hl7.org/CodeSystem/v3-RoleCode"/>
+            <code value="HOSP"/>
+            <display value="Hospital"/>
+          </coding>
+          <coding>
+            <system value="http://snomed.info/sct"/>
+            <code value="22232009"/>
+            <display value="Hospital"/>
+          </coding>
+        </type>
+        <address>
+          <line value="191 Jenkins Cct"/>
+          <city value="Kensington"/>
+          <state value="NSW"/>
+          <postalCode value="2033"/>
+          <country value="AU"/>
+        </address>
+        <physicalType>
+          <coding>
+            <system value="http://terminology.hl7.org/CodeSystem/location-physical-type"/>
+            <code value="si"/>
+            <display value="Site"/>
+            </coding>
+        </physicalType>
+        <managingOrganization>
+          <reference value="urn:uuid:89fc11f9-a586-4bea-9393-d50e88952a7e"/>
+        </managingOrganization>
+      </Location>
     </resource>
   </entry>
   <entry>
     <fullUrl value="urn:uuid:f7aaf2d5-c105-4652-8b4c-e555903593a7"/>
     <resource>
       <Encounter>
+        <id value="f7aaf2d5-c105-4652-8b4c-e555903593a7"/>
         <meta>
           <versionId value="1"/>
           <lastUpdated value="2025-05-25T11:39:15.709+11:00"/>
@@ -2076,6 +2113,7 @@
     <fullUrl value="urn:uuid:7d63c3a7-3cbe-487d-99aa-00c6c29f1db5"/>
     <resource>
       <Encounter>
+        <id value="7d63c3a7-3cbe-487d-99aa-00c6c29f1db5"/>
         <meta>
           <versionId value="2"/>
           <lastUpdated value="2025-05-25T11:39:15.709+11:00"/>
@@ -2108,18 +2146,18 @@
           </type>
           <individual>
             <reference value="urn:uuid:ca779d48-9dd8-4fe1-829a-d48b12b492af"/>
-                <type value="Practitioner"/>
+            <type value="Practitioner"/>
           </individual>
         </participant>
         <period>
           <end value="2025-02-25"/>
         </period>
         <reasonCode>
-           <coding>
-             <system value="http://snomed.info/sct"/>
-             <code value="185389009"/>
-             <display value="Follow-up visit"/>
-           </coding>
+          <coding>
+            <system value="http://snomed.info/sct"/>
+            <code value="185389009"/>
+            <display value="Follow-up visit"/>
+          </coding>
         </reasonCode>
         <serviceProvider>
           <reference value="urn:uuid:4d1e0ca1-4ea7-46a2-8f0f-af5225b73c3a"/>
