@@ -295,7 +295,7 @@ Column attribute descriptions are as follows:
     <th>Comment</th>
   </tr>
   <tr>
-    <td rowspan="5">Es@mated Date of Delivery (EDD) summary</td>
+    <td rowspan="5">Estimated Date of Delivery (EDD) summary</td>
     <td colspan="2">EDD by menstrual cycle</td>
     <td rowspan="5">History of pregnancy</td>
     <td><a href="https://build.fhir.org/ig/HL7/fhir-ips/StructureDefinition-Observation-pregnancy-edd-uv-ips.html">Observation Pregnancy - Expected Delivery Date (IPS)</a></td>
@@ -314,7 +314,7 @@ Column attribute descriptions are as follows:
     <td><code>Observation.valueDateTime</code></td>
   </tr>
   <tr>
-    <td colspan="2">Last update</td>
+    <td colspan="2">Last updated</td>
     <td>-</td>
     <td>-</td>
     <td>This AUCDI element is a <a href="future.html#future-candidate-requirements-under-consideration">Future Candidate Requirement Under Consideration</a>.</td>

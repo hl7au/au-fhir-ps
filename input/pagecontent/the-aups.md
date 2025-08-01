@@ -61,7 +61,7 @@ While AU PS has no variance (i.e. fully compliant) from IPS Implementation Guide
 
 Additional requirements include:
 * additionally profiled resources
-* additional elements marked as *Must Support*
+* additional elements labelled *Must Support*
 * strengthened obligations on some *Must Support* elements
 * different value set bindings
 * strengthened cardinality
@@ -99,15 +99,13 @@ No extensions are labelled as *Must Support* in IPS. In AU PS the following exte
 #### Terminology
 AU PS:
 * adopts terminology bound in AU Core in preference to IPS where the IPS binding strength is equivalent or weaker.
-* includes additional terminology bindings e.g. in additionally profiled resources and supported extensions.
+* localised terminology bindings additionally profiled resources and supported extensions.
+* in some elements define support for more than one value set, for this list and how producers and consumers are to interpret support, see the table in the section [Must Support - Choice of Terminology](general-requirements.html#must-support---choice-of-terminology).
+* for a limited set of elements, the terminology constraint is stronger than IPS (e.g. preferred -> extensible).
 
  A full list of terminology differences is not provided, refer to the AU PS profiles and the [Terminology](terminology.html) page to understand the terminology supported for use in AU PS. Some differences are mentioned below to highlight their potential relevance to implementers of the AU PS.
  
 In many cases the difference between value sets bound in AU Core and IPS is the IPS use of international SNOMED CT concepts versus the AU Core use of SNOMED CT-AU concepts and international SNOMED CT concepts. Typically these Australian value sets are bound as [preferred](https://hl7.org/fhir/R4/terminologies.html#extensible) in AU PS profiles; these are recommendations for use in the Australian healthcare context but do not prevent other coding or text only representations. 
-
-In AU PS, some elements define support for more than one value set, for this list and how producers and consumers are to interpret support, see the table in the section [Must Support - Choice of Terminology](general-requirements.html#must-support---choice-of-terminology).
-
-For a limited set of elements, the terminology constraint in AU PS is stronger than IPS (e.g. preferred -> extensible). These are typically (but not limited to) clinical resources e.g. AllergyIntolerance.code.
 
 #### Cardinality
 While AU PS profiles do not apply any unique maximum cardinality constraints, AU PS makes a number of elements mandatory (minimum cardinality > 0) that are not mandatory in IPS either directly in the AU PS profile or by reference to an AU Core profile. These constrained cardinalities are typically:
