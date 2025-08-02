@@ -11,7 +11,7 @@
   <name value="AUPSComposition"/>
   <title value="AU PS Composition"/>
   <status value="draft"/>
-  <description value="This profile sets minimum expectations for a Composition resource in the context of a patient summary in an Australian context. It is based on [AU Base Composition](http://hl7.org.au/fhir/StructureDefinition/au-composition) and imposes [Composition (IPS)](http://hl7.org/fhir/uv/ips/StructureDefinition/Composition-uv-ips). &#xD;&#xA;AU PS is specified in this guide as a HL7 FHIR document (a Bundle including a Composition), composed by a set of potentially reusable 'minimal' data blocks (the AU PS profiles)."/>
+  <description value="This profile sets minimum expectations for a Composition resource in the context of a patient summary in an Australian context. It is based on [AU Base Composition](http://hl7.org.au/fhir/StructureDefinition/au-composition) and imposes [Composition (IPS)](http://hl7.org/fhir/uv/ips/StructureDefinition/Composition-uv-ips). &#xD;&#xA;AU Patient Summary (AU PS) is specified in this guide as a HL7 FHIR document (a Bundle including a Composition), composed by a set of potentially reusable 'minimal' data blocks (the AU PS profiles)."/>
   <kind value="resource"/>
   <abstract value="false"/>
   <type value="Composition"/>
@@ -318,7 +318,7 @@
       </extension>
       <path value="Composition.title"/>
       <short value="Patient Summary"/>
-      <definition value="Official human-readable label for the composition.&#xD;&#xA;&#xD;&#xA;For this document should be &quot;International Patient Summary&quot; or any equivalent translation"/>
+      <definition value="Official human-readable label for the composition.&#xD;&#xA;&#xD;&#xA;For this document the title would likely include the text &quot;Patient Summary&quot; or any equivalent translation and other relevant document information."/>
       <mustSupport value="true"/>
     </element>
     <element id="Composition.attester">
@@ -740,7 +740,7 @@
       <path value="Composition.section"/>
       <sliceName value="sectionProblems"/>
       <short value="Patient Summary Problems Section"/>
-      <definition value="The patient summary problem section lists and describes clinical problems or conditions currently being monitored for the patient."/>
+      <definition value="Information about a patient's clinical problems or conditions that are currently being monitored."/>
       <min value="1"/>
       <max value="1"/>
       <constraint>
@@ -882,7 +882,7 @@
       <path value="Composition.section"/>
       <sliceName value="sectionAllergies"/>
       <short value="Patient Summary Allergies and Intolerances Section"/>
-      <definition value="This section documents the relevant allergies or intolerances (conditions) for that patient, describing the kind of reaction (e.g. rash, anaphylaxis,..); preferably the agents that cause it; and optionally the criticality and the certainty of the allergy.&#xD;&#xA;At a minimum, it should list currently active and any relevant historical allergies and adverse reactions.&#xD;&#xA;If no information about allergies is available, or if no allergies are known this should be clearly documented in the section."/>
+      <definition value="Information about a patient's relevant allergies or intolerances, describing the kind of reaction (e.g. rash, anaphylaxis, etc.); preferably the agents that cause it; and optionally the criticality and the certainty of the allergy.\r\nAt a minimum, this section will list currently active and any relevant historical allergies and adverse reactions.\r\nIf no information about allergies is available, or if no allergies are known this is to be clearly documented in this section."/>
       <min value="1"/>
       <max value="1"/>
       <constraint>
@@ -1024,7 +1024,7 @@
       <path value="Composition.section"/>
       <sliceName value="sectionMedications"/>
       <short value="Patient Summary Medication Summary Section"/>
-      <definition value="The medication summary section contains a description of the patient's medications relevant for the scope of the patient summary.&#xD;&#xA;The actual content could depend on the jurisdiction, it could report:&#xD;&#xA;- the currently active medications; &#xD;&#xA;- the current and past medications considered relevant by the authoring GP; &#xD;&#xA;- the patient prescriptions or dispensations automatically extracted by a regional or a national EHR.&#xD;&#xA;&#xD;&#xA;In those cases medications are documented in the Patient Summary as medication statements or medication requests.&#xD;&#xA;This section requires either an entry indicating the subject is known not to be on any relevant medication; either an entry indicating that no information is available about medications; or entries summarizing the subject's relevant medications."/>
+      <definition value="Information about a patient's medications relevant for the scope of the patient summary.&#xD;&#xA;The actual content could depend on the jurisdiction, it could report:\r\n- the currently active medications; \r\n- the current and past medications considered relevant by the authoring GP; \r\n- the patient prescriptions or dispensations automatically extracted by a regional or a national EHR.\r\n\r\nIn those cases medications are documented in the Patient Summary as medication statements or medication requests.\r\nThis section requires either an entry indicating the subject is known not to be on any relevant medication; either an entry indicating that no information is available about medications; or entries summarising the subject's relevant medications."/>
       <min value="1"/>
       <max value="1"/>
       <constraint>
@@ -1170,7 +1170,7 @@
       <path value="Composition.section"/>
       <sliceName value="sectionImmunizations"/>
       <short value="Patient Summary Immunizations Section"/>
-      <definition value="The Immunizations Section defines a patient's current immunization status and pertinent immunization history.&#xD;&#xA;The primary use case for the Immunization Section is to enable communication of a patient's immunization status.&#xD;&#xA;The section includes the current immunization status, and may contain the entire immunization history that is relevant to the period of time being summarized."/>
+      <definition value="Information about a patient's current immunisation status and pertinent immunisation history.&#xD;&#xA;The primary use case for this section is to enable communication of a patient's immunisation status.&#xD;&#xA;It could contain the entire immunisation history that is relevant to the period of time being summarised. This entry is used to document that no information about immunisations is available, or that no immunisations are known."/>
       <min value="0"/>
       <max value="1"/>
       <mustSupport value="true"/>
@@ -1269,7 +1269,7 @@
       <path value="Composition.section"/>
       <sliceName value="sectionResults"/>
       <short value="Patient Summary Results Section"/>
-      <definition value="This section assembles relevant observation results collected on the patient or produced on in-vitro biologic specimens collected from the patient. Some of these results may be laboratory results, others may be anatomic pathology results, others, radiology results, and others, clinical results."/>
+      <definition value="Information about a patient's relevant observation results collected on the patient or produced on in-vitro biologic specimens collected from the patient. Some of these results could be laboratory results, others could be anatomic pathology results, others could be radiology results, and others could be clinical results."/>
       <min value="0"/>
       <max value="1"/>
       <mustSupport value="true"/>
@@ -1435,7 +1435,7 @@
       <path value="Composition.section"/>
       <sliceName value="sectionProceduresHx"/>
       <short value="Patient Summary History of Procedures Section"/>
-      <definition value="The History of Procedures Section contains a description of the patient past procedures that are pertinent to the scope of this document.&#xD;&#xA;Procedures may refer for example to:&#xD;&#xA;1. Invasive Diagnostic procedure:e.g. Cardiac catheterization; (the results of these procedure are documented in the results section)&#xD;&#xA;2. Therapeutic procedure: e.g. dialysis;&#xD;&#xA;3. Surgical procedure: e.g. appendectomy"/>
+      <definition value="Information about a patient's past procedures that are pertinent to the scope of this document.&#xD;&#xA;Procedures could refer, for example to:&#xD;&#xA;1. Invasive Diagnostic procedure:e.g. Cardiac catheterization; (the results of these procedure are documented in the results section)&#xD;&#xA;2. Therapeutic procedure: e.g. dialysis;&#xD;&#xA;3. Surgical procedure: e.g. appendectomy"/>
       <min value="0"/>
       <max value="1"/>
       <mustSupport value="true"/>
@@ -1534,7 +1534,7 @@
       <path value="Composition.section"/>
       <sliceName value="sectionMedicalDevices"/>
       <short value="Patient Summary Medical Devices Section"/>
-      <definition value="The medical devices section contains narrative text and coded entries describing the patient history of medical device use."/>
+      <definition value="Information about a patient's history of medical device use."/>
       <min value="0"/>
       <max value="1"/>
       <mustSupport value="true"/>
@@ -1625,7 +1625,7 @@
       <path value="Composition.section"/>
       <sliceName value="sectionAdvanceDirectives"/>
       <short value="Patient Summary Advance Directives Section"/>
-      <definition value="The advance directives section contains a narrative description of patient's advance directive."/>
+      <definition value="Information about a patient's advance directives."/>
       <min value="0"/>
       <max value="1"/>
       <mustSupport value="true"/>
@@ -1691,7 +1691,7 @@
       <path value="Composition.section"/>
       <sliceName value="sectionAlerts"/>
       <short value="Patient Summary Alerts Section"/>
-      <definition value="The alerts section flags potential concerns and/or dangers to/from the patient and may also include obstacles to care."/>
+      <definition value="Information about a patient's alerts pertinent to the scope of the patient summary including flagging potential concerns and/or dangers to/from the patient and can also include obstacles to care."/>
       <min value="0"/>
       <max value="1"/>
       <mustSupport value="true"/>
