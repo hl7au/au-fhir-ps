@@ -47,7 +47,7 @@ See the description of each defined section in IPS [Sections description](https:
 ### Localisation of the IPS
 
 The AU PS is based on [IPS](https://build.fhir.org/ig/HL7/fhir-ips/) and [AU Core](https://build.fhir.org/ig/hl7au/au-fhir-core/), allowing for localisations required to meet Australian requirements while still ensuring alignment to the IPS specification:
-* A valid AU PS document IS a valid IPS document - the document instance validates against both IGs (and against AU Core profiles). 
+* A valid AU PS document IS a valid IPS document - the document instance validates against both IGs. 
 * A conformant AU PS actor IS a conformant IPS actor (the conformance expectations for implementation for IPS are satisfied when implementing AU PS actor requirements).
 * A conformant AU PS actor IS NOT a conformant AU Core actor. AU Core, like IPA, defines actors for FHIR resource access via a RESTful API, AU PS (and IPS) do not define 'access' they define production and consumption of patient summary documents.
 
@@ -71,7 +71,6 @@ Additional requirements include:
 
 A summary of differences is provided in the sections below. While every effort has been made to ensure this page is consistent with the requirements of AU PS this is not a normative part of the specification.
 
-
 #### Additionally Profiled Resources
 
 AU PS profiles the following resources that are not profiled in IPS:
@@ -88,7 +87,7 @@ In addition to the profiles defined in this implementation guide and in IPS, the
   - [AU Core Body Weight](https://build.fhir.org/ig/hl7au/au-fhir-core/StructureDefinition-au-core-bodyweight.html)
   - [AU Core Heart Rate](https://build.fhir.org/ig/hl7au/au-fhir-core/StructureDefinition-au-core-heartrate.html)
   - [AU Core Respiration Rate](https://build.fhir.org/ig/hl7au/au-fhir-core/StructureDefinition-au-core-resprate.html)
-  - [AU Core Waist Circumference](https://build.fhir.org/ig/hl7au/au-fhir-core/StructureDefinition-au-core-waistcircum.html) profiles FHIR profile [VitalSigns](https://hl7.org/fhir/R4/vitalsigns.html)
+  - [AU Core Waist Circumference](https://build.fhir.org/ig/hl7au/au-fhir-core/StructureDefinition-au-core-waistcircum.html)
 
 #### Must Support Extensions
 No extensions are labelled as *Must Support* in IPS. In AU PS the following extensions are labelled as *Must Support*:
@@ -97,27 +96,27 @@ No extensions are labelled as *Must Support* in IPS. In AU PS the following exte
 * [Individual Gender Identity](https://hl7.org/fhir/extensions/5.1.0/StructureDefinition-individual-genderIdentity.html) in [AU PS Patient](StructureDefinition-au-ps-patient.html)
 
 #### Terminology
+ A full list of terminology differences is not provided, refer to the AU PS profiles and the [Terminology](terminology.html) page to understand the terminology supported for use in AU PS. Some differences are mentioned below to highlight their potential relevance to implementers of the AU PS.
+
 AU PS:
 * adopts terminology bound in AU Core in preference to IPS where the IPS binding strength is equivalent or weaker.
 * localised terminology bindings additionally profiled resources and supported extensions.
 * in some elements define support for more than one value set, for this list and how producers and consumers are to interpret support, see the table in the section [Must Support - Choice of Terminology](general-requirements.html#must-support---choice-of-terminology).
 * for a limited set of elements, the terminology constraint is stronger than IPS (e.g. preferred -> extensible).
-
- A full list of terminology differences is not provided, refer to the AU PS profiles and the [Terminology](terminology.html) page to understand the terminology supported for use in AU PS. Some differences are mentioned below to highlight their potential relevance to implementers of the AU PS.
  
 In many cases the difference between value sets bound in AU Core and IPS is the IPS use of international SNOMED CT concepts versus the AU Core use of SNOMED CT-AU concepts and international SNOMED CT concepts. Typically these Australian value sets are bound as [preferred](https://hl7.org/fhir/R4/terminologies.html#extensible) in AU PS profiles; these are recommendations for use in the Australian healthcare context but do not prevent other coding or text only representations. 
 
 #### Cardinality
-While AU PS profiles do not apply any unique maximum cardinality constraints, AU PS makes a number of elements mandatory (minimum cardinality > 0) that are not mandatory in IPS either directly in the AU PS profile or by reference to an AU Core profile. These constrained cardinalities are typically:
-- additionally constrained resource types mandate reference to the patient.
-- simple observation profiles (e.g. body temperature or smoking status) require either value or data absent reason.
-- profiles of individuals and entities (e.g. Location, Patient, RelatedPerson, PractitionerRole, Practitioner) have additional mandatory administrative elements e.g. Patient.identifier or PractitionerRole.practitioner.
+While AU PS profiles do not apply any unique maximum cardinality constraints, AU PS makes a number of elements mandatory (minimum cardinality > 0) that are not mandatory in IPS either directly in the AU PS profile or by reference to an AU Core profile. These constrained cardinalities are typically in:
+- additionally profiled resource types that mandate reference to the patient.
+- simple observation profiles (e.g. body temperature or smoking status) that require either value or data absent reason.
+- profiles of individuals and entities (e.g. Location, Patient, RelatedPerson, PractitionerRole, Practitioner) that have additional mandatory administrative elements e.g. Patient.identifier or PractitionerRole.practitioner.
 
 #### Identifiers
-IPS does not provide recommendations on the types of identifiers used in resources, this is expected to be defined as needed in jurisdictional specifications. In AU PS, a number of optional national Australian healthcare identifiers are labelled with *Must Support*, see the table in the section [Must Support - Choice of Identifiers](general-requirements.html#must-support---choice-of-identifiers) for the full list and to interpret the support requirements for producers and consumers.
+IPS does not provide recommendations on the types of identifiers used in resources, this is expected to be defined as needed in jurisdictional specifications. In AU PS, a number of optional national Australian healthcare identifiers are labelled with *Must Support*, see the table in the section [Must Support - Choice of Identifiers](general-requirements.html#must-support---choice-of-identifiers) for the full list.
 
 #### Fixed Values
-AU PS includes additional fixed value constraints to some elements in profiles either directly in an AU PS profile or via reference to an AU Core profile. These additional fixed values are typically in Observation profiles and add a fixed SNOMED CT concept in `Observation.code` in addition to the fixed LOINC code. 
+AU PS includes additional fixed value constraints on some elements either directly in an AU PS profile or via reference to an AU Core profile. These additional fixed values are typically in Observation profiles and add a fixed SNOMED CT concept in `Observation.code` in addition to the fixed LOINC code. 
 
 ### Considerations When Consuming IPS Documents in AU Healthcare Context
 
