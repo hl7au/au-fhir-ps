@@ -29,16 +29,16 @@ The [Actor Definitions](actors.html) page lists the AU PS actors defined for thi
 ### Mandatory Elements
 Mandatory elements are elements with minimum cardinality > 0. When an element is mandatory, the data is expected to always be present. Very rarely, it may not be, and in this circumstance the requirements defined by AU Core for [Missing Data](https://build.fhir.org/ig/hl7au/au-fhir-core/general-requirements.html#missing-data) **SHALL** be applied. 
 
-An element can be both *Must Support* and mandatory and in this circumstance the requirements defined for [Missing Must Support and Mandatory Data](general-requirements.html#missing-must-support-and-mandatory-data) **SHALL** be applied.
+An element can be both *Must Support* and mandatory, and in this circumstance the requirements defined for [Missing Must Support and Mandatory Data](general-requirements.html#missing-must-support-and-mandatory-data) **SHALL** be applied.
 
 The convention in this guide is to mark all mandatory and conditionally mandatory elements as *Must Support* unless they are nested under an optional element.
 
 ### Missing Data, Empty Sections, Known Absence of Data
-It is important to differentiate between:
-* affirmatively stating that a patient has "no known X" or "history of X" (for example that a patient has no known allergies) versus 
-* not having data in the record for a particular section (for example where a source system does not have information on a patient's allergies) versus 
-* asserting that this data is not available due to a workflow reason (for example allergies not were not reviewed and are unknown) versus 
-* not having data for a particular element (for example the onset date of a particular allergy is not available in the system and the system does not know the reason for the absence).
+It is important to differentiate between the following mutually exclusive circumstances:
+* Affirmatively stating that a patient has "no known X" or "no history of X" (for example, that a patient has no known allergies). 
+* Not having data in the record for a particular section (for example, where a source system does not have information on a patient's allergies). 
+* Asserting that this data is not available due to a workflow reason (for example, allergies were not reviewed and are unknown). 
+* Not having data for a particular element (for example, the onset date of a particular allergy is not available in the system and the system does not know the reason for the absence).
 
 In the above circumstances the following is applied:
 * Where data is missing for an element within a resource and the reason is not known, systems **SHALL** implement the requirements of the [Missing Data](general-requirements.html#missing-data) section.
@@ -91,7 +91,8 @@ An AU PS Producer **SHOULD** omit non-mandatory sections when the source system 
 For a mandatory section (minimum cardinality is > 0), the section **SHALL** be present *even if* the source system does not have any information for that section or know the reason the information is absent. In this circumstance, an AU PS Producer **SHALL**:
 
 * use the code `unavailable` from the [List Empty Reasons](http://terminology.hl7.org/CodeSystem/list-empty-reason) code system
-* AU PS Consumers are advised that other meaningful values can be captured in `Composition.section.emptyReason` beyond missing or suppressed.
+
+AU PS Consumers are advised that other meaningful values can be captured in `Composition.section.emptyReason` beyond missing or suppressed.
   
     Example: AU PS - Allergies and Intolerances Section where the patient's allergy information is not available.
     ~~~
@@ -128,12 +129,12 @@ For a mandatory section (minimum cardinality is > 0), the section **SHALL** be p
 
 #### Known Absence of Data Due to Workflow
 
-Where the system does not have information for a particular section and there is a known workflow reason (for example the patient preferred not to answer), the system **SHOULD** represent that reason by populating `Composition.section.emptyReason`:
+Where the system does not have information for a particular section and there is a known workflow reason (for example, the patient preferred not to answer), the system **SHOULD** represent that reason by populating `Composition.section.emptyReason`:
 * Prefer not to answer may be represented by sending the [Data Absent Reason](http://terminology.hl7.org/CodeSystem/data-absent-reason) code "asked-declined"
 * Asked but not known may be represented by sending the [Data Absent Reason](http://terminology.hl7.org/CodeSystem/data-absent-reason) code "asked-unknown"
 * Where the workflow does not support obtaining the information, it may be represented by sending the [List Empty Reason](https://hl7.org/fhir/R4/codesystem-list-empty-reason.html) code "notasked"
 
-    Example: AU PS - Allergies and Intolerances Section where the patient's allergy information is not available.
+    Example: AU PS - Allergies and Intolerances Section where there is a workflow reason the patient's allergy information is not available.
     ~~~
         ...
         "section" : [
@@ -168,11 +169,11 @@ Where the system does not have information for a particular section and there is
 
 #### No Known X
 
-Where the system can assert "no known X" (for example no known conditions) or "no history of X" (for example no history of cardiovascular system disease), the system **SHOULD** populate `Composition.section.entry` in accordance with the relevant profile specific implementation guidance. 
+Where the system can assert "no known X" (for example, no known conditions) or "no history of X" (for example, no history of cardiovascular system disease), the system **SHOULD** populate `Composition.section.entry` in accordance with the relevant profile specific implementation guidance. 
 
 For example, to represent that a patient does not have an allergy or category of allergies, an appropriate negation code (e.g. 716186003 \|No known allergy\| or 1003774007 \|No known Hevea brasiliensis latex allergy\|) is used in `AllergyIntolerance.code` as per the profile specific implementation guidance for [AU PS AllergyIntolerance](StructureDefinition-au-ps-allergyintolerance.html).
 
-In AU PS this approach is preferred to using `Composition.section.emptyReason` due to the widely known and implemented patterns established within FHIR, IPS, and AU Core, to assert "no known X" or "no history of X". 
+In AU PS this approach is preferred to using `Composition.section.emptyReason` due to the widely known and implemented patterns established within FHIR, IPS, and AU Core to assert "no known X" or "no history of X". 
 
 
 Example: Condition resource representing 'No Known Problems'
@@ -246,7 +247,7 @@ Actor | Code | Definition | Notes
 | [SHOULD:display](https://hl7.org/fhir/extensions/CodeSystem-obligation.html#obligation-SHOULD.58display) | Conformant applications SHOULD display the value of this element when presenting the data to a human user. | Exactly how it is displayed is not specified, but it means that a human looking at the content of the resource is made aware of the value of the element so that they can consider the meaning of the resource. In AU PS, most elements marked as _Must Support_ have this obligation applied.
 [AU PS Producer actor](ActorDefinition-au-ps-actor-producer.html) |[SHALL:populate](https://hl7.org/fhir/extensions/CodeSystem-obligation.html#obligation-SHALL.58populate)|Conformant applications producing resources SHALL include this element if a value is known and allowed to be shared| This implementation obligation means that whenever the producer knows the correct value for an element, it populates it. This is NOT the same as cardinality, as a 'populate' element can be omitted if no data exists or the data that exists is prohibited from being shared.
 | [SHALL:able-to-populate](https://hl7.org/fhir/extensions/CodeSystem-obligation.html#obligation-SHALL.58able-to-populate) | Conformant applications producing resources SHALL be able to correctly populate this element. | Typically, this means that an application needs to demonstrate during some conformance testing process that there are some conditions under which it populates the element with a correct value. (i.e. not a data-absent-reason or equivalent.) This obligation does not impose expectations on the circumstances in which the element will be sent, only that it can be in at least some situations.
-| [SHALL:populate-if-known](https://hl7.org/fhir/extensions/CodeSystem-obligation.html#obligation-SHALL.58populate-if-known) | Conformant applications producing resources SHALL correctly populate this element if they know a value for the element, but it is acceptable if the system is unable to ever know a value for the element. | This obligation does not impose a requirement to be able to know a value, unlike populate and able-to-populate which do. 'Knowing' an element means that a value for the element is available in memory, persistent store, or is otherwise available within the system claiming conformance. With the exception of AU PS Composition, all profiles referenced by AU PS Bundle have this obligation applied to elements marked as _Must Support_ have this obligation applied.
+| [SHALL:populate-if-known](https://hl7.org/fhir/extensions/CodeSystem-obligation.html#obligation-SHALL.58populate-if-known) | Conformant applications producing resources SHALL correctly populate this element if they know a value for the element, but it is acceptable if the system is unable to ever know a value for the element. | This obligation does not impose a requirement to be able to know a value, unlike populate and able-to-populate which do. 'Knowing' an element means that a value for the element is available in memory, persistent store, or is otherwise available within the system claiming conformance. With the exception of AU PS Composition, all profiles referenced by AU PS Bundle have this obligation applied to elements marked as _Must Support_.
 | [SHOULD:able-to-populate](https://hl7.org/fhir/extensions/CodeSystem-obligation.html#obligation-SHOULD.58able-to-populate) | Conformant applications producing resources SHOULD be able to correctly populate this element. | Typically, this means that an application needs to demonstrate during some conformance testing process that there are some conditions under which it populates the element with a correct value. (i.e. not a data-absent-reason or equivalent.) This obligation does not impose expectations on the circumstances in which the element will be sent, only that it can be in at least some situations.
 | [SHOULD:populate](https://hl7.org/fhir/extensions/CodeSystem-obligation.html#obligation-SHOULD.58populate)|Conformant applications producing resources SHOULD include this element if a value is known and allowed to be shared.| This implementation obligation means that whenever the producer knows the correct value for an element, it should populate it.
 | [SHOULD:populate-if-known](https://hl7.org/fhir/extensions/CodeSystem-obligation.html#obligation-SHOULD.58populate-if-known) | Conformant applications producing resources SHOULD correctly populate this element if they know a value for the element, but it is acceptable if the system is unable to ever know a value for the element. | This obligation does not impose a requirement to be able to know a value, unlike populate and able-to-populate which do. 'Knowing' an element means that a value for the element is available in memory, persistent store, or is otherwise available within the system claiming conformance. 
@@ -256,7 +257,7 @@ Actor | Code | Definition | Notes
 *Must Support* elements are treated differently between [AU PS Consumer](ActorDefinition-au-ps-actor-consumer.html) and [AU PS Producer](ActorDefinition-au-ps-actor-producer.html) actors. *Must Support* on a profile element **SHALL** be interpreted as follows.
 
 #### Presentation of Must Support and Obligation in Profiles
-All elements with *Must Support* in AU PS are accompanied by an explicit obligation that identifies the expectations for one or more actors. When rendered in an implementation guide, each profile is presented in different formal views under tabs labelled "Differential Table", "Key Elements Table", and "Snapshot Table". Elements labelled with *Must Support* and stated obligations in these views are represented by <span style="padding-left: 3px; padding-right: 3px; color: white; background-color: red" title="This element must be supported">S</span><span style="padding-left: 3px; padding-right: 3px; color: white; background-color: red" title="This element has obligations">O</span> as shown below. 
+All elements with *Must Support* in AU PS are accompanied by an explicit obligation that identifies the expectations for one or more actors. When rendered in an implementation guide, each profile is presented in different formal views under tabs labelled "Differential Table", "Key Elements Table", and "Snapshot Table". Elements labelled with *Must Support* and stated obligations in these views are represented by <span style="padding-left: 1px; padding-right: 1px; color: white; background-color: red" title="This element must be supported">S</span><span style="padding-left: 1px; padding-right: 1px; color: white; background-color: red" title="This element has obligations">O</span> as shown below. 
 
  <div> 
     <img src="allergyintolerance-keyelementstable.png" alt="AU PS AllergyIntolerance Key Elements Table" style="width:75%"/>
@@ -309,8 +310,8 @@ If a complex element is labelled as *Must Support*:
 - AU PS Consumers **SHALL** consume resources if the element is present and containing any valid sub-element, and **SHOULD** display the value of this element (if the SHOULD:display Obligation is defined) when presenting the data to a human user.
 
 For example, the AU PS MedicationRequest Profile `note` element is labelled *Must Support* and has no *Must Support* sub-elements. When claiming conformance to this profile:
-- AU PS Producers **SHALL** correctly populate a value in any valid `MedicationRequest.note` sub-element if a value is known e.g. `MedicationRequest.note.text`.
-- AU PS Consumers **SHALL** consume the MedicationRequest resource if `MedicationRequest.note` is present and containing any valid sub-elements, and **SHOULD** display the value of `MedicationRequest.note` when presenting the data to a human user.
+- AU PS Producers **SHALL** correctly populate a value in any valid `AllergyIntolerance.note` sub-element if a value is known e.g. `AllergyIntolerance.note.text`.
+- AU PS Consumers **SHALL** consume the MedicationRequest resource if `AllergyIntolerance.note` is present and containing any valid sub-elements, and **SHOULD** display the value of `AllergyIntolerance.note` when presenting the data to a human user.
 
 If a sub-element is labelled as *Must Support*: 
 - AU PS Producers **SHALL** correctly populate the element with all *Must Support* sub-elements for which a value is known. 
