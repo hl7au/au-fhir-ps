@@ -1756,8 +1756,8 @@
       </extension>
       <path value="Composition.section"/>
       <sliceName value="sectionFunctionalStatus"/>
-      <short value="Patient Summary Functional Status"/>
-      <definition value="The functional status section shall contain a narrative description of capability of the patient to perform acts of daily living, including possible needs of the patient to be continuously assessed by third parties. The invalidity status may in fact influence decisions about how to administer treatments.&#xD;&#xA;Profiles to express disabilities and functional assessments will be specified by future versions of this guide."/>
+      <short value="Patient Summary Functional Status Section"/>
+      <definition value="Information about a patient's functional status including a description of capability of the patient to perform acts of daily living, including possible needs of the patient to be continuously assessed by third parties. The invalidity status may in fact influence decisions about how to administer treatments.&#xD;&#xA;Profiles to express disabilities and functional assessments will be specified by future versions of this guide."/>
       <min value="0"/>
       <max value="1"/>
       <mustSupport value="true"/>
@@ -1834,7 +1834,7 @@
       <path value="Composition.section"/>
       <sliceName value="sectionPastIllnessHx"/>
       <short value="Patient Summary History of Past Illness Section"/>
-      <definition value="The History of Past Illness section contains a description of the conditions the patient suffered in the past."/>
+      <definition value="Information about a patient's conditions that were suffered in the past and are no longer tracked in the Problem List."/>
       <min value="0"/>
       <max value="1"/>
       <mustSupport value="true"/>
@@ -1900,7 +1900,7 @@
       <path value="Composition.section"/>
       <sliceName value="sectionPregnancyHx"/>
       <short value="Patient Summary History of Pregnancy Section"/>
-      <definition value="The history of pregnancy section shall contain information about whether the patient is currently pregnant or not.&#xD;&#xA;It may contain addition summarizing information about the outcome of earlier pregnancies."/>
+      <definition value="Information about whether a patient is currently pregnant or not and can contain addition summarising information about the outcome of earlier pregnancies."/>
       <min value="0"/>
       <max value="1"/>
       <mustSupport value="true"/>
@@ -1976,7 +1976,7 @@
       <path value="Composition.section"/>
       <sliceName value="sectionPatientStory"/>
       <short value="Patient Summary Patient Story Section"/>
-      <definition value="The section contains narrative text along with optional resources that express what matters to a patient. This may include needs, strengths, values, concerns and preferences to others providing support and care. The patient’s story, provided here, may be told by the patient or by a proxy."/>
+      <definition value="Information about what matters to a patient. This can include needs, strengths, values, concerns and preferences to others providing support and care. The patient's story, provided here, can be told by the patient or by a proxy."/>
       <min value="0"/>
       <max value="1"/>
       <mustSupport value="true"/>
@@ -2020,7 +2020,7 @@
       <path value="Composition.section"/>
       <sliceName value="sectionPlanOfCare"/>
       <short value="Patient Summary Plan of Care Section"/>
-      <definition value="The plan of care section contains a narrative description of the expectations for care including proposals, goals, and order requests for monitoring, tracking, or improving the condition of the patient."/>
+      <definition value="Information about a patient's plans of care containing the expectations for care including proposals, goals, and order requests for monitoring, tracking, or improving the condition of the patient."/>
       <min value="0"/>
       <max value="1"/>
       <mustSupport value="true"/>
@@ -2096,7 +2096,7 @@
       <path value="Composition.section"/>
       <sliceName value="sectionSocialHistory"/>
       <short value="Patient Summary Social History Section"/>
-      <definition value="The social history section contains a description of the person’s Health related &quot;lifestyle factors&quot; or &quot;lifestyle observations&quot; (e.g. smoke habits; alcohol consumption; diets, risky habits.)"/>
+      <definition value="Information about a patient's health related &quot;lifestyle factors&quot; or &quot;lifestyle observations&quot; (e.g. smoke habits, alcohol consumption, diets, risky habits.)"/>
       <min value="0"/>
       <max value="1"/>
       <mustSupport value="true"/>
@@ -2173,7 +2173,7 @@
       <sliceName value="sectionVitalSigns"/>
       <label value="Vital signs"/>
       <short value="Patient Summary Vital Signs Section"/>
-      <definition value="The Vital signs section includes blood pressure, body temperature, heart rate, and respiratory rate. It may also include other clinical findings, such as height, weight, body mass index, head circumference, and pulse oximetry. In particular, notable vital signs or physical findings such as the most recent, maximum and/or minimum, baseline, or relevant trends may be included"/>
+      <definition value="Information about a patient's vital signs including blood pressure, body temperature, heart rate, and respiratory rate. It can also include other clinical findings, such as height, weight, body mass index, head circumference, and pulse oximetry. In particular, notable vital signs or physical findings such as the most recent, maximum and/or minimum, baseline, or relevant trends may be included"/>
       <min value="0"/>
       <max value="1"/>
       <mustSupport value="true"/>
