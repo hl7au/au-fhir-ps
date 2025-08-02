@@ -641,7 +641,7 @@
     <element id="Composition.section.extension:section-note">
       <path value="Composition.section.extension"/>
       <sliceName value="section-note"/>
-      <short value="Additional notes that apply to the section (but not to specific resource)."/>
+      <short value="Additional notes that apply to the section (but not to specific resource)"/>
       <definition value="Additional notes that apply to the section (but not to specific resource)."/>
       <min value="0"/>
       <max value="1"/>
@@ -775,8 +775,8 @@
         </discriminator>
         <rules value="open"/>
       </slicing>
-      <short value="Clinical problems or conditions currently being monitored for the patient."/>
-      <definition value="It lists and describes clinical problems or conditions currently being monitored for the patient.  This entry shall be used to document that no information about problems is available, or that no relevant problems are known."/>
+      <short value="Clinical problems or conditions currently being monitored for the patient"/>
+      <definition value="The clinical problems or conditions currently being monitored for the patient.  An entry can be used to document that no information about problems is available, or that no relevant problems are known."/>
       <type>
         <code value="Reference"/>
         <targetProfile value="http://hl7.org/fhir/StructureDefinition/Condition"/>
@@ -917,8 +917,8 @@
         </discriminator>
         <rules value="open"/>
       </slicing>
-      <short value="Relevant allergies or intolerances (conditions) for that patient."/>
-      <definition value="It lists the relevant allergies or intolerances (conditions) for that patient, describing the kind of reaction (e.g. rash, anaphylaxis,..); preferably the agents that cause it; and optionally the criticality and the certainty of the allergy.&#xD;&#xA;At a minimum, it should list currently active and any relevant historical allergies and adverse reactions.&#xD;&#xA; This entry shall be used to document that no information about allergies is available, or that no allergies are known ."/>
+      <short value="Relevant allergies or intolerances (conditions) for that patient"/>
+      <definition value="The relevant allergies or intolerances (conditions) for that patient, describing the kind of reaction (e.g. rash, anaphylaxis,..); preferably the agents that cause it; and optionally the criticality and the certainty of the allergy.&#xD;&#xA;At a minimum, will include currently active and any relevant historical allergies and adverse reactions.&#xD;&#xA; This entry can be used to document that no information about allergies is available, or that no allergies are known ."/>
       <type>
         <code value="Reference"/>
         <targetProfile value="http://hl7.org/fhir/StructureDefinition/AllergyIntolerance"/>
@@ -1060,7 +1060,7 @@
         <rules value="open"/>
       </slicing>
       <short value="Medications relevant for the scope of the patient summary"/>
-      <definition value="This list the medications relevant for the scope of the patient summary or it is used to indicate that the subject is known not to be on any relevant medication; either that no information is available about medications."/>
+      <definition value="The medications relevant for the scope of the patient summary, or an indication that the subject is known not to be on any relevant medication; either that no information is available about medications."/>
       <type>
         <code value="Reference"/>
         <targetProfile value="http://hl7.org/fhir/StructureDefinition/MedicationStatement"/>
@@ -1198,8 +1198,8 @@
         </discriminator>
         <rules value="open"/>
       </slicing>
-      <short value="Patient's immunization status and pertinent history."/>
-      <definition value="It defines the patient's current immunization status and pertinent immunization history.&#xD;&#xA;The primary use case for the Immunization Section is to enable communication of a patient's immunization status.&#xD;&#xA;It may contain the entire immunization history that is relevant to the period of time being summarized. This entry shall be used to document that no information about immunizations is available, or that no immunizations are known."/>
+      <short value="Patient's immunisation status and pertinent history"/>
+      <definition value="The patient's current immunisation status and pertinent immunisation history.&#xD;&#xA;The primary use case is to enable communication of a patient's immunisation status.&#xD;&#xA;It can contain the entire immunisation history relevant to the period of time being summarised. This entry can be used to document that no information about immunisations is available, or that no immunisations are known."/>
       <type>
         <code value="Reference"/>
         <targetProfile value="http://hl7.org/fhir/StructureDefinition/Immunization"/>
@@ -1301,8 +1301,8 @@
         </discriminator>
         <rules value="open"/>
       </slicing>
-      <short value="Relevant observation results collected on the patient or produced on in-vitro biologic specimens collected from the patient."/>
-      <definition value="Relevant observation results collected on the patient or produced on in-vitro biologic specimens collected from the patient. Some of these results may be laboratory results, others may be anatomic pathology results, others, radiology results, and others, clinical results."/>
+      <short value="Relevant observation results collected on the patient or produced on in-vitro biologic specimens collected from the patient"/>
+      <definition value="The relevant observation results collected on the patient or produced on in-vitro biologic specimens collected from the patient. Some results could be laboratory results, others could be anatomic pathology results, others could be radiology results, and others could be clinical results."/>
       <type>
         <code value="Reference"/>
         <targetProfile value="http://hl7.org/fhir/StructureDefinition/Observation"/>
@@ -1435,7 +1435,7 @@
       <path value="Composition.section"/>
       <sliceName value="sectionProceduresHx"/>
       <short value="Patient Summary History of Procedures Section"/>
-      <definition value="Information about a patient's past procedures that are pertinent to the scope of this document.&#xD;&#xA;Procedures could refer, for example to:&#xD;&#xA;1. Invasive Diagnostic procedure:e.g. Cardiac catheterization; (the results of these procedure are documented in the results section)&#xD;&#xA;2. Therapeutic procedure: e.g. dialysis;&#xD;&#xA;3. Surgical procedure: e.g. appendectomy"/>
+      <definition value="Information about a patient's past procedures that are pertinent to the scope of this patient summary.&#xD;&#xA;Procedures could refer, for example to:&#xD;&#xA;1. Invasive Diagnostic procedure:e.g. Cardiac catheterization; (the results of these procedure are documented in the results section)&#xD;&#xA;2. Therapeutic procedure: e.g. dialysis;&#xD;&#xA;3. Surgical procedure: e.g. appendectomy"/>
       <min value="0"/>
       <max value="1"/>
       <mustSupport value="true"/>
@@ -1463,8 +1463,8 @@
         </discriminator>
         <rules value="open"/>
       </slicing>
-      <short value="Patient past procedures pertinent to the scope of this document."/>
-      <definition value="It lists the patient past procedures that are pertinent to the scope of this document.&#xD;&#xA;Procedures may refer for example to:&#xD;&#xA;1. Invasive Diagnostic procedure:e.g. Cardiac catheterization; (the results of these procedure are documented in the results section)&#xD;&#xA;2. Therapeutic procedure: e.g. dialysis;&#xD;&#xA;3. Surgical procedure: e.g. appendectomy. This entry shall be used to document that no information about past procedures is available, or that no relevant past procedures are known."/>
+      <short value="Patient past procedures pertinent to the scope of this patient summary"/>
+      <definition value="The patient's past procedures that are pertinent to the scope of this patient summary.&#xD;&#xA;Procedures can refer for example to:&#xD;&#xA;1. Invasive Diagnostic procedure:e.g. Cardiac catheterization; (the results of these procedure are documented in the results section)&#xD;&#xA;2. Therapeutic procedure: e.g. dialysis;&#xD;&#xA;3. Surgical procedure: e.g. appendectomy. This entry shall be used to document that no information about past procedures is available, or that no relevant past procedures are known."/>
       <type>
         <code value="Reference"/>
         <targetProfile value="http://hl7.org/fhir/StructureDefinition/Procedure"/>
@@ -1562,8 +1562,8 @@
         </discriminator>
         <rules value="open"/>
       </slicing>
-      <short value="Patient history of medical device use."/>
-      <definition value="It describes the patient history of medical device use. This entry shall be used to document that no information about medical device use is available, or that no relevant medical device use is known."/>
+      <short value="Patient history of medical device use"/>
+      <definition value="The patient's history of medical device use. This entry can be used to document that no information about medical device use is available, or that no relevant medical device use is known."/>
       <type>
         <code value="Reference"/>
         <targetProfile value="http://hl7.org/fhir/StructureDefinition/DeviceUseStatement"/>
@@ -1653,8 +1653,8 @@
         </discriminator>
         <rules value="open"/>
       </slicing>
-      <short value="Narrative description of the patient's advance directive."/>
-      <definition value="Contains a narrative description or a Consent entry with information about the patient's advance directive."/>
+      <short value="A patient's advance directives"/>
+      <definition value="The patient's advance directive."/>
       <type>
         <code value="Reference"/>
         <targetProfile value="http://hl7.org/fhir/StructureDefinition/Consent"/>
@@ -1719,8 +1719,8 @@
         </discriminator>
         <rules value="open"/>
       </slicing>
-      <short value="Alert information."/>
-      <definition value="Contains alert information to be communicated. May optionally reference other resources in the patient summary."/>
+      <short value="Alert information"/>
+      <definition value="The alert information to be communicated; can optionally reference other resources in the patient summary."/>
       <type>
         <code value="Reference"/>
         <targetProfile value="http://hl7.org/fhir/StructureDefinition/Flag"/>
@@ -1785,8 +1785,8 @@
         </discriminator>
         <rules value="open"/>
       </slicing>
-      <short value="Optional entry used to represent disabilities and functional assessments"/>
-      <definition value="It describes capabilities of the patient to perform acts of daily living, including possible needs of the patient to be continuously assessed by third parties. The invalidity status may in fact influence decisions about how to administer treatments.&#xD;&#xA;Profiles to express disabilities and functional assessments will be specified by future versions of this guide."/>
+      <short value="Disabilities and functional assessments"/>
+      <definition value="The patient's capability to perform acts of daily living, including possible needs of the patient to be continuously assessed by third parties. The invalidity status may in fact influence decisions about how to administer treatments.&#xD;&#xA;Profiles to express disabilities and functional assessments are expected be specified by future versions of this guide."/>
       <type>
         <code value="Reference"/>
         <targetProfile value="http://hl7.org/fhir/StructureDefinition/Condition"/>
@@ -1862,8 +1862,8 @@
         </discriminator>
         <rules value="open"/>
       </slicing>
-      <short value="Conditions the patient suffered in the past."/>
-      <definition value="It contains a description of the conditions the patient suffered in the past."/>
+      <short value="Conditions the patient suffered in the past"/>
+      <definition value="The conditions the patient suffered in the past that were suffered in the past and are no longer tracked in the Problem List."/>
       <type>
         <code value="Reference"/>
         <targetProfile value="http://hl7.org/fhir/StructureDefinition/Condition"/>
@@ -1928,8 +1928,8 @@
         </discriminator>
         <rules value="open"/>
       </slicing>
-      <short value="Current pregnancy status and, optionally, information about the outcome of earlier pregnancies."/>
-      <definition value="It contains information about whether the patient is currently pregnant or not.&#xD;&#xA;It may contain addition summarizing information about the outcome of earlier pregnancies."/>
+      <short value="Current pregnancy status and, optionally, information about the outcome of earlier pregnancies"/>
+      <definition value="Information about whether the patient is currently pregnant or not.&#xD;&#xA;It can contain addition summarising information about the outcome of earlier pregnancies."/>
       <type>
         <code value="Reference"/>
         <targetProfile value="http://hl7.org/fhir/StructureDefinition/Observation"/>
@@ -1997,8 +1997,8 @@
     </element>
     <element id="Composition.section:sectionPatientStory.entry">
       <path value="Composition.section.entry"/>
-      <short value="Patient Story resources."/>
-      <definition value="Contains resources to support the Patient Story. Instances of DocumentReference or any other suitable resource type may be used."/>
+      <short value="Patient Story resources"/>
+      <definition value="The information about what matters to a patient. This can include needs, strengths, values, concerns and preferences to others providing support and care."/>
     </element>
     <element id="Composition.section:sectionPlanOfCare">
       <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
@@ -2048,8 +2048,8 @@
         </discriminator>
         <rules value="open"/>
       </slicing>
-      <short value="Optional entry used to represent structured care plans"/>
-      <definition value="Dynamic, personalized plan including identified needed healthcare activity, health objectives and healthcare goals, relating to one or more specified health issues in a healthcare process [Source EN ISO 13940]"/>
+      <short value="Structured care plans"/>
+      <definition value="The dynamic, personalised care plans including identified needed healthcare activity, health objectives and healthcare goals, relating to one or more specified health issues in a healthcare process [Source EN ISO 13940]"/>
       <type>
         <code value="Reference"/>
         <targetProfile value="http://hl7.org/fhir/StructureDefinition/CarePlan"/>
@@ -2124,8 +2124,8 @@
         </discriminator>
         <rules value="open"/>
       </slicing>
-      <short value="Health related &quot;lifestyle factors&quot; or &quot;lifestyle observations&quot; (e.g. smoke habits; alcohol consumption; diets, risky habits.)"/>
-      <definition value="Description of the person’s Health related “lifestyle factors&quot; or &quot;lifestyle observations&quot; (e.g. smoke habits; alcohol consumption; diets, risky habits.)"/>
+      <short value="Health related &quot;lifestyle factors&quot; or &quot;lifestyle observations&quot;"/>
+      <definition value="The patient's health related &quot;lifestyle factors&quot; or &quot;lifestyle observations&quot; (e.g. smoke habits, alcohol consumption, diets, risky habits.)"/>
       <type>
         <code value="Reference"/>
         <targetProfile value="http://hl7.org/fhir/StructureDefinition/Observation"/>
@@ -2201,8 +2201,8 @@
         </discriminator>
         <rules value="open"/>
       </slicing>
-      <short value="Notable vital signs or physical findings."/>
-      <definition value="Notable vital signs or physical findings as: blood pressure, body temperature, heart rate, and respiratory rate. It may also include other clinical findings, such as height, weight, body mass index, head circumference, and pulse oximetry. In particular, notable vital signs or physical findings such as the most recent, maximum and/or minimum, baseline, or relevant trends may be included"/>
+      <short value="Notable vital signs or physical findings"/>
+      <definition value="The notable vital signs or physical findings as: blood pressure, body temperature, heart rate, and respiratory rate. It can also include other clinical findings, such as height, weight, body mass index, head circumference, and pulse oximetry. In particular, notable vital signs or physical findings such as the most recent, maximum and/or minimum, baseline, or relevant trends can be included"/>
       <type>
         <code value="Reference"/>
         <targetProfile value="http://hl7.org/fhir/StructureDefinition/Observation"/>
