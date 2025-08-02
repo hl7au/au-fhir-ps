@@ -1814,7 +1814,7 @@
         <targetProfile value="http://hl7.org/fhir/StructureDefinition/ClinicalImpression"/>
       </type>
     </element>
-    <element id="Composition.section:sectionPastIllnessHx">
+    <element id="Composition.section:sectionPastProblems">
       <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
         <extension url="code">
           <valueCode value="SHALL:handle"/>
@@ -1832,14 +1832,14 @@
         </extension>
       </extension>
       <path value="Composition.section"/>
-      <sliceName value="sectionPastIllnessHx"/>
+      <sliceName value="sectionPastProblems"/>
       <short value="Patient Summary History of Past Illness Section"/>
       <definition value="Information about a patient's conditions that were suffered in the past and are no longer tracked in the Problem List."/>
       <min value="0"/>
       <max value="1"/>
       <mustSupport value="true"/>
     </element>
-    <element id="Composition.section:sectionPastIllnessHx.code">
+    <element id="Composition.section:sectionPastProblems.code">
       <path value="Composition.section.code"/>
       <min value="1"/>
       <type>
@@ -1853,7 +1853,7 @@
         </coding>
       </patternCodeableConcept>
     </element>
-    <element id="Composition.section:sectionPastIllnessHx.entry">
+    <element id="Composition.section:sectionPastProblems.entry">
       <path value="Composition.section.entry"/>
       <slicing>
         <discriminator>
@@ -1870,7 +1870,7 @@
         <targetProfile value="http://hl7.org/fhir/StructureDefinition/DocumentReference"/>
       </type>
     </element>
-    <element id="Composition.section:sectionPastIllnessHx.entry:pastProblem">
+    <element id="Composition.section:sectionPastProblems.entry:pastProblem">
       <path value="Composition.section.entry"/>
       <sliceName value="pastProblem"/>
       <min value="0"/>
