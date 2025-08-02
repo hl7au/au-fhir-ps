@@ -5,7 +5,7 @@ AU Patient Summary (AU PS) complies with, and/or leverages, national and interna
 - [International Patient Summary Implementation Guide 2.0.0](https://build.fhir.org/ig/HL7/fhir-ips/)
 - [AU Core Implementation Guide 2.0.0](https://build.fhir.org/ig/hl7au/au-fhir-core/)
 
-Relationships between AU PS, AU Core, AUCDI, and the above key implementation guides are described in [Relationship with other IGs](relationship.html). 
+Relationships between AU PS, AUCDI, and the above key implementation guides are described in [Relationship with other IGs](relationship.html). 
 
 ### Profile Comparison
 As part of profile comparison, the requirements, constraints, and standards specified in a particular FHIR profile are evaluated. These requirements can include mandatory elements, *Must Support* elements, cardinality constraints, data types, terminology bindings, usage rules, extensions, rules on missing or suppressed data. 
@@ -224,7 +224,7 @@ AU PS compliant resources are compliant with IPA requirements for Missing Data. 
 
 No comparison is undertaken. AU PS does not define any FHIR specific interactions - no CapabilityStatement is defined. 
 
-Systems implementing AU Patient Summary **MAY** implement interactions defined other CapabilityStatements, for example:
+Systems implementing AU Patient Summary **MAY** implement interactions defined in other CapabilityStatements, for example:
 - [IPS Server Capability Statement](https://build.fhir.org/ig/HL7/fhir-ips/CapabilityStatement-ips-server.html)
 - [International Patient Access Server CapabilityStatement](https://hl7.org/fhir/uv/ipa/CapabilityStatement-ipa-server.html)
 - [International Patient Access Client CapabilityStatement](https://hl7.org/fhir/uv/ipa/CapabilityStatement-ipa-client.html)
