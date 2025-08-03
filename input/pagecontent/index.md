@@ -5,7 +5,7 @@ A Patient Summary is:
 * a health record extract comprising a core set of digital health and administrative data elements that provide a snapshot in time of a subject of care’s health information and healthcare.
 * designed for supporting use case scenarios including planned and unplanned care, continuity of care and transition of care.
 
-See [The AUPS](the-aups.html) for more information on the purpose, scope, context, and use of AU PS.
+See [The AU PS](the-aups.html) for more information on the purpose, scope, context, and use of AU PS.
 
 ### Project Background
 
