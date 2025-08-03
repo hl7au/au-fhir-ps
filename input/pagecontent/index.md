@@ -1,5 +1,13 @@
 {% include note-to-balloters.md -%}
 
+<div class="note-to-balloters" markdown="1">
+**Outstanding Changes Not Applied**
+- [AU PS AllergyIntolerance](StructureDefinition-au-ps-allergyintolerance.html):
+  - change AllergyIntolerance.reaction.manifestation binding to an NCTS Clinical Manifestation value set <a href="https://jira.hl7.org/browse/FHIR-47076">AU Base: FHIR-47076</a>
+- [AU PS Medication](StructureDefinition-au-ps-medication.html):
+  - Change Medication.ingredient.item[x] binding to update when the AU Base AMT Medicinal Product and Substances value set moves to be an NCTS managed value set <a href="https://jira.hl7.org/browse/FHIR-44781">AU Base: FHIR-44781</a>
+</div>
+
 ### Introduction
 AU Patient Summary (AU PS) is provided to support the use of patient summaries in HL7® FHIR®© in an Australian context. AU PS is based on [IPS](https://build.fhir.org/ig/HL7/fhir-ips/) and [AU Core](https://build.fhir.org/ig/hl7au/au-fhir-core), setting the minimum conformance expectations for implementing support for AU PS documents in systems.
 
