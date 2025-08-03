@@ -1,4 +1,5 @@
 {% include comparison-note-boilerplate.md %}
+{% include comparison-note-boilerplate.md %}
 
 ### Profile specific implementation guidance
 - Implementers need to be consider narrative content expectations and considerations, see the guidance in IPS [Narrative Content Guidance](https://build.fhir.org/ig/HL7/fhir-ips/Design-Conventions.html#narrative-content-guidance) for more information.
