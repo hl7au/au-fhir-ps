@@ -1,4 +1,4 @@
-{% include comparison-note-boilerplate.md %}
+{% include ips200-profilenote-to-balloters.md %}
 {% include comparison-note-boilerplate.md %}
 
 ### Profile Specific Implementation Guidance
