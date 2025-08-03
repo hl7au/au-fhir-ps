@@ -1,0 +1,5 @@
+<div class="note-to-balloters" markdown="1">
+
+**Ongoing IPS 2.0.0 Work**
+The content of this release of AU PS is based on the currently approved set of changes for IPS 2.0.0 as of 4 August 2025. Work on IPS 2.0.0 is ongoing and as such changes approved post publication of this release are expected on this profile. The [CI Build for IPS](https://build.fhir.org/ig/HL7/fhir-ips/) pre-applies the latest proposed changes, and can be used a a reference for potential changes to AU PS that will be inherited from IPS 2.0.0. [IPS Block Vote 12](https://jira.hl7.org/issues/?jql=project%20%3D%20FHIR%20AND%20Specification%20~%20%22International%20Patient%20Summary%22%20AND%20createdDate%20%3E%202023-01-01%20AND%20cf%5B11402%5D%20%3D%20Block-Vote-12) and [IPS Block Vote 13](https://jira.hl7.org/issues/?jql=project%20%3D%20FHIR%20AND%20Specification%20~%20%22International%20Patient%20Summary%22%20AND%20createdDate%20%3E%202023-01-01%20AND%20cf%5B11402%5D%20%3D%20Block-Vote-13) can be referred to for a list of the remaining IPS 2.0.0 changes to be approved.
+</div><!-- note-to-balloters -->
