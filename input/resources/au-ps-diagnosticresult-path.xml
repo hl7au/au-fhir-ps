@@ -411,6 +411,9 @@
       </extension>
       <path value="Observation.value[x]"/>
       <sliceName value="valueString"/>
+      <type>
+        <code value="string"/>
+      </type>
     </element>
     <element id="Observation.value[x]:valueQuantity">
       <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
@@ -439,6 +442,9 @@
       </extension>
       <path value="Observation.value[x]"/>
       <sliceName value="valueQuantity"/>
+      <type>
+        <code value="Quantity"/>
+      </type>
     </element>
     <element id="Observation.value[x]:valueCodeableConcept">
       <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
