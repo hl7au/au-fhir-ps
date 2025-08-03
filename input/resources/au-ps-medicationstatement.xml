@@ -350,7 +350,6 @@
         </extension>
       </extension>
       <path value="MedicationStatement.dateAsserted"/>
-			<min value="1"/>
 		</element>
     <element id="MedicationStatement.reasonCode">
 			<extension url="http://hl7.org/fhir/StructureDefinition/obligation">
