@@ -918,7 +918,7 @@
         <rules value="open"/>
       </slicing>
       <short value="Relevant allergies or intolerances (conditions) for that patient"/>
-      <definition value="The relevant allergies or intolerances (conditions) for that patient, describing the kind of reaction (e.g. rash, anaphylaxis, etc.); preferably the agents that cause it; and optionally the criticality and the certainty of the allergy.&#xD;&#xA;At a minimum, will include currently active and any relevant historical allergies and adverse reactions.&#xD;&#xA; This entry can be used to document that no information about allergies is available, or that no allergies are known ."/>
+      <definition value="The relevant allergies or intolerances (conditions) for that patient, describing the kind of reaction (e.g. rash, anaphylaxis, etc.); preferably the agents that cause it; and optionally the criticality and the certainty of the allergy.&#xD;&#xA;At a minimum, will include currently active and any relevant historical allergies and adverse reactions.&#xD;&#xA; An entry can be used to document that no information about allergies is available, or that no allergies are known."/>
       <type>
         <code value="Reference"/>
         <targetProfile value="http://hl7.org/fhir/StructureDefinition/AllergyIntolerance"/>
@@ -1199,7 +1199,7 @@
         <rules value="open"/>
       </slicing>
       <short value="Patient's immunisation status and pertinent history"/>
-      <definition value="The patient's current immunisation status and pertinent immunisation history.&#xD;&#xA;The primary use case is to enable communication of a patient's immunisation status.&#xD;&#xA;It can contain the entire immunisation history relevant to the period of time being summarised. This entry can be used to document that no information about immunisations is available, or that no immunisations are known."/>
+      <definition value="The patient's current immunisation status and pertinent immunisation history.&#xD;&#xA;The primary use case is to enable communication of a patient's immunisation status.&#xD;&#xA;It can contain the entire immunisation history relevant to the period of time being summarised. An entry can be used to document that no information about immunisations is available, or that no immunisations are known."/>
       <type>
         <code value="Reference"/>
         <targetProfile value="http://hl7.org/fhir/StructureDefinition/Immunization"/>
@@ -1435,7 +1435,7 @@
       <path value="Composition.section"/>
       <sliceName value="sectionProceduresHx"/>
       <short value="Patient Summary History of Procedures Section"/>
-      <definition value="Information about a patient's past procedures that are pertinent to the scope of this patient summary.&#xD;&#xA;Procedures could refer, for example to:&#xD;&#xA;1. Invasive Diagnostic procedure:e.g. Cardiac catheterization; (the results of these procedure are documented in the results section)&#xD;&#xA;2. Therapeutic procedure: e.g. dialysis;&#xD;&#xA;3. Surgical procedure: e.g. appendectomy"/>
+      <definition value="Information about a patient's past procedures that are pertinent to the scope of this patient summary.&#xD;&#xA;Procedures could refer, for example to:&#xD;&#xA;1. Invasive Diagnostic procedure: e.g. Cardiac catheterization; (the results of these procedure are documented in the results section)&#xD;&#xA;2. Therapeutic procedure: e.g. dialysis;&#xD;&#xA;3. Surgical procedure: e.g. appendectomy"/>
       <min value="0"/>
       <max value="1"/>
       <mustSupport value="true"/>
@@ -1464,7 +1464,7 @@
         <rules value="open"/>
       </slicing>
       <short value="Patient past procedures pertinent to the scope of this patient summary"/>
-      <definition value="The patient's past procedures that are pertinent to the scope of this patient summary.&#xD;&#xA;Procedures can refer for example to:&#xD;&#xA;1. Invasive Diagnostic procedure:e.g. Cardiac catheterization; (the results of these procedure are documented in the results section)&#xD;&#xA;2. Therapeutic procedure: e.g. dialysis;&#xD;&#xA;3. Surgical procedure: e.g. appendectomy. This entry can be used to document that no information about past procedures is available, or that no relevant past procedures are known."/>
+      <definition value="The patient's past procedures that are pertinent to the scope of this patient summary.&#xD;&#xA;Procedures can refer for example to:&#xD;&#xA;1. Invasive Diagnostic procedure: e.g. Cardiac catheterization; (the results of these procedure are documented in the results section)&#xD;&#xA;2. Therapeutic procedure: e.g. dialysis;&#xD;&#xA;3. Surgical procedure: e.g. appendectomy. An entry can be used to document that no information about past procedures is available, or that no relevant past procedures are known."/>
       <type>
         <code value="Reference"/>
         <targetProfile value="http://hl7.org/fhir/StructureDefinition/Procedure"/>
@@ -1563,7 +1563,7 @@
         <rules value="open"/>
       </slicing>
       <short value="Patient history of medical device use"/>
-      <definition value="The patient's history of medical device use. This entry can be used to document that no information about medical device use is available, or that no relevant medical device use is known."/>
+      <definition value="The patient's history of medical device use. An entry can be used to document that no information about medical device use is available, or that no relevant medical device use is known."/>
       <type>
         <code value="Reference"/>
         <targetProfile value="http://hl7.org/fhir/StructureDefinition/DeviceUseStatement"/>
@@ -1863,7 +1863,7 @@
         <rules value="open"/>
       </slicing>
       <short value="Conditions the patient suffered in the past"/>
-      <definition value="The conditions the patient suffered in the past that were suffered in the past and are no longer tracked in the Problem List."/>
+      <definition value="The conditions the patient suffered in the past and are no longer tracked in the Problem List."/>
       <type>
         <code value="Reference"/>
         <targetProfile value="http://hl7.org/fhir/StructureDefinition/Condition"/>
