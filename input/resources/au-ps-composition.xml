@@ -1798,7 +1798,7 @@
       <max value="*"/>
       <type>
         <code value="Reference"/>
-        <targetProfile value="http://hl7.org/fhir/uv/ips/StructureDefinition/Condition-uv-ips"/>
+        <targetProfile value="http://hl7.org.au/fhir/ps/StructureDefinition/au-ps-condition"/>
       </type>
     </element>
     <element id="Composition.section:sectionFunctionalStatus.entry:functionalAssessment">

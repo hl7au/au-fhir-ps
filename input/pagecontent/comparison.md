@@ -5,6 +5,10 @@ AU Patient Summary (AU PS) complies with, and/or leverages, national and interna
 - [International Patient Summary Implementation Guide 2.0.0](https://build.fhir.org/ig/HL7/fhir-ips/)
 - [AU Core Implementation Guide 2.0.0](https://build.fhir.org/ig/hl7au/au-fhir-core/)
 
+<div class="stu-note">
+The comparison in this guide is against the approved set of changes for IPS 2.0.0 as of 4 August 2025. Work on IPS 2.0.0 is ongoing; the CI Build for IPS reflects the latest proposed changes and as such differences to the compared baseline are expected.
+</div>
+
 Relationships between AU PS, AUCDI, and the above key implementation guides are described in [Relationship with other IGs](relationship.html). 
 
 ### Profile Comparison
