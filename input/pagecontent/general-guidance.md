@@ -5,7 +5,7 @@ AU PS profiles will by design:
 * support varied stakeholder needs and use of AU PS artefacts e.g. government policy, implementers, tooling developers, testers, IG authors/maintainers etc.
 
 AU PS profiles:
-* are based on the AU Core profile, or where not available the AU Base profile (where it exists)
+* are based on the AU Core profile, or where not available, the AU Base profile (where it exists)
 * apply additional requirements inherited from IPS (as determined by the [AU PS Profile Design Principles](general-guidance.html#au-ps-profile-design-principles)) 
 * have additional requirements as agreed by the AU PS project applied
 * use compliesWithProfile to assert compliance with IPS
@@ -20,7 +20,7 @@ The differential view therefore shows the patient summary requirements that are 
 
 The AU PS Bundle profile is not based on AU Core or AU Base (no resource profile exists). The approach to profiling for AU PS Bundle is to:
 * apply requirements inherited from IPS (as determined by the [AU PS Profile Design Principles](general-guidance.html#au-ps-profile-design-principles)) 
-* aplly additional requirements as agreed by the AU PS project
+* apply additional requirements as agreed by the AU PS project
 * use compliesWithProfile to assert compliance with IPS
 
 This approach to AU PS Bundle profiling has been taken as at this time there is a tooling limitation that prevents meeting both of the below conditions:
