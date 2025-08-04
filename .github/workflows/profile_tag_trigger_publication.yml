@@ -1,9 +1,12 @@
-name: Au Patient Summary IG Profiles publish->go-publish
+name: Au Patient Summary IG Profiles publish->go-publish SNAPSHOT
 
 on:
   push:
     tags:
-      - '**'
+      - '**-ballot'
+      - '**-snapshot'
+      - '**-preview'
+      - '**-draft'
 
 
 permissions:
