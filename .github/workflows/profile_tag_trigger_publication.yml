@@ -60,7 +60,7 @@ jobs:
     - name: Update Publisher
       run: |
         echo "Updating Publisher"
-        ./_updatePublisher.sh -f -y
+        curl -sSL https://raw.githubusercontent.com/HL7/ig-publisher-scripts/main/_updatePublisher.sh | bash -s -- -f -y # uses the latest update script from the ig-publisher-scripts repository
           
     - name: Basic Publish for Au patient summary
       run: |
@@ -70,6 +70,7 @@ jobs:
     - name: Create directories
       run: |
         mkdir -p webroot/fhir/ps
+        mv publish-setup.json ./webroot/
 
     - name: Download package-list.json
       run: |
@@ -78,8 +79,7 @@ jobs:
 
     - name: Download package-feed.xml
       run: |
-          curl --output webroot/fhir/package-feed.xml --url https://hl7.org.au/fhir/package-feed.xml
-        
+          curl --output webroot/fhir/package-feed.xml --url https://hl7.org.au/fhir/package-feed.xml       
 
     - name: Download publication-feed.xml
       run: |
