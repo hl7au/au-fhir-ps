@@ -91,7 +91,10 @@ jobs:
     - name: Run Au patient summary manual publish 
       run:  |
         ver=$(grep -oP '"version"\s*:\s*"\K[^"]+' ./hl7au/au-fhir-ps/publication-request.json)
-        find . -type f -exec sed -i '/<!--ReleaseHeader-->/,/<!--EndReleaseHeader-->/{//!d; /<start>/a <!--ReleaseHeader--><p id="publish-box">This page is part of the AU Patient Summary (v$ver: QA Preview) based on <a no-external="true" href="http://hl7.org/fhir/R4">FHIR (HL7® FHIR® Standard) R4</a>. No current official version has been published yet.  For a full list of available versions, see the <a no-external="true" href="http://hl7.org.au/fhir/ps/history.html">Directory of published versions</a>. This version does not produce a registered package so may only be referenced directly here.</p><!--EndReleaseHeader-->' {} +
+        echo $ver
+        content=<!--ReleaseHeader--><p id="publish-box">This page is part of the AU Patient Summary (v{$ver}: QA Preview) based on <a no-external="true" href="http://hl7.org/fhir/R4">FHIR (HL7® FHIR® Standard) R4</a>. No current official version has been published yet.  For a full list of available versions, see the <a no-external="true" href="http://hl7.org.au/fhir/ps/history.html">Directory of published versions</a>. This version does not produce a registered package so may only be referenced directly here.</p><!--EndReleaseHeader-->"
+        echo $content
+        find . -type f -exec  perl -0777 -pi -e 's|<!--ReleaseHeader-->.*?<!--EndReleaseHeader-->|<!--ReleaseHeader-->${content}<!--EndReleaseHeader-->|gs' {} +
         
     - name: Copy assets
       run: |
