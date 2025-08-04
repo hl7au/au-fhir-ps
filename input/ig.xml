@@ -193,6 +193,14 @@
 			<description value="[Interstate GP use case](uc-interstate.html) example. Shows an example of a patient summary authored by the patient's usual GP that was updated after a recent admission to hospital. Example for the *AU PS Bundle* and *AU PS Composition* profile. Patient: Jeramy Ezra Banks."/>
 			<exampleCanonical value="http://hl7.org.au/fhir/ps/StructureDefinition/au-ps-bundle"/>
 		</resource>
+		<resource>
+			<reference>
+				<reference value="Bundle/aups-syntactic"/>
+			</reference>
+			<name value="Bundle - Syntactic"/>
+			<description value="Shows an example of a provider curated patient summary that demonstrates syntactic coverage of various elements. Example for the *AU PS Bundle* and *AU PS Composition* profile. Patient: Rudolf Ralph."/>
+			<exampleCanonical value="http://hl7.org.au/fhir/ps/StructureDefinition/au-ps-bundle"/>
+		</resource>
 		<!-- PAGES-->
 		<page>
 			<nameUrl value="toc.html"/>
