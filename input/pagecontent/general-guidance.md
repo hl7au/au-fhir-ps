@@ -6,7 +6,7 @@ AU PS profiles will by design:
 
 AU PS profiles:
 * are based on the AU Core profile, or where not available the AU Base profile (where it exists)
-* have additional requirements inherited from IPS applied (as determined by the [AU PS Profile Design Principles](general-guidance.html#au-ps-profile-design-principles)) 
+* apply additional requirements inherited from IPS (as determined by the [AU PS Profile Design Principles](general-guidance.html#au-ps-profile-design-principles)) 
 * have additional requirements as agreed by the AU PS project applied
 * use compliesWithProfile to assert compliance with IPS
 
@@ -18,12 +18,12 @@ The differential view therefore shows the patient summary requirements that are 
 *Figure 1: Profiling approach for AU PS Patient profile*
 <br/><br/>
 
-The AU PS Bundle profile is not based on AU Core or AU Base as no profile available. The approach to profiling for AU PS Bundle is to:
+The AU PS Bundle profile is not based on AU Core or AU Base (no resource profile exists). The approach to profiling for AU PS Bundle is to:
 * apply requirements inherited from IPS (as determined by the [AU PS Profile Design Principles](general-guidance.html#au-ps-profile-design-principles)) 
-* have additional requirements as agreed by the AU PS project applied
+* aplly additional requirements as agreed by the AU PS project
 * use compliesWithProfile to assert compliance with IPS
 
-The above approach has been taken as at this time there is a tooling limitation that prevents meeting both of the below conditions:
+This approach to AU PS Bundle profiling has been taken as at this time there is a tooling limitation that prevents meeting both of the below conditions:
 * derivation from Bundle (IPS)
 * changing reference targets to AU PS profiles (as AU PS profiles derive from AU Core and not IPS they cannot be easily assessed as meeting IPS rules by the tooling)
 
