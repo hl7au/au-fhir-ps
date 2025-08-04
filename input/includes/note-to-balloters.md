@@ -2,7 +2,7 @@
 
 #### AU Patient Summary 0.3.0 Ballot for Comment August 2025
 
-This Ballot for Comment is opened during this cycle to solicit feedback and approval from the wider community. Feedback provided during the balloting process will be reconciled by the [AU Core Technical Design Group](https://confluence.hl7.org/display/HAFWG/HL7+Australia+-+AU+Core+Technical+Design+Group+Home).
+This ballot is opened during this cycle to solicit feedback from the wider community, providing guidance and direction to the AU Core Technical Design Group on AU PS R1. Feedback provided during the balloting process will be reconciled by the [AU Core Technical Design Group](https://confluence.hl7.org/display/HAFWG/HL7+Australia+-+AU+Core+Technical+Design+Group+Home).
 
 The ballot period is 11 August 2025 to 07 September 2025.
 
