@@ -61,10 +61,6 @@ jobs:
       run: |
         echo "Updating Publisher"
         ./_updatePublisher.sh -f -y
-
-    - name: Download past versions
-      run: |  
-        aws s3 cp s3://hl7au-fhir-ig/fhir/ps ./webroot/fhir/ps --recursive --exclude "*" --include "*/package.tgz"
           
     - name: Basic Publish for Au patient summary
       run: |
@@ -78,19 +74,16 @@ jobs:
     - name: Download package-list.json
       run: |
         rm -rf hl7au/au-fhir-ps/package-list.json
-        URL="https://hl7.org.au/fhir"
-        FULL_URL="$URL/ps/package-list.json"
-        curl --output webroot/fhir/ps/package-list.json --url $FULL_URL
+        curl --output webroot/fhir/ps/package-list.json --url "https://hl7.org.au/fhir/ps/package-list.json"
 
     - name: Download package-feed.xml
       run: |
           curl --output webroot/fhir/package-feed.xml --url https://hl7.org.au/fhir/package-feed.xml
-          curl --output webroot/fhir/package-feed.bak.xml --url https://hl7.org.au/fhir/package-feed.xml
+        
 
     - name: Download publication-feed.xml
       run: |
         curl --output webroot/fhir/publication-feed.xml --url https://hl7.org.au/fhir/publication-feed.xml
-        curl --output webroot/fhir/publication-feed.bak.xml --url https://hl7.org.au/fhir/publication-feed.xml
 
     - name: Generate Package Registry
       run: |
@@ -99,29 +92,12 @@ jobs:
     - name: Run Au patient summary Go Publisher build
       run:  java -jar ./input-cache/publisher.jar -go-publish -source ./hl7au/au-fhir-ps -web ./webroot -history ./fhir-history -registry ./ig-registry/fhir-ig-list.json -templates ./templates
 
-    - name: Run Au patient summary Go Publisher build
+    - name: Copy assets
       run: |
        cp -r fhir-history/assets-hist/ ./webroot/fhir/ps/assets-hist/
        cp -r fhir-history/dist-hist/ ./webroot/fhir/ps/dist-hist/
 
-    - name: Zip Release
-      uses: TheDoctor0/zip-release@0.7.6
-      with:
-        type: 'zip'
-        filename: 'output.zip'
-        path: './webroot/fhir'
-        exclusions: '**/full-ig.zip'
-      
-    - name: Upload Artifact
-      uses: actions/upload-artifact@v4
-      with:
-        name: ig-output
-        path: ./output.zip
-  
     - name: Upload Patient Summary Webroot to S3
       run: |
-        aws s3 cp ./webroot/fhir/ps s3://hl7au-fhir-ig/fhir/staging/ps --recursive --only-show-errors #ps/${{ steps.get_tag.outputs.tag }}
-        aws s3 cp ./webroot/fhir/package-feed.bak.xml s3://hl7au-fhir-ig/fhir/staging/package-feed.bak.xml
-        aws s3 cp ./webroot/fhir/publication-feed.bak.xml s3://hl7au-fhir-ig/fhir/staging/publication-feed.bak.xml
-        aws s3 cp ./webroot/fhir/package-feed.xml s3://hl7au-fhir-ig/fhir/staging/package-feed.xml
-        aws s3 cp ./webroot/fhir/publication-feed.xml s3://hl7au-fhir-ig/fhir/staging/publication-feed.xml
+        aws s3 cp ./webroot/fhir s3://action-runner-working/fhir --recursive --only-show-errors #/${{ steps.get_tag.outputs.tag }}
+        
