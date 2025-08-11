@@ -643,8 +643,6 @@
       <sliceName value="section-note"/>
       <short value="Additional notes that apply to the section (but not to specific resource)"/>
       <definition value="Additional notes that apply to the section (but not to specific resource)."/>
-      <min value="0"/>
-      <max value="1"/>
       <type>
         <code value="Extension"/>
         <profile value="http://hl7.org/fhir/StructureDefinition/note"/>
