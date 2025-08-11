@@ -75,6 +75,10 @@
       </extension>
       <path value="MedicationRequest.intent"/>
     </element>
+    <element id="MedicationRequest.doNotPerform">
+      <path value="MedicationRequest.doNotPerform"/>
+       <patternBoolean value="false"/>
+    </element>
     <element id="MedicationRequest.medication[x]">
       <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
         <extension url="code">
