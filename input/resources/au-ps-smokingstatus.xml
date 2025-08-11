@@ -256,10 +256,6 @@
         </extension>
       </extension>
       <path value="Observation.value[x]"/>
-      <type>
-        <code value="CodeableConcept"/>
-        <profile value="http://hl7.org/fhir/uv/ips/StructureDefinition/CodeableConcept-uv-ips"/>
-      </type>
     </element>
     <element id="Observation.dataAbsentReason">
       <extension url="http://hl7.org/fhir/StructureDefinition/obligation">

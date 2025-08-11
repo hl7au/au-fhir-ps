@@ -327,12 +327,5 @@
         <targetProfile value="http://hl7.org/fhir/StructureDefinition/DocumentReference"/>
       </type>
     </element>
-    <element id="Procedure.bodySite">
-      <path value="Procedure.bodySite"/>
-      <type>
-				<code value="CodeableConcept"/>
-				<profile value="http://hl7.org/fhir/uv/ips/StructureDefinition/CodeableConcept-uv-ips"/>
-			</type>
-    </element>
   </differential>
 </StructureDefinition>

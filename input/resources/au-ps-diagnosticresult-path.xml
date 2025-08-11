@@ -461,10 +461,6 @@
         </extension>
       </extension>
       <path value="Observation.interpretation"/>
-      <type>
-        <code value="CodeableConcept"/>
-        <profile value="http://hl7.org/fhir/uv/ips/StructureDefinition/CodeableConcept-uv-ips"/>
-      </type>
     </element>
     <element id="Observation.specimen">
       <extension url="http://hl7.org/fhir/StructureDefinition/obligation">

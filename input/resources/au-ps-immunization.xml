@@ -317,20 +317,6 @@
       </extension>
       <path value="Immunization.lotNumber"/>
     </element>
-    <element id="Immunization.site">
-      <path value="Immunization.site"/>
-      <type>
-				<code value="CodeableConcept"/>
-				<profile value="http://hl7.org/fhir/uv/ips/StructureDefinition/CodeableConcept-uv-ips"/>
-			</type>
-    </element>
-    <element id="Immunization.route">
-      <path value="Immunization.route"/>
-      <type>
-				<code value="CodeableConcept"/>
-				<profile value="http://hl7.org/fhir/uv/ips/StructureDefinition/CodeableConcept-uv-ips"/>
-			</type>
-    </element>
     <element id="Immunization.note">
       <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
         <extension url="code">
