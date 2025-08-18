@@ -16,24 +16,24 @@ This change log documents the significant updates and resolutions implemented fr
 - [AU PS Condition](StructureDefinition-au-ps-condition.html):
   - changed Condition.bodySite to remove use of the CodableConceptIps [IPS: FHIR-51257](https://jira.hl7.org/browse/FHIR-51257)
   - removed SHOULD:display obligation on Condition.subject.reference for the AU PS Consumer [IPS: FHIR-51258](https://jira.hl7.org/browse/FHIR-51258)
-- [AU PS Immunization](StructureDefinition-au-ps-immunization.html)
+- [AU PS Immunization](StructureDefinition-au-ps-immunization.html):
   - changed Immunization.site and Immunization.route to remove use of the CodableConceptIps [IPS: FHIR-51257](https://jira.hl7.org/browse/FHIR-51257)
   - removed SHOULD:display obligation on Immunization.patient.reference for the AU PS Consumer [IPS: FHIR-51258](https://jira.hl7.org/browse/FHIR-51258)
-- [AU PS MedicationRequest](StructureDefinition-au-ps-medicationrequest.html)
+- [AU PS MedicationRequest](StructureDefinition-au-ps-medicationrequest.html):
   - changed MedicationRequest.dosageInstruction.route to remove use of the CodableConceptIps [IPS: FHIR-51257](https://jira.hl7.org/browse/FHIR-51257)
   - changed MedicationRequest.doNotPerform to constrain out 'true' [IPS: FHIR-51483](https://jira.hl7.org/browse/FHIR-51483)
   - removed SHOULD:display obligation on MedicationRequest.subject.reference for the AU PS Consumer [IPS: FHIR-51258](https://jira.hl7.org/browse/FHIR-51258)
-- [AU PS MedicationStatement](StructureDefinition-au-ps-medicationstatement.html)
+- [AU PS MedicationStatement](StructureDefinition-au-ps-medicationstatement.html):
   - changed MedicationStatement.dosage.route to remove use of the CodableConceptIps [IPS: FHIR-51257](https://jira.hl7.org/browse/FHIR-51257)
   - removed SHOULD:display obligation on MedicationStatement.subject.reference for the AU PS Consumer [IPS: FHIR-51258](https://jira.hl7.org/browse/FHIR-51258)
-- [AU PS Pathology Result Observation](StructureDefinition-au-ps-diagnosticresult-path.html)
+- [AU PS Pathology Result Observation](StructureDefinition-au-ps-diagnosticresult-path.html):
   - changed Observation.interpretation to remove use of the CodableConceptIps [IPS: FHIR-51257](https://jira.hl7.org/browse/FHIR-51257)
   - removed SHOULD:display obligation on Observation.subject.reference for the AU PS Consumer [IPS: FHIR-51258](https://jira.hl7.org/browse/FHIR-51258)
-- [AU PS Patient](StructureDefinition-au-ps-patient.html)
+- [AU PS Patient](StructureDefinition-au-ps-patient.html):
   - changed Patient.contact.relationship to remove use of the CodableConceptIps [IPS: FHIR-51257](https://jira.hl7.org/browse/FHIR-51257)
-- [AU PS Procedure](StructureDefinition-au-ps-procedure.html)
+- [AU PS Procedure](StructureDefinition-au-ps-procedure.html):
   - changed Procedure.bodySite to remove use of the CodableConceptIps [IPS: FHIR-51257](https://jira.hl7.org/browse/FHIR-51257)
   - removed SHOULD:display obligation on Procedure.subject.reference for the AU PS Consumer [IPS: FHIR-51258](https://jira.hl7.org/browse/FHIR-51258)
-- [AU PS Smoking Status](StructureDefinition-au-ps-smokingstatus.html)
+- [AU PS Smoking Status](StructureDefinition-au-ps-smokingstatus.html):
   - changed Observation.valueCodeableConcept to remove use of the CodableConceptIps [IPS: FHIR-51257](https://jira.hl7.org/browse/FHIR-51257)
   - removed SHOULD:display obligation on Observation.subject.reference for the AU PS Consumer [IPS: FHIR-51258](https://jira.hl7.org/browse/FHIR-51258)
