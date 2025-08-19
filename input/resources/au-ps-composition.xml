@@ -11,7 +11,7 @@
   <name value="AUPSComposition"/>
   <title value="AU PS Composition"/>
   <status value="draft"/>
-  <description value="This profile sets minimum expectations for a Composition resource in the context of a patient summary in an Australian context. It is based on [AU Base Composition](http://hl7.org.au/fhir/StructureDefinition/au-composition) and imposes [Composition (IPS)](http://hl7.org/fhir/uv/ips/StructureDefinition/Composition-uv-ips)."/>
+  <description value="This profile sets minimum expectations for a Composition resource in the context of a patient summary in an Australian context. It is based on [AU Base Composition](http://hl7.org.au/fhir/StructureDefinition/au-composition) and imposes [Composition (IPS)](http://hl7.org/fhir/uv/ips/StructureDefinition/Composition-uv-ips). &#xD;&#xA;AU Patient Summary (AU PS) is specified in this guide as a HL7 FHIR document (a Bundle including a Composition), composed by a set of potentially reusable 'minimal' data blocks (the AU PS profiles)."/>
   <kind value="resource"/>
   <abstract value="false"/>
   <type value="Composition"/>
@@ -20,21 +20,132 @@
   <differential>
     <element id="Composition">
       <path value="Composition"/>
-      <short value="Patient Summary composition"/>
+      <short value="AU Patient Summary Composition"/>
+      <definition value="AU Patient Summary Composition. A composition is a set of healthcare-related information that is assembled together into a single logical document that provides a single coherent statement of meaning, establishes its own context and that has clinical attestation with regard to who is making the statement. While a Composition defines the structure, it does not actually contain the content: rather the full content of a document is contained in a Bundle, of which the Composition is the first resource contained."/>
+    </element>
+    <element id="Composition.meta.profile">
+      <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
+        <extension url="code">
+          <valueCode value="MAY:able-to-populate"/>
+        </extension>
+        <extension url="actor">
+          <valueCanonical value="http://hl7.org.au/fhir/ps/ActorDefinition/au-ps-actor-producer"/>
+        </extension>
+      </extension>
+      <path value="Composition.meta.profile"/>
+      <short value="Conformance claim to a specific Patient Summary specification"/>
+      <definition value="The conformance of this Composition to a specific version of a Patient Summary specification (e.g. AU PS 1.0.0 conformance claim http://hl7.org.au/fhir/ps/StructureDefinition/au-ps-composition|1.0.0, IPS 2.0.0 conformance claim http://hl7.org/fhir/uv/ips/StructureDefinition/Composition-uv-ips|2.0.0)"/>
+      <mustSupport value="true"/>
     </element>
     <element id="Composition.text">
+      <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
+        <extension url="code">
+          <valueCode value="SHALL:populate-if-known"/>
+        </extension>
+        <extension url="actor">
+          <valueCanonical value="http://hl7.org.au/fhir/ps/ActorDefinition/au-ps-actor-producer"/>
+        </extension>
+      </extension>
+      <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
+        <extension url="code">
+          <valueCode value="SHALL:handle"/>
+        </extension>
+        <extension url="actor">
+          <valueCanonical value="http://hl7.org.au/fhir/ps/ActorDefinition/au-ps-actor-consumer"/>
+        </extension>
+      </extension>
+      <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
+        <extension url="code">
+          <valueCode value="SHOULD:display"/>
+        </extension>
+        <extension url="actor">
+          <valueCanonical value="http://hl7.org.au/fhir/ps/ActorDefinition/au-ps-actor-consumer"/>
+        </extension>
+      </extension>
       <path value="Composition.text"/>
       <mustSupport value="true"/>
     </element>
     <element id="Composition.identifier">
+      <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
+        <extension url="code">
+          <valueCode value="SHALL:populate-if-known"/>
+        </extension>
+        <extension url="actor">
+          <valueCanonical value="http://hl7.org.au/fhir/ps/ActorDefinition/au-ps-actor-producer"/>
+        </extension>
+      </extension>
+      <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
+        <extension url="code">
+          <valueCode value="SHALL:handle"/>
+        </extension>
+        <extension url="actor">
+          <valueCanonical value="http://hl7.org.au/fhir/ps/ActorDefinition/au-ps-actor-consumer"/>
+        </extension>
+      </extension>
+      <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
+        <extension url="code">
+          <valueCode value="SHOULD:display"/>
+        </extension>
+        <extension url="actor">
+          <valueCanonical value="http://hl7.org.au/fhir/ps/ActorDefinition/au-ps-actor-consumer"/>
+        </extension>
+      </extension>
       <path value="Composition.identifier"/>
       <mustSupport value="true"/>
     </element>
     <element id="Composition.status">
+      <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
+        <extension url="code">
+          <valueCode value="SHALL:populate"/>
+        </extension>
+        <extension url="actor">
+          <valueCanonical value="http://hl7.org.au/fhir/ps/ActorDefinition/au-ps-actor-producer"/>
+        </extension>
+      </extension>
+      <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
+        <extension url="code">
+          <valueCode value="SHALL:handle"/>
+        </extension>
+        <extension url="actor">
+          <valueCanonical value="http://hl7.org.au/fhir/ps/ActorDefinition/au-ps-actor-consumer"/>
+        </extension>
+      </extension>
+      <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
+        <extension url="code">
+          <valueCode value="SHOULD:display"/>
+        </extension>
+        <extension url="actor">
+          <valueCanonical value="http://hl7.org.au/fhir/ps/ActorDefinition/au-ps-actor-consumer"/>
+        </extension>
+      </extension>
       <path value="Composition.status"/>
       <mustSupport value="true"/>
     </element>
     <element id="Composition.type">
+      <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
+        <extension url="code">
+          <valueCode value="SHALL:populate"/>
+        </extension>
+        <extension url="actor">
+          <valueCanonical value="http://hl7.org.au/fhir/ps/ActorDefinition/au-ps-actor-producer"/>
+        </extension>
+      </extension>
+      <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
+        <extension url="code">
+          <valueCode value="SHALL:handle"/>
+        </extension>
+        <extension url="actor">
+          <valueCanonical value="http://hl7.org.au/fhir/ps/ActorDefinition/au-ps-actor-consumer"/>
+        </extension>
+      </extension>
+      <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
+        <extension url="code">
+          <valueCode value="SHOULD:display"/>
+        </extension>
+        <extension url="actor">
+          <valueCanonical value="http://hl7.org.au/fhir/ps/ActorDefinition/au-ps-actor-consumer"/>
+        </extension>
+      </extension>
       <path value="Composition.type"/>
       <short value="Kind of composition (&quot;Patient Summary&quot;)"/>
       <definition value="Specifies that this composition refers to a Patient Summary (Loinc &quot;60591-5&quot;)&#xD;&#xA;"/>
@@ -51,6 +162,30 @@
       <mustSupport value="true"/>
     </element>
     <element id="Composition.subject">
+      <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
+        <extension url="code">
+          <valueCode value="SHALL:populate"/>
+        </extension>
+        <extension url="actor">
+          <valueCanonical value="http://hl7.org.au/fhir/ps/ActorDefinition/au-ps-actor-producer"/>
+        </extension>
+      </extension>
+      <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
+        <extension url="code">
+          <valueCode value="SHALL:handle"/>
+        </extension>
+        <extension url="actor">
+          <valueCanonical value="http://hl7.org.au/fhir/ps/ActorDefinition/au-ps-actor-consumer"/>
+        </extension>
+      </extension>
+      <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
+        <extension url="code">
+          <valueCode value="SHOULD:display"/>
+        </extension>
+        <extension url="actor">
+          <valueCanonical value="http://hl7.org.au/fhir/ps/ActorDefinition/au-ps-actor-consumer"/>
+        </extension>
+      </extension>
       <path value="Composition.subject"/>
       <definition value="Who or what the composition is about.&#xD;&#xA;In general a composition can be about a person, (patient or healthcare practitioner), a device (e.g. a machine) or even a group of subjects (such as a document about a herd of livestock, or a set of patients that share a common exposure).&#xD;&#xA;For the AU PS the subject is always the patient."/>
       <min value="1"/>
@@ -61,18 +196,90 @@
       <mustSupport value="true"/>
     </element>
     <element id="Composition.subject.reference">
+      <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
+        <extension url="code">
+          <valueCode value="SHALL:populate"/>
+        </extension>
+        <extension url="actor">
+          <valueCanonical value="http://hl7.org.au/fhir/ps/ActorDefinition/au-ps-actor-producer"/>
+        </extension>
+      </extension>
+      <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
+        <extension url="code">
+          <valueCode value="SHALL:handle"/>
+        </extension>
+        <extension url="actor">
+          <valueCanonical value="http://hl7.org.au/fhir/ps/ActorDefinition/au-ps-actor-consumer"/>
+        </extension>
+      </extension>
+      <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
+        <extension url="code">
+          <valueCode value="SHOULD:display"/>
+        </extension>
+        <extension url="actor">
+          <valueCanonical value="http://hl7.org.au/fhir/ps/ActorDefinition/au-ps-actor-consumer"/>
+        </extension>
+      </extension>
       <path value="Composition.subject.reference"/>
       <min value="1"/>
       <mustSupport value="true"/>
     </element>
     <element id="Composition.date">
+      <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
+        <extension url="code">
+          <valueCode value="SHALL:populate"/>
+        </extension>
+        <extension url="actor">
+          <valueCanonical value="http://hl7.org.au/fhir/ps/ActorDefinition/au-ps-actor-producer"/>
+        </extension>
+      </extension>
+      <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
+        <extension url="code">
+          <valueCode value="SHALL:handle"/>
+        </extension>
+        <extension url="actor">
+          <valueCanonical value="http://hl7.org.au/fhir/ps/ActorDefinition/au-ps-actor-consumer"/>
+        </extension>
+      </extension>
+      <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
+        <extension url="code">
+          <valueCode value="SHOULD:display"/>
+        </extension>
+        <extension url="actor">
+          <valueCanonical value="http://hl7.org.au/fhir/ps/ActorDefinition/au-ps-actor-consumer"/>
+        </extension>
+      </extension>
       <path value="Composition.date"/>
       <mustSupport value="true"/>
     </element>
     <element id="Composition.author">
+      <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
+        <extension url="code">
+          <valueCode value="SHALL:populate-if-known"/>
+        </extension>
+        <extension url="actor">
+          <valueCanonical value="http://hl7.org.au/fhir/ps/ActorDefinition/au-ps-actor-producer"/>
+        </extension>
+      </extension>
+      <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
+        <extension url="code">
+          <valueCode value="SHALL:handle"/>
+        </extension>
+        <extension url="actor">
+          <valueCanonical value="http://hl7.org.au/fhir/ps/ActorDefinition/au-ps-actor-consumer"/>
+        </extension>
+      </extension>
+      <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
+        <extension url="code">
+          <valueCode value="SHOULD:display"/>
+        </extension>
+        <extension url="actor">
+          <valueCanonical value="http://hl7.org.au/fhir/ps/ActorDefinition/au-ps-actor-consumer"/>
+        </extension>
+      </extension>
       <path value="Composition.author"/>
       <short value="Who and/or what authored the patient summary"/>
-      <definition value="Identifies who is responsible for the information in the IPS, not necessarily who typed it in.&#xD;&#xA;&#xD;&#xA;The type of author(s) contribute to determine the &quot;nature&quot;of the Patient Summary: e.g. a &quot;human-curated&quot; IPS Vs. an &quot;automatically generated&quot; IPS."/>
+      <definition value="Identifies who is responsible for the information in the patient summary, not necessarily who typed it in.&#xD;&#xA;&#xD;&#xA;The type of author(s) contribute to determine the &quot;nature&quot;of the patient summary: e.g. a &quot;human-curated&quot; Vs. &quot;automatically generated&quot;."/>
       <type>
         <code value="Reference"/>
         <targetProfile value="http://hl7.org.au/fhir/ps/StructureDefinition/au-ps-practitioner"/>
@@ -85,24 +292,144 @@
       <mustSupport value="true"/>
     </element>
     <element id="Composition.title">
+      <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
+        <extension url="code">
+          <valueCode value="SHALL:populate-if-known"/>
+        </extension>
+        <extension url="actor">
+          <valueCanonical value="http://hl7.org.au/fhir/ps/ActorDefinition/au-ps-actor-producer"/>
+        </extension>
+      </extension>
+      <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
+        <extension url="code">
+          <valueCode value="SHALL:handle"/>
+        </extension>
+        <extension url="actor">
+          <valueCanonical value="http://hl7.org.au/fhir/ps/ActorDefinition/au-ps-actor-consumer"/>
+        </extension>
+      </extension>
+      <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
+        <extension url="code">
+          <valueCode value="SHOULD:display"/>
+        </extension>
+        <extension url="actor">
+          <valueCanonical value="http://hl7.org.au/fhir/ps/ActorDefinition/au-ps-actor-consumer"/>
+        </extension>
+      </extension>
       <path value="Composition.title"/>
       <short value="Patient Summary"/>
-      <definition value="Official human-readable label for the composition.&#xD;&#xA;&#xD;&#xA;For this document should be &quot;International Patient Summary&quot; or any equivalent translation"/>
+      <definition value="Official human-readable label for the composition.&#xD;&#xA;&#xD;&#xA;For this document the title would likely include the text &quot;Patient Summary&quot; or any equivalent translation and other relevant document information."/>
       <mustSupport value="true"/>
     </element>
     <element id="Composition.attester">
+      <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
+        <extension url="code">
+          <valueCode value="SHALL:populate-if-known"/>
+        </extension>
+        <extension url="actor">
+          <valueCanonical value="http://hl7.org.au/fhir/ps/ActorDefinition/au-ps-actor-producer"/>
+        </extension>
+      </extension>
+      <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
+        <extension url="code">
+          <valueCode value="SHALL:handle"/>
+        </extension>
+        <extension url="actor">
+          <valueCanonical value="http://hl7.org.au/fhir/ps/ActorDefinition/au-ps-actor-consumer"/>
+        </extension>
+      </extension>
+      <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
+        <extension url="code">
+          <valueCode value="SHOULD:display"/>
+        </extension>
+        <extension url="actor">
+          <valueCanonical value="http://hl7.org.au/fhir/ps/ActorDefinition/au-ps-actor-consumer"/>
+        </extension>
+      </extension>
       <path value="Composition.attester"/>
       <mustSupport value="true"/>
     </element>
     <element id="Composition.attester.mode">
+      <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
+        <extension url="code">
+          <valueCode value="SHALL:populate"/>
+        </extension>
+        <extension url="actor">
+          <valueCanonical value="http://hl7.org.au/fhir/ps/ActorDefinition/au-ps-actor-producer"/>
+        </extension>
+      </extension>
+      <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
+        <extension url="code">
+          <valueCode value="SHALL:handle"/>
+        </extension>
+        <extension url="actor">
+          <valueCanonical value="http://hl7.org.au/fhir/ps/ActorDefinition/au-ps-actor-consumer"/>
+        </extension>
+      </extension>
+      <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
+        <extension url="code">
+          <valueCode value="SHOULD:display"/>
+        </extension>
+        <extension url="actor">
+          <valueCanonical value="http://hl7.org.au/fhir/ps/ActorDefinition/au-ps-actor-consumer"/>
+        </extension>
+      </extension>
       <path value="Composition.attester.mode"/>
       <mustSupport value="true"/>
     </element>
     <element id="Composition.attester.time">
+      <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
+        <extension url="code">
+          <valueCode value="SHALL:populate-if-known"/>
+        </extension>
+        <extension url="actor">
+          <valueCanonical value="http://hl7.org.au/fhir/ps/ActorDefinition/au-ps-actor-producer"/>
+        </extension>
+      </extension>
+      <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
+        <extension url="code">
+          <valueCode value="SHALL:handle"/>
+        </extension>
+        <extension url="actor">
+          <valueCanonical value="http://hl7.org.au/fhir/ps/ActorDefinition/au-ps-actor-consumer"/>
+        </extension>
+      </extension>
+      <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
+        <extension url="code">
+          <valueCode value="SHOULD:display"/>
+        </extension>
+        <extension url="actor">
+          <valueCanonical value="http://hl7.org.au/fhir/ps/ActorDefinition/au-ps-actor-consumer"/>
+        </extension>
+      </extension>
       <path value="Composition.attester.time"/>
       <mustSupport value="true"/>
     </element>
     <element id="Composition.attester.party">
+      <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
+        <extension url="code">
+          <valueCode value="SHALL:populate-if-known"/>
+        </extension>
+        <extension url="actor">
+          <valueCanonical value="http://hl7.org.au/fhir/ps/ActorDefinition/au-ps-actor-producer"/>
+        </extension>
+      </extension>
+      <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
+        <extension url="code">
+          <valueCode value="SHALL:handle"/>
+        </extension>
+        <extension url="actor">
+          <valueCanonical value="http://hl7.org.au/fhir/ps/ActorDefinition/au-ps-actor-consumer"/>
+        </extension>
+      </extension>
+      <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
+        <extension url="code">
+          <valueCode value="SHOULD:display"/>
+        </extension>
+        <extension url="actor">
+          <valueCanonical value="http://hl7.org.au/fhir/ps/ActorDefinition/au-ps-actor-consumer"/>
+        </extension>
+      </extension>
       <path value="Composition.attester.party"/>
       <type>
         <code value="Reference"/>
@@ -115,6 +442,30 @@
       <mustSupport value="true"/>
     </element>
     <element id="Composition.custodian">
+      <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
+        <extension url="code">
+          <valueCode value="SHALL:populate-if-known"/>
+        </extension>
+        <extension url="actor">
+          <valueCanonical value="http://hl7.org.au/fhir/ps/ActorDefinition/au-ps-actor-producer"/>
+        </extension>
+      </extension>
+      <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
+        <extension url="code">
+          <valueCode value="SHALL:handle"/>
+        </extension>
+        <extension url="actor">
+          <valueCanonical value="http://hl7.org.au/fhir/ps/ActorDefinition/au-ps-actor-consumer"/>
+        </extension>
+      </extension>
+      <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
+        <extension url="code">
+          <valueCode value="SHOULD:display"/>
+        </extension>
+        <extension url="actor">
+          <valueCanonical value="http://hl7.org.au/fhir/ps/ActorDefinition/au-ps-actor-consumer"/>
+        </extension>
+      </extension>
       <path value="Composition.custodian"/>
       <type>
         <code value="Reference"/>   
@@ -146,18 +497,66 @@
         </discriminator>
         <rules value="open"/>
       </slicing>
-      <definition value="The main activity being described by a IPS is the provision of healthcare over a period of time. &#xD;&#xA;In the CDA representation of the IPS this is shown by setting the value of serviceEvent/@classCode to “PCPR” (care provision) and indicating the duration over which care was provided in serviceEvent/effectiveTime. &#xD;&#xA;In the FHIR representation at least one event should be used to record this information.&#xD;&#xA;Additional data from outside this duration may also be included if it is relevant to care provided during that time range (e.g., reviewed during the stated time range). For example if the IPS is generated by a GP based on information recorded in his/her EHR-S, then the start value should represent the date when the treatment relationship between the patient and the GP started; and the end value the date of the latest care event."/>
+      <definition value="The main activity being described by a patient summary is the provision of healthcare over a period of time.&#xD;&#xA;In the CDA representation of the IPS this is shown by setting the value of serviceEvent/@classCode to “PCPR” (care provision) and indicating the duration over which care was provided in serviceEvent/effectiveTime. &#xD;&#xA;In the FHIR representation at least one event will be used to record this information.&#xD;&#xA;Additional data from outside this duration can also be included if it is relevant to care provided during that time range (e.g., reviewed during the stated time range). For example if the patient summary is generated by a GP, based on information recorded in his/her EHR-S, then the start value will represent the date when the treatment relationship between the patient and the GP started; and the end value the date of the latest care event."/>
     </element>
     <element id="Composition.event:careProvisioningEvent">
+      <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
+        <extension url="code">
+          <valueCode value="SHALL:populate-if-known"/>
+        </extension>
+        <extension url="actor">
+          <valueCanonical value="http://hl7.org.au/fhir/ps/ActorDefinition/au-ps-actor-producer"/>
+        </extension>
+      </extension>
+      <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
+        <extension url="code">
+          <valueCode value="SHALL:handle"/>
+        </extension>
+        <extension url="actor">
+          <valueCanonical value="http://hl7.org.au/fhir/ps/ActorDefinition/au-ps-actor-consumer"/>
+        </extension>
+      </extension>
+      <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
+        <extension url="code">
+          <valueCode value="SHOULD:display"/>
+        </extension>
+        <extension url="actor">
+          <valueCanonical value="http://hl7.org.au/fhir/ps/ActorDefinition/au-ps-actor-consumer"/>
+        </extension>
+      </extension>
       <path value="Composition.event"/>
       <sliceName value="careProvisioningEvent"/>
       <short value="The care provisioning being documented"/>
-      <definition value="The provision of healthcare over a period of time this IPS is documenting."/>
+      <definition value="The provision of healthcare over a period of time this patient summary is documenting."/>
       <min value="0"/>
       <max value="1"/>
       <mustSupport value="true"/>
     </element>
     <element id="Composition.event:careProvisioningEvent.code">
+      <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
+        <extension url="code">
+          <valueCode value="SHALL:populate-if-known"/>
+        </extension>
+        <extension url="actor">
+          <valueCanonical value="http://hl7.org.au/fhir/ps/ActorDefinition/au-ps-actor-producer"/>
+        </extension>
+      </extension>
+      <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
+        <extension url="code">
+          <valueCode value="SHALL:handle"/>
+        </extension>
+        <extension url="actor">
+          <valueCanonical value="http://hl7.org.au/fhir/ps/ActorDefinition/au-ps-actor-consumer"/>
+        </extension>
+      </extension>
+      <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
+        <extension url="code">
+          <valueCode value="SHOULD:display"/>
+        </extension>
+        <extension url="actor">
+          <valueCanonical value="http://hl7.org.au/fhir/ps/ActorDefinition/au-ps-actor-consumer"/>
+        </extension>
+      </extension>
       <path value="Composition.event.code"/>
       <min value="1"/>
       <max value="1"/>
@@ -170,10 +569,50 @@
       <mustSupport value="true"/>
     </element>
     <element id="Composition.event:careProvisioningEvent.period">
+      <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
+        <extension url="code">
+          <valueCode value="SHALL:populate-if-known"/>
+        </extension>
+        <extension url="actor">
+          <valueCanonical value="http://hl7.org.au/fhir/ps/ActorDefinition/au-ps-actor-producer"/>
+        </extension>
+      </extension>
+      <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
+        <extension url="code">
+          <valueCode value="SHALL:handle"/>
+        </extension>
+        <extension url="actor">
+          <valueCanonical value="http://hl7.org.au/fhir/ps/ActorDefinition/au-ps-actor-consumer"/>
+        </extension>
+      </extension>
+      <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
+        <extension url="code">
+          <valueCode value="SHOULD:display"/>
+        </extension>
+        <extension url="actor">
+          <valueCanonical value="http://hl7.org.au/fhir/ps/ActorDefinition/au-ps-actor-consumer"/>
+        </extension>
+      </extension>
       <path value="Composition.event.period"/>
       <mustSupport value="true"/>
     </element>
     <element id="Composition.section">
+      <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
+        <extension url="code">
+          <valueCode value="SHALL:handle"/>
+        </extension>
+        <extension url="actor">
+          <valueCanonical value="http://hl7.org.au/fhir/ps/ActorDefinition/au-ps-actor-consumer"/>
+        </extension>
+      </extension>
+      <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
+        <extension url="code">
+          <valueCode value="SHOULD:display"/>
+        </extension>
+        <extension url="actor">
+          <valueCanonical value="http://hl7.org.au/fhir/ps/ActorDefinition/au-ps-actor-consumer"/>
+        </extension>
+      </extension>
       <path value="Composition.section"/>
       <slicing>
         <discriminator>
@@ -184,7 +623,7 @@
         <rules value="open"/>
       </slicing>
       <short value="Sections composing the patient summary"/>
-      <definition value="The root of the sections that make up the IPS composition."/>
+      <definition value="The root of the sections that make up the patient summary composition."/>
       <min value="3"/>
       <mustSupport value="true"/>
     </element>
@@ -202,7 +641,7 @@
     <element id="Composition.section.extension:section-note">
       <path value="Composition.section.extension"/>
       <sliceName value="section-note"/>
-      <short value="Additional notes that apply to the section (but not to specific resource)."/>
+      <short value="Additional notes that apply to the section (but not to specific resource)"/>
       <definition value="Additional notes that apply to the section (but not to specific resource)."/>
       <min value="0"/>
       <max value="1"/>
@@ -212,28 +651,96 @@
       </type>
     </element>
     <element id="Composition.section.title">
+      <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
+        <extension url="code">
+          <valueCode value="SHALL:able-to-populate"/>
+        </extension>
+        <extension url="actor">
+          <valueCanonical value="http://hl7.org.au/fhir/ps/ActorDefinition/au-ps-actor-producer"/>
+        </extension>
+      </extension>
+      <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
+        <extension url="code">
+          <valueCode value="SHALL:handle"/>
+        </extension>
+        <extension url="actor">
+          <valueCanonical value="http://hl7.org.au/fhir/ps/ActorDefinition/au-ps-actor-consumer"/>
+        </extension>
+      </extension>
+      <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
+        <extension url="code">
+          <valueCode value="SHOULD:display"/>
+        </extension>
+        <extension url="actor">
+          <valueCanonical value="http://hl7.org.au/fhir/ps/ActorDefinition/au-ps-actor-consumer"/>
+        </extension>
+      </extension>
       <path value="Composition.section.title"/>
       <min value="1"/>
       <mustSupport value="true"/>
     </element>
     <element id="Composition.section.text">
+      <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
+        <extension url="code">
+          <valueCode value="SHALL:populate-if-known"/>
+        </extension>
+        <extension url="actor">
+          <valueCanonical value="http://hl7.org.au/fhir/ps/ActorDefinition/au-ps-actor-producer"/>
+        </extension>
+      </extension>
+      <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
+        <extension url="code">
+          <valueCode value="SHALL:handle"/>
+        </extension>
+        <extension url="actor">
+          <valueCanonical value="http://hl7.org.au/fhir/ps/ActorDefinition/au-ps-actor-consumer"/>
+        </extension>
+      </extension>
+      <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
+        <extension url="code">
+          <valueCode value="SHOULD:display"/>
+        </extension>
+        <extension url="actor">
+          <valueCanonical value="http://hl7.org.au/fhir/ps/ActorDefinition/au-ps-actor-consumer"/>
+        </extension>
+      </extension>
       <path value="Composition.section.text"/>
       <min value="1"/>
       <mustSupport value="true"/>
     </element>
-    <element id="Composition.section.emptyReason">
-			<path value="Composition.section.emptyReason"/>
-			<mustSupport value="true"/>
-		</element>
     <element id="Composition.section.section">
       <path value="Composition.section.section"/>
       <max value="0"/>
     </element>
     <element id="Composition.section:sectionProblems">
+      <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
+        <extension url="code">
+          <valueCode value="SHALL:populate"/>
+        </extension>
+        <extension url="actor">
+          <valueCanonical value="http://hl7.org.au/fhir/ps/ActorDefinition/au-ps-actor-producer"/>
+        </extension>
+      </extension>
+      <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
+        <extension url="code">
+          <valueCode value="SHALL:handle"/>
+        </extension>
+        <extension url="actor">
+          <valueCanonical value="http://hl7.org.au/fhir/ps/ActorDefinition/au-ps-actor-consumer"/>
+        </extension>
+      </extension>
+      <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
+        <extension url="code">
+          <valueCode value="SHOULD:display"/>
+        </extension>
+        <extension url="actor">
+          <valueCanonical value="http://hl7.org.au/fhir/ps/ActorDefinition/au-ps-actor-consumer"/>
+        </extension>
+      </extension>
       <path value="Composition.section"/>
       <sliceName value="sectionProblems"/>
-      <short value="IPS Problems Section"/>
-      <definition value="The IPS problem section lists and describes clinical problems or conditions currently being monitored for the patient."/>
+      <short value="Patient Summary Problems Section"/>
+      <definition value="Information about a patient's clinical problems or conditions that are currently being monitored."/>
       <min value="1"/>
       <max value="1"/>
       <constraint>
@@ -268,16 +775,47 @@
         </discriminator>
         <rules value="open"/>
       </slicing>
-      <short value="Clinical problems or conditions currently being monitored for the patient."/>
-      <definition value="It lists and describes clinical problems or conditions currently being monitored for the patient.  This entry shall be used to document that no information about problems is available, or that no relevant problems are known."/>
+      <short value="Clinical problems or conditions currently being monitored for the patient"/>
+      <definition value="The clinical problems or conditions currently being monitored for the patient.  An entry can be used to document that no information about problems is available, or that no relevant problems are known."/>
       <type>
         <code value="Reference"/>
         <targetProfile value="http://hl7.org/fhir/StructureDefinition/Condition"/>
         <targetProfile value="http://hl7.org/fhir/StructureDefinition/DocumentReference"/>
       </type>
-      <mustSupport value="true"/>
     </element>
     <element id="Composition.section:sectionProblems.entry:problem">
+      <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
+        <extension url="code">
+          <valueCode value="SHALL:able-to-populate"/>
+        </extension>
+        <extension url="actor">
+          <valueCanonical value="http://hl7.org.au/fhir/ps/ActorDefinition/au-ps-actor-producer"/>
+        </extension>
+      </extension>
+      <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
+        <extension url="code">
+          <valueCode value="SHOULD:populate-if-known"/>
+        </extension>
+        <extension url="actor">
+          <valueCanonical value="http://hl7.org.au/fhir/ps/ActorDefinition/au-ps-actor-producer"/>
+        </extension>
+      </extension>
+      <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
+        <extension url="code">
+          <valueCode value="SHALL:handle"/>
+        </extension>
+        <extension url="actor">
+          <valueCanonical value="http://hl7.org.au/fhir/ps/ActorDefinition/au-ps-actor-consumer"/>
+        </extension>
+      </extension>
+      <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
+        <extension url="code">
+          <valueCode value="SHOULD:display"/>
+        </extension>
+        <extension url="actor">
+          <valueCanonical value="http://hl7.org.au/fhir/ps/ActorDefinition/au-ps-actor-consumer"/>
+        </extension>
+      </extension>
       <path value="Composition.section.entry"/>
       <sliceName value="problem"/>
       <min value="0"/>
@@ -288,11 +826,63 @@
       </type>
       <mustSupport value="true"/>
     </element>
+    <element id="Composition.section:sectionProblems.emptyReason">
+      <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
+        <extension url="code">
+          <valueCode value="SHALL:populate-if-known"/>
+        </extension>
+        <extension url="actor">
+          <valueCanonical value="http://hl7.org.au/fhir/ps/ActorDefinition/au-ps-actor-producer"/>
+        </extension>
+      </extension>
+      <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
+        <extension url="code">
+          <valueCode value="SHALL:handle"/>
+        </extension>
+        <extension url="actor">
+          <valueCanonical value="http://hl7.org.au/fhir/ps/ActorDefinition/au-ps-actor-consumer"/>
+        </extension>
+      </extension>
+      <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
+        <extension url="code">
+          <valueCode value="SHOULD:display"/>
+        </extension>
+        <extension url="actor">
+          <valueCanonical value="http://hl7.org.au/fhir/ps/ActorDefinition/au-ps-actor-consumer"/>
+        </extension>
+      </extension>
+      <path value="Composition.section.emptyReason"/>
+      <mustSupport value="true"/>
+    </element>
     <element id="Composition.section:sectionAllergies">
+      <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
+        <extension url="code">
+          <valueCode value="SHALL:populate"/>
+        </extension>
+        <extension url="actor">
+          <valueCanonical value="http://hl7.org.au/fhir/ps/ActorDefinition/au-ps-actor-producer"/>
+        </extension>
+      </extension>
+      <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
+        <extension url="code">
+          <valueCode value="SHALL:handle"/>
+        </extension>
+        <extension url="actor">
+          <valueCanonical value="http://hl7.org.au/fhir/ps/ActorDefinition/au-ps-actor-consumer"/>
+        </extension>
+      </extension>
+      <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
+        <extension url="code">
+          <valueCode value="SHOULD:display"/>
+        </extension>
+        <extension url="actor">
+          <valueCanonical value="http://hl7.org.au/fhir/ps/ActorDefinition/au-ps-actor-consumer"/>
+        </extension>
+      </extension>
       <path value="Composition.section"/>
       <sliceName value="sectionAllergies"/>
-      <short value="IPS Allergies and Intolerances Section"/>
-      <definition value="This section documents the relevant allergies or intolerances (conditions) for that patient, describing the kind of reaction (e.g. rash, anaphylaxis,..); preferably the agents that cause it; and optionally the criticality and the certainty of the allergy.&#xD;&#xA;At a minimum, it should list currently active and any relevant historical allergies and adverse reactions.&#xD;&#xA;If no information about allergies is available, or if no allergies are known this should be clearly documented in the section."/>
+      <short value="Patient Summary Allergies and Intolerances Section"/>
+      <definition value="Information about a patient's relevant allergies or intolerances, describing the kind of reaction (e.g. rash, anaphylaxis, etc.); preferably the agents that cause it; and optionally the criticality and the certainty of the allergy. At a minimum, this section will list currently active and any relevant historical allergies and adverse reactions. If no information about allergies is available, or if no allergies are known this is to be clearly documented in this section."/>
       <min value="1"/>
       <max value="1"/>
       <constraint>
@@ -327,16 +917,47 @@
         </discriminator>
         <rules value="open"/>
       </slicing>
-      <short value="Relevant allergies or intolerances (conditions) for that patient."/>
-      <definition value="It lists the relevant allergies or intolerances (conditions) for that patient, describing the kind of reaction (e.g. rash, anaphylaxis,..); preferably the agents that cause it; and optionally the criticality and the certainty of the allergy.&#xD;&#xA;At a minimum, it should list currently active and any relevant historical allergies and adverse reactions.&#xD;&#xA; This entry shall be used to document that no information about allergies is available, or that no allergies are known ."/>
+      <short value="Relevant allergies or intolerances (conditions) for that patient"/>
+      <definition value="The relevant allergies or intolerances (conditions) for that patient, describing the kind of reaction (e.g. rash, anaphylaxis, etc.); preferably the agents that cause it; and optionally the criticality and the certainty of the allergy.&#xD;&#xA;At a minimum, will include currently active and any relevant historical allergies and adverse reactions.&#xD;&#xA; An entry can be used to document that no information about allergies is available, or that no allergies are known."/>
       <type>
         <code value="Reference"/>
         <targetProfile value="http://hl7.org/fhir/StructureDefinition/AllergyIntolerance"/>
         <targetProfile value="http://hl7.org/fhir/StructureDefinition/DocumentReference"/>
       </type>
-      <mustSupport value="true"/>
     </element>
     <element id="Composition.section:sectionAllergies.entry:allergyOrIntolerance">
+      <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
+        <extension url="code">
+          <valueCode value="SHALL:able-to-populate"/>
+        </extension>
+        <extension url="actor">
+          <valueCanonical value="http://hl7.org.au/fhir/ps/ActorDefinition/au-ps-actor-producer"/>
+        </extension>
+      </extension>
+      <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
+        <extension url="code">
+          <valueCode value="SHOULD:populate-if-known"/>
+        </extension>
+        <extension url="actor">
+          <valueCanonical value="http://hl7.org.au/fhir/ps/ActorDefinition/au-ps-actor-producer"/>
+        </extension>
+      </extension>
+      <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
+        <extension url="code">
+          <valueCode value="SHALL:handle"/>
+        </extension>
+        <extension url="actor">
+          <valueCanonical value="http://hl7.org.au/fhir/ps/ActorDefinition/au-ps-actor-consumer"/>
+        </extension>
+      </extension>
+      <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
+        <extension url="code">
+          <valueCode value="SHOULD:display"/>
+        </extension>
+        <extension url="actor">
+          <valueCanonical value="http://hl7.org.au/fhir/ps/ActorDefinition/au-ps-actor-consumer"/>
+        </extension>
+      </extension>
       <path value="Composition.section.entry"/>
       <sliceName value="allergyOrIntolerance"/>
       <min value="0"/>
@@ -347,11 +968,63 @@
       </type>
       <mustSupport value="true"/>
     </element>
+    <element id="Composition.section:sectionAllergies.emptyReason">
+      <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
+        <extension url="code">
+          <valueCode value="SHALL:populate-if-known"/>
+        </extension>
+        <extension url="actor">
+          <valueCanonical value="http://hl7.org.au/fhir/ps/ActorDefinition/au-ps-actor-producer"/>
+        </extension>
+      </extension>
+      <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
+        <extension url="code">
+          <valueCode value="SHALL:handle"/>
+        </extension>
+        <extension url="actor">
+          <valueCanonical value="http://hl7.org.au/fhir/ps/ActorDefinition/au-ps-actor-consumer"/>
+        </extension>
+      </extension>
+      <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
+        <extension url="code">
+          <valueCode value="SHOULD:display"/>
+        </extension>
+        <extension url="actor">
+          <valueCanonical value="http://hl7.org.au/fhir/ps/ActorDefinition/au-ps-actor-consumer"/>
+        </extension>
+      </extension>
+      <path value="Composition.section.emptyReason"/>
+      <mustSupport value="true"/>
+    </element>
     <element id="Composition.section:sectionMedications">
+      <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
+        <extension url="code">
+          <valueCode value="SHALL:populate"/>
+        </extension>
+        <extension url="actor">
+          <valueCanonical value="http://hl7.org.au/fhir/ps/ActorDefinition/au-ps-actor-producer"/>
+        </extension>
+      </extension>
+      <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
+        <extension url="code">
+          <valueCode value="SHALL:handle"/>
+        </extension>
+        <extension url="actor">
+          <valueCanonical value="http://hl7.org.au/fhir/ps/ActorDefinition/au-ps-actor-consumer"/>
+        </extension>
+      </extension>
+      <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
+        <extension url="code">
+          <valueCode value="SHOULD:display"/>
+        </extension>
+        <extension url="actor">
+          <valueCanonical value="http://hl7.org.au/fhir/ps/ActorDefinition/au-ps-actor-consumer"/>
+        </extension>
+      </extension>
       <path value="Composition.section"/>
       <sliceName value="sectionMedications"/>
-      <short value="IPS Medication Summary Section"/>
-      <definition value="The medication summary section contains a description of the patient's medications relevant for the scope of the patient summary.&#xD;&#xA;The actual content could depend on the jurisdiction, it could report:&#xD;&#xA;- the currently active medications; &#xD;&#xA;- the current and past medications considered relevant by the authoring GP; &#xD;&#xA;- the patient prescriptions or dispensations automatically extracted by a regional or a national EHR.&#xD;&#xA;&#xD;&#xA;In those cases medications are documented in the Patient Summary as medication statements or medication requests.&#xD;&#xA;This section requires either an entry indicating the subject is known not to be on any relevant medication; either an entry indicating that no information is available about medications; or entries summarizing the subject's relevant medications."/>
+      <short value="Patient Summary Medication Summary Section"/>
+      <definition value="Information about a patient's medications relevant for the scope of the patient summary.&#xD;&#xA;The actual content could depend on the jurisdiction, it could report: - the currently active medications;  - the current and past medications considered relevant by the authoring GP;  - the patient prescriptions or dispensations automatically extracted by a regional or a national EHR.  In those cases medications are documented in the Patient Summary as medication statements or medication requests. This section requires either an entry indicating the subject is known not to be on any relevant medication; either an entry indicating that no information is available about medications; or entries summarising the subject's relevant medications."/>
       <min value="1"/>
       <max value="1"/>
       <constraint>
@@ -387,7 +1060,7 @@
         <rules value="open"/>
       </slicing>
       <short value="Medications relevant for the scope of the patient summary"/>
-      <definition value="This list the medications relevant for the scope of the patient summary or it is used to indicate that the subject is known not to be on any relevant medication; either that no information is available about medications."/>
+      <definition value="The medications relevant for the scope of the patient summary, or an indication that the subject is known not to be on any relevant medication; either that no information is available about medications."/>
       <type>
         <code value="Reference"/>
         <targetProfile value="http://hl7.org/fhir/StructureDefinition/MedicationStatement"/>
@@ -396,10 +1069,41 @@
         <targetProfile value="http://hl7.org/fhir/StructureDefinition/MedicationDispense"/>
         <targetProfile value="http://hl7.org/fhir/StructureDefinition/DocumentReference"/>
       </type>
-      <mustSupport value="true"/>
     </element>
     <element id="Composition.section:sectionMedications.entry:medicationStatementOrRequest">
-			<path value="Composition.section.entry"/>
+			<extension url="http://hl7.org/fhir/StructureDefinition/obligation">
+        <extension url="code">
+          <valueCode value="SHALL:able-to-populate"/>
+        </extension>
+        <extension url="actor">
+          <valueCanonical value="http://hl7.org.au/fhir/ps/ActorDefinition/au-ps-actor-producer"/>
+        </extension>
+      </extension>
+      <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
+        <extension url="code">
+          <valueCode value="SHOULD:populate-if-known"/>
+        </extension>
+        <extension url="actor">
+          <valueCanonical value="http://hl7.org.au/fhir/ps/ActorDefinition/au-ps-actor-producer"/>
+        </extension>
+      </extension>
+      <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
+        <extension url="code">
+          <valueCode value="SHALL:handle"/>
+        </extension>
+        <extension url="actor">
+          <valueCanonical value="http://hl7.org.au/fhir/ps/ActorDefinition/au-ps-actor-consumer"/>
+        </extension>
+      </extension>
+      <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
+        <extension url="code">
+          <valueCode value="SHOULD:display"/>
+        </extension>
+        <extension url="actor">
+          <valueCanonical value="http://hl7.org.au/fhir/ps/ActorDefinition/au-ps-actor-consumer"/>
+        </extension>
+      </extension>
+      <path value="Composition.section.entry"/>
 			<sliceName value="medicationStatementOrRequest"/>
 			<min value="0"/>
 			<max value="*"/>
@@ -410,11 +1114,63 @@
 			</type>
 			<mustSupport value="true"/>
 		</element>
+    <element id="Composition.section:sectionMedications.emptyReason">
+      <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
+        <extension url="code">
+          <valueCode value="SHALL:populate-if-known"/>
+        </extension>
+        <extension url="actor">
+          <valueCanonical value="http://hl7.org.au/fhir/ps/ActorDefinition/au-ps-actor-producer"/>
+        </extension>
+      </extension>
+      <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
+        <extension url="code">
+          <valueCode value="SHALL:handle"/>
+        </extension>
+        <extension url="actor">
+          <valueCanonical value="http://hl7.org.au/fhir/ps/ActorDefinition/au-ps-actor-consumer"/>
+        </extension>
+      </extension>
+      <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
+        <extension url="code">
+          <valueCode value="SHOULD:display"/>
+        </extension>
+        <extension url="actor">
+          <valueCanonical value="http://hl7.org.au/fhir/ps/ActorDefinition/au-ps-actor-consumer"/>
+        </extension>
+      </extension>
+      <path value="Composition.section.emptyReason"/>
+      <mustSupport value="true"/>
+    </element>
     <element id="Composition.section:sectionImmunizations">
+      <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
+        <extension url="code">
+          <valueCode value="SHOULD:populate-if-known"/>
+        </extension>
+        <extension url="actor">
+          <valueCanonical value="http://hl7.org.au/fhir/ps/ActorDefinition/au-ps-actor-producer"/>
+        </extension>
+      </extension>
+      <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
+        <extension url="code">
+          <valueCode value="SHALL:handle"/>
+        </extension>
+        <extension url="actor">
+          <valueCanonical value="http://hl7.org.au/fhir/ps/ActorDefinition/au-ps-actor-consumer"/>
+        </extension>
+      </extension>
+      <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
+        <extension url="code">
+          <valueCode value="SHOULD:display"/>
+        </extension>
+        <extension url="actor">
+          <valueCanonical value="http://hl7.org.au/fhir/ps/ActorDefinition/au-ps-actor-consumer"/>
+        </extension>
+      </extension>
       <path value="Composition.section"/>
       <sliceName value="sectionImmunizations"/>
-      <short value="IPS Immunizations Section"/>
-      <definition value="The Immunizations Section defines a patient's current immunization status and pertinent immunization history.&#xD;&#xA;The primary use case for the Immunization Section is to enable communication of a patient's immunization status.&#xD;&#xA;The section includes the current immunization status, and may contain the entire immunization history that is relevant to the period of time being summarized."/>
+      <short value="Patient Summary Immunizations Section"/>
+      <definition value="Information about a patient's current immunisation status and pertinent immunisation history.&#xD;&#xA;The primary use case for this section is to enable communication of a patient's immunisation status.&#xD;&#xA;It could contain the entire immunisation history that is relevant to the period of time being summarised. This entry is used to document that no information about immunisations is available, or that no immunisations are known."/>
       <min value="0"/>
       <max value="1"/>
       <mustSupport value="true"/>
@@ -442,16 +1198,39 @@
         </discriminator>
         <rules value="open"/>
       </slicing>
-      <short value="Patient's immunization status and pertinent history."/>
-      <definition value="It defines the patient's current immunization status and pertinent immunization history.&#xD;&#xA;The primary use case for the Immunization Section is to enable communication of a patient's immunization status.&#xD;&#xA;It may contain the entire immunization history that is relevant to the period of time being summarized. This entry shall be used to document that no information about immunizations is available, or that no immunizations are known."/>
+      <short value="Patient's immunisation status and pertinent history"/>
+      <definition value="The patient's current immunisation status and pertinent immunisation history.&#xD;&#xA;The primary use case is to enable communication of a patient's immunisation status.&#xD;&#xA;It can contain the entire immunisation history relevant to the period of time being summarised. An entry can be used to document that no information about immunisations is available, or that no immunisations are known."/>
       <type>
         <code value="Reference"/>
         <targetProfile value="http://hl7.org/fhir/StructureDefinition/Immunization"/>
         <targetProfile value="http://hl7.org/fhir/StructureDefinition/DocumentReference"/>
       </type>
-      <mustSupport value="true"/>
     </element>
     <element id="Composition.section:sectionImmunizations.entry:immunization">
+      <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
+        <extension url="code">
+          <valueCode value="SHOULD:populate-if-known"/>
+        </extension>
+        <extension url="actor">
+          <valueCanonical value="http://hl7.org.au/fhir/ps/ActorDefinition/au-ps-actor-producer"/>
+        </extension>
+      </extension>
+      <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
+        <extension url="code">
+          <valueCode value="SHALL:handle"/>
+        </extension>
+        <extension url="actor">
+          <valueCanonical value="http://hl7.org.au/fhir/ps/ActorDefinition/au-ps-actor-consumer"/>
+        </extension>
+      </extension>
+      <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
+        <extension url="code">
+          <valueCode value="SHOULD:display"/>
+        </extension>
+        <extension url="actor">
+          <valueCanonical value="http://hl7.org.au/fhir/ps/ActorDefinition/au-ps-actor-consumer"/>
+        </extension>
+      </extension>
       <path value="Composition.section.entry"/>
       <sliceName value="immunization"/>
       <min value="0"/>
@@ -463,10 +1242,34 @@
       <mustSupport value="true"/>
     </element>
     <element id="Composition.section:sectionResults">
+      <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
+        <extension url="code">
+          <valueCode value="SHOULD:populate-if-known"/>
+        </extension>
+        <extension url="actor">
+          <valueCanonical value="http://hl7.org.au/fhir/ps/ActorDefinition/au-ps-actor-producer"/>
+        </extension>
+      </extension>
+      <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
+        <extension url="code">
+          <valueCode value="SHALL:handle"/>
+        </extension>
+        <extension url="actor">
+          <valueCanonical value="http://hl7.org.au/fhir/ps/ActorDefinition/au-ps-actor-consumer"/>
+        </extension>
+      </extension>
+      <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
+        <extension url="code">
+          <valueCode value="SHOULD:display"/>
+        </extension>
+        <extension url="actor">
+          <valueCanonical value="http://hl7.org.au/fhir/ps/ActorDefinition/au-ps-actor-consumer"/>
+        </extension>
+      </extension>
       <path value="Composition.section"/>
       <sliceName value="sectionResults"/>
-      <short value="IPS Results Section"/>
-      <definition value="This section assembles relevant observation results collected on the patient or produced on in-vitro biologic specimens collected from the patient. Some of these results may be laboratory results, others may be anatomic pathology results, others, radiology results, and others, clinical results."/>
+      <short value="Patient Summary Results Section"/>
+      <definition value="Information about a patient's relevant observation results collected on the patient or produced on in-vitro biologic specimens collected from the patient. Some of these results could be laboratory results, others could be anatomic pathology results, others could be radiology results, and others could be clinical results."/>
       <min value="0"/>
       <max value="1"/>
       <mustSupport value="true"/>
@@ -498,8 +1301,8 @@
         </discriminator>
         <rules value="open"/>
       </slicing>
-      <short value="Relevant observation results collected on the patient or produced on in-vitro biologic specimens collected from the patient."/>
-      <definition value="Relevant observation results collected on the patient or produced on in-vitro biologic specimens collected from the patient. Some of these results may be laboratory results, others may be anatomic pathology results, others, radiology results, and others, clinical results."/>
+      <short value="Relevant observation results collected on the patient or produced on in-vitro biologic specimens collected from the patient"/>
+      <definition value="The relevant observation results collected on the patient or produced on in-vitro biologic specimens collected from the patient. Some results could be laboratory results, others could be anatomic pathology results, others could be radiology results, and others could be clinical results."/>
       <type>
         <code value="Reference"/>
         <targetProfile value="http://hl7.org/fhir/StructureDefinition/Observation"/>
@@ -508,6 +1311,30 @@
       </type>
     </element>
     <element id="Composition.section:sectionResults.entry:results-observation-laboratory-pathology">
+      <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
+        <extension url="code">
+          <valueCode value="SHOULD:populate-if-known"/>
+        </extension>
+        <extension url="actor">
+          <valueCanonical value="http://hl7.org.au/fhir/ps/ActorDefinition/au-ps-actor-producer"/>
+        </extension>
+      </extension>
+      <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
+        <extension url="code">
+          <valueCode value="SHALL:handle"/>
+        </extension>
+        <extension url="actor">
+          <valueCanonical value="http://hl7.org.au/fhir/ps/ActorDefinition/au-ps-actor-consumer"/>
+        </extension>
+      </extension>
+      <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
+        <extension url="code">
+          <valueCode value="SHOULD:display"/>
+        </extension>
+        <extension url="actor">
+          <valueCanonical value="http://hl7.org.au/fhir/ps/ActorDefinition/au-ps-actor-consumer"/>
+        </extension>
+      </extension>
       <path value="Composition.section.entry"/>
       <sliceName value="results-observation-laboratory-pathology"/>
       <min value="0"/>
@@ -519,6 +1346,30 @@
       <mustSupport value="true"/>
     </element>
     <element id="Composition.section:sectionResults.entry:results-observation-radiology">
+      <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
+        <extension url="code">
+          <valueCode value="SHOULD:populate-if-known"/>
+        </extension>
+        <extension url="actor">
+          <valueCanonical value="http://hl7.org.au/fhir/ps/ActorDefinition/au-ps-actor-producer"/>
+        </extension>
+      </extension>
+      <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
+        <extension url="code">
+          <valueCode value="SHALL:handle"/>
+        </extension>
+        <extension url="actor">
+          <valueCanonical value="http://hl7.org.au/fhir/ps/ActorDefinition/au-ps-actor-consumer"/>
+        </extension>
+      </extension>
+      <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
+        <extension url="code">
+          <valueCode value="SHOULD:display"/>
+        </extension>
+        <extension url="actor">
+          <valueCanonical value="http://hl7.org.au/fhir/ps/ActorDefinition/au-ps-actor-consumer"/>
+        </extension>
+      </extension>
       <path value="Composition.section.entry"/>
       <sliceName value="results-observation-radiology"/>
       <min value="0"/>
@@ -530,6 +1381,22 @@
       <mustSupport value="true"/>
     </element>
     <element id="Composition.section:sectionResults.entry:results-diagnosticReport">
+      <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
+        <extension url="code">
+          <valueCode value="SHALL:handle"/>
+        </extension>
+        <extension url="actor">
+          <valueCanonical value="http://hl7.org.au/fhir/ps/ActorDefinition/au-ps-actor-consumer"/>
+        </extension>
+      </extension>
+      <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
+        <extension url="code">
+          <valueCode value="SHOULD:display"/>
+        </extension>
+        <extension url="actor">
+          <valueCanonical value="http://hl7.org.au/fhir/ps/ActorDefinition/au-ps-actor-consumer"/>
+        </extension>
+      </extension>
       <path value="Composition.section.entry"/>
       <sliceName value="results-diagnosticReport"/>
       <min value="0"/>
@@ -538,12 +1405,37 @@
         <code value="Reference"/>
         <targetProfile value="http://hl7.org/fhir/uv/ips/StructureDefinition/DiagnosticReport-uv-ips"/>
       </type>
+      <mustSupport value="true"/>
     </element>
     <element id="Composition.section:sectionProceduresHx">
+      <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
+        <extension url="code">
+          <valueCode value="SHOULD:populate-if-known"/>
+        </extension>
+        <extension url="actor">
+          <valueCanonical value="http://hl7.org.au/fhir/ps/ActorDefinition/au-ps-actor-producer"/>
+        </extension>
+      </extension>
+      <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
+        <extension url="code">
+          <valueCode value="SHALL:handle"/>
+        </extension>
+        <extension url="actor">
+          <valueCanonical value="http://hl7.org.au/fhir/ps/ActorDefinition/au-ps-actor-consumer"/>
+        </extension>
+      </extension>
+      <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
+        <extension url="code">
+          <valueCode value="SHOULD:display"/>
+        </extension>
+        <extension url="actor">
+          <valueCanonical value="http://hl7.org.au/fhir/ps/ActorDefinition/au-ps-actor-consumer"/>
+        </extension>
+      </extension>
       <path value="Composition.section"/>
       <sliceName value="sectionProceduresHx"/>
-      <short value="IPS History of Procedures Section"/>
-      <definition value="The History of Procedures Section contains a description of the patient past procedures that are pertinent to the scope of this document.&#xD;&#xA;Procedures may refer for example to:&#xD;&#xA;1. Invasive Diagnostic procedure:e.g. Cardiac catheterization; (the results of these procedure are documented in the results section)&#xD;&#xA;2. Therapeutic procedure: e.g. dialysis;&#xD;&#xA;3. Surgical procedure: e.g. appendectomy"/>
+      <short value="Patient Summary History of Procedures Section"/>
+      <definition value="Information about a patient's past procedures that are pertinent to the scope of this patient summary.&#xD;&#xA;Procedures could refer, for example to:&#xD;&#xA;1. Invasive Diagnostic procedure: e.g. Cardiac catheterization; (the results of these procedure are documented in the results section)&#xD;&#xA;2. Therapeutic procedure: e.g. dialysis;&#xD;&#xA;3. Surgical procedure: e.g. appendectomy"/>
       <min value="0"/>
       <max value="1"/>
       <mustSupport value="true"/>
@@ -571,8 +1463,8 @@
         </discriminator>
         <rules value="open"/>
       </slicing>
-      <short value="Patient past procedures pertinent to the scope of this document."/>
-      <definition value="It lists the patient past procedures that are pertinent to the scope of this document.&#xD;&#xA;Procedures may refer for example to:&#xD;&#xA;1. Invasive Diagnostic procedure:e.g. Cardiac catheterization; (the results of these procedure are documented in the results section)&#xD;&#xA;2. Therapeutic procedure: e.g. dialysis;&#xD;&#xA;3. Surgical procedure: e.g. appendectomy. This entry shall be used to document that no information about past procedures is available, or that no relevant past procedures are known."/>
+      <short value="Patient past procedures pertinent to the scope of this patient summary"/>
+      <definition value="The patient's past procedures that are pertinent to the scope of this patient summary.&#xD;&#xA;Procedures can refer for example to:&#xD;&#xA;1. Invasive Diagnostic procedure: e.g. Cardiac catheterization; (the results of these procedure are documented in the results section)&#xD;&#xA;2. Therapeutic procedure: e.g. dialysis;&#xD;&#xA;3. Surgical procedure: e.g. appendectomy. An entry can be used to document that no information about past procedures is available, or that no relevant past procedures are known."/>
       <type>
         <code value="Reference"/>
         <targetProfile value="http://hl7.org/fhir/StructureDefinition/Procedure"/>
@@ -580,6 +1472,30 @@
       </type>
     </element>
     <element id="Composition.section:sectionProceduresHx.entry:procedure">
+      <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
+        <extension url="code">
+          <valueCode value="SHOULD:populate-if-known"/>
+        </extension>
+        <extension url="actor">
+          <valueCanonical value="http://hl7.org.au/fhir/ps/ActorDefinition/au-ps-actor-producer"/>
+        </extension>
+      </extension>
+      <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
+        <extension url="code">
+          <valueCode value="SHALL:handle"/>
+        </extension>
+        <extension url="actor">
+          <valueCanonical value="http://hl7.org.au/fhir/ps/ActorDefinition/au-ps-actor-consumer"/>
+        </extension>
+      </extension>
+      <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
+        <extension url="code">
+          <valueCode value="SHOULD:display"/>
+        </extension>
+        <extension url="actor">
+          <valueCanonical value="http://hl7.org.au/fhir/ps/ActorDefinition/au-ps-actor-consumer"/>
+        </extension>
+      </extension>
       <path value="Composition.section.entry"/>
       <sliceName value="procedure"/>
       <min value="0"/>
@@ -591,10 +1507,34 @@
       <mustSupport value="true"/>
     </element>
     <element id="Composition.section:sectionMedicalDevices">
+      <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
+        <extension url="code">
+          <valueCode value="SHOULD:populate-if-known"/>
+        </extension>
+        <extension url="actor">
+          <valueCanonical value="http://hl7.org.au/fhir/ps/ActorDefinition/au-ps-actor-producer"/>
+        </extension>
+      </extension>
+      <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
+        <extension url="code">
+          <valueCode value="SHALL:handle"/>
+        </extension>
+        <extension url="actor">
+          <valueCanonical value="http://hl7.org.au/fhir/ps/ActorDefinition/au-ps-actor-consumer"/>
+        </extension>
+      </extension>
+      <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
+        <extension url="code">
+          <valueCode value="SHOULD:display"/>
+        </extension>
+        <extension url="actor">
+          <valueCanonical value="http://hl7.org.au/fhir/ps/ActorDefinition/au-ps-actor-consumer"/>
+        </extension>
+      </extension>
       <path value="Composition.section"/>
       <sliceName value="sectionMedicalDevices"/>
-      <short value="IPS Medical Devices Section"/>
-      <definition value="The medical devices section contains narrative text and coded entries describing the patient history of medical device use."/>
+      <short value="Patient Summary Medical Devices Section"/>
+      <definition value="Information about a patient's history of medical device use."/>
       <min value="0"/>
       <max value="1"/>
       <mustSupport value="true"/>
@@ -622,8 +1562,8 @@
         </discriminator>
         <rules value="open"/>
       </slicing>
-      <short value="Patient history of medical device use."/>
-      <definition value="It describes the patient history of medical device use. This entry shall be used to document that no information about medical device use is available, or that no relevant medical device use is known."/>
+      <short value="Patient history of medical device use"/>
+      <definition value="The patient's history of medical device use. An entry can be used to document that no information about medical device use is available, or that no relevant medical device use is known."/>
       <type>
         <code value="Reference"/>
         <targetProfile value="http://hl7.org/fhir/StructureDefinition/DeviceUseStatement"/>
@@ -631,6 +1571,30 @@
       </type>
     </element>
     <element id="Composition.section:sectionMedicalDevices.entry:deviceStatement">
+      <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
+        <extension url="code">
+          <valueCode value="SHOULD:populate-if-known"/>
+        </extension>
+        <extension url="actor">
+          <valueCanonical value="http://hl7.org.au/fhir/ps/ActorDefinition/au-ps-actor-producer"/>
+        </extension>
+      </extension>
+      <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
+        <extension url="code">
+          <valueCode value="SHALL:handle"/>
+        </extension>
+        <extension url="actor">
+          <valueCanonical value="http://hl7.org.au/fhir/ps/ActorDefinition/au-ps-actor-consumer"/>
+        </extension>
+      </extension>
+      <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
+        <extension url="code">
+          <valueCode value="SHOULD:display"/>
+        </extension>
+        <extension url="actor">
+          <valueCanonical value="http://hl7.org.au/fhir/ps/ActorDefinition/au-ps-actor-consumer"/>
+        </extension>
+      </extension>
       <path value="Composition.section.entry"/>
       <sliceName value="deviceStatement"/>
       <min value="0"/>
@@ -642,10 +1606,26 @@
       <mustSupport value="true"/>
     </element>
     <element id="Composition.section:sectionAdvanceDirectives">
+      <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
+        <extension url="code">
+          <valueCode value="SHALL:handle"/>
+        </extension>
+        <extension url="actor">
+          <valueCanonical value="http://hl7.org.au/fhir/ps/ActorDefinition/au-ps-actor-consumer"/>
+        </extension>
+      </extension>
+      <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
+        <extension url="code">
+          <valueCode value="SHOULD:display"/>
+        </extension>
+        <extension url="actor">
+          <valueCanonical value="http://hl7.org.au/fhir/ps/ActorDefinition/au-ps-actor-consumer"/>
+        </extension>
+      </extension>
       <path value="Composition.section"/>
       <sliceName value="sectionAdvanceDirectives"/>
-      <short value="IPS Advance Directives Section"/>
-      <definition value="The advance directives section contains a narrative description of patient's advance directive."/>
+      <short value="Patient Summary Advance Directives Section"/>
+      <definition value="Information about a patient's advance directives."/>
       <min value="0"/>
       <max value="1"/>
       <mustSupport value="true"/>
@@ -673,8 +1653,8 @@
         </discriminator>
         <rules value="open"/>
       </slicing>
-      <short value="Narrative description of the patient's advance directive."/>
-      <definition value="Contains a narrative description or a Consent entry with information about the patient's advance directive."/>
+      <short value="A patient's advance directives"/>
+      <definition value="The patient's advance directive."/>
       <type>
         <code value="Reference"/>
         <targetProfile value="http://hl7.org/fhir/StructureDefinition/Consent"/>
@@ -692,10 +1672,26 @@
       </type>
     </element>
     <element id="Composition.section:sectionAlerts">
+      <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
+        <extension url="code">
+          <valueCode value="SHALL:handle"/>
+        </extension>
+        <extension url="actor">
+          <valueCanonical value="http://hl7.org.au/fhir/ps/ActorDefinition/au-ps-actor-consumer"/>
+        </extension>
+      </extension>
+      <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
+        <extension url="code">
+          <valueCode value="SHOULD:display"/>
+        </extension>
+        <extension url="actor">
+          <valueCanonical value="http://hl7.org.au/fhir/ps/ActorDefinition/au-ps-actor-consumer"/>
+        </extension>
+      </extension>
       <path value="Composition.section"/>
       <sliceName value="sectionAlerts"/>
-      <short value="IPS Alerts Section"/>
-      <definition value="The alerts section flags potential concerns and/or dangers to/from the patient and may also include obstacles to care."/>
+      <short value="Patient Summary Alerts Section"/>
+      <definition value="Information about a patient's alerts pertinent to the scope of the patient summary including flagging potential concerns and/or dangers to/from the patient and can also include obstacles to care."/>
       <min value="0"/>
       <max value="1"/>
       <mustSupport value="true"/>
@@ -723,8 +1719,8 @@
         </discriminator>
         <rules value="open"/>
       </slicing>
-      <short value="Alert information."/>
-      <definition value="Contains alert information to be communicated. May optionally reference other resources in IPS."/>
+      <short value="Alert information"/>
+      <definition value="The alert information to be communicated; can optionally reference other resources in the patient summary."/>
       <type>
         <code value="Reference"/>
         <targetProfile value="http://hl7.org/fhir/StructureDefinition/Flag"/>
@@ -742,10 +1738,26 @@
       </type>
     </element>
     <element id="Composition.section:sectionFunctionalStatus">
+      <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
+        <extension url="code">
+          <valueCode value="SHALL:handle"/>
+        </extension>
+        <extension url="actor">
+          <valueCanonical value="http://hl7.org.au/fhir/ps/ActorDefinition/au-ps-actor-consumer"/>
+        </extension>
+      </extension>
+      <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
+        <extension url="code">
+          <valueCode value="SHOULD:display"/>
+        </extension>
+        <extension url="actor">
+          <valueCanonical value="http://hl7.org.au/fhir/ps/ActorDefinition/au-ps-actor-consumer"/>
+        </extension>
+      </extension>
       <path value="Composition.section"/>
       <sliceName value="sectionFunctionalStatus"/>
-      <short value="IPS Functional Status"/>
-      <definition value="The functional status section shall contain a narrative description of capability of the patient to perform acts of daily living, including possible needs of the patient to be continuously assessed by third parties. The invalidity status may in fact influence decisions about how to administer treatments.&#xD;&#xA;Profiles to express disabilities and functional assessments will be specified by future versions of this guide."/>
+      <short value="Patient Summary Functional Status Section"/>
+      <definition value="Information about a patient's functional status including a description of capability of the patient to perform acts of daily living, including possible needs of the patient to be continuously assessed by third parties. The invalidity status can in fact influence decisions about how to administer treatments.&#xD;&#xA;Profiles to express disabilities and functional assessments will be specified by future versions of this guide."/>
       <min value="0"/>
       <max value="1"/>
       <mustSupport value="true"/>
@@ -773,8 +1785,8 @@
         </discriminator>
         <rules value="open"/>
       </slicing>
-      <short value="Optional entry used to represent disabilities and functional assessments"/>
-      <definition value="It describes capabilities of the patient to perform acts of daily living, including possible needs of the patient to be continuously assessed by third parties. The invalidity status may in fact influence decisions about how to administer treatments.&#xD;&#xA;Profiles to express disabilities and functional assessments will be specified by future versions of this guide."/>
+      <short value="Disabilities and functional assessments"/>
+      <definition value="The patient's capability to perform acts of daily living, including possible needs of the patient to be continuously assessed by third parties. The invalidity status can in fact influence decisions about how to administer treatments.&#xD;&#xA;Profiles to express disabilities and functional assessments are expected be specified by future versions of this guide."/>
       <type>
         <code value="Reference"/>
         <targetProfile value="http://hl7.org/fhir/StructureDefinition/Condition"/>
@@ -789,7 +1801,7 @@
       <max value="*"/>
       <type>
         <code value="Reference"/>
-        <targetProfile value="http://hl7.org/fhir/uv/ips/StructureDefinition/Condition-uv-ips"/>
+        <targetProfile value="http://hl7.org.au/fhir/ps/StructureDefinition/au-ps-condition"/>
       </type>
     </element>
     <element id="Composition.section:sectionFunctionalStatus.entry:functionalAssessment">
@@ -802,16 +1814,32 @@
         <targetProfile value="http://hl7.org/fhir/StructureDefinition/ClinicalImpression"/>
       </type>
     </element>
-    <element id="Composition.section:sectionPastIllnessHx">
+    <element id="Composition.section:sectionPastProblems">
+      <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
+        <extension url="code">
+          <valueCode value="SHALL:handle"/>
+        </extension>
+        <extension url="actor">
+          <valueCanonical value="http://hl7.org.au/fhir/ps/ActorDefinition/au-ps-actor-consumer"/>
+        </extension>
+      </extension>
+      <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
+        <extension url="code">
+          <valueCode value="SHOULD:display"/>
+        </extension>
+        <extension url="actor">
+          <valueCanonical value="http://hl7.org.au/fhir/ps/ActorDefinition/au-ps-actor-consumer"/>
+        </extension>
+      </extension>
       <path value="Composition.section"/>
-      <sliceName value="sectionPastIllnessHx"/>
-      <short value="IPS History of Past Illness Section"/>
-      <definition value="The History of Past Illness section contains a description of the conditions the patient suffered in the past."/>
+      <sliceName value="sectionPastProblems"/>
+      <short value="Patient Summary History of Past Illness Section"/>
+      <definition value="Information about a patient's conditions that were suffered in the past and are no longer tracked in the Problem List."/>
       <min value="0"/>
       <max value="1"/>
       <mustSupport value="true"/>
     </element>
-    <element id="Composition.section:sectionPastIllnessHx.code">
+    <element id="Composition.section:sectionPastProblems.code">
       <path value="Composition.section.code"/>
       <min value="1"/>
       <type>
@@ -825,7 +1853,7 @@
         </coding>
       </patternCodeableConcept>
     </element>
-    <element id="Composition.section:sectionPastIllnessHx.entry">
+    <element id="Composition.section:sectionPastProblems.entry">
       <path value="Composition.section.entry"/>
       <slicing>
         <discriminator>
@@ -834,29 +1862,45 @@
         </discriminator>
         <rules value="open"/>
       </slicing>
-      <short value="Conditions the patient suffered in the past."/>
-      <definition value="It contains a description of the conditions the patient suffered in the past."/>
+      <short value="Conditions the patient suffered in the past"/>
+      <definition value="The conditions the patient suffered in the past and are no longer tracked in the Problem List."/>
       <type>
         <code value="Reference"/>
         <targetProfile value="http://hl7.org/fhir/StructureDefinition/Condition"/>
         <targetProfile value="http://hl7.org/fhir/StructureDefinition/DocumentReference"/>
       </type>
     </element>
-    <element id="Composition.section:sectionPastIllnessHx.entry:pastProblem">
+    <element id="Composition.section:sectionPastProblems.entry:pastProblem">
       <path value="Composition.section.entry"/>
       <sliceName value="pastProblem"/>
       <min value="0"/>
       <max value="*"/>
       <type>
         <code value="Reference"/>
-        <targetProfile value="http://hl7.org/fhir/uv/ips/StructureDefinition/Condition-uv-ips"/>
+        <targetProfile value="http://hl7.org.au/fhir/ps/StructureDefinition/au-ps-condition"/>
       </type>
     </element>
     <element id="Composition.section:sectionPregnancyHx">
+      <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
+        <extension url="code">
+          <valueCode value="SHALL:handle"/>
+        </extension>
+        <extension url="actor">
+          <valueCanonical value="http://hl7.org.au/fhir/ps/ActorDefinition/au-ps-actor-consumer"/>
+        </extension>
+      </extension>
+      <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
+        <extension url="code">
+          <valueCode value="SHOULD:display"/>
+        </extension>
+        <extension url="actor">
+          <valueCanonical value="http://hl7.org.au/fhir/ps/ActorDefinition/au-ps-actor-consumer"/>
+        </extension>
+      </extension>
       <path value="Composition.section"/>
       <sliceName value="sectionPregnancyHx"/>
-      <short value="IPS History of Pregnancy Section"/>
-      <definition value="The history of pregnancy section shall contain information about whether the patient is currently pregnant or not.&#xD;&#xA;It may contain addition summarizing information about the outcome of earlier pregnancies."/>
+      <short value="Patient Summary History of Pregnancy Section"/>
+      <definition value="Information about whether a patient is currently pregnant or not and can contain addition summarising information about the outcome of earlier pregnancies."/>
       <min value="0"/>
       <max value="1"/>
       <mustSupport value="true"/>
@@ -884,8 +1928,8 @@
         </discriminator>
         <rules value="open"/>
       </slicing>
-      <short value="Current pregnancy status and, optionally, information about the outcome of earlier pregnancies."/>
-      <definition value="It contains information about whether the patient is currently pregnant or not.&#xD;&#xA;It may contain addition summarizing information about the outcome of earlier pregnancies."/>
+      <short value="Current pregnancy status and, optionally, information about the outcome of earlier pregnancies"/>
+      <definition value="Information about whether the patient is currently pregnant or not.&#xD;&#xA;It can contain addition summarising information about the outcome of earlier pregnancies."/>
       <type>
         <code value="Reference"/>
         <targetProfile value="http://hl7.org/fhir/StructureDefinition/Observation"/>
@@ -913,10 +1957,26 @@
       </type>
     </element>
     <element id="Composition.section:sectionPatientStory">
+      <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
+        <extension url="code">
+          <valueCode value="SHALL:handle"/>
+        </extension>
+        <extension url="actor">
+          <valueCanonical value="http://hl7.org.au/fhir/ps/ActorDefinition/au-ps-actor-consumer"/>
+        </extension>
+      </extension>
+      <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
+        <extension url="code">
+          <valueCode value="SHOULD:display"/>
+        </extension>
+        <extension url="actor">
+          <valueCanonical value="http://hl7.org.au/fhir/ps/ActorDefinition/au-ps-actor-consumer"/>
+        </extension>
+      </extension>
       <path value="Composition.section"/>
       <sliceName value="sectionPatientStory"/>
-      <short value="IPS Patient Story Section"/>
-      <definition value="The section contains narrative text along with optional resources that express what matters to a patient. This may include needs, strengths, values, concerns and preferences to others providing support and care. The patient’s story, provided here, may be told by the patient or by a proxy."/>
+      <short value="Patient Summary Patient Story Section"/>
+      <definition value="Information about what matters to a patient. This can include needs, strengths, values, concerns and preferences to others providing support and care. The patient's story, provided here, can be told by the patient or by a proxy."/>
       <min value="0"/>
       <max value="1"/>
       <mustSupport value="true"/>
@@ -937,14 +1997,30 @@
     </element>
     <element id="Composition.section:sectionPatientStory.entry">
       <path value="Composition.section.entry"/>
-      <short value="Patient Story resources."/>
-      <definition value="Contains resources to support the Patient Story. Instances of DocumentReference or any other suitable resource type may be used."/>
+      <short value="Patient Story resources"/>
+      <definition value="The information about what matters to a patient. This can include needs, strengths, values, concerns and preferences to others providing support and care."/>
     </element>
     <element id="Composition.section:sectionPlanOfCare">
+      <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
+        <extension url="code">
+          <valueCode value="SHALL:handle"/>
+        </extension>
+        <extension url="actor">
+          <valueCanonical value="http://hl7.org.au/fhir/ps/ActorDefinition/au-ps-actor-consumer"/>
+        </extension>
+      </extension>
+      <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
+        <extension url="code">
+          <valueCode value="SHOULD:display"/>
+        </extension>
+        <extension url="actor">
+          <valueCanonical value="http://hl7.org.au/fhir/ps/ActorDefinition/au-ps-actor-consumer"/>
+        </extension>
+      </extension>
       <path value="Composition.section"/>
       <sliceName value="sectionPlanOfCare"/>
-      <short value="IPS Plan of Care Section"/>
-      <definition value="The plan of care section contains a narrative description of the expectations for care including proposals, goals, and order requests for monitoring, tracking, or improving the condition of the patient."/>
+      <short value="Patient Summary Plan of Care Section"/>
+      <definition value="Information about a patient's plans of care containing the expectations for care including proposals, goals, and order requests for monitoring, tracking, or improving the condition of the patient."/>
       <min value="0"/>
       <max value="1"/>
       <mustSupport value="true"/>
@@ -972,11 +2048,12 @@
         </discriminator>
         <rules value="open"/>
       </slicing>
-      <short value="Optional entry used to represent structured care plans"/>
-      <definition value="Dynamic, personalized plan including identified needed healthcare activity, health objectives and healthcare goals, relating to one or more specified health issues in a healthcare process [Source EN ISO 13940]"/>
+      <short value="Structured care plans"/>
+      <definition value="The dynamic, personalised care plans including identified needed healthcare activity, health objectives and healthcare goals, relating to one or more specified health issues in a healthcare process [Source EN ISO 13940]"/>
       <type>
         <code value="Reference"/>
         <targetProfile value="http://hl7.org/fhir/StructureDefinition/CarePlan"/>
+        <targetProfile value="http://hl7.org/fhir/StructureDefinition/ImmunizationRecommendation"/>
         <targetProfile value="http://hl7.org/fhir/StructureDefinition/DocumentReference"/>
       </type>
     </element>
@@ -990,11 +2067,37 @@
         <targetProfile value="http://hl7.org/fhir/StructureDefinition/CarePlan"/>
       </type>
     </element>
+    <element id="Composition.section:sectionPlanOfCare.entry:immunizationRecommendation">
+      <path value="Composition.section.entry"/>
+      <sliceName value="immunizationRecommendation"/>
+      <min value="0"/>
+      <max value="*"/>
+      <type>
+        <code value="Reference"/>
+        <targetProfile value="http://hl7.org/fhir/StructureDefinition/ImmunizationRecommendation"/>
+      </type>
+    </element>
     <element id="Composition.section:sectionSocialHistory">
+      <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
+        <extension url="code">
+          <valueCode value="SHALL:handle"/>
+        </extension>
+        <extension url="actor">
+          <valueCanonical value="http://hl7.org.au/fhir/ps/ActorDefinition/au-ps-actor-consumer"/>
+        </extension>
+      </extension>
+      <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
+        <extension url="code">
+          <valueCode value="SHOULD:display"/>
+        </extension>
+        <extension url="actor">
+          <valueCanonical value="http://hl7.org.au/fhir/ps/ActorDefinition/au-ps-actor-consumer"/>
+        </extension>
+      </extension>
       <path value="Composition.section"/>
       <sliceName value="sectionSocialHistory"/>
-      <short value="IPS Social History Section"/>
-      <definition value="The social history section contains a description of the person’s Health related &quot;lifestyle factors&quot; or &quot;lifestyle observations&quot; (e.g. smoke habits; alcohol consumption; diets, risky habits.)"/>
+      <short value="Patient Summary Social History Section"/>
+      <definition value="Information about a patient's health related &quot;lifestyle factors&quot; or &quot;lifestyle observations&quot; (e.g. smoke habits, alcohol consumption, diets, risky habits.)"/>
       <min value="0"/>
       <max value="1"/>
       <mustSupport value="true"/>
@@ -1022,8 +2125,8 @@
         </discriminator>
         <rules value="open"/>
       </slicing>
-      <short value="Health related &quot;lifestyle factors&quot; or &quot;lifestyle observations&quot; (e.g. smoke habits; alcohol consumption; diets, risky habits.)"/>
-      <definition value="Description of the person’s Health related “lifestyle factors&quot; or &quot;lifestyle observations&quot; (e.g. smoke habits; alcohol consumption; diets, risky habits.)"/>
+      <short value="Health related &quot;lifestyle factors&quot; or &quot;lifestyle observations&quot;"/>
+      <definition value="The patient's health related &quot;lifestyle factors&quot; or &quot;lifestyle observations&quot; (e.g. smoke habits, alcohol consumption, diets, risky habits.)"/>
       <type>
         <code value="Reference"/>
         <targetProfile value="http://hl7.org/fhir/StructureDefinition/Observation"/>
@@ -1051,11 +2154,27 @@
       </type>
     </element>
     <element id="Composition.section:sectionVitalSigns">
+      <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
+        <extension url="code">
+          <valueCode value="SHALL:handle"/>
+        </extension>
+        <extension url="actor">
+          <valueCanonical value="http://hl7.org.au/fhir/ps/ActorDefinition/au-ps-actor-consumer"/>
+        </extension>
+      </extension>
+      <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
+        <extension url="code">
+          <valueCode value="SHOULD:display"/>
+        </extension>
+        <extension url="actor">
+          <valueCanonical value="http://hl7.org.au/fhir/ps/ActorDefinition/au-ps-actor-consumer"/>
+        </extension>
+      </extension>
       <path value="Composition.section"/>
       <sliceName value="sectionVitalSigns"/>
       <label value="Vital signs"/>
-      <short value="IPS Vital Signs Section"/>
-      <definition value="The Vital signs section includes blood pressure, body temperature, heart rate, and respiratory rate. It may also include other clinical findings, such as height, weight, body mass index, head circumference, and pulse oximetry. In particular, notable vital signs or physical findings such as the most recent, maximum and/or minimum, baseline, or relevant trends may be included"/>
+      <short value="Patient Summary Vital Signs Section"/>
+      <definition value="Information about a patient's vital signs including blood pressure, body temperature, heart rate, and respiratory rate. It can also include other clinical findings, such as height, weight, body mass index, head circumference, and pulse oximetry. In particular, notable vital signs or physical findings such as the most recent, maximum and/or minimum, baseline, or relevant trends can be included"/>
       <min value="0"/>
       <max value="1"/>
       <mustSupport value="true"/>
@@ -1083,8 +2202,8 @@
         </discriminator>
         <rules value="open"/>
       </slicing>
-      <short value="Notable vital signs or physical findings."/>
-      <definition value="Notable vital signs or physical findings as: blood pressure, body temperature, heart rate, and respiratory rate. It may also include other clinical findings, such as height, weight, body mass index, head circumference, and pulse oximetry. In particular, notable vital signs or physical findings such as the most recent, maximum and/or minimum, baseline, or relevant trends may be included"/>
+      <short value="Notable vital signs or physical findings"/>
+      <definition value="The notable vital signs or physical findings as: blood pressure, body temperature, heart rate, and respiratory rate. It can also include other clinical findings, such as height, weight, body mass index, head circumference, and pulse oximetry. In particular, notable vital signs or physical findings such as the most recent, maximum and/or minimum, baseline, or relevant trends can be included"/>
       <type>
         <code value="Reference"/>
         <targetProfile value="http://hl7.org/fhir/StructureDefinition/Observation"/>

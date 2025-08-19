@@ -13,6 +13,9 @@
       </li>
     </ul>
   </li>
+  <li>
+    <a href="the-aups.html">The AU PS</a>
+  </li>
   <li class="dropdown">
     <a data-toggle="dropdown" href="#" class="dropdown-toggle">Guidance
       <b class="caret"></b>
@@ -22,27 +25,30 @@
         <a href="general-guidance.html">General Guidance</a>
       </li>
       <li>
+        <a href="generation-and-access.html">Generation and Access</a>
+      </li>
+      <li>
         <a href="sex-and-gender.html">Sex and Gender</a>
       </li>
       <li>
         <a href="aucdi.html">AUCDI</a>
       </li>
        <li>
-        <a href="relationship.html">Relationship with other IGs</a>
+        <a href="relationship.html">Relationship With Other IGs</a>
       </li>
       <li>
         <a href="variance.html">AU Variance Statement</a>
       </li>
       <li>
-        <a href="comparison.html">Comparison with other national and international IGs</a>
+        <a href="comparison.html">Comparison With Other National and International IGs</a>
       </li>
       <li>
-        <a href="future.html">Future of AU Patient Summary</a>
+        <a href="future.html">Future of AU PS</a>
       </li> 
     </ul>
   </li>
   <li class="dropdown">
-    <a data-toggle="dropdown" href="#" class="dropdown-toggle">Use Cases
+    <a data-toggle="dropdown" href="#" class="dropdown-toggle">Example Use Cases
       <b class="caret"></b>
     </a>
      <ul class="dropdown-menu">
@@ -77,9 +83,9 @@
       <!-- <li>
         <a href="capability-statements.html">Capability Statements</a>
       </li> -->
-      <!-- <li>
+      <li>
         <a href="actors.html">Actor Definitions</a>
-      </li>-->
+      </li>
     </ul>
   </li>
   <li>

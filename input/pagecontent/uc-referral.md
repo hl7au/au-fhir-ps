@@ -1,4 +1,4 @@
-This use case demonstrates an example scenario where, during a specialist consultation, the specialist accesses the patient summary created at the time of the referral and confirms the latest patient summary available for a patient.
+This example use case demonstrates a possible scenario where, during a specialist consultation, the specialist accesses the patient summary created at the time of the referral and confirms the latest patient summary available for a patient.
 
 ### Use Case Description
 
@@ -53,10 +53,14 @@ This use case demonstrates use of patient summary during step 4. Endocrinologist
 
 #### Sequence Diagram
 <div> 
-  <img src="uc-referral-seq.png" alt="Sequence Diagram" style="width:80%"/>
+  <img src="uc-referral-seq.png" alt="Sequence Diagram" style="width:100%"/>
 </div>
 *Figure 2: Sequence diagram showing access to embedded and updated patient summaries, with secure retrieval using public key cryptography*
 <br/>
+
+### Notes
+
+This example use case is provided for illustrative purposes only and is intended to support understanding of how patient summaries may be exchanged in practice. It does not prescribe technical requirements or mandate specific implementation workflows. 
 
 ### Examples
 

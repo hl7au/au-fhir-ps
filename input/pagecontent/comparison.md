@@ -1,18 +1,20 @@
-AU Patient Summary complies with, and leverages, national and international standards, in particular:
-- [International Patient Access 1.0.0](https://hl7.org/fhir/uv/ipa/STU1/)
-- [International Patient Summary Implementation Guide 2.0.0-ballot](https://hl7.org/fhir/uv/ips/2024Sep/)
-- [AU Core Implementation Guide](https://build.fhir.org/ig/hl7au/au-fhir-core/)
+{::options toc_levels="1..4"/}
 
-Relationships between AU Patient Summary, AU Core, AUCDI, and the above key implementation guides is described in [Relationship with other IGs](relationship.html). 
+AU Patient Summary (AU PS) complies with, and/or leverages, national and international standards, in particular:
+- [International Patient Access 1.1.0](https://hl7.org/fhir/uv/ipa/STU1.1/)
+- [International Patient Summary Implementation Guide 2.0.0](https://build.fhir.org/ig/HL7/fhir-ips/)
+- [AU Core Implementation Guide 2.0.0](https://build.fhir.org/ig/hl7au/au-fhir-core/)
 
-Corresponding profiles, conformance requirements, and capability statements included in the key FHIR implementation guides were reviewed and considered during AU PS's development to ensure alignment, and to facilitate adoption of, this standard.
+<div class="stu-note">
+The comparison in this guide is against the approved set of changes for IPS 2.0.0 as of 4 August 2025. Work on IPS 2.0.0 is ongoing; the CI Build for IPS reflects the latest proposed changes and as such differences to the compared baseline are expected.
+</div>
 
-The below comparison evaluates AU Patient Summary conformance requirements with the key implementation guides identifying where compliance with AU Patient Summary satisfies the expectations established by the referenced implementation guide. 
+Relationships between AU PS, AUCDI, and the above key implementation guides are described in [Relationship with other IGs](relationship.html). 
 
-### Profile comparison
+### Profile Comparison
 As part of profile comparison, the requirements, constraints, and standards specified in a particular FHIR profile are evaluated. These requirements can include mandatory elements, *Must Support* elements, cardinality constraints, data types, terminology bindings, usage rules, extensions, rules on missing or suppressed data. 
 
-The table below provides a profile only comparison from AU Patient Summary to profiles in key implementation guides. Compliance in the reverse direction is not guaranteed, i.e. a resource that is compliant with an International Patient Summary profile **MAY NOT** be compliant with AU Patient Summary.
+The table below provides a profile only comparison from AU PS to profiles in key implementation guides. Compliance in the reverse direction is not guaranteed, i.e. a resource that is compliant with an International Patient Summary profile **MAY NOT** be compliant with AU PS.
 
 **Legend:**
 
@@ -28,9 +30,9 @@ The table below provides a profile only comparison from AU Patient Summary to pr
     <thead>
         <tr>
             <th style="width: 25%; text-align: center; vertical-align: middle;">AU PS</th>
-            <th style="width: 25%; text-align: center; vertical-align: middle;">International Patient Access 1.0.0</th>
-            <th style="width: 25%; text-align: center; vertical-align: middle;">International Patient Summary 2.0.0 (ci-build)</th>
-            <th style="width: 25%; text-align: center; vertical-align: middle;">AU Core (ci-build)</th>
+            <th style="width: 25%; text-align: center; vertical-align: middle;">IPA 1.1.0</th>
+            <th style="width: 25%; text-align: center; vertical-align: middle;">IPS 2.0.0</th>
+            <th style="width: 25%; text-align: center; vertical-align: middle;">AU Core 2.0.0</th>
         </tr>
     </thead>
     <tbody>
@@ -69,7 +71,7 @@ The table below provides a profile only comparison from AU Patient Summary to pr
         </tr>
         <tr>
             <td style="width: 25%; text-align: left; vertical-align: middle;"><a href="StructureDefinition-au-ps-immunization.html">AU PS Immunization</a></td>
-            <td style="width: 25%; text-align: center; vertical-align: middle;"><img src="orange_checkmark.png" width="20"/></td>
+            <td style="width: 25%; text-align: center; vertical-align: middle;"><img src="green_checkmark.png" width="20"/></td>
             <td style="width: 25%; text-align: center; vertical-align: middle;"><img src="green_checkmark.png" width="20"/></td>
             <td style="width: 25%; text-align: center; vertical-align: middle;"><img src="green_checkmark.png" width="20"/></td>
         </tr>
@@ -81,7 +83,7 @@ The table below provides a profile only comparison from AU Patient Summary to pr
         </tr>
         <tr>
             <td style="width: 25%; text-align: left; vertical-align: middle;"><a href="StructureDefinition-au-ps-medicationrequest.html">AU PS MedicationRequest</a></td>
-            <td style="width: 25%; text-align: center; vertical-align: middle;"><img src="orange_checkmark.png" width="20"/><img src="cross_red_circle.png" width="20"/></td>
+            <td style="width: 25%; text-align: center; vertical-align: middle;"><img src="orange_checkmark.png" width="20"/></td>
             <td style="width: 25%; text-align: center; vertical-align: middle;"><img src="green_checkmark.png" width="20"/></td>
             <td style="width: 25%; text-align: center; vertical-align: middle;"><img src="green_checkmark.png" width="20"/></td>
         </tr>
@@ -98,20 +100,20 @@ The table below provides a profile only comparison from AU Patient Summary to pr
             <td style="width: 25%; text-align: center; vertical-align: middle;"><img src="green_checkmark.png" width="20"/></td>
         </tr>
         <tr>
-            <td style="width: 25%; text-align: left; vertical-align: middle;"><a href="StructureDefinition-au-ps-patient.html">AU PS Patient</a></td>
-            <td style="width: 25%; text-align: center; vertical-align: middle;"><img src="orange_checkmark.png" width="20"/></td>
-            <td style="width: 25%; text-align: center; vertical-align: middle;"><img src="green_checkmark.png" width="20"/></td>
-            <td style="width: 25%; text-align: center; vertical-align: middle;"><img src="green_checkmark.png" width="20"/></td>
-        </tr>
-        <tr>
             <td style="width: 25%; text-align: left; vertical-align: middle;"><a href="StructureDefinition-au-ps-diagnosticresult-path.html">AU PS Pathology Result Observation</a></td>
             <td style="width: 25%; text-align: center; vertical-align: middle;"><img src="green_checkmark.png" width="20"/></td>
             <td style="width: 25%; text-align: center; vertical-align: middle;"><img src="green_checkmark.png" width="20"/></td>
             <td style="width: 25%; text-align: center; vertical-align: middle;"><img src="green_checkmark.png" width="20"/></td>
         </tr>
         <tr>
-            <td style="width: 25%; text-align: left; vertical-align: middle;"><a href="StructureDefinition-au-ps-practitioner.html">AU PS Practitioner</a></td>
+            <td style="width: 25%; text-align: left; vertical-align: middle;"><a href="StructureDefinition-au-ps-patient.html">AU PS Patient</a></td>
+            <td style="width: 25%; text-align: center; vertical-align: middle;"><img src="orange_checkmark.png" width="20"/></td>
             <td style="width: 25%; text-align: center; vertical-align: middle;"><img src="green_checkmark.png" width="20"/></td>
+            <td style="width: 25%; text-align: center; vertical-align: middle;"><img src="green_checkmark.png" width="20"/></td>
+        </tr>
+        <tr>
+            <td style="width: 25%; text-align: left; vertical-align: middle;"><a href="StructureDefinition-au-ps-practitioner.html">AU PS Practitioner</a></td>
+            <td style="width: 25%; text-align: center; vertical-align: middle;"><img src="orange_checkmark.png" width="20"/></td>
             <td style="width: 25%; text-align: center; vertical-align: middle;"><img src="green_checkmark.png" width="20"/></td>
             <td style="width: 25%; text-align: center; vertical-align: middle;"><img src="green_checkmark.png" width="20"/></td>
         </tr>
@@ -142,65 +144,41 @@ The table below provides a profile only comparison from AU Patient Summary to pr
     </tbody>
 </table>
 
-#### International Patient Access
-[International Patient Access 1.0.0](https://hl7.org/fhir/uv/ipa/STU1/) describes how an application acting on behalf of a patient can access patient information from a clinical records system using a FHIR-based API.
+#### IPA Profile Additional Requirements
+[IPA 1.1.0](https://hl7.org/fhir/uv/ipa/STU1.1/) describes how an application acting on behalf of a patient can access patient information from a clinical records system using a FHIR-based API.
 
-##### Incompatible requirements
-The following IPA profile(s) contain incompatible requirements with the equivalent AU PS Profile. Implementers are advised to note that substantial code changes may be required to support these profiles.
-
-<table border="1" style="width: 100%; margin: auto; border-collapse: collapse;">
-    <thead>
-        <tr>
-            <th style="width: 25%;">AU PS</th>
-            <th style="width: 25%;">International Patient Access 1.0.0</th>
-            <th style="width: 25%;">Element</th>
-            <th style="width: 25%;">Incompatible requirements</th>
-        </tr>
-    </thead>
-    <tbody>
-        <tr>
-            <td style="width: 25%;"><a href="StructureDefinition-au-ps-medicationrequest.html">AU PS MedicationRequest</a></td>
-            <td style="width: 25%;"><a href="https://hl7.org/fhir/uv/ipa/STU1/StructureDefinition-ipa-medicationrequest.html">IPA-MedicationRequest</a></td>
-            <td style="width: 25%;">MedicationRequest.requester</td>
-            <td style="width: 25%;">IPA prohibits reference to Organization and RelatedPerson resources.</td>
-        </tr>
-    </tbody>
-</table>
-
-##### Additional requirements
+##### Additional Requirements
 The following IPA profile(s) contain additional requirements. Implementers are advised to note that some code changes may be required to support these profiles.
 
 <table border="1" style="width: 100%; margin: auto; border-collapse: collapse;">
     <thead>
         <tr>
-            <th style="width: 25%;">AU PS</th>
-            <th style="width: 25%;">International Patient Access 1.0.0</th>
+            <th style="width: 25%;">AU PS Profile</th>
+            <th style="width: 25%;">IPA 1.1.0 Profile</th>
             <th style="width: 25%;">Element</th>
-            <th style="width: 25%;">Additional requirements</th>
+            <th style="width: 25%;">IPA Profile Additional requirements</th>
         </tr>
     </thead>
     <tbody>
         <tr>
             <td style="width: 25%;"><a href="StructureDefinition-au-ps-condition.html">AU PS Condition</a></td>
-            <td style="width: 25%;"><a href="https://build.fhir.org/ig/HL7/fhir-ipa/StructureDefinition-ipa-problem-list-item.html">IPA-problem-list-item</a></td>
+            <td style="width: 25%;"><a href="https://hl7.org/fhir/uv/ipa/STU1.1/StructureDefinition-ipa-problem-list-item.html">IPA-problem-list-item</a></td>
             <td style="width: 25%;">Condition.category</td>
             <td style="width: 25%;">Requires category of 'problem-list-item'.</td>
         </tr>
         <tr>
-            <td style="width: 25%;"><a href="StructureDefinition-au-ps-immunization.html">AU PS Immunization</a></td>
-            <td style="width: 25%;"><a href="https://hl7.org/fhir/uv/ipa/STU1/StructureDefinition-ipa-immunization.html">IPA-Immunization</a></td>
-            <td style="width: 25%;">Immunization.statusReason</td>
-            <td style="width: 25%;"><i>Must Support</i> element in IPA.</td>
-        </tr>
-        <tr>
-            <td style="width: 25%;"><a href="StructureDefinition-au-ps-medicationrequest.html">AU PS MedicationRequest</a></td>
-            <td style="width: 25%;"><a href="https://hl7.org/fhir/uv/ipa/STU1/StructureDefinition-ipa-medicationrequest.html">IPA-MedicationRequest</a></td>
+            <td rowspan="2" style="width: 25%;"><a href="StructureDefinition-au-ps-medicationrequest.html">AU PS MedicationRequest</a></td>
+            <td rowspan="2" style="width: 25%;"><a href="https://hl7.org/fhir/uv/ipa/STU1.1/StructureDefinition-ipa-medicationrequest.html">IPA-MedicationRequest</a></td>
             <td style="width: 25%;">MedicationRequest.reported[x]</td>
             <td style="width: 25%;"><i>Must Support</i> element in IPA.</td>
         </tr>
         <tr>
+            <td style="width: 25%;">MedicationRequest.doNotPerfom</td>
+            <td style="width: 25%;"><i>Must Support</i> element in IPA.</td>
+        </tr>
+        <tr>
             <td rowspan="3" style="width: 25%;"><a href="StructureDefinition-au-ps-medicationstatement.html">AU PS MedicationStatement</a></td>
-            <td rowspan="3" style="width: 25%;"><a href="https://hl7.org/fhir/uv/ipa/STU1/StructureDefinition-ipa-medicationstatement.html">IPA-MedicationStatement</a></td>
+            <td rowspan="3" style="width: 25%;"><a href="https://hl7.org/fhir/uv/ipa/STU1.1/StructureDefinition-ipa-medicationstatement.html">IPA-MedicationStatement</a></td>
             <td style="width: 25%;">MedicationStatement.statusReason</td>
             <td style="width: 25%;"><i>Must Support</i> element in IPA.</td>
         </tr>
@@ -213,21 +191,44 @@ The following IPA profile(s) contain additional requirements. Implementers are a
             <td style="width: 25%;"><i>Must Support</i> element in IPA.</td>
         </tr>
         <tr>
-            <td rowspan="3" style="width: 25%;"><a href="StructureDefinition-au-ps-patient.html">AU PS Patient</a></td>
-            <td rowspan="3" style="width: 25%;"><a href="https://hl7.org/fhir/uv/ipa/STU1/StructureDefinition-ipa-patient.html">IPA-Patient</a></td>
+            <td rowspan="5" style="width: 25%;"><a href="StructureDefinition-au-ps-patient.html">AU PS Patient</a></td>
+            <td rowspan="5" style="width: 25%;"><a href="https://hl7.org/fhir/uv/ipa/STU1/StructureDefinition-ipa-patient.html">IPA-Patient</a></td>
+            <td style="width: 25%;">Patient.identifier</td>
+            <td style="width: 25%;">IPA requires all identifiers to have value (1..1), and at least one of system, type or assigner (ipa-pat-1).</td>
+        </tr>
+        <tr>
             <td style="width: 25%;">Patient.identifier.value</td>
             <td style="width: 25%;"><i>Must Support</i> element in IPA.</td>
         </tr>
         <tr>
             <td style="width: 25%;">Patient.active</td>
-            <td style="width: 25%;"><i>Must Support</i> element in IPA.</td>
+            <td style="width: 25%;">Element SHOULD be present if Patient.link is present (ipa-pat-4). <i>Must Support</i> element in IPA.</td>
+        </tr>
+        <tr>
+            <td style="width: 25%;">Patient.name.text</td>
+            <td style="width: 25%;">Sub-element SHOULD be present (ipa-pat-3).</td>
         </tr>
         <tr>
             <td style="width: 25%;">Patient.link</td>
             <td style="width: 25%;"><i>Must Support</i> element in IPA.</td>
+        </tr>
+        <tr>
+            <td style="width: 25%;"><a href="StructureDefinition-au-ps-practitioner.html">AU PS Practitioner</a></td>
+            <td style="width: 25%;"><a href="https://hl7.org/fhir/uv/ipa/STU1.1/StructureDefinition-ipa-practitioner.html">IPA-Practitioner</a></td>
+            <td style="width: 25%;">Practitioner.name.text</td>
+            <td style="width: 25%;">Sub-element SHOULD be present (ipa-pract-1).</td>
         </tr>
     </tbody>
 </table>
 
 ##### Missing and Suppressed Data
 AU PS compliant resources are compliant with IPA requirements for Missing Data. IPA does not include requirements for Suppressed Data.
+
+### Capability Statement Comparison
+
+No comparison is undertaken. AU PS does not define any FHIR specific interactions - no CapabilityStatement is defined. 
+
+Systems implementing AU Patient Summary **MAY** implement interactions defined in other CapabilityStatements, for example:
+- [IPS Server Capability Statement](https://build.fhir.org/ig/HL7/fhir-ips/CapabilityStatement-ips-server.html)
+- [International Patient Access Server CapabilityStatement](https://hl7.org/fhir/uv/ipa/CapabilityStatement-ipa-server.html)
+- [International Patient Access Client CapabilityStatement](https://hl7.org/fhir/uv/ipa/CapabilityStatement-ipa-client.html)
