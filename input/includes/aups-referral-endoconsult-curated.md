@@ -1,20 +1,19 @@
 [Patient Summary for Joyce Johnson as of 28 OCT 2024 (with electronic signature)](Bundle-aups-referral-endoconsult-curated.html)
 
-**Bundle overview**
-- **Example id** aups-referral-endoconsult-curated
-- **Bundle type**: document
-- **Timestamp**: 2024-10-28T11:57:11.269+11:00
-- Conforms to: AU PS Bundle profile
-This Bundle represents a patient summary containing the medical history and current medications at the time of referral that was authored by the GP through curation of a generated view of the data within their clinical information system, and was attested at the time of creation of the patient summary. [Referral to Specialist and Allied Health use case](uc-referral.html) example.
+ Shows an example of a patient summary containing the medical history and current medications at the time of referral that was authored by the GP through curation of a generated view of the data within their clinical information system, and was attested at the time of creation of the patient summary and signed electronically. 
 
-**Composition & participants** 
-- **Composition**: Patient Summary for Joyce Johnson as of 28 OCT 2024
-- **Status**: final
-- **Date**: 2024-10-28T11:57:10.868+11:00.
-- **Subject**: Patient Joyce JOHNSON (includes IHI, Medicare number, and demographics (DOB 1952-09-30, female, address in VIC)).
-- **Author**: PractitionerRole (General Practitioner, includes Medicare Provider Number, and references a Practitioner entry for Ginger BURROWS and an Organization entry for Bungabbee Medical Clinic). 
-- **Attester**: PractitionerRole (General Practitioner). Same as the document author. 
-- **Custodian**: Organization (Windsor Medical Clinic; includes HPI-O, ABN and contact details).
+**Document and Participants**
+Item|Details
+---|---
+Bundle | type=document, language en-AU, timestamp 2024-10-28T11:57:11.269+11:00
+Composition | Status final; LOINC 60591-5 (Patient summary Document); title Patient Summary for Joyce Johnson as of 27 May 2025; date 2024-10-28T11:57:10.868+11:00
+Patient | Joyce JOHNSON; Medicare Provider Number present
+Author | PractitionerRole for Ginger BURROWS (Practitioner) and Bungabbee Medical Clinic (Organization)
+Custodian | Windsor Medical Clinic (Organization)
+{: .grid}
+
+TBD: Signature
+
 
 **Sections and entries**:
 - **Allergies and Intolerances** (LOINC 48765-2):
@@ -40,27 +39,36 @@ This Bundle represents a patient summary containing the medical history and curr
   - a smoking status observation (final) with 
   - it records the patient’s smoking status as "Lifetime non-smoker"
 
-**Referenced resources**
+**Sections**
+Section title|LOINC code|Number of entries|Entry type
+---|---|---|---
+Allergies and Intolerances | LOINC 48765-2 | 1 | AllergyIntolerance
+Medication Summary | LOINC 10160-0 | 4 | MedicationStatement
+Problems list | LOINC 11450-4 | 2 | Condition
+History of Immunizations | LOINC 11369-6 | 4 | Immunization
+Pregnancy Information | LOINC 10162-6 | 1 | Observation
+Social History | LOINC 29762-2 | 1 | Observation
+{: .grid}
 
-The bundle includes references to the following resource types:
-- Composition, Patient, Organization, PractitionerRole, Practitioner
-- AllergyIntolerance, MedicationStatement, Medication, Condition, Immunization, Observation
+**Entries** - TBD
+Item|Resource type|Summary|Dates|In section
+---|---|---|---|---
+1 | AllergyIntolerance | TBD | TBD | Allergies/Adverse reactions
 
 **Profiles applied**
-
-A full list of profiles:
-- [AU PS Bundle](StructureDefinition-au-ps-bundle.html)
-- [AU PS Composition](StructureDefinition-au-ps-composition.html)
-- [AU PA Patient](StructureDefinition-au-ps-patient.html)
-- [AU PS Practitioner](StructureDefinition-au-ps-practitioner.html)
-- [AU PS PractitionerRole](StructureDefinition-au-ps-practitionerrole.html)
-- [AU PS Organization](StructureDefinition-au-ps-organization.html)
-- [AU PS MedicationStatement](StructureDefinition-au-ps-medicationstatement.html)
-- [AU PS Medication](StructureDefinition-au-ps-medication.html)
-- [AU PS Condition](StructureDefinition-au-ps-condition.html)
-- [AU PS Immunization](StructureDefinition-au-ps-immunization.html)
-- [AU PS Smoking Status](StructureDefinition-au-ps-smokingstatus.html)
-- [AU PS AllergyIntolerance](StructureDefinition-au-ps-allergyintolerance.html)
-- [Observation Pregnancy - Expected Delivery Date (IPS)](https://build.fhir.org/ig/HL7/fhir-ips/StructureDefinition-Observation-pregnancy-edd-uv-ips.html)
-- [Observation Pregnancy - Status (IPS)](https://build.fhir.org/ig/HL7/fhir-ips/StructureDefinition-Observation-pregnancy-status-uv-ips.html)
-
+Resource type|Profile
+---|---
+AllergyIntolerance | [AU PS AllergyIntolerance](StructureDefinition-au-ps-allergyintolerance.html)
+Bundle | [AU PS Bundle](StructureDefinition-au-ps-bundle.html)
+Composition | [AU PS Composition](StructureDefinition-au-ps-composition.html)
+Condition | [AU PS Condition](StructureDefinition-au-ps-condition.html)
+Immunization| [AU PS Immunization](StructureDefinition-au-ps-immunization.html)
+Medication | [AU PS Medication](StructureDefinition-au-ps-medication.html)
+MedicationStatement | [AU PS MedicationStatement](StructureDefinition-au-ps-medicationstatement.html)
+Observation | [AU PS Smoking Status](StructureDefinition-au-ps-smokingstatus.html)
+Observation | [Observation Pregnancy - Expected Delivery Date (IPS)](https://build.fhir.org/ig/HL7/fhir-ips/StructureDefinition-Observation-pregnancy-edd-uv-ips.html)
+Observation | [Observation Pregnancy - Status (IPS)](https://build.fhir.org/ig/HL7/fhir-ips/StructureDefinition-Observation-pregnancy-status-uv-ips.html)
+Organization | [AU PS Organization](StructureDefinition-au-ps-organization.html)
+Patient | [AU PA Patient](StructureDefinition-au-ps-patient.html)
+Practitioner | [AU PS Practitioner](StructureDefinition-au-ps-practitioner.html)
+PractitionerRole | [AU PS PractitionerRole](StructureDefinition-au-ps-practitionerrole.html)
