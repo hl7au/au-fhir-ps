@@ -82,14 +82,6 @@
           <valueCanonical value="http://hl7.org.au/fhir/ps/ActorDefinition/au-ps-actor-consumer"/>
         </extension>
       </extension>
-      <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
-        <extension url="code">
-          <valueCode value="SHOULD:display"/>
-        </extension>
-        <extension url="actor">
-          <valueCanonical value="http://hl7.org.au/fhir/ps/ActorDefinition/au-ps-actor-consumer"/>
-        </extension>
-      </extension>
       <path value="Composition.identifier"/>
       <mustSupport value="true"/>
     </element>
@@ -133,14 +125,6 @@
       <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
         <extension url="code">
           <valueCode value="SHALL:handle"/>
-        </extension>
-        <extension url="actor">
-          <valueCanonical value="http://hl7.org.au/fhir/ps/ActorDefinition/au-ps-actor-consumer"/>
-        </extension>
-      </extension>
-      <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
-        <extension url="code">
-          <valueCode value="SHOULD:display"/>
         </extension>
         <extension url="actor">
           <valueCanonical value="http://hl7.org.au/fhir/ps/ActorDefinition/au-ps-actor-consumer"/>
@@ -207,14 +191,6 @@
       <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
         <extension url="code">
           <valueCode value="SHALL:handle"/>
-        </extension>
-        <extension url="actor">
-          <valueCanonical value="http://hl7.org.au/fhir/ps/ActorDefinition/au-ps-actor-consumer"/>
-        </extension>
-      </extension>
-      <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
-        <extension url="code">
-          <valueCode value="SHOULD:display"/>
         </extension>
         <extension url="actor">
           <valueCanonical value="http://hl7.org.au/fhir/ps/ActorDefinition/au-ps-actor-consumer"/>
@@ -317,8 +293,8 @@
         </extension>
       </extension>
       <path value="Composition.title"/>
-      <short value="Patient Summary"/>
-      <definition value="Official human-readable label for the composition.&#xD;&#xA;&#xD;&#xA;For this document the title would likely include the text &quot;Patient Summary&quot; or any equivalent translation and other relevant document information."/>
+      <short value="The title of this patient summary"/>
+      <definition value="Official human-readable label for the composition.&#xD;&#xA;&#xD;&#xA;For this document the title would likely include the text &quot;Patient Summary&quot; or any equivalent translation and other relevant document information.This can include information like the patient name and time generated."/>
       <mustSupport value="true"/>
     </element>
     <element id="Composition.attester">
@@ -643,8 +619,6 @@
       <sliceName value="section-note"/>
       <short value="Additional notes that apply to the section (but not to specific resource)"/>
       <definition value="Additional notes that apply to the section (but not to specific resource)."/>
-      <min value="0"/>
-      <max value="1"/>
       <type>
         <code value="Extension"/>
         <profile value="http://hl7.org/fhir/StructureDefinition/note"/>
@@ -653,7 +627,7 @@
     <element id="Composition.section.title">
       <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
         <extension url="code">
-          <valueCode value="SHALL:able-to-populate"/>
+          <valueCode value="SHALL:populate"/>
         </extension>
         <extension url="actor">
           <valueCanonical value="http://hl7.org.au/fhir/ps/ActorDefinition/au-ps-actor-producer"/>
@@ -679,10 +653,23 @@
       <min value="1"/>
       <mustSupport value="true"/>
     </element>
+    <element id="Composition.section.code">
+      <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
+        <extension url="code">
+          <valueCode value="SHALL:handle"/>
+        </extension>
+        <extension url="actor">
+          <valueCanonical value="http://hl7.org.au/fhir/ps/ActorDefinition/au-ps-actor-consumer"/>
+        </extension>
+      </extension>
+      <path value="Composition.section.code"/>
+      <min value="1"/>
+      <mustSupport value="true"/>
+    </element>
     <element id="Composition.section.text">
       <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
         <extension url="code">
-          <valueCode value="SHALL:populate-if-known"/>
+          <valueCode value="SHALL:populate"/>
         </extension>
         <extension url="actor">
           <valueCanonical value="http://hl7.org.au/fhir/ps/ActorDefinition/au-ps-actor-producer"/>
@@ -753,18 +740,23 @@
       <mustSupport value="true"/>
     </element>
     <element id="Composition.section:sectionProblems.code">
+      <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
+        <extension url="code">
+          <valueCode value="SHALL:handle"/>
+        </extension>
+        <extension url="actor">
+          <valueCanonical value="http://hl7.org.au/fhir/ps/ActorDefinition/au-ps-actor-consumer"/>
+        </extension>
+      </extension>
       <path value="Composition.section.code"/>
       <min value="1"/>
-      <type>
-        <code value="CodeableConcept"/>
-        <profile value="http://hl7.org/fhir/uv/ips/StructureDefinition/CodeableConcept-uv-ips"/>
-      </type>
       <patternCodeableConcept>
         <coding>
           <system value="http://loinc.org"/>
           <code value="11450-4"/>
         </coding>
       </patternCodeableConcept>
+      <mustSupport value="true"/>
     </element>
     <element id="Composition.section:sectionProblems.entry">
       <path value="Composition.section.entry"/>
@@ -895,18 +887,23 @@
       <mustSupport value="true"/>
     </element>
     <element id="Composition.section:sectionAllergies.code">
+      <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
+        <extension url="code">
+          <valueCode value="SHALL:handle"/>
+        </extension>
+        <extension url="actor">
+          <valueCanonical value="http://hl7.org.au/fhir/ps/ActorDefinition/au-ps-actor-consumer"/>
+        </extension>
+      </extension>
       <path value="Composition.section.code"/>
       <min value="1"/>
-      <type>
-        <code value="CodeableConcept"/>
-        <profile value="http://hl7.org/fhir/uv/ips/StructureDefinition/CodeableConcept-uv-ips"/>
-      </type>
       <patternCodeableConcept>
         <coding>
           <system value="http://loinc.org"/>
           <code value="48765-2"/>
         </coding>
       </patternCodeableConcept>
+      <mustSupport value="true"/>
     </element>
     <element id="Composition.section:sectionAllergies.entry">
       <path value="Composition.section.entry"/>
@@ -1037,18 +1034,23 @@
       <mustSupport value="true"/>
     </element>
     <element id="Composition.section:sectionMedications.code">
+      <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
+        <extension url="code">
+          <valueCode value="SHALL:handle"/>
+        </extension>
+        <extension url="actor">
+          <valueCanonical value="http://hl7.org.au/fhir/ps/ActorDefinition/au-ps-actor-consumer"/>
+        </extension>
+      </extension>
       <path value="Composition.section.code"/>
       <min value="1"/>
-      <type>
-        <code value="CodeableConcept"/>
-        <profile value="http://hl7.org/fhir/uv/ips/StructureDefinition/CodeableConcept-uv-ips"/>
-      </type>
       <patternCodeableConcept>
         <coding>
           <system value="http://loinc.org"/>
           <code value="10160-0"/>
         </coding>
       </patternCodeableConcept>
+      <mustSupport value="true"/>
     </element>
     <element id="Composition.section:sectionMedications.entry">
       <path value="Composition.section.entry"/>
@@ -1176,18 +1178,23 @@
       <mustSupport value="true"/>
     </element>
     <element id="Composition.section:sectionImmunizations.code">
+      <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
+        <extension url="code">
+          <valueCode value="SHALL:handle"/>
+        </extension>
+        <extension url="actor">
+          <valueCanonical value="http://hl7.org.au/fhir/ps/ActorDefinition/au-ps-actor-consumer"/>
+        </extension>
+      </extension>
       <path value="Composition.section.code"/>
       <min value="1"/>
-      <type>
-        <code value="CodeableConcept"/>
-        <profile value="http://hl7.org/fhir/uv/ips/StructureDefinition/CodeableConcept-uv-ips"/>
-      </type>
       <patternCodeableConcept>
         <coding>
           <system value="http://loinc.org"/>
           <code value="11369-6"/>
         </coding>
       </patternCodeableConcept>
+      <mustSupport value="true"/>
     </element>
     <element id="Composition.section:sectionImmunizations.entry">
       <path value="Composition.section.entry"/>
@@ -1275,18 +1282,23 @@
       <mustSupport value="true"/>
     </element>
     <element id="Composition.section:sectionResults.code">
+      <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
+        <extension url="code">
+          <valueCode value="SHALL:handle"/>
+        </extension>
+        <extension url="actor">
+          <valueCanonical value="http://hl7.org.au/fhir/ps/ActorDefinition/au-ps-actor-consumer"/>
+        </extension>
+      </extension>
       <path value="Composition.section.code"/>
       <min value="1"/>
-      <type>
-        <code value="CodeableConcept"/>
-        <profile value="http://hl7.org/fhir/uv/ips/StructureDefinition/CodeableConcept-uv-ips"/>
-      </type>
       <patternCodeableConcept>
         <coding>
           <system value="http://loinc.org"/>
           <code value="30954-2"/>
         </coding>
       </patternCodeableConcept>
+      <mustSupport value="true"/>
     </element>
     <element id="Composition.section:sectionResults.entry">
       <path value="Composition.section.entry"/>
@@ -1441,18 +1453,23 @@
       <mustSupport value="true"/>
     </element>
     <element id="Composition.section:sectionProceduresHx.code">
+      <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
+        <extension url="code">
+          <valueCode value="SHALL:handle"/>
+        </extension>
+        <extension url="actor">
+          <valueCanonical value="http://hl7.org.au/fhir/ps/ActorDefinition/au-ps-actor-consumer"/>
+        </extension>
+      </extension>
       <path value="Composition.section.code"/>
       <min value="1"/>
-      <type>
-        <code value="CodeableConcept"/>
-        <profile value="http://hl7.org/fhir/uv/ips/StructureDefinition/CodeableConcept-uv-ips"/>
-      </type>
       <patternCodeableConcept>
         <coding>
           <system value="http://loinc.org"/>
           <code value="47519-4"/>
         </coding>
       </patternCodeableConcept>
+      <mustSupport value="true"/>
     </element>
     <element id="Composition.section:sectionProceduresHx.entry">
       <path value="Composition.section.entry"/>
@@ -1540,18 +1557,23 @@
       <mustSupport value="true"/>
     </element>
     <element id="Composition.section:sectionMedicalDevices.code">
+      <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
+        <extension url="code">
+          <valueCode value="SHALL:handle"/>
+        </extension>
+        <extension url="actor">
+          <valueCanonical value="http://hl7.org.au/fhir/ps/ActorDefinition/au-ps-actor-consumer"/>
+        </extension>
+      </extension>
       <path value="Composition.section.code"/>
       <min value="1"/>
-      <type>
-        <code value="CodeableConcept"/>
-        <profile value="http://hl7.org/fhir/uv/ips/StructureDefinition/CodeableConcept-uv-ips"/>
-      </type>
       <patternCodeableConcept>
         <coding>
           <system value="http://loinc.org"/>
           <code value="46264-8"/>
         </coding>
       </patternCodeableConcept>
+      <mustSupport value="true"/>
     </element>
     <element id="Composition.section:sectionMedicalDevices.entry">
       <path value="Composition.section.entry"/>
@@ -1631,18 +1653,23 @@
       <mustSupport value="true"/>
     </element>
     <element id="Composition.section:sectionAdvanceDirectives.code">
+      <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
+        <extension url="code">
+          <valueCode value="SHALL:handle"/>
+        </extension>
+        <extension url="actor">
+          <valueCanonical value="http://hl7.org.au/fhir/ps/ActorDefinition/au-ps-actor-consumer"/>
+        </extension>
+      </extension>
       <path value="Composition.section.code"/>
       <min value="1"/>
-      <type>
-        <code value="CodeableConcept"/>
-        <profile value="http://hl7.org/fhir/uv/ips/StructureDefinition/CodeableConcept-uv-ips"/>
-      </type>
       <patternCodeableConcept>
         <coding>
           <system value="http://loinc.org"/>
           <code value="42348-3"/>
         </coding>
       </patternCodeableConcept>
+      <mustSupport value="true"/>
     </element>
     <element id="Composition.section:sectionAdvanceDirectives.entry">
       <path value="Composition.section.entry"/>
@@ -1697,18 +1724,23 @@
       <mustSupport value="true"/>
     </element>
     <element id="Composition.section:sectionAlerts.code">
+      <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
+        <extension url="code">
+          <valueCode value="SHALL:handle"/>
+        </extension>
+        <extension url="actor">
+          <valueCanonical value="http://hl7.org.au/fhir/ps/ActorDefinition/au-ps-actor-consumer"/>
+        </extension>
+      </extension>
       <path value="Composition.section.code"/>
       <min value="1"/>
-      <type>
-        <code value="CodeableConcept"/>
-        <profile value="http://hl7.org/fhir/uv/ips/StructureDefinition/CodeableConcept-uv-ips"/>
-      </type>
       <patternCodeableConcept>
         <coding>
           <system value="http://loinc.org"/>
           <code value="104605-1"/>
         </coding>
       </patternCodeableConcept>
+      <mustSupport value="true"/>
     </element>
     <element id="Composition.section:sectionAlerts.entry">
       <path value="Composition.section.entry"/>
@@ -1763,18 +1795,23 @@
       <mustSupport value="true"/>
     </element>
     <element id="Composition.section:sectionFunctionalStatus.code">
+      <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
+        <extension url="code">
+          <valueCode value="SHALL:handle"/>
+        </extension>
+        <extension url="actor">
+          <valueCanonical value="http://hl7.org.au/fhir/ps/ActorDefinition/au-ps-actor-consumer"/>
+        </extension>
+      </extension>
       <path value="Composition.section.code"/>
       <min value="1"/>
-      <type>
-        <code value="CodeableConcept"/>
-        <profile value="http://hl7.org/fhir/uv/ips/StructureDefinition/CodeableConcept-uv-ips"/>
-      </type>
       <patternCodeableConcept>
         <coding>
           <system value="http://loinc.org"/>
           <code value="47420-5"/>
         </coding>
       </patternCodeableConcept>
+      <mustSupport value="true"/>
     </element>
     <element id="Composition.section:sectionFunctionalStatus.entry">
       <path value="Composition.section.entry"/>
@@ -1840,18 +1877,23 @@
       <mustSupport value="true"/>
     </element>
     <element id="Composition.section:sectionPastProblems.code">
+      <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
+        <extension url="code">
+          <valueCode value="SHALL:handle"/>
+        </extension>
+        <extension url="actor">
+          <valueCanonical value="http://hl7.org.au/fhir/ps/ActorDefinition/au-ps-actor-consumer"/>
+        </extension>
+      </extension>
       <path value="Composition.section.code"/>
       <min value="1"/>
-      <type>
-        <code value="CodeableConcept"/>
-        <profile value="http://hl7.org/fhir/uv/ips/StructureDefinition/CodeableConcept-uv-ips"/>
-      </type>
       <patternCodeableConcept>
         <coding>
           <system value="http://loinc.org"/>
           <code value="11348-0"/>
         </coding>
       </patternCodeableConcept>
+      <mustSupport value="true"/>
     </element>
     <element id="Composition.section:sectionPastProblems.entry">
       <path value="Composition.section.entry"/>
@@ -1906,18 +1948,23 @@
       <mustSupport value="true"/>
     </element>
     <element id="Composition.section:sectionPregnancyHx.code">
+      <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
+        <extension url="code">
+          <valueCode value="SHALL:handle"/>
+        </extension>
+        <extension url="actor">
+          <valueCanonical value="http://hl7.org.au/fhir/ps/ActorDefinition/au-ps-actor-consumer"/>
+        </extension>
+      </extension>
       <path value="Composition.section.code"/>
       <min value="1"/>
-      <type>
-        <code value="CodeableConcept"/>
-        <profile value="http://hl7.org/fhir/uv/ips/StructureDefinition/CodeableConcept-uv-ips"/>
-      </type>
       <patternCodeableConcept>
         <coding>
           <system value="http://loinc.org"/>
           <code value="10162-6"/>
         </coding>
       </patternCodeableConcept>
+      <mustSupport value="true"/>
     </element>
     <element id="Composition.section:sectionPregnancyHx.entry">
       <path value="Composition.section.entry"/>
@@ -1982,18 +2029,23 @@
       <mustSupport value="true"/>
     </element>
     <element id="Composition.section:sectionPatientStory.code">
+      <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
+        <extension url="code">
+          <valueCode value="SHALL:handle"/>
+        </extension>
+        <extension url="actor">
+          <valueCanonical value="http://hl7.org.au/fhir/ps/ActorDefinition/au-ps-actor-consumer"/>
+        </extension>
+      </extension>
       <path value="Composition.section.code"/>
       <min value="1"/>
-      <type>
-        <code value="CodeableConcept"/>
-        <profile value="http://hl7.org/fhir/uv/ips/StructureDefinition/CodeableConcept-uv-ips"/>
-      </type>
       <patternCodeableConcept>
         <coding>
           <system value="http://loinc.org"/>
           <code value="81338-6"/>
         </coding>
       </patternCodeableConcept>
+      <mustSupport value="true"/>
     </element>
     <element id="Composition.section:sectionPatientStory.entry">
       <path value="Composition.section.entry"/>
@@ -2026,18 +2078,23 @@
       <mustSupport value="true"/>
     </element>
     <element id="Composition.section:sectionPlanOfCare.code">
+      <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
+        <extension url="code">
+          <valueCode value="SHALL:handle"/>
+        </extension>
+        <extension url="actor">
+          <valueCanonical value="http://hl7.org.au/fhir/ps/ActorDefinition/au-ps-actor-consumer"/>
+        </extension>
+      </extension>
       <path value="Composition.section.code"/>
       <min value="1"/>
-      <type>
-        <code value="CodeableConcept"/>
-        <profile value="http://hl7.org/fhir/uv/ips/StructureDefinition/CodeableConcept-uv-ips"/>
-      </type>
       <patternCodeableConcept>
         <coding>
           <system value="http://loinc.org"/>
           <code value="18776-5"/>
         </coding>
       </patternCodeableConcept>
+      <mustSupport value="true"/>
     </element>
     <element id="Composition.section:sectionPlanOfCare.entry">
       <path value="Composition.section.entry"/>
@@ -2103,18 +2160,23 @@
       <mustSupport value="true"/>
     </element>
     <element id="Composition.section:sectionSocialHistory.code">
+      <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
+        <extension url="code">
+          <valueCode value="SHALL:handle"/>
+        </extension>
+        <extension url="actor">
+          <valueCanonical value="http://hl7.org.au/fhir/ps/ActorDefinition/au-ps-actor-consumer"/>
+        </extension>
+      </extension>
       <path value="Composition.section.code"/>
       <min value="1"/>
-      <type>
-        <code value="CodeableConcept"/>
-        <profile value="http://hl7.org/fhir/uv/ips/StructureDefinition/CodeableConcept-uv-ips"/>
-      </type>
       <patternCodeableConcept>
         <coding>
           <system value="http://loinc.org"/>
           <code value="29762-2"/>
         </coding>
       </patternCodeableConcept>
+      <mustSupport value="true"/>
     </element>
     <element id="Composition.section:sectionSocialHistory.entry">
       <path value="Composition.section.entry"/>
@@ -2180,18 +2242,23 @@
       <mustSupport value="true"/>
     </element>
     <element id="Composition.section:sectionVitalSigns.code">
+      <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
+        <extension url="code">
+          <valueCode value="SHALL:handle"/>
+        </extension>
+        <extension url="actor">
+          <valueCanonical value="http://hl7.org.au/fhir/ps/ActorDefinition/au-ps-actor-consumer"/>
+        </extension>
+      </extension>
       <path value="Composition.section.code"/>
       <min value="1"/>
-      <type>
-        <code value="CodeableConcept"/>
-        <profile value="http://hl7.org/fhir/uv/ips/StructureDefinition/CodeableConcept-uv-ips"/>
-      </type>
       <patternCodeableConcept>
         <coding>
           <system value="http://loinc.org"/>
           <code value="8716-3"/>
         </coding>
       </patternCodeableConcept>
+      <mustSupport value="true"/>
     </element>
     <element id="Composition.section:sectionVitalSigns.entry">
       <path value="Composition.section.entry"/>
