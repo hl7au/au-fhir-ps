@@ -756,6 +756,7 @@
           <code value="11450-4"/>
         </coding>
       </patternCodeableConcept>
+      <mustSupport value="true"/>
     </element>
     <element id="Composition.section:sectionProblems.entry">
       <path value="Composition.section.entry"/>
@@ -902,6 +903,7 @@
           <code value="48765-2"/>
         </coding>
       </patternCodeableConcept>
+      <mustSupport value="true"/>
     </element>
     <element id="Composition.section:sectionAllergies.entry">
       <path value="Composition.section.entry"/>
@@ -1048,6 +1050,7 @@
           <code value="10160-0"/>
         </coding>
       </patternCodeableConcept>
+      <mustSupport value="true"/>
     </element>
     <element id="Composition.section:sectionMedications.entry">
       <path value="Composition.section.entry"/>
@@ -1191,6 +1194,7 @@
           <code value="11369-6"/>
         </coding>
       </patternCodeableConcept>
+      <mustSupport value="true"/>
     </element>
     <element id="Composition.section:sectionImmunizations.entry">
       <path value="Composition.section.entry"/>
@@ -1294,6 +1298,7 @@
           <code value="30954-2"/>
         </coding>
       </patternCodeableConcept>
+      <mustSupport value="true"/>
     </element>
     <element id="Composition.section:sectionResults.entry">
       <path value="Composition.section.entry"/>
@@ -1464,6 +1469,7 @@
           <code value="47519-4"/>
         </coding>
       </patternCodeableConcept>
+      <mustSupport value="true"/>
     </element>
     <element id="Composition.section:sectionProceduresHx.entry">
       <path value="Composition.section.entry"/>
@@ -1567,6 +1573,7 @@
           <code value="46264-8"/>
         </coding>
       </patternCodeableConcept>
+      <mustSupport value="true"/>
     </element>
     <element id="Composition.section:sectionMedicalDevices.entry">
       <path value="Composition.section.entry"/>
@@ -1662,6 +1669,7 @@
           <code value="42348-3"/>
         </coding>
       </patternCodeableConcept>
+      <mustSupport value="true"/>
     </element>
     <element id="Composition.section:sectionAdvanceDirectives.entry">
       <path value="Composition.section.entry"/>
@@ -1732,6 +1740,7 @@
           <code value="104605-1"/>
         </coding>
       </patternCodeableConcept>
+      <mustSupport value="true"/>
     </element>
     <element id="Composition.section:sectionAlerts.entry">
       <path value="Composition.section.entry"/>
@@ -1802,6 +1811,7 @@
           <code value="47420-5"/>
         </coding>
       </patternCodeableConcept>
+      <mustSupport value="true"/>
     </element>
     <element id="Composition.section:sectionFunctionalStatus.entry">
       <path value="Composition.section.entry"/>
@@ -1883,6 +1893,7 @@
           <code value="11348-0"/>
         </coding>
       </patternCodeableConcept>
+      <mustSupport value="true"/>
     </element>
     <element id="Composition.section:sectionPastProblems.entry">
       <path value="Composition.section.entry"/>
@@ -1953,6 +1964,7 @@
           <code value="10162-6"/>
         </coding>
       </patternCodeableConcept>
+      <mustSupport value="true"/>
     </element>
     <element id="Composition.section:sectionPregnancyHx.entry">
       <path value="Composition.section.entry"/>
@@ -2033,6 +2045,7 @@
           <code value="81338-6"/>
         </coding>
       </patternCodeableConcept>
+      <mustSupport value="true"/>
     </element>
     <element id="Composition.section:sectionPatientStory.entry">
       <path value="Composition.section.entry"/>
@@ -2081,6 +2094,7 @@
           <code value="18776-5"/>
         </coding>
       </patternCodeableConcept>
+      <mustSupport value="true"/>
     </element>
     <element id="Composition.section:sectionPlanOfCare.entry">
       <path value="Composition.section.entry"/>
@@ -2162,6 +2176,7 @@
           <code value="29762-2"/>
         </coding>
       </patternCodeableConcept>
+      <mustSupport value="true"/>
     </element>
     <element id="Composition.section:sectionSocialHistory.entry">
       <path value="Composition.section.entry"/>
@@ -2243,6 +2258,7 @@
           <code value="8716-3"/>
         </coding>
       </patternCodeableConcept>
+      <mustSupport value="true"/>
     </element>
     <element id="Composition.section:sectionVitalSigns.entry">
       <path value="Composition.section.entry"/>
