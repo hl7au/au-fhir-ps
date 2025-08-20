@@ -343,11 +343,11 @@
 					<generation value="markdown"/>
 				</page>
 			</page>
-			<!-- <page>
+			<page>
 				<nameUrl value="changes.html"/>
 				<title value="Change Log"/>
 				<generation value="markdown"/>
-			</page>-->
+			</page>
 		</page> 
 		<!-- copyright year is a mandatory parameter -->
 		<parameter>

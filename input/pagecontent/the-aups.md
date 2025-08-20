@@ -26,7 +26,7 @@ A sample set of [Consumer Journeys](https://sparked.csiro.au/index.php/products-
 ### Structure of the AU PS
 AU PS is specified in this guide as a HL7 FHIR document (a Bundle including a Composition), composed by a set of potentially reusable "minimal" data blocks (the AU PS profiles).
 
-Based on IPS and AU Core, AU PS defines a patient summary in the context of providing information to downstream providers. While profiled sections can have content that reflect intentions or orders of clinical care, the patient summary is meant as an informative document and is not intended to be directly actionable. For example, a MedicationRequest resource in the Medication Summary section or a CarePlan resource in the Plan of Care section, is not intended to provide authorisation for fulfilment or actioning from the AU PS (or IPS) document.
+Based on [IPS](https://build.fhir.org/ig/HL7/fhir-ips) and [AU Core](https://build.fhir.org/ig/hl7au/au-fhir-core), AU PS defines a patient summary in the context of providing information to downstream providers. While profiled sections can have content that reflect intentions or orders of clinical care, the patient summary is meant as an informative document and is not intended to be directly actionable. For example, a MedicationRequest resource in the Medication Summary section or a CarePlan resource in the Plan of Care section, is not intended to provide authorisation for fulfilment or actioning from the AU PS (or IPS) document.
 
 The AU PS Document shares the same structure as an IPS, shown below.
 
@@ -48,8 +48,8 @@ See the description of each defined section in IPS [Sections description](https:
 
 The AU PS is based on [IPS](https://build.fhir.org/ig/HL7/fhir-ips/) and [AU Core](https://build.fhir.org/ig/hl7au/au-fhir-core/), allowing for localisations required to meet Australian requirements while still ensuring alignment to the IPS specification:
 * A valid AU PS document IS a valid IPS document - the document instance validates against both IGs. 
-* A conformant AU PS actor IS a conformant IPS actor (the conformance expectations for implementation for IPS are satisfied when implementing AU PS actor requirements).
-* A conformant AU PS actor IS NOT a conformant AU Core actor. AU Core, like IPA, defines actors for FHIR resource access via a RESTful API, AU PS (and IPS) do not define 'access' they define production and consumption of patient summary documents.
+* A conformant AU PS actor IS a conformant IPS actor - the conformance expectations for implementation for IPS are satisfied when implementing AU PS actor requirements.
+* A conformant AU PS actor IS NOT a conformant AU Core actor - AU Core, like IPA, defines actors for FHIR resource access via a RESTful API, AU PS (and IPS) do not define 'access' they define production and consumption of patient summary documents.
 
 <div> 
    <img src="AUPSPassport.png" alt="The AU PS 'Passport'" style="width:25%"/>
@@ -59,17 +59,17 @@ The AU PS is based on [IPS](https://build.fhir.org/ig/HL7/fhir-ips/) and [AU Cor
 
 While AU PS has no variance (i.e. fully compliant) from IPS Implementation Guide version 2.0.0-ci-build ([current](https://build.fhir.org/ig/HL7/fhir-ips)), AU PS does impose requirements additional to IPS to support requirements in the Australian healthcare context (these primarily come from AUCDI and AU Core). These additional requirements are intentionally limited to maximise interoperability with IPS-aware systems. See [Comparison with other national and international IGs](comparison.html) and [Relationship with other IGs](relationship.html) for information on the national and international standards context of AU PS.
 
-Additional requirements include:
+Additional requirements for the Australian healthcare context include:
 * additionally profiled resources
-* additional elements labelled *Must Support*
+* additional elements and extensions labelled *Must Support*
 * strengthened obligations on some *Must Support* elements
-* different value set bindings
+* different and sometimes stronger value set bindings
 * strengthened cardinality
 * additional fixed values
 * additional business rules
 * clarified expectations for missing data, empty sections, and suppressed data
 
-A summary of differences is provided in the sections below. While every effort has been made to ensure this page is consistent with the requirements of AU PS this is not a normative part of the specification.
+A summary of these additional requirements is provided in the sections below. While every effort has been made to ensure this page is consistent with the requirements of AU PS this is not a normative part of the specification.
 
 #### Additionally Profiled Resources
 
@@ -96,13 +96,13 @@ No extensions are labelled as *Must Support* in IPS. In AU PS the following exte
 * [Individual Gender Identity](https://hl7.org/fhir/extensions/5.1.0/StructureDefinition-individual-genderIdentity.html) in [AU PS Patient](StructureDefinition-au-ps-patient.html)
 
 #### Terminology
- A full list of terminology differences is not provided, refer to the AU PS profiles and the [Terminology](terminology.html) page to understand the terminology supported for use in AU PS. Some differences are mentioned below to highlight their potential relevance to implementers of the AU PS.
+ A full list of terminology differences is not provided, refer to the [AU PS profiles](profiles-and-extensions.html) and the [Terminology](terminology.html) page to understand the terminology supported for use in AU PS. Some differences are mentioned below to highlight their potential relevance to implementers of the AU PS.
 
 AU PS:
 * adopts terminology bound in AU Core in preference to IPS where the IPS binding strength is equivalent or weaker.
-* localised terminology bindings additionally profiled resources and supported extensions.
-* in some elements define support for more than one value set, for this list and how producers and consumers are to interpret support, see the table in the section [Must Support - Choice of Terminology](general-requirements.html#must-support---choice-of-terminology).
-* for a limited set of elements, the terminology constraint is stronger than IPS (e.g. preferred -> extensible).
+* localised terminology bindings are present in the additionally profiled resources and *Must Support* extensions.
+* defines support for more multiple terminologies for medicines and vaccines, see the table in the section [Must Support - Choice of Terminology](general-requirements.html#must-support---choice-of-terminology).
+* applies a stronger binding strength (e.g. preferred -> extensible) for some *Must Support* elements (the binding strength is inherited from AU Core).
  
 In many cases the difference between value sets bound in AU Core and IPS is the IPS use of international SNOMED CT concepts versus the AU Core use of SNOMED CT-AU concepts and international SNOMED CT concepts. Typically these Australian value sets are bound as [preferred](https://hl7.org/fhir/R4/terminologies.html#extensible) in AU PS profiles; these are recommendations for use in the Australian healthcare context but do not prevent other coding or text only representations. 
 
