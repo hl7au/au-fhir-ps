@@ -10,6 +10,7 @@ This change log documents the significant updates and resolutions implemented fr
   - removed SHOULD:display obligation on AllergyIntolerance.patient.reference for the AU PS Consumer [IPS: FHIR-51258](https://jira.hl7.org/browse/FHIR-51258)
 - [AU PS Composition](StructureDefinition-au-ps-composition.html):
   - changed Composition.section[all slices].code cardinality from 0..1 to 1..1, and added Must Support and obligation SHALL:handle for the AU PS Consumer [IPS: FHIR-51231](https://jira.hl7.org/browse/FHIR-51231)
+  - changed Composition.section[all slices].code to remove use of the CodableConceptIPS [IPS: FHIR-51231](https://jira.hl7.org/browse/FHIR-51231)
   - removed the cardinality constraint on Composition.section[all slices].extension:section-note, changing it from 0..1 to 0..* [IPS: FHIR-50271](https://jira.hl7.org/browse/FHIR-50271)
   - removed SHOULD:display obligation on Composition.identifier, Composition.type, and Composition.subject.reference for the AU PS Consumer [IPS: FHIR-51258](https://jira.hl7.org/browse/FHIR-51258)
   - changed Composition.section[all slices].title and Composition.section[all slices].text obligations from SHALL:populate-if-known to SHALL:populate for the AU PS Producer [IPS: FHIR-51259](https://jira.hl7.org/browse/FHIR-51259)
