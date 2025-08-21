@@ -1,9 +1,9 @@
-###  Release TBD
-- Publication date: TBD
-- Publication status: TBD
+###  Release 0.4.0-draft
+- Publication date: 2025-08-22
+- Publication status: Draft
 - Based on FHIR version: 4.0.1
 
-This change log documents the significant updates and resolutions implemented from version [0.3.0-ballot](https://hl7.org.au/fhir/ps/0.3.0-ballot/index.html) to TBD.
+This change log documents the significant updates and resolutions implemented from version [0.3.0-ballot](https://hl7.org.au/fhir/ps/0.3.0-ballot/index.html) to [0.4.0-draft](https://hl7.org.au/fhir/ps/0.4.0-draft/index.html).
 
 #### Changes in this version
 - [AU PS AllergyIntolerance](StructureDefinition-au-ps-allergyintolerance.html):
