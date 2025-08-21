@@ -29,22 +29,22 @@ The [Actor Definitions](actors.html) page lists the AU PS actors defined for thi
 ### Mandatory Elements
 Mandatory elements are elements with minimum cardinality > 0. When an element is mandatory, the data is expected to always be present. Very rarely, it may not be, and in this circumstance the requirements defined by AU Core for [Missing Data](https://build.fhir.org/ig/hl7au/au-fhir-core/general-requirements.html#missing-data) **SHALL** be applied. 
 
-An element can be both *Must Support* and mandatory and in this circumstance the requirements defined for [Missing Must Support and Mandatory Data](general-requirements.html#missing-must-support-and-mandatory-data) **SHALL** be applied.
+An element can be both *Must Support* and mandatory, and in this circumstance the requirements defined for [Missing Must Support and Mandatory Data](general-requirements.html#missing-must-support-and-mandatory-data) **SHALL** be applied.
 
 The convention in this guide is to mark all mandatory and conditionally mandatory elements as *Must Support* unless they are nested under an optional element.
 
 ### Missing Data, Empty Sections, Known Absence of Data
-It is important to differentiate between:
-* affirmatively stating that a patient has "no known X" or "history of X" (for example that a patient has no known allergies) versus 
-* not having data in the record for a particular section (for example where a source system does not have information on a patient's allergies) versus 
-* asserting that this data is not available due to a workflow reason (for example allergies not were not reviewed and are unknown) versus 
-* not having data for a particular element (for example the onset date of a particular allergy is not available in the system and the system does not know the reason for the absence).
+It is important to differentiate between the following mutually exclusive circumstances:
+* Affirmatively stating that a patient has "no known X" or "no history of X" (for example, that a patient has no known allergies). 
+* Not having data in the record for a particular section (for example, where a source system does not have information on a patient's allergies). 
+* Asserting that this data is not available due to a workflow reason (for example, allergies were not reviewed and are unknown). 
+* Not having data for a particular element (for example, the onset date of a particular allergy is not available in the system and the system does not know the reason for the absence).
 
 In the above circumstances the following is applied:
 * Where data is missing for an element within a resource and the reason is not known, systems **SHALL** implement the requirements of the [Missing Data](general-requirements.html#missing-data) section.
 * Where data is missing for a section and the reason is not known, systems **SHALL** implement the requirements of the [Empty Sections](general-requirements.html#empty-sections) section.
-* Where data is not available due to a known workflow reason, systems **SHOULD** implement the requirements of the [Known absence of data due to workflow](general-requirements.html#known-absence-of-data-due-to-workflow) section.
-* When stating "no known X" or "no history of X", systems **SHOULD** implement the guidance of the [No known X](general-requirements.html#no-known-x) section.
+* Where data is not available due to a known workflow reason, systems **SHOULD** implement the requirements of the [Known Absence of Data Due to Workflow](general-requirements.html#known-absence-of-data-due-to-workflow) section.
+* When stating "no known X" or "no history of X", systems **SHOULD** implement the guidance of the [No Known X](general-requirements.html#no-known-x) section.
 
 #### Missing Data
 
@@ -91,7 +91,8 @@ An AU PS Producer **SHOULD** omit non-mandatory sections when the source system 
 For a mandatory section (minimum cardinality is > 0), the section **SHALL** be present *even if* the source system does not have any information for that section or know the reason the information is absent. In this circumstance, an AU PS Producer **SHALL**:
 
 * use the code `unavailable` from the [List Empty Reasons](http://terminology.hl7.org/CodeSystem/list-empty-reason) code system
-* AU PS Consumers are advised that other meaningful values can be captured in `Composition.section.emptyReason` beyond missing or suppressed.
+
+AU PS Consumers are advised that other meaningful values can be captured in `Composition.section.emptyReason` beyond missing or suppressed.
   
     Example: AU PS - Allergies and Intolerances Section where the patient's allergy information is not available.
     ~~~
@@ -126,14 +127,14 @@ For a mandatory section (minimum cardinality is > 0), the section **SHALL** be p
         ...
     ~~~
 
-#### Known absence of data due to workflow
+#### Known Absence of Data Due to Workflow
 
-Where the system does not have information for a particular section and there is a known workflow reason (for example the patient preferred not to answer), the system **SHOULD** represent that reason by populating `Composition.section.emptyReason`:
+Where the system does not have information for a particular section and there is a known workflow reason (for example, the patient preferred not to answer), the system **SHOULD** represent that reason by populating `Composition.section.emptyReason`:
 * Prefer not to answer may be represented by sending the [Data Absent Reason](http://terminology.hl7.org/CodeSystem/data-absent-reason) code "asked-declined"
 * Asked but not known may be represented by sending the [Data Absent Reason](http://terminology.hl7.org/CodeSystem/data-absent-reason) code "asked-unknown"
 * Where the workflow does not support obtaining the information, it may be represented by sending the [List Empty Reason](https://hl7.org/fhir/R4/codesystem-list-empty-reason.html) code "notasked"
 
-    Example: AU PS - Allergies and Intolerances Section where the patient's allergy information is not available.
+    Example: AU PS - Allergies and Intolerances Section where there is a workflow reason the patient's allergy information is not available.
     ~~~
         ...
         "section" : [
@@ -168,11 +169,11 @@ Where the system does not have information for a particular section and there is
 
 #### No Known X
 
-Where the system can assert "no known X" (for example no known conditions) or "no history of X" (for example no history of cardiovascular system disease), the system **SHOULD** populate `Composition.section.entry` in accordance with the relevant profile specific implementation guidance. 
+Where the system can assert "no known X" (for example, no known conditions) or "no history of X" (for example, no history of cardiovascular system disease), the system **SHOULD** populate `Composition.section.entry` in accordance with the relevant profile specific implementation guidance. 
 
 For example, to represent that a patient does not have an allergy or category of allergies, an appropriate negation code (e.g. 716186003 \|No known allergy\| or 1003774007 \|No known Hevea brasiliensis latex allergy\|) is used in `AllergyIntolerance.code` as per the profile specific implementation guidance for [AU PS AllergyIntolerance](StructureDefinition-au-ps-allergyintolerance.html).
 
-In AU PS this approach is preferred to using `Composition.section.emptyReason` due to the widely known and implemented patterns established within FHIR, IPS, and AU Core, to assert "no known X" or "no history of X". 
+In AU PS this approach is preferred to using `Composition.section.emptyReason` due to the widely known and implemented patterns established within FHIR, IPS, and AU Core to assert "no known X" or "no history of X". 
 
 
 Example: Condition resource representing 'No Known Problems'
@@ -246,7 +247,7 @@ Actor | Code | Definition | Notes
 | [SHOULD:display](https://hl7.org/fhir/extensions/CodeSystem-obligation.html#obligation-SHOULD.58display) | Conformant applications SHOULD display the value of this element when presenting the data to a human user. | Exactly how it is displayed is not specified, but it means that a human looking at the content of the resource is made aware of the value of the element so that they can consider the meaning of the resource. In AU PS, most elements marked as _Must Support_ have this obligation applied.
 [AU PS Producer actor](ActorDefinition-au-ps-actor-producer.html) |[SHALL:populate](https://hl7.org/fhir/extensions/CodeSystem-obligation.html#obligation-SHALL.58populate)|Conformant applications producing resources SHALL include this element if a value is known and allowed to be shared| This implementation obligation means that whenever the producer knows the correct value for an element, it populates it. This is NOT the same as cardinality, as a 'populate' element can be omitted if no data exists or the data that exists is prohibited from being shared.
 | [SHALL:able-to-populate](https://hl7.org/fhir/extensions/CodeSystem-obligation.html#obligation-SHALL.58able-to-populate) | Conformant applications producing resources SHALL be able to correctly populate this element. | Typically, this means that an application needs to demonstrate during some conformance testing process that there are some conditions under which it populates the element with a correct value. (i.e. not a data-absent-reason or equivalent.) This obligation does not impose expectations on the circumstances in which the element will be sent, only that it can be in at least some situations.
-| [SHALL:populate-if-known](https://hl7.org/fhir/extensions/CodeSystem-obligation.html#obligation-SHALL.58populate-if-known) | Conformant applications producing resources SHALL correctly populate this element if they know a value for the element, but it is acceptable if the system is unable to ever know a value for the element. | This obligation does not impose a requirement to be able to know a value, unlike populate and able-to-populate which do. 'Knowing' an element means that a value for the element is available in memory, persistent store, or is otherwise available within the system claiming conformance. With the exception of AU PS Composition, all profiles referenced by AU PS Bundle have this obligation applied to elements marked as _Must Support_ have this obligation applied.
+| [SHALL:populate-if-known](https://hl7.org/fhir/extensions/CodeSystem-obligation.html#obligation-SHALL.58populate-if-known) | Conformant applications producing resources SHALL correctly populate this element if they know a value for the element, but it is acceptable if the system is unable to ever know a value for the element. | This obligation does not impose a requirement to be able to know a value, unlike populate and able-to-populate which do. 'Knowing' an element means that a value for the element is available in memory, persistent store, or is otherwise available within the system claiming conformance. With the exception of AU PS Composition, all profiles referenced by AU PS Bundle have this obligation applied to elements marked as _Must Support_.
 | [SHOULD:able-to-populate](https://hl7.org/fhir/extensions/CodeSystem-obligation.html#obligation-SHOULD.58able-to-populate) | Conformant applications producing resources SHOULD be able to correctly populate this element. | Typically, this means that an application needs to demonstrate during some conformance testing process that there are some conditions under which it populates the element with a correct value. (i.e. not a data-absent-reason or equivalent.) This obligation does not impose expectations on the circumstances in which the element will be sent, only that it can be in at least some situations.
 | [SHOULD:populate](https://hl7.org/fhir/extensions/CodeSystem-obligation.html#obligation-SHOULD.58populate)|Conformant applications producing resources SHOULD include this element if a value is known and allowed to be shared.| This implementation obligation means that whenever the producer knows the correct value for an element, it should populate it.
 | [SHOULD:populate-if-known](https://hl7.org/fhir/extensions/CodeSystem-obligation.html#obligation-SHOULD.58populate-if-known) | Conformant applications producing resources SHOULD correctly populate this element if they know a value for the element, but it is acceptable if the system is unable to ever know a value for the element. | This obligation does not impose a requirement to be able to know a value, unlike populate and able-to-populate which do. 'Knowing' an element means that a value for the element is available in memory, persistent store, or is otherwise available within the system claiming conformance. 
@@ -255,8 +256,8 @@ Actor | Code | Definition | Notes
 
 *Must Support* elements are treated differently between [AU PS Consumer](ActorDefinition-au-ps-actor-consumer.html) and [AU PS Producer](ActorDefinition-au-ps-actor-producer.html) actors. *Must Support* on a profile element **SHALL** be interpreted as follows.
 
-#### Presentation of Must Support and obligation in profiles
-All elements with *Must Support* in AU PS are accompanied by an explicit obligation that identifies the expectations for one or more actors. When rendered in an implementation guide, each profile is presented in different formal views under tabs labelled "Differential Table", "Key Elements Table", and "Snapshot Table". Elements labelled with *Must Support* and stated obligations in these views are represented by <span style="padding-left: 3px; padding-right: 3px; color: white; background-color: red" title="This element must be supported">S</span><span style="padding-left: 3px; padding-right: 3px; color: white; background-color: red" title="This element has obligations">O</span> as shown below. 
+#### Presentation of Must Support and Obligation in Profiles
+All elements with *Must Support* in AU PS are accompanied by an explicit obligation that identifies the expectations for one or more actors. When rendered in an implementation guide, each profile is presented in different formal views under tabs labelled "Differential Table", "Key Elements Table", and "Snapshot Table". Elements labelled with *Must Support* and stated obligations in these views are represented by <span style="padding-left: 1px; padding-right: 1px; color: white; background-color: red" title="This element must be supported">S</span><span style="padding-left: 1px; padding-right: 1px; color: white; background-color: red" title="This element has obligations">O</span> as shown below. 
 
  <div> 
     <img src="allergyintolerance-keyelementstable.png" alt="AU PS AllergyIntolerance Key Elements Table" style="width:75%"/>
@@ -267,7 +268,7 @@ All elements with *Must Support* in AU PS are accompanied by an explicit obligat
 Implementers need to refer to the "Key Elements Table" to see the full set of elements that are mandatory or *Must Support* with obligations, and the full set of terminology requirements.  Implementers need to be aware that the full set of constraints (i.e. invariants) are only presented in the "Detailed Descriptions" tab or the raw representation (e.g. XML or JSON) of the profile.
 
 
-#### Interpreting profile elements labelled Must Support
+#### Interpreting Profile Elements Labelled Must Support
 
 The section is provided as additional support in understanding the application of *Must Support* and Obligations on elements in AU PS. This section does not override the Obligations defined for an actor - implementers are recommended to also read the profile specific implementation guidance for any qualifying requirements placed on the Obligations for a *Must Support* element.
 
@@ -309,8 +310,8 @@ If a complex element is labelled as *Must Support*:
 - AU PS Consumers **SHALL** consume resources if the element is present and containing any valid sub-element, and **SHOULD** display the value of this element (if the SHOULD:display Obligation is defined) when presenting the data to a human user.
 
 For example, the AU PS MedicationRequest Profile `note` element is labelled *Must Support* and has no *Must Support* sub-elements. When claiming conformance to this profile:
-- AU PS Producers **SHALL** correctly populate a value in any valid `MedicationRequest.note` sub-element if a value is known e.g. `MedicationRequest.note.text`.
-- AU PS Consumers **SHALL** consume the MedicationRequest resource if `MedicationRequest.note` is present and containing any valid sub-elements, and **SHOULD** display the value of `MedicationRequest.note` when presenting the data to a human user.
+- AU PS Producers **SHALL** correctly populate a value in any valid `AllergyIntolerance.note` sub-element if a value is known e.g. `AllergyIntolerance.note.text`.
+- AU PS Consumers **SHALL** consume the MedicationRequest resource if `AllergyIntolerance.note` is present and containing any valid sub-elements, and **SHOULD** display the value of `AllergyIntolerance.note` when presenting the data to a human user.
 
 If a sub-element is labelled as *Must Support*: 
 - AU PS Producers **SHALL** correctly populate the element with all *Must Support* sub-elements for which a value is known. 
@@ -329,21 +330,21 @@ The table below provides a list of AU PS profile elements that allow multiple re
 
 Profile |Must Support Element|Reference
 ---|---|---
-AU PS Composition|Composition.author|AU PS Practitioner, AU PS PractitionerRole, Device, AU PS Patient, AU PS RelatedPerson, AU PS Organization
-AU PS Composition|Composition.attester.party|AU PS Patient, AU PS RelatedPerson, AU PS Practitioner, AU PS PractitionerRole, AU PS Organization
-AU PS Composition|Composition.section.entry:medicationStatementOrRequest|AU PS MedicationStatement, AU PS MedicationRequest
-DiagnosticReport (IPS)|DiagnosticReport.subject|AU PS Patient, Group
-DiagnosticReport (IPS)|DiagnosticReport.performer|AU PS Practitioner, AU PS PractitionerRole, AU PS Organization, CareTeam
-DiagnosticReport (IPS)|DiagnosticReport.result:observation-results|AU PS Pathology Result Observation, Observation Results - Radiology (IPS)
-AU PS Encounter|Encounter.participant.individual|AU PS Practitioner, AU PS PractitionerRole, AU PS RelatedPerson
-AU PS Encounter|Encounter.reasonReference|AU PS Condition, Observation, AU PS Procedure
-AU PS MedicationRequest|MedicationRequest.requester|AU PS Practitioner, AU PS PractitionerRole, AU PS Organization, AU PS Patient, AU PS RelatedPerson
-AU PS MedicationRequest|MedicationRequest.reasonReference|AU PS Condition, Observation
-AU PS MedicationStatement|MedicationStatement.reasonReference|AU PS Condition, Observation, DiagnosticReport (IPS)
-Observation Results - Radiology (IPS)|Observation.performer|AU PS Practitioner, AU PS PractitionerRole, AU PS Organization, CareTeam, AU PS Patient, AU PS RelatedPerson
-AU PS Patient|Patient.generalPractitioner|AU PS Organization, AU PS Practitioner, AU PS PractitionerRole
-AU PS Pathology Result Observation|Observation.performer|AU PS Practitioner, AU PS PractitionerRole, AU PS Organization, AU PS Patient, AU PS RelatedPerson
-AU PS Procedure|Procedure.reasonReference|AU PS Condition, Observation, AU PS Procedure, DocumentReference
+[AU PS Composition](StructureDefinition-au-ps-composition.html)|Composition.author|AU PS Practitioner, AU PS PractitionerRole, Device, AU PS Patient, AU PS RelatedPerson, AU PS Organization
+[AU PS Composition](StructureDefinition-au-ps-composition.html)|Composition.attester.party|AU PS Patient, AU PS RelatedPerson, AU PS Practitioner, AU PS PractitionerRole, AU PS Organization
+[AU PS Composition](StructureDefinition-au-ps-composition.html)|Composition.section.entry:medicationStatementOrRequest|AU PS MedicationStatement, AU PS MedicationRequest
+[DiagnosticReport (IPS)](https://build.fhir.org/ig/HL7/fhir-ips/StructureDefinition-DiagnosticReport-uv-ips.html)|DiagnosticReport.subject|AU PS Patient, Group
+[DiagnosticReport (IPS)](https://build.fhir.org/ig/HL7/fhir-ips/StructureDefinition-DiagnosticReport-uv-ips.html)|DiagnosticReport.performer|AU PS Practitioner, AU PS PractitionerRole, AU PS Organization, CareTeam
+[DiagnosticReport (IPS)](https://build.fhir.org/ig/HL7/fhir-ips/StructureDefinition-DiagnosticReport-uv-ips.html)|DiagnosticReport.result:observation-results|AU PS Pathology Result Observation, Observation Results - Radiology (IPS)
+[AU PS Encounter](StructureDefinition-au-ps-encounter.html)|Encounter.participant.individual|AU PS Practitioner, AU PS PractitionerRole, AU PS RelatedPerson
+[AU PS Encounter](StructureDefinition-au-ps-encounter.html)|Encounter.reasonReference|AU PS Condition, Observation, AU PS Procedure
+[AU PS MedicationRequest](StructureDefinition-au-ps-medicationrequest.html)|MedicationRequest.requester|AU PS Practitioner, AU PS PractitionerRole, AU PS Organization, AU PS Patient, AU PS RelatedPerson
+[AU PS MedicationRequest](StructureDefinition-au-ps-medicationrequest.html)|MedicationRequest.reasonReference|AU PS Condition, Observation
+[AU PS MedicationStatement](StructureDefinition-au-ps-medicationstatement.html)|MedicationStatement.reasonReference|AU PS Condition, Observation, DiagnosticReport (IPS)
+[Observation Results - Radiology (IPS)](https://build.fhir.org/ig/HL7/fhir-ips/StructureDefinition-Observation-results-radiology-uv-ips.html)|Observation.performer|AU PS Practitioner, AU PS PractitionerRole, AU PS Organization, CareTeam, AU PS Patient, AU PS RelatedPerson
+[AU PS Patient](StructureDefinition-au-ps-patient.html)|Patient.generalPractitioner|AU PS Organization, AU PS Practitioner, AU PS PractitionerRole
+[AU PS Pathology Result Observation](StructureDefinition-au-ps-diagnosticresult-path.html)|Observation.performer|AU PS Practitioner, AU PS PractitionerRole, AU PS Organization, AU PS Patient, AU PS RelatedPerson
+[AU PS Procedure](StructureDefinition-au-ps-procedure.html)|Procedure.reasonReference|AU PS Condition, Observation, AU PS Procedure, DocumentReference
 {:.grid}
 
 
@@ -356,22 +357,22 @@ The table below provides a list of AU PS profile elements that allow multiple da
 
 Profile |Must Support Element|Data Types
 ---|---|---
-AU PS AllergyIntolerance|AllergyIntolerance.onset[x]|dateTime, age, Period, Range
-AU PS Condition|Condition.onset[x]|dateTime, age, Period, Range
-AU PS Condition|Condition.abatement[x]|dateTime, age, Period, Range
-DeviceUseStatement (IPS)|DeviceUseStatement.timing[x]|Period, dateTime
-DiagnosticReport (IPS)|DiagnosticReport.effective[x]|dateTime, Period
-AU PS Immunization|Immunization.occurrence[x]|dateTime, string
-AU PS MedicationRequest|MedicationRequest.medication[x]|CodeableConcept, Reference
-AU PS MedicationStatement|MedicationStatement.medication[x]|CodeableConcept, Reference
-AU PS MedicationStatement|MedicationStatement.effective[x]|dateTime, Period
-Observation Results - Radiology (IPS)|Observation.effective[x]|dateTime, Period
-Observation Results - Radiology (IPS)|Observation.value[x]|Quantity, CodeableConcept, string, boolean, integer, Range, Ratio, SampledData, time, dateTime, Period
-AU PS Pathology Result Observation|Observation.effective[x]|dateTime, Period,
-AU PS Pathology Result Observation|Observation.value[x]|Quantity, CodeableConcept, string, boolean, integer, Range, Ratio, SampledData, time, dateTime, Period
-AU PS Pathology Result Observation|Observation.component.value[x]|Quantity, CodeableConcept, string, boolean, integer, Range, Ratio, SampledData, time, dateTime, Period
-AU PS Procedure|Procedure.performed[x]|dateTime, Period, string, Age, Range
-DeviceUseStatement (IPS)|DeviceUseStatement.timing[x]|Period, dateTime
+[AU PS AllergyIntolerance](StructureDefinition-au-ps-allergyintolerance.html)|AllergyIntolerance.onset[x]|dateTime, age, Period, Range
+[AU PS Condition](StructureDefinition-au-ps-condition.html)|Condition.onset[x]|dateTime, age, Period, Range
+[AU PS Condition](StructureDefinition-au-ps-condition.html)|Condition.abatement[x]|dateTime, age, Period, Range
+[DeviceUseStatement (IPS)](https://build.fhir.org/ig/HL7/fhir-ips/StructureDefinition-DeviceUseStatement-uv-ips.html)|DeviceUseStatement.timing[x]|Period, dateTime
+[DiagnosticReport (IPS)](https://build.fhir.org/ig/HL7/fhir-ips/StructureDefinition-DiagnosticReport-uv-ips.html)|DiagnosticReport.effective[x]|dateTime, Period
+[AU PS Immunization](StructureDefinition-au-ps-immunization.html)|Immunization.occurrence[x]|dateTime, string
+[AU PS MedicationRequest](StructureDefinition-au-ps-medicationrequest.html)|MedicationRequest.medication[x]|CodeableConcept, Reference
+[AU PS MedicationStatement](StructureDefinition-au-ps-medicationstatement.html)|MedicationStatement.medication[x]|CodeableConcept, Reference
+[AU PS MedicationStatement](StructureDefinition-au-ps-medicationstatement.html)|MedicationStatement.effective[x]|dateTime, Period
+[Observation Results - Radiology (IPS)](https://build.fhir.org/ig/HL7/fhir-ips/StructureDefinition-Observation-results-radiology-uv-ips.html)|Observation.effective[x]|dateTime, Period
+[Observation Results - Radiology (IPS)](https://build.fhir.org/ig/HL7/fhir-ips/StructureDefinition-Observation-results-radiology-uv-ips.html)|Observation.value[x]|Quantity, CodeableConcept, string, boolean, integer, Range, Ratio, SampledData, time, dateTime, Period
+[AU PS Pathology Result Observation](StructureDefinition-au-ps-diagnosticresult-path.html)|Observation.effective[x]|dateTime, Period,
+[AU PS Pathology Result Observation](StructureDefinition-au-ps-diagnosticresult-path.html)|Observation.value[x]|Quantity, CodeableConcept, string, boolean, integer, Range, Ratio, SampledData, time, dateTime, Period
+[AU PS Pathology Result Observation](StructureDefinition-au-ps-diagnosticresult-path.html)|Observation.component.value[x]|Quantity, CodeableConcept, string, boolean, integer, Range, Ratio, SampledData, time, dateTime, Period
+[AU PS Procedure](StructureDefinition-au-ps-procedure.html)|Procedure.performed[x]|dateTime, Period, string, Age, Range
+[DeviceUseStatement (IPS)](https://build.fhir.org/ig/HL7/fhir-ips/StructureDefinition-DeviceUseStatement-uv-ips.html)|DeviceUseStatement.timing[x]|Period, dateTime
 {:.grid}
 
 Some data type choices are labelled as *Must Support* and apply an additional obligation of [SHOULD:able-to-populate](https://hl7.org/fhir/extensions/CodeSystem-obligation.html#obligation-SHOULD.58able-to-populate). In such cases:
@@ -381,15 +382,15 @@ The table below provides a list of AU PS profile elements where a data type choi
 
 Profile |Must Support Data Type
 ---|---
-AU PS AllergyIntolerance|AllergyIntolerance.onsetDateTime
-AU PS Condition|Condition.onsetDateTime
-DeviceUseStatement (IPS)|DeviceUseStatement.timingDateTime
-DiagnosticReport (IPS)|DiagnosticReport.effectiveDateTime
-AU PS Immunization|Immunization.occurrenceDateTime
-AU PS MedicationStatement|MedicationStatement.effectiveDateTime
-AU PS Observation Results - Radiology (IPS)|Observation.effectiveDateTime
-AU PS Pathology Result Observation|Observation.effectiveDateTime
-AU PS Procedure|Procedure.performedDateTime
+[AU PS AllergyIntolerance](StructureDefinition-au-ps-allergyintolerance.html)|AllergyIntolerance.onsetDateTime
+[AU PS Condition](StructureDefinition-au-ps-condition.html)|Condition.onsetDateTime
+[DeviceUseStatement (IPS)](https://build.fhir.org/ig/HL7/fhir-ips/StructureDefinition-DeviceUseStatement-uv-ips.html)|DeviceUseStatement.timingDateTime
+[DiagnosticReport (IPS)](https://build.fhir.org/ig/HL7/fhir-ips/StructureDefinition-DiagnosticReport-uv-ips.html)|DiagnosticReport.effectiveDateTime
+[AU PS Immunization](StructureDefinition-au-ps-immunization.html)|Immunization.occurrenceDateTime
+[AU PS MedicationStatement](StructureDefinition-au-ps-medicationstatement.html)|MedicationStatement.effectiveDateTime
+[Observation Results - Radiology (IPS)](https://build.fhir.org/ig/HL7/fhir-ips/StructureDefinition-Observation-results-radiology-uv-ips.html)|Observation.effectiveDateTime
+[AU PS Pathology Result Observation](StructureDefinition-au-ps-diagnosticresult-path.html)|Observation.effectiveDateTime
+[AU PS Procedure](StructureDefinition-au-ps-procedure.html)|Procedure.performedDateTime
 {:.grid}
 
 ##### Must Support - Choice of Identifiers
@@ -423,10 +424,10 @@ The table below lists the applicable profiles and elements in AU PS.
 
 Profile |Must Support Choice Elements
 ---|---
-AU PS Encounter|Encounter.reasonCode, Encounter.reasonReference
-AU PS MedicationRequest|MedicationRequest.reasonCode, MedicationRequest.reasonReference
-AU PS MedicationStatement|MedicationStatement.reasonCode, MedicationStatement.reasonReference
-AU PS Procedure|Procedure.reasonCode, Procedure.reasonReference
+[AU PS Encounter](StructureDefinition-au-ps-encounter.html)|Encounter.reasonCode, Encounter.reasonReference
+[AU PS MedicationRequest](StructureDefinition-au-ps-medicationrequest.html)|MedicationRequest.reasonCode, MedicationRequest.reasonReference
+[AU PS MedicationStatement](StructureDefinition-au-ps-medicationstatement.html)|MedicationStatement.reasonCode, MedicationStatement.reasonReference
+[AU PS Procedure](StructureDefinition-au-ps-procedure.html)|Procedure.reasonCode, Procedure.reasonReference
 {:.grid}
 
 
@@ -440,10 +441,10 @@ The table below lists the applicable profiles and elements in AU PS that support
 
 Profile |Must Support Sub-Element|Terminology Choices
 ---|---
-AU PS Immunization|Immunization.vaccineCode.coding|[Australian Medicines Terminology Vaccine](https://healthterminologies.gov.au/fhir/ValueSet/amt-vaccine-1), [Australian Immunisation Register Vaccine](https://healthterminologies.gov.au/fhir/ValueSet/australian-immunisation-register-vaccine-1)
-AU PS Medication|Medication.code.coding|[Australian Medication](https://healthterminologies.gov.au/fhir/ValueSet/australian-medication-1), [PBS Item Codes](https://build.fhir.org/ig/hl7au/au-fhir-base//ValueSet-pbs-item.html)
-AU PS MedicationRequest|MedicationRequest.code.coding|[Australian Medication](https://healthterminologies.gov.au/fhir/ValueSet/australian-medication-1), [PBS Item Codes](https://build.fhir.org/ig/hl7au/au-fhir-base//ValueSet-pbs-item.html)
-AU PS MedicationStatement|MedicationStatement.code.coding|[Australian Medication](https://healthterminologies.gov.au/fhir/ValueSet/australian-medication-1), [PBS Item Codes](https://build.fhir.org/ig/hl7au/au-fhir-base//ValueSet-pbs-item.html)
+[AU PS Immunization](StructureDefinition-au-ps-immunization.html)|Immunization.vaccineCode.coding|[Australian Medicines Terminology Vaccine](https://healthterminologies.gov.au/fhir/ValueSet/amt-vaccine-1), [Australian Immunisation Register Vaccine](https://healthterminologies.gov.au/fhir/ValueSet/australian-immunisation-register-vaccine-1)
+[AU PS Medication](StructureDefinition-au-ps-medication.html)|Medication.code.coding|[Australian Medication](https://healthterminologies.gov.au/fhir/ValueSet/australian-medication-1), [PBS Item Codes](https://build.fhir.org/ig/hl7au/au-fhir-base//ValueSet-pbs-item.html)
+[AU PS MedicationRequest](StructureDefinition-au-ps-medicationrequest.html)|MedicationRequest.code.coding|[Australian Medication](https://healthterminologies.gov.au/fhir/ValueSet/australian-medication-1), [PBS Item Codes](https://build.fhir.org/ig/hl7au/au-fhir-base//ValueSet-pbs-item.html)
+[AU PS MedicationStatement](StructureDefinition-au-ps-medicationstatement.html)|MedicationStatement.code.coding|[Australian Medication](https://healthterminologies.gov.au/fhir/ValueSet/australian-medication-1), [PBS Item Codes](https://build.fhir.org/ig/hl7au/au-fhir-base//ValueSet-pbs-item.html)
 {:.grid}
 
 For example, the profile [AU PS Medication](StructureDefinition-au-ps-medication.html) requires support for the following terminology choices `Medication.code.coding` defined in [AU Base Medication](https://build.fhir.org/ig/hl7au/au-fhir-base/StructureDefinition-au-medication.html) to support [Australian Medication](https://healthterminologies.gov.au/fhir/ValueSet/australian-medication-1) and [PBS Item Codes](https://build.fhir.org/ig/hl7au/au-fhir-base//ValueSet-pbs-item.html) as indicated by flagging *Must Support* on those two terminology slices.
