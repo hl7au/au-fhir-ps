@@ -1,6 +1,6 @@
 {
   "resourceType": "Bundle",
-  "id": "aups-syntactic",
+  "id": "aups-provider-summary",
   "meta": {
     "profile": [
       "http://hl7.org.au/fhir/ps/StructureDefinition/au-ps-bundle"
@@ -48,7 +48,7 @@
         },
         "section": [
           {
-            "title": "Allergies",
+            "title": "Allergies and Intolerances",
             "code": {
               "coding": [
                 {
@@ -148,11 +148,6 @@
       "resource": {
         "resourceType": "Patient",
         "id": "8e6bcf33-b144-439a-bb90-b9e42362bd2d",
-        "meta": {
-          "profile": [
-            "http://hl7.org.au/fhir/ps/StructureDefinition/au-ps-patient"
-          ]
-        },
         "extension": [
           {
             "extension": [
@@ -363,11 +358,19 @@
       }
     },
     {
-      "fullUrl": "urn:uuid:a3530a05-0cd4-483d-97b3-7467285c6b84 ",
+      "fullUrl": "urn:uuid:a3530a05-0cd4-483d-97b3-7467285c6b84",
       "resource": {
         "resourceType": "AllergyIntolerance",
         "id": "a3530a05-0cd4-483d-97b3-7467285c6b84",
         "type": "allergy",
+        "clinicalStatus" : {
+          "coding" : [
+            {
+              "system" : "http://terminology.hl7.org/CodeSystem/allergyintolerance-clinical",
+              "code" : "active"
+            }
+          ]
+        },
         "code": {
           "coding": [
             {
@@ -398,7 +401,7 @@
               "display": "Resolved"
             }
           ],
-          "display": "Resolved"
+          "text": "Resolved"
         },
         "category": [
           {
@@ -436,10 +439,7 @@
           "reference": "urn:uuid:8e6bcf33-b144-439a-bb90-b9e42362bd2d"
         },
         "onsetDateTime": "2025-06-01",
-        "abatementDateTime": "2025-07-01",
-        "asserter": {
-          "reference": "urn:uuid:eb2b7ea3-2ce9-4f9e-b44b-7442c4cd01b4"
-        }
+        "abatementDateTime": "2025-07-01"
       }
     },
     {
@@ -513,9 +513,10 @@
             "text": "Acute bronchitis"
           }
         ],
+        "effectiveDateTime": "2025-06-05",
         "dosage": [
           {
-            "text": "Take two capsules with water, three times daily"
+            "text": "Take two capsules with water, three times daily, as needed"
           }
         ]
       }
@@ -544,9 +545,13 @@
             "text": "Acute bronchitis"
           }
         ],
+        "effectivePeriod": {
+          "start": "2025-06-05",
+          "end": "2025-06-12"
+        },
         "dosage": [
           {
-            "text": "Take 10 mL every 4 hours"
+            "text": "Take 10 mL every 4 hours, for 7 days"
           }
         ]
       }
@@ -688,42 +693,10 @@
       }
     },
     {
-      "fullUrl": "urn:uuid:a72a73ed-fb83-4256-a1a2-69f784585bdd",
-      "resource": {
-        "resourceType": "Procedure",
-        "id": "a72a73ed-fb83-4256-a1a2-69f784585bdd",
-        "status": "completed",
-        "code": {
-          "coding": [
-            {
-              "system": "http://snomed.info/sct",
-              "code": "413815006",
-              "display": "Chest imaging"
-            }
-          ],
-          "text": "Chest X-ray"
-        },
-        "subject": {
-          "reference": "urn:uuid:8e6bcf33-b144-439a-bb90-b9e42362bd2d"
-        },
-        "performedDateTime": "2025-06-04T09:30:00+10:00",
-        "reasonReference": [
-          {
-            "reference": "urn:uuid:285af82a-0771-46ed-9bdf-b7e94bbe70dc"
-          }
-        ]
-      }
-    },
-    {
       "fullUrl": "urn:uuid:17bebb42-4ba2-427b-8d40-3962d7aa82be",
       "resource": {
         "resourceType": "Observation",
         "id": "17bebb42-4ba2-427b-8d40-3962d7aa82be",
-        "meta": {
-          "profile": [
-            "http://hl7.org.au/fhir/core/StructureDefinition/au-core-bodytemp"
-          ]
-        },
         "status": "final",
         "category": [
           {
@@ -746,7 +719,8 @@
             },
             {
               "system": "http://snomed.info/sct",
-              "code": "386725007"
+              "code": "386725007",
+              "display": "Body temperature"
             }
           ],
           "text": "Body temperature"
@@ -771,11 +745,6 @@
       "resource": {
         "resourceType": "Observation",
         "id": "1aef8144-08a8-4bb9-b9e3-dc0f2f47788f",
-        "meta": {
-          "profile": [
-            "http://hl7.org.au/fhir/core/StructureDefinition/au-core-bodyweight"
-          ]
-        },
         "status": "final",
         "category": [
           {
@@ -798,7 +767,8 @@
             },
             {
               "system": "http://snomed.info/sct",
-              "code": "27113001"
+              "code": "27113001",
+              "display": "Body weight"
             }
           ],
           "text": "Weight"
@@ -823,11 +793,6 @@
       "resource": {
         "resourceType": "Observation",
         "id": "1d40218a-d054-4264-8ef4-3e9ab5698966",
-        "meta": {
-          "profile": [
-            "http://hl7.org.au/fhir/core/StructureDefinition/au-core-resprate"
-          ]
-        },
         "status": "final",
         "category": [
           {
@@ -850,7 +815,8 @@
             },
             {
               "system": "http://snomed.info/sct",
-              "code": "86290005"
+              "code": "86290005",
+              "display": "Respiratory rate"
             }
           ],
           "text": "Respiratory rate"
