@@ -399,5 +399,9 @@
 			<code value="fmm-definition"/>
 			<value value="https://build.fhir.org/ig/hl7au/au-fhir-base/generalguidance.html#maturity-levels"/>
 		</parameter>
+		<parameter>
+  			<code value="ips-comparison"/>
+  			<value value="2.0.0"/>
+		</parameter>
 	</definition>
 </ImplementationGuide>
