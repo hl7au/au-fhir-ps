@@ -59,6 +59,7 @@ This guide is divided into several pages which are listed at the top of each pag
 - [Support](downloads.html): These pages provide supporting material for implementation of AU PS.
   - [Downloads](downloads.html): This page provides links to downloadable artefacts.
   - [License and Legal](license.html): This page outlines the license and legal requirements for material in AU PS.
+- [Change Log](changes.html): This page documents the changes across versions of this guide.
 
 ### Collaboration
 This guide is the product of collaborative work undertaken with participants from:
