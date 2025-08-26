@@ -2141,7 +2141,7 @@
               "display": "Bacteria identified in Urine by Culture"
             }
           ],
-          "text": "Organism"
+          "text": "Culture"
         },
         "subject": {
           "reference": "urn:uuid:85822a88-55b1-460c-bb7b-e8fc22d8568f"
@@ -2215,7 +2215,7 @@
           }
         ],
         "effectiveDateTime": "2024-11-05",
-        "valueString": "> 10^8"
+        "valueString": "> 10^8 organisms/L"
       }
     },
     {
@@ -2306,7 +2306,7 @@
               "display": "Amoxicillin+Clavulanate [Susceptibility]"
             }
           ],
-          "text": "Amoxycillin/clav. acid"
+          "text": "Amox/clav. acid"
         },
         "subject": {
           "reference": "urn:uuid:85822a88-55b1-460c-bb7b-e8fc22d8568f"
@@ -3110,7 +3110,7 @@
               "display": "Light yellow colour"
             }
           ],
-          "text": "Light yellow colour"
+          "text": "Light yellow"
         }
       }
     },
