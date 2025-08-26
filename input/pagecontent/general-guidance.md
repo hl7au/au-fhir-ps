@@ -5,8 +5,8 @@ AU PS profiles will by design:
 * support varied stakeholder needs and use of AU PS artefacts e.g. government policy, implementers, tooling developers, testers, IG authors/maintainers etc.
 
 AU PS profiles:
-* are based on the AU Core profile (where it exists) 
-* have additional requirements inherited from IPS applied (as determined by the [AU PS Profile Design Principles](general-guidance.html#au-ps-profile-design-principles)) 
+* are based on the AU Core profile, or where not available, the AU Base profile (where it exists)
+* apply additional requirements inherited from IPS (as determined by the [AU PS Profile Design Principles](general-guidance.html#au-ps-profile-design-principles)) 
 * have additional requirements as agreed by the AU PS project applied
 * use compliesWithProfile to assert compliance with IPS
 
@@ -18,9 +18,14 @@ The differential view therefore shows the patient summary requirements that are 
 *Figure 1: Profiling approach for AU PS Patient profile*
 <br/><br/>
 
-<div class="stu-note" markdown="1">
-AU PS is undertaking a series of profile walkthroughs with the community, and to support that activity some profiles do not yet have this approach applied. Instead rules from AU Core and IPS are applied via human authoring. This is to support the human-centric design discussions early in the AU PS project. Post the walkthrough of each profile, it is converted to the target approach, and any additional local requirements identified during that walkthrough are applied.
-</div><!-- stu-note -->
+The AU PS Bundle profile is not based on AU Core or AU Base (no resource profile exists). The approach to profiling for AU PS Bundle is to:
+* apply requirements inherited from IPS (as determined by the [AU PS Profile Design Principles](general-guidance.html#au-ps-profile-design-principles)) 
+* apply additional requirements as agreed by the AU PS project
+* use compliesWithProfile to assert compliance with IPS
+
+This approach to AU PS Bundle profiling has been taken as at this time there is a tooling limitation that prevents meeting both of the below conditions:
+* derivation from Bundle (IPS)
+* changing reference targets to AU PS profiles (as AU PS profiles derive from AU Core and not IPS they cannot be easily assessed as meeting IPS rules by the tooling)
 
 #### AU PS Profile Design Principles
 

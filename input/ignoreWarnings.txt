@@ -1,7 +1,19 @@
 == Suppressed Messages ==
 
-# HL7 core warnings
+# ERROR: Bundle.entry slicing discriminator mismatch. IPS slices Bundle.entry using both type:resource and profile:resource discriminators. AU PS uses only type:resource to enforce stricter control over allowed entry types. This causes a mismatch with IPS, but is intentional to ensure AU PS-specific profiles are used. ===
+ERROR: StructureDefinition/au-ps-bundle: StructureDefinition: This profile does not comply with claimed profile 'http://hl7.org/fhir/uv/ips/StructureDefinition/Bundle-uv-ips'
+
+# ERROR: AU PS profile asserts compliance with IPS but there are some structural differences that cause the tooling validation error: a) Observation.category slicing discriminator mismatch. IPS slices using pattern:$this while AU PS inherits slices by code/system from AU Core. b) For Observation.value[x], IPS labels data types string, Quantity and CodeableConcept as MS. AU PS is stronger by placing the rule on the element i.e. every data type has obligations on it not just the three IPS. These differences trigger validation errors but the profiles are functionally compatible.  ===
+ERROR: StructureDefinition/au-ps-diagnosticresult-path: StructureDefinition: This profile does not comply with claimed profile 'http://hl7.org/fhir/uv/ips/StructureDefinition/Observation-results-laboratory-pathology-uv-ips'
+
+# === ERROR: Target profile in MedicationStatement.reasonReference is flagged due to IPS profile not being derived from AU Core base profile. This is a known cross-profile compatibility limitation when constraining to both AU Core and IPS derived targets. ===
+ERROR: MedicationStatement.reasonReference: Error at http://hl7.org.au/fhir/ps/StructureDefinition/au-ps-medicationstatement#MedicationStatement.reasonReference: The target profile http://hl7.org/fhir/uv/ips/StructureDefinition/DiagnosticReport-uv-ips is not a valid constraint on the base ([CanonicalType[http://hl7.org.au/fhir/core/StructureDefinition/au-core-condition], CanonicalType[http://hl7.org/fhir/StructureDefinition/Observation], CanonicalType[http://hl7.org.au/fhir/StructureDefinition/au-diagnosticreport]])
+
+# ==== ERROR: This warning occurs because AU PS Smoking Status inherits SNOMED patternCodeableConcept from AU Core where IPS requires a LOINC pattern on Observation.code. AU PS profiles support both SNOMED and LOINC codings to satisfy both AU Core and IPS requirements.====
+ERROR: StructureDefinition/au-ps-smokingstatus: StructureDefinition: This profile does not comply with claimed profile 'http://hl7.org/fhir/uv/ips/StructureDefinition/Observation-tobaccouse-uv-ips'
+
+
+# HL7 core known warnings
 The HTML fragment 'ip-statements.xhtml' is not included anywhere in the produced implementation guide
 An HTML fragment from the set [cross-version-analysis.xhtml, cross-version-analysis-inline.xhtml] is not included anywhere in the produced implementation guide
-An HTML fragment from the set [dependency-table.xhtml, dependency-table-short.xhtml] is not included anywhere in the produced implementation guide
 The HTML fragment 'globals-table.xhtml' is not included anywhere in the produced implementation guide
