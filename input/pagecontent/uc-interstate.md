@@ -18,7 +18,7 @@ The summary enables Dr Samuels to quickly understand Jeramy’s condition, recen
 *Figure 1: Interstate GP Visit consumer journey*
 <br/>
 
-This use case demonstrates use of patient summary during step 5. Patient Summary Retrieval of the [Interstate GP Visit consumer journey](https://sparked.csiro.au/index.php/sparked-products-resources/au-patient-summary-consumer-journeys/).
+This use case demonstrates use of patient summary during step 5. Patient Summary Retrieval of the [Interstate GP Visit consumer journey](https://sparked.csiro.au/index.php/products-resources/au-ps-consumer-journeys/).
 
 ### Actors
 
