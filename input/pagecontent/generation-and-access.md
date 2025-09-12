@@ -128,7 +128,7 @@ Public Key Infrastructure (PKI) is a well-established approach to ensure end-to-
 <br/>
 
 ### SMART Health Links 
-[SMART Health Links](https://build.fhir.org/ig/HL7/smart-health-cards-and-links/) is an in-progress FHIR Implementation Guide that supports scenarios where document exchange cannot be performed using a FHIR API, and the identity of the recipient is unknown. It enables a patient or another trusted party to share a link to the document instead.
+[SMART Health Cards and Links IG](https://build.fhir.org/ig/HL7/smart-health-cards-and-links/) is an in-progress FHIR Implementation Guide that supports scenarios where document exchange cannot be performed using a FHIR API, and the identity of the recipient is unknown. It enables a patient or another trusted party to share a link to the document instead.
 
 It is critical to consider how to secure the SMART Health Link itself, as it contains the cryptographic key required to access the document.
 
