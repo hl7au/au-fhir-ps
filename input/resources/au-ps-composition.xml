@@ -1321,7 +1321,7 @@
     <element id="Composition.section:sectionImmunizations">
       <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
         <extension url="code">
-          <valueCode value="SHOULD:populate"/>
+          <valueCode value="SHOULD:populate-if-known"/>
         </extension>
         <extension url="actor">
           <valueCanonical value="http://hl7.org.au/fhir/ps/ActorDefinition/au-ps-actor-producer"/>
@@ -1483,7 +1483,7 @@
     <element id="Composition.section:sectionResults">
       <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
         <extension url="code">
-          <valueCode value="SHOULD:populate"/>
+          <valueCode value="SHOULD:populate-if-known"/>
         </extension>
         <extension url="actor">
           <valueCanonical value="http://hl7.org.au/fhir/ps/ActorDefinition/au-ps-actor-producer"/>
@@ -1720,7 +1720,7 @@
     <element id="Composition.section:sectionProceduresHx">
       <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
         <extension url="code">
-          <valueCode value="SHOULD:populate"/>
+          <valueCode value="SHOULD:populate-if-known"/>
         </extension>
         <extension url="actor">
           <valueCanonical value="http://hl7.org.au/fhir/ps/ActorDefinition/au-ps-actor-producer"/>
@@ -1882,7 +1882,7 @@
     <element id="Composition.section:sectionMedicalDevices">
       <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
         <extension url="code">
-          <valueCode value="SHOULD:populate"/>
+          <valueCode value="SHOULD:populate-if-known"/>
         </extension>
         <extension url="actor">
           <valueCanonical value="http://hl7.org.au/fhir/ps/ActorDefinition/au-ps-actor-producer"/>
