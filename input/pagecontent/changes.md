@@ -22,7 +22,7 @@ This change log documents the significant updates and resolutions implemented fr
     - Patient Summary Results Section (Composition.section:sectionResults)
     - Patient Summary History of Procedures Section (Composition.section:sectionProceduresHx)
     - Patient Summary Medical Devices Section (Composition.section:sectionMedicalDevices)
-  - changed obligations for all mandatory elements for the AU PS Producer from SHALL:able-to-populate to SHALL:populate [IPS: FHIR-51972](https://jira.hl7.org/browse/FHIR-51972):
+  - changed obligations for the following elements for the AU PS Producer from SHALL:able-to-populate to SHALL:populate [IPS: FHIR-51972](https://jira.hl7.org/browse/FHIR-51972):
     - Composition.author
     - Composition.title
     - Composition.event:careProvisioningEvent.code
