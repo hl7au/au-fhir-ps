@@ -17,7 +17,12 @@ This change log documents the significant updates and resolutions implemented fr
   - removed SHOULD:display obligation on Composition.identifier, Composition.type, and Composition.subject.reference for the AU PS Consumer [IPS: FHIR-51258](https://jira.hl7.org/browse/FHIR-51258)
   - changed Composition.section[all slices].title and Composition.section[all slices].text obligations from SHALL:populate-if-known to SHALL:populate for the AU PS Producer [IPS: FHIR-51259](https://jira.hl7.org/browse/FHIR-51259)
   - add Composition.section.title and Composition.section.text with associated Must Support and obligations in each section slice [FHIR-51871](https://jira.hl7.org/browse/FHIR-51871)
-  - changed Composition.section.entry obligation for the AU PS Producer in all recommended sections from SHOULD:populate-if-known to SHOULD:populate [FHIR-51834](https://jira.hl7.org/browse/FHIR-51834)
+  - changed Composition.section.entry obligation for the AU PS Producer from SHOULD:populate-if-known to SHOULD:populate in the following sections [FHIR-51834](https://jira.hl7.org/browse/FHIR-51834):
+    - Patient Summary Immunizations Section (Composition.section:sectionImmunizations) 
+    - Patient Summary Results Section (Composition.section:sectionResults)
+    - Patient Summary History of Procedures Section (Composition.section:sectionProceduresHx)
+    - Patient Summary Medical Devices Section (Composition.section:sectionMedicalDevices)
+  - changed obligations for all mandatory elements for the AU PS Producer from SHALL:able-to-populate to SHALL:populate [IPS: FHIR-51972](https://jira.hl7.org/browse/FHIR-51972)  
 - [AU PS Condition](StructureDefinition-au-ps-condition.html):
   - changed Condition.bodySite to remove use of the CodableConceptIPS [IPS: FHIR-51257](https://jira.hl7.org/browse/FHIR-51257)
   - removed SHOULD:display obligation on Condition.subject.reference for the AU PS Consumer [IPS: FHIR-51258](https://jira.hl7.org/browse/FHIR-51258)
