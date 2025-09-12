@@ -119,7 +119,7 @@
             <coding>
               <system value="http://loinc.org"/>
               <code value="11369-6"/>
-              <display value="History of Immunization Narrative"/>
+              <display value="History of Immunization note"/>
             </coding>
           </code>
           <text>

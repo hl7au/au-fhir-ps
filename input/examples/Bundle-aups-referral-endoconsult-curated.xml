@@ -422,14 +422,6 @@ Overall, Joyce maintains a healthy and supportive lifestyle, with good access to
               <periodUnit value="d" />
             </repeat>
           </timing>
-          <route>
-            <coding>
-              <system value="http://snomed.info/sct"/>
-              <code value="26643006"/>
-              <display value="Oral route"/>
-            </coding>
-            <text value="Oral route"/>
-          </route>
         </dosage>
       </MedicationStatement>
     </resource>
@@ -458,14 +450,6 @@ Overall, Joyce maintains a healthy and supportive lifestyle, with good access to
         </note>
         <dosage>
           <text value="1 tablet daily"/>
-          <route>
-            <coding>
-              <system value="http://snomed.info/sct"/>
-              <code value="26643006"/>
-              <display value="Oral route"/>
-            </coding>
-            <text value="Oral route"/>
-          </route>
         </dosage>
       </MedicationStatement>
     </resource>

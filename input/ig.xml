@@ -197,7 +197,7 @@
 			<reference>
 				<reference value="Bundle/aups-provider-summary"/>
 			</reference>
-			<name value="Bundle - Provider Summary"/>
+			<name value="Bundle - Basic Summary with Vitals"/>
 			<description value="Shows an example of a provider curated patient summary that demonstrates no known allergies, problems, current medications and vital signs. Example for the *AU PS Bundle* and *AU PS Composition* profile. Patient: Rudolf Ralph."/>
 			<exampleCanonical value="http://hl7.org.au/fhir/ps/StructureDefinition/au-ps-bundle"/>
 		</resource>

@@ -497,16 +497,6 @@
                 "period": 1,
                 "periodUnit": "d"
               }
-            },
-            "route": {
-              "coding": [
-                {
-                  "system": "http://snomed.info/sct",
-                  "code": "26643006",
-                  "display": "Oral route"
-                }
-              ],
-              "text": "Oral route"
             }
           }
         ]
@@ -572,16 +562,6 @@
                 "period": 1,
                 "periodUnit": "d"
               }
-            },
-            "route": {
-              "coding": [
-                {
-                  "system": "http://snomed.info/sct",
-                  "code": "26643006",
-                  "display": "Oral route"
-                }
-              ],
-              "text": "Oral route"
             }
           }
         ]
@@ -614,17 +594,7 @@
         ],
         "dosage": [
           {
-            "text": "1 tablet daily",
-            "route": {
-              "coding": [
-                {
-                  "system": "http://snomed.info/sct",
-                  "code": "26643006",
-                  "display": "Oral route"
-                }
-              ],
-              "text": "Oral route"
-            }
+            "text": "1 tablet daily"
           }
         ]
       }
@@ -1605,16 +1575,7 @@
         "manufacturer": {
           "display": "Pfizer Australia Ltd"
         },
-        "lotNumber": "200000000P",
-        "site": {
-          "coding": [
-            {
-              "system": "http://snomed.info/sct",
-              "code": "368208006"
-            }
-          ],
-          "text": "Left upper arm"
-        }
+        "lotNumber": "200000000P"
       }
     },
     {
