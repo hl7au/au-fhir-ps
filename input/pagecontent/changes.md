@@ -22,7 +22,10 @@ This change log documents the significant updates and resolutions implemented fr
     - Patient Summary Results Section (Composition.section:sectionResults)
     - Patient Summary History of Procedures Section (Composition.section:sectionProceduresHx)
     - Patient Summary Medical Devices Section (Composition.section:sectionMedicalDevices)
-  - changed obligations for all mandatory elements for the AU PS Producer from SHALL:able-to-populate to SHALL:populate [IPS: FHIR-51972](https://jira.hl7.org/browse/FHIR-51972)  
+  - changed obligations for all mandatory elements for the AU PS Producer from SHALL:able-to-populate to SHALL:populate [IPS: FHIR-51972](https://jira.hl7.org/browse/FHIR-51972):
+    - Composition.author
+    - Composition.title
+    - Composition.event:careProvisioningEvent.code
 - [AU PS Condition](StructureDefinition-au-ps-condition.html):
   - changed Condition.bodySite to remove use of the CodableConceptIPS [IPS: FHIR-51257](https://jira.hl7.org/browse/FHIR-51257)
   - removed SHOULD:display obligation on Condition.subject.reference for the AU PS Consumer [IPS: FHIR-51258](https://jira.hl7.org/browse/FHIR-51258)
