@@ -24,7 +24,7 @@ This change log documents the significant updates and resolutions implemented fr
 - [AU PS MedicationRequest](StructureDefinition-au-ps-medicationrequest.html):
   - changed MedicationRequest.dosageInstruction.route to remove use of the CodableConceptIPS [IPS: FHIR-51257](https://jira.hl7.org/browse/FHIR-51257)
   - changed MedicationRequest.doNotPerform to constrain out 'true' [IPS: FHIR-51483](https://jira.hl7.org/browse/FHIR-51483)
-  - added SHOULD:display obligation on MedicationRequest.subject.reference for the AU PS Consumer [IPS: FHIR-51258](https://jira.hl7.org/browse/FHIR-51258)
+  - removed SHOULD:display obligation on MedicationRequest.subject.reference for the AU PS Consumer [IPS: FHIR-51258](https://jira.hl7.org/browse/FHIR-51258)
   - changed MedicationRequest.medication:medicationCodeableConcept to use CodeableConceptIPS [IPS: FHIR-51970](https://jira.hl7.org/browse/FHIR-51970)
 - [AU PS MedicationStatement](StructureDefinition-au-ps-medicationstatement.html):
   - changed MedicationStatement.dosage.route to remove use of the CodableConceptIPS [IPS: FHIR-51257](https://jira.hl7.org/browse/FHIR-51257)
