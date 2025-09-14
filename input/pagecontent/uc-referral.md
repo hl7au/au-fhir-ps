@@ -20,7 +20,7 @@ An updated treatment plan is then shared with Joyce and Dr Burrows to maintain c
 *Figure 1: Referral to Specialist and Allied Health consumer journey*
 <br/>
 
-This use case demonstrates use of patient summary during step 4. Endocrinologist Consultation of the [Referral to Specialist and Allied Health consumer journey](https://sparked.csiro.au/index.php/sparked-products-resources/au-patient-summary-consumer-journeys/).
+This use case demonstrates use of patient summary during step 4. Endocrinologist Consultation of the [Referral to Specialist and Allied Health consumer journey](https://sparked.csiro.au/index.php/products-resources/au-ps-consumer-journeys/).
 
 ### Actors
 

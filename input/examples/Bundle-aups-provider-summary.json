@@ -1,0 +1,968 @@
+{
+  "resourceType": "Bundle",
+  "id": "aups-provider-summary",
+  "meta": {
+    "profile": [
+      "http://hl7.org.au/fhir/ps/StructureDefinition/au-ps-bundle"
+    ]
+  },
+  "language": "en-AU",
+  "identifier": {
+    "system": "urn:ietf:rfc:3986",
+    "value": "urn:uuid:15756130-bf6a-4489-ad44-f39f92e159b8"
+  },
+  "type": "document",
+  "timestamp": "2025-08-01T10:15:00.0000000+10:00",
+  "entry": [
+    {
+      "fullUrl": "urn:uuid:514af4c1-194d-48b4-8afe-7be09d3f895a",
+      "resource": {
+        "resourceType": "Composition",
+        "id": "514af4c1-194d-48b4-8afe-7be09d3f895a",
+        "meta": {
+          "versionId": "1"
+        },
+        "language": "en-AU",
+        "status": "final",
+        "type": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "60591-5",
+              "display": "Patient summary Document"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "urn:uuid:8e6bcf33-b144-439a-bb90-b9e42362bd2d"
+        },
+        "date": "2025-08-01",
+        "author": [
+          {
+            "reference": "urn:uuid:eb2b7ea3-2ce9-4f9e-b44b-7442c4cd01b4"
+          }
+        ],
+        "title": "International Patient Summary",
+        "custodian": {
+          "reference": "urn:uuid:4ddaab81-42ef-41d6-9115-c9ff1d7b604f"
+        },
+        "section": [
+          {
+            "title": "Allergies and Intolerances",
+            "code": {
+              "coding": [
+                {
+                  "system": "http://loinc.org",
+                  "code": "48765-2",
+                  "display": "Allergies and adverse reactions Document"
+                }
+              ]
+            },
+            "text": {
+              "status": "generated",
+              "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><ul><li>No known allergies</li></ul></div>"
+            },    
+            "entry": [
+              {
+                "reference": "urn:uuid:a3530a05-0cd4-483d-97b3-7467285c6b84"
+              }
+            ]
+          },
+          {
+            "title": "Problem List",
+            "code": {
+              "coding": [
+                {
+                  "system": "http://loinc.org",
+                  "code": "11450-4",
+                  "display": "Problem list - Reported"
+                }
+              ]
+            },
+            "text": {
+              "status": "generated",
+              "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><ul><li>Acute bronchitis (Severity: Moderate, Abatement: 2025-07-01)</li></ul></div>"
+            },
+            "entry": [
+              {
+                "reference": "urn:uuid:285af82a-0771-46ed-9bdf-b7e94bbe70dc"
+              }
+            ]
+          },
+          {
+            "title": "Medications",
+            "code": {
+              "coding": [
+                {
+                  "system": "http://loinc.org",
+                  "code": "10160-0",
+                  "display": "History of Medication use Narrative"
+                }
+              ]
+            },
+            "text": {
+              "status": "generated",
+              "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><ul><li>Ibuprofen 200 mg capsules – Take two capsules with water, three times daily</li><li>Benadryl PE Dry Cough and Nasal Congestion oral liquid – Take 10 mL every 4 hours</li></ul></div>"
+            },
+            "entry": [
+              {
+                "reference": "urn:uuid:3f76e819-1f30-405d-b1ef-66c878b401c2"
+              },
+              {
+                "reference": "urn:uuid:56e31e5a-88e5-4ed7-a4f0-ccb048a5a081"
+              }
+            ]
+          },  
+          {
+            "title": "Vital Signs",
+            "code": {
+              "coding": [
+                {
+                  "system": "http://loinc.org",
+                  "code": "8716-3",
+                  "display": "Vital signs note"
+                }
+              ]
+            },
+            "text": {
+              "status": "generated",
+              "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><ul><li>Body temperature: 37.5 C</li><li>Weight: 88.6 kg</li><li>Respiratory rate: 22 breaths/minute</li><li>Height: 175 cm</li><li>Heart rate: 72 beats/minute</li><li>Blood pressure: 120/80 mmHg</li></ul></div>"
+            },
+            "entry": [
+              {
+                "reference": "urn:uuid:17bebb42-4ba2-427b-8d40-3962d7aa82be"
+              },
+              {
+                "reference": "urn:uuid:1aef8144-08a8-4bb9-b9e3-dc0f2f47788f"
+              },
+              {
+                "reference": "urn:uuid:1d40218a-d054-4264-8ef4-3e9ab5698966"
+              },
+              {
+                "reference": "urn:uuid:cabada06-ca63-43e3-8b37-ae7a6c5cd039"
+              },
+              {
+                "reference": "urn:uuid:26634bc5-fa0d-436c-9a9c-543c0c21b314"
+              },
+              {
+                "reference": "urn:uuid:fe716881-7af6-4aa2-a8c6-9f76e8fcf714"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:8e6bcf33-b144-439a-bb90-b9e42362bd2d",
+      "resource": {
+        "resourceType": "Patient",
+        "id": "8e6bcf33-b144-439a-bb90-b9e42362bd2d",
+        "extension": [
+          {
+            "extension": [
+              {
+                "url": "value",
+                "valueCodeableConcept": {
+                  "text": "transgender"
+                }
+              }
+            ],
+            "url": "http://hl7.org/fhir/StructureDefinition/individual-genderIdentity"
+          }
+        ],
+        "identifier": [
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org.au/fhir/StructureDefinition/ihi-status",
+                "valueCoding": {
+                  "system": "https://healthterminologies.gov.au/fhir/CodeSystem/ihi-status-1",
+                  "code": "active"
+                }
+              },
+              {
+                "url": "http://hl7.org.au/fhir/StructureDefinition/ihi-record-status",
+                "valueCoding": {
+                  "system": "https://healthterminologies.gov.au/fhir/CodeSystem/ihi-record-status-1",
+                  "code": "verified",
+                  "display": "verified"
+                }
+              }
+            ],
+            "type": {
+              "coding": [
+                {
+                  "system": "http://terminology.hl7.org/CodeSystem/v2-0203",
+                  "code": "NI"
+                }
+              ],
+              "text": "IHI"
+            },
+            "system": "http://ns.electronichealth.net.au/id/hi/ihi/1.0",
+            "value": "8003608000311738"
+          }
+        ],
+        "name": [
+          {
+            "use": "official",
+            "family": "RALPH",
+            "given": [
+              "Rudolf"
+            ]
+          }
+        ],
+        "telecom": [
+          {
+            "system": "phone",
+            "value": "0491577426",
+            "use": "mobile"
+          }
+        ],
+        "gender": "unknown",
+        "birthDate": "1948-10-24",
+        "address": [
+          {
+            "line": [
+              "Svingen 28"
+            ],
+            "city": "Oslo",
+            "state": "(Norway)",
+            "postalCode": "0107"
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:4ddaab81-42ef-41d6-9115-c9ff1d7b604f",
+      "resource": {
+        "resourceType": "Organization",
+        "id": "4ddaab81-42ef-41d6-9115-c9ff1d7b604f",
+       
+        "identifier": [
+          {
+            "type": {
+              "coding": [
+                {
+                  "system": "http://terminology.hl7.org/CodeSystem/v2-0203",
+                  "code": "XX"
+                }
+              ],
+              "text": "ABN"
+            },
+            "system": "http://hl7.org.au/id/abn",
+            "value": "12345678901"
+          }
+        ],
+        "type": [
+          {
+            "coding": [
+              {
+                "system": "http://snomed.info/sct",
+                "code": "288565001",
+                "display": "Medical centre"
+              }
+            ],
+            "text": "Medical Center"
+          }
+        ],
+        "name": "Bobrester Medical Center",
+        "telecom": [
+          {
+            "system": "email",
+            "value": "info@bobrestermedical.example.com",
+            "use": "work"
+          },
+          {
+            "system": "phone",
+            "value": "(07) 5550 2427",
+            "use": "work"
+          }
+        ],
+        "address": [
+          {
+            "line": [
+              "87 Western Esp"
+            ],
+            "city": "Tindal RAAF",
+            "state": "QLD",
+            "postalCode": "4655",
+            "country": "AU"
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:eb2b7ea3-2ce9-4f9e-b44b-7442c4cd01b4",
+      "resource": {
+        "resourceType": "PractitionerRole",
+        "id": "eb2b7ea3-2ce9-4f9e-b44b-7442c4cd01b4",
+        "identifier": [
+          {
+            "type": {
+              "coding": [
+                {
+                  "system": "http://terminology.hl7.org/CodeSystem/v2-0203",
+                  "code": "EI",
+                  "display": "Employee number"
+                }
+              ],
+              "text": "Employee Number"
+            },
+            "system": "http://ns.electronichealth.net.au/id/abn-scoped/service-provider-individual/1.0/12345678901",
+            "value": "12345678",
+            "assigner": {
+              "display": "Bobrester Medical Center"
+            }
+          }
+        ],
+        "practitioner": {
+          "reference": "urn:uuid:dce50472-2a94-47e6-9501-b52f0df0c813"
+        },
+        "organization": {
+          "reference": "urn:uuid:4ddaab81-42ef-41d6-9115-c9ff1d7b604f"
+        },
+        "code": [
+          {
+            "coding": [
+              {
+                "system": "http://snomed.info/sct",
+                "code": "62247001"
+              },
+              {
+                "system": "http://www.abs.gov.au/ausstats/abs@.nsf/mf/1220.0",
+                "code": "253111"
+              }
+            ],
+            "text": "General Practitioner"
+          }
+        ],
+        "telecom": [
+          {
+            "system": "phone",
+            "value": "0491579760"
+          },
+          {
+            "system": "email",
+            "value": "drbob@bobrestermedical.example.com"
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:dce50472-2a94-47e6-9501-b52f0df0c813",
+      "resource": {
+        "resourceType": "Practitioner",
+        "id": "dce50472-2a94-47e6-9501-b52f0df0c813",
+        "name": [
+          {
+            "family": "Bobrester",
+            "given": [
+              "Bob"
+            ],
+            "prefix": [
+              "Dr."
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:a3530a05-0cd4-483d-97b3-7467285c6b84",
+      "resource": {
+        "resourceType": "AllergyIntolerance",
+        "id": "a3530a05-0cd4-483d-97b3-7467285c6b84",
+        "type": "allergy",
+        "clinicalStatus" : {
+          "coding" : [
+            {
+              "system" : "http://terminology.hl7.org/CodeSystem/allergyintolerance-clinical",
+              "code" : "active"
+            }
+          ]
+        },
+        "code": {
+          "coding": [
+            {
+              "system": "http://snomed.info/sct",
+              "code": "716186003",
+              "display": "No known allergy"
+            }
+          ],
+          "text": "No known allergies"
+        },
+        "patient": {
+          "reference": "urn:uuid:8e6bcf33-b144-439a-bb90-b9e42362bd2d"
+        },
+        "recordedDate": "2025-06-05"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:285af82a-0771-46ed-9bdf-b7e94bbe70dc",
+      "resource": {
+        "resourceType": "Condition",
+        "id": "285af82a-0771-46ed-9bdf-b7e94bbe70dc",
+       
+        "clinicalStatus": {
+          "coding": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/condition-clinical",
+              "code": "resolved",
+              "display": "Resolved"
+            }
+          ],
+          "text": "Resolved"
+        },
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/condition-category",
+                "code": "problem-list-item",
+                "display": "Problem List Item"
+              }
+            ],
+            "text": "Problem"
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://snomed.info/sct",
+              "code": "10509002",
+              "display": "Acute bronchitis (disorder)"
+            }
+          ],
+          "text": "Acute bronchitis"
+        },
+        "severity": {
+          "coding": [
+            {
+              "system": "http://snomed.info/sct",
+              "code": "6736007",
+              "display": "Moderate"
+            }
+          ],
+          "text": "Moderate"
+        },
+        "subject": {
+          "reference": "urn:uuid:8e6bcf33-b144-439a-bb90-b9e42362bd2d"
+        },
+        "onsetDateTime": "2025-06-01",
+        "abatementDateTime": "2025-07-01"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:3f76e819-1f30-405d-b1ef-66c878b401c2",
+      "resource": {
+        "resourceType": "MedicationStatement",
+        "id": "3f76e819-1f30-405d-b1ef-66c878b401c2",
+        "status": "active",
+        "medicationReference": {
+          "reference": "urn:uuid:f8b8e145-141c-480f-aef3-144ed22c7c64"
+        },
+        "subject": {
+          "reference": "urn:uuid:8e6bcf33-b144-439a-bb90-b9e42362bd2d"
+        },
+        "reasonCode": [
+          {
+            "coding": [
+              {
+                "system": "http://snomed.info/sct",
+                "code": "10509002",
+                "display": "Acute bronchitis (disorder)"
+              }
+            ],
+            "text": "Acute bronchitis"
+          }
+        ],
+        "effectiveDateTime": "2025-06-05",
+        "dosage": [
+          {
+            "text": "Take two capsules with water, three times daily, as needed"
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:56e31e5a-88e5-4ed7-a4f0-ccb048a5a081",
+      "resource": {
+        "resourceType": "MedicationStatement",
+        "id": "56e31e5a-88e5-4ed7-a4f0-ccb048a5a081",
+        "status": "active",
+        "medicationReference": {
+          "reference": "urn:uuid:2e7ab4c2-6430-4fe6-acd3-2b7fb2b43a21"
+        },
+        "subject": {
+          "reference": "urn:uuid:8e6bcf33-b144-439a-bb90-b9e42362bd2d"
+        },
+        "reasonCode": [
+          {
+            "coding": [
+              {
+                "system": "http://snomed.info/sct",
+                "code": "10509002",
+                "display": "Acute bronchitis (disorder)"
+              }
+            ],
+            "text": "Acute bronchitis"
+          }
+        ],
+        "effectivePeriod": {
+          "start": "2025-06-05",
+          "end": "2025-06-12"
+        },
+        "dosage": [
+          {
+            "text": "Take 10 mL every 4 hours, for 7 days"
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:f8b8e145-141c-480f-aef3-144ed22c7c64",
+      "resource": {
+        "resourceType": "Medication",
+        "id": "f8b8e145-141c-480f-aef3-144ed22c7c64",
+        "code": {
+          "coding": [
+            {
+              "system": "http://snomed.info/sct",
+              "code": "62104011000036108",
+              "display": "Ibuprofen 200 mg capsule"
+            }
+          ],
+          "text": "Ibuprofen 200 mg capsule"
+        },
+        "form": {
+          "coding": [
+            {
+              "system": "http://snomed.info/sct",
+              "code": "420692007",
+              "display": "Capsule"
+            }
+          ],
+          "text": "capsule"
+        },
+        "ingredient": [
+          {
+            "itemCodeableConcept": {
+              "coding": [
+                {
+                  "system": "http://snomed.info/sct",
+                  "code": "387207008",
+                  "display": "Ibuprofen"
+                }
+              ],
+              "text": "Ibuprofen"
+            },
+            "strength": {
+              "numerator": {
+                "value": 200,
+                "unit": "mg",
+                "system": "http://unitsofmeasure.org",
+                "code": "mg"
+              },
+              "denominator": {
+                "value": 1,
+                "unit": "Capsule",
+                "system": "http://snomed.info/sct",
+                "code": "420692007"
+              }
+            }
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:2e7ab4c2-6430-4fe6-acd3-2b7fb2b43a21",
+      "resource": {
+        "resourceType": "Medication",
+        "id": "2e7ab4c2-6430-4fe6-acd3-2b7fb2b43a21",
+        "code": {
+          "coding": [
+            {
+              "system": "http://snomed.info/sct",
+              "code": "679191000168105",
+              "display": "Benadryl PE Dry Cough and Nasal Congestion oral liquid, 5 mL"
+            }
+          ],
+          "text": "Benadryl PE Dry Cough and Nasal Congestion oral liquid"
+        },
+        "form": {
+          "coding": [
+            {
+              "system": "http://snomed.info/sct",
+              "code": "139011000036106",
+              "display": "Oral liquid"
+            }
+          ],
+          "text": "oral liquid"
+        },
+        "ingredient": [
+          {
+            "itemCodeableConcept": {
+              "coding": [
+                {
+                  "system": "http://snomed.info/sct",
+                  "code": "725852003",
+                  "display": "Dextromethorphan hydrobromide monohydrate"
+                }
+              ],
+              "text": "Dextromethorphan hydrobromide monohydrate"
+            },
+            "strength": {
+              "numerator": {
+                "value": 10,
+                "unit": "mg",
+                "system": "http://unitsofmeasure.org",
+                "code": "mg"
+              },
+              "denominator": {
+                "value": 5,
+                "unit": "mL",
+                "system": "http://unitsofmeasure.org",
+                "code": "mL"
+              }
+            }
+          },
+          {
+            "itemCodeableConcept": {
+              "coding": [
+                {
+                  "system": "http://snomed.info/sct",
+                  "code": "73946006",
+                  "display": "Phenylephrine hydrochloride"
+                }
+              ],
+              "text": "Phenylephrine hydrochloride"
+            },
+            "strength": {
+              "numerator": {
+                "value": 5,
+                "unit": "mg",
+                "system": "http://unitsofmeasure.org",
+                "code": "mg"
+              },
+              "denominator": {
+                "value": 5,
+                "unit": "mL",
+                "system": "http://unitsofmeasure.org",
+                "code": "mL"
+              }
+            }
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:17bebb42-4ba2-427b-8d40-3962d7aa82be",
+      "resource": {
+        "resourceType": "Observation",
+        "id": "17bebb42-4ba2-427b-8d40-3962d7aa82be",
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "vital-signs",
+                "display": "Vital Signs"
+              }
+            ],
+            "text": "Vital Signs"
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "8310-5",
+              "display": "Body temperature"
+            },
+            {
+              "system": "http://snomed.info/sct",
+              "code": "386725007",
+              "display": "Body temperature"
+            }
+          ],
+          "text": "Body temperature"
+        },
+        "subject": {
+          "reference": "urn:uuid:8e6bcf33-b144-439a-bb90-b9e42362bd2d"
+        },
+        "effectiveDateTime": "2025-06-05",
+        "valueQuantity": {
+          "value": 37.5,
+          "unit": "C",
+          "system": "http://unitsofmeasure.org",
+          "code": "Cel"
+        }
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:1aef8144-08a8-4bb9-b9e3-dc0f2f47788f",
+      "resource": {
+        "resourceType": "Observation",
+        "id": "1aef8144-08a8-4bb9-b9e3-dc0f2f47788f",
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "vital-signs",
+                "display": "Vital Signs"
+              }
+            ],
+            "text": "Vital Signs"
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "29463-7",
+              "display": "Body weight"
+            },
+            {
+              "system": "http://snomed.info/sct",
+              "code": "27113001",
+              "display": "Body weight"
+            }
+          ],
+          "text": "Weight"
+        },
+        "subject": {
+          "reference": "urn:uuid:8e6bcf33-b144-439a-bb90-b9e42362bd2d"
+        },
+        "effectiveDateTime": "2025-06-05",
+        "valueQuantity": {
+          "value": 88.6,
+          "unit": "kg",
+          "system": "http://unitsofmeasure.org",
+          "code": "kg"
+        }
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:cabada06-ca63-43e3-8b37-ae7a6c5cd039",
+      "resource": {
+        "resourceType": "Observation",
+        "id": "cabada06-ca63-43e3-8b37-ae7a6c5cd039",
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "vital-signs",
+                "display": "Vital Signs"
+              }
+            ],
+            "text": "Vital Signs"
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "8302-2",
+              "display": "Body height"
+            },
+            {
+              "system": "http://snomed.info/sct",
+              "code": "50373000",
+              "display": "Body height measure"
+            }
+          ],
+          "text": "Height"
+        },
+        "subject": {
+          "reference": "urn:uuid:8e6bcf33-b144-439a-bb90-b9e42362bd2d"
+        },
+        "effectiveDateTime": "2025-06-05",
+        "valueQuantity": {
+          "value": 175,
+          "unit": "cm",
+          "system": "http://unitsofmeasure.org",
+          "code": "cm"
+        }
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:26634bc5-fa0d-436c-9a9c-543c0c21b314",
+      "resource": {
+        "resourceType": "Observation",
+        "id": "26634bc5-fa0d-436c-9a9c-543c0c21b314",
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "vital-signs",
+                "display": "Vital Signs"
+              }
+            ],
+            "text": "Vital Signs"
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "8867-4",
+              "display": "Heart rate"
+            },
+            {
+              "system": "http://snomed.info/sct",
+              "code": "364075005",
+              "display": "Heart rate"
+            }
+          ],
+          "text": "Heart rate"
+        },
+        "subject": {
+          "reference": "urn:uuid:8e6bcf33-b144-439a-bb90-b9e42362bd2d"
+        },
+        "effectiveDateTime": "2025-06-05",
+        "valueQuantity": {
+          "value": 72,
+          "unit": "beats/minute",
+          "system": "http://unitsofmeasure.org",
+          "code": "/min"
+        }
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:1d40218a-d054-4264-8ef4-3e9ab5698966",
+      "resource": {
+        "resourceType": "Observation",
+        "id": "1d40218a-d054-4264-8ef4-3e9ab5698966",
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "vital-signs",
+                "display": "Vital Signs"
+              }
+            ],
+            "text": "Vital Signs"
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "9279-1",
+              "display": "Respiratory rate"
+            },
+            {
+              "system": "http://snomed.info/sct",
+              "code": "86290005",
+              "display": "Respiratory rate"
+            }
+          ],
+          "text": "Respiratory rate"
+        },
+        "subject": {
+          "reference": "urn:uuid:8e6bcf33-b144-439a-bb90-b9e42362bd2d"
+        },
+        "effectiveDateTime": "2025-06-05",
+        "valueQuantity": {
+          "value": 22,
+          "unit": "breaths/minute",
+          "system": "http://unitsofmeasure.org",
+          "code": "/min"
+        }
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:fe716881-7af6-4aa2-a8c6-9f76e8fcf714",
+      "resource": {
+        "resourceType": "Observation",
+        "id": "fe716881-7af6-4aa2-a8c6-9f76e8fcf714",
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "vital-signs",
+                "display": "Vital Signs"
+              }
+            ],
+            "text": "Vital Signs"
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "85354-9",
+              "display": "Blood pressure panel with all children optional"
+            },
+            {
+              "system": "http://snomed.info/sct",
+              "code": "75367002",
+              "display": "Blood pressure"
+            }
+          ],
+          "text": "Blood pressure"
+        },
+        "subject": {
+          "reference": "urn:uuid:8e6bcf33-b144-439a-bb90-b9e42362bd2d"
+        },
+        "effectiveDateTime": "2025-06-05",
+        "component": [
+          {
+            "code": {
+              "coding": [
+                {
+                  "system": "http://loinc.org",
+                  "code": "8480-6",
+                  "display": "Systolic blood pressure"
+                },
+                {
+                  "system": "http://snomed.info/sct",
+                  "code": "271649006",
+                  "display": "Systolic blood pressure"
+                }
+              ]
+            },
+            "valueQuantity": {
+              "value": 120,
+              "unit": "mmHg",
+              "system": "http://unitsofmeasure.org",
+              "code": "mm[Hg]"
+            }
+          },
+          {
+            "code": {
+              "coding": [
+                {
+                  "system": "http://loinc.org",
+                  "code": "8462-4",
+                  "display": "Diastolic blood pressure"
+                },
+                {
+                  "system": "http://snomed.info/sct",
+                  "code": "271650006",
+                  "display": "Diastolic blood pressure"
+                }
+              ]
+            },
+            "valueQuantity": {
+              "value": 80,
+              "unit": "mmHg",
+              "system": "http://unitsofmeasure.org",
+              "code": "mm[Hg]"
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

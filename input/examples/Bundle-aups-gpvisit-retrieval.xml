@@ -143,7 +143,7 @@
             <coding>
               <system value="http://loinc.org"/>
               <code value="11369-6"/>
-              <display value="History of Immunization Narrative"/>
+              <display value="History of Immunization note"/>
             </coding>
           </code>
           <text>
@@ -193,7 +193,7 @@
             <coding>
               <system value="http://loinc.org"/>
               <code value="30954-2"/>
-              <display value="Relevant diagnostic tests/laboratory data Narrative"/>
+              <display value="Relevant diagnostic tests/laboratory data note"/>
             </coding>
           </code>
           <text>

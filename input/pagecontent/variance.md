@@ -9,7 +9,7 @@ HL7 Australia published FHIR implementation guides are required to follow specif
 ### Variance from AU Base
 This implementation guide has no variance (i.e. fully compliant) from AU Base FHIR Implementation Guide version 6.0.0-ci-build ([current](https://build.fhir.org/ig/hl7au/au-fhir-base/)).
 
-Note that while there is no variance, this implementation guide imposes requirements additional to AU Bae.
+Note that while there is no variance, this implementation guide imposes requirements additional to AU Base.
 
 #### Additionally Profiled Resources
 
