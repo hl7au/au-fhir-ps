@@ -14,7 +14,7 @@ An interpretation of AUCDI clinical information requirements through community c
 * In any particular release, AU Core or AU PS may not cover all AUCDI data concepts, especially when AUCDI data concepts are not supported in existing systems.
 * AU PS includes exchange for concepts that are commonly implemented in systems and not included in AUCDI e.g. `Patient.name`, `Practitioner.identifier`, `Procedure.encounter`. 
 * AU PS includes exchange for clinical concepts not yet included in AUCDI, e.g. MedicationRequest, which are included through reference to IPS or AU Core.
-* AU PS includes data elements not included in AUCDI that are required to make FHIR implementable e.g. `Observation.status`, `MedicationRequest.intent`, Provenance.
+* AU PS includes data elements not included in AUCDI that are required to make FHIR implementable e.g. `Observation.status`, `MedicationRequest.intent`.
 
 ### AUCDI and AU PS Versions
 
