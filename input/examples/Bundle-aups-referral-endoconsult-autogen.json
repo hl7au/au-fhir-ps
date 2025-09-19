@@ -2216,7 +2216,12 @@
           }
         ],
         "effectiveDateTime": "2024-11-05",
-        "valueString": "> 10^8"
+        "valueString": "> 10^8",
+        "referenceRange": [
+        {
+          "text": "organisms/mL"
+        }
+        ]
       }
     },
     {
