@@ -245,116 +245,117 @@
             },
             "text": {
               "status": "generated",
-              "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n              <table border=\"1\">\n                <thead>\n                  <tr>\n                    <th>Test Name</th>\n                    <th>Test Result</th>\n                    <th>Date</th>\n                  </tr>\n                </thead>\n                <tbody>\n                  <tr><td>Midstream specimen of urine (MSU) - pH</td><td>7.0</td><td>05/11/24</td></tr>\n                  <tr><td>Midstream specimen of urine (MSU) - Protein</td><td>Positive</td><td>05/11/24</td></tr>\n                  <tr><td>Midstream specimen of urine (MSU) - Blood</td><td>Positive</td><td>05/11/24</td></tr>\n                  <tr><td>Midstream specimen of urine (MSU) - Glucose</td><td>Positive</td><td>05/11/24</td></tr>\n                  <tr><td>Midstream specimen of urine (MSU) - Leucocytes</td><td>370  x 10^6/L (&lt;10)</td><td>05/11/24</td></tr>\n                  <tr><td>Midstream specimen of urine (MSU) - Erythrocytes</td><td>150 x 10^6/L (&lt;10)</td><td>05/11/24</td></tr>\n                  <tr><td>Midstream specimen of urine (MSU) - Epithelial cells</td><td>Nil</td><td>05/11/24</td></tr>\n                  <tr><td>Midstream specimen of urine (MSU) - Culture</td><td>Org 1: Escherichia coli &gt; 10^8  Organisms/L</td><td>05/11/24</td></tr>\n                  <tr><td>Midstream specimen of urine (MSU) - Antimicrobial susceptibility</td><td>Org 1<br/>Amp/Amoxycillin: S<br/>Amoxycillin/clav. acid: S<br/>Cephalexin: S<br/>Trimethoprim: S<br/>Nitrofurantoin: S<br/>Gentamicin: S<br/>Norfloxacin: S</td><td>05/11/24</td></tr>\n                  <tr><td>Glucose Tolerance Test (GTT) Fasting</td><td>5.3 mmol/L</td><td>21/10/24</td></tr>\n                  <tr><td>Glucose Tolerance Test (GTT) 1 hour</td><td>10 mmol/L</td><td>21/10/24</td></tr>\n                  <tr><td>Glucose Tolerance Test (GTT) 2 hour</td><td>8.6 mmol/L</td><td>21/10/24</td></tr>\n                  <tr><td>Haemoglobin A1c</td><td>5.8 %</td><td>14/06/24</td></tr>\n                  <tr><td>Full Blood Count -  Haemoglobin</td><td>125  g/L</td><td>12/06/24</td></tr>\n                  <tr><td>Full Blood Count -  Haematocrit</td><td>0.37  L/L</td><td>12/06/24</td></tr>\n                  <tr><td>Full Blood Count -  White Blood Cell Count</td><td>8 x 10^9/L</td><td>12/06/24</td></tr>\n                  <tr><td>Full Blood Count -  Platelets</td><td>250 x 10^9/L</td><td>12/06/24</td></tr>\n                  <tr><td>Full Blood Count - MCV</td><td>85 fL</td><td>12/06/24</td></tr>\n                  <tr><td>HCG</td><td>16000 IU/L</td><td>12/06/24</td></tr>\n                  <tr><td>Urinalysis -  Colour</td><td>Light yellow</td><td>03/06/24</td></tr>\n                  <tr><td>Urinalysis -  Clarity</td><td>Clear</td><td>03/06/24</td></tr>\n                  <tr><td>Urinalysis -  pH</td><td>6.0</td><td>03/06/24</td></tr>\n                  <tr><td>Urinalysis -  Specific Gravity</td><td>1.02</td><td>03/06/24</td></tr>\n                  <tr><td>Urinalysis -  Protein</td><td>Negative</td><td>03/06/24</td></tr>\n                  <tr><td>Urinalysis -  Glucose</td><td>Negative</td><td>03/06/24</td></tr>\n                  <tr><td>Urinalysis -  Ketones</td><td>Negative</td><td>03/06/24</td></tr>\n                  <tr><td>Urinalysis -  Nitrites</td><td>Negative</td><td>03/06/24</td></tr>\n                  <tr><td>Urinalysis -  Leukocyte Esterase</td><td>Negative</td><td>03/06/24</td></tr>\n                </tbody>\n              </table>\n            </div>"
+              "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><table border=\"1\">\n        <thead>\n            <tr>\n                <th>Name</th>\n                <th>Value</th>\n                <th>Date</th>\n            </tr>\n        </thead>\n        <tbody>\n            <tr><td>Urine M/C/S - pH</td><td>7.0</td><td>05/11/24</td></tr><tr><td>Urine M/C/S - Protein</td><td>Positive</td><td>05/11/24</td></tr><tr><td>Urine M/C/S - Blood</td><td>Positive</td><td>05/11/24</td></tr><tr><td>Urine M/C/S - Glucose</td><td>Positive</td><td>05/11/24</td></tr><tr><td>Urine M/C/S - Leucocytes</td><td>370  x 10^6/L  (&lt;10)</td><td>05/11/24</td></tr><tr><td>Urine M/C/S - Erythrocytes</td><td>150 x 10^6/L  (&lt;10)</td><td>05/11/24</td></tr><tr><td>Urine M/C/S - Epithelial cells</td><td>Nil</td><td>05/11/24</td></tr><tr><td>Urine M/C/S - Culture</td><td>Org 1: Escherichia coli &gt; 10^8  Organisms/L</td><td>05/11/24</td></tr><tr><td>Urine M/C/S - Antimicrobial susceptibility</td><td style='white-space: pre-line;'>Org 1\nAmp/Amoxycillin: Susceptible\nAmox/clav. acid: Susceptible\nCephalexin: Susceptible\nTrimethoprim: Susceptible\nNitrofurantoin: Susceptible\nGentamicin: Susceptible\nNorfloxacin: Susceptible</td><td>05/11/24</td></tr><tr><td>Glucose Tolerance Test (GTT) - Fasting Glucose</td><td>5.3 mmol/L (&lt;5.1)</td><td>21/10/24</td></tr><tr><td>Glucose Tolerance Test (GTT) - 1 hour Glucose</td><td>10.0 mmol/L (&lt;10.0)</td><td>21/10/24</td></tr><tr><td>Glucose Tolerance Test (GTT) - 2 hour Glucose</td><td>8.6 mmol/L (&lt;8.5)</td><td>21/10/24</td></tr><tr><td>Haemoglobin A1c</td><td>5.8 %</td><td>14/06/24</td></tr><tr><td>Full Blood Count -  Haemoglobin</td><td>125  g/L (115-165)</td><td>12/06/24</td></tr><tr><td>Full Blood Count -  Haematocrit</td><td>0.37  L/L (0.37-0.51)</td><td>12/06/24</td></tr><tr><td>Full Blood Count -  White Blood Cell Count</td><td>8.0 x 10^9/L (4.0-11.0)</td><td>12/06/24</td></tr><tr><td>Full Blood Count -  Platelets</td><td>250 x 10^9/L (150-400)</td><td>12/06/24</td></tr><tr><td>Full Blood Count - MCV</td><td>85 fL (80-100)</td><td>12/06/24</td></tr><tr><td>HCG</td><td>16000 IU/L</td><td>12/06/24</td></tr><tr><td>Urinalysis -  Colour</td><td>Light yellow colour</td><td>03/06/24</td></tr><tr><td>Urinalysis -  Clarity</td><td>Clear</td><td>03/06/24</td></tr><tr><td>Urinalysis -  pH</td><td>6.0</td><td>03/06/24</td></tr><tr><td>Urinalysis -  Specific Gravity</td><td>1.02</td><td>03/06/24</td></tr><tr><td>Urinalysis -  Protein</td><td>Negative</td><td>03/06/24</td></tr><tr><td>Urinalysis -  Glucose</td><td>Negative</td><td>03/06/24</td></tr><tr><td>Urinalysis -  Ketones</td><td>Negative</td><td>03/06/24</td></tr><tr><td>Urinalysis -  Nitrites</td><td>Negative</td><td>03/06/24</td></tr><tr><td>Urinalysis -  Leukocyte Esterase</td><td>Negative</td><td>03/06/24</td></tr>\n        </tbody>\n    </table></div>"
             },
             "entry": [
               {
-                "reference": "urn:uuid:2a3b309b-7a7b-422d-95c5-0691668d507b"
+                "reference": "urn:uuid:bf094219-4a9b-4184-ae36-0743f93a41ef"
               },
               {
-                "reference": "urn:uuid:c4411a8a-248a-4ba7-abb3-5802426bcb2c"
+                "reference": "urn:uuid:f8bbeb04-f3bc-452d-9975-abd1caf12d62"
               },
               {
-                "reference": "urn:uuid:9c087eae-b04c-4a1f-8710-57397088f168"
+                "reference": "urn:uuid:1a506b54-9462-46bf-a266-2d51acbc64ff"
               },
               {
-                "reference": "urn:uuid:fe8b2994-3985-4ca7-961d-9796c3c9789a"
+                "reference": "urn:uuid:8a394aa6-8527-4535-9c68-35cf315232fb"
               },
               {
-                "reference": "urn:uuid:12e07d9a-e744-40f1-a17d-421076248029"
+                "reference": "urn:uuid:c967c04f-d89d-4266-b4bf-029bc86501ab"
               },
               {
-                "reference": "urn:uuid:365d9e85-d07e-415e-af07-dc1b17d4353d"
+                "reference": "urn:uuid:d8358a54-f0f3-4457-ae78-b253ea57a4a6"
               },
               {
-                "reference": "urn:uuid:5ab9050a-f7bf-4156-ae9a-8d5b586fcca2"
+                "reference": "urn:uuid:755dc0b4-a796-4a01-ba27-5e6f4098a519"
               },
               {
-                "reference": "urn:uuid:6cdc5a8b-5123-4282-8cc6-3685a7702cd6"
+                "reference": "urn:uuid:beeded39-c3f2-46bc-80b9-86ea74c2be11"
               },
               {
-                "reference": "urn:uuid:934e0cc3-c46c-424e-9202-73db5c62fda3"
+                "reference": "urn:uuid:98d97917-eeae-4158-9d25-416420c5828f"
               },
               {
-                "reference": "urn:uuid:f84c1b1c-beca-4b0b-9a24-2766e3e23321"
+                "reference": "urn:uuid:714eea46-2561-4b07-8881-f20134abf224"
               },
               {
-                "reference": "urn:uuid:c971a437-10f0-4d54-af1d-a7e561e29982"
+                "reference": "urn:uuid:855789e2-18be-43e2-a8a0-402d525202dd"
               },
               {
-                "reference": "urn:uuid:29c62a29-0bff-4cb4-8a14-58e62443ed0a"
+                "reference": "urn:uuid:70fa03d7-27bf-46ff-bbad-8fabe4d90901"
               },
               {
-                "reference": "urn:uuid:64a78d45-be0f-4ede-b366-812a3f5730e6"
+                "reference": "urn:uuid:8c083358-32cf-47b8-9885-4671f55d132c"
               },
               {
-                "reference": "urn:uuid:6956a82e-8fc6-4319-a0d7-1694610bf702"
+                "reference": "urn:uuid:900d6181-0c2c-4f33-b1e6-51c21d59bb49"
               },
               {
-                "reference": "urn:uuid:b21fbb5f-f70c-43cc-b2ac-b83d165ca441"
+                "reference": "urn:uuid:049d8e10-c075-41cf-ab74-78438373b95f"
               },
               {
-                "reference": "urn:uuid:08675b3c-3fcd-48a9-b8af-f33de346d950"
+                "reference": "urn:uuid:92b3e48e-c00b-4a3c-b256-52aced6d52d2"
               },
               {
-                "reference": "urn:uuid:1e28fa9e-6ba7-4769-bfc0-2e538172c8bd"
+                "reference": "urn:uuid:e77c60cf-35e1-4b47-80c1-89ef9b26529e"
               },
               {
-                "reference": "urn:uuid:82ea95d9-655a-4b4c-9cb6-77a51f334961"
+                "reference": "urn:uuid:fdbd50df-4465-4fee-b4c1-c835c2b83b4f"
               },
               {
-                "reference": "urn:uuid:d23d7035-445e-46f5-98c5-cd0090ca4e1e"
+                "reference": "urn:uuid:1431c41b-4ca9-4cf4-a083-413b299afaee"
               },
               {
-                "reference": "urn:uuid:bf44c576-7895-4be2-8cc8-874ddfeca6c4"
+                "reference": "urn:uuid:69adb034-1cb7-46fb-9725-633ea913491f"
               },
               {
-                "reference": "urn:uuid:6b238ad4-e6e4-437e-969b-ec6eba692a6b"
+                "reference": "urn:uuid:bee00ec5-b2df-445c-95a9-482db09aab28"
               },
               {
-                "reference": "urn:uuid:219c91e9-8bb4-4471-ad17-edcfb5217756"
+                "reference": "urn:uuid:f0eb1dda-eea3-4272-92e2-b9ac91a14543"
               },
               {
-                "reference": "urn:uuid:14ea1707-331d-40a6-81b4-60290b48f9e6"
+                "reference": "urn:uuid:1b99e170-74fc-4007-89bc-c6a091bea2d1"
               },
               {
-                "reference": "urn:uuid:adf87a05-c0da-4fb8-8bfb-48c7520f75f7"
+                "reference": "urn:uuid:5579d9f3-88a9-4339-9662-5431d707288b"
               },
               {
-                "reference": "urn:uuid:6104dd65-0d07-4e09-a9f8-fa9efbe914eb"
+                "reference": "urn:uuid:1cc93219-c1a2-44dc-9683-33559b3af9fc"
               },
               {
-                "reference": "urn:uuid:cdf3ff1b-f8d8-4d71-82fe-800a2bbae806"
+                "reference": "urn:uuid:03e92f38-81e2-4c93-98c7-a581ecf8f56f"
               },
               {
-                "reference": "urn:uuid:1e797de6-7e14-4e2e-9212-cd8c348bcbfb"
+                "reference": "urn:uuid:9e30eb5c-b907-4e39-b25f-9bba4f09f79e"
               },
               {
-                "reference": "urn:uuid:95714d9e-4cd2-4302-8434-dde69ceecaf4"
+                "reference": "urn:uuid:775fd6d4-c7ab-48cd-8e30-3a04f415633b"
               },
               {
-                "reference": "urn:uuid:e54e9557-9b7a-419b-8d7a-60bf234f2c89"
+                "reference": "urn:uuid:afa66cf9-c360-4655-88a1-adf24684b749"
               },
               {
-                "reference": "urn:uuid:22ff65cc-9a37-4b7b-b322-bd01c66c912d"
+                "reference": "urn:uuid:3ede83be-9b70-415e-a354-b23a66e6c67c"
               },
               {
-                "reference": "urn:uuid:f920a073-9d1f-4deb-8a3d-f93ea6a39d8f"
+                "reference": "urn:uuid:c33cd78a-e5a9-40c2-8431-cc92c8638e8e"
               },
               {
-                "reference": "urn:uuid:6da18465-0949-47e1-a14b-4fde361e245c"
+                "reference": "urn:uuid:3706b230-5e87-4da4-b727-1bc44d6f50df"
               },
               {
-                "reference": "urn:uuid:82e519ba-d02b-4c6e-8f5c-9b177c4b1bcc"
+                "reference": "urn:uuid:996486b5-3eea-413f-b67d-2ade13cb22b4"
               },
               {
-                "reference": "urn:uuid:0e2758a5-5ddb-4b11-a1ae-328ab82a5aaf"
+                "reference": "urn:uuid:31b7b052-19b7-460d-b533-db35d992367e"
               },
               {
-                "reference": "urn:uuid:53f97f69-51a0-4961-ba5a-ca862bb01931"
+                "reference": "urn:uuid:a0807ad8-f160-4d27-92d0-f4ee87a63e49"
               }
             ]
-          },
+          }
+        ,
           {
             "title": "Social History",
             "code": {
@@ -1711,7 +1712,7 @@
       }
     },
     {
-      "fullUrl": "urn:uuid:2a3b309b-7a7b-422d-95c5-0691668d507b",
+      "fullUrl": "urn:uuid:bf094219-4a9b-4184-ae36-0743f93a41ef",
       "resource": {
         "resourceType": "Observation",
         "meta": {
@@ -1762,7 +1763,7 @@
       }
     },
     {
-      "fullUrl": "urn:uuid:c4411a8a-248a-4ba7-abb3-5802426bcb2c",
+      "fullUrl": "urn:uuid:f8bbeb04-f3bc-452d-9975-abd1caf12d62",
       "resource": {
         "resourceType": "Observation",
         "meta": {
@@ -1820,7 +1821,7 @@
       }
     },
     {
-      "fullUrl": "urn:uuid:9c087eae-b04c-4a1f-8710-57397088f168",
+      "fullUrl": "urn:uuid:1a506b54-9462-46bf-a266-2d51acbc64ff",
       "resource": {
         "resourceType": "Observation",
         "meta": {
@@ -1878,7 +1879,7 @@
       }
     },
     {
-      "fullUrl": "urn:uuid:fe8b2994-3985-4ca7-961d-9796c3c9789a",
+      "fullUrl": "urn:uuid:8a394aa6-8527-4535-9c68-35cf315232fb",
       "resource": {
         "resourceType": "Observation",
         "meta": {
@@ -1936,7 +1937,7 @@
       }
     },
     {
-      "fullUrl": "urn:uuid:12e07d9a-e744-40f1-a17d-421076248029",
+      "fullUrl": "urn:uuid:c967c04f-d89d-4266-b4bf-029bc86501ab",
       "resource": {
         "resourceType": "Observation",
         "meta": {
@@ -1995,7 +1996,7 @@
       }
     },
     {
-      "fullUrl": "urn:uuid:365d9e85-d07e-415e-af07-dc1b17d4353d",
+      "fullUrl": "urn:uuid:d8358a54-f0f3-4457-ae78-b253ea57a4a6",
       "resource": {
         "resourceType": "Observation",
         "meta": {
@@ -2054,7 +2055,7 @@
       }
     },
     {
-      "fullUrl": "urn:uuid:5ab9050a-f7bf-4156-ae9a-8d5b586fcca2",
+      "fullUrl": "urn:uuid:755dc0b4-a796-4a01-ba27-5e6f4098a519",
       "resource": {
         "resourceType": "Observation",
         "meta": {
@@ -2112,7 +2113,7 @@
       }
     },
     {
-      "fullUrl": "urn:uuid:6cdc5a8b-5123-4282-8cc6-3685a7702cd6",
+      "fullUrl": "urn:uuid:beeded39-c3f2-46bc-80b9-86ea74c2be11",
       "resource": {
         "resourceType": "Observation",
         "meta": {
@@ -2170,7 +2171,7 @@
       }
     },
     {
-      "fullUrl": "urn:uuid:934e0cc3-c46c-424e-9202-73db5c62fda3",
+      "fullUrl": "urn:uuid:98d97917-eeae-4158-9d25-416420c5828f",
       "resource": {
         "resourceType": "Observation",
         "meta": {
@@ -2215,11 +2216,11 @@
           }
         ],
         "effectiveDateTime": "2024-11-05",
-        "valueString": "> 10^8 organisms/L"
+        "valueString": "> 10^8"
       }
     },
     {
-      "fullUrl": "urn:uuid:f84c1b1c-beca-4b0b-9a24-2766e3e23321",
+      "fullUrl": "urn:uuid:714eea46-2561-4b07-8881-f20134abf224",
       "resource": {
         "resourceType": "Observation",
         "meta": {
@@ -2277,7 +2278,7 @@
       }
     },
     {
-      "fullUrl": "urn:uuid:c971a437-10f0-4d54-af1d-a7e561e29982",
+      "fullUrl": "urn:uuid:855789e2-18be-43e2-a8a0-402d525202dd",
       "resource": {
         "resourceType": "Observation",
         "meta": {
@@ -2335,7 +2336,7 @@
       }
     },
     {
-      "fullUrl": "urn:uuid:29c62a29-0bff-4cb4-8a14-58e62443ed0a",
+      "fullUrl": "urn:uuid:70fa03d7-27bf-46ff-bbad-8fabe4d90901",
       "resource": {
         "resourceType": "Observation",
         "meta": {
@@ -2393,7 +2394,7 @@
       }
     },
     {
-      "fullUrl": "urn:uuid:64a78d45-be0f-4ede-b366-812a3f5730e6",
+      "fullUrl": "urn:uuid:8c083358-32cf-47b8-9885-4671f55d132c",
       "resource": {
         "resourceType": "Observation",
         "meta": {
@@ -2451,7 +2452,7 @@
       }
     },
     {
-      "fullUrl": "urn:uuid:6956a82e-8fc6-4319-a0d7-1694610bf702",
+      "fullUrl": "urn:uuid:900d6181-0c2c-4f33-b1e6-51c21d59bb49",
       "resource": {
         "resourceType": "Observation",
         "meta": {
@@ -2509,7 +2510,7 @@
       }
     },
     {
-      "fullUrl": "urn:uuid:b21fbb5f-f70c-43cc-b2ac-b83d165ca441",
+      "fullUrl": "urn:uuid:049d8e10-c075-41cf-ab74-78438373b95f",
       "resource": {
         "resourceType": "Observation",
         "meta": {
@@ -2567,7 +2568,7 @@
       }
     },
     {
-      "fullUrl": "urn:uuid:08675b3c-3fcd-48a9-b8af-f33de346d950",
+      "fullUrl": "urn:uuid:92b3e48e-c00b-4a3c-b256-52aced6d52d2",
       "resource": {
         "resourceType": "Observation",
         "meta": {
@@ -2625,7 +2626,7 @@
       }
     },
     {
-      "fullUrl": "urn:uuid:1e28fa9e-6ba7-4769-bfc0-2e538172c8bd",
+      "fullUrl": "urn:uuid:e77c60cf-35e1-4b47-80c1-89ef9b26529e",
       "resource": {
         "resourceType": "Observation",
         "meta": {
@@ -2654,7 +2655,7 @@
               "display": "Glucose [Moles/volume] in Serum or Plasma --pre 75 g glucose PO"
             }
           ],
-          "text": "Glucose Tolerance Test (GTT) Fasting"
+          "text": "Fasting Glucose"
         },
         "subject": {
           "reference": "urn:uuid:85822a88-55b1-460c-bb7b-e8fc22d8568f"
@@ -2675,11 +2676,16 @@
           "system": "http://unitsofmeasure.org",
           "code": "mmol/L",
           "unit": "mmol/L"
-        }
+        },
+        "referenceRange": [
+          {
+            "text": "(<5.1)"
+          }
+        ]
       }
     },
     {
-      "fullUrl": "urn:uuid:82ea95d9-655a-4b4c-9cb6-77a51f334961",
+      "fullUrl": "urn:uuid:fdbd50df-4465-4fee-b4c1-c835c2b83b4f",
       "resource": {
         "resourceType": "Observation",
         "meta": {
@@ -2708,7 +2714,7 @@
               "display": "Glucose [Moles/volume] in Serum or Plasma --1 hour post 75 g glucose PO"
             }
           ],
-          "text": "Glucose Tolerance Test (GTT) 1 hour"
+          "text": "1 hour Glucose"
         },
         "subject": {
           "reference": "urn:uuid:85822a88-55b1-460c-bb7b-e8fc22d8568f"
@@ -2729,11 +2735,16 @@
           "system": "http://unitsofmeasure.org",
           "code": "mmol/L",
           "unit": "mmol/L"
-        }
+        },
+        "referenceRange": [
+          {
+            "text": "(<10.0)"
+          }
+        ]
       }
     },
     {
-      "fullUrl": "urn:uuid:d23d7035-445e-46f5-98c5-cd0090ca4e1e",
+      "fullUrl": "urn:uuid:1431c41b-4ca9-4cf4-a083-413b299afaee",
       "resource": {
         "resourceType": "Observation",
         "meta": {
@@ -2762,7 +2773,7 @@
               "display": "Glucose [Moles/volume] in Serum or Plasma --2 hours post 75 g glucose PO"
             }
           ],
-          "text": "Glucose Tolerance Test (GTT) 2 hour"
+          "text": "2 hour Glucose"
         },
         "subject": {
           "reference": "urn:uuid:85822a88-55b1-460c-bb7b-e8fc22d8568f"
@@ -2783,11 +2794,16 @@
           "system": "http://unitsofmeasure.org",
           "code": "mmol/L",
           "unit": "mmol/L"
-        }
+        },
+        "referenceRange": [
+          {
+            "text": "(<8.5)"
+          }
+        ]
       }
     },
     {
-      "fullUrl": "urn:uuid:bf44c576-7895-4be2-8cc8-874ddfeca6c4",
+      "fullUrl": "urn:uuid:69adb034-1cb7-46fb-9725-633ea913491f",
       "resource": {
         "resourceType": "Observation",
         "meta": {
@@ -2837,11 +2853,16 @@
           "system": "http://unitsofmeasure.org",
           "code": "g/L",
           "unit": "g/L"
-        }
+        },
+        "referenceRange": [
+          {
+            "text": "(115-165)"
+          }
+        ]
       }
     },
     {
-      "fullUrl": "urn:uuid:6b238ad4-e6e4-437e-969b-ec6eba692a6b",
+      "fullUrl": "urn:uuid:bee00ec5-b2df-445c-95a9-482db09aab28",
       "resource": {
         "resourceType": "Observation",
         "meta": {
@@ -2891,11 +2912,16 @@
           "system": "http://unitsofmeasure.org",
           "code": "L/L",
           "unit": "L/L"
-        }
+        },
+        "referenceRange": [
+          {
+            "text": "(0.37-0.51)"
+          }
+        ]
       }
     },
     {
-      "fullUrl": "urn:uuid:219c91e9-8bb4-4471-ad17-edcfb5217756",
+      "fullUrl": "urn:uuid:f0eb1dda-eea3-4272-92e2-b9ac91a14543",
       "resource": {
         "resourceType": "Observation",
         "meta": {
@@ -2945,11 +2971,16 @@
           "system": "http://unitsofmeasure.org",
           "code": "10*9/L",
           "unit": "x 10^9/L"
-        }
+        },
+        "referenceRange": [
+          {
+            "text": "(4.0-11.0)"
+          }
+        ]
       }
     },
     {
-      "fullUrl": "urn:uuid:14ea1707-331d-40a6-81b4-60290b48f9e6",
+      "fullUrl": "urn:uuid:1b99e170-74fc-4007-89bc-c6a091bea2d1",
       "resource": {
         "resourceType": "Observation",
         "meta": {
@@ -2999,11 +3030,16 @@
           "system": "http://unitsofmeasure.org",
           "code": "10*9/L",
           "unit": "x 10^9/L"
-        }
+        },
+        "referenceRange": [
+          {
+            "text": "(150-400)"
+          }
+        ]
       }
     },
     {
-      "fullUrl": "urn:uuid:adf87a05-c0da-4fb8-8bfb-48c7520f75f7",
+      "fullUrl": "urn:uuid:5579d9f3-88a9-4339-9662-5431d707288b",
       "resource": {
         "resourceType": "Observation",
         "meta": {
@@ -3053,11 +3089,16 @@
           "system": "http://unitsofmeasure.org",
           "code": "fL",
           "unit": "fL"
-        }
+        },
+        "referenceRange": [
+          {
+            "text": "(80-100)"
+          }
+        ]
       }
     },
     {
-      "fullUrl": "urn:uuid:6104dd65-0d07-4e09-a9f8-fa9efbe914eb",
+      "fullUrl": "urn:uuid:1cc93219-c1a2-44dc-9683-33559b3af9fc",
       "resource": {
         "resourceType": "Observation",
         "meta": {
@@ -3115,7 +3156,7 @@
       }
     },
     {
-      "fullUrl": "urn:uuid:cdf3ff1b-f8d8-4d71-82fe-800a2bbae806",
+      "fullUrl": "urn:uuid:03e92f38-81e2-4c93-98c7-a581ecf8f56f",
       "resource": {
         "resourceType": "Observation",
         "meta": {
@@ -3173,7 +3214,7 @@
       }
     },
     {
-      "fullUrl": "urn:uuid:1e797de6-7e14-4e2e-9212-cd8c348bcbfb",
+      "fullUrl": "urn:uuid:9e30eb5c-b907-4e39-b25f-9bba4f09f79e",
       "resource": {
         "resourceType": "Observation",
         "meta": {
@@ -3224,7 +3265,7 @@
       }
     },
     {
-      "fullUrl": "urn:uuid:95714d9e-4cd2-4302-8434-dde69ceecaf4",
+      "fullUrl": "urn:uuid:775fd6d4-c7ab-48cd-8e30-3a04f415633b",
       "resource": {
         "resourceType": "Observation",
         "meta": {
@@ -3275,7 +3316,7 @@
       }
     },
     {
-      "fullUrl": "urn:uuid:e54e9557-9b7a-419b-8d7a-60bf234f2c89",
+      "fullUrl": "urn:uuid:afa66cf9-c360-4655-88a1-adf24684b749",
       "resource": {
         "resourceType": "Observation",
         "meta": {
@@ -3333,7 +3374,7 @@
       }
     },
     {
-      "fullUrl": "urn:uuid:22ff65cc-9a37-4b7b-b322-bd01c66c912d",
+      "fullUrl": "urn:uuid:3ede83be-9b70-415e-a354-b23a66e6c67c",
       "resource": {
         "resourceType": "Observation",
         "meta": {
@@ -3391,7 +3432,7 @@
       }
     },
     {
-      "fullUrl": "urn:uuid:f920a073-9d1f-4deb-8a3d-f93ea6a39d8f",
+      "fullUrl": "urn:uuid:c33cd78a-e5a9-40c2-8431-cc92c8638e8e",
       "resource": {
         "resourceType": "Observation",
         "meta": {
@@ -3449,7 +3490,7 @@
       }
     },
     {
-      "fullUrl": "urn:uuid:6da18465-0949-47e1-a14b-4fde361e245c",
+      "fullUrl": "urn:uuid:3706b230-5e87-4da4-b727-1bc44d6f50df",
       "resource": {
         "resourceType": "Observation",
         "meta": {
@@ -3507,7 +3548,7 @@
       }
     },
     {
-      "fullUrl": "urn:uuid:82e519ba-d02b-4c6e-8f5c-9b177c4b1bcc",
+      "fullUrl": "urn:uuid:996486b5-3eea-413f-b67d-2ade13cb22b4",
       "resource": {
         "resourceType": "Observation",
         "meta": {
@@ -3565,7 +3606,7 @@
       }
     },
     {
-      "fullUrl": "urn:uuid:0e2758a5-5ddb-4b11-a1ae-328ab82a5aaf",
+      "fullUrl": "urn:uuid:31b7b052-19b7-460d-b533-db35d992367e",
       "resource": {
         "resourceType": "Observation",
         "meta": {
@@ -3619,7 +3660,7 @@
       }
     },
     {
-      "fullUrl": "urn:uuid:53f97f69-51a0-4961-ba5a-ca862bb01931",
+      "fullUrl": "urn:uuid:a0807ad8-f160-4d27-92d0-f4ee87a63e49",
       "resource": {
         "resourceType": "Observation",
         "meta": {
