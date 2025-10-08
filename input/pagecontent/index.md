@@ -22,7 +22,7 @@ The Sparked AU FHIR Accelerator is a community comprising government, technology
 
 The Sparked Clinical Design Group has begun identifying a set of core data groups and elements considered important for a minimal patient summary for inclusion in the AUCDI through an iterative process. 
 
-Additionally, a Patient Summary Clinical Focus Group (CFG), a sub-group of the Clinical Design Group, will develop the clinical scenarios and clinical workflow processes to support the development of the AUCDI and AU PS IG that have been elaborated into a set of use cases to provide guidance on how AU PS could be implemented.. 
+Additionally, a Patient Summary Clinical Focus Group (CFG), a sub-group of the Clinical Design Group, will develop the clinical scenarios and clinical workflow processes to support the development of the AUCDI and AU PS IG that have been elaborated into a set of example use cases to provide guidance on how AU PS could be implemented.. 
 
 Success of this project will depend on active participation from members of the community who are looking to implement a patient summary capability in FHIR, whether you have already expressed your interest or are new to considering the AU PS project please complete this [Registration form](https://sparked.csiro.au/index.php/get-involved-with-sparked/registration-form/) or email Sparked@csiro.au to actively contribute to the development of the AU PS FHIR IG.
 
@@ -46,9 +46,9 @@ This guide is divided into several pages which are listed at the top of each pag
   - [AU Variance Statement](variance.html): This page documents the variance from AU Base and AU Core.
   - [Comparison With Other National and International IGs](comparison.html): This page provides comparison between AU PS profiles and other national and international implementation guides.
   - [Future of AU PS](future.html): This page outlines the approach to developing AU PS.
-- [Use Cases](usecase.html): These pages document a set of use cases that assist in understanding how to implement AU PS.
-   - [Interstate GP Visit](uc-interstate.html): This page documents the Interstate GP Visit - Patient Driven Patient Summary use case.
-   - [Referral to Specialist and Allied Health](uc-referral.html): This page documents the Referral to Specialist and Allied Health - Clinician Driven Patient Summary (as Supplemental Information) use case.
+- [Use Cases](usecase.html): These pages document a set of example use cases that assist in understanding how to implement AU PS.
+   - [Interstate GP Visit](uc-interstate.html): This page documents the Interstate GP Visit - Patient Driven Patient Summary example use case.
+   - [Referral to Specialist and Allied Health](uc-referral.html): This page documents the Referral to Specialist and Allied Health - Clinician Driven Patient Summary (as Supplemental Information) example use case.
 - [Security and Privacy](security.html): This page documents the AU PS general security and privacy requirements and recommendations.
 - [FHIR Artefacts](artefacts.html): These pages provide detailed descriptions and formal definitions for all the FHIR artefacts defined in this guide.
   - [Artefacts Summary](artifacts.html): This page lists the FHIR artefacts defined in this guide.
