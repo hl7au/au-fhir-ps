@@ -46,7 +46,7 @@ This change log documents the significant updates and resolutions implemented fr
 - [AU PS Patient](StructureDefinition-au-ps-patient.html):
   - changed Patient.contact.relationship to remove use of the CodableConceptIPS [IPS: FHIR-51257](https://jira.hl7.org/browse/FHIR-51257)
 - [AU PS PractitionerRole](StructureDefinition-au-ps-practitionerrole.html):
-  - applied technical correction to add Must Support and obligations SHALL:populate-if-known for the AU PS Producer, and SHALL:handle and SHOULD:display for the AU PS Consumer to PractitionerRole.telecom.system and PractitionerRole.telecom.value [FHIR-52837](https://jira.hl7.org/browse/FHIR-52837)
+  - applied technical correction to add obligations SHALL:populate-if-known for the AU PS Producer, and SHALL:handle and SHOULD:display for the AU PS Consumer to PractitionerRole.telecom.system and PractitionerRole.telecom.value [FHIR-52837](https://jira.hl7.org/browse/FHIR-52837)
 - [AU PS Procedure](StructureDefinition-au-ps-procedure.html):
   - changed Procedure.bodySite to remove use of the CodableConceptIPS [IPS: FHIR-51257](https://jira.hl7.org/browse/FHIR-51257)
   - removed SHOULD:display obligation on Procedure.subject.reference for the AU PS Consumer [IPS: FHIR-51258](https://jira.hl7.org/browse/FHIR-51258)
