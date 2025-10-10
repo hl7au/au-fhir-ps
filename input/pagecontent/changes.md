@@ -30,10 +30,7 @@ This change log documents the significant updates and resolutions implemented fr
   - changed Condition.bodySite to remove use of the CodableConceptIPS [IPS: FHIR-51257](https://jira.hl7.org/browse/FHIR-51257)
   - removed SHOULD:display obligation on Condition.subject.reference for the AU PS Consumer [IPS: FHIR-51258](https://jira.hl7.org/browse/FHIR-51258)
 - [AU PS Encounter](StructureDefinition-au-ps-encounter.html):
-  - changed the data type profile for the following Must Support elements in AU PS Encounter to add CodeableConceptIPS. [FHIR-51872](https://jira.hl7.org/browse/FHIR-51872)
-    - Encounter.serviceType 
-    - Encounter.participant.type 
-    - Encounter.reasonCode 
+  - changed Encounter.serviceType, Encounter.participant.type, and Encounter.reasonCode to use CodeableConceptIPS [FHIR-51872](https://jira.hl7.org/browse/FHIR-51872)
 - [AU PS Immunization](StructureDefinition-au-ps-immunization.html):
   - changed Immunization.site and Immunization.route to remove use of the CodableConceptIPS [IPS: FHIR-51257](https://jira.hl7.org/browse/FHIR-51257)
   - removed SHOULD:display obligation on Immunization.patient.reference for the AU PS Consumer [IPS: FHIR-51258](https://jira.hl7.org/browse/FHIR-51258)
