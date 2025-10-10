@@ -40,6 +40,8 @@ This change log documents the significant updates and resolutions implemented fr
 - [AU PS MedicationStatement](StructureDefinition-au-ps-medicationstatement.html):
   - changed MedicationStatement.dosage.route to remove use of the CodableConceptIPS [IPS: FHIR-51257](https://jira.hl7.org/browse/FHIR-51257)
   - removed SHOULD:display obligation on MedicationStatement.subject.reference for the AU PS Consumer [IPS: FHIR-51258](https://jira.hl7.org/browse/FHIR-51258)
+- [AU PS Organization](StructureDefinition-au-ps-organization.html):
+  - applied technical correction to add obligations SHALL:populate-if-known for the AU PS Producer, and SHALL:handle and SHOULD:display for the AU PS Consumer to Organization.telecom.system and Organization.telecom.value [FHIR-52835](https://jira.hl7.org/browse/FHIR-52835)
 - [AU PS Pathology Result Observation](StructureDefinition-au-ps-diagnosticresult-path.html):
   - changed Observation.interpretation to remove use of the CodableConceptIPS [IPS: FHIR-51257](https://jira.hl7.org/browse/FHIR-51257)
   - removed SHOULD:display obligation on Observation.subject.reference for the AU PS Consumer [IPS: FHIR-51258](https://jira.hl7.org/browse/FHIR-51258)
