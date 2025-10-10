@@ -278,7 +278,7 @@
 			</page>
 			<page>
 				<nameUrl value="usecase.html"/>
-				<title value="Example Use Cases"/>
+				<title value="Use Cases"/>
 				<generation value="markdown"/>
 				<page>
 					<nameUrl value="uc-interstate.html"/>
