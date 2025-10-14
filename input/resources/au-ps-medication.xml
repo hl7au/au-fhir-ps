@@ -20,6 +20,7 @@
   <differential>
     <element id="Medication">
       <path value="Medication"/>
+      <comment value="IPS encourages using a reference to a Medication resource and limiting medicationCodeableConcept to cases where only a simple code is available. AU Patient Summary does not adopt this guidance at this time; either approach can be used."/>
     </element>
     <element id="Medication.code">
       <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
