@@ -105,7 +105,7 @@
         </extension>
       </extension>
       <path value="MedicationRequest.medication[x]"/>
-      <comment value="In the IPS, use of medicationReference is strongly encouraged, with medicationCodeableConcept limited to cases where no information beyond a simple code is available. The AU Patient Summary does not adopt this guidance at this time; either medicationReference or medicationCodeableConcept can be used."/>
+      <comment value="In the IPS, use of medicationReference is strongly encouraged, with medicationCodeableConcept limited to cases where no information beyond a simple code is available. AU Patient Summary does not adopt this guidance at this time; either medicationReference or medicationCodeableConcept can be used."/>
     </element>
     <element id="MedicationRequest.medication[x]:medicationCodeableConcept">
       <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
