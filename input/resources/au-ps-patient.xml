@@ -311,7 +311,7 @@
         </extension>
       </extension>
       <path value="Patient.name.text"/>
-      <comment value="Due to the cultural variance around the world a consuming system may not know how to present the name correctly; moreover, not all the parts of the name go in given or family. Creators are therefore strongly encouraged to provide through this element a presented version of the name. Future versions of this guide may require this element"/>
+      <comment value="Can provide both a text representation and parts. Applications updating a name SHALL ensure that when both text and parts are present, no content is included in the text that isn't found in a part.&#xA;&#xA;Due to cultural variance around the world, a consuming system may not know how to present the name correctly; moreover, not all parts of a name go in given or family. Producers are therefore strongly encouraged to populate a presented version of the name using this element."/>
     </element>
     <element id="Patient.name.family">
       <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
