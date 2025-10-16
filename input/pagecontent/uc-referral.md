@@ -55,7 +55,7 @@ This use case demonstrates use of patient summary during step 4. Endocrinologist
 <div> 
   <img src="uc-referral-seq.png" alt="Sequence Diagram" style="width:100%"/>
 </div>
-*Figure 2: Sequence diagram showing access to embedded and updated patient summaries, with secure retrieval using public key cryptography*
+*Figure 2: Sequence diagram showing access to embedded and updated patient summaries, with secure encryption.*
 <br/>
 
 ### Notes
