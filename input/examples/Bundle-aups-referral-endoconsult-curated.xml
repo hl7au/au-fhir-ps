@@ -388,7 +388,7 @@ Overall, Joyce maintains a healthy and supportive lifestyle, with good access to
               <coding>
                 <system value="http://snomed.info/sct"/>
                 <code value="109081006"/>
-                <display value="Metformin"/>
+                <display value="Product containing metformin (medicinal product)"/>
               </coding>
               <text value="Metformin"/>
             </code>
