@@ -98,6 +98,10 @@
         </extension>
       </extension>
       <path value="Encounter.serviceType"/>
+      <type>
+				<code value="CodeableConcept"/>
+				<profile value="http://hl7.org/fhir/uv/ips/StructureDefinition/CodeableConcept-uv-ips"/>
+			</type>
     </element>
     <element id="Encounter.subject">
       <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
@@ -188,6 +192,10 @@
         </extension>
       </extension>
       <path value="Encounter.participant.type"/>
+      <type>
+				<code value="CodeableConcept"/>
+				<profile value="http://hl7.org/fhir/uv/ips/StructureDefinition/CodeableConcept-uv-ips"/>
+			</type>
     </element>
     <element id="Encounter.participant.individual">
       <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
@@ -275,6 +283,10 @@
         </extension>
       </extension>
       <path value="Encounter.reasonCode"/>
+      <type>
+				<code value="CodeableConcept"/>
+				<profile value="http://hl7.org/fhir/uv/ips/StructureDefinition/CodeableConcept-uv-ips"/>
+			</type>
     </element>
     <element id="Encounter.reasonReference">
       <extension url="http://hl7.org/fhir/StructureDefinition/obligation">

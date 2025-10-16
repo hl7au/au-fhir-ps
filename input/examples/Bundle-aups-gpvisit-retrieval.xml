@@ -1171,7 +1171,7 @@
             <system value="https://www.humanservices.gov.au/organisations/health-professionals/enablers/air-vaccine-code-formats"/>
             <version value="20240207"/>
             <code value="COVAST"/>
-            <display value="AstraZeneca Vaxzevria"/>
+            <display value="COVID-19 Vaccine AstraZeneca"/>
           </coding>
           <text value="AstraZeneca Vaxzevria"/>
         </vaccineCode>

@@ -455,7 +455,7 @@
                 {
                   "system": "http://snomed.info/sct",
                   "code": "32792001",
-                  "display": "Trimethoprim"
+                  "display": "Product containing trimethoprim (medicinal product)"
                 }
               ],
               "text": "Trimethoprim"
@@ -535,7 +535,7 @@
                 {
                   "system": "http://snomed.info/sct",
                   "code": "109081006",
-                  "display": "Metformin"
+                  "display": "Product containing metformin (medicinal product)"
                 }
               ],
               "text": "Metformin"
