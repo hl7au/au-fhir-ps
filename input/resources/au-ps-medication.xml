@@ -20,6 +20,7 @@
   <differential>
     <element id="Medication">
       <path value="Medication"/>
+      <comment value="For support as text representation of medication strength, for a medication as a whole, consider the [Medication Strength](https://build.fhir.org/ig/hl7au/au-fhir-base/StructureDefinition-medication-strength.html) extension.&#xD;&#xA;&#xD;&#xA;In AU PS, medication information is provided in the context of a MedicationAdministration, MedicationDispense, MedicationRequest, or MedicationStatement resource and can be represented either inline via medicationCodeableConcept or using a reference to a Medication resource. To improve global interoperability, IPS strongly encourages the use of a reference to a Medication resource, and medicationCodeableConcept is only recommended for cases where no other information than a simple code is available.&#xD;&#xA;&#xD;&#xA;AU PS does not adopt the IPS guidance that systems should only populate a Medication reference when more information than a simple code is available; either a Medication resource or the medicationCodeableConcept can be used. Future releases of AU PS, based on implementation experience in Australia may adopt that IPS guidance."/>
     </element>
     <element id="Medication.code">
       <extension url="http://hl7.org/fhir/StructureDefinition/obligation">

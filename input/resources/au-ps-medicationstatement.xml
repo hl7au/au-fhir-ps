@@ -74,6 +74,7 @@
         </extension>
       </extension>
       <path value="MedicationStatement.medication[x]"/>
+      <comment value="If only a code is specified, then it needs to be a code for a specific product. If more information is required, then the use of the medication resource is recommended. For example, if you require form or lot number, then you must reference the Medication resource.&#xD;&#xA;&#xD;&#xA;To improve global interoperability, IPS strongly encourages the use of a reference to a Medication resource, and medicationCodeableConcept is only recommended for cases where no other information than a simple code is available.&#xD;&#xA;&#xD;&#xA;AU PS does not adopt the IPS guidance that systems should only populate a Medication reference when more information than a simple code is available; either medicationReference or medicationCodeableConcept can be used. Future releases of AU PS, based on implementation experience in Australia may adopt that IPS guidance."/>
     </element>
     <element id="MedicationStatement.medication[x]:medicationCodeableConcept">
       <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
