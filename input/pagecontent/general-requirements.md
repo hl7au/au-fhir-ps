@@ -434,7 +434,7 @@ Profile |Must Support Choice Elements
 
 In AU PS, elements that define support for more than one value set only apply to the [Coding](http://hl7.org/fhir/R4/datatypes.html#Coding) part of the element and are not intended to prevent systems from supplying only a text value. In such cases:
 - AU PS Producers **SHALL** correctly populate the element with concepts from each supported value set where the applicable concept is known.
-- AU PS Consumers **SHALL** consume the resource if the element is present and containing any valid value, and **SHOULD** display the value of this element (if the SHOULD:display Obligation is defined) when presenting the data to a human user.
+- AU PS Consumers **SHALL** handle the element with any valid value whether it is  from a supported value set or some other value set or text only, and **SHOULD** display the value of this element when presenting the data to a human user.
 
 The table below lists the applicable profiles and elements in AU PS that support multiple value sets.
 
