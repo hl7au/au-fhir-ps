@@ -50,11 +50,11 @@ In the above circumstances the following is applied:
 
 ##### Missing Must Support and Optional Data
 
-If the source system (producer) does not know the value for an optional element (minimum cardinality = 0), including elements labelled *Must Support*, as per the requirements defined in [AU Core](https://build.fhir.org/ig/hl7au/au-fhir-core/general-requirements.html#missing-must-support-and-optional-data), the data element **SHALL** be omitted from the resource.  
+If the source system (AU PS Producer) does not know the value for an optional element (minimum cardinality = 0), including elements labelled *Must Support*, as per the requirements defined in [AU Core](https://build.fhir.org/ig/hl7au/au-fhir-core/general-requirements.html#missing-must-support-and-optional-data), the data element **SHALL** be omitted from the resource.  
 
 ##### Missing Must Support and Mandatory Data
 
-If the data element is a mandatory element (minimum cardinality is > 0), the element **SHALL** be present *even if* the source system (producer) does not know the value or the reason the value is absent. In this circumstance, the requirements defined by AU Core for [Missing Must Support and Mandatory Data](https://build.fhir.org/ig/hl7au/au-fhir-core/general-requirements.html#missing-must-support-and-mandatory-data) **SHALL** be applied.
+If the data element is a mandatory element (minimum cardinality is > 0), the element **SHALL** be present *even if* the source system (AU PS Producer) does not know the value or the reason the value is absent. In this circumstance, the requirements defined by AU Core for [Missing Must Support and Mandatory Data](https://build.fhir.org/ig/hl7au/au-fhir-core/general-requirements.html#missing-must-support-and-mandatory-data) **SHALL** be applied.
 
 Example: MedicationRequest resource where status and requester are missing
 ~~~
@@ -88,7 +88,7 @@ Example: MedicationRequest resource where status and requester are missing
 
 An AU PS Producer **SHOULD** omit non-mandatory sections when the source system does not have any information and does not know the reason the information is absent.
 
-For a mandatory section (minimum cardinality is > 0), the section **SHALL** be present *even if* the source system does not have any information for that section or know the reason the information is absent. In this circumstance, an AU PS Producer **SHALL**:
+For a mandatory section (minimum cardinality is > 0), the section **SHALL** be present *even if* the source system (AU PS Producer) does not have any information for that section or know the reason the information is absent. In this circumstance, an AU PS Producer **SHALL**:
 
 * use the code `unavailable` from the [List Empty Reasons](http://terminology.hl7.org/CodeSystem/list-empty-reason) code system
 
