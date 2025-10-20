@@ -36,14 +36,18 @@ This change log documents the significant updates and resolutions implemented fr
 - [AU PS Immunization](StructureDefinition-au-ps-immunization.html):
   - changed Immunization.site and Immunization.route to remove use of the CodableConceptIPS [IPS: FHIR-51257](https://jira.hl7.org/browse/FHIR-51257)
   - removed SHOULD:display obligation on Immunization.patient.reference for the AU PS Consumer [IPS: FHIR-51258](https://jira.hl7.org/browse/FHIR-51258)
+- [AU PS Medication](StructureDefinition-au-ps-medication.html): 
+  - changed Medication to add a comment that the IPS guidance preferencing the use of Medication resource is not adopted by AU PS at this time [FHIR-51876](https://jira.hl7.org/browse/FHIR-51876)
 - [AU PS MedicationRequest](StructureDefinition-au-ps-medicationrequest.html):
   - changed MedicationRequest.dosageInstruction.route to remove use of the CodableConceptIPS [IPS: FHIR-51257](https://jira.hl7.org/browse/FHIR-51257)
   - changed MedicationRequest.doNotPerform to constrain out 'true' [IPS: FHIR-51483](https://jira.hl7.org/browse/FHIR-51483)
   - removed SHOULD:display obligation on MedicationRequest.subject.reference for the AU PS Consumer [IPS: FHIR-51258](https://jira.hl7.org/browse/FHIR-51258)
   - changed MedicationRequest.medication:medicationCodeableConcept to use CodeableConceptIPS [IPS: FHIR-51970](https://jira.hl7.org/browse/FHIR-51970)
+  - changed MedicationRequest.medication[x] to add a comment that the IPS guidance preferencing the use of Medication resources, with use of medicationCodeableConcept only when no other information than a simple code is available, is not adopted by AU PS at this time [FHIR-51876](https://jira.hl7.org/browse/FHIR-51876)
 - [AU PS MedicationStatement](StructureDefinition-au-ps-medicationstatement.html):
   - changed MedicationStatement.dosage.route to remove use of the CodableConceptIPS [IPS: FHIR-51257](https://jira.hl7.org/browse/FHIR-51257)
   - removed SHOULD:display obligation on MedicationStatement.subject.reference for the AU PS Consumer [IPS: FHIR-51258](https://jira.hl7.org/browse/FHIR-51258)
+  - changed MedicationStatement.medication[x] to add a comment that the IPS guidance preferencing the use of Medication resources, with use of medicationCodeableConcept only when no other information than a simple code is available, is not adopted by AU PS at this time [FHIR-51876](https://jira.hl7.org/browse/FHIR-51876)
 - [AU PS Organization](StructureDefinition-au-ps-organization.html):
   - applied technical correction to add obligations SHALL:populate-if-known for the AU PS Producer, and SHALL:handle and SHOULD:display for the AU PS Consumer to Organization.telecom.system [FHIR-52835](https://jira.hl7.org/browse/FHIR-52835)
   - applied technical correction to add obligations SHALL:populate-if-known for the AU PS Producer, and SHALL:handle and SHOULD:display for the AU PS Consumer to Organization.telecom.value [FHIR-52835](https://jira.hl7.org/browse/FHIR-52835)
