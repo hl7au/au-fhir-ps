@@ -37,7 +37,7 @@ This change log documents the significant updates and resolutions implemented fr
   - changed Immunization.site and Immunization.route to remove use of the CodableConceptIPS [IPS: FHIR-51257](https://jira.hl7.org/browse/FHIR-51257)
   - removed SHOULD:display obligation on Immunization.patient.reference for the AU PS Consumer [IPS: FHIR-51258](https://jira.hl7.org/browse/FHIR-51258)
 - [AU PS Medication](StructureDefinition-au-ps-medication.html): 
-  - changed Medication to add a comment that the IPS guidance preferencing the use of Medication resource, and that this guidance is not adopted by AU PS at this time [FHIR-51876](https://jira.hl7.org/browse/FHIR-51876)
+  - changed Medication to add a comment that the IPS guidance preferencing the use of Medication resource is not adopted by AU PS at this time [FHIR-51876](https://jira.hl7.org/browse/FHIR-51876)
 - [AU PS MedicationRequest](StructureDefinition-au-ps-medicationrequest.html):
   - changed MedicationRequest.dosageInstruction.route to remove use of the CodableConceptIPS [IPS: FHIR-51257](https://jira.hl7.org/browse/FHIR-51257)
   - changed MedicationRequest.doNotPerform to constrain out 'true' [IPS: FHIR-51483](https://jira.hl7.org/browse/FHIR-51483)
