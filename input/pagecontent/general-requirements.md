@@ -21,7 +21,7 @@ Implementers are advised to be familiar with the requirements of the FHIR standa
 #### AU PS Profiles and Extensions
 The [Profiles and Extensions](profiles-and-extensions.html) page lists the AU PS profiles and extensions defined for this implementation guide. An AU PS profile [StructureDefinition](http://hl7.org/fhir/R4/structuredefinition.html) defines the minimum elements, extensions, vocabularies and value sets that **SHALL** be present and constrains the way elements are used when conforming to the profile.
 
-AU PS profile elements include mandatory and *Must Support* requirements. [Mandatory elements](#mandatory-elements) are required and have a minimum cardinality of 1 (min=1). [Must Support](#must-support-and-obligation) elements have defined conformance obligations in AU PS.
+AU PS profile elements include mandatory and *Must Support* requirements. [Mandatory elements](#mandatory-elements) are required and have a minimum cardinality > 0. [Must Support](#must-support-and-obligation) elements have defined conformance obligations in AU PS.
 
 #### AU PS Actors
 The [Actor Definitions](actors.html) page lists the AU PS actors defined for this implementation guide and the requirements for implementing that actor. An AU PS profile [StructureDefinition](http://hl7.org/fhir/R4/structuredefinition.html) defines the obligations for an AU PS actor when implementing that profile.
@@ -94,38 +94,38 @@ For a mandatory section (minimum cardinality is > 0), the section **SHALL** be p
 
 AU PS Consumers are advised that other meaningful values can be captured in `Composition.section.emptyReason` beyond missing or suppressed.
   
-    Example: AU PS - Allergies and Intolerances Section where the patient's allergy information is not available.
-    ~~~
-        ...
-        "section" : [
+  Example: AU PS - Allergies and Intolerances Section where the patient's allergy information is not available.
+  ~~~
+    ...
+    "section" : [
+       {
+        "title" : "Allergies and Intolerances",
+        "code" : {
+        "coding" : [
           {
-            "title" : "Allergies and Intolerances",
-            "code" : {
-            "coding" : [
-              {
-                "system" : "http://loinc.org",
-                "code" : "48765-2",
-                "display" : "Allergies and adverse reactions Document"
-              }
-            ]
-            },
-            "text" : {
-            "status" : "generated",
-            "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\" xml:lang=\"en-AU\" lang=\"en-AU\">There is no information available regarding the consumer's allergy conditions.</div>"
-            },
-            "emptyReason" : {
-              "coding" : [
-                {
-                "system" : "http://terminology.hl7.org/CodeSystem/list-empty-reason",
-                "code" : "unavailable",
-                "display" : "Unavailable"
-                }
-              ],
-              "text" : "No information available"
+            "system" : "http://loinc.org",
+            "code" : "48765-2",
+            "display" : "Allergies and adverse reactions Document"
+          }
+        ]
+        },
+        "text" : {
+        "status" : "generated",
+        "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\" xml:lang=\"en-AU\" lang=\"en-AU\">There is no information available regarding the consumer's allergy conditions.</div>"
+        },
+        "emptyReason" : {
+          "coding" : [
+            {
+            "system" : "http://terminology.hl7.org/CodeSystem/list-empty-reason",
+            "code" : "unavailable",
+            "display" : "Unavailable"
             }
-          },
-        ...
-    ~~~
+          ],
+          "text" : "No information available"
+        }
+      },
+    ...
+  ~~~
 
 #### Known Absence of Data Due to Workflow
 
@@ -134,38 +134,38 @@ Where the system does not have information for a particular section and there is
 * Asked but not known may be represented by sending the [Data Absent Reason](http://terminology.hl7.org/CodeSystem/data-absent-reason) code "asked-unknown"
 * Where the workflow does not support obtaining the information, it may be represented by sending the [List Empty Reason](https://hl7.org/fhir/R4/codesystem-list-empty-reason.html) code "notasked"
 
-    Example: AU PS - Allergies and Intolerances Section where there is a workflow reason the patient's allergy information is not available.
-    ~~~
-        ...
-        "section" : [
+Example: AU PS - Allergies and Intolerances Section where there is a workflow reason the patient's allergy information is not available.
+~~~
+  ...
+  "section" : [
+    {
+      "title" : "Allergies and Intolerances",
+      "code" : {
+      "coding" : [
+        {
+          "system" : "http://loinc.org",
+          "code" : "48765-2",
+          "display" : "Allergies and adverse reactions Document"
+        }
+      ]
+      },
+      "text" : {
+      "status" : "generated",
+      "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\" xml:lang=\"en-AU\" lang=\"en-AU\">The patient was not asked about allergies.</div>"
+      },
+      "emptyReason" : {
+        "coding" : [
           {
-            "title" : "Allergies and Intolerances",
-            "code" : {
-            "coding" : [
-              {
-                "system" : "http://loinc.org",
-                "code" : "48765-2",
-                "display" : "Allergies and adverse reactions Document"
-              }
-            ]
-            },
-            "text" : {
-            "status" : "generated",
-            "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\" xml:lang=\"en-AU\" lang=\"en-AU\">The patient was not asked about allergies.</div>"
-            },
-            "emptyReason" : {
-              "coding" : [
-                {
-                "system" : "http://terminology.hl7.org/CodeSystem/list-empty-reason",
-                "code" : "notasked",
-                "display" : "Not Asked"
-                }
-              ],
-              "text" : "Patient was not asked"
-            }
-          },
-        ...
-    ~~~
+           "system" : "http://terminology.hl7.org/CodeSystem/list-empty-reason",
+            "code" : "notasked",
+            "display" : "Not Asked"
+          }
+        ],
+        "text" : "Patient was not asked"
+      }
+    },
+  ...
+~~~
 
 #### No Known X
 

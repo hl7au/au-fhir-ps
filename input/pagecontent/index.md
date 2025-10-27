@@ -46,7 +46,7 @@ This guide is divided into several pages which are listed at the top of each pag
   - [AU Variance Statement](variance.html): This page documents the variance from AU Base and AU Core.
   - [Comparison With Other National and International IGs](comparison.html): This page provides comparison between AU PS profiles and other national and international implementation guides.
   - [Future of AU PS](future.html): This page outlines the approach to developing AU PS.
-- [Example Use Cases](usecase.html): These pages document a set of example use cases that assist in understanding how to implement AU PS.
+- [Use Cases](usecase.html): These pages document a set of example use cases that assist in understanding how to implement AU PS.
    - [Interstate GP Visit](uc-interstate.html): This page documents the Interstate GP Visit - Patient Driven Patient Summary example use case.
    - [Referral to Specialist and Allied Health](uc-referral.html): This page documents the Referral to Specialist and Allied Health - Clinician Driven Patient Summary (as Supplemental Information) example use case.
 - [Security and Privacy](security.html): This page documents the AU PS general security and privacy requirements and recommendations.
