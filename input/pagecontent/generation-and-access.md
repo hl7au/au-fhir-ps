@@ -77,7 +77,7 @@ Alternatively, an AU PS Producer can choose to upload the AU PS Document directl
 <br/>
 
 ### Named Bundle Search Interaction
-A variation of the Bundle search interaction is the use of named query parameters. This approach supports advanced querying scenarios that require specific or complex parameters and processing logic. Named query profiles and parameters are defined using the `OperationDefinition` resource. These named search interactions are invoked on a resource-type or system-wide endpoint by using the `_query` parameter to specify the query name.
+A variation of the Bundle search interaction is the use of [named query](https://hl7.org/fhir/R5/search.html#advanced) parameters. This approach supports advanced querying scenarios that require specific or complex parameters and processing logic. Named query profiles and parameters are defined using the `OperationDefinition` resource. These named search interactions are invoked on a resource-type or system-wide endpoint by using the `_query` parameter to specify the query name.
 
 Using a named `_query` parameter in a Bundle search interaction can support common search criteria across multiple patient summary use cases. However, it is not intended to support on-demand generation of AU PS Documents. The use of named queries necessitates implementer profiling and custom implementation in both requesting and responding systems.
 
