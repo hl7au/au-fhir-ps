@@ -392,9 +392,9 @@ Profile |Must Support Data Type
 [AU PS Procedure](StructureDefinition-au-ps-procedure.html)|Procedure.performedDateTime
 {:.grid}
 
-##### Must Support - Choice of Identifiers
+##### Must Support - Choice of Identifiers 
 A profile may support one or more than one identifier type and will include the supported identifiers in a profile by slicing the element and placing *Must Support* on each identifier slice. In such cases:
-- AU PS Producers **SHALL** correctly populate the element with identifiers from at least one supported identifier type where the identifier is known.
+- AU PS Producers **SHALL**  correctly populate the element with identifiers from at least one supported identifier type where the identifier is known, or any known identifier when no supported identifier type is known.
 - AU PS Consumers **SHALL** consume resources if the element is present and containing any identifier type allowed by the element definition, and **SHOULD** display the value of each populated identifier when presenting the data to a human user.
 
 The table below provides a list of AU PS profile elements that allow multiple identifier types.
@@ -408,8 +408,8 @@ Profile |Must Support Element|Supported Identifiers
 {:.grid}
 
 For example, the profile [AU PS Patient](StructureDefinition-au-ps-patient.html) requires support for the following choices `Patient.identifier` defined in [AU Base Patient](https://build.fhir.org/ig/hl7au/au-fhir-base/StructureDefinition-au-patient.html) to support Individual Healthcare Identifier (IHI), Medicare Card Number, Department of Veterans' Affairs (DVA) Number. When claiming conformance to the AU PS Patient Profile:
-- AU PS Producers **SHALL** correctly populate `Patient.identifier` with an IHI, or Medicare Care Number, or DVA Number, or any combination of them where the identifier is known.
-- AU PS Consumers **SHALL** consume Patient resource if `Patient.identifier` is present containing any valid value. A valid value may be an IHI, Medicare Care Number, or DVA Number identifier, or may be some other allowed identifier. The AU PS Consumer **SHOULD** display the value of each populated identifier type (IHI, Medicare Number, DVA Number, or some other identifier) when presenting the data to a human user.
+- AU PS Producers **SHALL** correctly populate `Patient.identifier` with an IHI, or Medicare Card Number, or DVA Number, or any combination of them where the identifier is known, or any other identifier (e.g. Medical Record Number) when none of IHI, or Medicare Card Number, or DVA Number are known.
+- AU PS Consumers **SHALL** consume Patient resource if `Patient.identifier` is present containing any valid value. A valid value may be an IHI, Medicare Card Number, or DVA Number identifier, or may be some other allowed identifier. The AU PS Consumer **SHOULD** display the value of each populated identifier type (IHI, Medicare Number, DVA Number, or some other identifier) when presenting the data to a human user.
 
 Systems **MAY** support populating other identifiers, but this is not a requirement of AU PS.
 
