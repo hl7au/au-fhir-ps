@@ -50,11 +50,11 @@ In the above circumstances the following is applied:
 
 ##### Missing Must Support and Optional Data
 
-If the source system (producer) does not know the value for an optional element (minimum cardinality = 0), including elements labelled *Must Support*, as per the requirements defined in [AU Core](https://build.fhir.org/ig/hl7au/au-fhir-core/general-requirements.html#missing-must-support-and-optional-data), the data element **SHALL** be omitted from the resource.  
+If the source system (AU PS Producer) does not know the value for an optional element (minimum cardinality = 0), including elements labelled *Must Support*, as per the requirements defined in [AU Core](https://build.fhir.org/ig/hl7au/au-fhir-core/general-requirements.html#missing-must-support-and-optional-data), the data element **SHALL** be omitted from the resource.  
 
 ##### Missing Must Support and Mandatory Data
 
-If the data element is a mandatory element (minimum cardinality is > 0), the element **SHALL** be present *even if* the source system (producer) does not know the value or the reason the value is absent. In this circumstance, the requirements defined by AU Core for [Missing Must Support and Mandatory Data](https://build.fhir.org/ig/hl7au/au-fhir-core/general-requirements.html#missing-must-support-and-mandatory-data) **SHALL** be applied.
+If the data element is a mandatory element (minimum cardinality is > 0), the element **SHALL** be present *even if* the source system (AU PS Producer) does not know the value or the reason the value is absent. In this circumstance, the requirements defined by AU Core for [Missing Must Support and Mandatory Data](https://build.fhir.org/ig/hl7au/au-fhir-core/general-requirements.html#missing-must-support-and-mandatory-data) **SHALL** be applied.
 
 Example: MedicationRequest resource where status and requester are missing
 ~~~
@@ -88,7 +88,7 @@ Example: MedicationRequest resource where status and requester are missing
 
 An AU PS Producer **SHOULD** omit non-mandatory sections when the source system does not have any information and does not know the reason the information is absent.
 
-For a mandatory section (minimum cardinality is > 0), the section **SHALL** be present *even if* the source system does not have any information for that section or know the reason the information is absent. In this circumstance, an AU PS Producer **SHALL**:
+For a mandatory section (minimum cardinality is > 0), the section **SHALL** be present *even if* the source system (AU PS Producer) does not have any information for that section or know the reason the information is absent. In this circumstance, an AU PS Producer **SHALL**:
 
 * use the code `unavailable` from the [List Empty Reasons](http://terminology.hl7.org/CodeSystem/list-empty-reason) code system
 
@@ -171,7 +171,7 @@ Example: AU PS - Allergies and Intolerances Section where there is a workflow re
 
 Where the system can assert "no known X" (for example, no known conditions) or "no history of X" (for example, no history of cardiovascular system disease), the system **SHOULD** populate `Composition.section.entry` in accordance with the relevant profile specific implementation guidance. 
 
-For example, to represent that a patient does not have an allergy or category of allergies, an appropriate negation code (e.g. 716186003 \|No known allergy\| or 1003774007 \|No known Hevea brasiliensis latex allergy\|) is used in `AllergyIntolerance.code` as per the profile specific implementation guidance for [AU PS AllergyIntolerance](StructureDefinition-au-ps-allergyintolerance.html).
+For example, to represent that a patient does not have an allergy or category of allergies, an appropriate negation code (e.g. 716186003 \|No known allergy\| or 1003774007 \|No known Hevea brasiliensis latex allergy\|) is used in `AllergyIntolerance.code` as per the profile specific implementation guidance.
 
 In AU PS this approach is preferred to using `Composition.section.emptyReason` due to the widely known and implemented patterns established within FHIR, IPS, and AU Core to assert "no known X" or "no history of X". 
 
@@ -434,7 +434,7 @@ Profile |Must Support Choice Elements
 
 In AU PS, elements that define support for more than one value set only apply to the [Coding](http://hl7.org/fhir/R4/datatypes.html#Coding) part of the element and are not intended to prevent systems from supplying only a text value. In such cases:
 - AU PS Producers **SHALL** correctly populate the element with concepts from each supported value set where the applicable concept is known.
-- AU PS Consumers **SHALL** consume the resource if the element is present and containing any valid value, and **SHOULD** display the value of this element (if the SHOULD:display Obligation is defined) when presenting the data to a human user.
+- AU PS Consumers **SHALL** handle the element with any valid value whether it is  from a supported value set or some other value set or text only, and **SHOULD** display the value of this element when presenting the data to a human user.
 
 The table below lists the applicable profiles and elements in AU PS that support multiple value sets.
 
