@@ -12,7 +12,7 @@ ERROR: MedicationStatement.reasonReference: Error at http://hl7.org.au/fhir/ps/S
 # ==== ERROR: This warning occurs because AU PS Smoking Status inherits SNOMED patternCodeableConcept from AU Core where IPS requires a LOINC pattern on Observation.code. AU PS profiles support both SNOMED and LOINC codings to satisfy both AU Core and IPS requirements.====
 ERROR: StructureDefinition/au-ps-smokingstatus: StructureDefinition: This profile does not comply with claimed profile 'http://hl7.org/fhir/uv/ips/StructureDefinition/Observation-tobaccouse-uv-ips'
 
-# ==== ERROR: This error occurs due to extensions pack version mismatch. IPS lists hl7.fhir.uv.extensions.r4#5.2.0 and also declares an internal dependency on 5.3.0-ballot-tc1. The AU PS build resolves 5.2.0 for AU PS and the IPS subtree (the IPS internal 5.3.0 pack is not loaded). As a result, the cross IG check runs with different pack versions and reports a failure. This is a tooling limitation caused by the way internal dependencies interact with canonical version pinning, not a content defect.====
+# ==== ERROR: This error is caused by an IPS 2.0.0 internal dependency on the hl7.fhir.uv.extensions.r4#5.3.0-ballot-tc1 pack that downstream IGs don't load. Not an AU PS defect. IPS plan on 2.0.1 errata/technical correction to resolve this for downstream IGs. See Zulip: https://chat.fhir.org/#narrow/channel/207835-IPS/topic/IPS.202.2E0.2E1.20errata.2Ftechnical.20correction/with/547940503====
 ERROR: StructureDefinition/au-ps-patient: StructureDefinition: This profile does not comply with claimed profile 'http://hl7.org/fhir/uv/ips/StructureDefinition/Patient-uv-ips'
 
 # HL7 core known warnings
