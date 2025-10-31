@@ -245,9 +245,21 @@
             },
             "text": {
               "status": "generated",
-              "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><table border=\"1\">\n        <thead>\n            <tr>\n                <th>Name</th>\n                <th>Value</th>\n                <th>Date</th>\n            </tr>\n        </thead>\n        <tbody>\n            <tr><td>Urine M/C/S - pH</td><td>7.0</td><td>05/11/24</td></tr><tr><td>Urine M/C/S - Protein</td><td>Positive</td><td>05/11/24</td></tr><tr><td>Urine M/C/S - Blood</td><td>Positive</td><td>05/11/24</td></tr><tr><td>Urine M/C/S - Glucose</td><td>Positive</td><td>05/11/24</td></tr><tr><td>Urine M/C/S - Leucocytes</td><td>370  x 10^6/L  (&lt;10)</td><td>05/11/24</td></tr><tr><td>Urine M/C/S - Erythrocytes</td><td>150 x 10^6/L  (&lt;10)</td><td>05/11/24</td></tr><tr><td>Urine M/C/S - Epithelial cells</td><td>Nil</td><td>05/11/24</td></tr><tr><td>Urine M/C/S - Culture</td><td>Org 1: Escherichia coli &gt; 10^8  Organisms/mL</td><td>05/11/24</td></tr><tr><td>Urine M/C/S - Antimicrobial susceptibility</td><td style='white-space: pre-line;'>Org 1\nAmp/Amoxycillin: Susceptible\nAmox/clav. acid: Susceptible\nCephalexin: Susceptible\nTrimethoprim: Susceptible\nNitrofurantoin: Susceptible\nGentamicin: Susceptible\nNorfloxacin: Susceptible</td><td>05/11/24</td></tr><tr><td>Glucose Tolerance Test (GTT) - Fasting Glucose</td><td>5.3 mmol/L (&lt;5.1)</td><td>21/10/24</td></tr><tr><td>Glucose Tolerance Test (GTT) - 1 hour Glucose</td><td>10.0 mmol/L (&lt;10.0)</td><td>21/10/24</td></tr><tr><td>Glucose Tolerance Test (GTT) - 2 hour Glucose</td><td>8.6 mmol/L (&lt;8.5)</td><td>21/10/24</td></tr><tr><td>Haemoglobin A1c</td><td>5.8 %</td><td>14/06/24</td></tr><tr><td>Full Blood Count -  Haemoglobin</td><td>125  g/L (115-165)</td><td>12/06/24</td></tr><tr><td>Full Blood Count -  Haematocrit</td><td>0.37  L/L (0.37-0.51)</td><td>12/06/24</td></tr><tr><td>Full Blood Count -  White Blood Cell Count</td><td>8.0 x 10^9/L (4.0-11.0)</td><td>12/06/24</td></tr><tr><td>Full Blood Count -  Platelets</td><td>250 x 10^9/L (150-400)</td><td>12/06/24</td></tr><tr><td>Full Blood Count - MCV</td><td>85 fL (80-100)</td><td>12/06/24</td></tr><tr><td>HCG</td><td>16000 IU/L</td><td>12/06/24</td></tr><tr><td>Urinalysis -  Colour</td><td>Light yellow colour</td><td>03/06/24</td></tr><tr><td>Urinalysis -  Clarity</td><td>Clear</td><td>03/06/24</td></tr><tr><td>Urinalysis -  pH</td><td>6.0</td><td>03/06/24</td></tr><tr><td>Urinalysis -  Specific Gravity</td><td>1.02</td><td>03/06/24</td></tr><tr><td>Urinalysis -  Protein</td><td>Negative</td><td>03/06/24</td></tr><tr><td>Urinalysis -  Glucose</td><td>Negative</td><td>03/06/24</td></tr><tr><td>Urinalysis -  Ketones</td><td>Negative</td><td>03/06/24</td></tr><tr><td>Urinalysis -  Nitrites</td><td>Negative</td><td>03/06/24</td></tr><tr><td>Urinalysis -  Leukocyte Esterase</td><td>Negative</td><td>03/06/24</td></tr>\n        </tbody>\n    </table></div>"
+              "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><table border=\"1\">\n                <thead>\n                  <tr>\n                    <th>Test Name</th>\n                    <th>Test Result</th>\n                    <th>Date</th>\n                  </tr>\n                </thead>\n                <tbody>\n                  <tr>\n                    <td>Glucose Tolerance Test (GTT) Fasting</td>\n                    <td>5.3 mmol/L</td>\n                    <td>21/10/2024</td>\n                  </tr>\n                  <tr>\n                    <td>Glucose Tolerance Test (GTT) 1 hour</td>\n                    <td>10.0 mmol/L</td>\n                    <td>21/10/2024</td>\n                  </tr>\n                  <tr>\n                    <td>Glucose Tolerance Test (GTT) 2 hour</td>\n                    <td>8.6 mmol/L</td>\n                    <td>21/10/2024</td>\n                  </tr>\n                  <tr>\n                    <td>Haemoglobin A1c</td>\n                    <td>5.8 %</td>\n                    <td>14/06/2024</td>\n                  </tr>\n<tr><td>Urine M/C/S - pH</td><td>7</td><td>05/11/2024</td></tr><tr><td>Urine M/C/S - Protein</td><td>Positive</td><td>05/11/2024</td></tr><tr><td>Urine M/C/S - Blood</td><td>Positive</td><td>05/11/2024</td></tr><tr><td>Urine M/C/S - Glucose</td><td>Positive</td><td>05/11/2024</td></tr><tr><td>Urine M/C/S - Leucocytes</td><td>370  x 10^6/L  (&lt;10)</td><td>05/11/2024</td></tr><tr><td>Urine M/C/S - Erythrocytes</td><td>150 x 10^6/L  (&lt;10)</td><td>05/11/2024</td></tr><tr><td>Urine M/C/S - Epithelial cells</td><td>Nil</td><td>05/11/2024</td></tr><tr><td>Urine M/C/S - Culture</td><td>Org 1: Escherichia coli &gt; 10^8  Organisms/mL</td><td>05/11/2024</td></tr><tr><td>Urine M/C/S - Antimicrobial susceptibility</td><td style='white-space: pre-line;'>Org 1\nAmp/Amoxycillin: Susceptible\nAmox/clav. acid: Susceptible\nCephalexin: Susceptible\nTrimethoprim: Susceptible\nNitrofurantoin: Susceptible\nGentamicin: Susceptible\nNorfloxacin: Susceptible</td><td>05/11/2024</td></tr><tr><td>Full Blood Count -  Haemoglobin</td><td>125  g/L (115-165)</td><td>12/06/2024</td></tr><tr><td>Full Blood Count -  Haematocrit</td><td>0.37  L/L (0.37-0.51)</td><td>12/06/2024</td></tr><tr><td>Full Blood Count -  White Blood Cell Count</td><td>8 x 10^9/L (4.0-11.0)</td><td>12/06/2024</td></tr><tr><td>Full Blood Count -  Platelets</td><td>250 x 10^9/L (150-400)</td><td>12/06/2024</td></tr><tr><td>Full Blood Count - MCV</td><td>85 fL (80-100)</td><td>12/06/2024</td></tr><tr><td>HCG</td><td>16000 IU/L</td><td>12/06/2024</td></tr><tr><td>Urinalysis -  Colour</td><td>Light yellow colour</td><td>03/06/2024</td></tr><tr><td>Urinalysis -  Clarity</td><td>Clear</td><td>03/06/2024</td></tr><tr><td>Urinalysis -  pH</td><td>6</td><td>03/06/2024</td></tr><tr><td>Urinalysis -  Specific Gravity</td><td>1.02</td><td>03/06/2024</td></tr><tr><td>Urinalysis -  Protein</td><td>Negative</td><td>03/06/2024</td></tr><tr><td>Urinalysis -  Glucose</td><td>Negative</td><td>03/06/2024</td></tr><tr><td>Urinalysis -  Ketones</td><td>Negative</td><td>03/06/2024</td></tr><tr><td>Urinalysis -  Nitrites</td><td>Negative</td><td>03/06/2024</td></tr><tr><td>Urinalysis -  Leukocyte Esterase</td><td>Negative</td><td>03/06/2024</td></tr>        </tbody>\n    </table></div>"
             },
             "entry": [
+              {
+                "reference": "urn:uuid:5f1b9790-4892-4af3-9b76-3cb4f854a5b1"
+              },
+              {
+                "reference": "urn:uuid:1bbd2e05-161d-4030-975c-0cca3ef97cdb"
+              },
+              {
+                "reference": "urn:uuid:27060cbf-e30e-4091-bd64-7d4ef40916ac"
+              },
+              {
+                "reference": "urn:uuid:fc061f59-5410-41e9-945e-3f59664e8611"
+              },
               {
                 "reference": "urn:uuid:bf094219-4a9b-4184-ae36-0743f93a41ef"
               },
@@ -295,16 +307,7 @@
               },
               {
                 "reference": "urn:uuid:92b3e48e-c00b-4a3c-b256-52aced6d52d2"
-              },
-              {
-                "reference": "urn:uuid:e77c60cf-35e1-4b47-80c1-89ef9b26529e"
-              },
-              {
-                "reference": "urn:uuid:fdbd50df-4465-4fee-b4c1-c835c2b83b4f"
-              },
-              {
-                "reference": "urn:uuid:1431c41b-4ca9-4cf4-a083-413b299afaee"
-              },
+              },                            
               {
                 "reference": "urn:uuid:69adb034-1cb7-46fb-9725-633ea913491f"
               },
@@ -346,10 +349,7 @@
               },
               {
                 "reference": "urn:uuid:996486b5-3eea-413f-b67d-2ade13cb22b4"
-              },
-              {
-                "reference": "urn:uuid:31b7b052-19b7-460d-b533-db35d992367e"
-              },
+              },             
               {
                 "reference": "urn:uuid:a0807ad8-f160-4d27-92d0-f4ee87a63e49"
               }
@@ -1712,6 +1712,220 @@
       }
     },
     {
+      "fullUrl": "urn:uuid:5f1b9790-4892-4af3-9b76-3cb4f854a5b1",
+      "resource": {
+        "resourceType": "Observation",
+        "meta": {
+          "profile": [
+            "http://hl7.org.au/fhir/ps/StructureDefinition/au-ps-diagnosticresult-path"
+          ]
+        },
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "laboratory",
+                "display": "Laboratory"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [            
+            {
+              "system": "http://loinc.org",
+              "code": "14995-5",
+              "display": "Glucose [Moles/volume] in Serum or Plasma --2 hours post 75 g glucose PO"
+            }
+          ],
+          "text": "Glucose Tolerance Test (GTT) 2 hour"
+        },
+        "subject": {
+          "reference": "urn:uuid:85822a88-55b1-460c-bb7b-e8fc22d8568f"
+        },
+        "effectiveDateTime": "2024-10-21",
+        "performer": [
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/data-absent-reason",
+                "valueCode": "unknown"
+              }
+            ]
+          }
+        ],
+        "valueQuantity": {
+          "value": 8.6,
+          "system": "http://unitsofmeasure.org",
+          "code": "mmol/L"
+        }
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:1bbd2e05-161d-4030-975c-0cca3ef97cdb",
+      "resource": {
+        "resourceType": "Observation",
+        "meta": {
+          "profile": [
+            "http://hl7.org.au/fhir/ps/StructureDefinition/au-ps-diagnosticresult-path"
+          ]
+        },
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "laboratory",
+                "display": "Laboratory"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [           
+            {
+              "system": "http://loinc.org",
+              "code": "14996-3",
+              "display": "Glucose [Moles/volume] in Serum or Plasma --pre 75 g glucose PO"
+            }
+          ],
+          "text": "Glucose Tolerance Test (GTT) Fasting"
+        },
+        "subject": {
+          "reference": "urn:uuid:85822a88-55b1-460c-bb7b-e8fc22d8568f"
+        },
+        "effectiveDateTime": "2024-10-21",
+        "performer": [
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/data-absent-reason",
+                "valueCode": "unknown"
+              }
+            ]
+          }
+        ],
+        "valueQuantity": {
+          "value": 5.3,
+          "system": "http://unitsofmeasure.org",
+          "code": "mmol/L"
+        }
+      }
+    }, 
+    {
+      "fullUrl": "urn:uuid:27060cbf-e30e-4091-bd64-7d4ef40916ac",
+      "resource": {
+        "resourceType": "Observation",
+        "meta": {
+          "profile": [
+            "http://hl7.org.au/fhir/ps/StructureDefinition/au-ps-diagnosticresult-path"
+          ]
+        },
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "laboratory",
+                "display": "Laboratory"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://snomed.info/sct",
+              "code": "113076002",
+              "display": "Glucose tolerance test (procedure)"
+            },
+            {
+              "system": "http://loinc.org",
+              "code": "51597-3",
+              "display": "Glucose [Moles/volume] in Serum or Plasma --1 hour post 75 g glucose PO"
+            }
+          ],
+          "text": "Glucose Tolerance Test (GTT) 1 hour"
+        },
+        "subject": {
+          "reference": "urn:uuid:85822a88-55b1-460c-bb7b-e8fc22d8568f"
+        },
+        "effectiveDateTime": "2024-10-21",
+        "performer": [
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/data-absent-reason",
+                "valueCode": "unknown"
+              }
+            ]
+          }
+        ],
+        "valueQuantity": {
+          "value": 10,
+          "system": "http://unitsofmeasure.org",
+          "code": "mmol/L"
+        }
+      }
+    }, 
+     {
+      "fullUrl": "urn:uuid:fc061f59-5410-41e9-945e-3f59664e8611",
+      "resource": {
+        "resourceType": "Observation",
+        "meta": {
+          "profile": [
+            "http://hl7.org.au/fhir/ps/StructureDefinition/au-ps-diagnosticresult-path"
+          ]
+        },
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "laboratory",
+                "display": "Laboratory"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "4548-4",
+              "display": "Hemoglobin A1c/Hemoglobin.total in Blood"
+            }
+          ],
+          "text": "Haemoglobin A1c"
+        },
+        "subject": {
+          "reference": "urn:uuid:85822a88-55b1-460c-bb7b-e8fc22d8568f"
+        },
+        "performer": [
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/data-absent-reason",
+                "valueCode": "unknown"
+              }
+            ]
+          }
+        ],
+        "effectiveDateTime": "2024-06-14",
+        "valueQuantity": {
+          "value": 5.8,
+          "system": "http://unitsofmeasure.org",
+          "code": "%",
+          "unit": "%"
+        }
+      }
+    },
+    {
       "fullUrl": "urn:uuid:bf094219-4a9b-4184-ae36-0743f93a41ef",
       "resource": {
         "resourceType": "Observation",
@@ -2288,8 +2502,7 @@
                 "code": "laboratory",
                 "display": "Laboratory"
               }
-            ],
-            "text": "Laboratory"
+            ]
           }
         ],
         "code": {
@@ -2346,8 +2559,7 @@
                 "code": "laboratory",
                 "display": "Laboratory"
               }
-            ],
-            "text": "Laboratory"
+            ]
           }
         ],
         "code": {
@@ -2404,8 +2616,7 @@
                 "code": "laboratory",
                 "display": "Laboratory"
               }
-            ],
-            "text": "Laboratory"
+            ]
           }
         ],
         "code": {
@@ -2462,8 +2673,7 @@
                 "code": "laboratory",
                 "display": "Laboratory"
               }
-            ],
-            "text": "Laboratory"
+            ]
           }
         ],
         "code": {
@@ -2520,8 +2730,7 @@
                 "code": "laboratory",
                 "display": "Laboratory"
               }
-            ],
-            "text": "Laboratory"
+            ]
           }
         ],
         "code": {
@@ -2578,8 +2787,7 @@
                 "code": "laboratory",
                 "display": "Laboratory"
               }
-            ],
-            "text": "Laboratory"
+            ]
           }
         ],
         "code": {
@@ -2617,184 +2825,7 @@
           "text": "Susceptible"
         }
       }
-    },
-    {
-      "fullUrl": "urn:uuid:e77c60cf-35e1-4b47-80c1-89ef9b26529e",
-      "resource": {
-        "resourceType": "Observation",
-        "meta": {
-          "profile": [
-            "http://hl7.org.au/fhir/ps/StructureDefinition/au-ps-diagnosticresult-path"
-          ]
-        },
-        "status": "final",
-        "category": [
-          {
-            "coding": [
-              {
-                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
-                "code": "laboratory",
-                "display": "Laboratory"
-              }
-            ],
-            "text": "Laboratory"
-          }
-        ],
-        "code": {
-          "coding": [
-            {
-              "system": "http://loinc.org",
-              "code": "14996-3",
-              "display": "Glucose [Moles/volume] in Serum or Plasma --pre 75 g glucose PO"
-            }
-          ],
-          "text": "Fasting Glucose"
-        },
-        "subject": {
-          "reference": "urn:uuid:85822a88-55b1-460c-bb7b-e8fc22d8568f"
-        },
-        "performer": [
-          {
-            "extension": [
-              {
-                "url": "http://hl7.org/fhir/StructureDefinition/data-absent-reason",
-                "valueCode": "unknown"
-              }
-            ]
-          }
-        ],
-        "effectiveDateTime": "2024-10-21",
-        "valueQuantity": {
-          "value": 5.3,
-          "system": "http://unitsofmeasure.org",
-          "code": "mmol/L",
-          "unit": "mmol/L"
-        },
-        "referenceRange": [
-          {
-            "text": "<5.1"
-          }
-        ]
-      }
-    },
-    {
-      "fullUrl": "urn:uuid:fdbd50df-4465-4fee-b4c1-c835c2b83b4f",
-      "resource": {
-        "resourceType": "Observation",
-        "meta": {
-          "profile": [
-            "http://hl7.org.au/fhir/ps/StructureDefinition/au-ps-diagnosticresult-path"
-          ]
-        },
-        "status": "final",
-        "category": [
-          {
-            "coding": [
-              {
-                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
-                "code": "laboratory",
-                "display": "Laboratory"
-              }
-            ],
-            "text": "Laboratory"
-          }
-        ],
-        "code": {
-          "coding": [
-            {
-              "system": "http://loinc.org",
-              "code": "51597-3",
-              "display": "Glucose [Moles/volume] in Serum or Plasma --1 hour post 75 g glucose PO"
-            }
-          ],
-          "text": "1 hour Glucose"
-        },
-        "subject": {
-          "reference": "urn:uuid:85822a88-55b1-460c-bb7b-e8fc22d8568f"
-        },
-        "performer": [
-          {
-            "extension": [
-              {
-                "url": "http://hl7.org/fhir/StructureDefinition/data-absent-reason",
-                "valueCode": "unknown"
-              }
-            ]
-          }
-        ],
-        "effectiveDateTime": "2024-10-21",
-        "valueQuantity": {
-          "value": 10,
-          "system": "http://unitsofmeasure.org",
-          "code": "mmol/L",
-          "unit": "mmol/L"
-        },
-        "referenceRange": [
-          {
-            "text": "(<10.0)"
-          }
-        ]
-      }
-    },
-    {
-      "fullUrl": "urn:uuid:1431c41b-4ca9-4cf4-a083-413b299afaee",
-      "resource": {
-        "resourceType": "Observation",
-        "meta": {
-          "profile": [
-            "http://hl7.org.au/fhir/ps/StructureDefinition/au-ps-diagnosticresult-path"
-          ]
-        },
-        "status": "final",
-        "category": [
-          {
-            "coding": [
-              {
-                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
-                "code": "laboratory",
-                "display": "Laboratory"
-              }
-            ],
-            "text": "Laboratory"
-          }
-        ],
-        "code": {
-          "coding": [
-            {
-              "system": "http://loinc.org",
-              "code": "14995-5",
-              "display": "Glucose [Moles/volume] in Serum or Plasma --2 hours post 75 g glucose PO"
-            }
-          ],
-          "text": "2 hour Glucose"
-        },
-        "subject": {
-          "reference": "urn:uuid:85822a88-55b1-460c-bb7b-e8fc22d8568f"
-        },
-        "performer": [
-          {
-            "extension": [
-              {
-                "url": "http://hl7.org/fhir/StructureDefinition/data-absent-reason",
-                "valueCode": "unknown"
-              }
-            ]
-          }
-        ],
-        "effectiveDateTime": "2024-10-21",
-        "valueQuantity": {
-          "value": 8.6,
-          "system": "http://unitsofmeasure.org",
-          "code": "mmol/L",
-          "unit": "mmol/L"
-        },
-        "referenceRange": [
-          {
-            "text": "(<8.5)"
-          }
-        ]
-      }
-    },
+    },     
     {
       "fullUrl": "urn:uuid:69adb034-1cb7-46fb-9725-633ea913491f",
       "resource": {
@@ -2813,8 +2844,7 @@
                 "code": "laboratory",
                 "display": "Laboratory"
               }
-            ],
-            "text": "Laboratory"
+            ]
           }
         ],
         "code": {
@@ -3584,60 +3614,7 @@
           "text": "Negative"
         }
       }
-    },
-    {
-      "fullUrl": "urn:uuid:31b7b052-19b7-460d-b533-db35d992367e",
-      "resource": {
-        "resourceType": "Observation",
-        "meta": {
-          "profile": [
-            "http://hl7.org.au/fhir/ps/StructureDefinition/au-ps-diagnosticresult-path"
-          ]
-        },
-        "status": "final",
-        "category": [
-          {
-            "coding": [
-              {
-                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
-                "code": "laboratory",
-                "display": "Laboratory"
-              }
-            ]
-          }
-        ],
-        "code": {
-          "coding": [
-            {
-              "system": "http://loinc.org",
-              "code": "4548-4",
-              "display": "Hemoglobin A1c/Hemoglobin.total in Blood"
-            }
-          ],
-          "text": "Haemoglobin A1c"
-        },
-        "subject": {
-          "reference": "urn:uuid:85822a88-55b1-460c-bb7b-e8fc22d8568f"
-        },
-        "performer": [
-          {
-            "extension": [
-              {
-                "url": "http://hl7.org/fhir/StructureDefinition/data-absent-reason",
-                "valueCode": "unknown"
-              }
-            ]
-          }
-        ],
-        "effectiveDateTime": "2024-06-14",
-        "valueQuantity": {
-          "value": 5.8,
-          "system": "http://unitsofmeasure.org",
-          "code": "%",
-          "unit": "%"
-        }
-      }
-    },
+    },   
     {
       "fullUrl": "urn:uuid:a0807ad8-f160-4d27-92d0-f4ee87a63e49",
       "resource": {
