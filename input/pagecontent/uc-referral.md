@@ -49,10 +49,10 @@ This use case demonstrates use of patient summary during step 4. Endocrinologist
 
 ### Flow
 
-1. Dr Cruickshank opens the referral in their CIS and accesses and reviews the embedded patient summary.
-1. The CIS alerts that a more recent patient summary is available.
-1. Dr Cruickshank accesses the more recent patient summary, comparing the embedded patient summary to the more recent patient summary, and verifies consistency in medications and medical history.
-1. Dr Cruickshank notes updated clinical information, including changes to Joyce’s insulin regimen.
+1. Dr Cruickshank opens the referral in the Endocrinologist CIS and views embedded referral patient summary.
+1. The Endocrinologist CIS detects and retrieves a current patient summary from the GP CIS.
+1. Dr Cruickshank views the current retrieved patient summary.
+1. Dr Cruickshank uses the updated patient summary content, and records the consultation including changes to Joyce’s insulin regimen.
 
 #### Sequence Diagram
 <div> 

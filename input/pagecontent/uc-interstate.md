@@ -48,9 +48,9 @@ This use case demonstrates use of patient summary during step 5. Patient Summary
 1. Resulting updates may be communicated back to Dr Lowe and Jeramy to maintain continuity of care.
 
 ### Flow
-1. Dr Samuels’ CIS scans the QR code and accesses the patient summary via the Smart Health Link.
-1. Dr Samuels reviews the summary, which may include medications, problems, allergies, immunisations, observations, and recent care events.
-1. The summary supports clinical decision-making during the consultation.
+1. Dr Samuels’ CIS scans the QR code to gain access to the patient summary via the Smart Health Link.
+1. The patient summary is retrieved from a patient summary host system indicated by the Smart Health Link. 
+1. Dr Samuels views the patient summary in the consultation.
 
 #### Sequence Diagram
 <div> 
