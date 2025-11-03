@@ -42,6 +42,7 @@ This change log documents the significant updates and resolutions implemented fr
   - removed SHOULD:display obligation on Immunization.patient.reference for the AU PS Consumer [IPS: FHIR-51258](https://jira.hl7.org/browse/FHIR-51258)
   - changed Immunization.vaccineCode obligation for the AU PS Producer from SHALL:populate-if-known to SHALL:populate [FHIR-52411](https://jira.hl7.org/browse/FHIR-52411)
   - changed Immunization.patient obligation for the AU PS Producer from SHALL:populate-if-known to SHALL:populate [FHIR-52411](https://jira.hl7.org/browse/FHIR-52411)
+  - removed SHOULD:display obligation on Immunization.vaccineCode coding slices amtVaccineCode and airVaccineCode for the AU PS Consumer [FHIR-53077](https://jira.hl7.org/browse/FHIR-53077)
 - [AU PS Medication](StructureDefinition-au-ps-medication.html): 
   - changed Medication to add a comment that the IPS guidance preferencing the use of Medication resource is not adopted by AU PS at this time [FHIR-51876](https://jira.hl7.org/browse/FHIR-51876)
 - [AU PS MedicationRequest](StructureDefinition-au-ps-medicationrequest.html):
@@ -52,12 +53,14 @@ This change log documents the significant updates and resolutions implemented fr
   - changed MedicationRequest.medication[x] to add a comment that the IPS guidance preferencing the use of Medication resources, with use of medicationCodeableConcept only when no other information than a simple code is available, is not adopted by AU PS at this time [FHIR-51876](https://jira.hl7.org/browse/FHIR-51876)
   - changed MedicationRequest.medication[x] obligation for the AU PS Producer from SHALL:populate-if-known to SHALL:populate (change applied to MedicationRequest.medication[x]:medicationCodeableConcept and MedicationRequest.medication[x]:medicationReference) [FHIR-52411](https://jira.hl7.org/browse/FHIR-52411)
   - changed MedicationRequest.subject obligation for the AU PS Producer from SHALL:populate-if-known to SHALL:populate [FHIR-52411](https://jira.hl7.org/browse/FHIR-52411)
+  - removed SHOULD:display obligation on MedicationRequest.medication[x]:medicationCodeableConcept coding slices pbs and amt for the AU PS Consumer [FHIR-53077](https://jira.hl7.org/browse/FHIR-53077)
 - [AU PS MedicationStatement](StructureDefinition-au-ps-medicationstatement.html):
   - changed MedicationStatement.dosage.route to remove use of the CodableConceptIPS [IPS: FHIR-51257](https://jira.hl7.org/browse/FHIR-51257)
   - removed SHOULD:display obligation on MedicationStatement.subject.reference for the AU PS Consumer [IPS: FHIR-51258](https://jira.hl7.org/browse/FHIR-51258)
   - changed MedicationStatement.medication[x] to add a comment that the IPS guidance preferencing the use of Medication resources, with use of medicationCodeableConcept only when no other information than a simple code is available, is not adopted by AU PS at this time [FHIR-51876](https://jira.hl7.org/browse/FHIR-51876)
   - changed MedicationStatement.medication[x] obligation for the AU PS Producer from SHALL:populate-if-known to SHALL:populate (change applied to MedicationStatement.medication[x]:medicationCodeableConcept and MedicationStatement.medication[x]:medicationReference) [FHIR-52411](https://jira.hl7.org/browse/FHIR-52411)
   - changed MedicationStatement.subject obligation for the AU PS Producer from SHALL:populate-if-known to SHALL:populate [FHIR-52411](https://jira.hl7.org/browse/FHIR-52411)
+  - removed SHOULD:display obligation on MedicationStatement.medication[x]:medicationCodeableConcept coding slices pbs and amt for the AU PS Consumer [FHIR-53077](https://jira.hl7.org/browse/FHIR-53077)
 - [AU PS Organization](StructureDefinition-au-ps-organization.html):
   - applied technical correction to add obligations SHALL:populate-if-known for the AU PS Producer, and SHALL:handle and SHOULD:display for the AU PS Consumer to Organization.telecom.system [FHIR-52835](https://jira.hl7.org/browse/FHIR-52835)
   - applied technical correction to add obligations SHALL:populate-if-known for the AU PS Producer, and SHALL:handle and SHOULD:display for the AU PS Consumer to Organization.telecom.value [FHIR-52835](https://jira.hl7.org/browse/FHIR-52835)
