@@ -40,6 +40,7 @@ This use case demonstrates use of patient summary during step 4. Endocrinologist
 1. The referral from Dr Ginger Burrows includes a patient summary at the time of referral.
 1. A more recent patient summary is available from Dr Burrows’ CIS at the time of consultation.
 1. Dr Cruickshank’s CIS is capable of accessing and displaying both the embedded and updated patient summaries.
+1. Joyce attends her scheduled consultation with Dr Cruickshank.
 
 ### Postcondition(s)
 1. Dr Cruickshank uses the patient summary information to guide clinical decision-making.
@@ -47,12 +48,11 @@ This use case demonstrates use of patient summary during step 4. Endocrinologist
 1. An updated treatment plan is shared with Joyce and Dr Burrows to support continuity of care.
 
 ### Flow
-1. Joyce attends her scheduled consultation with Dr Cruickshank.
+
 1. Dr Cruickshank opens the referral in their CIS and accesses and reviews the embedded patient summary.
 1. The CIS alerts that a more recent patient summary is available.
 1. Dr Cruickshank accesses the more recent patient summary, comparing the embedded patient summary to the more recent patient summary, and verifies consistency in medications and medical history.
 1. Dr Cruickshank notes updated clinical information, including changes to Joyce’s insulin regimen.
-1. Based on the review and discussion with Joyce, Dr Cruickshank decides to increase Joyce’s insulin dose and documents the decision in the CIS.
 
 #### Sequence Diagram
 <div> 
