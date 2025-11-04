@@ -44,6 +44,7 @@ This change log documents the significant updates and resolutions implemented fr
   - changed Immunization.patient obligation for the AU PS Producer from SHALL:populate-if-known to SHALL:populate [FHIR-52411](https://jira.hl7.org/browse/FHIR-52411)
 - [AU PS Medication](StructureDefinition-au-ps-medication.html): 
   - changed Medication to add a comment that the IPS guidance preferencing the use of Medication resource is not adopted by AU PS at this time [FHIR-51876](https://jira.hl7.org/browse/FHIR-51876)
+  - changed Medication.ingredient.item[x] binding to Medication Ingredient (preferred) [AU Base: FHIR-44781](https://jira.hl7.org/browse/FHIR-44781) 
 - [AU PS MedicationRequest](StructureDefinition-au-ps-medicationrequest.html):
   - changed MedicationRequest.dosageInstruction.route to remove use of the CodableConceptIPS [IPS: FHIR-51257](https://jira.hl7.org/browse/FHIR-51257)
   - changed MedicationRequest.doNotPerform to constrain out 'true' [IPS: FHIR-51483](https://jira.hl7.org/browse/FHIR-51483)
