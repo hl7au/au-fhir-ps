@@ -94,7 +94,7 @@
             },
             "text": {
               "status": "generated",
-              "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n              <table border=\"1\">\n                <thead>\n                  <tr>\n                    <th>Medicine</th>\n                    <th>Dose</th>\n                    <th>Clinical Indication</th>\n                    <th>Status</th>\n                    <th>Last Updated</th>\n                    <th>Comment</th>\n                  </tr>\n                </thead>\n                <tbody>\n                  <tr>\n                    <td>Prenatal vitamins</td>\n                    <td>1 tablet daily</td>\n                    <td></td>\n                    <td>Active</td>\n                    <td>28/10/2024</td>\n                    <td>Pt prefers Blackmores</td>\n                  </tr>\n                  <tr>\n                    <td>Insulin (Humulin N)</td>\n                    <td>10 units subcutaneously in the morning and evening</td>\n                    <td></td>\n                    <td>Active</td>\n                    <td>28/10/2024</td>\n                    <td></td>\n                  </tr>\n                  <tr>\n                    <td>Insulin (Humulin R)</td>\n                    <td>5 units subcutaneously before each meal</td>\n                    <td></td>\n                    <td>Active</td>\n                    <td>28/10/2024</td>\n                    <td></td>\n                  </tr>\n                  <tr>\n                    <td>Metformin</td>\n                    <td>500mg twice daily</td>\n                    <td></td>\n                    <td>Active</td>\n                    <td>28/10/2024</td>\n                    <td></td>\n                  </tr>\n                  <tr>\n                    <td>Trimethoprim</td>\n                    <td>300mg daily for 3 days</td>\n                    <td>Urinary tract infection (UTI)</td>\n                    <td>Active</td>\n                    <td>04/11/2024</td>\n                    <td></td>\n                  </tr>\n                </tbody>\n              </table>\n            </div>"
+              "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n              <table border=\"1\">\n                <thead>\n                  <tr>\n                    <th>Medicine</th>\n                    <th>Dose</th>\n                    <th>Clinical Indication</th>\n                    <th>Status</th>\n                    <th>Last Updated</th>\n                    <th>Comment</th>\n                  </tr>\n                </thead>\n                <tbody>\n                  <tr>\n                    <td>Prenatal vitamins</td>\n                    <td>1 tablet daily</td>\n                    <td></td>\n                    <td>Active</td>\n                    <td>28/10/2024</td>\n                    <td>Pt prefers Blackmores</td>\n                  </tr>\n                  <tr>\n                    <td>Insulin (Humulin N)</td>\n                    <td>10 units subcutaneously in the morning and evening</td>\n                    <td></td>\n                    <td>Active</td>\n                    <td>28/10/2024</td>\n                    <td></td>\n                  </tr>\n                  <tr>\n                    <td>Insulin (Humulin R)</td>\n                    <td>5 units subcutaneously before each meal</td>\n                    <td></td>\n                    <td>Active</td>\n                    <td>28/10/2024</td>\n                    <td></td>\n                  </tr>\n                  <tr>\n                    <td>Metformin</td>\n                    <td>500mg twice daily</td>\n                    <td></td>\n                    <td>Active</td>\n                    <td>28/10/2024</td>\n                    <td></td>\n                  </tr>\n                  <tr>\n                    <td>Nitrofurantoin</td>\n                    <td>100mg 6 hourly for 5 days</td>\n                    <td>Urinary tract infection (UTI)</td>\n                    <td>Active</td>\n                    <td>04/11/2024</td>\n                    <td></td>\n                  </tr>\n                </tbody>\n              </table>\n            </div>"
             },
             "entry": [
               {
@@ -444,7 +444,7 @@
         "contained": [
           {
             "resourceType": "Medication",
-            "id": "trimethoprim",
+            "id": "nitrofurantoin",
             "meta": {
               "profile": [
                 "http://hl7.org.au/fhir/ps/StructureDefinition/au-ps-medication"
@@ -454,27 +454,27 @@
               "coding": [
                 {
                   "system": "http://snomed.info/sct",
-                  "code": "32792001",
-                  "display": "Product containing trimethoprim (medicinal product)"
+                  "code": "85343003",
+                  "display": "Nitrofurantoin"
                 }
               ],
-              "text": "Trimethoprim"
+              "text": "Nitrofurantoin"
             },
             "form": {
               "coding": [
                 {
                   "system": "http://snomed.info/sct",
-                  "code": "421026006",
-                  "display": "Tablet"
+                  "code": "420692007",
+                  "display": "Capsule"
                 }
               ],
-              "text": "Tablet"
+              "text": "Capsule"
             }
           }
         ],
         "status": "active",
         "medicationReference": {
-          "reference": "#trimethoprim"
+          "reference": "#nitrofurantoin"
         },
         "subject": {
           "reference": "urn:uuid:85822a88-55b1-460c-bb7b-e8fc22d8568f"
@@ -490,12 +490,17 @@
         ],
         "dosage": [
           {
-            "text": "300mg daily for 3 days",
+            "text": "100mg 6-hourly for 5 days",
             "timing": {
               "repeat": {
-                "frequency": 3,
-                "period": 1,
-                "periodUnit": "d"
+                "frequency": 1,
+                "period": 6,
+                "periodUnit": "h",
+                "boundsDuration": {
+                  "value": 5,
+                  "system": "http://unitsofmeasure.org",
+                  "code": "d"
+                }
               }
             },
             "route": {
