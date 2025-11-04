@@ -2849,7 +2849,7 @@
               "display": "Hemoglobin [Mass/volume] in Blood"
             }
           ],
-          "text": "Haemoglobin"
+          "text": "Full Blood Count -  Haemoglobin"
         },
         "subject": {
           "reference": "urn:uuid:85822a88-55b1-460c-bb7b-e8fc22d8568f"
@@ -2906,7 +2906,7 @@
               "display": "Hematocrit [Volume Fraction] of Blood by Automated count"
             }
           ],
-          "text": "Haematocrit"
+          "text": "Full Blood Count -  Haematocrit"
         },
         "subject": {
           "reference": "urn:uuid:85822a88-55b1-460c-bb7b-e8fc22d8568f"
@@ -2963,7 +2963,7 @@
               "display": "Leukocytes [#/volume] in Blood by Automated count"
             }
           ],
-          "text": "White Blood Cell Count"
+          "text": "Full Blood Count -  White Blood Cell Count"
         },
         "subject": {
           "reference": "urn:uuid:85822a88-55b1-460c-bb7b-e8fc22d8568f"
