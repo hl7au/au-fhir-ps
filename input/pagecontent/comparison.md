@@ -2,7 +2,7 @@
 
 AU Patient Summary (AU PS) complies with, and/or leverages, national and international standards, in particular:
 - [International Patient Access 1.1.0](https://hl7.org/fhir/uv/ipa/STU1.1/)
-- [International Patient Summary Implementation Guide 2.0.0](https://build.fhir.org/ig/HL7/fhir-ips/)
+- [International Patient Summary Implementation Guide 2.0.0](https://hl7.org/fhir/uv/ips/STU2/)
 - [AU Core Implementation Guide 2.0.0](https://build.fhir.org/ig/hl7au/au-fhir-core/)
 
 Relationships between AU PS, AUCDI, and the above key implementation guides are described in [Relationship with other IGs](relationship.html). 
@@ -225,6 +225,6 @@ AU PS compliant resources are compliant with IPA requirements for Missing Data. 
 No comparison is undertaken. AU PS does not define any FHIR specific interactions - no CapabilityStatement is defined. 
 
 Systems implementing AU Patient Summary **MAY** implement interactions defined in other CapabilityStatements, for example:
-- [IPS Server Capability Statement](https://build.fhir.org/ig/HL7/fhir-ips/CapabilityStatement-ips-server.html)
+- [IPS Server Capability Statement](https://hl7.org/fhir/uv/ips/STU2/CapabilityStatement-ips-server.html)
 - [International Patient Access Server CapabilityStatement](https://hl7.org/fhir/uv/ipa/CapabilityStatement-ipa-server.html)
 - [International Patient Access Client CapabilityStatement](https://hl7.org/fhir/uv/ipa/CapabilityStatement-ipa-client.html)
