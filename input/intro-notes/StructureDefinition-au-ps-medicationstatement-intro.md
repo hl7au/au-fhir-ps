@@ -10,7 +10,7 @@
 - To represent that a patient does not have any known medications, `MedicationStatement.medicationCodeableConcept` **SHOULD** use the code SNOMED CT 1234391000168107 \|No known current medicines\|
   - `MedicationStatement.status` **SHALL** be "active"
   - `MedicationStatement.effectiveDateTime` **SHALL** be the date/time the statement was current
-  - IPS documents may use the SNOMED CT code 787481004 /|No known medications/| from the [Medications - IPS](https://hl7.org/fhir/uv/ips/STU2/ValueSet-medication-uv-ips.html) value set. This code is inactive in SNOMED CT-AU and **SHOULD NOT** be used when producing AU PS compliant data, but receiving systems may still encounter it in IPS documents. 
+  - IPS documents may use the SNOMED CT code 787481004 |No known medications| from the [Medications - IPS](https://hl7.org/fhir/uv/ips/STU2/ValueSet-medication-uv-ips.html) value set. This code is inactive in SNOMED CT-AU and **SHOULD NOT** be used when producing AU PS compliant data, but receiving systems may still encounter it in IPS documents. 
 
 <div class="stu-note" markdown="1">
 
