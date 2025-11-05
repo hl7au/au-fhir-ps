@@ -7,6 +7,11 @@
 - The MedicationStatement resource can represent the clinical indication as a code with `MedicationStatement.reasonCode`, or a reference with `MedicationStatement.reasonReference` to a Condition or other resource.
    - Although both are marked as *Must Support*, producers are not required to support both a code and a reference, but they **SHALL** support *at least one* of these elements
    - A consumer **SHALL** support both elements 
+- To represent that a patient has no known current medications:
+  - `MedicationStatement.medicationCodeableConcept` **SHOULD** use the code SNOMED CT 1234391000168107 \|No known current medicines\|
+  - `MedicationStatement.status` **SHALL** be "active"
+  - `MedicationStatement.effectiveDateTime` **SHALL** be the date/time the statement was current
+  - `MedicationStatement.medicationCodeableConcept` **SHALL NOT** use the code SNOMED CT 787481004 \|No known medications\| from Medication - IPS ValueSet
 
 <div class="stu-note" markdown="1">
 
