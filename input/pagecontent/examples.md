@@ -23,7 +23,14 @@ The following examples demonstrate technical and clinical use case aspects, conf
 {% include example-list-generator.md %}
 <!-- ================================================ -->
 
+### Missing Data
+* [Bundle - Jeramy’s Patient Summary as of 27 May 2025 (missing data for Immunization.occurrenceDateTime, Observation.performer and MedicationRequest.authoredOn)](Bundle-aups-gpvisit-retrieval.xml.html) 
+* [Bundle - Patient Summary for Joyce Johnson as of 07 NOV 2024 (with digital signature) (missing data for Observation.performer)](Bundle-aups-referral-endoconsult-autogen.xml.html)
+* [Bundle - Section empty reason (missing data for Patient.birthDate; suppressed data for Patient.gender and Patient.identifier)](Bundle-aups-section-emptyreason.html)
 
+
+### Suppressed Data
+* [Bundle - Section empty reason (missing data for Patient.birthDate; suppressed data for Patient.gender and Patient.identifier)](Bundle-aups-section-emptyreason.html)
 
 
 

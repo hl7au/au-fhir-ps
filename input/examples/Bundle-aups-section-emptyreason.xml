@@ -150,16 +150,9 @@
           </valueCoding>
         </extension>
         <identifier>
-          <type>
-            <coding>
-              <system value="http://terminology.hl7.org.au/CodeSystem/v2-0203"/>
-              <code value="DVAU"/>
-              <display value="DVA Number"/>
-            </coding>
-            <text value="DVA Number"/>
-          </type>
-          <system value="http://ns.electronichealth.net.au/id/dva"/>
-          <value value="QX827261"/>
+          <extension url="http://hl7.org/fhir/StructureDefinition/data-absent-reason">
+            <valueCode value="masked"/>
+          </extension>
         </identifier>
         <name>
           <use value="usual"/>
@@ -173,7 +166,7 @@
           <value value="ronny.irvine@myownpersonaldomain.com"/>
           <use value="home"/>
         </telecom>
-        <gender value="male"/>
+        <gender value="unknown"/>
         <birthDate>
           <extension url="http://hl7.org/fhir/StructureDefinition/data-absent-reason">
             <valueCode value="unknown"/>
