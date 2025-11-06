@@ -285,7 +285,7 @@ The full set of sub-elements is visible in the "Key Elements Table" or "Snapshot
 
 ##### Must Support - Composition Sections
 Obligations vary significantly for elements in the AU PS Composition profile, in particular obligations on `Composition.section` reflect the expectations of [The "IPS"](https://build.fhir.org/ig/HL7/fhir-ips/Structure-of-the-International-Patient-Summary.html) and  [ISO 27269](https://www.iso.org/standard/79491.html). A summary is provided below:
-- AU PS Consumers **SHALL** consume Compositions if a section is present and containing any valid value, and **SHOULD** display the content of the section when presenting the data to a human user.
+- AU PS Consumers **SHALL** handle the Composition section if present and containing any valid value, and **SHOULD** display the content of the section when presenting the data to a human user.
 - For all mandatory sections (`Composition.section` minimum cardinality > 0) AU PS Producers **SHALL** correctly populate the section if a value is known, **SHALL** be capable of populating `Composition.section.entry` with the referenced profiles, and **SHOULD** correctly populate `Composition.section.entry` if a value is known. 
 - For all recommended sections AU PS Producers **SHOULD** correctly populate the section if a value is known and **SHOULD** correctly populate `Composition.section.entry` if a value is known. 
 - For all optional or undefined sections AU PS Producers **MAY** correctly populate the section if a value is known and **MAY** correctly populate `Composition.section.entry` if a value is known. 
@@ -295,35 +295,35 @@ See [Structure of the Australian Patient Summary (AU PS)](the-aups.html#structur
 ##### Must Support - Primitive Elements
 Primitive elements are single elements with a primitive value. If a primitive element is labelled as *Must Support*: 
 - AU PS Producers **SHALL** correctly populate the element if a value is known. 
-- AU PS Consumers **SHALL** consume resources if the element is present and containing any valid value, and **SHOULD** display the value of this element (if the SHOULD:display Obligation is defined) when presenting the data to a human user.
+- AU PS Consumers **SHALL** handle the element if present and containing any valid value, and **SHOULD** display the value of this element (if the SHOULD:display Obligation is defined) when presenting the data to a human user.
 
 For example, the AU PS Organization Profile `name` element is a primitive string datatype. Therefore, when claiming conformance to this profile:
 - AU PS Producers **SHALL** correctly populate a value in `Organization.name` if a value is known.
-- AU PS Consumers **SHALL** consume the Organization resource if `Organization.name` is present and containing any valid value, and **SHOULD** display the value of `Organization.name` when presenting the data to a human user.
+- AU PS Consumers **SHALL** handle the `Organization.name` if present and containing any valid value, and **SHOULD** display the value of `Organization.name` when presenting the data to a human user.
 
 ##### Must Support - Complex Elements
 Complex elements are composed of primitive and/or other complex elements. Elements may have additional rules defined in the profile that also apply, e.g. terminology binding, or invariants. 
 
 If a complex element is labelled as *Must Support*:
 - AU PS Producers **SHALL** correctly populate the element with at least one of the sub-element values if the value is known.
-- AU PS Consumers **SHALL** consume resources if the element is present and containing any valid sub-element, and **SHOULD** display the value of this element (if the SHOULD:display Obligation is defined) when presenting the data to a human user.
+- AU PS Consumers **SHALL** handle the element if present and containing any valid sub-element, and **SHOULD** display the value of this element (if the SHOULD:display Obligation is defined) when presenting the data to a human user.
 
 For example, the AU PS AllergyIntolerance Profile `note` element is labelled *Must Support* and has no *Must Support* sub-elements. When claiming conformance to this profile:
 - AU PS Producers **SHALL** correctly populate a value in any valid `AllergyIntolerance.note` sub-element if a value is known e.g. `AllergyIntolerance.note.text`.
-- AU PS Consumers **SHALL** consume the AllergyIntolerance resource if `AllergyIntolerance.note` is present and containing any valid sub-elements, and **SHOULD** display the value of `AllergyIntolerance.note` when presenting the data to a human user.
+- AU PS Consumers **SHALL** handle `AllergyIntolerance.note` if present and containing any valid sub-elements, and **SHOULD** display the value of `AllergyIntolerance.note` when presenting the data to a human user.
 
 If a sub-element is labelled as *Must Support*: 
 - AU PS Producers **SHALL** correctly populate the element with all *Must Support* sub-elements for which a value is known. 
-- AU PS Consumers **SHALL** consume resources if *Must Support* sub-elements are present and containing any valid value, and **SHOULD** display the value of this element (if the SHOULD:display Obligation is defined) when presenting the data to a human user.
+- AU PS Consumers **SHALL** handle the element if present and containing any *Must Support* sub-elements containing any valid value, and **SHOULD** display the value of this element (if the SHOULD:display Obligation is defined) when presenting the data to a human user.
 
 For example, in the AU PS Practitioner Profile, the `name` element is labelled *Must Support* and has *Must Support* sub-elements `family` and `given`. When claiming conformance to this profile:
 - AU PS Producers **SHALL** correctly populate a value in `Practitioner.name.family` and `Practitioner.name.given` if the value for those sub-elements is known.
-- AU PS Consumers **SHALL** consume a Practitioner resource if `Practitioner.name` is present and contains valid values in `Practitioner.name.family` and `Practitioner.name.given` sub-elements, and **SHOULD** display the value of at least the sub elements`Practitioner.name.family` and `Practitioner.name.given` when presenting the data to a human user.
+- AU PS Consumers **SHALL** handle `Practitioner.name` if present and containing valid values in `Practitioner.name.family` and `Practitioner.name.given` sub-elements, and **SHOULD** display the value of at least the sub elements`Practitioner.name.family` and `Practitioner.name.given` when presenting the data to a human user.
 
 ##### Must Support - Resource References
 Some elements labelled as *Must Support* reference multiple resource types or profiles such as `Observation.performer`. In such cases: 
 - AU PS Producers **SHALL** correctly populate the element with at least one referenced resource or allowed profile if the value is known. 
-- AU PS Consumers **SHALL** consume resources if the element is present and containing any valid referenced resource or profiles, and **SHOULD** display the value of this element (if the SHOULD:display Obligation is defined) when presenting the data to a human user.
+- AU PS Consumers **SHALL** handle the element if present and containing any valid referenced resource or profiles, and **SHOULD** display the value of this element (if the SHOULD:display Obligation is defined) when presenting the data to a human user.
 
 The table below provides a list of AU PS profile elements that allow multiple referenced resource types or profiles.
 
@@ -350,7 +350,7 @@ Profile |Must Support Element|Reference
 ##### Must Support - Choice of Data Types
 Some elements labelled as *Must Support* allow different data types such as `Observation.effective[x]`. In such cases:
 - AU PS Producers **SHALL** correctly populate the element with at least one data type allowed by the element definition if the value is known.
-- AU PS Consumers **SHALL** consume resources if the element is present and containing any valid data type allowed by the element definition, and **SHOULD** display the value of this element (if the SHOULD:display Obligation is defined) when presenting the data to a human user.
+- AU PS Consumers **SHALL** handle the element if present and containing any valid data type allowed by the element definition, and **SHOULD** display the value of this element (if the SHOULD:display Obligation is defined) when presenting the data to a human user.
 
 The table below provides a list of AU PS profile elements that allow multiple data types.
 
@@ -395,7 +395,7 @@ Profile |Must Support Data Type
 ##### Must Support - Choice of Identifiers 
 A profile may support one or more than one identifier type and will include the supported identifiers in a profile by slicing the element and placing *Must Support* on each identifier slice. In such cases:
 - AU PS Producers **SHALL**  correctly populate the element with identifiers from at least one supported identifier type where the identifier is known, or any known identifier when no supported identifier type is known.
-- AU PS Consumers **SHALL** consume resources if the element is present and containing any identifier type allowed by the element definition, and **SHOULD** display the value of each populated identifier when presenting the data to a human user.
+- AU PS Consumers **SHALL** handle the element if present and containing any identifier type allowed by the element definition, and **SHOULD** display the value of each populated identifier when presenting the data to a human user.
 
 The table below provides a list of AU PS profile elements that allow multiple identifier types.
 
@@ -409,7 +409,7 @@ Profile |Must Support Element|Supported Identifiers
 
 For example, the profile [AU PS Patient](StructureDefinition-au-ps-patient.html) requires support for the following choices `Patient.identifier` defined in [AU Base Patient](https://build.fhir.org/ig/hl7au/au-fhir-base/StructureDefinition-au-patient.html) to support Individual Healthcare Identifier (IHI), Medicare Card Number, Department of Veterans' Affairs (DVA) Number. When claiming conformance to the AU PS Patient Profile:
 - AU PS Producers **SHALL** correctly populate `Patient.identifier` with an IHI, or Medicare Card Number, or DVA Number, or any combination of them where the identifier is known, or any other identifier (e.g. Medical Record Number) when none of IHI, or Medicare Card Number, or DVA Number are known.
-- AU PS Consumers **SHALL** consume Patient resource if `Patient.identifier` is present containing any valid value. A valid value may be an IHI, Medicare Card Number, or DVA Number identifier, or may be some other allowed identifier. The AU PS Consumer **SHOULD** display the value of each populated identifier type (IHI, Medicare Number, DVA Number, or some other identifier) when presenting the data to a human user.
+- AU PS Consumers **SHALL** handle `Patient.identifier` if present and containing any valid value. A valid value may be an IHI, Medicare Card Number, or DVA Number identifier, or may be some other allowed identifier. The AU PS Consumer **SHOULD** display the value of each populated identifier type (IHI, Medicare Number, DVA Number, or some other identifier) when presenting the data to a human user.
 
 Systems **MAY** support populating other identifiers, but this is not a requirement of AU PS.
 
@@ -417,7 +417,7 @@ Systems **MAY** support populating other identifiers, but this is not a requirem
 
 A resource may support two elements that are used to indicate a reason, e.g. `Encounter.reasonCode` and `Encounter.reasonReference` in the profile [AU PS Encounter](StructureDefinition-au-ps-encounter.html). In such cases:
 - AU PS Producers **SHALL** correctly populate at least one element choice if the value is known.
-- AU PS Consumers **SHALL** consume resources if any element allowed by the profile is present and containing any valid value. 
+- AU PS Consumers **SHALL** handle any element allowed by the profile if present and containing any valid value. 
 
 The table below lists the applicable profiles and elements in AU PS.
 
@@ -434,7 +434,7 @@ Profile |Must Support Choice Elements
 
 In AU PS, elements that define support for more than one value set only apply to the [Coding](http://hl7.org/fhir/R4/datatypes.html#Coding) part of the element and are not intended to prevent systems from supplying only a text value. In such cases:
 - AU PS Producers **SHALL** correctly populate the element with concepts from each supported value set where the applicable concept is known.
-- AU PS Consumers **SHALL** handle the element with any valid value whether it is  from a supported value set or some other value set or text only, and **SHOULD** display the value of this element when presenting the data to a human user.
+- AU PS Consumers **SHALL** handle the element if present and containing any valid value whether it is  from a supported value set or some other value set or text only, and **SHOULD** display the value of this element when presenting the data to a human user.
 
 The table below lists the applicable profiles and elements in AU PS that support multiple value sets.
 
