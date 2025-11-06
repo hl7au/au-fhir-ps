@@ -7,4 +7,4 @@
 - The MedicationRequest resource can represent the clinical indication as a code with `MedicationRequest.reasonCode`, or a reference with `MedicationRequest.reasonReference` to a Condition or other resource.
   - Although both are marked as *Must Support*, producers are not required to support both a code and a reference, but they **SHALL** support *at least one* of these elements
   - A consumer **SHALL** support both elements  
-- The MedicationRequest resource **SHALL NOT** be used to represent no known medications for a patient. To represent that the patient has no known medications, a MedicationStatement **SHOULD** be used instead. See the [profile specific implementation guidance in AU PS MedicationStatement](StructureDefinition-au-ps-medicationstatement.html#profile-specific-implementation-guidance).
+- The MedicationRequest resource **SHALL NOT** be used to represent that a patient is not currently taking any medications; systems **SHOULD** use the MedicationStatement following the [profile specific implementation guidance in AU PS MedicationStatement](StructureDefinition-au-ps-medicationstatement.html#profile-specific-implementation-guidance).

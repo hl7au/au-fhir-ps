@@ -28,7 +28,6 @@ This change log documents the significant updates and resolutions implemented fr
     - Composition.author
     - Composition.title
     - Composition.event:careProvisioningEvent.code
-  - added profile specific implementation guidance that when stating no known medications for a patient, Composition.section:sectionMedications.emptyReason SHOULD NOT be used and MedicationStatement SHOULD be used instead [FHIR-52274](https://jira.hl7.org/browse/FHIR-52274)
 - [AU PS Condition](StructureDefinition-au-ps-condition.html):
   - changed Condition.bodySite to remove use of the CodableConceptIPS [IPS: FHIR-51257](https://jira.hl7.org/browse/FHIR-51257)
   - removed SHOULD:display obligation on Condition.subject.reference for the AU PS Consumer [IPS: FHIR-51258](https://jira.hl7.org/browse/FHIR-51258)
@@ -64,6 +63,7 @@ This change log documents the significant updates and resolutions implemented fr
   - changed MedicationStatement.medication[x] obligation for the AU PS Producer from SHALL:populate-if-known to SHALL:populate (change applied to MedicationStatement.medication[x]:medicationCodeableConcept and MedicationStatement.medication[x]:medicationReference) [FHIR-52411](https://jira.hl7.org/browse/FHIR-52411)
   - changed MedicationStatement.subject obligation for the AU PS Producer from SHALL:populate-if-known to SHALL:populate [FHIR-52411](https://jira.hl7.org/browse/FHIR-52411)
   - removed SHOULD:display obligation on MedicationStatement.medication[x]:medicationCodeableConcept coding slices pbs and amt for the AU PS Consumer [FHIR-53077](https://jira.hl7.org/browse/FHIR-53077)
+  - added profile specific implementation guidance for representing no known medications for a patient [FHIR-52274](https://jira.hl7.org/browse/FHIR-52274)
 - [AU PS Organization](StructureDefinition-au-ps-organization.html):
   - applied technical correction to add obligations SHALL:populate-if-known for the AU PS Producer, and SHALL:handle and SHOULD:display for the AU PS Consumer to Organization.telecom.system [FHIR-52835](https://jira.hl7.org/browse/FHIR-52835)
   - applied technical correction to add obligations SHALL:populate-if-known for the AU PS Producer, and SHALL:handle and SHOULD:display for the AU PS Consumer to Organization.telecom.value [FHIR-52835](https://jira.hl7.org/browse/FHIR-52835)
