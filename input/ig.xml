@@ -166,7 +166,7 @@
 				<reference value="Bundle/aups-noknownx"/>
 			</reference>
 			<name value="Bundle - No Known X"/>
-			<description value="Shows an example of a patient summary that demonstrates no known problems or disabilities, no known allergies and intolerances, and no known medications. Example for the *AU PS Bundle* and *AU PS Composition* profile. Patient: Caterina Foreman."/>
+			<description value="Shows an example of a patient summary that demonstrates no known problems or disabilities, no known allergies and intolerances, and no known current medications. Example for the *AU PS Bundle* and *AU PS Composition* profile. Patient: Charlotte Morris."/>
 			<exampleCanonical value="http://hl7.org.au/fhir/ps/StructureDefinition/au-ps-bundle"/>
 		</resource>
 		<resource>
