@@ -8,10 +8,10 @@
    - Although both are marked as *Must Support*, producers are not required to support both a code and a reference, but they **SHALL** support *at least one* of these elements
    - A consumer **SHALL** support both elements 
 - To represent that a patient is not currently taking any medications, the code SNOMED CT 1234391000168107 &#124;No known current medicines&#124; is used in `MedicationStatement.medicationCodeableConcept`:
-  - `MedicationStatement.status` is set to "active"
+  - `MedicationStatement.status` is set to &quot;active&quot;
   - `MedicationStatement.effectiveDateTime` is the date/time the statement was current
   - A Medication resource referenced in `MedicationStatement.medicationReference` **SHALL NOT** be used
-  - Implementers need to be aware than an IPS document conforming to 1.0.0 or 1.1.0 may provide instead the IPS preferred concept ["no-known-medications"](https://hl7.org/fhir/uv/ips/STU1/CodeSystem-absent-unknown-uv-ips.html#absent-unknown-uv-ips-no-known-medications) or if conforming to 2.0.0 may provide instead the IPS preferred concept 787481004 &#124;No known medications&#124;. The IPS concept ["no-known-medications"](https://hl7.org/fhir/uv/ips/STU1/CodeSystem-absent-unknown-uv-ips.html#absent-unknown-uv-ips-no-known-medications) has been removed from later versions of IPS and the  the SNOMED CT code 787481004 &#124;No known medications&#124; is currently inactive in SNOMED CT-AU. These concepts **SHOULD NOT** be used when producing AU PS compliant data, but receiving systems may still encounter it in IPS documents. 
+  - Implementers need to be aware than an IPS document conforming to 1.0.0 or 1.1.0 may provide instead the IPS preferred concept [&quot;no-known-medications&quot;](https://hl7.org/fhir/uv/ips/STU1/CodeSystem-absent-unknown-uv-ips.html#absent-unknown-uv-ips-no-known-medications) or if conforming to 2.0.0 may provide instead the IPS preferred concept 787481004 &#124;No known medications&#124;. The IPS concept [&quot;no-known-medications&quot;](https://hl7.org/fhir/uv/ips/STU1/CodeSystem-absent-unknown-uv-ips.html#absent-unknown-uv-ips-no-known-medications) has been removed from later versions of IPS and the  the SNOMED CT code 787481004 &#124;No known medications&#124; is currently inactive in SNOMED CT-AU. These concepts **SHOULD NOT** be used when producing AU PS compliant data, but receiving systems may still encounter it in IPS documents. 
 
 <div class="stu-note" markdown="1">
 
