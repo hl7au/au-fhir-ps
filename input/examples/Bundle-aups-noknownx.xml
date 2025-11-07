@@ -49,7 +49,7 @@
             </coding>
           </code>
           <text>
-            <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml" lang="en-AU" xml:lang="en-AU">30/03/2025 No current problem or disability.</div>
+            <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml" lang="en-AU" xml:lang="en-AU">30/03/2025 No current problem or disability</div>
           </text>
           <entry>
             <reference value="urn:uuid:df366c47-c739-4c16-939e-b5cf9afb0b7d"/>
@@ -65,7 +65,7 @@
             </coding>
           </code>
           <text>
-            <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml" lang="en-AU" xml:lang="en-AU">10/12/2024 No known allergy.</div>
+            <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml" lang="en-AU" xml:lang="en-AU">10/12/2024 No known allergy</div>
           </text>
           <entry>
             <reference value="urn:uuid:9840a67e-3621-470d-9a7c-e559422591f5"/>
@@ -81,7 +81,7 @@
             </coding>
           </code>
           <text>
-            <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml" lang="en-AU" xml:lang="en-AU">14/05/2025 No known current medicines.</div>
+            <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml" lang="en-AU" xml:lang="en-AU">14/05/2025 No known current medicines</div>
           </text>
           <entry>
             <reference value="urn:uuid:0fc878c1-a158-425f-ba08-ea4366fbb4e1"/>
@@ -124,39 +124,39 @@
             <text value="IHI"/>
           </type>
           <system value="http://ns.electronichealth.net.au/id/hi/ihi/1.0"/>
-          <value value="8003608500314661"/>
+          <value value="8003608666976386"/>
         </identifier>
         <name>
           <use value="usual"/>
-          <family value="ROBERTS"/>
-          <given value="Fred"/>
+          <family value="FOREMAN"/>
+          <given value="Caterina"/>
         </name>
         <telecom>
           <system value="phone"/>
-          <value value="0770104622"/>
+          <value value="0370106312"/>
           <use value="work"/>
         </telecom>
         <telecom>
           <system value="phone"/>
-          <value value="0491570158"/>
+          <value value="0491576801"/>
           <use value="mobile"/>
         </telecom>
         <telecom>
           <system value="email"/>
-          <value value="fred.roberts@myownpersonaldomain.com"/>
+          <value value="caterina.foreman@my-own-personal-domain.com"/>
         </telecom>
         <telecom>
           <system value="phone"/>
-          <value value="0770109298"/>
+          <value value="0370109077"/>
           <use value="home"/>
         </telecom>
-        <gender value="male"/>
-        <birthDate value="1961-06-16"/>
+        <gender value="female"/>
+        <birthDate value="1970-07-24"/>
         <address>
-          <line value="33 Southern Cl"/>
-          <city value="Westbrook"/>
-          <state value="QLD"/>
-          <postalCode value="44350"/>
+          <line value="149 Farmer Cnr"/>
+          <city value="Sunshine"/>
+          <state value="VIC"/>
+          <postalCode value="3020"/>
           <country value="AU"/>
       </address>
     </Patient>
@@ -238,7 +238,7 @@
             <text value="Medicare Provider Number"/>
           </type>
           <system value="http://ns.electronichealth.net.au/id/medicare-provider-number"/>
-          <value value="2448311L"/>
+          <value value="2449191X"/>
         </identifier>
         <practitioner>
           <reference value="urn:uuid:f8135a88-5992-4a78-8d9f-6bc3f533292d"/>
@@ -246,28 +246,23 @@
         <code>
           <coding>
             <system value="http://www.abs.gov.au/ausstats/abs@.nsf/mf/1220.0"/>
-            <code value="253111"/>
-            <display value="General Practitioner"/>
-          </coding>
-          <coding>
-            <system value="http://snomed.info/sct"/>
-            <code value="62247001"/>
+            <code value="253917"/>
           </coding>
         </code>
         <specialty>
           <coding>
             <system value="http://snomed.info/sct"/>
-            <code value="408443003"/>
+            <code value="408455009"/>
           </coding>
         </specialty>
         <telecom>
           <system value="phone"/>
-          <value value="0770109261"/>
+          <value value="0370101180"/>
           <use value="work"/>
         </telecom>
         <telecom>
           <system value="email"/>
-          <value value="wyatt.samuels@lochlomondmc.example.net"/>
+          <value value="palmer.burdett@douglasradiology.example.com.au"/>
           <use value="work"/>
         </telecom>
       </PractitionerRole>
@@ -291,26 +286,26 @@
             <text value="HPI-I"/>
           </type>
           <system value="http://ns.electronichealth.net.au/id/hi/hpii/1.0"/>
-          <value value="8003619900051951"/>
+          <value value="8003616566719012"/>
         </identifier>
         <name>
-          <family value="SAMUELS"/>
-          <given value="Wyatt"/>
+          <family value="BURDETT"/>
+          <given value="Palmer"/>
         </name>
         <telecom>
           <system value="phone"/>
-          <value value="0770109261"/>
+          <value value="0370101180"/>
           <use value="work"/>
         </telecom>
         <telecom>
           <system value="email"/>
-          <value value="wyatt.samuels@lochlomondmc.example.net"/>
+          <value value="palmer.burdett@douglasradiology.example.com.au"/>
         </telecom>
         <address>
-          <line value="158 Bay Ct"/>
-          <city value="Loch Lomond"/>
-          <state value="QLD"/>
-          <postalCode value="4370"/>
+          <line value="31 Museum Pde"/>
+          <city value="Douglas"/>
+          <state value="VIC"/>
+          <postalCode value="3401"/>
         </address>
       </Practitioner>
     </resource>
@@ -333,6 +328,7 @@
             <code value="716186003"/>
             <display value="No known allergy"/>
           </coding>
+          <text value="No known allergy"/>
         </code>
         <patient>
           <reference value="urn:uuid:03b8cc8a-df59-4daf-b9f2-8b49d3c7579a"/>
@@ -353,6 +349,7 @@
             <code value="1234391000168107"/>
             <display value="No known current medicines"/>
           </coding>
+          <text value="No known current medicines"/>
         </medicationCodeableConcept>
         <subject>
             <reference value="urn:uuid:03b8cc8a-df59-4daf-b9f2-8b49d3c7579a"/>
@@ -386,6 +383,7 @@
                 <code value="160245001"/>
                 <display value="No current problems or disability"/>
             </coding>
+            <text value="No current problems or disability"/>
         </code>
         <subject>
             <reference value="urn:uuid:03b8cc8a-df59-4daf-b9f2-8b49d3c7579a"/>
