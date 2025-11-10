@@ -33,9 +33,8 @@ This use case demonstrates use of patient summary during step 5. Patient Summary
 1. Attending GP - Dr Wyatt Samuels
 
 #### Systems
-1. Attending GP's CIS
-1. Usual GP's CIS
-1. Smart Health Link Server
+1. Clinic CIS (Attending GP)
+1. Patient Summary Host
 
 ### Precondition(s)
 1. Jeramy has provided consent for his health information to be shared between healthcare providers.
@@ -51,7 +50,7 @@ This use case demonstrates use of patient summary during step 5. Patient Summary
 
 ### Flow
 1. Dr Samuels’ CIS scans the QR code to gain access to the patient summary via the Smart Health Link.
-1. The patient summary is retrieved from a patient summary host system indicated by the Smart Health Link. 
+1. The patient summary is retrieved from a Patient Summary Health system indicated by the Smart Health Link. 
 1. Dr Samuels views the patient summary in the consultation.
 
 #### Sequence Diagram
