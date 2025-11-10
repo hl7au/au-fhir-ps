@@ -55,7 +55,7 @@ This use case demonstrates use of patient summary during step 5. Patient Summary
 
 #### Sequence Diagram
 <div> 
-  <img src="uc-interstate-seq.png" alt="Sequence Diagram" style="width:100%"/>
+  <img src="uc-interstate-seq.png" alt="Sequence Diagram" style="width:800px"/>
 </div>
 *Figure 2: Sequence diagram showing access to a patient summary via Smart Health Link*
 <br/>
