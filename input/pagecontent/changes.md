@@ -34,6 +34,8 @@ This change log documents the significant updates and resolutions implemented fr
   - removed SHOULD:display obligation on Condition.subject.reference for the AU PS Consumer [IPS: FHIR-51258](https://jira.hl7.org/browse/FHIR-51258)
   - changed Condition.code obligation for the AU PS Producer from SHALL:populate-if-known to SHALL:populate [FHIR-52411](https://jira.hl7.org/browse/FHIR-52411)
   - changed Condition.subject obligation for the AU PS Producer from SHALL:populate-if-known to SHALL:populate [FHIR-52411](https://jira.hl7.org/browse/FHIR-52411)
+- [AU PS Consumer ActorDefinition](ActorDefinition-au-ps-actor-consumer.html):  
+  - changed requirement for recommended AU PS Composition sections from SHOULD to SHALL to implement the profiles referenced by Composition.section.entry [FHIR-52345](https://jira.hl7.org/browse/FHIR-52345)
 - [AU PS Encounter](StructureDefinition-au-ps-encounter.html):
   - changed Encounter.serviceType to use CodeableConceptIPS [FHIR-51872](https://jira.hl7.org/browse/FHIR-51872)
   - changed Encounter.participant.type to use CodeableConceptIPS [FHIR-51872](https://jira.hl7.org/browse/FHIR-51872)
