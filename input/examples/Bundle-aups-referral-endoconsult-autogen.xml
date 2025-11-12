@@ -1,0 +1,3248 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Bundle xmlns="http://hl7.org/fhir">
+  <id value="aups-referral-endoconsult-autogen"/>
+  <meta>
+    <profile value="http://hl7.org.au/fhir/ps/StructureDefinition/au-ps-bundle"/>
+  </meta>
+  <identifier>
+    <system value="urn:ietf:rfc:3986"/>
+    <value value="urn:uuid:b1398367-c580-412f-a34e-a09bab5d0bf2"/>
+  </identifier>
+  <type value="document"/>
+  <timestamp value="2024-11-07T10:02:11.269+11:00"/>
+  <entry>
+    <fullUrl value="urn:uuid:ecf18329-b2ae-4648-8888-01aff6dc8172"/>
+    <resource>
+      <Composition>
+        <meta>
+          <profile value="http://hl7.org.au/fhir/ps/StructureDefinition/au-ps-composition"/>
+        </meta>
+        <status value="final"/>
+        <type>
+          <coding>
+            <system value="http://loinc.org"/>
+            <code value="60591-5"/>
+          </coding>
+        </type>
+        <subject>
+          <reference value="urn:uuid:85822a88-55b1-460c-bb7b-e8fc22d8568f"/>
+        </subject>
+        <date value="2024-11-07T10:02:10.868+11:00"/>
+        <author>
+          <reference value="urn:uuid:40c3b2a7-e673-4f83-8dd8-2b112a88775e"/>
+        </author>
+        <title value="Patient Summary for Joyce Johnson as of 07 NOV 2024"/>
+        <custodian>
+          <reference value="urn:uuid:14292353-98f0-43b3-a25b-406baf3f9175"/>
+        </custodian>
+        <event>
+          <code>
+            <coding>
+              <system value="http://terminology.hl7.org/CodeSystem/v3-ActClass"/>
+              <code value="PCPR"/>
+            </coding>
+          </code>
+          <period>
+            <end value="2024-11-07T10:02:10+11:00"/>
+          </period>
+        </event>
+        <section>
+          <title value="Allergies and Intolerances"/>
+          <code>
+            <coding>
+              <system value="http://loinc.org"/>
+              <code value="48765-2"/>
+            </coding>
+          </code>
+          <text>
+            <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml">
+              <table border="1">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Substance</th>
+                    <th>Date/time of onset of first reaction</th>
+                    <th>Manifestation</th>
+                    <th>Severity of reaction</th>
+                    <th>Comment</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>Allergy</td>
+                    <td>Prawns</td>
+                    <td>18:50 02/11/2024</td>
+                    <td>Itchy throat</td>
+                    <td>Mild</td>
+                    <td>Pt stated had prawns with dinner and noticed itchy throat, never experienced this before</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </text>
+          <entry>
+            <reference value="urn:uuid:f7bd83e4-2a4e-40be-8467-8a29b667ef46"/>
+          </entry>
+        </section>
+        <section>
+          <title value="Medication Summary"/>
+          <code>
+            <coding>
+              <system value="http://loinc.org"/>
+              <code value="10160-0"/>
+            </coding>
+          </code>
+          <text>
+            <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml">
+              <table border="1">
+                <thead>
+                  <tr>
+                    <th>Medicine</th>
+                    <th>Dose</th>
+                    <th>Clinical Indication</th>
+                    <th>Status</th>
+                    <th>Last Updated</th>
+                    <th>Comment</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>Prenatal vitamins</td>
+                    <td>1 tablet daily</td>
+                    <td>Pregnancy</td>
+                    <td>Active</td>
+                    <td>28/10/2024</td>
+                    <td>Pt prefers Blackmores</td>
+                  </tr>
+                  <tr>
+                    <td>Insulin (Humulin N)</td>
+                    <td>10 units subcutaneously in the morning and evening</td>
+                    <td>Gestational diabetes</td> 
+                    <td>Active</td>
+                    <td>28/10/2024</td>
+                    <td/>
+                  </tr>
+                  <tr>
+                    <td>Insulin (Humulin R)</td>
+                    <td>5 units subcutaneously before each meal</td>
+                    <td>Gestational diabetes</td> 
+                    <td>Active</td>
+                    <td>28/10/2024</td>
+                    <td/>
+                  </tr>
+                  <tr>
+                    <td>Metformin</td>
+                    <td>500mg twice daily</td>
+                    <td>Gestational diabetes</td> 
+                    <td>Active</td>
+                    <td>28/10/2024</td>
+                    <td/>
+                  </tr>
+                  <tr>
+                    <td>Nitrofurantoin</td>
+                    <td>100mg 6-hourly for 5 days</td>
+                    <td>Urinary tract infection (UTI)</td>
+                    <td>Active</td>
+                    <td>04/11/2024</td>
+                    <td/>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </text>
+          <entry>
+            <reference value="urn:uuid:7193cc2f-d03e-42cb-ab55-4130904505d5"/>
+          </entry>
+          <entry>
+            <reference value="urn:uuid:1c4dd2b6-a9ee-4ba3-9b37-c1aff277c417"/>
+          </entry>
+          <entry>
+            <reference value="urn:uuid:166c2afe-c6fb-4928-88f0-1c1a1e5e65cd"/>
+          </entry>
+          <entry>
+            <reference value="urn:uuid:05292a9c-2bc9-43a7-b935-0a61ede063da"/>
+          </entry>
+          <entry>
+            <reference value="urn:uuid:cbe37f4b-e84b-4f34-8490-f21da27f1aa9"/>
+          </entry>
+        </section>
+        <section>
+          <title value="Problem list"/>
+          <code>
+            <coding>
+              <system value="http://loinc.org"/>
+              <code value="11450-4"/>
+            </coding>
+          </code>
+          <text>
+            <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml">
+              <table border="1">
+                <thead>
+                  <tr>
+                    <th>Problem/Diagnosis</th>
+                    <th>Status</th>
+                    <th>Comment</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>Gestational diabetes</td>
+                    <td>Active</td>
+                    <td>Recent diagnosis, referring to Endo &amp; Dietitian</td>
+                  </tr>
+                  <tr>
+                    <td>Anaemia</td>
+                    <td>Active</td>
+                    <td/>
+                  </tr>
+                  <tr>
+                    <td>Urinary tract infection (UTI)</td>
+                    <td>Active</td>
+                    <td>Patient reported symptoms of UTI. MSU to confirm</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </text>
+          <entry>
+            <reference value="urn:uuid:cb647933-b18c-42ef-a1c8-ae137921ba83"/>
+          </entry>
+          <entry>
+            <reference value="urn:uuid:78f75926-3ee1-44a7-9424-6178d905af63"/>
+          </entry>
+          <entry>
+            <reference value="urn:uuid:07034a67-66ce-4d29-95ab-1ef7e964a873"/>
+          </entry>
+        </section>
+        <section>
+          <title value="History of Immunizations"/>
+          <code>
+            <coding>
+              <system value="http://loinc.org"/>
+              <code value="11369-6"/>
+            </coding>
+          </code>
+          <text>
+            <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml">
+              <table border="1">
+                <thead>
+                  <tr>
+                    <th>Vaccine</th>
+                    <th>Date of administration</th>
+                    <th>Comment</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>Diphtheria + tetanus + pertussis 5 component adolescent/adult vaccine injection, 0.5 mL syringe</td>
+                    <td>05/10/2024</td>
+                    <td/>
+                  </tr>
+                  <tr>
+                    <td>Influenza vaccine</td>
+                    <td>05/05/2024</td>
+                    <td/>
+                  </tr>
+                  <tr>
+                    <td>Influenza vaccine</td>
+                    <td>15/05/2023</td>
+                    <td>Pt reported localised redness and swelling post previous flu vax last year. Monitor for rxn.</td>
+                  </tr>
+                  <tr>
+                    <td>COVID-19 mRNA-1273 Vaccine (Moderna) injection, 0.5 mL syringe</td>
+                    <td>15/05/2023</td>
+                    <td/>
+                  </tr>
+                  <tr>
+                    <td>Influenza vaccine</td>
+                    <td>01/06/2022</td>
+                    <td/>
+                  </tr>
+                  <tr>
+                    <td>Covid vaccine - Pfizer</td>
+                    <td>02/02/2022</td>
+                    <td/>
+                  </tr>
+                  <tr>
+                    <td>Covid vaccine - Pfizer</td>
+                    <td>20/07/2021</td>
+                    <td/>
+                  </tr>
+                  <tr>
+                    <td>Influenza vaccine</td>
+                    <td>17/05/2021</td>
+                    <td/>
+                  </tr>
+                  <tr>
+                    <td>Covid vaccine - Pfizer</td>
+                    <td>27/04/2021</td>
+                    <td/>
+                  </tr>
+                  <tr>
+                    <td>Influenza vaccine</td>
+                    <td>03/05/2020</td>
+                    <td/>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </text>
+          <entry>
+            <reference value="urn:uuid:784ae7d5-22df-442d-b932-0c001720136c"/>
+          </entry>
+          <entry>
+            <reference value="urn:uuid:46624cc1-7d2e-4367-aa82-85d097ac423f"/>
+          </entry>
+          <entry>
+            <reference value="urn:uuid:5711e015-890f-489d-9f8f-49d9a7ff95cd"/>
+          </entry>
+          <entry>
+            <reference value="urn:uuid:97767fb5-3be7-4d16-9ee8-76c47a4ab0ce"/>
+          </entry>
+          <entry>
+            <reference value="urn:uuid:62eb70e3-e814-4785-80d3-8aa45b1fc367"/>
+          </entry>
+          <entry>
+            <reference value="urn:uuid:fac8c42e-4d2a-4cf5-bcc6-831c60e8230e"/>
+          </entry>
+          <entry>
+            <reference value="urn:uuid:40a0b552-b0ea-4283-b33e-a5d2e26ed20f"/>
+          </entry>
+          <entry>
+            <reference value="urn:uuid:2f3537b2-f50c-4a2a-ab92-30fdcfe5fd96"/>
+          </entry>
+          <entry>
+            <reference value="urn:uuid:eb1f812e-41c6-4f8d-b9de-573428a94994"/>
+          </entry>
+          <entry>
+            <reference value="urn:uuid:c4e7d351-cd85-435d-9fa5-2db04108651f"/>
+          </entry>
+        </section>
+        <section>
+          <title value="Past Medical History (Problems)"/>
+          <code>
+            <coding>
+              <system value="http://loinc.org"/>
+              <code value="11348-0"/>
+            </coding>
+          </code>
+          <text>
+            <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml">
+              <table border="1">
+                <thead>
+                  <tr>
+                    <th>Problem/Diagnosis</th>
+                    <th>Status</th>
+                    <th>Onset Date</th>
+                    <th>Date of Resolution</th>
+                    <th>Comment</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>Appendicitis</td>
+                    <td>Resolved</td>
+                    <td>03/2000</td>
+                    <td/>
+                    <td/>
+                  </tr>
+                  <tr>
+                    <td>Upper respiratory tract infection</td>
+                    <td>Resolved</td>
+                    <td>10/2022</td>
+                    <td>03/11/2022</td>
+                    <td/>
+                  </tr>
+                  <tr>
+                    <td>First degree burn, Upper shoulders and back</td>
+                    <td>Resolved</td>
+                    <td>02/01/2005</td>
+                    <td/>
+                    <td>Severe sunburn, upper shoulders and back</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </text>
+          <entry>
+            <reference value="urn:uuid:289aff01-0b3e-4614-aee8-378d074fc3d2"/>
+          </entry>
+          <entry>
+            <reference value="urn:uuid:e6db9bbe-60c3-4f89-8f65-25c58771fe41"/>
+          </entry>
+          <entry>
+            <reference value="urn:uuid:dc422222-8b3a-4dd5-96b5-b7e0cf43b477"/>
+          </entry>
+        </section>
+        <section>
+          <title value="Pregnancy Information"/>
+          <code>
+            <coding>
+              <system value="http://loinc.org"/>
+              <code value="10162-6"/>
+            </coding>
+          </code>
+          <text>
+            <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml">Pregnancy confirmed 12/06/2024. Estimated Date of Delivery  03/02/2025.</div>
+          </text>
+          <entry>
+            <reference value="urn:uuid:f85ad223-7bed-46f3-893d-e89d6082f9a9"/>
+          </entry>
+        </section>
+        <section>
+          <title value="Result History"/>
+          <code>
+            <coding>
+              <system value="http://loinc.org"/>
+              <code value="30954-2"/>
+            </coding>
+          </code>
+          <text>
+            <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml">
+<table border="1">
+<thead>
+<tr>
+<th>Test Name</th>
+<th>Test Result</th>
+<th>Date</th>
+</tr>
+</thead>
+<tbody>
+<tr><td>Urine M/C/S - pH</td><td>7</td><td>05/11/2024</td></tr>
+<tr><td>Urine M/C/S - Protein</td><td>Positive</td><td>05/11/2024</td></tr>
+<tr><td>Urine M/C/S - Blood</td><td>Positive</td><td>05/11/2024</td></tr>
+<tr><td>Urine M/C/S - Glucose</td><td>Positive</td><td>05/11/2024</td></tr>
+<tr><td>Urine M/C/S - Leucocytes</td><td>370  x 10^6/L  (&lt;10)</td><td>05/11/2024</td></tr>
+<tr><td>Urine M/C/S - Erythrocytes</td><td>150 x 10^6/L  (&lt;10)</td><td>05/11/2024</td></tr>
+<tr><td>Urine M/C/S - Epithelial cells</td><td>Nil</td><td>05/11/2024</td></tr>
+<tr><td>Urine M/C/S - Culture</td><td>Org 1: Escherichia coli &gt; 10^8  Organisms/mL</td><td>05/11/2024</td></tr><tr><td>Urine M/C/S - Antimicrobial susceptibility</td><td style="white-space: pre-line;">Org 1
+Amp/Amoxycillin: Susceptible
+Amox/clav. acid: Susceptible
+Cephalexin: Susceptible
+Trimethoprim: Susceptible
+Nitrofurantoin: Susceptible
+Gentamicin: Susceptible
+Norfloxacin: Susceptible</td><td>05/11/2024</td></tr>
+<tr>
+<td>Glucose Tolerance Test (GTT) Fasting</td>
+<td>5.3 mmol/L</td>
+<td>21/10/2024</td>
+</tr>
+<tr>
+<td>Glucose Tolerance Test (GTT) 1 hour</td>
+<td>10.0 mmol/L</td>
+<td>21/10/2024</td>
+</tr>
+<tr>
+<td>Glucose Tolerance Test (GTT) 2 hour</td>
+<td>8.6 mmol/L</td>
+<td>21/10/2024</td>
+</tr>
+<tr>
+<td>Haemoglobin A1c</td>
+<td>5.8 %</td>
+<td>14/06/2024</td>
+</tr>
+<tr><td>Full Blood Count -  Haemoglobin</td><td>125  g/L (115-165)</td><td>12/06/2024</td></tr>
+<tr><td>Full Blood Count -  Haematocrit</td><td>0.37  L/L (0.37-0.51)</td><td>12/06/2024</td></tr>
+<tr><td>Full Blood Count -  White Blood Cell Count</td><td>8 x 10^9/L (4.0-11.0)</td><td>12/06/2024</td></tr>
+<tr><td>Full Blood Count -  Platelets</td><td>250 x 10^9/L (150-400)</td><td>12/06/2024</td></tr>
+<tr><td>Full Blood Count - MCV</td><td>85 fL (80-100)</td><td>12/06/2024</td></tr>
+<tr><td>HCG</td><td>16000 IU/L</td><td>12/06/2024</td></tr>
+<tr><td>Urinalysis -  Colour</td><td>Light yellow colour</td><td>03/06/2024</td></tr>
+<tr><td>Urinalysis -  Clarity</td><td>Clear</td><td>03/06/2024</td></tr>
+<tr><td>Urinalysis -  pH</td><td>6</td><td>03/06/2024</td></tr>
+<tr><td>Urinalysis -  Specific Gravity</td><td>1.02</td><td>03/06/2024</td></tr>
+<tr><td>Urinalysis -  Protein</td><td>Negative</td><td>03/06/2024</td></tr>
+<tr><td>Urinalysis -  Glucose</td><td>Negative</td><td>03/06/2024</td></tr>
+<tr><td>Urinalysis -  Ketones</td><td>Negative</td><td>03/06/2024</td></tr>
+<tr><td>Urinalysis -  Nitrites</td><td>Negative</td><td>03/06/2024</td></tr>
+<tr><td>Urinalysis -  Leukocyte Esterase</td><td>Negative</td><td>03/06/2024</td></tr>
+</tbody>
+</table>
+</div>
+          </text>
+          <entry>
+            <reference value="urn:uuid:5f1b9790-4892-4af3-9b76-3cb4f854a5b1"/>
+          </entry>
+          <entry>
+            <reference value="urn:uuid:1bbd2e05-161d-4030-975c-0cca3ef97cdb"/>
+          </entry>
+          <entry>
+            <reference value="urn:uuid:27060cbf-e30e-4091-bd64-7d4ef40916ac"/>
+          </entry>
+          <entry>
+            <reference value="urn:uuid:fc061f59-5410-41e9-945e-3f59664e8611"/>
+          </entry>
+          <entry>
+            <reference value="urn:uuid:bf094219-4a9b-4184-ae36-0743f93a41ef"/>
+          </entry>
+          <entry>
+            <reference value="urn:uuid:f8bbeb04-f3bc-452d-9975-abd1caf12d62"/>
+          </entry>
+          <entry>
+            <reference value="urn:uuid:1a506b54-9462-46bf-a266-2d51acbc64ff"/>
+          </entry>
+          <entry>
+            <reference value="urn:uuid:8a394aa6-8527-4535-9c68-35cf315232fb"/>
+          </entry>
+          <entry>
+            <reference value="urn:uuid:c967c04f-d89d-4266-b4bf-029bc86501ab"/>
+          </entry>
+          <entry>
+            <reference value="urn:uuid:d8358a54-f0f3-4457-ae78-b253ea57a4a6"/>
+          </entry>
+          <entry>
+            <reference value="urn:uuid:755dc0b4-a796-4a01-ba27-5e6f4098a519"/>
+          </entry>
+          <entry>
+            <reference value="urn:uuid:beeded39-c3f2-46bc-80b9-86ea74c2be11"/>
+          </entry>
+          <entry>
+            <reference value="urn:uuid:98d97917-eeae-4158-9d25-416420c5828f"/>
+          </entry>
+          <entry>
+            <reference value="urn:uuid:714eea46-2561-4b07-8881-f20134abf224"/>
+          </entry>
+          <entry>
+            <reference value="urn:uuid:855789e2-18be-43e2-a8a0-402d525202dd"/>
+          </entry>
+          <entry>
+            <reference value="urn:uuid:70fa03d7-27bf-46ff-bbad-8fabe4d90901"/>
+          </entry>
+          <entry>
+            <reference value="urn:uuid:8c083358-32cf-47b8-9885-4671f55d132c"/>
+          </entry>
+          <entry>
+            <reference value="urn:uuid:900d6181-0c2c-4f33-b1e6-51c21d59bb49"/>
+          </entry>
+          <entry>
+            <reference value="urn:uuid:049d8e10-c075-41cf-ab74-78438373b95f"/>
+          </entry>
+          <entry>
+            <reference value="urn:uuid:92b3e48e-c00b-4a3c-b256-52aced6d52d2"/>
+          </entry>
+          <entry>
+            <reference value="urn:uuid:69adb034-1cb7-46fb-9725-633ea913491f"/>
+          </entry>
+          <entry>
+            <reference value="urn:uuid:bee00ec5-b2df-445c-95a9-482db09aab28"/>
+          </entry>
+          <entry>
+            <reference value="urn:uuid:f0eb1dda-eea3-4272-92e2-b9ac91a14543"/>
+          </entry>
+          <entry>
+            <reference value="urn:uuid:1b99e170-74fc-4007-89bc-c6a091bea2d1"/>
+          </entry>
+          <entry>
+            <reference value="urn:uuid:5579d9f3-88a9-4339-9662-5431d707288b"/>
+          </entry>
+          <entry>
+            <reference value="urn:uuid:1cc93219-c1a2-44dc-9683-33559b3af9fc"/>
+          </entry>
+          <entry>
+            <reference value="urn:uuid:03e92f38-81e2-4c93-98c7-a581ecf8f56f"/>
+          </entry>
+          <entry>
+            <reference value="urn:uuid:9e30eb5c-b907-4e39-b25f-9bba4f09f79e"/>
+          </entry>
+          <entry>
+            <reference value="urn:uuid:775fd6d4-c7ab-48cd-8e30-3a04f415633b"/>
+          </entry>
+          <entry>
+            <reference value="urn:uuid:afa66cf9-c360-4655-88a1-adf24684b749"/>
+          </entry>
+          <entry>
+            <reference value="urn:uuid:3ede83be-9b70-415e-a354-b23a66e6c67c"/>
+          </entry>
+          <entry>
+            <reference value="urn:uuid:c33cd78a-e5a9-40c2-8431-cc92c8638e8e"/>
+          </entry>
+          <entry>
+            <reference value="urn:uuid:3706b230-5e87-4da4-b727-1bc44d6f50df"/>
+          </entry>
+          <entry>
+            <reference value="urn:uuid:996486b5-3eea-413f-b67d-2ade13cb22b4"/>
+          </entry>
+          <entry>
+            <reference value="urn:uuid:a0807ad8-f160-4d27-92d0-f4ee87a63e49"/>
+          </entry>
+        </section>
+        <section>
+          <title value="Social History"/>
+          <code>
+            <coding>
+              <system value="http://loinc.org"/>
+              <code value="29762-2"/>
+            </coding>
+          </code>
+          <text>
+            <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml">Lifetime non-smoker 28/10/2024</div>
+          </text>
+          <entry>
+            <reference value="urn:uuid:8924f910-53b3-4125-b0f2-58d0068f8983"/>
+          </entry>
+        </section>
+      </Composition>
+    </resource>
+  </entry>
+  <entry>
+    <fullUrl value="urn:uuid:85822a88-55b1-460c-bb7b-e8fc22d8568f"/>
+    <resource>
+      <Patient>
+        <meta>
+          <profile value="http://hl7.org.au/fhir/ps/StructureDefinition/au-ps-patient"/>
+        </meta>
+        <extension url="http://hl7.org.au/fhir/StructureDefinition/indigenous-status">
+          <valueCoding>
+            <system value="https://healthterminologies.gov.au/fhir/CodeSystem/australian-indigenous-status-1"/>
+            <code value="4"/>
+            <display value="Neither Aboriginal nor Torres Strait Islander origin"/>
+          </valueCoding>
+        </extension>
+        <identifier>
+          <type>
+            <coding>
+              <system value="http://terminology.hl7.org/CodeSystem/v2-0203"/>
+              <code value="NI"/>
+            </coding>
+            <text value="IHI"/>
+          </type>
+          <system value="http://ns.electronichealth.net.au/id/hi/ihi/1.0"/>
+          <value value="8003608500314679"/>
+        </identifier>
+        <identifier>
+          <type>
+            <coding>
+              <system value="http://terminology.hl7.org/CodeSystem/v2-0203"/>
+              <code value="MC"/>
+            </coding>
+            <text value="Medicare Number"/>
+          </type>
+          <system value="http://ns.electronichealth.net.au/id/medicare-number"/>
+          <value value="29545401611"/>
+        </identifier>
+        <name>
+          <family value="JOHNSON"/>
+          <given value="Joyce"/>
+        </name>
+        <telecom>
+          <system value="phone"/>
+          <value value="0270108012"/>
+          <use value="home"/>
+        </telecom>
+        <telecom>
+          <system value="phone"/>
+          <value value="0491571804"/>
+          <use value="mobile"/>
+        </telecom>
+        <gender value="female"/>
+        <birthDate value="1985-02-06"/>
+        <address>
+          <line value="139 River Lane"/>
+          <city value="Palmvale"/>
+          <state value="NSW"/>
+          <postalCode value="2484"/>
+          <country value="AU"/>
+        </address>
+        <generalPractitioner>
+          <reference value="urn:uuid:afead11c-3bee-4020-af4f-44040abfa961"/>
+        </generalPractitioner>
+      </Patient>
+    </resource>
+  </entry>
+  <entry>
+    <fullUrl value="urn:uuid:f7bd83e4-2a4e-40be-8467-8a29b667ef46"/>
+    <resource>
+      <AllergyIntolerance>
+        <meta>
+          <profile value="http://hl7.org.au/fhir/ps/StructureDefinition/au-ps-allergyintolerance"/>
+        </meta>
+        <clinicalStatus>
+          <coding>
+            <system value="http://terminology.hl7.org/CodeSystem/allergyintolerance-clinical"/>
+            <code value="active"/>
+            <display value="Active"/>
+          </coding>
+        </clinicalStatus>
+        <verificationStatus>
+          <coding>
+            <system value="http://terminology.hl7.org/CodeSystem/allergyintolerance-verification"/>
+            <code value="unconfirmed"/>
+            <display value="Unconfirmed"/>
+          </coding>
+        </verificationStatus>
+        <type value="allergy"/>
+        <code>
+          <coding>
+            <system value="http://snomed.info/sct"/>
+            <code value="227151004"/>
+            <display value="Prawns"/>
+          </coding>
+          <text value="Prawns"/>
+        </code>
+        <patient>
+          <reference value="urn:uuid:85822a88-55b1-460c-bb7b-e8fc22d8568f"/>
+        </patient>
+        <onsetDateTime value="2024-11-02T18:50:00+11:00"/>
+        <recordedDate value="2024-11-04"/>
+        <note>
+          <text value="Pt stated had prawns with dinner and noticed itchy throat, never experienced this before"/>
+        </note>
+        <reaction>
+          <manifestation>
+            <text value="Itchy throat"/>
+          </manifestation>
+          <severity value="mild"/>
+        </reaction>
+      </AllergyIntolerance>
+    </resource>
+  </entry>
+  <entry>
+    <fullUrl value="urn:uuid:cbe37f4b-e84b-4f34-8490-f21da27f1aa9"/>
+    <resource>
+      <MedicationStatement>
+        <meta>
+          <profile value="http://hl7.org.au/fhir/ps/StructureDefinition/au-ps-medicationstatement"/>
+        </meta>
+        <contained>
+          <Medication>
+            <id value="nitrofurantoin"/>
+            <meta>
+              <profile value="http://hl7.org.au/fhir/ps/StructureDefinition/au-ps-medication"/>
+            </meta>
+            <code>
+              <coding>
+                <system value="http://snomed.info/sct"/>
+                <code value="85343003"/>
+                <display value="Nitrofurantoin"/>
+              </coding>
+              <text value="Nitrofurantoin"/>
+            </code>
+            <form>
+              <coding>
+                <system value="http://snomed.info/sct"/>
+                <code value="420692007"/>
+                <display value="Capsule"/>
+              </coding>
+              <text value="Capsule"/>
+            </form>
+          </Medication>
+        </contained>
+        <status value="active"/>
+        <medicationReference>
+          <reference value="#nitrofurantoin"/>
+        </medicationReference>
+        <subject>
+          <reference value="urn:uuid:85822a88-55b1-460c-bb7b-e8fc22d8568f"/>
+        </subject>
+        <effectivePeriod>
+          <start value="2024-11-04"/>
+        </effectivePeriod>
+        <dateAsserted value="2024-11-04"/>
+        <reasonReference>
+          <reference value="urn:uuid:07034a67-66ce-4d29-95ab-1ef7e964a873"/>
+        </reasonReference>
+        <dosage>
+          <text value="100mg 6-hourly for 5 days"/>
+          <timing>
+            <repeat>
+              <boundsDuration>
+                <value value="5"/>
+                <system value="http://unitsofmeasure.org"/>
+                <code value="d"/>
+              </boundsDuration>
+              <frequency value="1"/>
+              <period value="6"/> 
+              <periodUnit value="h"/> 
+            </repeat>
+          </timing>
+          <route>
+            <coding>
+              <system value="http://snomed.info/sct"/>
+              <code value="26643006"/>
+              <display value="Oral route"/>
+            </coding>
+            <text value="Oral route"/>
+          </route>
+        </dosage>
+      </MedicationStatement>
+    </resource>
+  </entry>
+  <entry>
+    <fullUrl value="urn:uuid:05292a9c-2bc9-43a7-b935-0a61ede063da"/>
+    <resource>
+      <MedicationStatement>
+        <meta>
+          <profile value="http://hl7.org.au/fhir/ps/StructureDefinition/au-ps-medicationstatement"/>
+        </meta>
+        <contained>
+          <Medication>
+            <id value="metformin"/>
+            <meta>
+              <profile value="http://hl7.org.au/fhir/ps/StructureDefinition/au-ps-medication"/>
+            </meta>
+            <code>
+              <coding>
+                <system value="http://snomed.info/sct"/>
+                <code value="109081006"/>
+                <display value="Product containing metformin (medicinal product)"/>
+              </coding>
+              <text value="Metformin"/>
+            </code>
+            <form>
+              <coding>
+                <system value="http://snomed.info/sct"/>
+                <code value="421026006"/>
+                <display value="Tablet"/>
+              </coding>
+              <text value="Tablet"/>
+            </form>
+          </Medication>
+        </contained>
+        <status value="active"/>
+        <medicationReference>
+          <reference value="#metformin"/>
+        </medicationReference>
+        <subject>
+          <reference value="urn:uuid:85822a88-55b1-460c-bb7b-e8fc22d8568f"/>
+        </subject>
+        <effectivePeriod>
+          <start value="2024"/>
+        </effectivePeriod>
+        <dateAsserted value="2024-10-24"/>
+        <reasonReference>
+          <reference value="urn:uuid:cb647933-b18c-42ef-a1c8-ae137921ba83"/>
+        </reasonReference>
+        <dosage>
+          <text value="500mg twice daily"/>
+          <timing>
+            <repeat>
+              <frequency value="2"/>
+              <period value="1"/>
+              <periodUnit value="d"/>
+            </repeat>
+          </timing>
+          <route>
+            <coding>
+              <system value="http://snomed.info/sct"/>
+              <code value="26643006"/>
+              <display value="Oral route"/>
+            </coding>
+            <text value="Oral route"/>
+          </route>
+        </dosage>
+      </MedicationStatement>
+    </resource>
+  </entry>
+  <entry>
+    <fullUrl value="urn:uuid:166c2afe-c6fb-4928-88f0-1c1a1e5e65cd"/>
+    <resource>
+      <MedicationStatement>
+        <meta>
+          <profile value="http://hl7.org.au/fhir/ps/StructureDefinition/au-ps-medicationstatement"/>
+        </meta>
+        <status value="active"/>
+        <medicationCodeableConcept>
+          <text value="Prenatal vitamins"/>
+        </medicationCodeableConcept>
+        <subject>
+          <reference value="urn:uuid:85822a88-55b1-460c-bb7b-e8fc22d8568f"/>
+        </subject>
+        <effectivePeriod>
+          <start value="2024"/>
+        </effectivePeriod>
+        <dateAsserted value="2024-10-24"/>
+        <reasonCode>
+            <coding>
+              <system value="http://snomed.info/sct"/>
+              <code value="77386006"/>
+              <display value="Pregnant"/>
+            </coding>
+            <text value="Pregnancy"/>
+        </reasonCode>
+        <note>
+          <text value="Pt prefers Blackmores"/>
+        </note>
+        <dosage>
+          <text value="1 tablet daily"/>
+          <route>
+            <coding>
+              <system value="http://snomed.info/sct"/>
+              <code value="26643006"/>
+              <display value="Oral route"/>
+            </coding>
+            <text value="Oral route"/>
+          </route>
+        </dosage>
+      </MedicationStatement>
+    </resource>
+  </entry>
+  <entry>
+    <fullUrl value="urn:uuid:7193cc2f-d03e-42cb-ab55-4130904505d5"/>
+    <resource>
+      <MedicationStatement>
+        <meta>
+          <profile value="http://hl7.org.au/fhir/ps/StructureDefinition/au-ps-medicationstatement"/>
+        </meta>
+        <status value="active"/>
+        <medicationCodeableConcept>
+          <text value="Insulin (Humulin N)"/>
+        </medicationCodeableConcept>
+        <subject>
+          <reference value="urn:uuid:85822a88-55b1-460c-bb7b-e8fc22d8568f"/>
+        </subject>
+        <effectivePeriod>
+          <start value="2024"/>
+        </effectivePeriod>
+        <dateAsserted value="2024-10-24"/>
+        <reasonReference>
+          <reference value="urn:uuid:cb647933-b18c-42ef-a1c8-ae137921ba83"/>
+        </reasonReference>
+        <dosage>
+          <text value="10 units subcutaneously in the morning and evening"/>
+        </dosage>
+      </MedicationStatement>
+    </resource>
+  </entry>
+  <entry>
+    <fullUrl value="urn:uuid:1c4dd2b6-a9ee-4ba3-9b37-c1aff277c417"/>
+    <resource>
+      <MedicationStatement>
+        <meta>
+          <profile value="http://hl7.org.au/fhir/ps/StructureDefinition/au-ps-medicationstatement"/>
+        </meta>
+        <status value="active"/>
+        <medicationCodeableConcept>
+          <text value="Insulin (Humulin R)"/>
+        </medicationCodeableConcept>
+        <subject>
+          <reference value="urn:uuid:85822a88-55b1-460c-bb7b-e8fc22d8568f"/>
+        </subject>
+        <effectivePeriod>
+          <start value="2024"/>
+        </effectivePeriod>
+        <dateAsserted value="2024-10-24"/>
+        <reasonReference>
+          <reference value="urn:uuid:cb647933-b18c-42ef-a1c8-ae137921ba83"/>
+        </reasonReference>
+        <dosage>
+          <text value="5 units subcutaneously before each meal"/>
+        </dosage>
+      </MedicationStatement>
+    </resource>
+  </entry>
+  <entry>
+    <fullUrl value="urn:uuid:cb647933-b18c-42ef-a1c8-ae137921ba83"/>
+    <resource>
+      <Condition>
+        <meta>
+          <profile value="http://hl7.org.au/fhir/ps/StructureDefinition/au-ps-condition"/>
+        </meta>
+        <clinicalStatus>
+          <coding>
+            <system value="http://terminology.hl7.org/CodeSystem/condition-clinical"/>
+            <code value="active"/>
+          </coding>
+        </clinicalStatus>
+        <category>
+          <coding>
+            <system value="http://terminology.hl7.org/CodeSystem/condition-category"/>
+            <code value="problem-list-item"/>
+          </coding>
+          <text value="Problem"/>
+        </category>
+        <code>
+          <coding>
+            <system value="http://snomed.info/sct"/>
+            <code value="11687002"/>
+            <display value="Gestational diabetes mellitus"/>
+          </coding>
+          <text value="Gestational diabetes"/>
+        </code>
+        <subject>
+          <reference value="urn:uuid:85822a88-55b1-460c-bb7b-e8fc22d8568f"/>
+        </subject>
+        <note>
+          <text value="Recent diagnosis, referring to Endo &amp; Dietitian"/>
+        </note>
+      </Condition>
+    </resource>
+  </entry>
+  <entry>
+    <fullUrl value="urn:uuid:07034a67-66ce-4d29-95ab-1ef7e964a873"/>
+    <resource>
+      <Condition>
+        <meta>
+          <profile value="http://hl7.org.au/fhir/ps/StructureDefinition/au-ps-condition"/>
+        </meta>
+        <clinicalStatus>
+          <coding>
+            <system value="http://terminology.hl7.org/CodeSystem/condition-clinical"/>
+            <code value="active"/>
+          </coding>
+        </clinicalStatus>
+        <verificationStatus>
+          <coding>
+            <system value="http://terminology.hl7.org/CodeSystem/condition-ver-status"/>
+            <code value="provisional"/>
+          </coding>
+        </verificationStatus>
+        <category>
+          <coding>
+            <system value="http://terminology.hl7.org/CodeSystem/condition-category"/>
+            <code value="problem-list-item"/>
+          </coding>
+          <text value="Problem"/>
+        </category>
+        <code>
+          <coding>
+            <system value="http://snomed.info/sct"/>
+            <code value="68566005"/>
+            <display value="Urinary tract infection"/>
+          </coding>
+          <text value="Urinary tract infection (UTI)"/>
+        </code>
+        <subject>
+          <reference value="urn:uuid:85822a88-55b1-460c-bb7b-e8fc22d8568f"/>
+        </subject>
+        <note>
+          <text value="Patient reported symptoms of UTI. MSU to confirm."/>
+        </note>
+      </Condition>
+    </resource>
+  </entry>
+  <entry>
+    <fullUrl value="urn:uuid:78f75926-3ee1-44a7-9424-6178d905af63"/>
+    <resource>
+      <Condition>
+        <meta>
+          <profile value="http://hl7.org.au/fhir/ps/StructureDefinition/au-ps-condition"/>
+        </meta>
+        <clinicalStatus>
+          <coding>
+            <system value="http://terminology.hl7.org/CodeSystem/condition-clinical"/>
+            <code value="active"/>
+          </coding>
+        </clinicalStatus>
+        <category>
+          <coding>
+            <system value="http://terminology.hl7.org/CodeSystem/condition-category"/>
+            <code value="problem-list-item"/>
+          </coding>
+          <text value="Problem"/>
+        </category>
+        <code>
+          <coding>
+            <system value="http://snomed.info/sct"/>
+            <code value="271737000"/>
+            <display value="Anaemia"/>
+          </coding>
+          <text value="Anaemia"/>
+        </code>
+        <subject>
+          <reference value="urn:uuid:85822a88-55b1-460c-bb7b-e8fc22d8568f"/>
+        </subject>
+      </Condition>
+    </resource>
+  </entry>
+  <entry>
+    <fullUrl value="urn:uuid:289aff01-0b3e-4614-aee8-378d074fc3d2"/>
+    <resource>
+      <Condition>
+        <meta>
+          <profile value="http://hl7.org.au/fhir/ps/StructureDefinition/au-ps-condition"/>
+        </meta>
+        <clinicalStatus>
+          <coding>
+            <system value="http://terminology.hl7.org/CodeSystem/condition-clinical"/>
+            <code value="resolved"/>
+          </coding>
+        </clinicalStatus>
+        <category>
+          <coding>
+            <system value="http://terminology.hl7.org/CodeSystem/condition-category"/>
+            <code value="problem-list-item"/>
+          </coding>
+          <text value="Problem"/>
+        </category>
+        <code>
+          <coding>
+            <system value="http://snomed.info/sct"/>
+            <code value="74400008"/>
+            <display value="Appendicitis"/>
+          </coding>
+          <text value="Appendicitis"/>
+        </code>
+        <subject>
+          <reference value="urn:uuid:85822a88-55b1-460c-bb7b-e8fc22d8568f"/>
+        </subject>
+        <onsetDateTime value="2000-03"/>
+      </Condition>
+    </resource>
+  </entry>
+  <entry>
+    <fullUrl value="urn:uuid:e6db9bbe-60c3-4f89-8f65-25c58771fe41"/>
+    <resource>
+      <Condition>
+        <meta>
+          <profile value="http://hl7.org.au/fhir/ps/StructureDefinition/au-ps-condition"/>
+        </meta>
+        <clinicalStatus>
+          <coding>
+            <system value="http://terminology.hl7.org/CodeSystem/condition-clinical"/>
+            <code value="resolved"/>
+          </coding>
+        </clinicalStatus>
+        <category>
+          <coding>
+            <system value="http://terminology.hl7.org/CodeSystem/condition-category"/>
+            <code value="problem-list-item"/>
+          </coding>
+          <text value="Problem"/>
+        </category>
+        <code>
+          <coding>
+            <system value="http://snomed.info/sct"/>
+            <code value="54150009"/>
+            <display value="Upper respiratory tract infection"/>
+          </coding>
+          <text value="Upper respiratory tract infection"/>
+        </code>
+        <subject>
+          <reference value="urn:uuid:85822a88-55b1-460c-bb7b-e8fc22d8568f"/>
+        </subject>
+        <onsetDateTime value="2022-10"/>
+        <abatementDateTime value="2022-11-03"/>
+      </Condition>
+    </resource>
+  </entry>
+  <entry>
+    <fullUrl value="urn:uuid:dc422222-8b3a-4dd5-96b5-b7e0cf43b477"/>
+    <resource>
+      <Condition>
+        <meta>
+          <profile value="http://hl7.org.au/fhir/ps/StructureDefinition/au-ps-condition"/>
+        </meta>
+        <clinicalStatus>
+          <coding>
+            <system value="http://terminology.hl7.org/CodeSystem/condition-clinical"/>
+            <code value="resolved"/>
+          </coding>
+        </clinicalStatus>
+        <category>
+          <coding>
+            <system value="http://terminology.hl7.org/CodeSystem/condition-category"/>
+            <code value="problem-list-item"/>
+          </coding>
+          <text value="Problem"/>
+        </category>
+        <code>
+          <coding>
+            <system value="http://snomed.info/sct"/>
+            <code value="403190006"/>
+            <display value="Epidermal burn of skin"/>
+          </coding>
+          <text value="First degree burn, Upper shoulders and back"/>
+        </code>
+        <subject>
+          <reference value="urn:uuid:85822a88-55b1-460c-bb7b-e8fc22d8568f"/>
+        </subject>
+        <onsetDateTime value="2005-01-02"/>
+        <note>
+          <text value="Severe sunburn, upper shoulders and back"/>
+        </note>
+      </Condition>
+    </resource>
+  </entry>
+  <entry>
+    <fullUrl value="urn:uuid:784ae7d5-22df-442d-b932-0c001720136c"/>
+    <resource>
+      <Immunization>
+        <meta>
+          <profile value="http://hl7.org.au/fhir/ps/StructureDefinition/au-ps-immunization"/>
+        </meta>
+        <status value="completed"/>
+        <vaccineCode>
+          <coding>
+            <system value="http://snomed.info/sct"/>
+            <version value="http://snomed.info/sct/32506021000036107/version/20250131"/>
+            <code value="1789171000168108"/>
+            <display value="Diphtheria + tetanus + pertussis 5 component adolescent/adult vaccine injection, 0.5 mL syringe"/>
+          </coding>
+          <text value="Diphtheria + tetanus + pertussis 5 component adolescent/adult vaccine injection, 0.5 mL syringe"/>
+        </vaccineCode>
+        <patient>
+          <reference value="urn:uuid:85822a88-55b1-460c-bb7b-e8fc22d8568f"/>
+        </patient>
+        <occurrenceDateTime value="2024-10-05"/>
+      </Immunization>
+    </resource>
+  </entry>
+  <entry>
+    <fullUrl value="urn:uuid:ad82d71b-ca1c-4db6-a726-cc70cf638306"/>
+    <resource>
+      <Observation>
+        <meta>
+          <profile value="http://hl7.org/fhir/uv/ips/StructureDefinition/Observation-pregnancy-edd-uv-ips"/>
+        </meta>
+        <status value="final"/>
+        <category>
+          <coding>
+            <system value="http://terminology.hl7.org/CodeSystem/observation-category"/>
+            <code value="imaging"/>
+            <display value="Imaging"/>
+          </coding>
+        </category>
+        <code>
+          <coding>
+            <system value="http://snomed.info/sct"/>
+            <code value="161714006"/>
+            <display value="Estimated date of delivery"/>
+          </coding>
+          <coding>
+            <system value="http://loinc.org"/>
+            <code value="11778-8"/>
+            <display value="Delivery date Estimated"/>
+          </coding>
+        </code>
+        <subject>
+          <reference value="urn:uuid:85822a88-55b1-460c-bb7b-e8fc22d8568f"/>
+        </subject>
+        <effectiveDateTime value="2024-06-12"/>
+        <valueDateTime value="2025-02-03"/>
+      </Observation>
+    </resource>
+  </entry>
+  <entry>
+    <fullUrl value="urn:uuid:f85ad223-7bed-46f3-893d-e89d6082f9a9"/>
+    <resource>
+      <Observation>
+        <meta>
+          <profile value="http://hl7.org/fhir/uv/ips/StructureDefinition/Observation-pregnancy-status-uv-ips"/>
+        </meta>
+        <status value="final"/>
+        <category>
+          <coding>
+            <system value="http://terminology.hl7.org/CodeSystem/observation-category"/>
+            <code value="social-history"/>
+            <display value="Social History"/>
+          </coding>
+        </category>
+        <code>
+          <coding>
+            <system value="http://loinc.org"/>
+            <code value="82810-3"/>
+            <display value="Pregnancy status"/>
+          </coding>
+        </code>
+        <subject>
+          <reference value="urn:uuid:85822a88-55b1-460c-bb7b-e8fc22d8568f"/>
+        </subject>
+        <effectiveDateTime value="2024-06-12"/>
+        <valueCodeableConcept>
+          <coding>
+            <system value="http://snomed.info/sct"/>
+            <code value="77386006"/>
+            <display value="Pregnant"/>
+          </coding>
+          <coding>
+            <system value="http://loinc.org"/>
+            <code value="LA15173-0"/>
+            <display value="Pregnant"/>
+          </coding>
+          <text value="Pregnant"/>
+        </valueCodeableConcept>
+        <hasMember>
+          <reference value="urn:uuid:ad82d71b-ca1c-4db6-a726-cc70cf638306"/>
+        </hasMember>
+      </Observation>
+    </resource>
+  </entry>
+  <entry>
+    <fullUrl value="urn:uuid:afead11c-3bee-4020-af4f-44040abfa961"/>
+    <resource>
+      <PractitionerRole>
+        <meta>
+          <profile value="http://hl7.org.au/fhir/ps/StructureDefinition/au-ps-practitionerrole"/>
+        </meta>
+        <identifier>
+          <type>
+            <coding>
+              <system value="http://terminology.hl7.org.au/CodeSystem/v2-0203"/>
+              <code value="UPIN"/>
+            </coding>
+            <text value="Medicare Provider Number"/>
+          </type>
+          <system value="http://ns.electronichealth.net.au/id/medicare-provider-number"/>
+          <value value="2448681J"/>
+        </identifier>
+        <practitioner>
+          <reference value="urn:uuid:0c0e2c4f-a748-4cc7-afde-f09bdc2d6fa9"/>
+        </practitioner>
+        <organization>
+          <reference value="urn:uuid:14292353-98f0-43b3-a25b-406baf3f9175"/>
+        </organization>
+        <code>
+          <coding>
+            <system value="http://www.abs.gov.au/ausstats/abs@.nsf/mf/1220.0"/>
+            <code value="253111"/>
+            <display value="General Practitioner"/>
+          </coding>
+          <coding>
+            <system value="http://snomed.info/sct"/>
+            <code value="62247001"/>
+          </coding>
+        </code>
+        <specialty>
+          <coding>
+            <system value="http://snomed.info/sct"/>
+            <code value="408443003"/>
+          </coding>
+        </specialty>
+        <telecom>
+          <system value="phone"/>
+          <value value="0270105673"/>
+          <use value="work"/>
+        </telecom>
+        <telecom>
+          <system value="email"/>
+          <value value="ginger.burrows@bungabbeemc.example.com.au"/>
+          <use value="work"/>
+        </telecom>
+      </PractitionerRole>
+    </resource>
+  </entry>
+  <entry>
+    <fullUrl value="urn:uuid:0c0e2c4f-a748-4cc7-afde-f09bdc2d6fa9"/>
+    <resource>
+      <Practitioner>
+        <meta>
+          <profile value="http://hl7.org.au/fhir/ps/StructureDefinition/au-ps-practitioner"/>
+        </meta>
+        <identifier>
+          <type>
+            <coding>
+              <system value="http://terminology.hl7.org/CodeSystem/v2-0203"/>
+              <code value="NPI"/>
+              <display value="National provider identifier"/>
+            </coding>
+            <text value="HPI-I"/>
+          </type>
+          <system value="http://ns.electronichealth.net.au/id/hi/hpii/1.0"/>
+          <value value="8003618233385011"/>
+        </identifier>
+        <name>
+          <family value="BURROWS"/>
+          <given value="Ginger"/>
+        </name>
+        <telecom>
+          <system value="phone"/>
+          <value value="0270105673"/>
+          <use value="work"/>
+        </telecom>
+        <telecom>
+          <system value="email"/>
+          <value value="ginger.burrows@bungabbeemc.example.com.au"/>
+        </telecom>
+        <address>
+          <line value="189 Bay Esp"/>
+          <city value="Bungabbee"/>
+          <state value="NSW"/>
+          <postalCode value="2480"/>
+        </address>
+      </Practitioner>
+    </resource>
+  </entry>
+  <entry>
+    <fullUrl value="urn:uuid:14292353-98f0-43b3-a25b-406baf3f9175"/>
+    <resource>
+      <Organization>
+        <meta>
+          <profile value="http://hl7.org.au/fhir/ps/StructureDefinition/au-ps-organization"/>
+        </meta>
+        <identifier>
+          <type>
+            <coding>
+              <system value="http://terminology.hl7.org.au/CodeSystem/v2-0203"/>
+              <code value="NOI"/>
+            </coding>
+            <text value="HPI-O"/>
+          </type>
+          <system value="http://ns.electronichealth.net.au/id/hi/hpio/1.0"/>
+          <value value="8003624900039170"/>
+        </identifier>
+        <identifier>
+          <type>
+            <coding>
+              <system value="http://terminology.hl7.org/CodeSystem/v2-0203"/>
+              <code value="XX"/>
+            </coding>
+            <text value="ABN"/>
+          </type>
+          <system value="http://hl7.org.au/id/abn"/>
+          <value value="81156248664"/>
+        </identifier>
+        <type>
+          <coding>
+            <system value="http://www.abs.gov.au/ausstats/abs@.nsf/mf/1292.0"/>
+            <code value="8511"/>
+            <display value="General Practice Medical Services"/>
+          </coding>
+          <coding>
+            <system value="http://snomed.info/sct"/>
+            <code value="788007007"/>
+            <display value="General practice service"/>
+          </coding>
+          <text value="General practice medical clinic service"/>
+        </type>
+        <name value="Bungabbee Medical Clinic"/>
+        <telecom>
+          <system value="phone"/>
+          <value value="0255506327"/>
+          <use value="work"/>
+        </telecom>
+        <telecom>
+          <system value="email"/>
+          <value value="info@bungabbeemc.example.com.au"/>
+        </telecom>
+        <address>
+          <line value="158 Toby Ave"/>
+          <city value="Bungabbee"/>
+          <state value="NSW"/>
+          <postalCode value="2480"/>
+        </address>
+      </Organization>
+    </resource>
+  </entry>
+  <entry>
+    <fullUrl value="urn:uuid:46624cc1-7d2e-4367-aa82-85d097ac423f"/>
+    <resource>
+      <Immunization>
+        <meta>
+          <profile value="http://hl7.org.au/fhir/ps/StructureDefinition/au-ps-immunization"/>
+        </meta>
+        <status value="completed"/>
+        <vaccineCode>
+          <coding>
+            <system value="https://www.humanservices.gov.au/organisations/health-professionals/enablers/air-vaccine-code-formats"/>
+            <code value="PANVAX"/>
+          </coding>
+          <text value="Panvax"/>
+        </vaccineCode>
+        <patient>
+          <reference value="urn:uuid:85822a88-55b1-460c-bb7b-e8fc22d8568f"/>
+        </patient>
+        <occurrenceDateTime value="2022-06-01"/>
+        <primarySource value="true"/>
+      </Immunization>
+    </resource>
+  </entry>
+  <entry>
+    <fullUrl value="urn:uuid:5711e015-890f-489d-9f8f-49d9a7ff95cd"/>
+    <resource>
+      <Immunization>
+        <meta>
+          <profile value="http://hl7.org.au/fhir/ps/StructureDefinition/au-ps-immunization"/>
+        </meta>
+        <status value="completed"/>
+        <vaccineCode>
+          <coding>
+            <system value="https://www.humanservices.gov.au/organisations/health-professionals/enablers/air-vaccine-code-formats"/>
+            <code value="PANVAX"/>
+          </coding>
+          <text value="Panvax"/>
+        </vaccineCode>
+        <patient>
+          <reference value="urn:uuid:85822a88-55b1-460c-bb7b-e8fc22d8568f"/>
+        </patient>
+        <occurrenceDateTime value="2021-05-17"/>
+        <primarySource value="true"/>
+      </Immunization>
+    </resource>
+  </entry>
+  <entry>
+    <fullUrl value="urn:uuid:62eb70e3-e814-4785-80d3-8aa45b1fc367"/>
+    <resource>
+      <Immunization>
+        <meta>
+          <profile value="http://hl7.org.au/fhir/ps/StructureDefinition/au-ps-immunization"/>
+        </meta>
+        <status value="completed"/>
+        <vaccineCode>
+          <coding>
+            <system value="https://www.humanservices.gov.au/organisations/health-professionals/enablers/air-vaccine-code-formats"/>
+            <code value="PANVAX"/>
+          </coding>
+          <text value="Panvax"/>
+        </vaccineCode>
+        <patient>
+          <reference value="urn:uuid:85822a88-55b1-460c-bb7b-e8fc22d8568f"/>
+        </patient>
+        <occurrenceDateTime value="2023-05-15"/>
+        <primarySource value="true"/>
+        <note>
+          <text value="Pt reported localised redness and swelling post previous flu vax last year. Monitor for rxn."/>
+        </note>
+      </Immunization>
+    </resource>
+  </entry>
+  <entry>
+    <fullUrl value="urn:uuid:2f3537b2-f50c-4a2a-ab92-30fdcfe5fd96"/>
+    <resource>
+      <Immunization>
+        <meta>
+          <profile value="http://hl7.org.au/fhir/ps/StructureDefinition/au-ps-immunization"/>
+        </meta>
+        <extension url="http://hl7.org.au/fhir/StructureDefinition/vaccine-serial-number">
+          <valueString value="SERIAL1234"/>
+        </extension>
+        <status value="completed"/>
+        <vaccineCode>
+          <coding>
+            <system value="https://www.humanservices.gov.au/organisations/health-professionals/enablers/air-vaccine-code-formats"/>
+            <code value="PANVAX"/>
+            <display value="Panvax"/>
+          </coding>
+          <text value="Panvax"/>
+        </vaccineCode>
+        <patient>
+          <reference value="urn:uuid:85822a88-55b1-460c-bb7b-e8fc22d8568f"/>
+        </patient>
+        <occurrenceDateTime value="2024-05-05"/>
+        <primarySource value="true"/>
+        <lotNumber value="lot001"/>
+      </Immunization>
+    </resource>
+  </entry>
+  <entry>
+    <fullUrl value="urn:uuid:c4e7d351-cd85-435d-9fa5-2db04108651f"/>
+    <resource>
+      <Immunization>
+        <meta>
+          <profile value="http://hl7.org.au/fhir/ps/StructureDefinition/au-ps-immunization"/>
+        </meta>
+        <status value="completed"/>
+        <vaccineCode>
+          <coding>
+            <system value="https://www.humanservices.gov.au/organisations/health-professionals/enablers/air-vaccine-code-formats"/>
+            <code value="PANVAX"/>
+            <display value="Panvax"/>
+          </coding>
+          <text value="Panvax"/>
+        </vaccineCode>
+        <patient>
+          <reference value="urn:uuid:85822a88-55b1-460c-bb7b-e8fc22d8568f"/>
+        </patient>
+        <occurrenceDateTime value="2020-05-03"/>
+        <primarySource value="true"/>
+      </Immunization>
+    </resource>
+  </entry>
+  <entry>
+    <fullUrl value="urn:uuid:97767fb5-3be7-4d16-9ee8-76c47a4ab0ce"/>
+    <resource>
+      <Immunization>
+        <meta>
+          <profile value="http://hl7.org.au/fhir/ps/StructureDefinition/au-ps-immunization"/>
+        </meta>
+        <extension url="http://hl7.org.au/fhir/StructureDefinition/vaccine-serial-number">
+          <valueString value="vNo1111"/>
+        </extension>
+        <status value="completed"/>
+        <vaccineCode>
+          <coding>
+            <system value="https://www.humanservices.gov.au/organisations/health-professionals/enablers/air-vaccine-code-formats"/>
+            <code value="MODERN"/>
+          </coding>
+          <coding>
+            <system value="http://snomed.info/sct"/>
+            <code value="1730491000168104"/>
+            <display value="Spikevax 50 microgram/0.5 mL injection, 0.5 mL syringe"/>
+          </coding>
+          <text value="COVID-19 mRNA-1273 Vaccine (Moderna) injection, 0.5 mL syringe"/>
+        </vaccineCode>
+        <patient>
+          <reference value="urn:uuid:85822a88-55b1-460c-bb7b-e8fc22d8568f"/>
+        </patient>
+        <occurrenceDateTime value="2023-05-15"/>
+        <recorded value="2022-02-14"/>
+        <primarySource value="true"/>
+        <manufacturer>
+          <display value="ModernaTX, Inc."/>
+        </manufacturer>
+        <lotNumber value="RX00000F"/>
+      </Immunization>
+    </resource>
+  </entry>
+  <entry>
+    <fullUrl value="urn:uuid:40a0b552-b0ea-4283-b33e-a5d2e26ed20f"/>
+    <resource>
+      <Immunization>
+        <meta>
+          <profile value="http://hl7.org.au/fhir/ps/StructureDefinition/au-ps-immunization"/>
+        </meta>
+        <extension url="http://hl7.org.au/fhir/StructureDefinition/vaccine-serial-number">
+          <valueString value="vNo1111"/>
+        </extension>
+        <status value="completed"/>
+        <vaccineCode>
+          <coding>
+            <system value="https://www.humanservices.gov.au/organisations/health-professionals/enablers/air-vaccine-code-formats"/>
+            <code value="COMIRN"/>
+          </coding>
+          <coding>
+            <system value="http://snomed.info/sct"/>
+            <code value="1525011000168107"/>
+            <display value="Comirnaty"/>
+          </coding>
+          <text value="Pfizer Comirnaty"/>
+        </vaccineCode>
+        <patient>
+          <reference value="urn:uuid:85822a88-55b1-460c-bb7b-e8fc22d8568f"/>
+        </patient>
+        <occurrenceDateTime value="2021-07-20"/>
+        <primarySource value="true"/>
+        <manufacturer>
+          <display value="Pfizer Australia Ltd"/>
+        </manufacturer>
+        <lotNumber value="300000000P"/>
+        <site>
+          <coding>
+            <system value="http://snomed.info/sct"/>
+            <code value="368208006"/>
+          </coding>
+          <text value="Left upper arm"/>
+        </site>
+      </Immunization>
+    </resource>
+  </entry>
+  <entry>
+    <fullUrl value="urn:uuid:fac8c42e-4d2a-4cf5-bcc6-831c60e8230e"/>
+    <resource>
+      <Immunization>
+        <meta>
+          <profile value="http://hl7.org.au/fhir/ps/StructureDefinition/au-ps-immunization"/>
+        </meta>
+        <identifier>
+          <system value="urn:ietf:rfc:3986"/>
+          <value value="urn:uuid:475db616-dfd5-43f3-b935-9f582233a38d"/>
+        </identifier>
+        <status value="completed"/>
+        <vaccineCode>
+          <coding>
+            <system value="https://www.humanservices.gov.au/organisations/health-professionals/enablers/air-vaccine-code-formats"/>
+            <code value="COMIRN"/>
+          </coding>
+          <text value="Pfizer Comirnaty"/>
+        </vaccineCode>
+        <patient>
+          <reference value="urn:uuid:85822a88-55b1-460c-bb7b-e8fc22d8568f"/>
+        </patient>
+        <occurrenceDateTime value="2022-02-02"/>
+        <primarySource value="true"/>
+        <manufacturer>
+          <display value="Pfizer Australia Ltd"/>
+        </manufacturer>
+        <lotNumber value="500000000P"/>
+        <site>
+          <coding>
+            <system value="http://snomed.info/sct"/>
+            <code value="368208006"/>
+          </coding>
+          <text value="Left upper arm"/>
+        </site>
+      </Immunization>
+    </resource>
+  </entry>
+  <entry>
+    <fullUrl value="urn:uuid:eb1f812e-41c6-4f8d-b9de-573428a94994"/>
+    <resource>
+      <Immunization>
+        <meta>
+          <profile value="http://hl7.org.au/fhir/ps/StructureDefinition/au-ps-immunization"/>
+        </meta>
+        <status value="completed"/>
+        <vaccineCode>
+          <coding>
+            <system value="https://www.humanservices.gov.au/organisations/health-professionals/enablers/air-vaccine-code-formats"/>
+            <code value="COMIRN"/>
+          </coding>
+          <coding>
+            <system value="http://snomed.info/sct"/>
+            <code value="1525011000168107"/>
+            <display value="Comirnaty"/>
+          </coding>
+          <text value="Pfizer Comirnaty"/>
+        </vaccineCode>
+        <patient>
+          <reference value="urn:uuid:85822a88-55b1-460c-bb7b-e8fc22d8568f"/>
+        </patient>
+        <occurrenceDateTime value="2021-04-27"/>
+        <primarySource value="true"/>
+        <manufacturer>
+          <display value="Pfizer Australia Ltd"/>
+        </manufacturer>
+        <lotNumber value="200000000P"/>
+        <site>
+          <coding>
+            <system value="http://snomed.info/sct"/>
+            <code value="368208006"/>
+          </coding>
+          <text value="Left upper arm"/>
+        </site>
+      </Immunization>
+    </resource>
+  </entry>
+  <entry>
+    <fullUrl value="urn:uuid:5f1b9790-4892-4af3-9b76-3cb4f854a5b1"/>
+    <resource>
+      <Observation>
+        <meta>
+          <profile value="http://hl7.org.au/fhir/ps/StructureDefinition/au-ps-diagnosticresult-path"/>
+        </meta>
+        <status value="final"/>
+        <category>
+          <coding>
+            <system value="http://terminology.hl7.org/CodeSystem/observation-category"/>
+            <code value="laboratory"/>
+            <display value="Laboratory"/>
+          </coding>
+        </category>
+        <code>
+          <coding>
+            <system value="http://loinc.org"/>
+            <code value="14995-5"/>
+            <display value="Glucose [Moles/volume] in Serum or Plasma --2 hours post 75 g glucose PO"/>
+          </coding>
+          <text value="Glucose Tolerance Test (GTT) 2 hour"/>
+        </code>
+        <subject>
+          <reference value="urn:uuid:85822a88-55b1-460c-bb7b-e8fc22d8568f"/>
+        </subject>
+        <effectiveDateTime value="2024-10-21"/>
+        <performer>
+          <extension url="http://hl7.org/fhir/StructureDefinition/data-absent-reason">
+            <valueCode value="unknown"/>
+          </extension>
+        </performer>
+        <valueQuantity>
+          <value value="8.6"/>
+          <system value="http://unitsofmeasure.org"/>
+          <code value="mmol/L"/>
+        </valueQuantity>
+      </Observation>
+    </resource>
+  </entry>
+  <entry>
+    <fullUrl value="urn:uuid:1bbd2e05-161d-4030-975c-0cca3ef97cdb"/>
+    <resource>
+      <Observation>
+        <meta>
+          <profile value="http://hl7.org.au/fhir/ps/StructureDefinition/au-ps-diagnosticresult-path"/>
+        </meta>
+        <status value="final"/>
+        <category>
+          <coding>
+            <system value="http://terminology.hl7.org/CodeSystem/observation-category"/>
+            <code value="laboratory"/>
+            <display value="Laboratory"/>
+          </coding>
+        </category>
+        <code>
+          <coding>
+            <system value="http://loinc.org"/>
+            <code value="14996-3"/>
+            <display value="Glucose [Moles/volume] in Serum or Plasma --pre 75 g glucose PO"/>
+          </coding>
+          <text value="Glucose Tolerance Test (GTT) Fasting"/>
+        </code>
+        <subject>
+          <reference value="urn:uuid:85822a88-55b1-460c-bb7b-e8fc22d8568f"/>
+        </subject>
+        <effectiveDateTime value="2024-10-21"/>
+        <performer>
+          <extension url="http://hl7.org/fhir/StructureDefinition/data-absent-reason">
+            <valueCode value="unknown"/>
+          </extension>
+        </performer>
+        <valueQuantity>
+          <value value="5.3"/>
+          <system value="http://unitsofmeasure.org"/>
+          <code value="mmol/L"/>
+        </valueQuantity>
+      </Observation>
+    </resource>
+  </entry>
+  <entry>
+    <fullUrl value="urn:uuid:27060cbf-e30e-4091-bd64-7d4ef40916ac"/>
+    <resource>
+      <Observation>
+        <meta>
+          <profile value="http://hl7.org.au/fhir/ps/StructureDefinition/au-ps-diagnosticresult-path"/>
+        </meta>
+        <status value="final"/>
+        <category>
+          <coding>
+            <system value="http://terminology.hl7.org/CodeSystem/observation-category"/>
+            <code value="laboratory"/>
+            <display value="Laboratory"/>
+          </coding>
+        </category>
+        <code>
+          <coding>
+            <system value="http://loinc.org"/>
+            <code value="51597-3"/>
+            <display value="Glucose [Moles/volume] in Serum or Plasma --1 hour post 75 g glucose PO"/>
+          </coding>
+          <text value="Glucose Tolerance Test (GTT) 1 hour"/>
+        </code>
+        <subject>
+          <reference value="urn:uuid:85822a88-55b1-460c-bb7b-e8fc22d8568f"/>
+        </subject>
+        <effectiveDateTime value="2024-10-21"/>
+        <performer>
+          <extension url="http://hl7.org/fhir/StructureDefinition/data-absent-reason">
+            <valueCode value="unknown"/>
+          </extension>
+        </performer>
+        <valueQuantity>
+          <value value="10"/>
+          <system value="http://unitsofmeasure.org"/>
+          <code value="mmol/L"/>
+        </valueQuantity>
+      </Observation>
+    </resource>
+  </entry>
+  <entry>
+    <fullUrl value="urn:uuid:fc061f59-5410-41e9-945e-3f59664e8611"/>
+    <resource>
+      <Observation>
+        <meta>
+          <profile value="http://hl7.org.au/fhir/ps/StructureDefinition/au-ps-diagnosticresult-path"/>
+        </meta>
+        <status value="final"/>
+        <category>
+          <coding>
+            <system value="http://terminology.hl7.org/CodeSystem/observation-category"/>
+            <code value="laboratory"/>
+            <display value="Laboratory"/>
+          </coding>
+        </category>
+        <code>
+          <coding>
+            <system value="http://loinc.org"/>
+            <code value="4548-4"/>
+            <display value="Hemoglobin A1c/Hemoglobin.total in Blood"/>
+          </coding>
+          <text value="Haemoglobin A1c"/>
+        </code>
+        <subject>
+          <reference value="urn:uuid:85822a88-55b1-460c-bb7b-e8fc22d8568f"/>
+        </subject>
+        <effectiveDateTime value="2024-06-14"/>
+        <performer>
+          <extension url="http://hl7.org/fhir/StructureDefinition/data-absent-reason">
+            <valueCode value="unknown"/>
+          </extension>
+        </performer>
+        <valueQuantity>
+          <value value="5.8"/>
+          <system value="http://unitsofmeasure.org"/>
+          <code value="%"/>
+        </valueQuantity>
+      </Observation>
+    </resource>
+  </entry>
+  <entry>
+    <fullUrl value="urn:uuid:bf094219-4a9b-4184-ae36-0743f93a41ef"/>
+    <resource>
+      <Observation>
+        <meta>
+          <profile value="http://hl7.org.au/fhir/ps/StructureDefinition/au-ps-diagnosticresult-path"/>
+        </meta>
+        <status value="final"/>
+        <category>
+          <coding>
+            <system value="http://terminology.hl7.org/CodeSystem/observation-category"/>
+            <code value="laboratory"/>
+            <display value="Laboratory"/>
+          </coding>
+        </category>
+        <code>
+          <coding>
+            <system value="http://loinc.org"/>
+            <code value="2756-5"/>
+            <display value="pH of Urine"/>
+          </coding>
+          <text value="Urine M/C/S - pH"/>
+        </code>
+        <subject>
+          <reference value="urn:uuid:85822a88-55b1-460c-bb7b-e8fc22d8568f"/>
+        </subject>
+        <effectiveDateTime value="2024-11-05"/>
+        <performer>
+          <extension url="http://hl7.org/fhir/StructureDefinition/data-absent-reason">
+            <valueCode value="unknown"/>
+          </extension>
+        </performer>
+        <valueQuantity>
+          <value value="7.0"/>
+        </valueQuantity>
+      </Observation>
+    </resource>
+  </entry>
+  <entry>
+    <fullUrl value="urn:uuid:f8bbeb04-f3bc-452d-9975-abd1caf12d62"/>
+    <resource>
+      <Observation>
+        <meta>
+          <profile value="http://hl7.org.au/fhir/ps/StructureDefinition/au-ps-diagnosticresult-path"/>
+        </meta>
+        <status value="final"/>
+        <category>
+          <coding>
+            <system value="http://terminology.hl7.org/CodeSystem/observation-category"/>
+            <code value="laboratory"/>
+            <display value="Laboratory"/>
+          </coding>
+        </category>
+        <code>
+          <coding>
+            <system value="http://loinc.org"/>
+            <code value="20454-5"/>
+            <display value="Protein [Presence] in Urine by Test strip"/>
+          </coding>
+          <text value="Urine M/C/S - Protein"/>
+        </code>
+        <subject>
+          <reference value="urn:uuid:85822a88-55b1-460c-bb7b-e8fc22d8568f"/>
+        </subject>
+        <effectiveDateTime value="2024-11-05"/>
+        <performer>
+          <extension url="http://hl7.org/fhir/StructureDefinition/data-absent-reason">
+            <valueCode value="unknown"/>
+          </extension>
+        </performer>
+        <valueCodeableConcept>
+          <coding>
+            <system value="http://snomed.info/sct"/>
+            <code value="10828004"/>
+            <display value="Positive"/>
+          </coding>
+          <text value="Positive"/>
+        </valueCodeableConcept>
+      </Observation>
+    </resource>
+  </entry>
+  <entry>
+    <fullUrl value="urn:uuid:1a506b54-9462-46bf-a266-2d51acbc64ff"/>
+    <resource>
+      <Observation>
+        <meta>
+          <profile value="http://hl7.org.au/fhir/ps/StructureDefinition/au-ps-diagnosticresult-path"/>
+        </meta>
+        <status value="final"/>
+        <category>
+          <coding>
+            <system value="http://terminology.hl7.org/CodeSystem/observation-category"/>
+            <code value="laboratory"/>
+            <display value="Laboratory"/>
+          </coding>
+        </category>
+        <code>
+          <coding>
+            <system value="http://loinc.org"/>
+            <code value="5794-3"/>
+            <display value="Hemoglobin [Presence] in Urine by Test strip"/>
+          </coding>
+          <text value="Urine M/C/S - Blood"/>
+        </code>
+        <subject>
+          <reference value="urn:uuid:85822a88-55b1-460c-bb7b-e8fc22d8568f"/>
+        </subject>
+        <effectiveDateTime value="2024-11-05"/>
+        <performer>
+          <extension url="http://hl7.org/fhir/StructureDefinition/data-absent-reason">
+            <valueCode value="unknown"/>
+          </extension>
+        </performer>
+        <valueCodeableConcept>
+          <coding>
+            <system value="http://snomed.info/sct"/>
+            <code value="10828004"/>
+            <display value="Positive"/>
+          </coding>
+          <text value="Positive"/>
+        </valueCodeableConcept>
+      </Observation>
+    </resource>
+  </entry>
+  <entry>
+    <fullUrl value="urn:uuid:8a394aa6-8527-4535-9c68-35cf315232fb"/>
+    <resource>
+      <Observation>
+        <meta>
+          <profile value="http://hl7.org.au/fhir/ps/StructureDefinition/au-ps-diagnosticresult-path"/>
+        </meta>
+        <status value="final"/>
+        <category>
+          <coding>
+            <system value="http://terminology.hl7.org/CodeSystem/observation-category"/>
+            <code value="laboratory"/>
+            <display value="Laboratory"/>
+          </coding>
+        </category>
+        <code>
+          <coding>
+            <system value="http://loinc.org"/>
+            <code value="25428-4"/>
+            <display value="Glucose [Presence] in Urine by Test strip"/>
+          </coding>
+          <text value="Urine M/C/S - Glucose"/>
+        </code>
+        <subject>
+          <reference value="urn:uuid:85822a88-55b1-460c-bb7b-e8fc22d8568f"/>
+        </subject>
+        <effectiveDateTime value="2024-11-05"/>
+        <performer>
+          <extension url="http://hl7.org/fhir/StructureDefinition/data-absent-reason">
+            <valueCode value="unknown"/>
+          </extension>
+        </performer>
+        <valueCodeableConcept>
+          <coding>
+            <system value="http://snomed.info/sct"/>
+            <code value="10828004"/>
+            <display value="Positive"/>
+          </coding>
+          <text value="Positive"/>
+        </valueCodeableConcept>
+      </Observation>
+    </resource>
+  </entry>
+  <entry>
+    <fullUrl value="urn:uuid:c967c04f-d89d-4266-b4bf-029bc86501ab"/>
+    <resource>
+      <Observation>
+        <meta>
+          <profile value="http://hl7.org.au/fhir/ps/StructureDefinition/au-ps-diagnosticresult-path"/>
+        </meta>
+        <status value="final"/>
+        <category>
+          <coding>
+            <system value="http://terminology.hl7.org/CodeSystem/observation-category"/>
+            <code value="laboratory"/>
+            <display value="Laboratory"/>
+          </coding>
+        </category>
+        <code>
+          <coding>
+            <system value="http://loinc.org"/>
+            <code value="30405-5"/>
+            <display value="Leukocytes [#/volume] in Urine"/>
+          </coding>
+          <text value="Urine M/C/S - Leucocytes"/>
+        </code>
+        <subject>
+          <reference value="urn:uuid:85822a88-55b1-460c-bb7b-e8fc22d8568f"/>
+        </subject>
+        <effectiveDateTime value="2024-11-05"/>
+        <performer>
+          <extension url="http://hl7.org/fhir/StructureDefinition/data-absent-reason">
+            <valueCode value="unknown"/>
+          </extension>
+        </performer>
+        <valueQuantity>
+          <value value="370"/>
+          <system value="http://unitsofmeasure.org"/>
+          <code value="10*6/L"/>
+        </valueQuantity>
+        <referenceRange>
+          <text value="&lt;10"/>
+        </referenceRange>
+      </Observation>
+    </resource>
+  </entry>
+  <entry>
+    <fullUrl value="urn:uuid:d8358a54-f0f3-4457-ae78-b253ea57a4a6"/>
+    <resource>
+      <Observation>
+        <meta>
+          <profile value="http://hl7.org.au/fhir/ps/StructureDefinition/au-ps-diagnosticresult-path"/>
+        </meta>
+        <status value="final"/>
+        <category>
+          <coding>
+            <system value="http://terminology.hl7.org/CodeSystem/observation-category"/>
+            <code value="laboratory"/>
+            <display value="Laboratory"/>
+          </coding>
+        </category>
+        <code>
+          <coding>
+            <system value="http://loinc.org"/>
+            <code value="30391-7"/>
+            <display value="Erythrocytes [#/volume] in Urine"/>
+          </coding>
+          <text value="Urine M/C/S - Erythrocytes"/>
+        </code>
+        <subject>
+          <reference value="urn:uuid:85822a88-55b1-460c-bb7b-e8fc22d8568f"/>
+        </subject>
+        <effectiveDateTime value="2024-11-05"/>
+        <performer>
+          <extension url="http://hl7.org/fhir/StructureDefinition/data-absent-reason">
+            <valueCode value="unknown"/>
+          </extension>
+        </performer>
+        <valueQuantity>
+          <value value="150"/>
+          <system value="http://unitsofmeasure.org"/>
+          <code value="10*6/L"/>
+        </valueQuantity>
+        <referenceRange>
+          <text value="&lt;10"/>
+        </referenceRange>
+      </Observation>
+    </resource>
+  </entry>
+  <entry>
+    <fullUrl value="urn:uuid:755dc0b4-a796-4a01-ba27-5e6f4098a519"/>
+    <resource>
+      <Observation>
+        <meta>
+          <profile value="http://hl7.org.au/fhir/ps/StructureDefinition/au-ps-diagnosticresult-path"/>
+        </meta>
+        <status value="final"/>
+        <category>
+          <coding>
+            <system value="http://terminology.hl7.org/CodeSystem/observation-category"/>
+            <code value="laboratory"/>
+            <display value="Laboratory"/>
+          </coding>
+        </category>
+        <code>
+          <coding>
+            <system value="http://loinc.org"/>
+            <code value="30383-4"/>
+            <display value="Epithelial cells [#/volume] in Urine"/>
+          </coding>
+          <text value="Urine M/C/S - Epithelial cells"/>
+        </code>
+        <subject>
+          <reference value="urn:uuid:85822a88-55b1-460c-bb7b-e8fc22d8568f"/>
+        </subject>
+        <effectiveDateTime value="2024-11-05"/>
+        <performer>
+          <extension url="http://hl7.org/fhir/StructureDefinition/data-absent-reason">
+            <valueCode value="unknown"/>
+          </extension>
+        </performer>
+        <valueCodeableConcept>
+          <coding>
+            <system value="http://snomed.info/sct"/>
+            <code value="260386005"/>
+            <display value="Nil"/>
+          </coding>
+          <text value="Nil"/>
+        </valueCodeableConcept>
+      </Observation>
+    </resource>
+  </entry>
+  <entry>
+    <fullUrl value="urn:uuid:beeded39-c3f2-46bc-80b9-86ea74c2be11"/>
+    <resource>
+      <Observation>
+        <meta>
+          <profile value="http://hl7.org.au/fhir/ps/StructureDefinition/au-ps-diagnosticresult-path"/>
+        </meta>
+        <status value="final"/>
+        <category>
+          <coding>
+            <system value="http://terminology.hl7.org/CodeSystem/observation-category"/>
+            <code value="laboratory"/>
+            <display value="Laboratory"/>
+          </coding>
+        </category>
+        <code>
+          <coding>
+            <system value="http://loinc.org"/>
+            <code value="630-4"/>
+            <display value="Bacteria identified in Urine by Culture"/>
+          </coding>
+          <text value="Urine M/C/S - Culture"/>
+        </code>
+        <subject>
+          <reference value="urn:uuid:85822a88-55b1-460c-bb7b-e8fc22d8568f"/>
+        </subject>
+        <effectiveDateTime value="2024-11-05"/>
+        <performer>
+          <extension url="http://hl7.org/fhir/StructureDefinition/data-absent-reason">
+            <valueCode value="unknown"/>
+          </extension>
+        </performer>
+        <valueCodeableConcept>
+          <coding>
+            <system value="http://snomed.info/sct"/>
+            <code value="112283007"/>
+            <display value="Escherichia coli"/>
+          </coding>
+          <text value="Escherichia coli"/>
+        </valueCodeableConcept>
+      </Observation>
+    </resource>
+  </entry>
+  <entry>
+    <fullUrl value="urn:uuid:98d97917-eeae-4158-9d25-416420c5828f"/>
+    <resource>
+      <Observation>
+        <meta>
+          <profile value="http://hl7.org.au/fhir/ps/StructureDefinition/au-ps-diagnosticresult-path"/>
+        </meta>
+        <status value="final"/>
+        <category>
+          <coding>
+            <system value="http://terminology.hl7.org/CodeSystem/observation-category"/>
+            <code value="laboratory"/>
+            <display value="Laboratory"/>
+          </coding>
+        </category>
+        <code>
+          <coding>
+            <system value="http://loinc.org"/>
+            <code value="19090-0"/>
+            <display value="Colony count [#/volume] in Urine"/>
+          </coding>
+          <text value="Colony count"/>
+        </code>
+        <subject>
+          <reference value="urn:uuid:85822a88-55b1-460c-bb7b-e8fc22d8568f"/>
+        </subject>
+        <effectiveDateTime value="2024-11-05"/>
+        <performer>
+          <extension url="http://hl7.org/fhir/StructureDefinition/data-absent-reason">
+            <valueCode value="unknown"/>
+          </extension>
+        </performer>
+        <valueQuantity>
+          <value value="1e8"/>
+          <comparator value="&gt;"/>
+          <system value="http://unitsofmeasure.org"/>
+          <code value="/mL"/>
+        </valueQuantity>
+      </Observation>
+    </resource>
+  </entry>
+  <entry>
+    <fullUrl value="urn:uuid:714eea46-2561-4b07-8881-f20134abf224"/>
+    <resource>
+      <Observation>
+        <meta>
+          <profile value="http://hl7.org.au/fhir/ps/StructureDefinition/au-ps-diagnosticresult-path"/>
+        </meta>
+        <status value="final"/>
+        <category>
+          <coding>
+            <system value="http://terminology.hl7.org/CodeSystem/observation-category"/>
+            <code value="laboratory"/>
+            <display value="Laboratory"/>
+          </coding>
+        </category>
+        <code>
+          <coding>
+            <system value="http://loinc.org"/>
+            <code value="18861-5"/>
+            <display value="Amoxicillin [Susceptibility]"/>
+          </coding>
+          <text value="Amp/Amoxycillin"/>
+        </code>
+        <subject>
+          <reference value="urn:uuid:85822a88-55b1-460c-bb7b-e8fc22d8568f"/>
+        </subject>
+        <effectiveDateTime value="2024-11-05"/>
+        <performer>
+          <extension url="http://hl7.org/fhir/StructureDefinition/data-absent-reason">
+            <valueCode value="unknown"/>
+          </extension>
+        </performer>
+        <valueCodeableConcept>
+          <coding>
+            <system value="http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation"/>
+            <code value="S"/>
+            <display value="Susceptible"/>
+          </coding>
+          <text value="Susceptible"/>
+        </valueCodeableConcept>
+      </Observation>
+    </resource>
+  </entry>
+  <entry>
+    <fullUrl value="urn:uuid:855789e2-18be-43e2-a8a0-402d525202dd"/>
+    <resource>
+      <Observation>
+        <meta>
+          <profile value="http://hl7.org.au/fhir/ps/StructureDefinition/au-ps-diagnosticresult-path"/>
+        </meta>
+        <status value="final"/>
+        <category>
+          <coding>
+            <system value="http://terminology.hl7.org/CodeSystem/observation-category"/>
+            <code value="laboratory"/>
+            <display value="Laboratory"/>
+          </coding>
+        </category>
+        <code>
+          <coding>
+            <system value="http://loinc.org"/>
+            <code value="18862-3"/>
+            <display value="Amoxicillin+Clavulanate [Susceptibility]"/>
+          </coding>
+          <text value="Amox/clav. acid"/>
+        </code>
+        <subject>
+          <reference value="urn:uuid:85822a88-55b1-460c-bb7b-e8fc22d8568f"/>
+        </subject>
+        <effectiveDateTime value="2024-11-05"/>
+        <performer>
+          <extension url="http://hl7.org/fhir/StructureDefinition/data-absent-reason">
+            <valueCode value="unknown"/>
+          </extension>
+        </performer>
+        <valueCodeableConcept>
+          <coding>
+            <system value="http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation"/>
+            <code value="S"/>
+            <display value="Susceptible"/>
+          </coding>
+          <text value="Susceptible"/>
+        </valueCodeableConcept>
+      </Observation>
+    </resource>
+  </entry>
+  <entry>
+    <fullUrl value="urn:uuid:70fa03d7-27bf-46ff-bbad-8fabe4d90901"/>
+    <resource>
+      <Observation>
+        <meta>
+          <profile value="http://hl7.org.au/fhir/ps/StructureDefinition/au-ps-diagnosticresult-path"/>
+        </meta>
+        <status value="final"/>
+        <category>
+          <coding>
+            <system value="http://terminology.hl7.org/CodeSystem/observation-category"/>
+            <code value="laboratory"/>
+            <display value="Laboratory"/>
+          </coding>
+        </category>
+        <code>
+          <coding>
+            <system value="http://loinc.org"/>
+            <code value="18897-9"/>
+            <display value="Cephalexin [Susceptibility]"/>
+          </coding>
+          <text value="Cephalexin"/>
+        </code>
+        <subject>
+          <reference value="urn:uuid:85822a88-55b1-460c-bb7b-e8fc22d8568f"/>
+        </subject>
+        <effectiveDateTime value="2024-11-05"/>
+        <performer>
+          <extension url="http://hl7.org/fhir/StructureDefinition/data-absent-reason">
+            <valueCode value="unknown"/>
+          </extension>
+        </performer>
+        <valueCodeableConcept>
+          <coding>
+            <system value="http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation"/>
+            <code value="S"/>
+            <display value="Susceptible"/>
+          </coding>
+          <text value="Susceptible"/>
+        </valueCodeableConcept>
+      </Observation>
+    </resource>
+  </entry>
+  <entry>
+    <fullUrl value="urn:uuid:8c083358-32cf-47b8-9885-4671f55d132c"/>
+    <resource>
+      <Observation>
+        <meta>
+          <profile value="http://hl7.org.au/fhir/ps/StructureDefinition/au-ps-diagnosticresult-path"/>
+        </meta>
+        <status value="final"/>
+        <category>
+          <coding>
+            <system value="http://terminology.hl7.org/CodeSystem/observation-category"/>
+            <code value="laboratory"/>
+            <display value="Laboratory"/>
+          </coding>
+        </category>
+        <code>
+          <coding>
+            <system value="http://loinc.org"/>
+            <code value="18997-7"/>
+            <display value="Trimethoprim [Susceptibility]"/>
+          </coding>
+          <text value="Trimethoprim"/>
+        </code>
+        <subject>
+          <reference value="urn:uuid:85822a88-55b1-460c-bb7b-e8fc22d8568f"/>
+        </subject>
+        <effectiveDateTime value="2024-11-05"/>
+        <performer>
+          <extension url="http://hl7.org/fhir/StructureDefinition/data-absent-reason">
+            <valueCode value="unknown"/>
+          </extension>
+        </performer>
+        <valueCodeableConcept>
+          <coding>
+            <system value="http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation"/>
+            <code value="S"/>
+            <display value="Susceptible"/>
+          </coding>
+          <text value="Susceptible"/>
+        </valueCodeableConcept>
+      </Observation>
+    </resource>
+  </entry>
+  <entry>
+    <fullUrl value="urn:uuid:900d6181-0c2c-4f33-b1e6-51c21d59bb49"/>
+    <resource>
+      <Observation>
+        <meta>
+          <profile value="http://hl7.org.au/fhir/ps/StructureDefinition/au-ps-diagnosticresult-path"/>
+        </meta>
+        <status value="final"/>
+        <category>
+          <coding>
+            <system value="http://terminology.hl7.org/CodeSystem/observation-category"/>
+            <code value="laboratory"/>
+            <display value="Laboratory"/>
+          </coding>
+        </category>
+        <code>
+          <coding>
+            <system value="http://loinc.org"/>
+            <code value="18955-5"/>
+            <display value="Nitrofurantoin [Susceptibility]"/>
+          </coding>
+          <text value="Nitrofurantoin"/>
+        </code>
+        <subject>
+          <reference value="urn:uuid:85822a88-55b1-460c-bb7b-e8fc22d8568f"/>
+        </subject>
+        <effectiveDateTime value="2024-11-05"/>
+        <performer>
+          <extension url="http://hl7.org/fhir/StructureDefinition/data-absent-reason">
+            <valueCode value="unknown"/>
+          </extension>
+        </performer>
+        <valueCodeableConcept>
+          <coding>
+            <system value="http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation"/>
+            <code value="S"/>
+            <display value="Susceptible"/>
+          </coding>
+          <text value="Susceptible"/>
+        </valueCodeableConcept>
+      </Observation>
+    </resource>
+  </entry>
+  <entry>
+    <fullUrl value="urn:uuid:049d8e10-c075-41cf-ab74-78438373b95f"/>
+    <resource>
+      <Observation>
+        <meta>
+          <profile value="http://hl7.org.au/fhir/ps/StructureDefinition/au-ps-diagnosticresult-path"/>
+        </meta>
+        <status value="final"/>
+        <category>
+          <coding>
+            <system value="http://terminology.hl7.org/CodeSystem/observation-category"/>
+            <code value="laboratory"/>
+            <display value="Laboratory"/>
+          </coding>
+        </category>
+        <code>
+          <coding>
+            <system value="http://loinc.org"/>
+            <code value="18928-2"/>
+            <display value="Gentamicin [Susceptibility]"/>
+          </coding>
+          <text value="Gentamicin"/>
+        </code>
+        <subject>
+          <reference value="urn:uuid:85822a88-55b1-460c-bb7b-e8fc22d8568f"/>
+        </subject>
+        <effectiveDateTime value="2024-11-05"/>
+        <performer>
+          <extension url="http://hl7.org/fhir/StructureDefinition/data-absent-reason">
+            <valueCode value="unknown"/>
+          </extension>
+        </performer>
+        <valueCodeableConcept>
+          <coding>
+            <system value="http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation"/>
+            <code value="S"/>
+            <display value="Susceptible"/>
+          </coding>
+          <text value="Susceptible"/>
+        </valueCodeableConcept>
+      </Observation>
+    </resource>
+  </entry>
+  <entry>
+    <fullUrl value="urn:uuid:92b3e48e-c00b-4a3c-b256-52aced6d52d2"/>
+    <resource>
+      <Observation>
+        <meta>
+          <profile value="http://hl7.org.au/fhir/ps/StructureDefinition/au-ps-diagnosticresult-path"/>
+        </meta>
+        <status value="final"/>
+        <category>
+          <coding>
+            <system value="http://terminology.hl7.org/CodeSystem/observation-category"/>
+            <code value="laboratory"/>
+            <display value="Laboratory"/>
+          </coding>
+        </category>
+        <code>
+          <coding>
+            <system value="http://loinc.org"/>
+            <code value="18956-3"/>
+            <display value="Norfloxacin [Susceptibility]"/>
+          </coding>
+          <text value="Norfloxacin"/>
+        </code>
+        <subject>
+          <reference value="urn:uuid:85822a88-55b1-460c-bb7b-e8fc22d8568f"/>
+        </subject>
+        <effectiveDateTime value="2024-11-05"/>
+        <performer>
+          <extension url="http://hl7.org/fhir/StructureDefinition/data-absent-reason">
+            <valueCode value="unknown"/>
+          </extension>
+        </performer>
+        <valueCodeableConcept>
+          <coding>
+            <system value="http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation"/>
+            <code value="S"/>
+            <display value="Susceptible"/>
+          </coding>
+          <text value="Susceptible"/>
+        </valueCodeableConcept>
+      </Observation>
+    </resource>
+  </entry>
+  <entry>
+    <fullUrl value="urn:uuid:69adb034-1cb7-46fb-9725-633ea913491f"/>
+    <resource>
+      <Observation>
+        <meta>
+          <profile value="http://hl7.org.au/fhir/ps/StructureDefinition/au-ps-diagnosticresult-path"/>
+        </meta>
+        <status value="final"/>
+        <category>
+          <coding>
+            <system value="http://terminology.hl7.org/CodeSystem/observation-category"/>
+            <code value="laboratory"/>
+            <display value="Laboratory"/>
+          </coding>
+        </category>
+        <code>
+          <coding>
+            <system value="http://loinc.org"/>
+            <code value="718-7"/>
+            <display value="Hemoglobin [Mass/volume] in Blood"/>
+          </coding>
+          <text value="Full Blood Count -  Haemoglobin"/>
+        </code>
+        <subject>
+          <reference value="urn:uuid:85822a88-55b1-460c-bb7b-e8fc22d8568f"/>
+        </subject>
+        <effectiveDateTime value="2024-06-12"/>
+        <performer>
+          <extension url="http://hl7.org/fhir/StructureDefinition/data-absent-reason">
+            <valueCode value="unknown"/>
+          </extension>
+        </performer>
+        <valueQuantity>
+          <value value="125"/>
+          <system value="http://unitsofmeasure.org"/>
+          <code value="g/L"/>
+        </valueQuantity>
+        <referenceRange>
+          <text value="115-165"/>
+        </referenceRange>
+      </Observation>
+    </resource>
+  </entry>
+  <entry>
+    <fullUrl value="urn:uuid:bee00ec5-b2df-445c-95a9-482db09aab28"/>
+    <resource>
+      <Observation>
+        <meta>
+          <profile value="http://hl7.org.au/fhir/ps/StructureDefinition/au-ps-diagnosticresult-path"/>
+        </meta>
+        <status value="final"/>
+        <category>
+          <coding>
+            <system value="http://terminology.hl7.org/CodeSystem/observation-category"/>
+            <code value="laboratory"/>
+            <display value="Laboratory"/>
+          </coding>
+        </category>
+        <code>
+          <coding>
+            <system value="http://loinc.org"/>
+            <code value="4544-3"/>
+            <display value="Hematocrit [Volume Fraction] of Blood by Automated count"/>
+          </coding>
+          <text value="Full Blood Count -  Haematocrit"/>
+        </code>
+        <subject>
+          <reference value="urn:uuid:85822a88-55b1-460c-bb7b-e8fc22d8568f"/>
+        </subject>
+        <effectiveDateTime value="2024-06-12"/>
+        <performer>
+          <extension url="http://hl7.org/fhir/StructureDefinition/data-absent-reason">
+            <valueCode value="unknown"/>
+          </extension>
+        </performer>
+        <valueQuantity>
+          <value value="0.37"/>
+          <system value="http://unitsofmeasure.org"/>
+          <code value="L/L"/>
+        </valueQuantity>
+        <referenceRange>
+          <text value="0.37-0.51"/>
+        </referenceRange>
+      </Observation>
+    </resource>
+  </entry>
+  <entry>
+    <fullUrl value="urn:uuid:f0eb1dda-eea3-4272-92e2-b9ac91a14543"/>
+    <resource>
+      <Observation>
+        <meta>
+          <profile value="http://hl7.org.au/fhir/ps/StructureDefinition/au-ps-diagnosticresult-path"/>
+        </meta>
+        <status value="final"/>
+        <category>
+          <coding>
+            <system value="http://terminology.hl7.org/CodeSystem/observation-category"/>
+            <code value="laboratory"/>
+            <display value="Laboratory"/>
+          </coding>
+        </category>
+        <code>
+          <coding>
+            <system value="http://loinc.org"/>
+            <code value="6690-2"/>
+            <display value="Leukocytes [#/volume] in Blood by Automated count"/>
+          </coding>
+          <text value="Full Blood Count -  White Blood Cell Count"/>
+        </code>
+        <subject>
+          <reference value="urn:uuid:85822a88-55b1-460c-bb7b-e8fc22d8568f"/>
+        </subject>
+        <effectiveDateTime value="2024-06-12"/>
+        <performer>
+          <extension url="http://hl7.org/fhir/StructureDefinition/data-absent-reason">
+            <valueCode value="unknown"/>
+          </extension>
+        </performer>
+        <valueQuantity>
+          <value value="8.0"/>
+          <system value="http://unitsofmeasure.org"/>
+          <code value="10*9/L"/>
+        </valueQuantity>
+        <referenceRange>
+          <text value="4.0-11.0"/>
+        </referenceRange>
+      </Observation>
+    </resource>
+  </entry>
+  <entry>
+    <fullUrl value="urn:uuid:1b99e170-74fc-4007-89bc-c6a091bea2d1"/>
+    <resource>
+      <Observation>
+        <meta>
+          <profile value="http://hl7.org.au/fhir/ps/StructureDefinition/au-ps-diagnosticresult-path"/>
+        </meta>
+        <status value="final"/>
+        <category>
+          <coding>
+            <system value="http://terminology.hl7.org/CodeSystem/observation-category"/>
+            <code value="laboratory"/>
+            <display value="Laboratory"/>
+          </coding>
+        </category>
+        <code>
+          <coding>
+            <system value="http://loinc.org"/>
+            <code value="777-3"/>
+            <display value="Platelets [#/volume] in Blood by Automated count"/>
+          </coding>
+          <text value="Full Blood Count - Platelets"/>
+        </code>
+        <subject>
+          <reference value="urn:uuid:85822a88-55b1-460c-bb7b-e8fc22d8568f"/>
+        </subject>
+        <effectiveDateTime value="2024-06-12"/>
+        <performer>
+          <extension url="http://hl7.org/fhir/StructureDefinition/data-absent-reason">
+            <valueCode value="unknown"/>
+          </extension>
+        </performer>
+        <valueQuantity>
+          <value value="250"/>
+          <system value="http://unitsofmeasure.org"/>
+          <code value="10*9/L"/>
+        </valueQuantity>
+        <referenceRange>
+          <text value="150-400"/>
+        </referenceRange>
+      </Observation>
+    </resource>
+  </entry>
+  <entry>
+    <fullUrl value="urn:uuid:5579d9f3-88a9-4339-9662-5431d707288b"/>
+    <resource>
+      <Observation>
+        <meta>
+          <profile value="http://hl7.org.au/fhir/ps/StructureDefinition/au-ps-diagnosticresult-path"/>
+        </meta>
+        <status value="final"/>
+        <category>
+          <coding>
+            <system value="http://terminology.hl7.org/CodeSystem/observation-category"/>
+            <code value="laboratory"/>
+            <display value="Laboratory"/>
+          </coding>
+        </category>
+        <code>
+          <coding>
+            <system value="http://loinc.org"/>
+            <code value="787-2"/>
+            <display value="MCV [Entitic mean volume] in Red Blood Cells by Automated count"/>
+          </coding>
+          <text value="Full Blood Count - MCV"/>
+        </code>
+        <subject>
+          <reference value="urn:uuid:85822a88-55b1-460c-bb7b-e8fc22d8568f"/>
+        </subject>
+        <effectiveDateTime value="2024-06-12"/>
+        <performer>
+          <extension url="http://hl7.org/fhir/StructureDefinition/data-absent-reason">
+            <valueCode value="unknown"/>
+          </extension>
+        </performer>
+        <valueQuantity>
+          <value value="85"/>
+          <system value="http://unitsofmeasure.org"/>
+          <code value="fL"/>
+        </valueQuantity>
+        <referenceRange>
+          <text value="80-100"/>
+        </referenceRange>
+      </Observation>
+    </resource>
+  </entry>
+  <entry>
+    <fullUrl value="urn:uuid:1cc93219-c1a2-44dc-9683-33559b3af9fc"/>
+    <resource>
+      <Observation>
+        <meta>
+          <profile value="http://hl7.org.au/fhir/ps/StructureDefinition/au-ps-diagnosticresult-path"/>
+        </meta>
+        <status value="final"/>
+        <category>
+          <coding>
+            <system value="http://terminology.hl7.org/CodeSystem/observation-category"/>
+            <code value="laboratory"/>
+            <display value="Laboratory"/>
+          </coding>
+        </category>
+        <code>
+          <coding>
+            <system value="http://loinc.org"/>
+            <code value="5778-6"/>
+            <display value="Color of Urine"/>
+          </coding>
+          <text value="Urinalysis - Colour"/>
+        </code>
+        <subject>
+          <reference value="urn:uuid:85822a88-55b1-460c-bb7b-e8fc22d8568f"/>
+        </subject>
+        <effectiveDateTime value="2024-06-03"/>
+        <performer>
+          <extension url="http://hl7.org/fhir/StructureDefinition/data-absent-reason">
+            <valueCode value="unknown"/>
+          </extension>
+        </performer>
+        <valueCodeableConcept>
+          <coding>
+            <system value="http://snomed.info/sct"/>
+            <code value="1290436002"/>
+            <display value="Light yellow colour"/>
+          </coding>
+          <text value="Light yellow"/>
+        </valueCodeableConcept>
+      </Observation>
+    </resource>
+  </entry>
+  <entry>
+    <fullUrl value="urn:uuid:03e92f38-81e2-4c93-98c7-a581ecf8f56f"/>
+    <resource>
+      <Observation>
+        <meta>
+          <profile value="http://hl7.org.au/fhir/ps/StructureDefinition/au-ps-diagnosticresult-path"/>
+        </meta>
+        <status value="final"/>
+        <category>
+          <coding>
+            <system value="http://terminology.hl7.org/CodeSystem/observation-category"/>
+            <code value="laboratory"/>
+            <display value="Laboratory"/>
+          </coding>
+        </category>
+        <code>
+          <coding>
+            <system value="http://loinc.org"/>
+            <code value="32167-9"/>
+            <display value="Clarity of Urine"/>
+          </coding>
+          <text value="Urinalysis - Clarity"/>
+        </code>
+        <subject>
+          <reference value="urn:uuid:85822a88-55b1-460c-bb7b-e8fc22d8568f"/>
+        </subject>
+        <effectiveDateTime value="2024-06-03"/>
+        <performer>
+          <extension url="http://hl7.org/fhir/StructureDefinition/data-absent-reason">
+            <valueCode value="unknown"/>
+          </extension>
+        </performer>
+        <valueCodeableConcept>
+          <coding>
+            <system value="http://snomed.info/sct"/>
+            <code value="263707001"/>
+            <display value="Clear"/>
+          </coding>
+          <text value="Clear"/>
+        </valueCodeableConcept>
+      </Observation>
+    </resource>
+  </entry>
+  <entry>
+    <fullUrl value="urn:uuid:9e30eb5c-b907-4e39-b25f-9bba4f09f79e"/>
+    <resource>
+      <Observation>
+        <meta>
+          <profile value="http://hl7.org.au/fhir/ps/StructureDefinition/au-ps-diagnosticresult-path"/>
+        </meta>
+        <status value="final"/>
+        <category>
+          <coding>
+            <system value="http://terminology.hl7.org/CodeSystem/observation-category"/>
+            <code value="laboratory"/>
+            <display value="Laboratory"/>
+          </coding>
+        </category>
+        <code>
+          <coding>
+            <system value="http://loinc.org"/>
+            <code value="5803-2"/>
+            <display value="pH of Urine by Test strip"/>
+          </coding>
+          <text value="Urinalysis - pH"/>
+        </code>
+        <subject>
+          <reference value="urn:uuid:85822a88-55b1-460c-bb7b-e8fc22d8568f"/>
+        </subject>
+        <effectiveDateTime value="2024-06-03"/>
+        <performer>
+          <extension url="http://hl7.org/fhir/StructureDefinition/data-absent-reason">
+            <valueCode value="unknown"/>
+          </extension>
+        </performer>
+        <valueQuantity>
+          <value value="6.0"/>
+        </valueQuantity>
+      </Observation>
+    </resource>
+  </entry>
+  <entry>
+    <fullUrl value="urn:uuid:775fd6d4-c7ab-48cd-8e30-3a04f415633b"/>
+    <resource>
+      <Observation>
+        <meta>
+          <profile value="http://hl7.org.au/fhir/ps/StructureDefinition/au-ps-diagnosticresult-path"/>
+        </meta>
+        <status value="final"/>
+        <category>
+          <coding>
+            <system value="http://terminology.hl7.org/CodeSystem/observation-category"/>
+            <code value="laboratory"/>
+            <display value="Laboratory"/>
+          </coding>
+        </category>
+        <code>
+          <coding>
+            <system value="http://loinc.org"/>
+            <code value="5811-5"/>
+            <display value="Specific gravity of Urine by Test strip"/>
+          </coding>
+          <text value="Urinalysis - Specific Gravity"/>
+        </code>
+        <subject>
+          <reference value="urn:uuid:85822a88-55b1-460c-bb7b-e8fc22d8568f"/>
+        </subject>
+        <effectiveDateTime value="2024-06-03"/>
+        <performer>
+          <extension url="http://hl7.org/fhir/StructureDefinition/data-absent-reason">
+            <valueCode value="unknown"/>
+          </extension>
+        </performer>
+        <valueQuantity>
+          <value value="1.02"/>
+        </valueQuantity>
+      </Observation>
+    </resource>
+  </entry>
+  <entry>
+    <fullUrl value="urn:uuid:afa66cf9-c360-4655-88a1-adf24684b749"/>
+    <resource>
+      <Observation>
+        <meta>
+          <profile value="http://hl7.org.au/fhir/ps/StructureDefinition/au-ps-diagnosticresult-path"/>
+        </meta>
+        <status value="final"/>
+        <category>
+          <coding>
+            <system value="http://terminology.hl7.org/CodeSystem/observation-category"/>
+            <code value="laboratory"/>
+            <display value="Laboratory"/>
+          </coding>
+        </category>
+        <code>
+          <coding>
+            <system value="http://loinc.org"/>
+            <code value="20454-5"/>
+            <display value="Protein [Presence] in Urine by Test strip"/>
+          </coding>
+          <text value="Urinalysis - Protein"/>
+        </code>
+        <subject>
+          <reference value="urn:uuid:85822a88-55b1-460c-bb7b-e8fc22d8568f"/>
+        </subject>
+        <effectiveDateTime value="2024-06-03"/>
+        <performer>
+          <extension url="http://hl7.org/fhir/StructureDefinition/data-absent-reason">
+            <valueCode value="unknown"/>
+          </extension>
+        </performer>
+        <valueCodeableConcept>
+          <coding>
+            <system value="http://snomed.info/sct"/>
+            <code value="260385009"/>
+            <display value="Negative"/>
+          </coding>
+          <text value="Negative"/>
+        </valueCodeableConcept>
+      </Observation>
+    </resource>
+  </entry>
+  <entry>
+    <fullUrl value="urn:uuid:3ede83be-9b70-415e-a354-b23a66e6c67c"/>
+    <resource>
+      <Observation>
+        <meta>
+          <profile value="http://hl7.org.au/fhir/ps/StructureDefinition/au-ps-diagnosticresult-path"/>
+        </meta>
+        <status value="final"/>
+        <category>
+          <coding>
+            <system value="http://terminology.hl7.org/CodeSystem/observation-category"/>
+            <code value="laboratory"/>
+            <display value="Laboratory"/>
+          </coding>
+        </category>
+        <code>
+          <coding>
+            <system value="http://loinc.org"/>
+            <code value="25428-4"/>
+            <display value="Glucose [Presence] in Urine by Test strip"/>
+          </coding>
+          <text value="Urinalysis - Glucose"/>
+        </code>
+        <subject>
+          <reference value="urn:uuid:85822a88-55b1-460c-bb7b-e8fc22d8568f"/>
+        </subject>
+        <effectiveDateTime value="2024-06-03"/>
+        <performer>
+          <extension url="http://hl7.org/fhir/StructureDefinition/data-absent-reason">
+            <valueCode value="unknown"/>
+          </extension>
+        </performer>
+        <valueCodeableConcept>
+          <coding>
+            <system value="http://snomed.info/sct"/>
+            <code value="260385009"/>
+            <display value="Negative"/>
+          </coding>
+          <text value="Negative"/>
+        </valueCodeableConcept>
+      </Observation>
+    </resource>
+  </entry>
+  <entry>
+    <fullUrl value="urn:uuid:c33cd78a-e5a9-40c2-8431-cc92c8638e8e"/>
+    <resource>
+      <Observation>
+        <meta>
+          <profile value="http://hl7.org.au/fhir/ps/StructureDefinition/au-ps-diagnosticresult-path"/>
+        </meta>
+        <status value="final"/>
+        <category>
+          <coding>
+            <system value="http://terminology.hl7.org/CodeSystem/observation-category"/>
+            <code value="laboratory"/>
+            <display value="Laboratory"/>
+          </coding>
+        </category>
+        <code>
+          <coding>
+            <system value="http://loinc.org"/>
+            <code value="2514-8"/>
+            <display value="Ketones [Presence] in Urine by Test strip"/>
+          </coding>
+          <text value="Urinalysis - Ketones"/>
+        </code>
+        <subject>
+          <reference value="urn:uuid:85822a88-55b1-460c-bb7b-e8fc22d8568f"/>
+        </subject>
+        <effectiveDateTime value="2024-06-03"/>
+        <performer>
+          <extension url="http://hl7.org/fhir/StructureDefinition/data-absent-reason">
+            <valueCode value="unknown"/>
+          </extension>
+        </performer>
+        <valueCodeableConcept>
+          <coding>
+            <system value="http://snomed.info/sct"/>
+            <code value="260385009"/>
+            <display value="Negative"/>
+          </coding>
+          <text value="Negative"/>
+        </valueCodeableConcept>
+      </Observation>
+    </resource>
+  </entry>
+  <entry>
+    <fullUrl value="urn:uuid:3706b230-5e87-4da4-b727-1bc44d6f50df"/>
+    <resource>
+      <Observation>
+        <meta>
+          <profile value="http://hl7.org.au/fhir/ps/StructureDefinition/au-ps-diagnosticresult-path"/>
+        </meta>
+        <status value="final"/>
+        <category>
+          <coding>
+            <system value="http://terminology.hl7.org/CodeSystem/observation-category"/>
+            <code value="laboratory"/>
+            <display value="Laboratory"/>
+          </coding>
+        </category>
+        <code>
+          <coding>
+            <system value="http://loinc.org"/>
+            <code value="5802-4"/>
+            <display value="Nitrite [Presence] in Urine by Test strip"/>
+          </coding>
+          <text value="Urinalysis - Nitrites"/>
+        </code>
+        <subject>
+          <reference value="urn:uuid:85822a88-55b1-460c-bb7b-e8fc22d8568f"/>
+        </subject>
+        <effectiveDateTime value="2024-06-03"/>
+        <performer>
+          <extension url="http://hl7.org/fhir/StructureDefinition/data-absent-reason">
+            <valueCode value="unknown"/>
+          </extension>
+        </performer>
+        <valueCodeableConcept>
+          <coding>
+            <system value="http://snomed.info/sct"/>
+            <code value="260385009"/>
+            <display value="Negative"/>
+          </coding>
+          <text value="Negative"/>
+        </valueCodeableConcept>
+      </Observation>
+    </resource>
+  </entry>
+  <entry>
+    <fullUrl value="urn:uuid:996486b5-3eea-413f-b67d-2ade13cb22b4"/>
+    <resource>
+      <Observation>
+        <meta>
+          <profile value="http://hl7.org.au/fhir/ps/StructureDefinition/au-ps-diagnosticresult-path"/>
+        </meta>
+        <status value="final"/>
+        <category>
+          <coding>
+            <system value="http://terminology.hl7.org/CodeSystem/observation-category"/>
+            <code value="laboratory"/>
+            <display value="Laboratory"/>
+          </coding>
+        </category>
+        <code>
+          <coding>
+            <system value="http://loinc.org"/>
+            <code value="5799-2"/>
+            <display value="Leukocyte esterase [Presence] in Urine by Test strip"/>
+          </coding>
+          <text value="Urinalysis - Leukocyte Esterase"/>
+        </code>
+        <subject>
+          <reference value="urn:uuid:85822a88-55b1-460c-bb7b-e8fc22d8568f"/>
+        </subject>
+        <effectiveDateTime value="2024-06-03"/>
+        <performer>
+          <extension url="http://hl7.org/fhir/StructureDefinition/data-absent-reason">
+            <valueCode value="unknown"/>
+          </extension>
+        </performer>
+        <valueCodeableConcept>
+          <coding>
+            <system value="http://snomed.info/sct"/>
+            <code value="260385009"/>
+            <display value="Negative"/>
+          </coding>
+          <text value="Negative"/>
+        </valueCodeableConcept>
+      </Observation>
+    </resource>
+  </entry>
+  <entry>
+    <fullUrl value="urn:uuid:a0807ad8-f160-4d27-92d0-f4ee87a63e49"/>
+    <resource>
+      <Observation>
+        <meta>
+          <profile value="http://hl7.org.au/fhir/ps/StructureDefinition/au-ps-diagnosticresult-path"/>
+        </meta>
+        <status value="final"/>
+        <category>
+          <coding>
+            <system value="http://terminology.hl7.org/CodeSystem/observation-category"/>
+            <code value="laboratory"/>
+            <display value="Laboratory"/>
+          </coding>
+        </category>
+        <code>
+          <coding>
+            <system value="http://loinc.org"/>
+            <code value="21198-7"/>
+            <display value="Choriogonadotropin.beta subunit [Units/volume] in Serum or Plasma"/>
+          </coding>
+          <text value="HCG"/>
+        </code>
+        <subject>
+          <reference value="urn:uuid:85822a88-55b1-460c-bb7b-e8fc22d8568f"/>
+        </subject>
+        <effectiveDateTime value="2024-06-12"/>
+        <performer>
+          <extension url="http://hl7.org/fhir/StructureDefinition/data-absent-reason">
+            <valueCode value="unknown"/>
+          </extension>
+        </performer>
+        <valueQuantity>
+          <value value="16000"/>
+          <system value="http://unitsofmeasure.org"/>
+          <code value="[IU]/L"/>
+        </valueQuantity>
+      </Observation>
+    </resource>
+  </entry>
+  <entry>
+    <fullUrl value="urn:uuid:8924f910-53b3-4125-b0f2-58d0068f8983"/>
+    <resource>
+      <Observation>
+        <meta>
+          <profile value="http://hl7.org.au/fhir/ps/StructureDefinition/au-ps-smokingstatus"/>
+        </meta>
+        <status value="final"/>
+        <category>
+          <coding>
+            <system value="http://terminology.hl7.org/CodeSystem/observation-category"/>
+            <code value="social-history"/>
+            <display value="Social History"/>
+          </coding>
+          <text value="Social History"/>
+        </category>
+        <code>
+          <coding>
+            <system value="http://snomed.info/sct"/>
+            <code value="1747861000168109"/>
+          </coding>
+          <coding>
+            <system value="http://loinc.org"/>
+            <code value="72166-2"/>
+          </coding>
+          <text value="Smoking status"/>
+        </code>
+        <subject>
+          <reference value="urn:uuid:85822a88-55b1-460c-bb7b-e8fc22d8568f"/>
+        </subject>
+        <effectiveDateTime value="2024-10-28"/>
+        <valueCodeableConcept>
+          <coding>
+            <system value="http://snomed.info/sct"/>
+            <code value="266919005"/>
+          </coding>
+          <text value="Lifetime non-smoker"/>
+        </valueCodeableConcept>
+      </Observation>
+    </resource>
+  </entry>
+  <entry>
+    <fullUrl value="urn:uuid:40c3b2a7-e673-4f83-8dd8-2b112a88775e"/>
+    <resource>
+      <Device>
+        <identifier>
+          <system value="http://example.com/CIS-ID"/>
+          <value value="12345"/>
+        </identifier>
+        <manufacturer value="Some Clinical Information System Manufacturer"/>
+        <deviceName>
+          <name value="Name of Device"/>
+          <type value="model-name"/>
+        </deviceName>
+        <modelNumber value="2.0.1"/>
+        <type>
+          <coding>
+            <system value="http://snomed.info/sct"/>
+            <code value="706593004"/>
+            <display value="Clinical information system"/>
+          </coding>
+        </type>
+      </Device>
+    </resource>
+  </entry>
+  <signature>
+    <type>
+        <system value="urn:iso-astm:E1762-95:2013"/>
+        <code value="1.2.840.10065.1.12.1.5"/>
+        <display value="Verification Signature"/>
+    </type>
+    <when value="2024-11-07T10:02:11.269+11:00"/>
+    <who>
+        <reference value="40c3b2a7-e673-4f83-8dd8-2b112a88775e"/>
+    </who>
+    <sigFormat value="application/jose"/>
+   </signature>
+</Bundle>
