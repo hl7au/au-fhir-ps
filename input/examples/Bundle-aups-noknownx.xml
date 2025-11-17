@@ -243,6 +243,9 @@
         <practitioner>
           <reference value="urn:uuid:f8135a88-5992-4a78-8d9f-6bc3f533292d"/>
         </practitioner>
+        <organization>
+          <reference value="urn:uuid:abfb35a4-7b89-46d1-be21-dec293999a1b"/>
+        </organization>
         <code>
           <coding>
             <system value="http://www.abs.gov.au/ausstats/abs@.nsf/mf/1220.0"/>
