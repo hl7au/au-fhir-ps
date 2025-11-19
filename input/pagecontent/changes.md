@@ -48,6 +48,7 @@ This change log documents the significant updates and resolutions implemented fr
   - removed SHOULD:display obligation on Immunization.vaccineCode coding slices amtVaccineCode and airVaccineCode for the AU PS Consumer [FHIR-53077](https://jira.hl7.org/browse/FHIR-53077)
 - [AU PS Medication](StructureDefinition-au-ps-medication.html): 
   - changed Medication to add a comment that the IPS guidance preferencing the use of Medication resource is not adopted by AU PS at this time [FHIR-51876](https://jira.hl7.org/browse/FHIR-51876)
+  - applied technical correction to add obligations SHALL:populate-if-known for the AU PS Producer, and SHALL:handle for the AU PS Consumer to Medication.code coding slices pbs and amt [FHIR-53374](https://jira.hl7.org/browse/FHIR-53374)
   - changed Medication.ingredient.item[x] binding to Medication Ingredient (preferred) [AU Base: FHIR-44781](https://jira.hl7.org/browse/FHIR-44781) 
 - [AU PS MedicationRequest](StructureDefinition-au-ps-medicationrequest.html):
   - changed MedicationRequest.dosageInstruction.route to remove use of the CodableConceptIPS [IPS: FHIR-51257](https://jira.hl7.org/browse/FHIR-51257)
