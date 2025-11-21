@@ -181,6 +181,7 @@
                 <thead>
                   <tr>
                     <th>Problem/Diagnosis</th>
+                    <th>Severity</th>
                     <th>Status</th>
                     <th>Comment</th>
                   </tr>
@@ -188,16 +189,19 @@
                 <tbody>
                   <tr>
                     <td>Gestational diabetes</td>
+                    <td/>
                     <td>Active</td>
                     <td>Recent diagnosis, referring to Endo &amp; Dietitian</td>
                   </tr>
                   <tr>
                     <td>Anaemia</td>
+                    <td/>
                     <td>Active</td>
                     <td/>
                   </tr>
                   <tr>
                     <td>Urinary tract infection (UTI)</td>
+                    <td>Moderate</td>
                     <td>Active</td>
                     <td>Patient reported symptoms of UTI. MSU to confirm</td>
                   </tr>
@@ -996,6 +1000,13 @@ Norfloxacin: Susceptible</td><td>05/11/2024</td></tr>
           </coding>
           <text value="Problem"/>
         </category>
+        <severity>
+          <coding>
+            <system value="http://snomed.info/sct"/>
+            <code value="6736007"/>
+          </coding>
+          <text value="Moderate"/>
+        </severity>
         <code>
           <coding>
             <system value="http://snomed.info/sct"/>
