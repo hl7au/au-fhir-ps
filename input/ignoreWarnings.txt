@@ -15,6 +15,9 @@ ERROR: StructureDefinition/au-ps-smokingstatus: StructureDefinition: This profil
 # ==== ERROR: This error is caused by an IPS 2.0.0 internal dependency on hl7.fhir.uv.extensions.r4#5.3.0-ballot-tc1 that downstream IGs don’t load. Not an AU PS defect. IPS will publish a 2.0.1 errata/technical correction to resolve this for downstream IGs. See Zulip: https://chat.fhir.org/#narrow/channel/207835-IPS/topic/IPS.202.2E0.2E1.20errata.2Ftechnical.20correction/with/547940503====
 ERROR: StructureDefinition/au-ps-patient: StructureDefinition: This profile does not comply with claimed profile 'http://hl7.org/fhir/uv/ips/StructureDefinition/Patient-uv-ips'
 
+# ==== ERROR: This error is caused by tooling. See Zulip chat: https://chat.fhir.org/#narrow/channel/179252-IG-creation/topic/Publisher.20v2.2E0.2E24.20-.20error.20in.20local.20build. At this stage there is no known resolution date for this tooling issue. 
+ERROR: ImplementationGuide/hl7.fhir.au.ps: ImplementationGuide.definition.extension[30].url: No definition could be found for URL value 'http://hl7.org/fhir/tools/StructureDefinition/expansion-parameters'
+
 # HL7 core known warnings
 The HTML fragment 'ip-statements.xhtml' is not included anywhere in the produced implementation guide
 An HTML fragment from the set [cross-version-analysis.xhtml, cross-version-analysis-inline.xhtml] is not included anywhere in the produced implementation guide
