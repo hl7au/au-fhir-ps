@@ -20,19 +20,6 @@ The summary enables Dr Samuels to quickly understand Jeramy’s condition, recen
 <div> 
   <img src="uc-interstate-cj.png" alt="Interstate GP Visit consumer journey" style="width:80%"/>
 </div>
-<div class="mermaid">
----
-config:
-  theme: default
----
-sequenceDiagram
-  actor Attending GP as Attending GP
-  participant Clinic CIS as Clinic CIS
-  participant Patient Summary Host as Patient Summary Host
-  Attending GP ->> Clinic CIS: Scan QR for Patient Summary access
-  Clinic CIS ->> Patient Summary Host: Retrieve Patient Summary
-  Attending GP ->> Clinic CIS: View Patient Summary
-</div>
 *Figure 1: Interstate GP Visit consumer journey*
 <br/>
 
