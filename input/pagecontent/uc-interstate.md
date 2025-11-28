@@ -56,10 +56,7 @@ This use case demonstrates use of patient summary during step 5. Patient Summary
 1. Dr Samuels views the patient summary in the consultation.
 
 #### Sequence Diagram
-<div> 
-  <img src="uc-interstate-seq.png" alt="Sequence Diagram" style="width:800px"/>
-</div>
-<div class="mermaid">
+<div class="mermaid" style="padding:20px;width:800px">
 ---
 config:
   theme: default

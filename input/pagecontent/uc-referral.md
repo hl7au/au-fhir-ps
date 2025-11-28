@@ -19,8 +19,18 @@ Based on updated data - particularly around Joyce's medication regimen - Dr Crui
 
 An updated treatment plan is then shared with Joyce and Dr Burrows to maintain continuity of care across providers.
 
-<div> 
-  <img src="uc-referral-cj.png" alt="Referral to Specialist and Allied Health consumer journey" style="width:65%"/>
+<div class="mermaid" style="padding:20px;width:800px">
+---
+config:
+  theme: default
+---
+sequenceDiagram
+  participant GP CIS as GP CIS
+  actor Endocrinologist as Endocrinologist
+  participant Endocrinologist CIS as Endocrinologist CIS
+  Endocrinologist ->> Endocrinologist CIS: Access Referral and embedded Patient Summary
+  Endocrinologist CIS ->> GP CIS: Check for updates and retrieve current Patient Summary
+  Endocrinologist ->> Endocrinologist CIS: View current Patient Summary
 </div>
 *Figure 1: Referral to Specialist and Allied Health consumer journey*
 <br/>
