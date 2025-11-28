@@ -1,6 +1,6 @@
 This example use case demonstrates a possible scenario where, during a specialist consultation, the specialist accesses the patient summary created at the time of the referral and confirms the latest patient summary available for a patient.
 
-The example use cases in AU Patient Summary (AU PS) are provided for **illustrative purposes only** and are intended to support understanding of how patient summaries conformant to AU PS can be produced and consumed. While every effort has been made to provide useful example use cases these are not a normative part of the specification nor are they fully representative of real world clinical workflows. 
+The example use cases in AU Patient Summary (AU PS) are provided for **illustrative purposes only** and are intended to support understanding of how patient summaries conformant to AU PS can be produced and consumed. While every effort has been made to provide useful examples, these use cases are not a normative part of the specification, nor are they fully representative of real world clinical workflows.
 
 When reviewing clinical information such as an AU PS document, a clinician should use their clinical discretion as to the relevance of that information, as the AU PS document cannot be assumed to be complete or the most recent as it is relying on information from source systems and is not the system of record, or the system used in the creation of clinical data, rather a summary of data that can be used by a clinician as part of their clinical process to support and inform and individuals care/treatment.
 
