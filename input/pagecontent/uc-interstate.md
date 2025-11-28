@@ -39,7 +39,9 @@ This use case demonstrates use of patient summary during step 5. Patient Summary
 ### Precondition(s)
 1. Jeramy has provided consent for his health information to be shared between healthcare providers.
 1. Jeramy is registered with a usual GP (Dr Abe Lowe) whose CIS maintains a current patient summary.
+1. Dr Lowe's system is capable of sharing patient summaries externally.
 1. Dr Wyatt Samuels’ CIS is Smart Health Link capable and connected to a network that allows secure record exchange.
+1. Jeramy's patient summary has been recently updated.
 1. Jeramy presents at a general practice that is not his usual clinic.
 1. The attending GP (Dr Wyatt Samuels) verifies Jeramy’s identity and obtains consent to access external records and a QR code from Jeramy.
 
