@@ -1,5 +1,10 @@
 This example use case demonstrates a possible scenario where, during a specialist consultation, the specialist accesses the patient summary created at the time of the referral and confirms the latest patient summary available for a patient.
 
+The example use cases in AU Patient Summary (AU PS) are provided for **illustrative purposes only** and are intended to support understanding of how patient summaries conformant to AU PS can be produced and consumed. While every effort has been made to provide useful examples, these use cases are not a normative part of the specification, nor are they fully representative of real world clinical workflows.
+
+When reviewing clinical information such as an AU PS document, a clinician should use their clinical discretion as to the relevance of that information, as the AU PS document cannot be assumed to be complete or the most recent as it is relying on information from source systems and is not the system of record, or the system used in the creation of clinical data, rather a summary of data that can be used by a clinician as part of their clinical process to support and inform and individuals care/treatment.
+
+
 ### Use Case Description
 
 Joyce Johnson, a 39-year-old woman from New South Wales, is pregnant and has recently been diagnosed with gestational diabetes. To provide Joyce with more comprehensive support, her regular general practitioner (GP), Dr Ginger Burrows, refers Joyce to both an endocrinologist and a dietitian.
@@ -37,6 +42,7 @@ This use case demonstrates use of patient summary during step 4. Endocrinologist
 1. The referral from Dr Ginger Burrows includes a patient summary at the time of referral.
 1. A more recent patient summary is available from Dr Burrows’ CIS at the time of consultation.
 1. Dr Cruickshank’s CIS is capable of accessing and displaying both the embedded and updated patient summaries.
+1. Joyce attends her scheduled consultation with Dr Cruickshank.
 
 ### Postcondition(s)
 1. Dr Cruickshank uses the patient summary information to guide clinical decision-making.
@@ -44,23 +50,18 @@ This use case demonstrates use of patient summary during step 4. Endocrinologist
 1. An updated treatment plan is shared with Joyce and Dr Burrows to support continuity of care.
 
 ### Flow
-1. Joyce attends her scheduled consultation with Dr Cruickshank.
-1. Dr Cruickshank opens the referral in their CIS and accesses and reviews the embedded patient summary.
-1. The CIS alerts that a more recent patient summary is available.
-1. Dr Cruickshank accesses the more recent patient summary, comparing the embedded patient summary to the more recent patient summary, and verifies consistency in medications and medical history.
-1. Dr Cruickshank notes updated clinical information, including changes to Joyce’s insulin regimen.
-1. Based on the review and discussion with Joyce, Dr Cruickshank decides to increase Joyce’s insulin dose and documents the decision in the CIS.
+
+1. Dr Cruickshank opens the referral in the Endocrinologist CIS and views embedded referral patient summary.
+1. The Endocrinologist CIS detects and retrieves a current patient summary from the GP CIS.
+1. Dr Cruickshank views the current retrieved patient summary.
+
 
 #### Sequence Diagram
 <div> 
-  <img src="uc-referral-seq.png" alt="Sequence Diagram" style="width:100%"/>
+  <img src="uc-referral-seq.png" alt="Sequence Diagram" style="width:800px"/>
 </div>
 *Figure 2: Sequence diagram showing access to embedded and updated patient summaries, with secure retrieval using public key cryptography*
 <br/>
-
-### Notes
-
-This example use case is provided for illustrative purposes only and is intended to support understanding of how patient summaries may be exchanged in practice. It does not prescribe technical requirements or mandate specific implementation workflows. 
 
 ### Examples
 
