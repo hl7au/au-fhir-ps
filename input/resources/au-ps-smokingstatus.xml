@@ -74,6 +74,10 @@
         </extension>
       </extension>
       <path value="Observation.category" />
+      <type>
+				<code value="CodeableConcept"/>
+				<profile value="http://hl7.org/fhir/uv/ips/StructureDefinition/CodeableConcept-uv-ips"/>
+			</type>
     </element>
     <element id="Observation.category:socialHistory">
       <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
@@ -248,6 +252,10 @@
         </extension>
       </extension>
       <path value="Observation.value[x]"/>
+      <type>
+				<code value="CodeableConcept"/>
+				<profile value="http://hl7.org/fhir/uv/ips/StructureDefinition/CodeableConcept-uv-ips"/>
+			</type>
     </element>
     <element id="Observation.dataAbsentReason">
       <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
@@ -275,6 +283,10 @@
         </extension>
       </extension>
       <path value="Observation.dataAbsentReason"/>
+      <type>
+				<code value="CodeableConcept"/>
+				<profile value="http://hl7.org/fhir/uv/ips/StructureDefinition/CodeableConcept-uv-ips"/>
+			</type>
     </element>
     <element id="Observation.component">
       <path value="Observation.component"/>
