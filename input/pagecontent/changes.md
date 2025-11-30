@@ -29,6 +29,12 @@ This change log documents the significant updates and resolutions implemented fr
     - Composition.author
     - Composition.title
     - Composition.event:careProvisioningEvent.code
+  - changed the following elements to use CodeableConceptIPS [AU PS: FHIR-52953](https://jira.hl7.org/browse/FHIR-52953):  
+    - Composition.event:careProvisioningEvent.code
+    - Composition.section[all slices].code
+    - Composition.section:sectionProblems.emptyReason
+    - Composition.section:sectionAllergies.emptyReason
+    - Composition.section:sectionMedications.emptyReason
 - [AU PS Condition](StructureDefinition-au-ps-condition.html):
   - changed Condition.bodySite to remove use of the CodableConceptIPS [IPS: FHIR-51257](https://jira.hl7.org/browse/FHIR-51257)
   - removed SHOULD:display obligation on Condition.subject.reference for the AU PS Consumer [IPS: FHIR-51258](https://jira.hl7.org/browse/FHIR-51258)
@@ -80,7 +86,7 @@ This change log documents the significant updates and resolutions implemented fr
   - removed SHOULD:display obligation on Observation.subject.reference for the AU PS Consumer [IPS: FHIR-51258](https://jira.hl7.org/browse/FHIR-51258)
   - changed Observation.code obligation for the AU PS Producer from SHALL:populate-if-known to SHALL:populate [AU PS: FHIR-52411](https://jira.hl7.org/browse/FHIR-52411)
   - changed Observation.subject obligation for the AU PS Producer from SHALL:populate-if-known to SHALL:populate [AU PS: FHIR-52411](https://jira.hl7.org/browse/FHIR-52411)
-  - changed the following elements to use CodeableConceptIPS [AU PS: FHIR-52953](https://jira.hl7.org/browse/FHIR-52953)
+  - changed the following elements to use CodeableConceptIPS [AU PS: FHIR-52953](https://jira.hl7.org/browse/FHIR-52953):
     - Observation.dataAbsentReason
     - Observation.interpretation
     - Observation.referenceRange.type
@@ -106,7 +112,7 @@ This change log documents the significant updates and resolutions implemented fr
   - removed SHOULD:display obligation on Observation.subject.reference for the AU PS Consumer [IPS: FHIR-51258](https://jira.hl7.org/browse/FHIR-51258)
   - changed Observation.code obligation for the AU PS Producer from SHALL:populate-if-known to SHALL:populate [AU PS: FHIR-52411](https://jira.hl7.org/browse/FHIR-52411)
   - changed Observation.subject obligation for the AU PS Producer from SHALL:populate-if-known to SHALL:populate [AU PS: FHIR-52411](https://jira.hl7.org/browse/FHIR-52411)
-  - changed the following elements to use CodeableConceptIPS [AU PS: FHIR-52953](https://jira.hl7.org/browse/FHIR-52953)
+  - changed the following elements to use CodeableConceptIPS [AU PS: FHIR-52953](https://jira.hl7.org/browse/FHIR-52953):
     - Observation.category
     - Observation.value[x]
     - Observation.dataAbsentReason
