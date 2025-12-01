@@ -86,7 +86,8 @@ This change log documents the significant updates and resolutions implemented fr
   - added a comment to Patient.name.text strongly recommending population of this element based on IPS guidance [AU PS: FHIR-51877](https://jira.hl7.org/browse/FHIR-51877)
   - removed SHOULD:display obligation on the following elements for the AU PS Consumer [IPS: FHIR-52836](https://jira.hl7.org/browse/FHIR-52836):
     - Patient.telecom.system
-    - Patient.telecom.value 
+    - Patient.telecom.value
+    - Patient.telecom.use
 - [AU PS Practitioner](StructureDefinition-au-ps-practitioner.html):
   - removed SHOULD:display obligation on the following elements for the AU PS Consumer [IPS: FHIR-52836](https://jira.hl7.org/browse/FHIR-52836):
     - Practitioner.name.family
