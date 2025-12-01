@@ -2,7 +2,7 @@
 <StructureDefinition xmlns="http://hl7.org/fhir">
   <id value="au-ps-patient"/>
   <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-fmm">
-    <valueInteger value="0"/> 
+    <valueInteger value="1"/> 
   </extension>
   <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-compliesWithProfile">
     <valueCanonical value="http://hl7.org/fhir/uv/ips/StructureDefinition/Patient-uv-ips"/>
@@ -10,7 +10,7 @@
   <url value="http://hl7.org.au/fhir/ps/StructureDefinition/au-ps-patient"/>
   <name value="AUPSPatient"/>
   <title value="AU PS Patient"/>
-  <status value="draft"/>
+  <status value="active"/>
   <description value="This profile sets minimum expectations for a Patient resource in the context of a patient summary in an Australian context. It is based on the [AU Core Patient](https://build.fhir.org/ig/hl7au/au-fhir-core/StructureDefinition-au-core-patient.html) profile, and applies the additional requirements from [Patient (IPS)](http://hl7.org/fhir/uv/ips/StructureDefinition/Patient-uv-ips)."/>
   <kind value="resource"/>
   <abstract value="false"/>
