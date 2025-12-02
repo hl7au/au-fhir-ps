@@ -157,8 +157,8 @@
 			<reference>
 				<reference value="Bundle/aups-section-emptyreason"/>
 			</reference>
-			<name value="Bundle - Section empty reason (missing data for Patient.birthDate; suppressed data for Patient.gender and Patient.identifier)"/>
-			<description value="Shows an example of a software-assembled patient summary that demonstrates the system has no information for the sections: problems, allergies, medications, immunisations, and suppresses the patient's gender and identifier using the Data Absent Reason extension. Example for the *AU PS Bundle* and *AU PS Composition* profile. Patient: Ronny Lawrence Irvine."/>
+			<name value="Bundle - Section empty reason"/>
+			<description value="Shows a software-assembled patient summary that demonstrates missing data for Patient.birthDate and suppressed data for Patient.gender and Patient.identifier using the Data Absent Reason extension. The system also has no information for the sections: problems, allergies, medications, and immunisations. Example for the *AU PS Bundle* and *AU PS Composition* profiles. Patient: Ronny Lawrence Irvine."/>
 			<exampleCanonical value="http://hl7.org.au/fhir/ps/StructureDefinition/au-ps-bundle"/>
 		</resource>
 		<resource>
