@@ -12,11 +12,11 @@ The following profiles have been defined for this implementation guide.
 
 In addition to the profiles defined in this implementation guide, the following profiles defined elsewhere are used by AU Patient Summary. These profiles are a data type profile for a *Must Support* element in an AU PS profile or are the target of a *Must Support* reference element in an AU PS profile through definition or by impose:
 - [AU Core Location](https://build.fhir.org/ig/hl7au/au-fhir-core/StructureDefinition-au-core-location.html)
-- [Codeable Concept (IPS)](https://build.fhir.org/ig/HL7/fhir-ips/StructureDefinition-CodeableConcept-uv-ips.html)
-- [Device (IPS)](https://build.fhir.org/ig/HL7/fhir-ips/StructureDefinition-Device-uv-ips.html)
-* [DeviceUseStatement (IPS)](https://build.fhir.org/ig/HL7/fhir-ips/StructureDefinition-DeviceUseStatement-uv-ips.html)
-* [DiagnosticReport (IPS)](https://build.fhir.org/ig/HL7/fhir-ips/StructureDefinition-DiagnosticReport-uv-ips.html)
-* [Observation Results - Radiology (IPS)](https://build.fhir.org/ig/HL7/fhir-ips/StructureDefinition-Observation-results-radiology-uv-ips.html)
+- [Codeable Concept (IPS)](https://hl7.org/fhir/uv/ips/STU2/StructureDefinition-CodeableConcept-uv-ips.html)
+- [Device (IPS)](https://hl7.org/fhir/uv/ips/STU2/StructureDefinition-Device-uv-ips.html)
+* [DeviceUseStatement (IPS)](https://hl7.org/fhir/uv/ips/STU2/StructureDefinition-DeviceUseStatement-uv-ips.html)
+* [DiagnosticReport (IPS)](https://hl7.org/fhir/uv/ips/STU2/StructureDefinition-DiagnosticReport-uv-ips.html)
+* [Observation Results - Radiology (IPS)](https://hl7.org/fhir/uv/ips/STU2/StructureDefinition-Observation-results-radiology-uv-ips.html)
 
 
 ### Extensions
