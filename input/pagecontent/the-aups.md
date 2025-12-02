@@ -4,9 +4,9 @@
 
 ### The AU PS (AU Patient Summary)
 
-A patient summary is a standardised collection of patient information. Rather than an entire patient health record, it is the necessary minimum and sufficient data to ensure safe patient care. Patient summaries can enhance patient safety by ensuring critical information is readily accessible when it’s needed most and enables clinicians across different health sectors and health domains to provide more informed, consistent care.
+A patient summary is a standardised collection of patient information. Rather than an entire patient health record, it is the minimum necessary and sufficient data to ensure safe patient care. Patient summaries can enhance patient safety by ensuring critical information is readily accessible when it’s needed most and enables clinicians across different health sectors and health domains to provide more informed, consistent care.
 
-The [HL7 International Patient Summary FHIR Implementation Guide](https://build.fhir.org/ig/HL7/fhir-ips) (the [IPS](https://build.fhir.org/ig/HL7/fhir-ips)) is an internationally recognised patient summary specification that is an implementation of the ISO 27269:2021 Health informatics — International patient summary standard. In 2021, the G7 nations committed to working towards the adoption of the IPS with several international efforts being currently underway to drive adoption, including the European Union, USA, Canada and New Zealand. Multinational vendors with presence in Australia are at various stages of implementation of the IPS.
+The [HL7 International Patient Summary FHIR Implementation Guide](https://build.fhir.org/ig/HL7/fhir-ips) (the [IPS](https://build.fhir.org/ig/HL7/fhir-ips)) is an internationally recognised patient summary specification that is an implementation of the ISO 27269:2021 Health informatics — International patient summary standard. In 2021, the G7 nations committed to working towards the adoption of the IPS with several international efforts currently underway to drive adoption, including the European Union, USA, Canada and New Zealand. Multinational vendors with presence in Australia are at various stages of implementation of the IPS.
 
 The AU PS will support the consumer on their healthcare journey, providing the consumer and their healthcare providers with timely and current access to relevant health information. It will provide a future pathway for individuals to share their healthcare information when travelling internationally. An AU PS is intended to:
 * be an interoperable set of clinical data - it is an electronic health record extract containing essential healthcare information about a consumer
@@ -24,7 +24,7 @@ The AU PS will support the consumer on their healthcare journey, providing the c
 A sample set of [Consumer Journeys](https://sparked.csiro.au/index.php/products-resources/au-ps-consumer-journeys/), developed by the Sparked AU Patient Summary Clinical Focus Group, help illustrate the interactions and use of a patient summary during a consumer’s healthcare journey in the Australian healthcare context. These Consumer Journeys have been used to develop [two example use cases](usecase.html) to assist implementers in understanding how AU PS could be implemented.
 
 ### Structure of the AU PS
-AU PS is specified in this guide as a HL7 FHIR document (a Bundle including a Composition), composed by a set of potentially reusable "minimal" data blocks (the AU PS profiles).
+AU PS is specified in this guide as an HL7 FHIR document (a Bundle including a Composition), composed by a set of potentially reusable "minimal" data blocks (the AU PS profiles).
 
 Based on [IPS](https://build.fhir.org/ig/HL7/fhir-ips) and [AU Core](https://build.fhir.org/ig/hl7au/au-fhir-core), AU PS defines a patient summary in the context of providing information to downstream providers. While profiled sections can have content that reflect intentions or orders of clinical care, the patient summary is meant as an informative document and is not intended to be directly actionable. For example, a MedicationRequest resource in the Medication Summary section or a CarePlan resource in the Plan of Care section, is not intended to provide authorisation for fulfilment or actioning from the AU PS (or IPS) document.
 
@@ -49,7 +49,7 @@ See the description of each defined section in IPS [Sections description](https:
 The AU PS is based on [IPS](https://build.fhir.org/ig/HL7/fhir-ips/) and [AU Core](https://build.fhir.org/ig/hl7au/au-fhir-core/), allowing for localisations required to meet Australian requirements while still ensuring alignment to the IPS specification:
 * A valid AU PS document IS a valid IPS document - the document instance validates against both IGs. 
 * A conformant AU PS actor IS a conformant IPS actor - the conformance expectations for implementation for IPS are satisfied when implementing AU PS actor requirements.
-* A conformant AU PS actor IS NOT a conformant AU Core actor - AU Core, like IPA, defines actors for FHIR resource access via a RESTful API, AU PS (and IPS) do not define 'access' they define production and consumption of patient summary documents.
+* A conformant AU PS actor IS NOT a conformant AU Core actor - AU Core, like IPA, defines actors for FHIR resource access via a RESTful API. AU PS (and IPS) do not define 'access' they define production and consumption of patient summary documents.
 
 <div> 
    <img src="AUPSPassport.png" alt="The AU PS 'Passport'" style="width:25%"/>
@@ -90,7 +90,7 @@ In addition to the profiles defined in this implementation guide and in IPS, the
   - [AU Core Waist Circumference](https://build.fhir.org/ig/hl7au/au-fhir-core/StructureDefinition-au-core-waistcircum.html)
 
 #### Must Support Extensions
-No extensions are labelled as *Must Support* in IPS. In AU PS the following extensions are labelled as *Must Support*:
+No extensions are labelled as *Must Support* in IPS. In AU PS, the following extensions are labelled as *Must Support*:
 * [Australian Indigenous Status](https://build.fhir.org/ig/hl7au/au-fhir-base/StructureDefinition-indigenous-status.html) in [AU PS Patient](StructureDefinition-au-ps-patient.html)
 * [Individual Pronouns](https://hl7.org/fhir/extensions/5.1.0/StructureDefinition-individual-pronouns.html) in [AU PS Patient](StructureDefinition-au-ps-patient.html)
 * [Individual Gender Identity](https://hl7.org/fhir/extensions/5.1.0/StructureDefinition-individual-genderIdentity.html) in [AU PS Patient](StructureDefinition-au-ps-patient.html)
@@ -109,7 +109,7 @@ In many cases the difference between value sets bound in AU Core and IPS is the 
 #### Cardinality
 While AU PS profiles do not apply unique maximum cardinality constraints, AU PS makes a number of elements mandatory (minimum cardinality > 0) that are not mandatory in IPS either directly in the AU PS profile or by reference to an AU Core profile. These constrained cardinalities are typically in:
 - additionally profiled resource types that mandate reference to the patient.
-- simple observation profiles (e.g. body temperature or smoking status) that require either value or data absent reason.
+- simple observation profiles (e.g. body temperature or smoking status) that require either a value or a data absent reason.
 - profiles of individuals and entities (e.g. Location, Patient, RelatedPerson, PractitionerRole, Practitioner) that have additional mandatory administrative elements e.g. Patient.identifier or PractitionerRole.practitioner.
 
 #### Identifiers
@@ -120,4 +120,4 @@ AU PS includes additional fixed value constraints on some elements either direct
 
 ### Considerations When Consuming IPS Documents in AU Healthcare Context
 
-<p class="request-for-feedback">Implementers are requested to contribute to identification of the functional limitations of receiving an IPS document that does not conform to national expectations e.g. does not include Australian identifiers, does not include clinical terminology from a national set (see specific localisations listed above), does not include mandatory elements. Contribute via comment on <a href="https://jira.hl7.org/browse/FHIR-51547">FHIR-51547</a>.</p>
+<p class="request-for-feedback">Implementers are requested to contribute to identification of the functional limitations of receiving an IPS document that does not conform to national expectations, e.g. does not include Australian identifiers, does not include clinical terminology from a national set (see specific localisations listed above), does not include mandatory elements. Contribute via comment on <a href="https://jira.hl7.org/browse/FHIR-51547">FHIR-51547</a>.</p>

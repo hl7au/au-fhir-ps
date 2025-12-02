@@ -84,6 +84,7 @@ This change log documents the significant updates and resolutions implemented fr
   - changed Patient.contact.relationship to remove use of the CodableConceptIPS [IPS: FHIR-51257](https://jira.hl7.org/browse/FHIR-51257)
   - added SHOULD:able-to-populate obligation on Patient.name.text for the AU PS Producer [AU PS: FHIR-51877](https://jira.hl7.org/browse/FHIR-51877)
   - added a comment to Patient.name.text strongly recommending population of this element based on IPS guidance [AU PS: FHIR-51877](https://jira.hl7.org/browse/FHIR-51877)
+  - applied technical correction to invariants inv-pat-1 and inv-pat-2 to ensure terminology validation applies to the correct sub-extension values when multiple extension instances are present [AU Base: FHIR-53536](https://jira.hl7.org/browse/FHIR-53536)
   - removed SHOULD:display obligation on the following elements for the AU PS Consumer [AU PS: FHIR-52836](https://jira.hl7.org/browse/FHIR-52836):
     - Patient.telecom.system
     - Patient.telecom.value
