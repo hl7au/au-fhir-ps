@@ -98,6 +98,7 @@ This change log documents the significant updates and resolutions implemented fr
   - added SHOULD:able-to-populate obligation on Patient.name.text for the AU PS Producer [AU PS: FHIR-51877](https://jira.hl7.org/browse/FHIR-51877)
   - added a comment to Patient.name.text strongly recommending population of this element based on IPS guidance [AU PS: FHIR-51877](https://jira.hl7.org/browse/FHIR-51877)
   - changed Patient.communication.language to use CodeableConceptIPS [AU PS: FHIR-52953](https://jira.hl7.org/browse/FHIR-52953)
+  - applied technical correction to invariants inv-pat-1 and inv-pat-2 to ensure terminology validation applies to the correct sub-extension values when multiple extension instances are present [AU Base: FHIR-53536](https://jira.hl7.org/browse/FHIR-53536)
 - [AU PS PractitionerRole](StructureDefinition-au-ps-practitionerrole.html):
   - applied technical correction to add obligations SHALL:populate-if-known for the AU PS Producer, and SHALL:handle and SHOULD:display for the AU PS Consumer to PractitionerRole.telecom.system [AU PS: FHIR-52837](https://jira.hl7.org/browse/FHIR-52837)
   - applied technical correction to add obligations SHALL:populate-if-known for the AU PS Producer, and SHALL:handle and SHOULD:display for the AU PS Consumer to PractitionerRole.telecom.value [AU PS: FHIR-52837](https://jira.hl7.org/browse/FHIR-52837)
