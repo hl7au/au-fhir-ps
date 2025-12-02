@@ -49,7 +49,7 @@ This change log documents the significant updates and resolutions implemented fr
   - changed Immunization.patient obligation for the AU PS Producer from SHALL:populate-if-known to SHALL:populate [AU PS: FHIR-52411](https://jira.hl7.org/browse/FHIR-52411)
   - changed Immunization.patient.reference obligation for the AU PS Producer from SHALL:populate-if-known to SHALL:populate [AU PS: FHIR-53115](https://jira.hl7.org/browse/FHIR-53115)
   - removed SHOULD:display obligation on Immunization.vaccineCode coding slices amtVaccineCode and airVaccineCode for the AU PS Consumer [AU PS: FHIR-53077](https://jira.hl7.org/browse/FHIR-53077)
- - [AU PS Medication](StructureDefinition-au-ps-medication.html): 
+- [AU PS Medication](StructureDefinition-au-ps-medication.html): 
   - changed Medication to add a comment that the IPS guidance preferencing the use of Medication resource is not adopted by AU PS at this time [AU PS: FHIR-51876](https://jira.hl7.org/browse/FHIR-51876)
   - added profile specific implementation guidance that this resource SHALL NOT be used to represent no known current medications for a patient and MedicationStatement SHOULD be used instead [AU PS: FHIR-52274](https://jira.hl7.org/browse/FHIR-52274)
   - applied technical correction to add obligations SHALL:populate-if-known for the AU PS Producer, and SHALL:handle for the AU PS Consumer to Medication.code coding slices pbs and amt [AU PS: FHIR-53374](https://jira.hl7.org/browse/FHIR-53374)
