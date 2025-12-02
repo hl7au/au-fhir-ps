@@ -6,11 +6,11 @@ As in the IPS, it is not in the scope of this version of AU PS to constrain solu
 Options for access and exchange that have been discussed during AU PS meetings are briefly described in this guide with links to their source specifications. While recommendations on operations from IPS on generation are included in this guide, future implementation guides may provide alternative methods and further recommendations different than those outlined. In addition, Integrating the Healthcare Enterprise (IHE) has also published guidance on the [IHE Sharing of IPS (sIPS)](https://profiles.ihe.net/ITI/sIPS/index.html) which may be a helpful reference.
 
 When generating an AU PS Document, implementers are also advised to be familiar with the following IPS guidance:
-- [Narrative and Language Translation](https://build.fhir.org/ig/HL7/fhir-ips/Design-Conventions.html#narrative-and-language-translation). 
-- [Data Included in IPS Documents](https://build.fhir.org/ig/HL7/fhir-ips/Generation-and-Data-Inclusion.html#data-included-in-ips-documents).
+- [Narrative and Language Translation](https://hl7.org/fhir/uv/ips/STU2/Design-Conventions.html#narrative-and-language-translation). 
+- [Data Included in IPS Documents](https://hl7.org/fhir/uv/ips/STU2/Generation-and-Data-Inclusion.html#data-included-in-ips-documents).
 
 ### IPS $summary FHIR Operation
-The IPS defines the [IPS Summary](https://build.fhir.org/ig/HL7/fhir-ips/OperationDefinition-summary.html) (`$summary`) operation and [IPS Server Capability Statement](https://build.fhir.org/ig/HL7/fhir-ips/CapabilityStatement-ips-server.html), which recommends an IPS Server implement the `$summary` operation as an operation for generating an IPS Document.
+The IPS defines the [IPS Summary](https://hl7.org/fhir/uv/ips/STU2/OperationDefinition-summary.html) (`$summary`) operation and [IPS Server Capability Statement](https://hl7.org/fhir/uv/ips/STU2/CapabilityStatement-ips-server.html), which recommends an IPS Server implement the `$summary` operation as an operation for generating an IPS Document.
 
 The `$summary` operation has two endpoint URLs based on the Patient resource:
 
@@ -32,7 +32,7 @@ A consuming system can invoke the Patient `$summary` operation on a server to re
 ### IPA $docref FHIR Operation
 The International Patient Access (IPA) defines the [IPA Fetch DocumentReference](https://hl7.org/fhir/uv/ipa/STU1.1/OperationDefinition-docref.html) (`$docref`) operation. FHIR Release 5 has incorporated the Fetch DocumentReference operation as a core FHIR operation.
 
-The [IPS Server Capability Statement](https://build.fhir.org/ig/HL7/fhir-ips/CapabilityStatement-ips-server.html) identifies the `$docref` operation as an option for an IPS Server to implement for generating an IPS document.
+The [IPS Server Capability Statement](https://hl7.org/fhir/uv/ips/STU2/CapabilityStatement-ips-server.html) identifies the `$docref` operation as an option for an IPS Server to implement for generating an IPS document.
 
 The `$docref` operation has a DocumentReference resource type endpoint that returns a searchset Bundle containing DocumentReference resources that match the specified request parameters.
 

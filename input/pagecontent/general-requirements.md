@@ -284,7 +284,7 @@ Typically AU PS profiles will inherit extended sub-elements from the base HL7 AU
 The full set of sub-elements is visible in the "Key Elements Table" or "Snapshot Table" which shows the sub-elements defined in this profile (shown in the "Differential Table") and the sub-elements inherited from a base profile.
 
 ##### Must Support - Composition Sections
-Obligations vary significantly for elements in the AU PS Composition profile, in particular obligations on `Composition.section` reflect the expectations of [The "IPS"](https://build.fhir.org/ig/HL7/fhir-ips/Structure-of-the-International-Patient-Summary.html) and  [ISO 27269](https://www.iso.org/standard/79491.html). A summary is provided below:
+Obligations vary significantly for elements in the AU PS Composition profile, in particular obligations on `Composition.section` reflect the expectations of [The "IPS"](https://hl7.org/fhir/uv/ips/STU2/Structure-of-the-International-Patient-Summary.html) and  [ISO 27269](https://www.iso.org/standard/79491.html). A summary is provided below:
 - AU PS Consumers **SHALL** handle the Composition section if present and containing any valid value, and **SHOULD** display the content of the section when presenting the data to a human user.
 - For all mandatory sections (`Composition.section` minimum cardinality > 0) AU PS Producers **SHALL** correctly populate the section if a value is known, **SHALL** be capable of populating `Composition.section.entry` with the referenced profiles, and **SHOULD** correctly populate `Composition.section.entry` if a value is known. 
 - For all recommended sections AU PS Producers **SHOULD** correctly populate the section if a value is known and **SHOULD** correctly populate `Composition.section.entry` if a value is known. 
