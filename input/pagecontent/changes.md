@@ -95,11 +95,13 @@ This change log documents the significant updates and resolutions implemented fr
   - changed Observation.code obligation for the AU PS Producer from SHALL:populate-if-known to SHALL:populate [AU PS: FHIR-52411](https://jira.hl7.org/browse/FHIR-52411)
   - changed Observation.subject obligation for the AU PS Producer from SHALL:populate-if-known to SHALL:populate [AU PS: FHIR-52411](https://jira.hl7.org/browse/FHIR-52411)
   - changed the following elements to use CodeableConceptIPS [AU PS: FHIR-52953](https://jira.hl7.org/browse/FHIR-52953):
-    - Observation.dataAbsentReason
+    - Observation.category:lab
+    - Observation.category:specificDiscipline
+    -  Observation.dataAbsentReason
     - Observation.interpretation
     - Observation.referenceRange.type
     - Observation.component.code
-    - Observation.component.valueCodeableConcept
+    - Observation.value[x]:valueCodeableConcept
     - Observation.component.dataAbsentReason
   - changed Observation.subject.reference obligation for the AU PS Producer from SHALL:populate-if-known to SHALL:populate [AU PS: FHIR-53115](https://jira.hl7.org/browse/FHIR-53115)
 - [AU PS Patient](StructureDefinition-au-ps-patient.html):
@@ -137,6 +139,7 @@ This change log documents the significant updates and resolutions implemented fr
   - changed Observation.subject obligation for the AU PS Producer from SHALL:populate-if-known to SHALL:populate [AU PS: FHIR-52411](https://jira.hl7.org/browse/FHIR-52411)
   - changed the following elements to use CodeableConceptIPS [AU PS: FHIR-52953](https://jira.hl7.org/browse/FHIR-52953):
     - Observation.category
+    - Observation.category:socialHistory
     - Observation.value[x]
     - Observation.dataAbsentReason
   - changed Observation.subject.reference obligation for the AU PS Producer from SHALL:populate-if-known to SHALL:populate [AU PS: FHIR-53115](https://jira.hl7.org/browse/FHIR-53115)
