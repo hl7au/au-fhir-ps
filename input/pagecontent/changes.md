@@ -1,9 +1,9 @@
-###  Release TBD
-- Publication date: TBD
-- Publication status: TBD
+###  Release 0.5.0-preview
+- Publication date: 2025-12-02
+- Publication status: Preview
 - Based on FHIR version: 4.0.1
 
-This change log documents the significant updates and resolutions implemented from version [0.3.0-ballot](https://hl7.org.au/fhir/ps/0.3.0-ballot/index.html) to TBD.
+This change log documents the significant updates and resolutions implemented from version [0.3.0-ballot](https://hl7.org.au/fhir/ps/0.3.0-ballot/index.html) to [0.5.0-preview](https://hl7.org.au/fhir/ps/0.5.0-preview/index.html).
 
 #### Changes in this version
 - changed AU PS Consumer guidance to align wording with the handle obligation (replace "consume resources" with "handle") in [General Requirements](general-requirements.html) page [AU PS: FHIR-52616](https://jira.hl7.org/browse/FHIR-52616)
