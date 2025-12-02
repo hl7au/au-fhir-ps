@@ -32,7 +32,7 @@ This implementation guide profiles the following resources that are not profiled
 
 
 ### Variance from IPS
-This implementation guide has no variance (i.e. fully compliant) from IPS Implementation Guide version 2.0.0-ci-build ([current](https://build.fhir.org/ig/HL7/fhir-ips)).
+This implementation guide has no variance (i.e. fully compliant) from IPS Implementation Guide version 2.0.0 ([2.0.0](https://hl7.org/fhir/uv/ips/STU2/)).
 
 Note that while there is no variance, this implementation guide imposes requirements additional to IPS.
 
