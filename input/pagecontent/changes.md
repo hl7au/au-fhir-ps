@@ -1,5 +1,5 @@
 ###  Release 0.5.0-preview
-- Publication date: 2025-12-02
+- Publication date: 2025-12-03
 - Publication status: Preview
 - Based on FHIR version: 4.0.1
 
