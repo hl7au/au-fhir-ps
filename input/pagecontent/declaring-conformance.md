@@ -6,7 +6,7 @@ A system declaring conformance to AU Patient Summary (AU PS) **SHALL** implement
 AU PS does not define any FHIR-specific interactions and therefore does not include a CapabilityStatement.
 
 Systems implementing AU PS **MAY** implement interactions defined in other CapabilityStatements, for example:
-- [IPS Server Capability Statement](https://build.fhir.org/ig/HL7/fhir-ips/CapabilityStatement-ips-server.html)
+- [IPS Server Capability Statement](https://hl7.org/fhir/uv/ips/STU2/CapabilityStatement-ips-server.html)
 - [International Patient Access Server CapabilityStatement](https://hl7.org/fhir/uv/ipa/CapabilityStatement-ipa-server.html)
 - [International Patient Access Client CapabilityStatement](https://hl7.org/fhir/uv/ipa/CapabilityStatement-ipa-client.html)
 
