@@ -60,6 +60,11 @@ jobs:
         repository: hl7au/ig-registry
         path: ig-registry
 
+      - name: Create directories
+      run: |
+        mkdir -p webroot/fhir/ps
+        mv publish-setup.json ./webroot/
+
     - name: Update Publisher
       run: |
         echo "Updating Publisher"
@@ -69,11 +74,6 @@ jobs:
       run: |
           echo "Generating Publish for  Au patient summary IG..."
           java -jar input-cache/publisher.jar -ig hl7au/au-fhir-ps/ig.ini
-
-    - name: Create directories
-      run: |
-        mkdir -p webroot/fhir/ps
-        mv publish-setup.json ./webroot/
 
     - name: Download package-list.json
       run: |
