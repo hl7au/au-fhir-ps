@@ -60,7 +60,7 @@ jobs:
         repository: hl7au/ig-registry
         path: ig-registry
 
-      - name: Create directories
+    - name: Create directories
       run: |
         mkdir -p webroot/fhir/ps
         mv publish-setup.json ./webroot/
