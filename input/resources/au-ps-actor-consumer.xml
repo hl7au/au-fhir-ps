@@ -2,12 +2,12 @@
 <ActorDefinition xmlns="http://hl7.org/fhir">
   <id value="au-ps-actor-consumer"/>
   <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-fmm">
-    <valueInteger value="0"/> 
+    <valueInteger value="1"/> 
   </extension>
   <url value="http://hl7.org.au/fhir/ps/ActorDefinition/au-ps-actor-consumer" />
   <name value="AUPSConsumer"/> 
   <title value="AU PS Consumer"/> 
-  <status value="draft"/>
+  <status value="active"/>
   <description value="An AU PS Consumer is a system that consumes an AU PS Bundle and uses it to display or process patient summary content. This actor is based on the Consumer (IPS) actor, and describes the additional requirements and documentation applied for the Australian context."/> 
   <type value="system"/> 
   <documentation value="An AU PS Consumer **SHALL** comply with the requirements of the [Consumer (IPS)](https://build.fhir.org/ig/HL7/fhir-ips/ActorDefinition-Consumer.html), and:&#xa;&#xa;
