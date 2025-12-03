@@ -69,7 +69,7 @@ sequenceDiagram
   Endocrinologist CIS ->> GP CIS: Check for updates and retrieve current Patient Summary
   Endocrinologist ->> Endocrinologist CIS: View current Patient Summary
 </div>
-*Figure 2: Sequence diagram showing access to embedded and updated patient summaries.*
+*Figure 2: Sequence diagram showing access to embedded and updated patient summaries*
 <br/>
 
 ### Examples
