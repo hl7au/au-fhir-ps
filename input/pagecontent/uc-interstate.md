@@ -56,8 +56,18 @@ This use case demonstrates use of patient summary during step 5. Patient Summary
 1. Dr Samuels views the patient summary in the consultation.
 
 #### Sequence Diagram
-<div> 
-  <img src="uc-interstate-seq.png" alt="Sequence Diagram" style="width:800px"/>
+<div class="mermaid" style="padding:20px;width:800px">
+---
+config:
+  theme: default
+---
+sequenceDiagram
+  actor Attending GP as Attending GP
+  participant Clinic CIS as Clinic CIS
+  participant Patient Summary Host as Patient Summary Host
+  Attending GP ->> Clinic CIS: Scan QR for Patient Summary access
+  Clinic CIS ->> Patient Summary Host: Retrieve Patient Summary
+  Attending GP ->> Clinic CIS: View Patient Summary
 </div>
 *Figure 2: Sequence diagram showing access to a patient summary via Smart Health Link*
 <br/>
