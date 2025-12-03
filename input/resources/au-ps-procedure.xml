@@ -112,7 +112,7 @@
     <element id="Procedure.subject.reference">
       <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
         <extension url="code">
-          <valueCode value="SHALL:populate-if-known"/>
+          <valueCode value="SHALL:populate"/>
         </extension>
         <extension url="actor">
           <valueCanonical value="http://hl7.org.au/fhir/ps/ActorDefinition/au-ps-actor-producer"/>
@@ -284,6 +284,10 @@
         </extension>
       </extension>
       <path value="Procedure.reasonCode"/>
+      <type>
+				<code value="CodeableConcept"/>
+				<profile value="http://hl7.org/fhir/uv/ips/StructureDefinition/CodeableConcept-uv-ips"/>
+			</type>
     </element>
     <element id="Procedure.reasonReference">
       <extension url="http://hl7.org/fhir/StructureDefinition/obligation">

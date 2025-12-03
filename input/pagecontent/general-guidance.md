@@ -97,11 +97,11 @@ The AU PS identifies a number of [terminologies](terminology.html) as *Must Supp
 
 Within [the AU PS](the-aups.html) context (i.e. the Australian healthcare context), the Australian localised value sets, developed and published by the [National Clinical Terminology Service](https://www.healthterminologies.gov.au) (NCTS) and the HL7 AU FHIR Working Group are preferred over IPS value sets to support the consumer on their healthcare journey in the AU healthcare context.
 
-In an IPS context, IPS proposes that to support interoperability of IPS content between organisations that use different SNOMED CT value set content, a "common proximal ancestor" strategy is used. See IPS [Structuring Terminology Choices](https://build.fhir.org/ig/HL7/fhir-ips/General-Principles.html#structuring-terminology-choices) for more information.
+In an IPS context, IPS proposes that to support interoperability of IPS content between organisations that use different SNOMED CT value set content, a "common proximal ancestor" strategy is used. See IPS [Structuring Terminology Choices](https://hl7.org/fhir/uv/ips/STU2/General-Principles.html#structuring-terminology-choices) for more information.
  
 
 ### Patient Safety in IPS Context
-See the guidance defined in IPS [Patient Safety in IPS Context](https://build.fhir.org/ig/HL7/fhir-ips/General-Principles.html#patient-safety-in-ips-context).
+See the guidance defined in IPS [Patient Safety in IPS Context](https://hl7.org/fhir/uv/ips/STU2/General-Principles.html#patient-safety-in-ips-context).
 
 ### Medicinal Product Identification
 See the guidance defined in AU Core [Medicine Information](https://build.fhir.org/ig/hl7au/au-fhir-core/medicine-information.html). 
@@ -110,4 +110,4 @@ See the guidance defined in AU Core [Medicine Information](https://build.fhir.or
 See the guidance defined in AU Core [Representing Body Site, Which May Include Laterality](https://build.fhir.org/ig/hl7au/au-fhir-core/general-guidance.html#representing-body-site-which-may-include-laterality). 
 
 ### Provenance
-See the guidance defined in IPS [Provenance](https://build.fhir.org/ig/HL7/fhir-ips/Design-Conventions.html#provenance). 
+See the guidance defined in IPS [Provenance](https://hl7.org/fhir/uv/ips/STU2/Design-Conventions.html#provenance). 
