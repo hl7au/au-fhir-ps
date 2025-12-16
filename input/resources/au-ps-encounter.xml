@@ -8,7 +8,7 @@
   <name value="AUPSEncounter"/>
   <title value="AU PS Encounter"/>
   <status value="active"/>
-  <description value="This profile sets minimum expectations for an Encounter resource in the context of a patient summary in an Australian context. It is based on the [AU Core Encounter](https://build.fhir.org/ig/hl7au/au-fhir-core/StructureDefinition-au-core-encounter.html) profile, and applies the additional constraints for use in a patient summary context consistent with the profiling conventions of [IPS](https://build.fhir.org/ig/HL7/fhir-ips/)." />
+  <description value="This profile sets minimum expectations for an Encounter resource in the context of a patient summary in an Australian context. It is based on the [AU Core Encounter](https://build.fhir.org/ig/hl7au/au-fhir-core/StructureDefinition-au-core-encounter.html) profile, and applies the additional constraints for use in a patient summary context consistent with the profiling conventions of [IPS](https://hl7.org/fhir/uv/ips/STU2/)." />
   <kind value="resource"/>
   <abstract value="false"/>
   <type value="Encounter"/>
