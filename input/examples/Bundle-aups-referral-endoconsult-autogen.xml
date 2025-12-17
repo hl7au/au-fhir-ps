@@ -791,7 +791,7 @@ Norfloxacin: Susceptible</td><td>05/11/2024</td></tr>
               <coding>
                 <system value="http://snomed.info/sct"/>
                 <code value="109081006"/>
-                <display value="Product containing metformin (medicinal product)"/>
+                <display value="Metformin"/>
               </coding>
               <text value="Metformin"/>
             </code>
