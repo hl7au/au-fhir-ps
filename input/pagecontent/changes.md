@@ -55,6 +55,7 @@ This change log documents the significant updates and resolutions implemented fr
   - changed Immunization.patient obligation for the AU PS Producer from SHALL:populate-if-known to SHALL:populate [AU PS: FHIR-52411](https://jira.hl7.org/browse/FHIR-52411)
   - changed Immunization.patient.reference obligation for the AU PS Producer from SHALL:populate-if-known to SHALL:populate [AU PS: FHIR-53115](https://jira.hl7.org/browse/FHIR-53115)
   - removed SHOULD:display obligation on Immunization.vaccineCode coding slices amtVaccineCode and airVaccineCode for the AU PS Consumer [AU PS: FHIR-53077](https://jira.hl7.org/browse/FHIR-53077)
+  - changed Immunization.status obligation for the AU PS Producer from SHALL:populate-if-known to SHALL:populate [AU PS: FHIR-53116](https://jira.hl7.org/browse/FHIR-53116)
 - [AU PS Medication](StructureDefinition-au-ps-medication.html): 
   - changed Medication to add a comment that the IPS guidance preferencing the use of Medication resource is not adopted by AU PS at this time [AU PS: FHIR-51876](https://jira.hl7.org/browse/FHIR-51876)
   - added profile specific implementation guidance that this resource SHALL NOT be used to represent no known current medications for a patient and MedicationStatement SHOULD be used instead [AU PS: FHIR-52274](https://jira.hl7.org/browse/FHIR-52274)
@@ -72,6 +73,8 @@ This change log documents the significant updates and resolutions implemented fr
   - changed MedicationRequest.subject.reference obligation for the AU PS Producer from SHALL:populate-if-known to SHALL:populate [AU PS: FHIR-53115](https://jira.hl7.org/browse/FHIR-53115)
   - added profile specific implementation guidance that this resource SHALL NOT be used to represent no known current medications for a patient and MedicationStatement SHOULD be used instead [AU PS: FHIR-52274](https://jira.hl7.org/browse/FHIR-52274)
   - removed SHOULD:display obligation on MedicationRequest.medication[x]:medicationCodeableConcept coding slices pbs and amt for the AU PS Consumer [AU PS: FHIR-53077](https://jira.hl7.org/browse/FHIR-53077)
+  - changed MedicationRequest.status obligation for the AU PS Producer from SHALL:populate-if-known to SHALL:populate [AU PS: FHIR-53116](https://jira.hl7.org/browse/FHIR-53116)
+  - changed MedicationRequest.intent obligation for the AU PS Producer from SHALL:populate-if-known to SHALL:populate [AU PS: FHIR-53116](https://jira.hl7.org/browse/FHIR-53116)
 - [AU PS MedicationStatement](StructureDefinition-au-ps-medicationstatement.html):
   - changed MedicationStatement.dosage.route to remove use of the CodableConceptIPS [IPS: FHIR-51257](https://jira.hl7.org/browse/FHIR-51257)
   - removed SHOULD:display obligation on MedicationStatement.subject.reference for the AU PS Consumer [IPS: FHIR-51258](https://jira.hl7.org/browse/FHIR-51258)
@@ -82,6 +85,7 @@ This change log documents the significant updates and resolutions implemented fr
   - removed SHOULD:display obligation on MedicationStatement.medication[x]:medicationCodeableConcept coding slices pbs and amt for the AU PS Consumer [AU PS: FHIR-53077](https://jira.hl7.org/browse/FHIR-53077)
   - changed MedicationStatement.reasonCode to use CodeableConceptIPS [AU PS: FHIR-52953](https://jira.hl7.org/browse/FHIR-52953)
   - added profile specific implementation guidance for representing no known current medications for a patient [AU PS: FHIR-52274](https://jira.hl7.org/browse/FHIR-52274)
+  - changed MedicationStatement.status obligation for the AU PS Producer from SHALL:populate-if-known to SHALL:populate [AU PS: FHIR-53116](https://jira.hl7.org/browse/FHIR-53116)
 - [AU PS Organization](StructureDefinition-au-ps-organization.html):
   - applied technical correction to add obligations SHALL:populate-if-known for the AU PS Producer, and SHALL:handle and SHOULD:display for the AU PS Consumer to Organization.telecom.system [AU PS: FHIR-52835](https://jira.hl7.org/browse/FHIR-52835)
   - applied technical correction to add obligations SHALL:populate-if-known for the AU PS Producer, and SHALL:handle and SHOULD:display for the AU PS Consumer to Organization.telecom.value [AU PS: FHIR-52835](https://jira.hl7.org/browse/FHIR-52835)
@@ -127,6 +131,7 @@ This change log documents the significant updates and resolutions implemented fr
   - changed Procedure.subject obligation for the AU PS Producer from SHALL:populate-if-known to SHALL:populate [AU PS: FHIR-52411](https://jira.hl7.org/browse/FHIR-52411)
   - changed Procedure.reasonCode to use CodeableConceptIPS [AU PS: FHIR-52953](https://jira.hl7.org/browse/FHIR-52953)
   - changed Procedure.subject.reference obligation for the AU PS Producer from SHALL:populate-if-known to SHALL:populate [AU PS: FHIR-53115](https://jira.hl7.org/browse/FHIR-53115)
+  - changed Procedure.status obligation for the AU PS Producer from SHALL:populate-if-known to SHALL:populate [AU PS: FHIR-53116](https://jira.hl7.org/browse/FHIR-53116)
 - [AU PS RelatedPerson](StructureDefinition-au-ps-relatedperson.html):
   - removed SHOULD:display obligation on the following elements for the AU PS Consumer [AU PS: FHIR-52836](https://jira.hl7.org/browse/FHIR-52836):
     - RelatedPerson.name.use
