@@ -1,4 +1,8 @@
-### Profiling Approach
+### Approach of this Implementation Guide
+Repeat of the usual from other sections of this guide.
+
+
+### Profile Approach
 AU PS profiles will by design:
 * ensure resource compliance with AU Core and IPS
 * support additional requirements agreed as necessary to support patient summaries in an Australian healthcare context
@@ -67,6 +71,24 @@ Currently no AU PS profile uses imposeProfile. To support future maintenance it 
 
 Users of this implementation guide are encouraged to provide their feedback about the potential use of imposeProfile.
 </div><!-- stu-note -->
+
+#### Extension Approach
+
+Repeat with slight wording change the AU Base content.
+
+any extension intended for use in a healthcare context that is not unique to Australia is to be defined in the core FHIR extension pack, fallback is AU Base if the submission is not accepted.
+
+any extension intended for use in an Australian healthcare context that is not restricted to one IG is to be defined in AU Base. 
+
+Practically this means for example that AU PS will not define extensions - as a patient summary is an excerpt of ... it is anticipated that there are no extensions that are unique to this particular implementation guide. All AU PS relevant extensions are expected to be defined, preferrably in the core FHIR spec, or if AU specificc in AU Base. 
+
+As part of profiling, AU Core: profiles indicate the minimum support:
+* for individual extensions in AU Core resource profiles
+* for individual elements in complext extensions e.g. Sex Assigned at Birth
+
+#### Terminology Approach - Q? not sure this will be true, think that majority of time no, but could be some summary specific stuffs
+
+AU PS will not define new terminology resources - as part of profiling AU Core indicates the support expectations for terminology. For example in AU Core medication profiles, slicing is used to indicate Must Support for two terminologies that are defined as additional bindings in the underlying AU Base profile.
 
 ### Extensibility – “Additional” Sections or Elements
 As in IPS, a producer can send:
