@@ -1,3 +1,5 @@
+{::options toc_levels="1..4"/}
+
 ### Approach of this Implementation Guide
 Repeat of the usual from other sections of this guide.
 
