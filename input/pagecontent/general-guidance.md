@@ -50,7 +50,7 @@ This approach to AU PS Bundle profiling has been taken as at this time there is 
 * derivation from Bundle (IPS)
 * changing reference targets to AU PS profiles (as AU PS profiles derive from AU Core and not IPS they cannot be easily assessed as meeting IPS rules by the tooling)
 
-#### Profile Approach
+##### Profile Approach
  AU PS profiles are designed to ensure compliance with AU Core and IPS. AU PS profiles design principles are as follows:
 * **SHALL** ensure resources validate against both IPS and AU Core profiles (where both profiles exist)
    - Cardinality
@@ -74,7 +74,7 @@ Adopting the approach in both IPS and AU Core, AU PS profiles are 'open' and all
 
 Additional detail on profiling is described in the guidance section [Localisation of the IPS](the-aups.html#localisation-of-the-ips).
 
-#### Profiling Options
+##### Profiling Options
 
 When managing [profile complexity and requirements](relationship.html) in the [national and international context for AU PS](the-aups.html#the-au-ps-au-patient-summary), the following mechanisms are available:
 1. [Derived from Profiles (derive)](https://build.fhir.org/structuredefinition-definitions.html#StructureDefinition.baseDefinition)
@@ -90,7 +90,7 @@ For a human, the main differences with use of imposeProfile are:
 - does not visually show human reader of the source profile any rules from the target profile, i.e. a human reader must view and understand both profiles to understand the rules
 - where two or more profiles offer optional alternatives (e.g. differing preferred bindings or data type choices) does not preference one over another
 
-Currently the only AU PS profile to uses imposeProfile is AU PS Composition. To support future maintenance it is under consideration that all AU PS profiles derive from AU Core, where available, and use imposeProfile to apply IPS rules. That would mean that a number of IPS-imposed requirements including cardinality, terminology, and flagging of <i>Must Support</i> would not be directly visible in the formal views within this guide. Or, if we chose to make the additional IPS constraints visible + use imposeProfile, those constraints would be repeated from a validation sense and could be an additional validation burden.
+Currently the only AU PS profile to use imposeProfile is AU PS Composition . To support future maintenance it is under consideration that all AU PS profiles derive from AU Core, where available, and use imposeProfile to apply IPS rules. That would mean that a number of IPS-imposed requirements including cardinality, terminology, and flagging of <i>Must Support</i> would not be directly visible in the formal views within this guide. Or, if we chose to make the additional IPS constraints visible + use imposeProfile, those constraints would be repeated from a validation sense and could be an additional validation burden.
 
 Users of this implementation guide are encouraged to provide their feedback about the potential use of imposeProfile.
 </div><!-- stu-note -->
