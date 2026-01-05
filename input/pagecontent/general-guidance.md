@@ -1,16 +1,33 @@
 {::options toc_levels="1..4"/}
 
 ### Approach of this Implementation Guide
-Repeat of the usual from other sections of this guide.
+AU Patient Summary (AU PS) is provided to support the use of patient summaries in HL7® FHIR®© in an Australian context. AU PS is based on IPS and AU Core, setting the minimum conformance expectations for implementing support for AU PS documents in systems.
 
-
-### Profile Approach
-AU PS profiles will by design:
-* ensure resource compliance with AU Core and IPS
+AU PS will by design:
+* ensure compliance with AU Core and IPS (see [localisation of the IPS](the-aups.html#localisation-of-the-ips))
 * support additional requirements agreed as necessary to support patient summaries in an Australian healthcare context
 * support varied stakeholder needs and use of AU PS artefacts e.g. government policy, implementers, tooling developers, testers, IG authors/maintainers etc.
 
-AU PS profiles:
+#### Scope of AU PS FHIR Artefacts
+HL7 AU PS profiles:
+* Resources to define 'minimum' support expectations for use in the Australian healthcare context
+* Actors to define systems that play a role in AU Core data exchange
+
+It is anticipated that capability statements or extension profiles may be included in future releases of this IG.
+
+#### Extension Approach
+All extensions used in AU PS are defined in the FHIR Extensions Pack or [AU Base](http://build.fhir.org/ig/hl7au/au-fhir-base/profiles-and-extensions.html#extensions).
+
+It is anticipated that extension profiles may be included in future releases of this IG.
+
+#### Search Parameter Approach
+AU PS does not define any search capabilities. It is anticipated that search parameter profiles may be included in future releases of this IG.
+
+#### Terminology Approach
+AU PS does not define any new terminology FHIR artefacts. Terminology supported in AU PS are published in AU Base, the base FHIR specification, HL7 Terminology (THO), or the National Clinical Terminology Service (NCTS). As part of profiling, AU PS inherits the AU Core localised terminology and indicates [local support expectations](the-aups.html#terminology) for an AU PS actor using _Must Support_ and Obligations. 
+
+### Profile Approach
+AU PS resource profiles:
 * are based on the AU Core profile, or where not available, the AU Base profile (where it exists)
 * apply additional requirements inherited from IPS (as determined by the [AU PS Profile Design Principles](general-guidance.html#au-ps-profile-design-principles)) 
 * have additional requirements as agreed by the AU PS project applied
@@ -33,23 +50,25 @@ This approach to AU PS Bundle profiling has been taken as at this time there is 
 * derivation from Bundle (IPS)
 * changing reference targets to AU PS profiles (as AU PS profiles derive from AU Core and not IPS they cannot be easily assessed as meeting IPS rules by the tooling)
 
-#### AU PS Profile Design Principles
-
+#### Profile Approach
  AU PS profile design to ensure compliance with AU Core and IPS is agreed to as follows. AU PS profiles:
 * **SHALL** ensure resources validate against both IPS and AU Core profiles (where both profiles exist)
    - Cardinality
-   - *Must Support*
    - Fixed values and patterns
    - Data type sub-elements and profiles
    - Data type choices
    - Invariants
-* Where both AU Core and IPS profiles do not exist, **SHALL** ensure resources validate against:
-   * IPS profile (where only the IPS profile exists)
-   * AU Core profile (where only the AU Core profile exists)
-* AU PS profiles **SHALL** validate reference elements against AU PS profile where defined
+* AU PS profiles **SHALL** validate reference elements against AU PS profile where defined, otherwise the AU Core profile where available, otherwise the AU Base profile where available
 * In AU PS profiles, inherited AU Core profile value sets are preferred over equivalent IPS profile value sets:
    - where an element has a required binding, the element **SHALL** apply the intersection of both value sets (AU Core and IPS)
    - where an element has a lesser binding, use the AU Core value set and binding strength (where AU Core is equivalent or stronger) or use the IPS value set where the binding strength is stronger
+* An AU PS profile **SHALL** inherit the IPS profile obligations and **MAY** strengthen the IPS profile obligations (using a specialisation of the defined obligation) or add an obligation (e.g. SHOULD:persist), as required in the Australian context. A weaker obligation **SHALL NOT** be specified.
+* Where both AU Core and IPS profiles do not exist, **SHALL** ensure resources validate against:
+   * IPS profile (where only the IPS profile exists)
+   * AU Core profile (where only the AU Core profile exists)
+* Where a profile referenced in AU PS Bundle is not defined in IPS, or has _Must Support_ elements with no obligations in IPS,  the AU PS obligations default to: 
+  - AU PS Producer: SHALL:populate-if-known
+  - AU PS Consumer: SHALL:handle and SHOULD:display 
 
 Adopting the approach in both IPS and AU Core, AU PS profiles are 'open' and allow for additional content undefined by AU PS (and IPS) to be shared. See the section [Extensibility – “Additional” Sections or Elements](general-guidance.html#extensibility--additional-sections-or-elements) for information. 
 
@@ -74,23 +93,25 @@ Currently no AU PS profile uses imposeProfile. To support future maintenance it 
 Users of this implementation guide are encouraged to provide their feedback about the potential use of imposeProfile.
 </div><!-- stu-note -->
 
-#### Extension Approach
+#### Actor Approach
+AU PS Actors are defined to describe the specific sets of functionality supported by systems that play a role in AU Core data exchange. Each actor is defined by:
+* an ActorDefiniition that includes reference to support expectations (narrative conformance requirements)
+* resource profiles that define expectations using _Must Support_ and Obligations 
 
-Repeat with slight wording change the AU Base content.
+ AU PS actor design to ensure compliance with AU Core and IPS:
+* inherits the narrative conformance requirements defined including 
+* Where both AU Core and IPS profiles do not exist, **SHALL** ensure resources validate against:
+   * IPS profile (where only the IPS profile exists)
+   * AU Core profile (where only the AU Core profile exists)
+* AU PS profiles **SHALL** validate reference elements against AU PS profile where defined
+* In AU PS profiles, inherited AU Core profile value sets are preferred over equivalent IPS profile value sets:
+   - where an element has a required binding, the element **SHALL** apply the intersection of both value sets (AU Core and IPS)
+   - where an element has a lesser binding, use the AU Core value set and binding strength (where AU Core is equivalent or stronger) or use the IPS value set where the binding strength is stronger
 
-any extension intended for use in a healthcare context that is not unique to Australia is to be defined in the core FHIR extension pack, fallback is AU Base if the submission is not accepted.
+Adopting the approach in both IPS and AU Core, AU PS profiles are 'open' and allow for additional content undefined by AU PS (and IPS) to be shared. See the section [Extensibility – “Additional” Sections or Elements](general-guidance.html#extensibility--additional-sections-or-elements) for information. 
 
-any extension intended for use in an Australian healthcare context that is not restricted to one IG is to be defined in AU Base. 
-
-Practically this means for example that AU PS will not define extensions - as a patient summary is an excerpt of ... it is anticipated that there are no extensions that are unique to this particular implementation guide. All AU PS relevant extensions are expected to be defined, preferrably in the core FHIR spec, or if AU specificc in AU Base. 
-
-As part of profiling, AU Core: profiles indicate the minimum support:
-* for individual extensions in AU Core resource profiles
-* for individual elements in complext extensions e.g. Sex Assigned at Birth
-
-#### Terminology Approach - Q? not sure this will be true, think that majority of time no, but could be some summary specific stuffs
-
-AU PS will not define new terminology resources - as part of profiling AU Core indicates the support expectations for terminology. For example in AU Core medication profiles, slicing is used to indicate Must Support for two terminologies that are defined as additional bindings in the underlying AU Base profile.
+#### Capability Statement Approach
+AU PS does not define any capability statements. It is anticipated that capability statements may be included in future releases of this IG.
 
 ### Extensibility – “Additional” Sections or Elements
 As in IPS, a producer can send:
