@@ -29,7 +29,7 @@ AU PS does not define any new terminology FHIR artefacts. Terminology supported 
 ### Profile Approach
 AU PS resource profiles:
 * are based on the AU Core profile, or where not available, the AU Base profile (where it exists)
-* apply additional requirements inherited from IPS (as determined by the [AU PS Profile Design Principles](general-guidance.html#au-ps-profile-design-principles)) 
+* apply additional requirements inherited from IPS (in accordance with the [AU PS Profile Design Principles](general-guidance.html#profile-approach)) 
 * have additional requirements as agreed by the AU PS project applied
 * use compliesWithProfile to assert compliance with IPS
 
@@ -41,8 +41,8 @@ The differential view therefore shows the patient summary requirements that are 
 *Figure 1: Profiling approach for AU PS Patient profile*
 <br/><br/>
 
-The AU PS Bundle profile is not based on AU Core or AU Base (no resource profile exists). The approach to profiling for AU PS Bundle is to:
-* apply requirements inherited from IPS (as determined by the [AU PS Profile Design Principles](general-guidance.html#au-ps-profile-design-principles)) 
+The AU PS Bundle profile is not based on AU Core or AU Base as no resource profile exists in either IG. The approach to profiling for AU PS Bundle is to:
+* apply requirements inherited from IPS (in accordance with the [AU PS Profile Design Principles](general-guidance.html#profile-approach)) 
 * apply additional requirements as agreed by the AU PS project
 * use compliesWithProfile to assert compliance with IPS
 
@@ -51,7 +51,7 @@ This approach to AU PS Bundle profiling has been taken as at this time there is 
 * changing reference targets to AU PS profiles (as AU PS profiles derive from AU Core and not IPS they cannot be easily assessed as meeting IPS rules by the tooling)
 
 #### Profile Approach
- AU PS profile design to ensure compliance with AU Core and IPS is agreed to as follows. AU PS profiles:
+ AU PS profiles are designed to ensure compliance with AU Core and IPS. AU PS profiles design principles are as follows:
 * **SHALL** ensure resources validate against both IPS and AU Core profiles (where both profiles exist)
    - Cardinality
    - Fixed values and patterns
@@ -72,6 +72,8 @@ This approach to AU PS Bundle profiling has been taken as at this time there is 
 
 Adopting the approach in both IPS and AU Core, AU PS profiles are 'open' and allow for additional content undefined by AU PS (and IPS) to be shared. See the section [Extensibility – “Additional” Sections or Elements](general-guidance.html#extensibility--additional-sections-or-elements) for information. 
 
+Additional detail on profiling is described in the guidance section [Localisation of the IPS](the-aups.html#localisation-of-the-ips).
+
 #### Profiling Options
 
 When managing [profile complexity and requirements](relationship.html) in the [national and international context for AU PS](the-aups.html#the-au-ps-au-patient-summary), the following mechanisms are available:
@@ -88,7 +90,7 @@ For a human, the main differences with use of imposeProfile are:
 - does not visually show human reader of the source profile any rules from the target profile, i.e. a human reader must view and understand both profiles to understand the rules
 - where two or more profiles offer optional alternatives (e.g. differing preferred bindings or data type choices) does not preference one over another
 
-Currently no AU PS profile uses imposeProfile. To support future maintenance it is under consideration that all AU PS profiles derive from AU Core, where available, and use imposeProfile to apply IPS rules. That would mean that a number of IPS-imposed requirements including cardinality, terminology, and flagging of <i>Must Support</i> would not be directly visible in the formal views within this guide. Or, if we chose to make the additional IPS constraints visible + use imposeProfile, those constraints would be repeated from a validation sense and could be an additional validation burden.
+Currently the only AU PS profile to uses imposeProfile is AU PS Composition. To support future maintenance it is under consideration that all AU PS profiles derive from AU Core, where available, and use imposeProfile to apply IPS rules. That would mean that a number of IPS-imposed requirements including cardinality, terminology, and flagging of <i>Must Support</i> would not be directly visible in the formal views within this guide. Or, if we chose to make the additional IPS constraints visible + use imposeProfile, those constraints would be repeated from a validation sense and could be an additional validation burden.
 
 Users of this implementation guide are encouraged to provide their feedback about the potential use of imposeProfile.
 </div><!-- stu-note -->
@@ -99,16 +101,10 @@ AU PS Actors are defined to describe the specific sets of functionality supporte
 * resource profiles that define expectations using _Must Support_ and Obligations 
 
  AU PS actor design to ensure compliance with AU Core and IPS:
-* inherits the narrative conformance requirements defined including 
-* Where both AU Core and IPS profiles do not exist, **SHALL** ensure resources validate against:
-   * IPS profile (where only the IPS profile exists)
-   * AU Core profile (where only the AU Core profile exists)
-* AU PS profiles **SHALL** validate reference elements against AU PS profile where defined
-* In AU PS profiles, inherited AU Core profile value sets are preferred over equivalent IPS profile value sets:
-   - where an element has a required binding, the element **SHALL** apply the intersection of both value sets (AU Core and IPS)
-   - where an element has a lesser binding, use the AU Core value set and binding strength (where AU Core is equivalent or stronger) or use the IPS value set where the binding strength is stronger
-
-Adopting the approach in both IPS and AU Core, AU PS profiles are 'open' and allow for additional content undefined by AU PS (and IPS) to be shared. See the section [Extensibility – “Additional” Sections or Elements](general-guidance.html#extensibility--additional-sections-or-elements) for information. 
+* **SHALL** inherit the narrative conformance requirements including Missing Data, Empty Sections, Known Absence of Data
+* **SHALL** inherit IPS Document requirements (see [AU PS profile approach]())
+* **SHALL** inherit _Must Support_ and Obligation requirements
+* **MAY** strengthen inherited requirements as required for the Australian context. A weaker requirement **SHALL NOT** be specified.
 
 #### Capability Statement Approach
 AU PS does not define any capability statements. It is anticipated that capability statements may be included in future releases of this IG.
