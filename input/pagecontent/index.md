@@ -28,6 +28,7 @@ Success of this project will depend on active participation from members of the 
 
 ### Dependencies
 {% include dependency-table.xhtml %}
+{% include expansion-params.xhtml %}
 
 ### How to Read This Guide
 
