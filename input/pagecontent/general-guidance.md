@@ -24,7 +24,7 @@ It is anticipated that extension profiles may be included in future releases of 
 AU PS does not define any search capabilities. It is anticipated that search parameter profiles may be included in future releases of this IG.
 
 #### Terminology Approach
-AU PS does not define any new terminology FHIR artefacts. Terminology supported in AU PS are published in AU Base, the base FHIR specification, HL7 Terminology (THO), or the National Clinical Terminology Service (NCTS). As part of profiling, AU PS inherits the AU Core localised terminology and indicates [local support expectations](the-aups.html#terminology) for an AU PS actor using _Must Support_ and Obligations. 
+AU PS does not define any new terminology FHIR artefacts. Terminology supported in AU PS are published in AU Base, the FHIR standard, HL7 Terminology (THO), or the National Clinical Terminology Service (NCTS). As part of profiling, AU PS inherits the AU Core localised terminology and indicates [local support expectations](the-aups.html#terminology) for an AU PS actor using _Must Support_ and Obligations. 
 
 ### Profile Approach
 AU PS resource profiles:
