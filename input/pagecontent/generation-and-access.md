@@ -34,7 +34,7 @@ A consuming system can invoke the Patient `$summary` operation on a server to re
 <br/>
 
 ### IPA $docref FHIR Operation
-The International Patient Access (IPA) defines the [IPA Fetch DocumentReference](https://hl7.org/fhir/uv/ipa/STU1.1/OperationDefinition-docref.html) (`$docref`) operation. FHIR Release 5 has incorporated the [$docref on DocumentReference operation](https://hl7.org/fhir/documentreference-operation-docref.html) as a core FHIR operation.
+The International Patient Access (IPA) defines the [IPA Fetch DocumentReference](https://hl7.org/fhir/uv/ipa/STU1.1/OperationDefinition-docref.html) (`$docref`) operation. FHIR Release 5 has incorporated the Fetch DocumentReference operation as a FHIR operation.
 
 The [IPS Server Capability Statement](https://hl7.org/fhir/uv/ips/STU2/CapabilityStatement-ips-server.html) also recommends the `$docref` operation as an option for an IPS Server to implement generation of an IPS document. It is also worth noting that the [US Core Server CapabilityStatement](https://hl7.org/fhir/us/core/CapabilityStatement-us-core-server.html#documentreference) in Release 8 specifies the $docref operation as SHALL support, although the default patient summary document format is currently a HL7 CDA Continuity of Care Document (CCD). 
 
