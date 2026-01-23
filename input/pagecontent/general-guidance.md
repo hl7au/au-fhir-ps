@@ -10,20 +10,23 @@ AU PS will by design:
 
 The approach to describing the requirements in AU PS means modelling in such a way that 'at least' what is to be supported is defined without limiting meaningful options for business rules and different clinical workflows. AU PS artefacts are therefore modelled as open templates allowing for additional content including elements, extensions, resources, search parameters, operations, and terminology whilst ensuring the minimum requirements are met.
 
+Australian realm IGs and implementers are expected to comply with AU Base and AU Core and to define extensions, search parameters or operations (in order of precedence):
+* in the FHIR standard (incl. FHIR Extensions Pack)
+* in AU Base
+* in a downstream IG (this IG)
+* in a local IG only if necessary
+
 #### Scope of AU PS FHIR Artefacts
 AU PS profiles:
 * [Resources](general-guidance.html#resource-profile-approach) to define 'minimum' support expectations for use in the Australian healthcare context
 * [Actors](general-guidance.html#actor-approach) to define systems that play a role in AU Core data exchange
 
-It is anticipated that capability statements, search parameters, or extension profiles may be included in future releases of this IG.
+In this release, AU PS does not define new extensions, search parameters, operations or [terminology](general-guidance.html#terminology-approach). AU PS does not include capability statements (the minimum capabilities (behaviours) to be supported for AU PS actors). Future releases of this IG may include capability statements, extensions, search parameters, operations, or terminology.
 
 #### Extension Approach
 AU PS does not define new extensions. All extensions included in AU PS are defined in the [FHIR Extensions Pack](https://hl7.org/fhir/extensions/) or [AU Base](http://build.fhir.org/ig/hl7au/au-fhir-base/profiles-and-extensions.html#extensions). A limited set of extensions are indicated as _Must Support_ in AU PS resource profiles; these suported extensions have been inherited from underlying AU Core profile. (see [Use of Extensions](general-guidance.html#use-of-extensions) in [Resource Profile Approach](general-guidance.html#resource-profile-approach)).
 
 It is anticipated that extension profiles may be included in future releases of this IG.
-
-#### Search Parameter Approach
-AU PS does not define search capabilities in this release. It is anticipated that search parameter profiles may be included in future releases of this IG.
 
 #### Terminology Approach
 AU PS does not define new terminology FHIR artefacts (e.g. value sets or code systems). Terminology supported in AU Core are published in [AU Base](https://build.fhir.org/ig/hl7au/au-fhir-base/terminology.html), the FHIR standard, [HL7 Terminology (THO)](https://terminology.hl7.org/), or the [National Clinical Terminology Service (NCTS)](https://www.healthterminologies.gov.au/). 
@@ -32,7 +35,7 @@ As part of profiling, AU PS inherits the AU Core localised terminology and indic
 
 For a list of the terminology supported in AU PS refer to the [Terminology](terminology.html) page. See AU Base for guidance on [Terminology Selection](https://build.fhir.org/ig/hl7au/au-fhir-base/generalguidance.html#terminology-selection) in HL7 AU implementation guides.
 
-### Resource Profile Approach
+#### Resource Profile Approach
 AU PS resource profiles:
 * are based on the AU Core profile (i.e. derived), or where not available, the AU Base profile (where it exists)
 * apply additional requirements inherited from IPS (in accordance with the [AU PS Profile Design Principles](general-guidance.html#profile-approach)) 
@@ -76,9 +79,11 @@ This approach to AU PS Bundle profiling has been taken as at this time there is 
   - AU PS Producer: SHALL:populate-if-known
   - AU PS Consumer: SHALL:handle and SHOULD:display 
 
-Adopting the approach in both IPS and AU Core, AU PS profiles are 'open' and allow for additional content undefined by AU PS (and IPS) to be shared. See the section [Extensibility – “Additional” Sections or Elements](general-guidance.html#extensibility--additional-sections-or-elements) for information. 
+Adopting the approach in both IPS and AU Core, AU PS profiles are 'open' and allow for additional content undefined by AU PS (and IPS) to be shared. See the section [Extensibility – 'Additional' Sections or Elements](general-guidance.html#extensibility--additional-sections-or-elements) for information. 
 
-Additional detail on profiling is described in the guidance section [Localisation of the IPS](the-aups.html#localisation-of-the-ips).
+Additional detail on profiling is:
+* described in the guidance section [Localisation of the IPS](the-aups.html#localisation-of-the-ips)
+* the modelling inherited from AU Core is described in * the AU Core [Resource Profile Approach](https://build.fhir.org/ig/hl7au/au-fhir-core/general-guidance.html#resource-profile-approach)
 
 ##### Profiling Options
 
@@ -115,36 +120,36 @@ AU PS Actors are defined to describe the specific sets of functionality supporte
 #### Capability Statement Approach
 AU PS does not define any capability statements. It is anticipated that capability statements may be included in future releases of this IG.
 
-### Extensibility – “Additional” Sections or Elements
+### Extensibility – 'Additional' Sections or Elements
 As in IPS, a producer can send:
-- "additional" elements beyond those flagged with *Must Support* in a profile
-- "additional" sections (often referred to as "undefined" sections) beyond those defined in the AU PS Composition
+- 'additional' elements beyond those flagged with *Must Support* in a profile
+- 'additional' sections (often referred to as 'undefined' sections) beyond those defined in the AU PS Composition
 
 Additional sections or elements are often required by other profiles the system may conform to, allowing local requirements, including technical and workflow context for the resource, to be reflected and extending the health information supported in exchanges. For this reason, extensibility is generally encouraged and expected in AU PS profiles. Only in some exceptionally rare use case profiles are rules tightened to limit the nature of additional information that can be sent. 
 
 Implementers intending to populate the AU PS with an unprofiled resoure type, e.g. MedicationAdministration, are recommended to consider the corresponding [AU Base](https://build.fhir.org/ig/hl7au/au-fhir-base/) profile, e.g. [AU Base MedicationAdministration](https://build.fhir.org/ig/hl7au/au-fhir-base/StructureDefinition-au-medicationadministration.html), as guidance for that resource type in an Australian healthcare context.
 
 
-#### Extensibility – “Additional” Sections
+#### Extensibility – 'Additional' Sections
 Implementers need to be aware, the rules of the `Composition.section:All Slices` defined in the AU PS Composition profile apply to all sections, defined or undefined:
 - `Composition.section.title` is mandatory and has obligations defined for AU PS Producers and AU PS Consumers
 - `Composition.section.text` is mandatory and has obligations defined for AU PS Producers and AU PS Consumers
 
-It is recommended that where a producing system intends to populate "additional" sections there is some definition available in a specification describing the intended contents and use of these additional sections. 
+It is recommended that where a producing system intends to populate 'additional' sections there is some definition available in a specification describing the intended contents and use of these additional sections. 
 
-#### Extensibility – “Additional” Elements
+#### Extensibility – 'Additional' Elements
 Specification authors adopting AU PS are encouraged to enable greater interoperability and software re-use by avoiding reductions in an element's cardinality.
 
-Depending on local requirements, a consumer (i.e. client application) may ignore these "additional" elements, may treat the data as for rendering only, or be capable of recognising and using the element. 
+Depending on local requirements, a consumer (i.e. client application) may ignore these 'additional' elements, may treat the data as for rendering only, or be capable of recognising and using the element. 
 
 ### Structuring Terminology Choices
-The AU PS shares the same structure as IPS and contains sections that can include coded elements in reusable “minimal” data blocks.
+The AU PS shares the same structure as IPS and contains sections that can include coded elements in reusable 'minimal' data blocks.
 
 The AU PS identifies a number of [terminologies](terminology.html) as *Must Support* for AU PS consumers and producers. Primary terminologies used in this specification include [SNOMED CT Australian Edition (SNOMED CT-AU)](https://build.fhir.org/ig/hl7au/au-fhir-base/generalguidance.html#snomed-ct-australian-edition) for clinical concepts (e.g. allergies, problems, procedures, medicines), LOINC for observation codes (e.g. pathology results and vital signs), UCUM for units of measure,  ISO 3166 for countries, PBS Item codes for medicines, Australian Immunisation Register codes for vaccines, and FHIR defined CodeSystems.
 
 Within [the AU PS](the-aups.html) context (i.e. the Australian healthcare context), the Australian localised value sets, developed and published by the [National Clinical Terminology Service](https://www.healthterminologies.gov.au) (NCTS) and the HL7 AU FHIR Working Group are preferred over IPS value sets to support the consumer on their healthcare journey in the AU healthcare context.
 
-In an IPS context, IPS proposes that to support interoperability of IPS content between organisations that use different SNOMED CT value set content, a "common proximal ancestor" strategy is used. See IPS [Structuring Terminology Choices](https://hl7.org/fhir/uv/ips/STU2/General-Principles.html#structuring-terminology-choices) for more information.
+In an IPS context, IPS proposes that to support interoperability of IPS content between organisations that use different SNOMED CT value set content, a 'common proximal ancestor' strategy is used. See IPS [Structuring Terminology Choices](https://hl7.org/fhir/uv/ips/STU2/General-Principles.html#structuring-terminology-choices) for more information.
  
 
 ### Patient Safety in IPS Context
