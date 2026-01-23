@@ -33,6 +33,19 @@ Found multiple matching profiles among 2 choices: http://hl7.org.au/fhir/Structu
 Found multiple matching profiles among 2 choices: http://hl7.org.au/fhir/StructureDefinition/au-hpii, http://hl7.org/fhir/StructureDefinition/Identifier
 Found multiple matching profiles among 2 choices: http://hl7.org.au/fhir/StructureDefinition/au-employeenumber, http://hl7.org/fhir/StructureDefinition/Identifier
 Found multiple matching profiles among 2 choices: http://hl7.org.au/fhir/StructureDefinition/au-medicareprovidernumber, http://hl7.org/fhir/StructureDefinition/Identifier
+Found multiple matching profiles among 2 choices: http://hl7.org.au/fhir/StructureDefinition/au-medicarecardnumber, http://hl7.org/fhir/StructureDefinition/Identifier
+Found multiple matching profiles among 2 choices: http://hl7.org.au/fhir/StructureDefinition/au-pbsprescribernumber, http://hl7.org/fhir/StructureDefinition/Identifier
+
+# === WARNING 03: The canonical URL for following identifier types currently resolves to a html page and not a FHIR artefact. See the list of AU Base identifier profiles for the corresponding data type profile. ===
+No definition could be found for URL value 'http://pca.digitalhealth.gov.au/id/pca-healthcare-service'
+No definition could be found for URL value 'http://hl7.org.au/id/abn'
+No definition could be found for URL value 'http://ns.electronichealth.net.au/id/hi/hpio/1.0'
+No definition could be found for URL value 'http://ns.electronichealth.net.au/id/dva'
+No definition could be found for URL value 'http://ns.electronichealth.net.au/id/hi/hpii/1.0'
+No definition could be found for URL value 'http://ns.electronichealth.net.au/id/medicare-provider-number'
+
+# === WARNING 04: Examples of ABN or HPIO scoped identifier system URLs do not have formal definition as they are examples. ===
+No definition could be found for URL value 'http://ns.electronichealth.net.au/id/abn-scoped/service-provider-individual/1.0/12345678901'
 
 # === INFORMATION 02: INHERITED FROM FHIR STANDARD: Some FHIR standard ValueSets are deprecated. ===
 Reference to deprecated ValueSet http://hl7.org/fhir/5.0/ValueSet/jurisdiction|5.0.0
