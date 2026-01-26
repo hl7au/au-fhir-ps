@@ -3,12 +3,12 @@
 ### Approach of this Implementation Guide
 AU Patient Summary (AU PS) is provided to support the use of patient summaries in HL7® FHIR®© in an Australian context. AU PS is based on IPS and AU Core, setting the minimum conformance expectations for implementing support for AU PS documents in systems.
 
-AU PS will by design:
-* ensure compliance with AU Core and IPS (see [localisation of the IPS](the-aups.html#localisation-of-the-ips))
-* support additional requirements agreed as necessary to support patient summaries in an Australian healthcare context
-* support varied stakeholder needs and use of AU PS artefacts e.g. government policy, implementers, tooling developers, testers, IG authors/maintainers etc.
+AU PS, by design:
+* ensures compliance with AU Core and IPS (see [localisation of the IPS](the-aups.html#localisation-of-the-ips))
+* supports additional requirements agreed as necessary to support patient summaries in an Australian healthcare context
+* supports varied stakeholder needs and use of AU PS artefacts e.g. government policy, implementers, tooling developers, testers, IG authors/maintainers etc.
 
-The approach to describing the requirements in AU PS means modelling in such a way that 'at least' what is to be supported is defined without limiting meaningful options for business rules and different clinical workflows. AU PS artefacts are therefore modelled as open templates allowing for additional content including elements, extensions, resources, search parameters, operations, and terminology whilst ensuring the minimum requirements are met.
+The approach to describing the 'minimum' in AU PS means modelling in such a way that 'at least' what is to be supported is defined without limiting meaningful options for business rules and different clinical workflows. AU PS artefacts are therefore modelled as open templates allowing for additional content including elements, extensions, resources, search parameters, operations, and terminology whilst ensuring the minimum requirements are met.
 
 Australian realm IGs and implementers are expected to comply with AU Base and AU Core and to define extensions, search parameters or operations (in order of precedence):
 * in the FHIR standard (incl. FHIR Extensions Pack)
@@ -19,7 +19,7 @@ Australian realm IGs and implementers are expected to comply with AU Base and AU
 #### Scope of AU PS FHIR Artefacts
 AU PS profiles:
 * [Resources](general-guidance.html#resource-profile-approach) to define 'minimum' support expectations for use in the Australian healthcare context
-* [Actors](general-guidance.html#actor-approach) to define systems that play a role in AU Core data exchange
+* [Actors](general-guidance.html#actor-approach) to define systems that play a role in consuming and producing AU PS documents
 
 In this release, AU PS does not define new extensions, search parameters, operations or [terminology](general-guidance.html#terminology-approach). AU PS does not include capability statements (the minimum capabilities (behaviours) to be supported for AU PS actors). Future releases of this IG may include capability statements, extensions, search parameters, operations, or terminology.
 
@@ -36,30 +36,8 @@ As part of profiling, AU PS inherits the AU Core localised terminology and indic
 For a list of the terminology supported in AU PS refer to the [Terminology](terminology.html) page. See AU Base for guidance on [Terminology Selection](https://build.fhir.org/ig/hl7au/au-fhir-base/generalguidance.html#terminology-selection) in HL7 AU implementation guides.
 
 #### Resource Profile Approach
-AU PS resource profiles:
-* are based on the AU Core profile (i.e. derived), or where not available, the AU Base profile (where it exists)
-* apply additional requirements inherited from IPS (in accordance with the [AU PS Profile Design Principles](general-guidance.html#profile-approach)) 
-* apply additional requirements agreed by the AU PS project
-* use compliesWithProfile to assert compliance with IPS
 
-The differential view therefore shows the patient summary requirements that are additional to AU Core. In some profiles, e.g. [AU PS Organization](StructureDefinition-au-ps-organization.html), the only additional requirements from AU Core are the obligations for AU PS actors.
-
-<div> 
-    <img src="aupspatient-profilingapproach.png" alt="AU PS Patient current profiling approach" style="width:40%"/>
-  </div>
-*Figure 1: Profiling approach for AU PS Patient profile*
-<br/><br/>
-
-The AU PS Bundle profile is not based on AU Core or AU Base as no resource profile exists in either IG. The approach to profiling for AU PS Bundle is to:
-* apply requirements inherited from IPS (in accordance with the [AU PS Profile Design Principles](general-guidance.html#profile-approach)) 
-* apply additional requirements as agreed by the AU PS project
-* use compliesWithProfile to assert compliance with IPS
-
-This approach to AU PS Bundle profiling has been taken as at this time there is a tooling limitation that prevents meeting both of the below conditions:
-* derivation from Bundle (IPS)
-* changing reference targets to AU PS profiles (as AU PS profiles derive from AU Core and not IPS they cannot be easily assessed as meeting IPS rules by the tooling)
-
-##### Profile Approach
+##### AU PS Profile Design Principles
  AU PS profiles are designed to ensure compliance with AU Core and IPS. AU PS profiles design principles are as follows:
 * **SHALL** ensure resources validate against both IPS and AU Core profiles (where both profiles exist)
    - Cardinality
@@ -81,11 +59,36 @@ This approach to AU PS Bundle profiling has been taken as at this time there is 
 
 Adopting the approach in both IPS and AU Core, AU PS profiles are 'open' and allow for additional content undefined by AU PS (and IPS) to be shared. See the section [Extensibility – 'Additional' Sections or Elements](general-guidance.html#extensibility--additional-sections-or-elements) for information. 
 
+##### Profiling Approach
+
+In order to meet the intended design for AU PS, AU PS resource profiles:
+* are based on the AU Core profile (i.e. derived), or where not available, the AU Base profile (where it exists)
+* apply additional requirements inherited from IPS (in accordance with the [AU PS Profile Design Principles](general-guidance.html#profile-approach)) 
+* apply additional requirements agreed by the AU PS project
+* use compliesWithProfile to assert compliance with IPS
+
+The differential view therefore shows the patient summary requirements that are additional to AU Core. In some profiles, e.g. [AU PS Organization](StructureDefinition-au-ps-organization.html), the only additional requirements from AU Core are the obligations for AU PS actors.
+
+<div> 
+    <img src="aupspatient-profilingapproach.png" alt="AU PS Patient current profiling approach" style="width:40%"/>
+  </div>
+*Figure 1: Profiling approach for AU PS Patient profile*
+<br/><br/>
+
+The AU PS Bundle profile is not based on AU Core or AU Base as no resource profile exists in either IG. The approach to profiling for AU PS Bundle is to:
+* apply requirements inherited from IPS (in accordance with the [AU PS Profile Design Principles](general-guidance.html#au-ps-profile-design-principles)) 
+* apply additional requirements as agreed by the AU PS project
+* use compliesWithProfile to assert compliance with IPS
+
+This approach to AU PS Bundle profiling has been taken as at this time there is a tooling limitation that prevents meeting both of the below conditions:
+* derivation from Bundle (IPS)
+* changing reference targets to AU PS profiles (as AU PS profiles derive from AU Core and not IPS they cannot be easily assessed as meeting IPS rules by the tooling)
+
 Additional detail on profiling is:
 * described in the guidance section [Localisation of the IPS](the-aups.html#localisation-of-the-ips)
 * the modelling inherited from AU Core is described in * the AU Core [Resource Profile Approach](https://build.fhir.org/ig/hl7au/au-fhir-core/general-guidance.html#resource-profile-approach)
 
-##### Profiling Options
+###### Potentional Profiling Options
 
 When managing [profile complexity and requirements](relationship.html) in the [national and international context for AU PS](the-aups.html#the-au-ps-au-patient-summary), the following mechanisms are available:
 1. [Derived from Profiles (derive)](https://build.fhir.org/structuredefinition-definitions.html#StructureDefinition.baseDefinition)
