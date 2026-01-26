@@ -21,6 +21,8 @@ AU PS profiles:
 * [Resources](general-guidance.html#resource-profile-approach) to define 'minimum' support expectations for use in the Australian healthcare context
 * [Actors](general-guidance.html#actor-approach) to define systems that play a role in AU Core data exchange
 
+In this release, AU PS does not define new extensions, search parameters, operations or [terminology](general-guidance.html#terminology-approach). AU PS does not include capability statements (the minimum capabilities (behaviours) to be supported for AU PS actors). Future releases of this IG may include capability statements, extensions, search parameters, operations, or terminology.
+
 #### Extension Approach
 AU PS does not define new extensions. All extensions included in AU PS are defined in the [FHIR Extensions Pack](https://hl7.org/fhir/extensions/) or [AU Base](http://build.fhir.org/ig/hl7au/au-fhir-base/profiles-and-extensions.html#extensions). A limited set of extensions are indicated as _Must Support_ in AU PS resource profiles; these suported extensions have been inherited from underlying AU Core profile. (see [Use of Extensions](general-guidance.html#use-of-extensions) in [Resource Profile Approach](general-guidance.html#resource-profile-approach)).
 
