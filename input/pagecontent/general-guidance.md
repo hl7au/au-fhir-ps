@@ -114,11 +114,13 @@ AU PS Actors are defined to describe the specific sets of functionality supporte
 * an ActorDefiniition that includes reference to support expectations (narrative conformance requirements)
 * resource profiles that define expectations using _Must Support_ and Obligations 
 
- AU PS actor design to ensure compliance with AU Core and IPS:
-* **SHALL** inherit the narrative conformance requirements including Missing Data, Empty Sections, Known Absence of Data
-* **SHALL** inherit IPS Document requirements (see [AU PS profile approach]())
-* **SHALL** inherit _Must Support_ and Obligation requirements
-* **MAY** strengthen inherited requirements as required for the Australian context. A weaker requirement **SHALL NOT** be specified.
+##### AU PS Actor Design Principles
+ AU PS actors are designed to ensure compliance with IPS and support the [use of patient summaries in Australia](general-guidance.html#resource-profile-approach). AU PS profiles design principles are as follows:
+* AU PS actor design to ensure compliance with AU Core and IPS:
+  * **SHALL** inherit the narrative conformance requirements including Missing Data, Empty Sections, Known Absence of Data
+  * **SHALL** inherit IPS Document requirements (see [AU PS Resource Profile Approach](the-aups.html#aupintendedto))
+  * **SHALL** inherit _Must Support_ and Obligation requirements
+  * **MAY** strengthen inherited requirements as required for the Australian context. A weaker requirement **SHALL NOT** be specified.
 
 #### Capability Statement Approach
 AU PS does not define any capability statements. It is anticipated that capability statements may be included in future releases of this IG.
