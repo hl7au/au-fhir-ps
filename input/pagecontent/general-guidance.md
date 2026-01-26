@@ -61,10 +61,18 @@ Adopting the approach in both IPS and AU Core, AU PS profiles are 'open' and all
 
 ##### Profiling Approach
 
-In order to meet the intended design for AU PS, AU PS resource profiles:
-* are based on the AU Core profile (i.e. derived), or where not available, the AU Base profile (where it exists)
+AU PS profiles:
+* are derived from AU Core, where available, to inherit the nationally agreed localised terminology, identifiers, and extensions.
+* are only constrained (e.g. cardinality) where the constraint is agreed to be a minimum requirement that is nationally relevant and applicable for all AU PS Documents to avoid limiting options for downstream use case decisions and business rules. 
+* elements and extensions that form the minimum requirements are labelled _Must Support_. 
+* elements that are not labelled _Must Support_ are not part of the minimum requirements and are therefore not further constrained in AU PS.
+  * an exception to this rule is inherited from underlying AU Core profiles that include an invariant to enforce that if a coded body site is provided, at least one coding is from SNOMED CT.
+* are defined as open, allowing additional elements, extensions, and rules. This results in a more flexible template that can be used across wider contexts, but also means that the resource content is not closed, and applications have to decide how to handle content not described by the profile.
+
+When modelling AU PS resource profiles, they:
+* are derived from AU Core profiles, where available, the AU Base profile (where it exists)
 * apply additional requirements inherited from IPS (in accordance with the [AU PS Profile Design Principles](general-guidance.html#profile-approach)) 
-* apply additional requirements agreed by the AU PS project
+* apply additional requirements agreed by the AU PS project, e.g. 
 * use compliesWithProfile to assert compliance with IPS
 
 The differential view therefore shows the patient summary requirements that are additional to AU Core. In some profiles, e.g. [AU PS Organization](StructureDefinition-au-ps-organization.html), the only additional requirements from AU Core are the obligations for AU PS actors.
@@ -86,7 +94,19 @@ This approach to AU PS Bundle profiling has been taken as at this time there is 
 
 Additional detail on profiling is:
 * described in the guidance section [Localisation of the IPS](the-aups.html#localisation-of-the-ips)
-* the modelling inherited from AU Core is described in * the AU Core [Resource Profile Approach](https://build.fhir.org/ig/hl7au/au-fhir-core/general-guidance.html#resource-profile-approach)
+* the modelling inherited from AU Core is described in the AU Core [Resource Profile Approach](https://build.fhir.org/ig/hl7au/au-fhir-core/general-guidance.html#resource-profile-approach)
+
+##### Use of Must Support and Obligations
+_[Must Support](general-requirements.html#must-support-and-obligation)_ is used to indicate the elements and extensions that form the minimum requirements of AU PS. Labelling an element _Must Support_ means that systems that produce or consume resources are to provide support for the element in some meaningful way. The FHIR standard does not define exactly what 'meaningful' support for an element means, but indicates that a profile needs to make clear exactly what kind of support is required when an element is labelled as _Must Support_.
+
+The set of _Must Support_ elements in AU PS is inherited from AU Core and IPS resource profiles, and a limited set of additional elements in the AU PS Bundle profile have been labelled _Must Support_ as they are mandatory elements in the resource e.g. `Bundle.type`.
+
+The meaning of _Must Support_ in AU PS is defined in:
+* narrative in the IG (e.g. [Missing Data](general-requirements.html#missing-data) requirements)
+* the [obligation extension](https://hl7.org/fhir/extensions/StructureDefinition-obligation.html) on each supported element in a profile, identifying the support expectations for AU PS actors
+* narrative qualification of element obligations present in the profile specific implementation guidance
+
+See [Must Support and Obligation](general-requirements.html#must-support-and-obligation) for a detailed description of how this is applied in AU PS. 
 
 ###### Potentional Profiling Options
 
@@ -111,19 +131,18 @@ Users of this implementation guide are encouraged to provide their feedback abou
 
 #### Actor Approach
 AU PS Actors are defined to describe the specific sets of functionality supported by systems that play a role in AU Core data exchange. Each actor is defined by:
-* an ActorDefiniition that includes reference to support expectations (narrative conformance requirements)
+* an actor definition that includes reference to support expectations (narrative conformance requirements)
 * resource profiles that define expectations using _Must Support_ and Obligations 
 
+In this release, AU PS does not include capability statement that describes the requirements for the an AU PS actor. It is anticipated that capability statements may be included in future releases of this IG.
+
 ##### AU PS Actor Design Principles
- AU PS actors are designed to ensure compliance with IPS and support the [use of patient summaries in Australia](general-guidance.html#resource-profile-approach). AU PS profiles design principles are as follows:
+ AU PS actors are designed to ensure compliance with IPS and support the [use of patient summaries in Australia](general-guidance.html#aupintendedto). AU PS profiles design principles are as follows:
 * AU PS actor design to ensure compliance with AU Core and IPS:
   * **SHALL** inherit the narrative conformance requirements including Missing Data, Empty Sections, Known Absence of Data
-  * **SHALL** inherit IPS Document requirements (see [AU PS Resource Profile Approach](the-aups.html#aupintendedto))
+  * **SHALL** inherit IPS Document requirements (see [AU PS Resource Profile Approach](the-aups.html#resource-profile-approach))
   * **SHALL** inherit _Must Support_ and Obligation requirements
   * **MAY** strengthen inherited requirements as required for the Australian context. A weaker requirement **SHALL NOT** be specified.
-
-#### Capability Statement Approach
-AU PS does not define any capability statements. It is anticipated that capability statements may be included in future releases of this IG.
 
 ### Extensibility – 'Additional' Sections or Elements
 As in IPS, a producer can send:
