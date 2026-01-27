@@ -70,7 +70,7 @@ AU PS profiles:
 * are defined as open, allowing additional elements, extensions, and rules. This results in a more flexible template that can be used across wider contexts, but also means that the resource content is not closed, and applications have to decide how to handle content not described by the profile.
 
 When modelling AU PS resource profiles, they:
-* are derived from AU Core profiles, where available, the AU Base profile (where it exists)
+* are derived from AU Core profiles, or where not available, the AU Base profile (where it exists)
 * apply additional requirements inherited from IPS (in accordance with the [AU PS Profile Design Principles](general-guidance.html#au-ps-profile-design-principles)) 
 * apply additional requirements agreed by the AU PS project, e.g. 
 * use compliesWithProfile to assert compliance with IPS
@@ -78,7 +78,7 @@ When modelling AU PS resource profiles, they:
 The differential view therefore shows the patient summary requirements that are additional to AU Core. In some profiles, e.g. [AU PS Organization](StructureDefinition-au-ps-organization.html), the only additional requirements from AU Core are the obligations for AU PS actors.
 
 <div> 
-    <img src="aupspatient-profilingapproach.png" alt="AU PS Patient current profiling approach" style="width:40%"/>
+    <img src="patient-profilingapproach.png" alt="AU PS Patient current profiling approach" style="width:40%"/>
   </div>
 *Figure 1: Profiling approach for AU PS Patient profile*
 <br/><br/>
@@ -88,15 +88,29 @@ The AU PS Bundle profile is not based on AU Core or AU Base as no resource profi
 * apply additional requirements as agreed by the AU PS project
 * use compliesWithProfile to assert compliance with IPS
 
+<div> 
+    <img src="bundle-profilingapproach.png" alt="AU PS Bundle current profiling approach" style="width:40%"/>
+  </div>
+*Figure 1: Profiling approach for AU PS Bundle profile*
+<br/><br/>
+
 This approach to AU PS Bundle profiling has been taken as at this time there is a tooling limitation that prevents meeting both of the below conditions:
 * derivation from Bundle (IPS)
 * changing reference targets to AU PS profiles (as AU PS profiles derive from AU Core and not IPS they cannot be easily assessed as meeting IPS rules by the tooling)
+
+The AU PS Composition profile is based on AU Base. The approach to profiling for AU PS Bundle is to:
+* apply requirements inherited from IPS (in accordance with the [AU PS Profile Design Principles](general-guidance.html#au-ps-profile-design-principles)) 
+* apply additional requirements as agreed by the AU PS project
+* use imposeProfile to assert compliance with IPS
+
+The use of imposeProfile instead of 
+
 
 Additional detail on profiling is:
 * described in the guidance section [Localisation of the IPS](the-aups.html#localisation-of-the-ips)
 * the modelling inherited from AU Core is described in the AU Core [Resource Profile Approach](https://build.fhir.org/ig/hl7au/au-fhir-core/general-guidance.html#resource-profile-approach)
 
-##### Use of Must Support and Obligations
+###### Use of Must Support and Obligations
 _[Must Support](general-requirements.html#must-support-and-obligation)_ is used to indicate the elements and extensions that form the minimum requirements of AU PS. Labelling an element _Must Support_ means that systems that produce or consume resources are to provide support for the element in some meaningful way. The FHIR standard does not define exactly what 'meaningful' support for an element means, but indicates that a profile needs to make clear exactly what kind of support is required when an element is labelled as _Must Support_.
 
 The set of _Must Support_ elements in AU PS is inherited from AU Core and IPS resource profiles, with a limited set of additional elements in the AU PS Bundle profile additionally labelled _Must Support_ where they are mandatory elements in the resource e.g. `Bundle.type`.
