@@ -5,7 +5,7 @@ AU Patient Summary (AU PS) is provided to support the use of patient summaries i
 
 AU PS, by design:
 * ensures compliance with AU Core and IPS (see [localisation of the IPS](the-aups.html#localisation-of-the-ips))
-* supports additional requirements agreed as necessary to support patient summaries in an Australian healthcare context
+* supports additional requirements agreed as necessary to support patient summaries in an Australian healthcare context (see [the AU PS](the-aups.html))
 * supports varied stakeholder needs and use of AU PS artefacts e.g. government policy, implementers, tooling developers, testers, IG authors/maintainers etc.
 
 The approach to describing the 'minimum' in AU PS means modelling in such a way that 'at least' what is to be supported is defined without limiting meaningful options for business rules and different clinical workflows. AU PS artefacts are therefore modelled as open templates allowing for additional content including elements, extensions, resources, search parameters, operations, and terminology whilst ensuring the minimum requirements are met.
