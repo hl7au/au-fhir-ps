@@ -71,7 +71,7 @@ AU PS profiles:
 
 When modelling AU PS resource profiles, they:
 * are derived from AU Core profiles, where available, the AU Base profile (where it exists)
-* apply additional requirements inherited from IPS (in accordance with the [AU PS Profile Design Principles](general-guidance.html#profile-approach)) 
+* apply additional requirements inherited from IPS (in accordance with the [AU PS Profile Design Principles](general-guidance.html#au-ps-profile-design-principles)) 
 * apply additional requirements agreed by the AU PS project, e.g. 
 * use compliesWithProfile to assert compliance with IPS
 
@@ -137,10 +137,10 @@ AU PS Actors are defined to describe the specific sets of functionality supporte
 In this release, AU PS does not include capability statement that describes the requirements for the an AU PS actor. It is anticipated that capability statements may be included in future releases of this IG.
 
 ##### AU PS Actor Design Principles
- AU PS actors are designed to ensure compliance with IPS and support the [use of patient summaries in Australia](general-guidance.html#aupintendedto). AU PS profiles design principles are as follows:
+ AU PS actors are designed to ensure compliance with IPS and support the [use of patient summaries in Australia](the-aups.html#aupintendedto). AU PS profiles design principles are as follows:
 * AU PS actor design to ensure compliance with AU Core and IPS:
   * **SHALL** inherit the narrative conformance requirements including Missing Data, Empty Sections, Known Absence of Data
-  * **SHALL** inherit IPS Document requirements (see [AU PS Resource Profile Approach](the-aups.html#resource-profile-approach))
+  * **SHALL** inherit IPS Document requirements (see [AU PS Resource Profile Approach](general-guidance.html#resource-profile-approach))
   * **SHALL** inherit _Must Support_ and Obligation requirements
   * **MAY** strengthen inherited requirements as required for the Australian context. A weaker requirement **SHALL NOT** be specified.
 
