@@ -98,14 +98,6 @@ This approach to AU PS Bundle profiling has been taken as at this time there is 
 * derivation from Bundle (IPS)
 * changing reference targets to AU PS profiles (as AU PS profiles derive from AU Core and not IPS they cannot be easily assessed as meeting IPS rules by the tooling)
 
-The AU PS Composition profile is based on AU Base. The approach to profiling for AU PS Bundle is to:
-* apply requirements inherited from IPS (in accordance with the [AU PS Profile Design Principles](general-guidance.html#au-ps-profile-design-principles)) 
-* apply additional requirements as agreed by the AU PS project
-* use imposeProfile to assert compliance with IPS
-
-The use of imposeProfile instead of 
-
-
 Additional detail on profiling is:
 * described in the guidance section [Localisation of the IPS](the-aups.html#localisation-of-the-ips)
 * the modelling inherited from AU Core is described in the AU Core [Resource Profile Approach](https://build.fhir.org/ig/hl7au/au-fhir-core/general-guidance.html#resource-profile-approach)
