@@ -99,7 +99,7 @@ Additional detail on profiling is:
 ##### Use of Must Support and Obligations
 _[Must Support](general-requirements.html#must-support-and-obligation)_ is used to indicate the elements and extensions that form the minimum requirements of AU PS. Labelling an element _Must Support_ means that systems that produce or consume resources are to provide support for the element in some meaningful way. The FHIR standard does not define exactly what 'meaningful' support for an element means, but indicates that a profile needs to make clear exactly what kind of support is required when an element is labelled as _Must Support_.
 
-The set of _Must Support_ elements in AU PS is inherited from AU Core and IPS resource profiles, and a limited set of additional elements in the AU PS Bundle profile have been labelled _Must Support_ as they are mandatory elements in the resource e.g. `Bundle.type`.
+The set of _Must Support_ elements in AU PS is inherited from AU Core and IPS resource profiles, with a limited set of additional elements in the AU PS Bundle profile additionally labelled _Must Support_ where they are mandatory elements in the resource e.g. `Bundle.type`.
 
 The meaning of _Must Support_ in AU PS is defined in:
 * narrative in the IG (e.g. [Missing Data](general-requirements.html#missing-data) requirements)
