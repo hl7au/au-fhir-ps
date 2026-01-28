@@ -302,7 +302,7 @@ For example, the AU PS Organization Profile `name` element is a primitive string
 - AU PS Consumers **SHALL** handle the `Organization.name` if present and containing any valid value, and **SHOULD** display the value of `Organization.name` when presenting the data to a human user.
 
 ##### Must Support - Complex Elements
-Complex elements are composed of primitive and/or other complex elements. Elements may have additional rules defined in the profile that also apply, e.g. terminology binding, or invariants. 
+Complex elements are composed of primitive and other complex elements. Elements may have additional rules defined in the profile that also apply, e.g. invariants. Coded elements ([CodeableConcept](https://hl7.org/fhir/R4/datatypes.html#CodeableConcept), [Coding](https://hl7.org/fhir/R4/datatypes.html#Coding), and [code](https://hl7.org/fhir/R4/datatypes.html#code) datatypes) have additional rules defined by the [terminology binding](https://hl7.org/fhir/R4/terminologies.html#strength) in the profile.
 
 If a complex element is labelled as *Must Support*:
 - AU PS Producers **SHALL** correctly populate the element with at least one of the sub-element values if the value is known.
@@ -430,26 +430,29 @@ Profile |Must Support Choice Elements
 {:.grid}
 
 
-##### Must Support - Choice of Terminology
+##### Must Support - Multiple Terminologies
+A coded element can have support defined for one or many value sets. Coded elements that define support for more than one value set include them in a profile by slicing the [Coding](http://hl7.org/fhir/R4/datatypes.html#Coding) part of the element and placing *Must Support* on each value set slice. These value set slices are not intended to prevent systems from supplying only a text value.
 
-In AU PS, elements that define support for more than one value set only apply to the [Coding](http://hl7.org/fhir/R4/datatypes.html#Coding) part of the element and are not intended to prevent systems from supplying only a text value. In such cases:
-- AU PS Producers **SHALL** correctly populate the element with concepts from each supported value set where the applicable concept is known.
-- AU PS Consumers **SHALL** handle the element if present and containing any valid value whether it is  from a supported value set or some other value set or text only, and **SHOULD** display the value of this element when presenting the data to a human user.
+Most coded *Must Support* elements in AU PS define support for one value set, which is bound to the element and no value set slice is present. For these elements, the section on [Must Support - Complex Elements](general-requirements.html#must-support---complex-elements) and the terminology binding applies.
 
-The table below lists the applicable profiles and elements in AU PS that support multiple value sets.
+Where multiple value sets are supported:
+- AU PS Producers **SHALL** correctly populate the element with concepts from all supported value sets where the applicable concept is known.
+- AU PS Consumers **SHALL** handle the element if present and containing any valid value whether it is from a supported value set or some other value set or text only, and **SHOULD** display the value of this element when presenting the data to a human user.
+
+The table below lists the applicable profiles and elements in AU PS that support multiple value sets; these are inherited from AU Core.
 
 Profile |Must Support Sub-Element|Terminology Choices
 ---|---
 [AU PS Immunization](StructureDefinition-au-ps-immunization.html)|Immunization.vaccineCode.coding|[Australian Medicines Terminology Vaccine](https://healthterminologies.gov.au/fhir/ValueSet/amt-vaccine-1), [Australian Immunisation Register Vaccine](https://healthterminologies.gov.au/fhir/ValueSet/australian-immunisation-register-vaccine-1)
-[AU PS Medication](StructureDefinition-au-ps-medication.html)|Medication.code.coding|[Australian Medication](https://healthterminologies.gov.au/fhir/ValueSet/australian-medication-1), [PBS Item Codes](https://build.fhir.org/ig/hl7au/au-fhir-base//ValueSet-pbs-item.html)
-[AU PS MedicationRequest](StructureDefinition-au-ps-medicationrequest.html)|MedicationRequest.code.coding|[Australian Medication](https://healthterminologies.gov.au/fhir/ValueSet/australian-medication-1), [PBS Item Codes](https://build.fhir.org/ig/hl7au/au-fhir-base//ValueSet-pbs-item.html)
-[AU PS MedicationStatement](StructureDefinition-au-ps-medicationstatement.html)|MedicationStatement.code.coding|[Australian Medication](https://healthterminologies.gov.au/fhir/ValueSet/australian-medication-1), [PBS Item Codes](https://build.fhir.org/ig/hl7au/au-fhir-base//ValueSet-pbs-item.html)
+[AU PS Medication](StructureDefinition-au-ps-medication.html)|Medication.code.coding|[Australian Medication](https://healthterminologies.gov.au/fhir/ValueSet/australian-medication-1), [PBS Item Codes](https://build.fhir.org/ig/hl7au/au-fhir-base/ValueSet-pbs-item.html)
+[AU PS MedicationRequest](StructureDefinition-au-ps-medicationrequest.html)|MedicationRequest.code.coding|[Australian Medication](https://healthterminologies.gov.au/fhir/ValueSet/australian-medication-1), [PBS Item Codes](https://build.fhir.org/ig/hl7au/au-fhir-base/ValueSet-pbs-item.html)
+[AU PS MedicationStatement](StructureDefinition-au-ps-medicationstatement.html)|MedicationStatement.code.coding|[Australian Medication](https://healthterminologies.gov.au/fhir/ValueSet/australian-medication-1), [PBS Item Codes](https://build.fhir.org/ig/hl7au/au-fhir-base/ValueSet-pbs-item.html)
 {:.grid}
 
-For example, the profile [AU PS Medication](StructureDefinition-au-ps-medication.html) requires support for the following terminology choices `Medication.code.coding` defined in [AU Base Medication](https://build.fhir.org/ig/hl7au/au-fhir-base/StructureDefinition-au-medication.html) to support [Australian Medication](https://healthterminologies.gov.au/fhir/ValueSet/australian-medication-1) and [PBS Item Codes](https://build.fhir.org/ig/hl7au/au-fhir-base//ValueSet-pbs-item.html) as indicated by flagging *Must Support* on those two terminology slices.
+For example, the profile [AU PS Medication](StructureDefinition-au-ps-medication.html) defines support for [Australian Medication](https://healthterminologies.gov.au/fhir/ValueSet/australian-medication-1) and [PBS Item Codes](https://build.fhir.org/ig/hl7au/au-fhir-base/ValueSet-pbs-item.html) value sets as slices of `Medication.code.coding` flagged with *Must Support*.
 
 When claiming conformance to the AU PS Medication profile: 
-- AU PS Producers **SHALL** correctly populate `Medication.code.coding` with either a code from [Australian Medication](https://healthterminologies.gov.au/fhir/ValueSet/australian-medication-1) or [PBS Item Codes](https://build.fhir.org/ig/hl7au/au-fhir-base//ValueSet-pbs-item.html), or both, if a coded value is known. AU PS Producers **MAY** populate with only text if no coded value is known.
+- AU PS Producers **SHALL** correctly populate `Medication.code.coding` with codes from [Australian Medication](https://healthterminologies.gov.au/fhir/ValueSet/australian-medication-1) and [PBS Item Codes](https://build.fhir.org/ig/hl7au/au-fhir-base/ValueSet-pbs-item.html) if both coded values are known, or from either if only one is known, or from another terminology if neither is known but a code is available, or text only if no coded value is known.
 - AU PS Consumers **SHALL** handle `Medication.code.coding` if present and containing any valid value. A valid value may be text, or may be a code from [Australian Medication](https://healthterminologies.gov.au/fhir/ValueSet/australian-medication-1) or [PBS Item Codes](https://build.fhir.org/ig/hl7au/au-fhir-base//ValueSet-pbs-item.html), or both, or some other code. AU PS Consumers **SHOULD** display the value of this element when presenting the data to a human user.
 
 Systems **MAY** populate other code systems but this is not a requirement of AU PS.

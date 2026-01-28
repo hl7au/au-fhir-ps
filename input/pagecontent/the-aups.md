@@ -97,7 +97,7 @@ No extensions are labelled as *Must Support* in IPS. In AU PS, the following ext
 * [Individual Pronouns](https://hl7.org/fhir/extensions/5.1.0/StructureDefinition-individual-pronouns.html) in [AU PS Patient](StructureDefinition-au-ps-patient.html)
 * [Individual Gender Identity](https://hl7.org/fhir/extensions/5.1.0/StructureDefinition-individual-genderIdentity.html) in [AU PS Patient](StructureDefinition-au-ps-patient.html)
 
-#### Terminology
+#### Terminology Localisation
  A full list of terminology differences is not provided, refer to the [AU PS profiles](profiles-and-extensions.html) and the [Terminology](terminology.html) page to understand the terminology supported for use in AU PS. Some differences are mentioned below to highlight their potential relevance to implementers of the AU PS.
 
 AU PS:
@@ -108,16 +108,16 @@ AU PS:
  
 In many cases the difference between value sets bound in AU Core and IPS is the IPS use of international SNOMED CT concepts versus the AU Core use of SNOMED CT-AU concepts and international SNOMED CT concepts. Typically these Australian value sets are bound as [preferred](https://hl7.org/fhir/R4/terminologies.html#extensible) in AU PS profiles; these are recommendations for use in the Australian healthcare context but do not prevent other coding or text only representations. 
 
-#### Cardinality
+#### Cardinality Localisation
 While AU PS profiles do not apply unique maximum cardinality constraints, AU PS makes a number of elements mandatory (minimum cardinality > 0) that are not mandatory in IPS either directly in the AU PS profile or by reference to an AU Core profile. These constrained cardinalities are typically in:
 - additionally profiled resource types that mandate reference to the patient.
 - simple observation profiles (e.g. body temperature or smoking status) that require either a value or a data absent reason.
 - profiles of individuals and entities (e.g. Location, Patient, RelatedPerson, PractitionerRole, Practitioner) that have additional mandatory administrative elements e.g. Patient.identifier or PractitionerRole.practitioner.
 
-#### Identifiers
+#### Identifiers Localisation
 IPS does not provide recommendations on the types of identifiers used in resources, this is expected to be defined as needed in jurisdictional specifications. In AU PS, a number of optional national Australian healthcare identifiers are labelled with *Must Support*, see the table in the section [Must Support - Choice of Identifiers](general-requirements.html#must-support---choice-of-identifiers) for the full list.
 
-#### Fixed Values
+#### Use of Fixed Values
 AU PS includes additional fixed value constraints on some elements either directly in an AU PS profile or via reference to an AU Core profile. These additional fixed values are typically in Observation profiles and add a fixed SNOMED CT concept in `Observation.code` in addition to the fixed LOINC code. 
 
 ### Considerations When Consuming IPS Documents in AU Healthcare Context

@@ -18,28 +18,31 @@ Australian realm IGs and implementers are expected to comply with AU Base and AU
 
 #### Scope of AU PS FHIR Artefacts
 AU PS profiles:
-* [Resources](general-guidance.html#resource-profile-approach) to define 'minimum' support expectations for use in the Australian healthcare context
+* [Resources](general-guidance.html#resource-profile-approach) to define minimum support expectations for use in the Australian healthcare context
 * [Actors](general-guidance.html#actor-approach) to define systems that play a role in consuming and producing AU PS documents
 
 In this release, AU PS does not define new extensions, search parameters, operations or [terminology](general-guidance.html#terminology-approach). AU PS does not include capability statements (the minimum capabilities (behaviours) to be supported for AU PS actors). Future releases of this IG may include capability statements, extensions, search parameters, operations, or terminology.
 
 #### Extension Approach
-AU PS does not define new extensions. All extensions included in AU PS are defined in the [FHIR Extensions Pack](https://hl7.org/fhir/extensions/) or [AU Base](http://build.fhir.org/ig/hl7au/au-fhir-base/profiles-and-extensions.html#extensions). A limited set of extensions are indicated as _Must Support_ in AU PS resource profiles; these suported extensions have been inherited from underlying AU Core profile. (see [Use of Extensions](general-guidance.html#use-of-extensions) in [Resource Profile Approach](general-guidance.html#resource-profile-approach)).
+AU PS does not define new extensions. All extensions included in AU PS are defined in the [FHIR Extensions Pack](https://hl7.org/fhir/extensions/) or [AU Base](http://build.fhir.org/ig/hl7au/au-fhir-base/profiles-and-extensions.html#extensions). A limited set of extensions are indicated as _Must Support_ in AU PS resource profiles; these suported extensions have been inherited from underlying AU Core profile.
 
 It is anticipated that extension profiles may be included in future releases of this IG.
 
 #### Terminology Approach
 AU PS does not define new terminology FHIR artefacts (e.g. value sets or code systems). Terminology supported in AU Core are published in [AU Base](https://build.fhir.org/ig/hl7au/au-fhir-base/terminology.html), the FHIR standard, [HL7 Terminology (THO)](https://terminology.hl7.org/), or the [National Clinical Terminology Service (NCTS)](https://www.healthterminologies.gov.au/). 
 
-As part of profiling, AU PS inherits the AU Core localised terminology and indicates [local support expectations](the-aups.html#terminology) for an AU PS actor or an AU PS actor using _Must Support_ and Obligations (see [Use of Terminology Bindings](general-guidance.html#use-of-terminology-bindings) in [Resource Profile Approach](general-guidance.html#resource-profile-approach)). 
+As part of profiling, AU PS inherits the AU Core localised terminology and indicates for an AU PS actor using _Must Support_ and Obligations. For more information on the terminologies inherited from AU Core see the guidance in AU Core [Use of Terminology Bindings](https://build.fhir.org/ig/hl7au/au-fhir-core/general-guidance.html#use-of-terminology-bindings). 
 
-For a list of the terminology supported in AU PS refer to the [Terminology](terminology.html) page. See AU Base for guidance on [Terminology Selection](https://build.fhir.org/ig/hl7au/au-fhir-base/generalguidance.html#terminology-selection) in HL7 AU implementation guides.
+For:
+* a list of the terminology supported in AU PS, refer to the [Terminology](terminology.html) page. 
+* a description of terminology localisation compared to the IPS, refer to [Terminology Localisation](the-aups.html#terminology-localisation)
+* guidance on selection of terminology in HL7 AU implementation guides, refer to [Terminology Selection](https://build.fhir.org/ig/hl7au/au-fhir-base/generalguidance.html#terminology-selection)
 
 #### Resource Profile Approach
 
 ##### AU PS Profile Design Principles
  AU PS profiles are designed to ensure compliance with AU Core and IPS. AU PS profiles design principles are as follows:
-* **SHALL** ensure resources validate against both IPS and AU Core profiles (where both profiles exist)
+* AU PS profiles **SHALL** ensure resources validate against both IPS and AU Core profiles (where both profiles exist)
    - Cardinality
    - Fixed values and patterns
    - Data type sub-elements and profiles
@@ -91,7 +94,7 @@ The AU PS Bundle profile is not based on AU Core or AU Base as no resource profi
 <div> 
     <img src="bundle-profilingapproach.png" alt="AU PS Bundle current profiling approach" style="width:40%"/>
   </div>
-*Figure 1: Profiling approach for AU PS Bundle profile*
+*Figure 2: Profiling approach for AU PS Bundle profile*
 <br/><br/>
 
 This approach to AU PS Bundle profiling has been taken as at this time there is a tooling limitation that prevents meeting both of the below conditions:
