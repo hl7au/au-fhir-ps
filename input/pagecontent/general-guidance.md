@@ -1,16 +1,16 @@
 {::options toc_levels="1..4"/}
 
 ### Approach of this Implementation Guide
-AU Patient Summary (AU PS) is provided to support the use of patient summaries in HL7® FHIR®© in an Australian context. AU PS is based on IPS and AU Core, setting the minimum conformance expectations for implementing support for AU PS documents in systems.
+AU Patient Summary (AU PS) is provided to support the use of patient summaries in HL7® FHIR®© in an Australian context. AU PS is based on [IPS](https://hl7.org/fhir/uv/ips/STU2/index.html) and [AU Core](https://build.fhir.org/ig/hl7au/au-fhir-core), setting the minimum conformance expectations for implementing AU PS documents in systems.
 
 AU PS, by design:
-* ensures compliance with AU Core and IPS (see [localisation of the IPS](the-aups.html#localisation-of-the-ips))
-* supports additional requirements agreed as necessary to support patient summaries in an Australian healthcare context (see [the AU PS](the-aups.html))
-* supports varied stakeholder needs and use of AU PS artefacts e.g. government policy, implementers, tooling developers, testers, IG authors/maintainers etc.
+* ensures compliance with AU Core and IPS
+* includes additional requirements agreed as necessary to support patient summaries in an Australian healthcare context (see [the AU PS](the-aups.html))
+* supports varied stakeholder needs in the use of AU PS artefacts e.g. government policy, implementers, tooling developers, testers, IG authors/maintainers etc.
 
 The approach to describing the 'minimum' in AU PS means modelling in such a way that 'at least' what is to be supported is defined without limiting meaningful options for business rules and different clinical workflows. AU PS artefacts are therefore modelled as open templates allowing for additional content including elements, extensions, resources, search parameters, operations, and terminology whilst ensuring the minimum requirements are met.
 
-Australian realm IGs and implementers are expected to comply with AU Base and AU Core and to define extensions, search parameters or operations (in order of precedence):
+Australian realm IGs and implementers are expected to [comply with AU Base and AU Core](variance.html) and to define extensions, search parameters or operations (in order of precedence):
 * in the FHIR standard (incl. FHIR Extensions Pack)
 * in AU Base
 * in a downstream IG (this IG)
@@ -29,7 +29,7 @@ AU PS does not define new extensions. All extensions included in AU PS are defin
 It is anticipated that extension profiles may be included in future releases of this IG.
 
 #### Terminology Approach
-AU PS does not define new terminology FHIR artefacts (e.g. value sets or code systems). Terminology supported in AU Core are published in [AU Base](https://build.fhir.org/ig/hl7au/au-fhir-base/terminology.html), the FHIR standard, [HL7 Terminology (THO)](https://terminology.hl7.org/), or the [National Clinical Terminology Service (NCTS)](https://www.healthterminologies.gov.au/). 
+AU PS does not define new terminology FHIR artefacts (e.g. value sets or code systems). Terminology supported in AU PS are published in [AU Base](https://build.fhir.org/ig/hl7au/au-fhir-base/terminology.html), the FHIR standard, [HL7 Terminology (THO)](https://terminology.hl7.org/), or the [National Clinical Terminology Service (NCTS)](https://www.healthterminologies.gov.au/). 
 
 As part of profiling, AU PS inherits the AU Core localised terminology and indicates support expectations for an AU PS actor using _Must Support_ and Obligations. For more information on the terminology modelling inherited from AU Core see the guidance in AU Core [Use of Terminology Bindings](https://build.fhir.org/ig/hl7au/au-fhir-core/general-guidance.html#use-of-terminology-bindings). 
 
@@ -37,21 +37,23 @@ In AU PS resource profiles, a coded element can have support defined for one or 
 
 For:
 * a list of the terminologies supported in AU PS, refer to the [Terminology](terminology.html) page. 
-* a description of terminology localisation compared to the IPS, refer to [Terminology Localisation](the-aups.html#terminology-localisation)
-* guidance on selection of terminology in HL7 AU implementation guides, refer to [Terminology Selection](https://build.fhir.org/ig/hl7au/au-fhir-base/generalguidance.html#terminology-selection)
+* a description of the localisation of terminology compared to the IPS, refer to [Terminology Localisation](the-aups.html#terminology-localisation)
+* guidance on selection of terminology in HL7 AU implementation guides, refer to the guidance in AU Base on [Terminology Selection](https://build.fhir.org/ig/hl7au/au-fhir-base/generalguidance.html#terminology-selection)
 
 #### Resource Profile Approach
 
 ##### AU PS Profile Design Principles
- AU PS profiles are designed to ensure compliance with AU Core and IPS. AU PS profiles design principles are as follows:
-* AU PS profiles **SHALL** ensure resources validate against both IPS and AU Core profiles (where both profiles exist)
+ AU PS profiles are designed to ensure compliance with AU Core and IPS. AU PS profile design principles are as follows:
+* AU PS profiles **SHALL** ensure resources validate against both IPS and AU Core profiles (where both profiles exist):
    - Cardinality
    - Fixed values and patterns
    - Data type sub-elements and profiles
-   - Data type choices
+   - Data type choices and references
    - Invariants
+   - Must Support
+   - Terminology binding
 * AU PS profiles **SHALL** validate reference elements against AU PS profile where defined, otherwise the AU Core profile where available, otherwise the AU Base profile where available
-* In AU PS profiles, inherited AU Core profile value sets are preferred over equivalent IPS profile value sets:
+* In AU PS profiles, inherited AU Core profile value sets are preferenced over IPS profile value sets:
    - where an element has a required binding, the element **SHALL** apply the intersection of both value sets (AU Core and IPS)
    - where an element has a lesser binding, use the AU Core value set and binding strength (where AU Core is equivalent or stronger) or use the IPS value set where the binding strength is stronger
 * An AU PS profile **SHALL** inherit the IPS profile obligations and **MAY** strengthen the IPS profile obligations (using a specialisation of the defined obligation) or add an obligation (e.g. SHOULD:persist), as required in the Australian context. A weaker obligation **SHALL NOT** be specified.
@@ -110,7 +112,7 @@ Additional detail on profiling is:
 ###### Use of Must Support and Obligations
 _[Must Support](general-requirements.html#must-support-and-obligation)_ is used to indicate the elements and extensions that form the minimum requirements of AU PS. Labelling an element _Must Support_ means that systems that produce or consume resources are to provide support for the element in some meaningful way. The FHIR standard does not define exactly what 'meaningful' support for an element means, but indicates that a profile needs to make clear exactly what kind of support is required when an element is labelled as _Must Support_.
 
-The set of _Must Support_ elements in AU PS is inherited from AU Core and IPS resource profiles, with a limited set of additional elements in the AU PS Bundle profile additionally labelled _Must Support_ where they are mandatory elements in the resource e.g. `Bundle.type`.
+The set of _Must Support_ elements in AU PS is inherited from AU Core and IPS resource profiles (i.e. the union of IPS and AU Core elements labelled *Must Support*). In addition, the mandatory elements in AU PS Bundle, are labelled with *Must Support* e.g. `Bundle.type`. This is applied as the convention in this guide is to mark all mandatory elements as *Must Support* unless they are nested under an optional element.
 
 The meaning of _Must Support_ in AU PS is defined in:
 * narrative in the IG (e.g. [Missing Data](general-requirements.html#missing-data) requirements)
