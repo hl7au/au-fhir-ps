@@ -320,6 +320,25 @@ For example, in the AU PS Practitioner Profile, the `name` element is labelled *
 - AU PS Producers **SHALL** correctly populate a value in `Practitioner.name.family` and `Practitioner.name.given` if the value for those sub-elements is known.
 - AU PS Consumers **SHALL** handle `Practitioner.name` if present and containing valid values in `Practitioner.name.family` and `Practitioner.name.given` sub-elements, and **SHOULD** display the value of at least the sub elements`Practitioner.name.family` and `Practitioner.name.given` when presenting the data to a human user.
 
+##### Must Support - Elements with multiple cardinality
+When an element with multiple cardinality is labelled as **Must Support** with an obligation of **SHALL:populate-if-known**:
+* An AU PS Producer **SHALL** *populate at least one known occurrence*. Where more than one occurrence is known, *all occurrences* **SHOULD** be populated. 
+* An AU PS Consumer **SHALL** *handle all occurrences* of the element by evaluating the consequences of not using any of the element occurrences. 
+
+The following provide examples how systems may align with the specified Must Support obligations for elements with multiple cardinality.
+
+**Patient identifier**
+* A producer can populate only a known national patient identifier rather than all known identifiers (e.g. local medical record numbers). If a national identifier is unknown, at least one other identifier would be populated.
+* A consumer can choose to use only a supported national patient identifier and consider other populated identifiers as not useful. However, in an international context, an unsupported national patient individual identifier may require additional patient identification processing.
+
+**AllergyIntolerance reaction**
+* A producer can populate only the most recent reaction occurrence, even if a history of multiple occurrences with the same manifestation is available.
+* A consumer can use only the most recent reaction occurrence, even if multiple occurrences with the same manifestation are populated.
+  
+**AllergyIntolerance code**
+* A producer can populate only a code from the SNOMED substance value set rather than also including another system-specific medicine coding. However, if the SNOMED coding is not known, the system-specific coding would be used.
+* A consumer can use a code from the SNOMED substance value set supporting adverse reaction checking while disregarding other unsupported codings. If a supported coding is not available, the system can consider using the code text and present appropriate warnings to users that automated reaction checking is unavailable for the imported entry.
+
 ##### Must Support - Resource References
 Some elements labelled as *Must Support* reference multiple resource types or profiles such as `Observation.performer`. In such cases: 
 - AU PS Producers **SHALL** correctly populate the element with at least one referenced resource or allowed profile if the value is known. 
@@ -345,7 +364,6 @@ Profile |Must Support Element|Reference
 [AU PS Pathology Result Observation](StructureDefinition-au-ps-diagnosticresult-path.html)|Observation.performer|AU PS Practitioner, AU PS PractitionerRole, AU PS Organization, AU PS Patient, AU PS RelatedPerson
 [AU PS Procedure](StructureDefinition-au-ps-procedure.html)|Procedure.reasonReference|AU PS Condition, Observation, AU PS Procedure, DocumentReference
 {:.grid}
-
 
 ##### Must Support - Choice of Data Types
 Some elements labelled as *Must Support* allow different data types such as `Observation.effective[x]`. In such cases:
