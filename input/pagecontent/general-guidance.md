@@ -52,7 +52,7 @@ For:
    - Invariants
    - Must Support
    - Terminology binding
-* AU PS profiles **SHALL** validate reference elements against AU PS profile where defined, otherwise the AU Core profile where available, otherwise the AU Base profile where available
+* AU PS profiles **SHALL** validate reference elements against AU PS profiles (where defined), otherwise the AU Core profile where available, otherwise the IPS profile where available, otherwise the AU Base profile where available
 * In AU PS profiles, inherited AU Core profile value sets are preferenced over IPS profile value sets:
    - where an element has a required binding, the element **SHALL** apply the intersection of both value sets (AU Core and IPS)
    - where an element has a lesser binding, use the AU Core value set and binding strength (where AU Core is equivalent or stronger) or use the IPS value set where the binding strength is stronger
@@ -70,16 +70,16 @@ Adopting the approach in both IPS and AU Core, AU PS profiles are 'open' and all
 
 AU PS profiles:
 * are derived from AU Core, where available, to inherit the nationally agreed localised terminology, identifiers, and extensions.
-* are only constrained (e.g. cardinality) where the constraint is agreed to be a minimum requirement that is nationally relevant and applicable for all AU PS Documents to avoid limiting options for downstream use case decisions and business rules. 
+* are only constrained (e.g. cardinality, references, terminology, extensions) where the constraint is agreed to be a minimum requirement that is nationally relevant and applicable for all AU PS Documents to avoid limiting options for downstream use case decisions and business rules. 
 * elements and extensions that form the minimum requirements are labelled _Must Support_. 
-* elements that are not labelled _Must Support_ are not part of the minimum requirements and are therefore not further constrained in AU PS.
+* elements or extensions that are not labelled _Must Support_ are not part of the minimum requirements and are therefore not further constrained in AU PS.
   * an exception to this rule is inherited from underlying AU Core profiles that include an invariant to enforce that if a coded body site is provided, at least one coding is from SNOMED CT.
 * are defined as open, allowing additional elements, extensions, and rules. This results in a more flexible template that can be used across wider contexts, but also means that the resource content is not closed, and applications have to decide how to handle content not described by the profile.
 
 When modelling AU PS resource profiles, they:
 * are derived from AU Core profiles, or where not available, the AU Base profile (where it exists)
 * apply additional requirements inherited from IPS (in accordance with the [AU PS Profile Design Principles](general-guidance.html#au-ps-profile-design-principles)) 
-* apply additional requirements agreed by the AU PS project, e.g. 
+* apply additional requirements agreed by the AU PS project, e.g. inclusion of AU PS Encounter profile 
 * use compliesWithProfile to assert compliance with IPS
 
 The differential view therefore shows the patient summary requirements that are additional to AU Core. In some profiles, e.g. [AU PS Organization](StructureDefinition-au-ps-organization.html), the only additional requirements from AU Core are the obligations for AU PS actors.
@@ -121,15 +121,15 @@ The meaning of _Must Support_ in AU PS is defined in:
 
 See [Must Support and Obligation](general-requirements.html#must-support-and-obligation) for a detailed description of how this is applied in AU PS. 
 
-###### Potentional Profiling Options
+###### Potential Profiling Options
 
 When managing [profile complexity and requirements](relationship.html) in the [national and international context for AU PS](the-aups.html#the-au-ps-au-patient-summary), the following mechanisms are available:
 1. [Derived from Profiles (derive)](https://build.fhir.org/structuredefinition-definitions.html#StructureDefinition.baseDefinition)
 1. Informal alignment (humans authoring of rules in a profile)
-1. [Complies With Profile (compliesWith)](https://hl7.org/fhir/extensions/StructureDefinition-structuredefinition-compliesWithProfile.html)
+1. [Complies With Profile (compliesWithProfile)](https://hl7.org/fhir/extensions/StructureDefinition-structuredefinition-compliesWithProfile.html)
 1. [Dependent Profiles (imposeProfile)](https://hl7.org/fhir/extensions/StructureDefinition-structuredefinition-imposeProfile.html)
 
-These mechanisms offer differing capabilities and advantages. Typically HL7 AU profiles use derivation to manage compliance within HL7 AU inheritance. However, AU PS will comply to both HL7 AU (AU Core) and IPS and therefore additional mechanism(s) on top of derivation from the underlying HL7 AU profile stack are required. At this time additional requirements are included in AU PS profiles via informal alignment (i.e. human authoring, human checking, and compliesWith checks).
+These mechanisms offer differing capabilities and advantages. Typically HL7 AU profiles use derivation to manage compliance within HL7 AU inheritance. However, AU PS will comply to both HL7 AU (AU Core) and IPS and therefore additional mechanism(s) on top of derivation from the underlying HL7 AU profile stack are required. At this time additional requirements are included in AU PS profiles via informal alignment (i.e. human authoring, human checking, and compliesWithProfile checks).
 
 <div class="stu-note" markdown="1">
 For a human, the main differences with use of imposeProfile are:
@@ -147,7 +147,7 @@ AU PS Actors are defined to describe the specific sets of functionality supporte
 * an actor definition that includes reference to support expectations (narrative conformance requirements)
 * resource profiles that define expectations using _Must Support_ and Obligations 
 
-In this release, AU PS does not include capability statement that describes the requirements for the an AU PS actor. It is anticipated that capability statements may be included in future releases of this IG.
+In this release, AU PS does not include capability statement that describes the requirements for an AU PS actor. It is anticipated that capability statements may be included in future releases of this IG.
 
 ##### AU PS Actor Design Principles
  AU PS actors are designed to ensure compliance with IPS and support the [use of patient summaries in Australia](the-aups.html#aupintendedto). AU PS profiles design principles are as follows:
