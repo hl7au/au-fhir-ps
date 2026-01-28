@@ -392,12 +392,16 @@ Profile |Must Support Data Type
 [AU PS Procedure](StructureDefinition-au-ps-procedure.html)|Procedure.performedDateTime
 {:.grid}
 
-##### Must Support - Choice of Identifiers 
-A profile may support one or more than one identifier type and will include the supported identifiers in a profile by slicing the element and placing *Must Support* on each identifier slice. In such cases:
+##### Must Support - Identifiers 
+A profile may define support for one, none, or many identifier types. Supported identifier types are included in a profile by slicing the identifier element and placing *Must Support* on each identifier slice. 
+
+Where no identifier slice is included in a profile, there is no expectation that a specific identifier type is supported and the section on [Must Support - Complex Elements](general-requirements.html#must-support---complex-elements) applies.
+
+Where one or more identifier types are supported:
 - AU PS Producers **SHALL**  correctly populate the element with identifiers from at least one supported identifier type where the identifier is known, or any known identifier when no supported identifier type is known.
 - AU PS Consumers **SHALL** handle the element if present and containing any identifier type allowed by the element definition, and **SHOULD** display the value of each populated identifier when presenting the data to a human user.
 
-The table below provides a list of AU PS profile elements that allow multiple identifier types.
+The table below provides a list of AU PS profile elements with one or more supported identifier types.
 
 Profile |Must Support Element|Supported Identifiers
 ---|---|---
@@ -407,9 +411,9 @@ Profile |Must Support Element|Supported Identifiers
 [AU PS PractitionerRole](StructureDefinition-au-ps-practitionerrole.html)|PractitionerRole.identifier|Medicare Provider Number
 {:.grid}
 
-For example, the profile [AU PS Patient](StructureDefinition-au-ps-patient.html) requires support for the following choices `Patient.identifier` defined in [AU Base Patient](https://build.fhir.org/ig/hl7au/au-fhir-base/StructureDefinition-au-patient.html) to support Individual Healthcare Identifier (IHI), Medicare Card Number, Department of Veterans' Affairs (DVA) Number. When claiming conformance to the AU PS Patient Profile:
-- AU PS Producers **SHALL** correctly populate `Patient.identifier` with an IHI, or Medicare Card Number, or DVA Number, or any combination of them where the identifier is known, or any other identifier (e.g. Medical Record Number) when none of IHI, or Medicare Card Number, or DVA Number are known.
-- AU PS Consumers **SHALL** handle `Patient.identifier` if present and containing any valid value. A valid value may be an IHI, Medicare Card Number, or DVA Number identifier, or may be some other allowed identifier. The AU PS Consumer **SHOULD** display the value of each populated identifier type (IHI, Medicare Number, DVA Number, or some other identifier) when presenting the data to a human user.
+For example, the profile [AU Core Organization](StructureDefinition-au-core-organization.html) defines support for the Healthcare Provider Identifier - Organisation (HPI-O) and Australian Business Number (ABN) identifier types as slices of `Organization.identifier` flagged with *Must Support*. When claiming conformance to the AU Core Organization Profile:
+- AU PS Producers **SHALL** correctly populate `Organization.identifier` with at least one of HPI-O or ABN if known, or any other identifier type when neither HPI-O or ABN are known but some other identifier is known (e.g. NATA Accredication Number).
+- AU PS Consumers **SHALL** handle `Patient.identifier` if present and containing any valid value. A valid value may be an HPI-O or ABN, or may be any other valid identifier type allowed by the element definition (e.g. NATA Accredication Number). The AU PS Consumer **SHOULD** display the value of each populated identifier type (IHI, Medicare Number, DVA Number, or some other identifier) when presenting the data to a human user.
 
 Systems **MAY** support populating other identifiers, but this is not a requirement of AU PS.
 

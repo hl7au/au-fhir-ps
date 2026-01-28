@@ -103,7 +103,7 @@ No extensions are labelled as *Must Support* in IPS. In AU PS, the following ext
 AU PS:
 * adopts terminology bound in AU Core in preference to IPS where the IPS binding strength is equivalent or weaker.
 * localised terminology bindings are present in the additionally profiled resources and *Must Support* extensions.
-* defines support for more multiple terminologies for medicines and vaccines, see the table in the section [Must Support - Choice of Terminology](general-requirements.html#must-support---choice-of-terminology).
+* defines support for multiple terminologies for medicines and vaccines, see the table in the section [Must Support - Multiple Terminologies](general-requirements.html#must-support---multiple-terminologies).
 * applies a stronger binding strength (e.g. preferred -> extensible) for some *Must Support* elements (the binding strength is inherited from AU Core).
  
 In many cases the difference between value sets bound in AU Core and IPS is the IPS use of international SNOMED CT concepts versus the AU Core use of SNOMED CT-AU concepts and international SNOMED CT concepts. Typically these Australian value sets are bound as [preferred](https://hl7.org/fhir/R4/terminologies.html#extensible) in AU PS profiles; these are recommendations for use in the Australian healthcare context but do not prevent other coding or text only representations. 

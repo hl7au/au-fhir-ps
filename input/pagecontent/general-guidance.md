@@ -31,10 +31,12 @@ It is anticipated that extension profiles may be included in future releases of 
 #### Terminology Approach
 AU PS does not define new terminology FHIR artefacts (e.g. value sets or code systems). Terminology supported in AU Core are published in [AU Base](https://build.fhir.org/ig/hl7au/au-fhir-base/terminology.html), the FHIR standard, [HL7 Terminology (THO)](https://terminology.hl7.org/), or the [National Clinical Terminology Service (NCTS)](https://www.healthterminologies.gov.au/). 
 
-As part of profiling, AU PS inherits the AU Core localised terminology and indicates for an AU PS actor using _Must Support_ and Obligations. For more information on the terminologies inherited from AU Core see the guidance in AU Core [Use of Terminology Bindings](https://build.fhir.org/ig/hl7au/au-fhir-core/general-guidance.html#use-of-terminology-bindings). 
+As part of profiling, AU PS inherits the AU Core localised terminology and indicates support expectations for an AU PS actor using _Must Support_ and Obligations. For more information on the terminology modelling inherited from AU Core see the guidance in AU Core [Use of Terminology Bindings](https://build.fhir.org/ig/hl7au/au-fhir-core/general-guidance.html#use-of-terminology-bindings). 
+
+In AU PS resource profiles, a coded element can have support defined for one or many value sets. Coded elements that define support for more than one value set include them in a profile by slicing the [Coding](http://hl7.org/fhir/R4/datatypes.html#Coding) part of the element and placing *Must Support* on each value set slice. These value set slices are not intended to prevent systems from supplying only a text value. Most coded *Must Support* elements in AU PS define support for one value set, which is bound to the element and no value set slice is present.
 
 For:
-* a list of the terminology supported in AU PS, refer to the [Terminology](terminology.html) page. 
+* a list of the terminologies supported in AU PS, refer to the [Terminology](terminology.html) page. 
 * a description of terminology localisation compared to the IPS, refer to [Terminology Localisation](the-aups.html#terminology-localisation)
 * guidance on selection of terminology in HL7 AU implementation guides, refer to [Terminology Selection](https://build.fhir.org/ig/hl7au/au-fhir-base/generalguidance.html#terminology-selection)
 
@@ -92,7 +94,7 @@ The AU PS Bundle profile is not based on AU Core or AU Base as no resource profi
 * use compliesWithProfile to assert compliance with IPS
 
 <div> 
-    <img src="bundle-profilingapproach.png" alt="AU PS Bundle current profiling approach" style="width:40%"/>
+    <img src="psbundle-profilingapproach.png" alt="AU PS Bundle current profiling approach" style="width:40%"/>
   </div>
 *Figure 2: Profiling approach for AU PS Bundle profile*
 <br/><br/>
