@@ -262,7 +262,7 @@ In the context of AU Patient Summary, the SHALL:handle obligation requires AU PS
 
 Ignoring an element without considering these consequences constitutes non-conformance. During testing, system providers can be required to explain how their system uses element data and the implications of receiving values that are not supported.
 
-For example, an AU PS Consumer implementation that imports AU PS Condition resources into a list of active problems must consider the impact of not importing conditions into the list when the `Condition.clinicalStatus` has a value of `recurrence`, `remission`, or `relapse`.
+For example, an AU PS Consumer implementation that imports AU PS Condition resources into a list of active problems must consider the impact of not importing conditions into the list when the `Condition.clinicalStatus` has a value of "recurrence", "remission", or "relapse".
 
 #### Presentation of Must Support and Obligation in Profiles
 All elements with *Must Support* in AU PS are accompanied by an explicit obligation that identifies the expectations for one or more actors. When rendered in an implementation guide, each profile is presented in different formal views under tabs labelled "Differential Table", "Key Elements Table", and "Snapshot Table". Elements labelled with *Must Support* and stated obligations in these views are represented by <span style="padding-left: 1px; padding-right: 1px; color: white; background-color: red" title="This element must be supported">S</span><span style="padding-left: 1px; padding-right: 1px; color: white; background-color: red" title="This element has obligations">O</span> as shown below. 
