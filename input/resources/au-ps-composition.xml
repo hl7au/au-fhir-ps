@@ -255,7 +255,7 @@
       </extension>
       <path value="Composition.author"/>
       <short value="Who and/or what authored the patient summary"/>
-      <definition value="Identifies who is responsible for the information in the patient summary, not necessarily who typed it in.&#xD;&#xA;&#xD;&#xA;The type of author(s) contribute to determine the &quot;nature&quot;of the patient summary: e.g. a &quot;human-curated&quot; Vs. &quot;automatically generated&quot;."/>
+      <definition value="Identifies who is responsible for the information in the patient summary, not necessarily who typed it in.&#xD;&#xA;&#xD;&#xA;The type of author(s) contribute to determine the &quot;nature&quot;of the patient summary: e.g. a &quot;human-curated&quot; Vs. automatically generated (&quot;software assembled&quot;). The distinction between the two types of patient summary, &quot;human-curated&quot; or &quot;software-assembled&quot;, is based on the authors recorded in the composition: the author will be a human (e.g. Practitioner), if the patient summary provenance type is &quot;human-curated&quot;, or a device if the patient summary provenance type is &quot;software-assembled&quot;. In the case of a &quot;software-assembled&quot; patient summary that is then verified by a human, the document provenance type will be &quot;software-assembled&quot; and the author will be the device or system that constructed the patient summary document, but an additional attester identity will name the human who performed this check."/>
       <type>
         <code value="Reference"/>
         <targetProfile value="http://hl7.org.au/fhir/ps/StructureDefinition/au-ps-practitioner"/>
@@ -1161,7 +1161,7 @@
       <path value="Composition.section"/>
       <sliceName value="sectionMedications"/>
       <short value="Patient Summary Medication Summary Section"/>
-      <definition value="Information about a patient's medications relevant for the scope of the patient summary.&#xD;&#xA;The actual content could depend on the jurisdiction, it could report: - the currently active medications;  - the current and past medications considered relevant by the authoring GP;  - the patient prescriptions or dispensations automatically extracted by a regional or a national EHR.  In those cases medications are documented in the Patient Summary as medication statements or medication requests. This section requires either an entry indicating the subject is known not to be on any relevant medication; either an entry indicating that no information is available about medications; or entries summarising the subject's relevant medications."/>
+      <definition value="Information about a patient's medications relevant for the scope of the patient summary.&#xD;&#xA;The actual content could depend on the jurisdiction, it could report:&#xD;&#xA;&#xD;&#xA;- the currently active medications;&#xD;&#xA;&#xD;&#xA;- the current and past medications considered relevant by the authoring GP;&#xD;&#xA;&#xD;&#xA;- the patient prescriptions or dispensations automatically extracted by a regional or a national EHR.&#xD;&#xA;&#xD;&#xA;In those cases medications are documented in the Patient Summary as medication statements or medication requests. This section requires either an entry indicating the subject is known not to be on any relevant medication; either an entry indicating that no information is available about medications; or entries summarising the subject's relevant medications."/>
       <min value="1"/>
       <max value="1"/>
       <constraint>
@@ -1378,7 +1378,7 @@
       <path value="Composition.section"/>
       <sliceName value="sectionImmunizations"/>
       <short value="Patient Summary Immunizations Section"/>
-      <definition value="Information about a patient's current immunisation status and pertinent immunisation history.&#xD;&#xA;The primary use case for this section is to enable communication of a patient's immunisation status.&#xD;&#xA;It could contain the entire immunisation history that is relevant to the period of time being summarised. This entry is used to document that no information about immunisations is available, or that no immunisations are known."/>
+      <definition value="Information about a patient's current immunisation status and pertinent immunisation history.&#xD;&#xA;The primary use case for this section is to enable communication of a patient's immunisation status.&#xD;&#xA;It could contain the entire immunisation history that is relevant to the period of time being summarised."/>
       <min value="0"/>
       <max value="1"/>
       <mustSupport value="true"/>
@@ -2197,7 +2197,7 @@
         <rules value="open"/>
       </slicing>
       <short value="A patient's advance directives"/>
-      <definition value="The patient's advance directive."/>
+      <definition value="Information about the patient's advance directive."/>
       <type>
         <code value="Reference"/>
         <targetProfile value="http://hl7.org/fhir/StructureDefinition/Consent"/>
@@ -2367,7 +2367,7 @@
       <path value="Composition.section"/>
       <sliceName value="sectionFunctionalStatus"/>
       <short value="Patient Summary Functional Status Section"/>
-      <definition value="Information about a patient's functional status including a description of capability of the patient to perform acts of daily living, including possible needs of the patient to be continuously assessed by third parties. The invalidity status can in fact influence decisions about how to administer treatments.&#xD;&#xA;Profiles to express disabilities and functional assessments will be specified by future versions of this guide."/>
+      <definition value="Information about a patient's functional status including a description of capability of the patient to perform acts of daily living, including possible needs of the patient to be continuously assessed by third parties. The invalidity status can in fact influence decisions about how to administer treatments."/>
       <min value="0"/>
       <max value="1"/>
       <mustSupport value="true"/>
@@ -2463,7 +2463,7 @@
         <rules value="open"/>
       </slicing>
       <short value="Disabilities and functional assessments"/>
-      <definition value="The patient's capability to perform acts of daily living, including possible needs of the patient to be continuously assessed by third parties. The invalidity status can in fact influence decisions about how to administer treatments.&#xD;&#xA;Profiles to express disabilities and functional assessments are expected be specified by future versions of this guide."/>
+      <definition value="The patient's capability to perform acts of daily living, including possible needs of the patient to be continuously assessed by third parties. The invalidity status can in fact influence decisions about how to administer treatments."/>
       <type>
         <code value="Reference"/>
         <targetProfile value="http://hl7.org/fhir/StructureDefinition/Condition"/>
@@ -2644,7 +2644,7 @@
       <path value="Composition.section"/>
       <sliceName value="sectionPregnancyHx"/>
       <short value="Patient Summary History of Pregnancy Section"/>
-      <definition value="Information about whether a patient is currently pregnant or not and can contain addition summarising information about the outcome of earlier pregnancies."/>
+      <definition value="Information about whether a patient is currently pregnant or not and can contain additional summarising information about the outcome of earlier pregnancies."/>
       <min value="0"/>
       <max value="1"/>
       <mustSupport value="true"/>
@@ -2740,7 +2740,7 @@
         <rules value="open"/>
       </slicing>
       <short value="Current pregnancy status and, optionally, information about the outcome of earlier pregnancies"/>
-      <definition value="Information about whether the patient is currently pregnant or not.&#xD;&#xA;It can contain addition summarising information about the outcome of earlier pregnancies."/>
+      <definition value="Information about whether the patient is currently pregnant or not.&#xD;&#xA;It can contain additional summarising information about the outcome of earlier pregnancies."/>
       <type>
         <code value="Reference"/>
         <targetProfile value="http://hl7.org/fhir/StructureDefinition/Observation"/>
@@ -2994,7 +2994,7 @@
         <rules value="open"/>
       </slicing>
       <short value="Structured care plans"/>
-      <definition value="The dynamic, personalised care plans including identified needed healthcare activity, health objectives and healthcare goals, relating to one or more specified health issues in a healthcare process [Source EN ISO 13940]"/>
+      <definition value="The dynamic, personalised care plans including identified needed healthcare activity, health objectives and healthcare goals, relating to one or more specified health issues in a healthcare process."/>
       <type>
         <code value="Reference"/>
         <targetProfile value="http://hl7.org/fhir/StructureDefinition/CarePlan"/>
@@ -3042,7 +3042,7 @@
       <path value="Composition.section"/>
       <sliceName value="sectionSocialHistory"/>
       <short value="Patient Summary Social History Section"/>
-      <definition value="Information about a patient's health related &quot;lifestyle factors&quot; or &quot;lifestyle observations&quot; (e.g. smoke habits, alcohol consumption, diets, risky habits.)"/>
+      <definition value="Information about a patient's health related &quot;lifestyle factors&quot; or &quot;lifestyle observations&quot; (e.g. smoke habits, alcohol consumption, diets, risky habits)."/>
       <min value="0"/>
       <max value="1"/>
       <mustSupport value="true"/>
@@ -3186,7 +3186,7 @@
       <sliceName value="sectionVitalSigns"/>
       <label value="Vital signs"/>
       <short value="Patient Summary Vital Signs Section"/>
-      <definition value="Information about a patient's vital signs including blood pressure, body temperature, heart rate, and respiratory rate. It can also include other clinical findings, such as height, weight, body mass index, head circumference, and pulse oximetry. In particular, notable vital signs or physical findings such as the most recent, maximum and/or minimum, baseline, or relevant trends can be included"/>
+      <definition value="Information about a patient's vital signs including blood pressure, body temperature, heart rate, and respiratory rate. It can also include other clinical findings, such as height, weight, body mass index, head circumference, and pulse oximetry. In particular, notable vital signs or physical findings such as the most recent, maximum and/or minimum, baseline, or relevant trends can be included."/>
       <min value="0"/>
       <max value="1"/>
       <mustSupport value="true"/>
