@@ -145,19 +145,21 @@ Users of this implementation guide are encouraged to provide their feedback abou
 </div><!-- stu-note -->
 
 #### Actor Approach
-AU PS actors are defined to describe the specific sets of functionality supported by systems that play a role in AU Core data exchange. Each actor is defined by:
+AU PS actors are defined to describe the specific sets of functionality supported by systems that play a role in producing or consuming AU PS documents. Each actor is defined by:
 * an actor definition that includes reference to support expectations (narrative conformance requirements)
-* resource profiles that define expectations using _Must Support_ and Obligations 
+* resource profiles that define support expectations for actors using _Must Support_ and Obligations 
 
-In this release, AU PS does not include capability statement that describes the requirements for an AU PS actor. It is anticipated that capability statements may be included in future releases of this IG.
+In this release, AU PS does not include capability statements that describe the requirements for an AU PS actor. It is anticipated that capability statements may be included in future releases of this IG.
 
 ##### AU PS Actor Design Principles
  AU PS actors are designed to ensure compliance with IPS and support the [use of patient summaries in Australia](the-aups.html#aupintendedto). AU PS actor design principles are as follows:
-* AU PS actor design to ensure compliance with AU Core and IPS:
-  * **SHALL** inherit the narrative conformance requirements including Missing Data, Empty Sections, Known Absence of Data
+* AU PS actors:
+  * **SHALL** inherit the narrative conformance requirements from AU Core and IPS including Missing Data, Empty Sections, Known Absence of Data
   * **SHALL** inherit IPS Document requirements (see [AU PS Resource Profile Approach](general-guidance.html#resource-profile-approach))
-  * **SHALL** inherit _Must Support_ and Obligation requirements
+  * **SHALL** inherit AU Core resource profile requirements (see [AU PS Resource Profile Approach](general-guidance.html#resource-profile-approach))
+  * **SHALL** inherit _Must Support_ (the union of IPS and AU Core elements labelled *Must Support*) and IPS Obligation requirements
   * **MAY** strengthen inherited requirements as required for the Australian context. A weaker requirement **SHALL NOT** be specified.
+  * **MAY** apply additional requirements agreed by the AU PS project
 
 ### Extensibility – 'Additional' Sections or Elements
 As in IPS, a producer can send:
