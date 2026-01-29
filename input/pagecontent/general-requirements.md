@@ -255,6 +255,15 @@ Actor | Code | Definition | Notes
 
 *Must Support* elements are treated differently between [AU PS Consumer](ActorDefinition-au-ps-actor-consumer.html) and [AU PS Producer](ActorDefinition-au-ps-actor-producer.html) actors. *Must Support* on a profile element **SHALL** be interpreted as follows.
 
+#### Interpretation of the SHALL:handle Obligation
+The default _Must Support_ obligation for AU PS Consumer actors is [SHALL:handle](https://hl7.org/fhir/extensions/CodeSystem-obligation.html#obligation-SHALL.58handle). This obligation does not prescribe a specific handling for the element. 
+
+In the context of AU Patient Summary, the SHALL:handle obligation requires AU PS Consumer actors to understand the meaning of the element and recognise the consequences of not using any of the element data. 
+
+Ignoring an element without considering these consequences constitutes non-conformance. During testing, system providers can be required to explain how their system uses element data and the implications of receiving values that are not supported.
+
+For example, an AU PS Consumer implementation that imports AU PS Condition resources into a list of active problems must consider the impact of not importing conditions into the list when the `Condition.clinicalStatus` has a value of "recurrence", "remission", or "relapse".
+
 #### Presentation of Must Support and Obligation in Profiles
 All elements with *Must Support* in AU PS are accompanied by an explicit obligation that identifies the expectations for one or more actors. When rendered in an implementation guide, each profile is presented in different formal views under tabs labelled "Differential Table", "Key Elements Table", and "Snapshot Table". Elements labelled with *Must Support* and stated obligations in these views are represented by <span style="padding-left: 1px; padding-right: 1px; color: white; background-color: red" title="This element must be supported">S</span><span style="padding-left: 1px; padding-right: 1px; color: white; background-color: red" title="This element has obligations">O</span> as shown below. 
 
