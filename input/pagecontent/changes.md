@@ -7,6 +7,7 @@ This change log documents the significant updates and resolutions implemented fr
 
 #### Changes in this version
 - changed AU PS Consumer guidance to align wording with the handle obligation (replace "consume resources" with "handle") in [General Requirements](general-requirements.html) page [AU PS: FHIR-52616](https://jira.hl7.org/browse/FHIR-52616).
+- added plain language explanatory text claryfying the meaning of SHALL:handle obligation for AU PS Consumers in [General Requirements](general-requirements.html) page [AU PS: FHIR-53033](https://jira.hl7.org/browse/FHIR-53033).
 - changed [Generation and Access](generation-and-access.html) page to retain only options in line with current community interest [au-fhir-ps #91](https://github.com/hl7au/au-fhir-core/issues/91).
 - [AU PS AllergyIntolerance](StructureDefinition-au-ps-allergyintolerance.html):
   - removed SHOULD:display obligation on AllergyIntolerance.patient.reference for the AU PS Consumer [IPS: FHIR-51258](https://jira.hl7.org/browse/FHIR-51258)
