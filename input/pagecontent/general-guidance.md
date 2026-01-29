@@ -155,7 +155,14 @@ Users of this implementation guide are encouraged to provide their feedback abou
 #### Actor Approach
 AU PS actors are defined to describe the specific sets of functionality supported by systems that play a role in producing or consuming AU PS documents. Each actor is defined by:
 * an actor definition that includes reference to support expectations (narrative conformance requirements)
+  * the AU PS actor derives from the corresponding IPS actor
 * resource profiles that define support expectations for actors using _Must Support_ and Obligations 
+
+<div> 
+    <img src="actor-derivationapproach.png" alt="Derivation approach for AU PS Consumer actor" style="width:30%"/>
+  </div>
+*Figure 4: Derivation approach for AU PS Consumer actor*
+<br/><br/>
 
 In this release, AU PS does not include capability statements that describe the requirements for an AU PS actor. It is anticipated that capability statements may be included in future releases of this IG.
 
