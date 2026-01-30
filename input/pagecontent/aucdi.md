@@ -20,11 +20,10 @@ An interpretation of AUCDI clinical information requirements through community c
 
 AUCDI R2 builds upon R1, expanding on the initial “core”, introducing additional data groups to support different use cases including "Patient summary":
 
-AUCDI Version | AU PS Version
----|---
-R1| -
-R2 (Patient summary)|1.0.0
-{:.grid}
+| AUCDI Version | AU PS Version |
+|---|---|
+|R1| - |
+|R2 (Patient summary)|1.0.0|
 
 ### AUCDI (Patient summary) Mappings Into AU PS
 
@@ -46,7 +45,7 @@ Column attribute descriptions are as follows:
     <th>AU PS Document Section</th>
     <th>AU PS Profile(s)</th>
     <th>FHIR Path</th>
-    <th>Comment</th>
+    <th style="min-width:300px">Comment</th>
   </tr>
 </thead>
 <tbody>
@@ -61,12 +60,8 @@ Column attribute descriptions are as follows:
   <tr>
     <td colspan="2">Date/time of onset of first reaction</td>
     <td><a href="StructureDefinition-au-ps-allergyintolerance.html">AU PS AllergyIntolerance</a></td>
-    <td>TBD</td>
-    <td>There is no native FHIR element or extension available with this exact meaning. Possible options are to:
-<ul><li>map to AllergyIntolerance.onsetDateTime noting that allergies and intolerances may be identified without a reaction so this may not identify a first reaction.</li>
-<li>map to AllergyIntolerance.reaction.onsetDateTime and the first reaction is just understood as the earliest noting that not all reactions may be captured.</li>
-<li>develop a FHIR extension to capture the date time of the first reaction - to be submitted for consideration in the FHIR Extensions Pack.</li>
-</ul>&#xA;&#xA;Please provide your feedback on possible mapping options on <a href="https://confluence.hl7.org/spaces/HAFWG/pages/288069416/AUCDI+R2+in+AU+PS+R1">this page</a>.</td>
+    <td><code>AllergyIntolerance.onset[x]</code></td>
+    <td>This concept aligns with the first identification of an allergy or intolerance. This may be patient reported or clinically determined. The onset may be an estimated or actual age or date. It also may be imprecise (partial date), range of ages or period of time.</td>
   </tr>
   <tr>
     <td colspan="2">Manifestation</td>
