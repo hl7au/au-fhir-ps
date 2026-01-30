@@ -82,7 +82,7 @@ When modelling AU PS resource profiles, they:
 * use [compliesWithProfile](https://build.fhir.org/ig/HL7/fhir-extensions/StructureDefinition-structuredefinition-compliesWithProfile.html) to assert compliance with the corresponding IPS profile (where it exists)
 
 <div> 
-    <img src="profilingapproach.png" alt="AU PS resource profile modelling" style="width:50%"/>
+    <img src="profilingapproach.png" alt="AU PS resource profile modelling" style="width:60%"/>
   </div>
 *Figure 1: AU PS resource profile modelling*<a name="profilingapproach">
 <br/><br/>
