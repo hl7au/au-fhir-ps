@@ -321,15 +321,17 @@ For example, in the AU PS Practitioner Profile, the `name` element is labelled *
 - AU PS Consumers **SHALL** handle `Practitioner.name` if present and containing valid values in `Practitioner.name.family` and `Practitioner.name.given` sub-elements, and **SHOULD** display the value of at least the sub elements`Practitioner.name.family` and `Practitioner.name.given` when presenting the data to a human user.
 
 ##### Must Support - Elements with multiple cardinality
-When an element with multiple cardinality is labelled as *Must Support* with an obligation of *SHALL:populate-if-known*, an AU PS Producer **SHALL** *populate at least one known occurrence*. Where more than one occurrence is known, *all occurrences* **SHOULD** be populated. 
+AU Patient Summary profiles have several *Must Support* elements that have multiple cardinality (max > 1), which may have obligation codes of *SHALL:populate-if-known* and *SHALL:handle*.  
 
-The following examples describe how systems may align with the *SHALL:populate-if-known* obligation for elements with multiple cardinality.
+When an element with multiple cardinality is labelled as *Must Support* with an obligation of *SHALL:populate-if-known*, an AU PS Producer **SHALL** correctly populate *at least one known occurrence*. Where more than one occurrence is known, *all known occurrences* **SHOULD** be populated. 
 
-* Organization identifier : A producer can populate a single organisation identifier, such as an national provider identifier, rather than all known identifiers (e.g. medicare minor identifier, ABN, ACN). If a national provider identifier is not known, another known identifier would be used.
+The following examples describe how systems can meet the *SHALL:populate-if-known* obligation for elements with multiple cardinality.
 
-* AllergyIntolerance reaction: A producer can populate only the most recent reaction occurrence, even if a history of multiple occurrences with the same manifestation is available.
+* Organization identifier : An AU PS Producer can populate a single organisation identifier, such as an national provider identifier, rather than all known identifiers (e.g. medicare minor identifier, ABN, ACN). If a national provider identifier is not known, another known identifier would be used.
+
+* AllergyIntolerance reaction: An AU PS Producer can populate only the most recent reaction occurrence, even if a history of multiple occurrences with the same manifestation is available.
   
-* CodeableConcept coding: A producer can populate only a single coding from an international clinical terminology such as SNOMED-CT rather than also including additional local system coding values. However, if an appropriate SNOMED-CT coding is not known, the local system coding would be used.
+* CodeableConcept coding: An AU PS Producer can populate only a single coding from an international clinical terminology such as SNOMED-CT rather than also including additional local system coding values. However, if an appropriate SNOMED-CT coding is not known, the local system coding would be used.
 
 When an element with multiple cardinality is labelled as *Must Support* with an obligation of *SHALL:handle*, an AU PS Consumer **SHALL** *handle all occurrences* of the element by evaluating the consequences of not using any of the element occurrences. 
 
