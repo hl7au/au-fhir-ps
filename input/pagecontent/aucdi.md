@@ -20,11 +20,10 @@ An interpretation of AUCDI clinical information requirements through community c
 
 AUCDI R2 builds upon R1, expanding on the initial “core”, introducing additional data groups to support different use cases including "Patient summary":
 
-AUCDI Version | AU PS Version
----|---
-R1| -
-R2 (Patient summary)|1.0.0
-{:.grid}
+| AUCDI Version | AU PS Version |
+|---|---|
+|R1| - |
+|R2 (Patient summary)|1.0.0|
 
 ### AUCDI (Patient summary) Mappings Into AU PS
 
@@ -38,7 +37,6 @@ Column attribute descriptions are as follows:
 - **FHIR Path**: The [FHIRPath expression](https://build.fhir.org/ig/HL7/FHIRPath/) to the FHIR element relevant for exchange, i.e. the FHIR element that can be populated with data from a source system that represents the clinical concept expressed in the AUCDI data element. 
 - **Comment**: Additional information about the mapping including an explanation of where an element or group is not yet mapped.
 
-
 <table border="1" cellspacing="0" cellpadding="0" width="100%">
 <thead>
   <tr style="background-color: #f2f2f2;">
@@ -46,8 +44,8 @@ Column attribute descriptions are as follows:
     <th colspan="2">AUCDI Data Element</th>
     <th>AU PS Document Section</th>
     <th>AU PS Profile(s)</th>
-    <th style="width:350px">FHIR Path</th>
-    <th>Comment</th>
+    <th>FHIR Path</th>
+    <th style="min-width:300px">Comment</th>
   </tr>
 </thead>
 <tbody>
