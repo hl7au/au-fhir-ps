@@ -321,23 +321,19 @@ For example, in the AU PS Practitioner Profile, the `name` element is labelled *
 - AU PS Consumers **SHALL** handle `Practitioner.name` if present and containing valid values in `Practitioner.name.family` and `Practitioner.name.given` sub-elements, and **SHOULD** display the value of at least the sub elements`Practitioner.name.family` and `Practitioner.name.given` when presenting the data to a human user.
 
 ##### Must Support - Elements with multiple cardinality
-When an element with multiple cardinality is labelled as **Must Support** with an obligation of **SHALL:populate-if-known**:
-* An AU PS Producer **SHALL** *populate at least one known occurrence*. Where more than one occurrence is known, *all occurrences* **SHOULD** be populated. 
-* An AU PS Consumer **SHALL** *handle all occurrences* of the element by evaluating the consequences of not using any of the element occurrences. 
+When an element with multiple cardinality is labelled as *Must Support* with an obligation of *SHALL:populate-if-known*, an AU PS Producer **SHALL** *populate at least one known occurrence*. Where more than one occurrence is known, *all occurrences* **SHOULD** be populated. 
 
-The following provide examples how systems may align with the specified Must Support obligations for elements with multiple cardinality.
+The following examples describe how systems may align with the *SHALL:populate-if-known* obligation for elements with multiple cardinality.
 
-**Patient identifier**
-* A producer can populate only a known national patient identifier rather than all known identifiers (e.g. local medical record numbers). If a national identifier is unknown, at least one other identifier would be populated.
-* A consumer can choose to use only a supported national patient identifier and consider other populated identifiers as not useful. However, in an international context, an unsupported national patient individual identifier may require additional patient identification processing.
+* Organization identifier : A producer can populate a single organisation identifier, such as an national provider identifier, rather than all known identifiers (e.g. medicare minor identifier, ABN, ACN). If a national provider identifier is not known, another known identifier would be used.
 
-**AllergyIntolerance reaction**
-* A producer can populate only the most recent reaction occurrence, even if a history of multiple occurrences with the same manifestation is available.
-* A consumer can use only the most recent reaction occurrence, even if multiple occurrences with the same manifestation are populated.
+* AllergyIntolerance reaction: A producer can populate only the most recent reaction occurrence, even if a history of multiple occurrences with the same manifestation is available.
   
-**AllergyIntolerance code**
-* A producer can populate only a code from the SNOMED substance value set rather than also including another system-specific medicine coding. However, if the SNOMED coding is not known, the system-specific coding would be used.
-* A consumer can use a code from the SNOMED substance value set supporting adverse reaction checking while disregarding other unsupported codings. If a supported coding is not available, the system can consider using the code text and present appropriate warnings to users that automated reaction checking is unavailable for the imported entry.
+* CodeableConcept coding: A producer can populate only a single coding from an international clinical terminology such as SNOMED-CT rather than also including additional local system coding values. However, if an appropriate SNOMED-CT coding is not known, the local system coding would be used.
+
+When an element with multiple cardinality is labelled as *Must Support* with an obligation of *SHALL:handle*, an AU PS Consumer **SHALL** *handle all occurrences* of the element by evaluating the consequences of not using any of the element occurrences. 
+
+See [Interpretation of the SHALL:handle Obligation](#interpretation-of-the-shallhandle-obligation) for examples using *SHALL:handle* obligation on elements with multiple cardinality.
 
 ##### Must Support - Resource References
 Some elements labelled as *Must Support* reference multiple resource types or profiles such as `Observation.performer`. In such cases: 
