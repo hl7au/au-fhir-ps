@@ -255,12 +255,12 @@ Actor | Code | Definition | Notes
 
 *Must Support* elements are treated differently between [AU PS Consumer](ActorDefinition-au-ps-actor-consumer.html) and [AU PS Producer](ActorDefinition-au-ps-actor-producer.html) actors. *Must Support* on a profile element **SHALL** be interpreted as follows.
 
-#### Interpretation of the SHALL:handle Obligation
+#### Meaning of SHALL:handle Obligation
 The default _Must Support_ obligation for AU PS Consumer actors is [SHALL:handle](https://hl7.org/fhir/extensions/CodeSystem-obligation.html#obligation-SHALL.58handle). This obligation does not prescribe a specific handling for the element. 
 
-In the context of AU Patient Summary, the SHALL:handle obligation requires AU PS Consumer actors to understand the meaning of the element and recognise the consequences of not using any of the element data. 
+The SHALL:handle obligation requires AU PS Consumer actors to understand the meaning of the element and recognise the consequences of not using any of the element data. Ignoring an element without considering these consequences constitutes non-conformance. During testing, system providers can be required to explain how their system uses element data and the implications of receiving values that are not supported. 
 
-Ignoring an element without considering these consequences constitutes non-conformance. During testing, system providers can be required to explain how their system uses element data and the implications of receiving values that are not supported.
+When an element with multiple cardinality is labelled as _Must Support_ with an obligation of SHALL:handle, an AU PS Consumer **SHALL** handle all occurrences of the element by evaluating the consequences of not using any of the element occurrences. 
 
 For example, an AU PS Consumer implementation that imports AU PS Condition resources into a list of active problems must consider the impact of not importing conditions into the list when the `Condition.clinicalStatus` has a value of "recurrence", "remission", or "relapse".
 
