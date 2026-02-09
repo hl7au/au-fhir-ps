@@ -6,17 +6,17 @@ ERROR: StructureDefinition/au-ps-patient: StructureDefinition: This profile does
 # === ERROR 02: This issue will be fixed in a later version of the IG Publisher (see: https://chat.fhir.org/#narrow/channel/179252-IG-creation/topic/Publisher.20v2.2E0.2E24.20-.20error.20in.20local.20build). ===
 No definition could be found for URL value 'http://hl7.org/fhir/tools/StructureDefinition/expansion-parameters' 
 
-# ERROR 03: Bundle.entry slicing discriminator mismatch. IPS slices Bundle.entry using both type:resource and profile:resource discriminators. AU PS uses only type:resource to enforce stricter control over allowed entry types. This causes a mismatch with IPS, but is intentional to ensure AU PS-specific profiles are used. ===
-ERROR: StructureDefinition/au-ps-bundle: StructureDefinition: This profile does not comply with claimed profile 'http://hl7.org/fhir/uv/ips/StructureDefinition/Bundle-uv-ips'
+# === ERROR 03: Bundle.entry slicing discriminator mismatch. IPS slices Bundle.entry using both type:resource and profile:resource discriminators. AU PS uses only type:resource to enforce stricter control over allowed entry types. This causes a mismatch with IPS, but is intentional to ensure AU PS-specific profiles are used. ===
+StructureDefinition/au-ps-bundle: StructureDefinition: This profile does not comply with claimed profile 'http://hl7.org/fhir/uv/ips/StructureDefinition/Bundle-uv-ips'
 
 # === === ERROR 04: AU PS profile asserts compliance with IPS but there are some structural differences that cause the tooling validation error: a) IPS invariants and AU Core invariants set the same rules but use different FHIRPathsthe tooling is unable to match them ad reports the rules as missing. b) Observation.category slicing discriminator mismatch. IPS slices using pattern:$this while AU PS inherits slices by code/system from AU Core. b) For Observation.value[x], IPS labels data types string, Quantity and CodeableConcept as MS. AU PS is stronger by placing the rule on the element i.e. every data type has obligations on it not just the three IPS. These differences trigger validation errors but the profiles are functionally compatible.  ===
-ERROR: StructureDefinition/au-ps-diagnosticresult-path: StructureDefinition: This profile does not comply with claimed profile 'http://hl7.org/fhir/uv/ips/StructureDefinition/Observation-results-laboratory-pathology-uv-ips'
+StructureDefinition/au-ps-diagnosticresult-path: StructureDefinition: This profile does not comply with claimed profile 'http://hl7.org/fhir/uv/ips/StructureDefinition/Observation-results-laboratory-pathology-uv-ips'
 
 # === ERROR 05: Target profile in MedicationStatement.reasonReference is flagged due to IPS profile not being derived from AU Core base profile. This is a known cross-profile compatibility limitation when constraining to both AU Core and IPS derived targets. ===
-ERROR: MedicationStatement.reasonReference: Error at http://hl7.org.au/fhir/ps/StructureDefinition/au-ps-medicationstatement#MedicationStatement.reasonReference: The target profile http://hl7.org/fhir/uv/ips/StructureDefinition/DiagnosticReport-uv-ips is not a valid constraint on the base ([CanonicalType[http://hl7.org.au/fhir/core/StructureDefinition/au-core-condition], CanonicalType[http://hl7.org/fhir/StructureDefinition/Observation], CanonicalType[http://hl7.org.au/fhir/StructureDefinition/au-diagnosticreport]])
+MedicationStatement.reasonReference: Error at http://hl7.org.au/fhir/ps/StructureDefinition/au-ps-medicationstatement#MedicationStatement.reasonReference: The target profile http://hl7.org/fhir/uv/ips/StructureDefinition/DiagnosticReport-uv-ips is not a valid constraint on the base ([CanonicalType[http://hl7.org.au/fhir/core/StructureDefinition/au-core-condition], CanonicalType[http://hl7.org/fhir/StructureDefinition/Observation], CanonicalType[http://hl7.org.au/fhir/StructureDefinition/au-diagnosticreport]])
 
 # ==== ERROR 06: This warning occurs because AU PS Smoking Status inherits SNOMED patternCodeableConcept from AU Core where IPS requires a LOINC pattern on Observation.code. AU PS profiles support both SNOMED and LOINC codings to satisfy both AU Core and IPS requirements.====
-ERROR: StructureDefinition/au-ps-smokingstatus: StructureDefinition: This profile does not comply with claimed profile 'http://hl7.org/fhir/uv/ips/StructureDefinition/Observation-tobaccouse-uv-ips'
+StructureDefinition/au-ps-smokingstatus: StructureDefinition: This profile does not comply with claimed profile 'http://hl7.org/fhir/uv/ips/StructureDefinition/Observation-tobaccouse-uv-ips'
 
 # === WARNING 01: These are warnings for publication artefacts not used in HL7 AU specifications at this time and are accepted by the AU FHIR WG. ===
 The HTML fragment 'ip-statements.xhtml' is not included anywhere in the produced implementation guide
@@ -50,12 +50,6 @@ No definition could be found for URL value 'http://ns.electronichealth.net.au/id
 
 # === INFORMATION 02: INHERITED FROM FHIR STANDARD: Some FHIR standard ValueSets are deprecated. ===
 Reference to deprecated ValueSet http://hl7.org/fhir/5.0/ValueSet/jurisdiction|5.0.0
-
-# === INFORMATION 03: INHERITED FROM AU BASE: Known NCTS published RCPA ValueSets published as experimental. ===
-Reference to experimental ValueSet https://www.rcpa.edu.au/fhir/ValueSet/spia-chemical-pathology-refset-3|3.20251231.0
-Reference to experimental ValueSet https://www.rcpa.edu.au/fhir/ValueSet/spia-haematology-refset-3|3.20251231.0
-Reference to experimental ValueSet https://www.rcpa.edu.au/fhir/ValueSet/spia-immunopathology-refset-3|3.20251231.0
-Reference to experimental ValueSet https://www.rcpa.edu.au/fhir/ValueSet/spia-microbiology-serology-molecular-refset-3|3.20251231.0
 
 # === INFORMATION 03: These issues are known FHIR standard and Extension Pack future version and current deprecations. ===
 The discriminator type 'pattern' is deprecated in R5+. For future compatibility, you could consider using type=value with a pattern[x] instead (if this is not an inherited slicing) 
