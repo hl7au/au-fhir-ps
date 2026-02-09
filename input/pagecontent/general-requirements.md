@@ -262,6 +262,13 @@ The SHALL:handle obligation requires AU PS Consumer actors to understand the mea
 
 When an element with multiple cardinality is labelled as _Must Support_ with an obligation of SHALL:handle, an AU PS Consumer **SHALL** handle all occurrences of the element by evaluating the consequences of not using any of the element occurrences. 
 
+For example
+- an AU PS Consumer implementation that builds a list of active problems needs to consider the impact of not importing conditions into the list when the `Condition.clinicalStatus` has a value of "recurrence", "remission", or "relapse"
+- an AU PS Consumer that uses a patient summary to support a cardiology referral for palpitations and dizzines on extertion needs to consider the value of `MedicationStatement.medication[x]`. In this context:
+  - antihypertensive medicines (e.g. enalapril 10 mg daily) cannot be ignored and should be displayed, as they are relevant to the purpose of this patient summary
+  - prior PCV chemotherapy medicines received six years ago (e.g. procarbazine, lomustine, vincristine) cannot be ignored and should be displayed, because of the potential for cardiotoxicity that can occur months to years after treatment
+  - antibiotics received during the same chemotherapy cycles (e.g. ciprofloxacin, clarithromycin) cannnot be ignored, however after considering them the consumer can reasonably determine that they are not relevant to the purpose of this patient summary
+
 For example, an AU PS Consumer implementation that imports AU PS Condition resources into a list of active problems must consider the impact of not importing conditions into the list when the `Condition.clinicalStatus` has a value of "recurrence", "remission", or "relapse".
 
 #### Presentation of Must Support and Obligation in Profiles
