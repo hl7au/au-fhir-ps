@@ -11,7 +11,15 @@ The following profiles have been defined for this implementation guide.
 #### Other Profiles Used 
 
 In addition to the profiles defined in this implementation guide, the following profiles defined elsewhere are used by AU Patient Summary. These profiles are a data type profile for a *Must Support* element in an AU PS profile or are the target of a *Must Support* reference element in an AU PS profile through definition or by impose:
+- [AU Australian Business Number](https://build.fhir.org/ig/hl7au/au-fhir-base/StructureDefinition-au-australianbusinessnumber.html)
+- [AU Base Dosage](https://build.fhir.org/ig/hl7au/au-fhir-base/StructureDefinition-au-dosage.html)
 - [AU Core Location](https://build.fhir.org/ig/hl7au/au-fhir-core/StructureDefinition-au-core-location.html)
+- [AU DVA Number](https://build.fhir.org/ig/hl7au/au-fhir-base/StructureDefinition-au-dvanumber.html)
+- [AU HPI-I](https://build.fhir.org/ig/hl7au/au-fhir-base/StructureDefinition-au-hpii.html)
+- [AU HPI-O](https://build.fhir.org/ig/hl7au/au-fhir-base/StructureDefinition-au-hpio.html)
+- [AU IHI](https://build.fhir.org/ig/hl7au/au-fhir-base/StructureDefinition-au-ihi.html)
+- [AU Medicare Card Number](https://build.fhir.org/ig/hl7au/au-fhir-base/StructureDefinition-au-medicarecardnumber.html)
+- [AU Medicare Provider Number](https://build.fhir.org/ig/hl7au/au-fhir-base/StructureDefinition-au-medicareprovidernumber.html)
 - [Codeable Concept (IPS)](https://hl7.org/fhir/uv/ips/STU2/StructureDefinition-CodeableConcept-uv-ips.html)
 - [Device (IPS)](https://hl7.org/fhir/uv/ips/STU2/StructureDefinition-Device-uv-ips.html)
 * [DeviceUseStatement (IPS)](https://hl7.org/fhir/uv/ips/STU2/StructureDefinition-DeviceUseStatement-uv-ips.html)
