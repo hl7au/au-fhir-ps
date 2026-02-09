@@ -18,10 +18,10 @@ Australian realm IGs and implementers are expected to [comply with AU Base and A
 
 #### Scope of AU PS FHIR Artefacts
 AU PS profiles:
-* [Resources](general-guidance.html#resource-profile-approach) to define minimum support expectations for use in the Australian healthcare context
-* [Actors](general-guidance.html#actor-approach) to define systems that play a role in consuming and producing AU PS documents
+* [Resources](general-guidance.html#resource-profile-approach) to define minimum support expectations for use in the Australian healthcare context.
+* [Actors](general-guidance.html#actor-approach) to define systems that play a role in consuming and producing AU PS documents.
 
-In this release, AU PS does not define new extensions, search parameters, operations or [terminology](general-guidance.html#terminology-approach). AU PS does not include capability statements (the minimum capabilities (behaviours) to be supported for AU PS actors). Future releases of this IG may include capability statements, extensions, search parameters, operations, or terminology.
+In this release, AU PS does not define new extensions, search parameters, operations or [terminology](general-guidance.html#terminology-approach). AU PS does not include capability statements (the minimum capabilities to be supported for AU PS actors). Future releases of this IG may include capability statements, extensions, search parameters, operations, or terminology.
 
 #### Extension Approach
 AU PS does not define new extensions. All extensions included in AU PS are defined in the [FHIR Extensions Pack](https://hl7.org/fhir/extensions/) or [AU Base](http://build.fhir.org/ig/hl7au/au-fhir-base/profiles-and-extensions.html#extensions). A limited set of extensions are indicated as _Must Support_ in AU PS resource profiles; these supported extensions have been inherited from the underlying AU Core profile.
@@ -50,7 +50,7 @@ For:
    - Data type sub-elements and profiles
    - Data type choices and references
    - Invariants
-   - Must Support
+   - *Must Support*
    - Terminology bindings
 * AU PS profiles **SHALL** validate reference elements against AU PS profiles (where available), otherwise the AU Core profile where available, otherwise the IPS profile where available, otherwise the AU Base profile where available
 * In AU PS profiles, terminology bindings inherited from the underlying AU Core profile are preferenced over terminology bindings in IPS profiles:
@@ -95,7 +95,7 @@ This modelling applies the typical HL7 AU profiling approach to use derivation t
 *Figure 2: Profiling approach for AU PS Patient profile*<a name="aupspatientprofilingapproach">
 <br/><br/>
 
-Due to this modelling, the differential view in an AU PS profile shows the patient summary requirements that are additional to AU Core. In some profiles (e.g. [AU PS Organization](StructureDefinition-au-ps-organization.html)), the only additional requirements are the obligations for AU PS actors.
+Due to this modelling, the "Differential Table" in an AU PS profile shows the patient summary requirements that are additional to AU Core. In some profiles (e.g. [AU PS Organization](StructureDefinition-au-ps-organization.html)), the only additional requirements are the obligations for AU PS actors.
 
 The [AU PS Bundle](StructureDefinition-au-ps-bundle.html) profile is not based on AU Core or AU Base as no Bundle profile exists in either IG. The approach to profiling for AU PS Bundle is to:
 * derive from the FHIR Bundle resource
@@ -109,7 +109,7 @@ The [AU PS Bundle](StructureDefinition-au-ps-bundle.html) profile is not based o
 *Figure 3: Profiling approach for AU PS Bundle profile*
 <br/><br/>
 
-This approach to [AU PS Bundle](StructureDefinition-au-ps-bundle.html) profiling (deriving from the FHIR Bundle resource and not [Bundle (IPS)](https://build.fhir.org/ig/HL7/fhir-ips/en/StructureDefinition-Bundle-uv-ips.html) profile) has been taken as at this time there is a tooling limitation that prevents meeting both of the below conditions:
+This approach to [AU PS Bundle](StructureDefinition-au-ps-bundle.html) profiling (deriving from the FHIR Bundle resource and not [Bundle (IPS)](https://build.fhir.org/ig/HL7/fhir-ips/en/StructureDefinition-Bundle-uv-ips.html) profile) has been taken as at the time of publication of this release there is a tooling limitation that prevents meeting both of the below conditions:
 * derivation from Bundle (IPS)
 * changing reference targets to AU PS profiles (as AU PS profiles derive from AU Core and not IPS they cannot be easily assessed as meeting IPS rules by the tooling)
 
@@ -142,12 +142,12 @@ These mechanisms offer differing capabilities and advantages. Typically HL7 AU p
 <div class="stu-note" markdown="1">
 For a human, the main differences with use of [imposeProfile](https://hl7.org/fhir/extensions/StructureDefinition-structuredefinition-imposeProfile.html) are:
 - does not rely on humans to maintain compliance rules from the target impose profile
-- does not visually show a human reader of the source profile rules from the target impose profile, i.e. a human reader must view and understand both profiles to understand the complete set of rules
-- where two or more profiles offer optional alternatives (e.g. differing preferred bindings or data type choices) does not make clear which alternative is preferenced
+- does not visually show a human reader the rules from the target imposed profile in the source profile, i.e. a human reader must view and understand both profiles to understand the complete set of rules
+- where two or more profiles offer optional alternatives (e.g. differing preferred bindings or data type choices), it does not make clear which alternative is preferenced
 
 To support reduction of maintenance efforts in AU PS, it is under consideration that all AU PS profiles derive from AU Core, where available, and use imposeProfile to apply IPS rules. That would mean that either:
 * a number of IPS-imposed requirements including cardinality, terminology, and flagging of <i>Must Support</i> would not be directly visible in the formal views within this guide, or
-* if the additional IPS constraints were included directly in the AU PS profile + use imposeProfile, those constraints would be repeated from a validation sense and could be an additional validation burden.
+* if the additional IPS constraints were included directly in the AU PS profile + use imposeProfile, those constraints would be duplicated from a validation sense and could be an additional validation burden.
 
 Users of this implementation guide are encouraged to provide their feedback about the potential use of imposeProfile.
 </div><!-- stu-note -->
