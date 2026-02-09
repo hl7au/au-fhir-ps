@@ -20,10 +20,24 @@ An interpretation of AUCDI clinical information requirements through community c
 
 AUCDI R2 builds upon R1, expanding on the initial “core”, introducing additional data groups to support different use cases including "Patient summary":
 
-| AUCDI Version | AU PS Version |
-|---|---|
-|R1| - |
-|R2 (Patient summary)|1.0.0|
+<table border="1" cellspacing="0" cellpadding="0" >
+  <thead>
+    <tr style="background-color: #f2f2f2;">
+      <th>AUCDI Version</th>
+      <th>AU PS Version</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>R1</td>
+      <td>-</td>
+    </tr>
+    <tr>
+      <td>R2 (Patient summary)</td>
+      <td>1.0.0</td>
+    </tr>
+  </tbody>
+</table>
 
 ### AUCDI (Patient summary) Mappings Into AU PS
 
