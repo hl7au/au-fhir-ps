@@ -275,6 +275,7 @@ For example, an AU PS Consumer that:
 	- IHI is a national identifier and retained to enable identification of the patient nationally for healthcare service provision when shared
 	- Patient Internal Identifier is an application assigned internal identifier and considered not useful for sharing with others so is not retained for sharing
 
+For how this obligation is applied to specific profile elements, see [Interpreting Profile Elements Labelled Must Support](#interpreting-profile-elements-labelled-must-support).
 
 #### Presentation of Must Support and Obligation in Profiles
 All elements with *Must Support* in AU PS are accompanied by an explicit obligation that identifies the expectations for one or more actors. When rendered in an implementation guide, each profile is presented in different formal views under tabs labelled "Differential Table", "Key Elements Table", and "Snapshot Table". Elements labelled with *Must Support* and stated obligations in these views are represented by <span style="padding-left: 1px; padding-right: 1px; color: white; background-color: red" title="This element must be supported">S</span><span style="padding-left: 1px; padding-right: 1px; color: white; background-color: red" title="This element has obligations">O</span> as shown below. 
