@@ -21,7 +21,7 @@ AU PS profiles:
 * [Resources](general-guidance.html#resource-profile-approach) to define minimum support expectations for use in the Australian healthcare context.
 * [Actors](general-guidance.html#actor-approach) to define systems that play a role in consuming and producing AU PS documents.
 
-In this release, AU PS does not define new extensions, search parameters, operations or [terminology](general-guidance.html#terminology-approach). AU PS does not include capability statements (the minimum capabilities to be supported for AU PS actors). Future releases of this IG may include capability statements, extensions, search parameters, operations, or terminology.
+In this release, AU PS does not define new extensions, [terminology](general-guidance.html#terminology-approach), search parameters, operations, or capability statements. Future releases of this IG may include these artefacts.
 
 #### Extension Approach
 AU PS does not define new extensions. All extensions included in AU PS are defined in the [FHIR Extensions Pack](https://hl7.org/fhir/extensions/) or [AU Base](http://build.fhir.org/ig/hl7au/au-fhir-base/profiles-and-extensions.html#extensions). A limited set of extensions are indicated as _Must Support_ in AU PS resource profiles; these supported extensions have been inherited from the underlying AU Core profile.
@@ -36,8 +36,8 @@ As part of profiling, AU PS inherits the AU Core localised terminology and indic
 In terms of support in AU PS profiles, a coded element can have support defined for one or more value sets. Coded elements that define support for more than one value set include them in a profile by slicing the [Coding](http://hl7.org/fhir/R4/datatypes.html#Coding) part of the element and placing *Must Support* on each value set slice. These value set slices are not intended to prevent systems from supplying only a text value. Most coded *Must Support* elements in AU PS profiles define support for one value set, which is bound to the supported element and no value set slice is present.
 
 For:
+* a description of the localisation of terminology in AU PS, refer to [Terminology Localisation](the-aups.html#terminology-localisation)
 * a list of the terminologies supported in AU PS, refer to the [Terminology](terminology.html) page
-* a description of the localisation of terminology supported in AU PS compared to the IPS, refer to [Terminology Localisation](the-aups.html#terminology-localisation)
 * guidance on selection of terminology in HL7 AU IGs, refer to the AU Base guidance on [Terminology Selection](https://build.fhir.org/ig/hl7au/au-fhir-base/generalguidance.html#terminology-selection)
 
 #### Resource Profile Approach
