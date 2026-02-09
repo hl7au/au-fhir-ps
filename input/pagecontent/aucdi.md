@@ -50,7 +50,6 @@ Column attribute descriptions are as follows:
 - **AU PS Profile(s)**: The title of the AU PS profile relevant for exchange.
 - **FHIR Path**: The [FHIRPath expression](https://build.fhir.org/ig/HL7/FHIRPath/) to the FHIR element relevant for exchange, i.e. the FHIR element that can be populated with data from a source system that represents the clinical concept expressed in the AUCDI data element. 
 - **Comment**: Additional information about the mapping including an explanation of where an element or group is not yet mapped.
-
 <table border="1" cellspacing="0" cellpadding="0" width="100%">
 <thead>
   <tr style="background-color: #f2f2f2;">
@@ -344,12 +343,12 @@ Column attribute descriptions are as follows:
   </tr>
   <tr>
     <td colspan="2">Justification</td>
-     | <td><a href="https://hl7.org/fhir/uv/ips/STU2/StructureDefinition-Observation-pregnancy-status-uv-ips.html">Observation Pregnancy - Status (IPS)</a></td>
+     <td><a href="https://hl7.org/fhir/uv/ips/STU2/StructureDefinition-Observation-pregnancy-status-uv-ips.html">Observation Pregnancy - Status (IPS)</a></td>
     <td><code>Observation.note</code></td>
   </tr>
   <tr>
     <td colspan="2">Date of assertion</td>
-     | <td><a href="https://hl7.org/fhir/uv/ips/STU2/StructureDefinition-Observation-pregnancy-status-uv-ips.html">Observation Pregnancy - Status (IPS)</a></td>
+     <td><a href="https://hl7.org/fhir/uv/ips/STU2/StructureDefinition-Observation-pregnancy-status-uv-ips.html">Observation Pregnancy - Status (IPS)</a></td>
     <td><code>Observation.effectiveDateTime</code></td>
   </tr>
 </tbody>
