@@ -87,7 +87,7 @@ When modelling AU PS resource profiles, they:
 *Figure 1: AU PS resource profile modelling*<a name="profilingapproach">
 <br/><br/>
 
-This modelling applies the typical HL7 AU profiling approach to use derivation to manage compliance across the HL7 AU profile stack and allows for the addition of IPS and AU PS project requirements, see the example in the figure below.
+This modelling applies the typical HL7 AU profiling approach that uses derivation to manage compliance across the HL7 AU profile stack and allows for the addition of IPS and AU PS project requirements, see the example in the figure below.
 
 <div> 
     <img src="patient-profilingapproach.png" alt="AU PS Patient current profiling approach" style="width:40%"/>
@@ -170,7 +170,7 @@ In this release, AU PS does not include capability statements that describe the 
  AU PS actors are designed to ensure compliance with IPS and support the [use of patient summaries in Australia](the-aups.html#aupintendedto). AU PS actor design principles are as follows:
 * AU PS actors:
   * **SHALL** inherit the narrative conformance requirements from AU Core and IPS including Missing Data, Empty Sections, Known Absence of Data
-  * **SHALL** inherit IPS Document requirements (see [AU PS Resource Profile Approach](general-guidance.html#resource-profile-approach))
+  * **SHALL** inherit IPS document requirements (see [AU PS Resource Profile Approach](general-guidance.html#resource-profile-approach))
   * **SHALL** inherit AU Core resource profile requirements (see [AU PS Resource Profile Approach](general-guidance.html#resource-profile-approach))
   * **SHALL** inherit _Must Support_ (the union of IPS and AU Core elements labelled *Must Support*) and IPS obligation requirements
   * **MAY** strengthen inherited requirements as required for the Australian context. A weaker requirement **SHALL NOT** be specified.
