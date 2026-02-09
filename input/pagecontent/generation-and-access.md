@@ -1,27 +1,27 @@
 ### Generating & Accessing AU Patient Summary (AU PS) Documents
 AU PS is specified in this guide as a HL7 FHIR document (a Bundle including a Composition), composed by a set of potentially reusable "minimal" data blocks (the AU PS profiles). See [Structure of the AU PS](the-aups.html#structure-of-the-au-ps).
 
-As in the [IPS Generation and Data Inclusion](https://hl7.org/fhir/uv/ips/Generation-and-Data-Inclusion.html), it is not intended in this release of AU PS IG to constrain solutions or strategies for the creation, sharing and use of AU PS or IPS Documents. 
+As in the [IPS Generation and Data Inclusion](https://hl7.org/fhir/uv/ips/Generation-and-Data-Inclusion.html), it is not intended in this release of AU PS IG to constrain solutions or strategies for the creation, sharing and use of AU PS or IPS documents. 
 
 Options for generation and access have been discussed during the AU PS project and HL7 AU Connectathon Track, and the options currently being considered for most implementations in the Australian context are referenced and briefly described in this guide. While the generation operations recommended in the IPS IG are included in this guide, future releases may provide alternative methods and recommendations than those outlined at this time. Some of the potential options for future consideration include: 
 * Document Bundle Interactions - FHIR REST API interactions on Bundle resource type to create, update, search and read an IPS document Bundle. A named query search approach could be used to provide more controlled and advanced search requirements.
 * Document Bundle and DocumentReference Interactions - Integrating the Healthcare Enterprise (IHE) has published guidance on the [IHE Sharing of IPS (sIPS)](https://profiles.ihe.net/ITI/sIPS/index.html), which has been implemented in a number of jurisdictional implementations of IPS.
-* Encrypted File Exchange - in cases where AU PS Document exchange is performed using insecure transport media such as email, USB or DVD.
+* Encrypted File Exchange - in cases where AU PS document exchange is performed using insecure transport media such as email, USB or DVD.
 
 
-When generating an AU PS Document, implementers are advised to be familiar with the following IPS guidance:
+When generating an AU PS document, implementers are advised to be familiar with the following IPS guidance:
 - [Narrative and Language Translation](https://hl7.org/fhir/uv/ips/STU2/Design-Conventions.html#narrative-and-language-translation). 
 - [Data Included in IPS Documents](https://hl7.org/fhir/uv/ips/STU2/Generation-and-Data-Inclusion.html#data-included-in-ips-documents).
 
 ### IPS $summary FHIR Operation
-The IPS defines the [IPS Summary](https://hl7.org/fhir/uv/ips/STU2/OperationDefinition-summary.html) (`$summary`) operation and [IPS Server Capability Statement](https://hl7.org/fhir/uv/ips/STU2/CapabilityStatement-ips-server.html), which recommends an IPS Server implement the `$summary` operation as an operation for generating an IPS Document.
+The IPS defines the [IPS Summary](https://hl7.org/fhir/uv/ips/STU2/OperationDefinition-summary.html) (`$summary`) operation and [IPS Server Capability Statement](https://hl7.org/fhir/uv/ips/STU2/CapabilityStatement-ips-server.html), which recommends an IPS Server implement the `$summary` operation as an operation for generating an IPS document.
 
 The `$summary` operation has two endpoint URLs based on the Patient resource:
 
 - `[base]/Patient/$summary` - a Patient resource type endpoint where a patient (business) identifier is provided as a parameter in the operation request body
 - `[base]/Patient/[id]/$summary` - a Patient instance endpoint where a patient resource id is provided as a parameter in the URL path
 
-An optional `profile` parameter can be included in the request to allow the server to generate a FHIR Document that conforms to the specified profile (e.g. AU PS Composition). If the profile parameter is not provided, or if the specified profile is not supported, the server defaults to generating a document based on the IPS profile.
+An optional `profile` parameter can be included in the request to allow the server to generate a FHIR document that conforms to the specified profile (e.g. AU PS Composition). If the profile parameter is not provided, or if the specified profile is not supported, the server defaults to generating a document based on the IPS profile.
 
 The `$summary` operation returns a FHIR Bundle resource of type document, containing a Composition resource and its referenced resources. The returned document is typically generated on demand and represents the most current patient summary information. It is not expected that the returned document is persisted as part of this request; therefore, this operation as a standalone does not support use cases where retrieval of a previously generated document is required.
 
@@ -40,7 +40,7 @@ The [IPS Server Capability Statement](https://hl7.org/fhir/uv/ips/STU2/Capabilit
 
 The `$docref` operation has a DocumentReference resource type endpoint that returns a searchset Bundle containing DocumentReference resources that match the specified request parameters.
 
-A consuming system can invoke the `$docref` operation on a server to retrieve all DocumentReference resources related to a patient. When no parameters are specified other than the mandatory patient resource id, the server returns a single DocumentReference pointing to the patient’s most current summary document. The type of this summary document depends on jurisdictional processing rules - for example, the Consolidated CDA (C-CDA) is commonly used in North America, whereas in Australia, the document may be specified as an AU PS Document .
+A consuming system can invoke the `$docref` operation on a server to retrieve all DocumentReference resources related to a patient. When no parameters are specified other than the mandatory patient resource id, the server returns a single DocumentReference pointing to the patient’s most current summary document. The type of this summary document depends on jurisdictional processing rules - for example, the Consolidated CDA (C-CDA) is commonly used in North America, whereas in Australia, the document may be specified as an AU PS document.
 
 The `$docref` operation expects that a summary document will always exist or can be dynamically generated. This expectation may be further constrained within a jurisdictional context, including specification of the expected operation outcome when a document is unavailable—such as returning an empty searchset Bundle.
 
@@ -68,7 +68,7 @@ The `$docref` operation supports multiple document retrieval use cases, includin
 ### SMART Health Links 
 [SMART Health Cards and Links IG](https://hl7.org/fhir/uv/smart-health-cards-and-links/) is an FHIR Standard for Trial Use that supports scenarios where document exchange initiated by the healthcare consumer by sharing a link to a patient summary to trusted recipient.
 
-A user wishing to share an AU PS Document retrieves a SMART Health Link (SHL) from an SHL Sharing Application. While the method of retrieving the SHL is not specified by the standard, the SHL itself is a structured, encoded link that includes a URL to a file manifest, an encryption key, and metadata describing the link. It is critical to consider securing the SMART Health Link as it contains the cryptographic key required to access the document. 
+A user wishing to share an AU PS document retrieves a SMART Health Link (SHL) from an SHL Sharing Application. While the method of retrieving the SHL is not specified by the standard, the SHL itself is a structured, encoded link that includes a URL to a file manifest, an encryption key, and metadata describing the link. It is critical to consider securing the SMART Health Link as it contains the cryptographic key required to access the document. 
 
 The user may optionally specify a passcode, which serves as the only access control mechanism and is required to retrieve the file manifest and subsequently, the patient summary document.
 
