@@ -28,7 +28,7 @@ The `$summary` operation returns a FHIR Bundle resource of type document, contai
 A consuming system can invoke the Patient `$summary` operation on a server to retrieve an on-demand, system generated patient summary. The operation can also be used within a system to generate an initial patient summary document that a user can review, curate, assert, display, persist or take further action on.
 
 
-<div class="mermaid" alt="IPS Summary Operation" style="width:60%">
+<div class="mermaid" alt="IPS Summary Operation">
 ---
 config:
   theme: default
@@ -74,7 +74,7 @@ The document metadata provided in the returned DocumentReference resource can be
 
 The `$docref` operation supports multiple document retrieval use cases, including retrieving a patient summary from a previous point in time, accessing the current patient summary, and generating a new document on demand. The benefit of this operation is the use of a single endpoint to support these scenarios, including retrieval of other document types and formats such as HL7 CDA and PDF documents. This flexibility suggests that jurisdictional and implementation-level profiles may be necessary to clearly specify supported input parameters, document capabilities, and the expected output of the operation.
 
-<div class="mermaid" alt="IPA Fetch DocumentReference Operation" style="width:60%">
+<div class="mermaid" alt="IPA Fetch DocumentReference Operation">
 ---
 config:
   theme: default
@@ -103,7 +103,7 @@ To aid in viewing and processing the patient summary, the SHL can be prefixed wi
 
 When the receiving user submits the SHL to an SHL Receiving Application, the application decodes the SHL and, if required, requests a passcode from the receiving user. The decoded data and passcode is used to retrieve a file manifest from the SHL Sharing Application. The manifest contains a list of files - either via external URLs or embedded directly in the response. Once a file is retrieved or decoded, it is decrypted using the key contained in the SHL. The decrypted file contains the patient summary document as a FHIR Bundle resource, which can then be used by the SHL Receiving Application.
 
-<div class="mermaid" alt="SMART Health Links Patient Summary Exchange" style="width:80%">
+<div class="mermaid" alt="SMART Health Links Patient Summary Exchange">
 sequenceDiagram
 
     participant SharingUser as Sharing User
