@@ -5,7 +5,7 @@ AU PS is specified in this guide as a HL7 FHIR document (a Bundle including a Co
 
 The IPS recommends two potential operations (`$summary` and `$docref`) for how IPS documents may be generated, but does not constrain solutions or strategies for the creation, sharing and use of patient summary documents (see [Generating & Accessing IPS Documents](https://hl7.org/fhir/uv/ips/Generation-and-Data-Inclusion.html)). These and other options for generation and access have been discussed during the AU PS project and HL7 AU Connectathons. The options under discussion for most implementations in the Australian context are referenced and briefly described in this guide in the sections below. 
 
-In addition to the options described below, future releases of AU PS (or IPS) may describe alternative methods and recommendations:
+In addition to the options described below, future releases of AU PS (or IPS) may describe alternative methods and recommendations such as:
 * Document Bundle Interactions - FHIR REST API interactions on Bundle resource type to create, update, search and read a patient summary document Bundle. A named query search approach could be used to provide more controlled and advanced search requirements.
 * Document Bundle and DocumentReference Interactions - Integrating the Healthcare Enterprise (IHE) has published guidance on the [IHE Sharing of IPS (sIPS)](https://profiles.ihe.net/ITI/sIPS/index.html), which has been implemented in a number of jurisdictional implementations of IPS.
 * Encrypted File Exchange - in cases where patient summary document exchange is performed using insecure transport media such as email, USB or DVD.
@@ -15,7 +15,7 @@ When generating an AU PS document, implementers are advised to be familiar with 
 - [Data Included in IPS Documents](https://hl7.org/fhir/uv/ips/STU2/Generation-and-Data-Inclusion.html#data-included-in-ips-documents).
 
 #### IPS $summary FHIR Operation
-The IPS defines the [IPS Summary](https://hl7.org/fhir/uv/ips/STU2/OperationDefinition-summary.html) (`$summary`) operation as a recommended operation for generating an IPS document. It has two endpoint URLs based on the Patient resource:
+The IPS defines the [IPS Summary](https://hl7.org/fhir/uv/ips/STU2/OperationDefinition-summary.html) (`$summary`) operation. This operation is recommended by IPS for generating an IPS document. It has two endpoint URLs based on the Patient resource:
 
 - `[base]/Patient/$summary` - a Patient resource type endpoint where a patient (business) identifier is provided as a parameter in the operation request body
 - `[base]/Patient/[id]/$summary` - a Patient instance endpoint where a patient resource id is provided as a parameter in the URL path
@@ -54,10 +54,10 @@ The `$docref` operation expects that a document will always exist or can be dyna
 
 The document metadata provided in the returned DocumentReference resource can be used to identify a document for retrieval. The `DocumentReference.content.attachment` element is then used to retrieve the referenced document, which may either be encapsulated within the data sub-element or referenced via the `url` sub-element. A consuming system can retrieve a referenced document by accessing the location specified in the `content.attachment.url` element, which may retrieve a FHIR Binary resource of various document formats.
 
-The `$docref` operation supports multiple document retrieval use cases, including retrieving a patient summary document from a previous point in time, accessing the current patient summary document, and generating a new document on demand. The benefit of this operation is the use of a single endpoint to support these scenarios, including retrieval of other document types and formats such as HL7 CDA and PDF documents. This flexibility suggests that jurisdictional and implementation-level profiles may be necessary to clearly specify supported input parameters, document capabilities, and the expected output of the operation.
+The `$docref` operation supports multiple document retrieval use cases, including retrieving a patient summary document from a previous point in time, accessing the current patient summary document, and generating a new document on demand. The benefit of this operation is the use of a single endpoint to support these scenarios, including retrieval of other document types and formats such as HL7 CDA or PDF documents. This flexibility suggests that jurisdictional and implementation-level profiles may be necessary to clearly specify supported input parameters, document capabilities, and the expected output of the operation.
 
 <div> 
-  <img src="ga-docrefoperation.png" alt="IPA Fetch DocumentReference Operation" style="width:50%"/>
+  <img src="ga-docrefoperation.png" alt="IPA Fetch DocumentReference Operation" style="width:60%"/>
 </div>
 *Figure 2: The IPA Fetch DocumentReference operation*
 <br/>
