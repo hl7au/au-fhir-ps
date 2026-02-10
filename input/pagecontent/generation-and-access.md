@@ -27,8 +27,23 @@ The `$summary` operation returns a FHIR Bundle resource of type document, contai
 
 A consuming system can invoke the Patient `$summary` operation on a server to retrieve an on-demand, system generated patient summary. The operation can also be used within a system to generate an initial patient summary document that a user can review, curate, assert, display, persist or take further action on.
 
-<div> 
-  <img src="ga-summaryoperation.png" alt="IPS Summary Operation" style="width:60%"/>
+
+<div class="mermaid" alt="IPS Summary Operation" style="padding:20px;width:800px">
+---
+config:
+  theme: default
+---
+sequenceDiagram
+    participant Server as Patient Summary Server
+    participant Consumer as Patient Summary Consumer
+
+    alt
+        Consumer->>Server: Patient/$summary { identifier, ... }
+    else 
+        Consumer->>Server: Patient/[id]/$summary { ... }
+    end
+
+    Server-->>Consumer: Bundle { type: 'document' }
 </div>
 *Figure 1: The IPS Summary operation*
 <br/>
@@ -59,8 +74,20 @@ The document metadata provided in the returned DocumentReference resource can be
 
 The `$docref` operation supports multiple document retrieval use cases, including retrieving a patient summary from a previous point in time, accessing the current patient summary, and generating a new document on demand. The benefit of this operation is the use of a single endpoint to support these scenarios, including retrieval of other document types and formats such as HL7 CDA and PDF documents. This flexibility suggests that jurisdictional and implementation-level profiles may be necessary to clearly specify supported input parameters, document capabilities, and the expected output of the operation.
 
-<div> 
-  <img src="ga-docrefoperation.png" alt="IPA Fetch DocumentReference Operation" style="width:60%"/>
+<div class="mermaid" alt="IPA Fetch DocumentReference Operation" style="padding:20px;width:800px">
+---
+config:
+  theme: default
+---
+sequenceDiagram
+    participant Server as Patient Summary Server
+    participant Consumer as Patient Summary Consumer
+
+    Consumer->>Server: DocumentReference/$docref { ... }
+    Server-->>Consumer: Bundle { type: 'searchset', entry[]: DocumentReference }
+
+    Consumer->>Server: Bundle/[id] read
+    Server-->>Consumer: Bundle { type: 'document' }
 </div>
 *Figure 2: The IPA Fetch DocumentReference operation*
 <br/>
@@ -78,6 +105,36 @@ When the receiving user submits the SHL to an SHL Receiving Application, the app
 <div> 
   <img src="ga-smarthealthlinks.png" alt="SMART Health Links Patient Summary Exchange" style="width:100%"/>
 </div>
-*Figure 7: SMART Health Links Patient Summary Exchange*
+
 <br/>
+
+<div class="mermaid" alt="SMART Health Links Patient Summary Exchange" style="padding:20px;width:800px">
+sequenceDiagram
+
+    participant SharingUser as Sharing User
+    participant SharingApp as SHL Sharing Application
+    participant ReceivingApp as SHL Receiving Application
+    participant ReceivingUser as Receiving User
+
+    SharingUser ->> SharingApp: Create SHL { passcode }
+    SharingApp -->> SharingUser: shlink:/ ...
+
+    SharingUser -->> ReceivingUser: Sharing user exchanges SHL with receiving user
+
+    ReceivingUser ->> ReceivingApp: View SHL #shlink:/ ...
+    ReceivingApp ->> SharingApp: POST manifest-url { recipient, passcode }
+    SharingApp -->> ReceivingApp: Manifest { files: [ { contentType, location | embedded } ]}
+
+    alt 
+        ReceivingApp ->> SharingApp: GET location
+        SharingApp -->> ReceivingApp: encrypted(Bundle { type: 'document' })
+    else
+        ReceivingApp ->> ReceivingApp: Decode embedded content
+    end
+
+    ReceivingApp ->> ReceivingApp: Decrypt (SHL key)
+</div>
+*Figure 3: SMART Health Links Patient Summary Exchange*
+<br/>
+
 
