@@ -435,7 +435,7 @@ Profile |Must Support Choice Elements
 
 
 ##### Must Support - Multiple Terminologies
-A coded element can have support defined for one or many value sets. Coded elements that define support for more than one value set include them in a profile by slicing the [Coding](http://hl7.org/fhir/R4/datatypes.html#Coding) part of the element and placing *Must Support* on each value set slice. These value set slices are not intended to prevent systems from supplying only a text value.
+A coded element can have support defined for one or more value sets. Coded elements that define support for more than one value set include them in a profile by slicing the [Coding](http://hl7.org/fhir/R4/datatypes.html#Coding) part of the element and placing *Must Support* on each value set slice. These value set slices are not intended to prevent systems from supplying only a text value.
 
 Most coded *Must Support* elements in AU PS define support for one value set, which is bound to the element and no value set slice is present. For these elements, the section on [Must Support - Complex Elements](general-requirements.html#must-support---complex-elements) and the terminology binding applies.
 
