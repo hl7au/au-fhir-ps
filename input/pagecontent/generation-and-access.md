@@ -15,16 +15,14 @@ When generating an AU PS document, implementers are advised to be familiar with 
 - [Data Included in IPS Documents](https://hl7.org/fhir/uv/ips/STU2/Generation-and-Data-Inclusion.html#data-included-in-ips-documents).
 
 #### IPS $summary FHIR Operation
-The IPS defines the [IPS Summary](https://hl7.org/fhir/uv/ips/STU2/OperationDefinition-summary.html) (`$summary`) operation as an operation for generating an IPS document.
-
-The `$summary` operation has two endpoint URLs based on the Patient resource:
+The IPS defines the [IPS Summary](https://hl7.org/fhir/uv/ips/STU2/OperationDefinition-summary.html) (`$summary`) operation as an operation for generating an IPS document. It has two endpoint URLs based on the Patient resource:
 
 - `[base]/Patient/$summary` - a Patient resource type endpoint where a patient (business) identifier is provided as a parameter in the operation request body
 - `[base]/Patient/[id]/$summary` - a Patient instance endpoint where a patient resource id is provided as a parameter in the URL path
 
-An optional `profile` parameter can be included in the request to allow the server to generate a FHIR document that conforms to the specified profile (e.g. AU PS Composition). If the profile parameter is not provided, or if the specified profile is not supported, the server defaults to generating a document based on the IPS profile.
+An optional `profile` parameter can be included in the request to allow the server to generate a FHIR document that conforms to the specified profile (e.g. AU PS Composition). If the profile parameter is not provided, or if the specified profile is not supported, the server defaults to generating a document based on the IPS Composition profile.
 
-The `$summary` operation returns a FHIR Bundle resource of type document, containing a Composition resource and its referenced resources. The returned document is typically generated on demand and represents the most current patient summary information. It is not expected that the returned document is persisted as part of this request; therefore, this operation as a standalone does not support use cases where retrieval of a previously generated document is required.
+The `$summary` operation returns a FHIR Bundle resource of type document. The returned document is typically generated on demand and represents the most current patient summary information. It is not expected that the returned document is persisted as part of this request; therefore, this operation as a standalone does not support use cases where retrieval of a previously generated document is required.
 
 A consuming system can invoke the Patient `$summary` operation on a server to retrieve an on-demand, system generated patient summary. The operation can also be used within a system to generate an initial patient summary document that a user can review, curate, assert, display, persist or take further action on.
 
@@ -35,7 +33,7 @@ A consuming system can invoke the Patient `$summary` operation on a server to re
 <br/>
 
 #### IPA $docref FHIR Operation
-The International Patient Access (IPA) defines the [IPA Fetch DocumentReference](https://hl7.org/fhir/uv/ipa/STU1.1/OperationDefinition-docref.html) (`$docref`) operation. FHIR Release 5 has incorporated the Fetch DocumentReference operation as a FHIR operation.
+The International Patient Access (IPA) defines the [IPA Fetch DocumentReference](https://hl7.org/fhir/uv/ipa/STU1.1/OperationDefinition-docref.html) (`$docref`) operation. [FHIR Release 5](https://hl7.org/fhir/R5/) has incorporated this operation as [Operation $docref on DocumentReference](https://hl7.org/fhir/R5/documentreference-operation-docref.html).
 
 The [IPS Server Capability Statement](https://hl7.org/fhir/uv/ips/STU2/CapabilityStatement-ips-server.html) also recommends the `$docref` operation as an option for an IPS Server to implement generation of an IPS document. It is also worth noting that the [US Core Server CapabilityStatement](https://hl7.org/fhir/us/core/CapabilityStatement-us-core-server.html#documentreference) in Release 8 specifies the $docref operation as SHALL support, although the default patient summary document format is currently a HL7 CDA Continuity of Care Document (CCD). 
 
@@ -56,7 +54,7 @@ The `$docref` operation expects that a summary document will always exist or can
 
 When optional parameters are provided, the server can return existing documents that match the request parameters. In this way, the `$docref` operation behaves similarly to a DocumentReference search. However, if no parameters are provided, a single current summary document is returned. Additionally, if supported, the on-demand parameter allows the client to request generation and storage of a new document.
 
-The document metadata provided in the returned DocumentReference resource can be used to identify a document for retrieval. The `DocumentReference.content.attachment` element is then used to retrieve the referenced document, which may either be encapsulated within the data sub-element or referenced via the url sub-element. A consuming system can retrieve a referenced document by accessing the location specified in the `content.attachment.url` element, which may retrieve a FHIR Binary resource of various document formats.
+The document metadata provided in the returned DocumentReference resource can be used to identify a document for retrieval. The `DocumentReference.content.attachment` element is then used to retrieve the referenced document, which may either be encapsulated within the data sub-element or referenced via the `url` sub-element. A consuming system can retrieve a referenced document by accessing the location specified in the `content.attachment.url` element, which may retrieve a FHIR Binary resource of various document formats.
 
 The `$docref` operation supports multiple document retrieval use cases, including retrieving a patient summary from a previous point in time, accessing the current patient summary, and generating a new document on demand. The benefit of this operation is the use of a single endpoint to support these scenarios, including retrieval of other document types and formats such as HL7 CDA and PDF documents. This flexibility suggests that jurisdictional and implementation-level profiles may be necessary to clearly specify supported input parameters, document capabilities, and the expected output of the operation.
 
