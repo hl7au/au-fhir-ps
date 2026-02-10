@@ -1,20 +1,21 @@
+{::options toc_levels="1..4"/}
+
 ### Generating & Accessing AU Patient Summary (AU PS) Documents
 AU PS is specified in this guide as a HL7 FHIR document (a Bundle including a Composition), composed by a set of potentially reusable "minimal" data blocks (the AU PS profiles). See [Structure of the AU PS](the-aups.html#structure-of-the-au-ps).
 
-As in the [IPS Generation and Data Inclusion](https://hl7.org/fhir/uv/ips/Generation-and-Data-Inclusion.html), it is not intended in this release of AU PS IG to constrain solutions or strategies for the creation, sharing and use of AU PS or IPS documents. 
+The IPS recommends two potential operations for how IPS documents may be generated, but does not constrain solutions or strategies for the creation, sharing and use of patient summary documents (see [Generating & Accessing IPS Documents](https://hl7.org/fhir/uv/ips/Generation-and-Data-Inclusion.html)). These and other options for generation and access have been discussed during the AU PS project and HL7 AU Connectathons. The options under discussion for most implementations in the Australian context are referenced and briefly described in this guide in the sections below. 
 
-Options for generation and access have been discussed during the AU PS project and HL7 AU Connectathon Track, and the options currently being considered for most implementations in the Australian context are referenced and briefly described in this guide. While the generation operations recommended in the IPS IG are included in this guide, future releases may provide alternative methods and recommendations than those outlined at this time. Some of the potential options for future consideration include: 
-* Document Bundle Interactions - FHIR REST API interactions on Bundle resource type to create, update, search and read an IPS document Bundle. A named query search approach could be used to provide more controlled and advanced search requirements.
+In addition to the options described below, future releases of AU PS (or IPS) may describe alternative methods and recommendations:
+* Document Bundle Interactions - FHIR REST API interactions on Bundle resource type to create, update, search and read a patient summary document Bundle. A named query search approach could be used to provide more controlled and advanced search requirements.
 * Document Bundle and DocumentReference Interactions - Integrating the Healthcare Enterprise (IHE) has published guidance on the [IHE Sharing of IPS (sIPS)](https://profiles.ihe.net/ITI/sIPS/index.html), which has been implemented in a number of jurisdictional implementations of IPS.
 * Encrypted File Exchange - in cases where AU PS document exchange is performed using insecure transport media such as email, USB or DVD.
-
 
 When generating an AU PS document, implementers are advised to be familiar with the following IPS guidance:
 - [Narrative and Language Translation](https://hl7.org/fhir/uv/ips/STU2/Design-Conventions.html#narrative-and-language-translation). 
 - [Data Included in IPS Documents](https://hl7.org/fhir/uv/ips/STU2/Generation-and-Data-Inclusion.html#data-included-in-ips-documents).
 
-### IPS $summary FHIR Operation
-The IPS defines the [IPS Summary](https://hl7.org/fhir/uv/ips/STU2/OperationDefinition-summary.html) (`$summary`) operation and [IPS Server Capability Statement](https://hl7.org/fhir/uv/ips/STU2/CapabilityStatement-ips-server.html), which recommends an IPS Server implement the `$summary` operation as an operation for generating an IPS document.
+#### IPS $summary FHIR Operation
+The IPS defines the [IPS Summary](https://hl7.org/fhir/uv/ips/STU2/OperationDefinition-summary.html) (`$summary`) operation as an operation for generating an IPS document.
 
 The `$summary` operation has two endpoint URLs based on the Patient resource:
 
@@ -28,12 +29,12 @@ The `$summary` operation returns a FHIR Bundle resource of type document, contai
 A consuming system can invoke the Patient `$summary` operation on a server to retrieve an on-demand, system generated patient summary. The operation can also be used within a system to generate an initial patient summary document that a user can review, curate, assert, display, persist or take further action on.
 
 <div> 
-  <img src="ga-summaryoperation.png" alt="IPS Summary Operation" style="width:60%"/>
+  <img src="ga-summaryoperation.png" alt="IPS Summary Operation" style="width:50%"/>
 </div>
 *Figure 1: The IPS Summary operation*
 <br/>
 
-### IPA $docref FHIR Operation
+#### IPA $docref FHIR Operation
 The International Patient Access (IPA) defines the [IPA Fetch DocumentReference](https://hl7.org/fhir/uv/ipa/STU1.1/OperationDefinition-docref.html) (`$docref`) operation. FHIR Release 5 has incorporated the Fetch DocumentReference operation as a FHIR operation.
 
 The [IPS Server Capability Statement](https://hl7.org/fhir/uv/ips/STU2/CapabilityStatement-ips-server.html) also recommends the `$docref` operation as an option for an IPS Server to implement generation of an IPS document. It is also worth noting that the [US Core Server CapabilityStatement](https://hl7.org/fhir/us/core/CapabilityStatement-us-core-server.html#documentreference) in Release 8 specifies the $docref operation as SHALL support, although the default patient summary document format is currently a HL7 CDA Continuity of Care Document (CCD). 
@@ -60,12 +61,12 @@ The document metadata provided in the returned DocumentReference resource can be
 The `$docref` operation supports multiple document retrieval use cases, including retrieving a patient summary from a previous point in time, accessing the current patient summary, and generating a new document on demand. The benefit of this operation is the use of a single endpoint to support these scenarios, including retrieval of other document types and formats such as HL7 CDA and PDF documents. This flexibility suggests that jurisdictional and implementation-level profiles may be necessary to clearly specify supported input parameters, document capabilities, and the expected output of the operation.
 
 <div> 
-  <img src="ga-docrefoperation.png" alt="IPA Fetch DocumentReference Operation" style="width:60%"/>
+  <img src="ga-docrefoperation.png" alt="IPA Fetch DocumentReference Operation" style="width:50%"/>
 </div>
 *Figure 2: The IPA Fetch DocumentReference operation*
 <br/>
 
-### SMART Health Links 
+#### SMART Health Links 
 [SMART Health Cards and Links IG](https://hl7.org/fhir/uv/smart-health-cards-and-links/) is an FHIR Standard for Trial Use that supports scenarios where document exchange initiated by the healthcare consumer by sharing a link to a patient summary to trusted recipient.
 
 A user wishing to share an AU PS document retrieves a SMART Health Link (SHL) from an SHL Sharing Application. While the method of retrieving the SHL is not specified by the standard, the SHL itself is a structured, encoded link that includes a URL to a file manifest, an encryption key, and metadata describing the link. It is critical to consider securing the SMART Health Link as it contains the cryptographic key required to access the document. 
