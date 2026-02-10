@@ -3,7 +3,7 @@
 ### Generating & Accessing AU Patient Summary (AU PS) Documents
 AU PS is specified in this guide as a HL7 FHIR document (a Bundle including a Composition), composed by a set of potentially reusable "minimal" data blocks (the AU PS profiles). See [Structure of the AU PS](the-aups.html#structure-of-the-au-ps).
 
-The IPS recommends two potential operations for how IPS documents may be generated, but does not constrain solutions or strategies for the creation, sharing and use of patient summary documents (see [Generating & Accessing IPS Documents](https://hl7.org/fhir/uv/ips/Generation-and-Data-Inclusion.html)). These and other options for generation and access have been discussed during the AU PS project and HL7 AU Connectathons. The options under discussion for most implementations in the Australian context are referenced and briefly described in this guide in the sections below. 
+The IPS recommends two potential operations (`$summary` and `$docref`) for how IPS documents may be generated, but does not constrain solutions or strategies for the creation, sharing and use of patient summary documents (see [Generating & Accessing IPS Documents](https://hl7.org/fhir/uv/ips/Generation-and-Data-Inclusion.html)). These and other options for generation and access have been discussed during the AU PS project and HL7 AU Connectathons. The options under discussion for most implementations in the Australian context are referenced and briefly described in this guide in the sections below. 
 
 In addition to the options described below, future releases of AU PS (or IPS) may describe alternative methods and recommendations:
 * Document Bundle Interactions - FHIR REST API interactions on Bundle resource type to create, update, search and read a patient summary document Bundle. A named query search approach could be used to provide more controlled and advanced search requirements.
@@ -15,7 +15,7 @@ When generating an AU PS document, implementers are advised to be familiar with 
 - [Data Included in IPS Documents](https://hl7.org/fhir/uv/ips/STU2/Generation-and-Data-Inclusion.html#data-included-in-ips-documents).
 
 #### IPS $summary FHIR Operation
-The IPS defines the [IPS Summary](https://hl7.org/fhir/uv/ips/STU2/OperationDefinition-summary.html) (`$summary`) operation as an operation for generating an IPS document. It has two endpoint URLs based on the Patient resource:
+The IPS defines the [IPS Summary](https://hl7.org/fhir/uv/ips/STU2/OperationDefinition-summary.html) (`$summary`) operation as a recommended operation for generating an IPS document. It has two endpoint URLs based on the Patient resource:
 
 - `[base]/Patient/$summary` - a Patient resource type endpoint where a patient (business) identifier is provided as a parameter in the operation request body
 - `[base]/Patient/[id]/$summary` - a Patient instance endpoint where a patient resource id is provided as a parameter in the URL path
@@ -33,26 +33,24 @@ A consuming system can invoke the Patient `$summary` operation on a server to re
 <br/>
 
 #### IPA $docref FHIR Operation
-The International Patient Access (IPA) defines the [IPA Fetch DocumentReference](https://hl7.org/fhir/uv/ipa/STU1.1/OperationDefinition-docref.html) (`$docref`) operation. [FHIR Release 5](https://hl7.org/fhir/R5/) has incorporated this operation as [Operation $docref on DocumentReference](https://hl7.org/fhir/R5/documentreference-operation-docref.html).
-
-The [IPS Server Capability Statement](https://hl7.org/fhir/uv/ips/STU2/CapabilityStatement-ips-server.html) also recommends the `$docref` operation as an option for an IPS Server to implement generation of an IPS document. It is also worth noting that the [US Core Server CapabilityStatement](https://hl7.org/fhir/us/core/CapabilityStatement-us-core-server.html#documentreference) in Release 8 specifies the $docref operation as SHALL support, although the default patient summary document format is currently a HL7 CDA Continuity of Care Document (CCD). 
+The International Patient Access (IPA) defines the [IPA Fetch DocumentReference](https://hl7.org/fhir/uv/ipa/STU1.1/OperationDefinition-docref.html) (`$docref`) operation. This operation is recommended by IPS, and has been incorporated in [FHIR Release 5](https://hl7.org/fhir/R5/) as [Operation $docref on DocumentReference](https://hl7.org/fhir/R5/documentreference-operation-docref.html). The [US Core Server CapabilityStatement](https://hl7.org/fhir/us/core/CapabilityStatement-us-core-server.html#documentreference) in US Core 8.0.1 specifies this operation as SHALL support returning at least a reference to a generated CCD document.
 
 The `$docref` operation has a DocumentReference resource type endpoint that returns a searchset Bundle containing DocumentReference resources that match the specified request parameters.
-
-A consuming system can invoke the `$docref` operation on a server to retrieve all DocumentReference resources related to a patient. When no parameters are specified other than the mandatory patient resource id, the server returns a single DocumentReference pointing to the patient’s most current summary document. The type of this summary document depends on jurisdictional processing rules - for example, the Consolidated CDA (C-CDA) is commonly used in North America, whereas in Australia, the document may be specified as an AU PS document.
-
-The `$docref` operation expects that a summary document will always exist or can be dynamically generated. This expectation may be further constrained within a jurisdictional context, including specification of the expected operation outcome when a document is unavailable—such as returning an empty searchset Bundle.
 
 `$docref` operation parameters include:
 
 - `patient`: required patient resource id
-- `start`: care date range start
-- `end`: care date range end
-- `type`: document type codes
-- `profile`: document profile URLs
-- `on-demand`: only on-demand documents returned
+- `start`: optional care date range start
+- `end`: optional care date range end
+- `type`: optional document type codes
+- `profile`: optional document profile URLs
+- `on-demand`: optional flag for only on-demand documents returned
+
+A consuming system can invoke the `$docref` operation on a server to retrieve all DocumentReference resources related to a patient. When no parameters are specified other than the required patient resource id, the server returns a single DocumentReference pointing to the patient’s most current summary document. The type of this summary document depends on jurisdictional processing rules - for example, the Consolidated CDA (C-CDA) is commonly used in North America, whereas in Australia, the document may be specified as an AU PS document.
 
 When optional parameters are provided, the server can return existing documents that match the request parameters. In this way, the `$docref` operation behaves similarly to a DocumentReference search. However, if no parameters are provided, a single current summary document is returned. Additionally, if supported, the on-demand parameter allows the client to request generation and storage of a new document.
+
+The `$docref` operation expects that a summary document will always exist or can be dynamically generated. This expectation may be further constrained within a jurisdictional context, including specification of the expected operation outcome when a document is unavailable—such as returning an empty searchset Bundle.
 
 The document metadata provided in the returned DocumentReference resource can be used to identify a document for retrieval. The `DocumentReference.content.attachment` element is then used to retrieve the referenced document, which may either be encapsulated within the data sub-element or referenced via the `url` sub-element. A consuming system can retrieve a referenced document by accessing the location specified in the `content.attachment.url` element, which may retrieve a FHIR Binary resource of various document formats.
 
