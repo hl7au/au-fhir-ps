@@ -12,7 +12,7 @@ For a detailed description of the requirements for implementing AU PS, see the [
 
 ### Project Background
 
-This implementation guide is under development through the [AU PS FHIR IG project](https://confluence.hl7.org/display/HAFWG/AU+Patient+Summary+FHIR+IG+Project) as part of the [Sparked AU FHIR Accelerator](https://sparked.csiro.au). 
+This implementation guide is under development through the [AU Patient Summary FHIR IG project](https://confluence.hl7.org/display/HAFWG/AU+Patient+Summary+FHIR+IG+Project) as part of the [Sparked AU FHIR Accelerator](https://sparked.csiro.au). 
 
 The Sparked AU FHIR Accelerator is a community comprising government, technology vendors, provider organisations, peak bodies, practitioners, and domain experts, to accelerate the creation and use of national FHIR standards in health care information exchange.
 
@@ -28,7 +28,7 @@ Additionally, a Patient Summary Clinical Focus Group (CFG), a sub-group of the C
 *Figure 1: AU PS development context*
 <br/>
 
-For more information on the relationship between AUCDI and AU PS including mappings, see [AUCDI](aucdi.html).
+For more information on the relationship between AUCDI and AU PS, including mappings, see [AUCDI](aucdi.html).
 
 ### Dependencies
 {% include dependency-table.xhtml %}
@@ -45,7 +45,7 @@ This guide is divided into several pages which are listed at the top of each pag
 - [The AU PS](the-aups.html): This page describes the AU PS including structure, context of use, and localisation of the IPS.
 - [Guidance](guidance.html): These pages list the guidance for this guide.
   - [General Guidance](general-guidance.html): This page provides guidance on using the profiles defined in this guide. 
-  - [Generation and Access](generation-and-access.html): This page describes options for generation and access for patient summary documents that have been discussed during the AU PS project. 
+  - [Generation and Access](generation-and-access.html): This page describes some options for generation and access of patient summary documents. 
   - [Sex and Gender](sex-and-gender.html): This page provides guidance on the representation of sex, gender, and related concepts.
   - [AUCDI](aucdi.html): This page maps AUCDI data groups and elements to FHIR artefacts in AU PS.
   - [Relationship With Other IGs](relationship.html): This page provides guidance on the relationship between AU PS, AUCDI, and other implementation guides.
