@@ -7,24 +7,28 @@ A Patient Summary is:
 
 See [The AU PS](the-aups.html) for more information on the purpose, scope, context, and use of AU PS.
 
+For a detailed description of the requirements for implementing AU PS, see the [General Requirements](general-requirements.html#general-requirements) page.
+
+
 ### Project Background
 
 This implementation guide is under development through the [AU PS FHIR IG project](https://confluence.hl7.org/display/HAFWG/AU+Patient+Summary+FHIR+IG+Project) as part of the [Sparked AU FHIR Accelerator](https://sparked.csiro.au). 
 
 The Sparked AU FHIR Accelerator is a community comprising government, technology vendors, provider organisations, peak bodies, practitioners, and domain experts, to accelerate the creation and use of national FHIR standards in health care information exchange.
 
-#### AU PS Development Context
- <div> 
+The AU PS Sparked project includes:
+- AUCDI - clinician focussed data requirements project.
+- AU PS FHIR Implementation Guide - HL7 Australia technical data specification.
+
+Additionally, a Patient Summary Clinical Focus Group (CFG), a sub-group of the Clinical Design Group, has developed a series of [consumer journeys](https://sparked.csiro.au/index.php/products-resources/au-ps-consumer-journeys/) to support the development of the AUCDI and AU PS IG that have been elaborated into a set of example use cases to provide guidance on how AU PS could be implemented.
+
+<div> 
    <img src="AUPSTeamsContextb.png" alt="AU Patient Summary Development Context" style="width:75%"/>
   </div>
 *Figure 1: AU PS Development Context*
 <br/>
 
-The Sparked Clinical Design Group has begun identifying a set of core data groups and elements considered important for a minimal patient summary for inclusion in the AUCDI through an iterative process. 
-
-Additionally, a Patient Summary Clinical Focus Group (CFG), a sub-group of the Clinical Design Group, will develop the clinical scenarios and clinical workflow processes to support the development of the AUCDI and AU PS IG that have been elaborated into a set of example use cases to provide guidance on how AU PS could be implemented.. 
-
-Success of this project will depend on active participation from members of the community who are looking to implement a patient summary capability in FHIR, whether you have already expressed your interest or are new to considering the AU PS project please complete this [Registration form](https://sparked.csiro.au/index.php/get-involved-with-sparked/registration-form/) or email Sparked@csiro.au to actively contribute to the development of the AU PS FHIR IG.
+For more information on the relationship between AUCDI and AU PS including mappings, see [AUCDI](aucdi.html).
 
 ### Dependencies
 {% include dependency-table.xhtml %}
