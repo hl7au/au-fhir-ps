@@ -20,12 +20,12 @@ The AU Patient Summary Sparked project includes:
 - AUCDI - clinician focussed data requirements project.
 - AU PS FHIR Implementation Guide - HL7 Australia technical data specification.
 
-Additionally, a Patient Summary Clinical Focus Group (CFG), a sub-group of the Clinical Design Group, has developed a series of [consumer journeys](https://sparked.csiro.au/index.php/products-resources/au-ps-consumer-journeys/) to support the development of the AUCDI and AU PS that have been elaborated into a set of example use cases to provide guidance on how AU PS could be implemented.
+Additionally, a Patient Summary Clinical Focus Group (CFG), a sub-group of the Clinical Design Group, has developed a series of [consumer journeys](https://sparked.csiro.au/index.php/products-resources/au-ps-consumer-journeys/) that have been elaborated into a set of example use cases in this IG to provide guidance on how AU PS could be implemented.
 
 <div> 
    <img src="AUPSTeamsContextb.png" alt="AU Patient Summary Development Context" style="width:75%"/>
   </div>
-*Figure 1: AU PS Development Context*
+*Figure 1: AU PS development context*
 <br/>
 
 For more information on the relationship between AUCDI and AU PS including mappings, see [AUCDI](aucdi.html).
@@ -45,6 +45,7 @@ This guide is divided into several pages which are listed at the top of each pag
 - [The AU PS](the-aups.html): This page describes the AU PS including structure, context of use, and localisation of the IPS.
 - [Guidance](guidance.html): These pages list the guidance for this guide.
   - [General Guidance](general-guidance.html): This page provides guidance on using the profiles defined in this guide. 
+  - [Generation and Access](generation-and-access.html): This page describes options for generation and access for patient summary documents that have been discussed during the AU PS project. 
   - [Sex and Gender](sex-and-gender.html): This page provides guidance on the representation of sex, gender, and related concepts.
   - [AUCDI](aucdi.html): This page maps AUCDI data groups and elements to FHIR artefacts in AU PS.
   - [Relationship With Other IGs](relationship.html): This page provides guidance on the relationship between AU PS, AUCDI, and other implementation guides.
