@@ -16,11 +16,11 @@ This implementation guide is under development through the [AU PS FHIR IG projec
 
 The Sparked AU FHIR Accelerator is a community comprising government, technology vendors, provider organisations, peak bodies, practitioners, and domain experts, to accelerate the creation and use of national FHIR standards in health care information exchange.
 
-The AU PS Sparked project includes:
+The AU Patient Summary Sparked project includes:
 - AUCDI - clinician focussed data requirements project.
 - AU PS FHIR Implementation Guide - HL7 Australia technical data specification.
 
-Additionally, a Patient Summary Clinical Focus Group (CFG), a sub-group of the Clinical Design Group, has developed a series of [consumer journeys](https://sparked.csiro.au/index.php/products-resources/au-ps-consumer-journeys/) to support the development of the AUCDI and AU PS IG that have been elaborated into a set of example use cases to provide guidance on how AU PS could be implemented.
+Additionally, a Patient Summary Clinical Focus Group (CFG), a sub-group of the Clinical Design Group, has developed a series of [consumer journeys](https://sparked.csiro.au/index.php/products-resources/au-ps-consumer-journeys/) to support the development of the AUCDI and AU PS that have been elaborated into a set of example use cases to provide guidance on how AU PS could be implemented.
 
 <div> 
    <img src="AUPSTeamsContextb.png" alt="AU Patient Summary Development Context" style="width:75%"/>
