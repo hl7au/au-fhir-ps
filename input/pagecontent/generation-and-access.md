@@ -63,7 +63,7 @@ The `$docref` operation supports multiple document retrieval use cases, includin
 <br/>
 
 #### SMART Health Links 
-[SMART Health Cards and Links](https://hl7.org/fhir/uv/smart-health-cards-and-links/) is a FHIR standard that supports scenarios where document exchange initiated by the healthcare consumer by sharing a link to a patient summary document to trusted recipient.
+[SMART Health Cards and Links](https://hl7.org/fhir/uv/smart-health-cards-and-links/) is a FHIR standard that supports scenarios where document exchange is initiated by the healthcare consumer by sharing a link to a patient summary document with trusted recipient.
 
 A user that wants to share a patient summary document (or other health information) retrieves a SMART Health Link (SHL) from an SHL Sharing Application. While the method of retrieving the SHL is not specified by the standard, the SHL itself is a structured, encoded link that includes a URL to a file manifest, an encryption key, and metadata describing the link. It is important to consider securing the SHL as it contains the cryptographic key required to access the document. 
 
