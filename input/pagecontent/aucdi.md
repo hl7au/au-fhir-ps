@@ -74,7 +74,7 @@ Column attribute descriptions are as follows:
     <td colspan="2">Date/time of onset of first reaction</td>
     <td><a href="StructureDefinition-au-ps-allergyintolerance.html">AU PS AllergyIntolerance</a></td>
     <td><code>AllergyIntolerance.onset[x]</code></td>
-    <td>This concept aligns with the first identification of an allergy or intolerance. This may be patient reported or clinically determined. The onset may be an estimated or actual age or date. It also may be imprecise (partial date), range of ages or a period of time.</td>
+    <td>This AUCDI element aligns with the first identification of an allergy or intolerance. The onset value may be patient reported or clinically determined; estimated or actual; age or date and be imprecise (partial date), range of ages or a period of time.</td>
   </tr>
   <tr>
     <td colspan="2">Manifestation</td>
