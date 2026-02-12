@@ -78,11 +78,9 @@ config:
 ---
 sequenceDiagram
   participant Server as Patient Summary Server
-   participant Consumer as Patient Summary Consumer
-
+  participant Consumer as Patient Summary Consumer
   Consumer->>Server: DocumentReference/$docref { ... }
   Server-->>Consumer: Bundle { type: 'searchset', entry[]: DocumentReference }
-
   Consumer->>Server: Bundle/[id] read
   Server-->>Consumer: Bundle { type: 'document' }
 </p>
