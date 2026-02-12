@@ -218,7 +218,7 @@ TBD
             <td>-</td>
         </tr>
         <tr>
-            <td>Bundle.signature.who</code></td>
+            <td><code>Bundle.signature.who</code></td>
             <td>-</td>
             <td>-</td>
             <td>-</td>
@@ -240,8 +240,8 @@ TBD
             <th><a href="Bundle-aups-gpvisit-retrieval.html">Jeramy 27 May</a></th>
             <th><a href="Bundle-aups-referral-endoconsult-autogen.html">Joyce 07 November 2024</a></th>
         </tr>
-        </thead>
-        <tbody>
+    </thead>
+    <tbody>
         <tr>
             <td rowspan="3">Missing Data</td>
             <td rowspan="3"><code>Patient.birthDate</code></td>
@@ -262,6 +262,5 @@ TBD
         <tr>
             <td><code>Patient.gender</code></td>
         </tr>
-        </tr>    
     </tbody>
 </table>
