@@ -122,16 +122,16 @@ AU PS includes additional fixed value constraints on some elements either direct
 
 ### Considerations When Consuming IPS Documents in AU Healthcare Context
 
-As AU PS incorporates requirements additional to IPS it is important to consider what is intended to happen (or possible problems) if a system is expecting an AU PS document and receives an IPS document that doesn't conform to the national specification. For example an IPS document may not include Australian identifiers, or mandatory AU PS elements, or clinical terminology from a national set (see specific localisations listed above), or may include structured clinical data (e.g. allergies) that does not conform to either the IPS or AU PS profile.
+As AU PS incorporates requirements additional to IPS it is important to consider what is intended to happen (or the possible problems) if a system is expecting an AU PS document and receives an IPS document that doesn't conform to the national specification. For example an IPS document may not include Australian identifiers, or mandatory AU PS elements, or clinical terminology from a national set (see specific localisations listed above), or may include structured clinical data (e.g. allergies) that does not conform to either the IPS or AU PS profile.
 
 <div class="request-for-feedback" markdown=1>
 **What are the considerations and limitations when receiving an IPS document?**
 
-Implementers are requested to contribute their thoughts on these considerations and limitations when receiving an IPS document that does not conform to the AU PS document expectations. Contribute via comment on [FHIR-51547](https://jira.hl7.org/browse/FHIR-51547).
+Implementers are requested to contribute their thoughts on considerations and limitations when receiving an IPS document that does not conform to AU PS document expectations. Contribute via comment on [FHIR-51547](https://jira.hl7.org/browse/FHIR-51547).
 
-In this context consuming an IPS document that is NOT an AU Patient Summary may be an IPS Document produced by a system that specifically supports only the IPS Implementation Guide, or another jurisdiction’s national patient summary implementation based on the IPS Implementation guide. 
+In this context consuming an IPS document that is NOT an AU Patient Summary may be an IPS Document produced by a system that specifically supports only IPS, or another jurisdiction’s national patient summary implementation based on the IPS Implementation guide. 
 
-If a system receives this IPS document somehow (email, upload, QR Code, etc) - What does the system do with it? 
+If a system receives this IPS document somehow (email, upload, QR Code, etc.) - What does the system do with it? 
 * Display the document to a user?
 * Display the data in the document to a user?
 * Import some data out of it (usually, a subset, human selected)?
@@ -140,11 +140,11 @@ If a system receives this IPS document somehow (email, upload, QR Code, etc) - W
 
 **Is the patient summary an AU PS?**
 
-During the [AU PS workshop 13 November 2025](https://confluence.hl7.org/spaces/HAFWG/pages/358895090/2025-11-13+AU+Core+TDG+Agenda+Minutes) it was agreed that there is a need for some way to tell by inspection that a patient summary document is an AU PS document, rather than some other kind of patient summary (including IPS only), without needing to do validation.
+During the [AU PS workshop 13 November 2025](https://confluence.hl7.org/spaces/HAFWG/pages/358895090/2025-11-13+AU+Core+TDG+Agenda+Minutes) it was agreed there is a need for some way to tell by inspection that a patient summary document is an AU PS document, rather than some other kind of patient summary (including IPS only), without needing to do validation.
 
-Implementers are requested to contribute to identifying the means for reliably identifying a document as an AU PS document by inspection. Currently proposed options include:
+Implementers are requested to contribute their preference for a means to reliably identify a document as an AU PS document by inspection. Currently proposed options include:
 1.	use `meta.profile` in the Composition or `meta.profile` in the Bundle
-2.	specify an additional coding in `Composition.type` that is equiavlent to "AU PS"
+2.	specify an additional coding in `Composition.type` that is equivalent to "AU PS"
 3.	use the [Application Feature Framework](https://build.fhir.org/ig/HL7/capstmt/) and [Feature Assertion](https://build.fhir.org/ig/HL7/fhir-extensions/StructureDefinition-feature-assertion.html) extension
 
 Contribute via comment on [FHIR-55739](https://jira.hl7.org/browse/FHIR-55739).
