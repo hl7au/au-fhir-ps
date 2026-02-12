@@ -125,4 +125,3 @@ sequenceDiagram
 *Figure 3: SMART Health Links Patient Summary Exchange*
 <br/>
 
-s
