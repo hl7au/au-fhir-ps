@@ -129,9 +129,7 @@ As AU PS incorporates requirements additional to IPS it is important to consider
 
 Implementers are requested to contribute their thoughts on considerations and limitations when receiving an IPS document that does not conform to AU PS document expectations. Contribute via comment on [FHIR-51547](https://jira.hl7.org/browse/FHIR-51547).
 
-In this context consuming an IPS document that is NOT an AU Patient Summary may be an IPS Document produced by a system that specifically supports only IPS, or another jurisdiction’s national patient summary implementation based on the IPS Implementation guide. 
-
-If a system receives this IPS document somehow (email, upload, QR Code, etc.) - What does the system do with it? 
+In this context consuming an IPS document that is NOT an AU Patient Summary may be an IPS Document produced by a system that specifically supports only IPS, or another jurisdiction’s national patient summary implementation based on the IPS Implementation guide. If a system receives this IPS document somehow (email, upload, QR Code, etc.) - What does the system do with it? 
 * Display the document to a user?
 * Display the data in the document to a user?
 * Import some data out of it (usually, a subset, human selected)?
