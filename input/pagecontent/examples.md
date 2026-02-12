@@ -62,7 +62,7 @@ How to read this table:
             <td><code>Composition.section:sectionProblems</code></td>
             <td>AU PS Condition</td>
             <td>AU PS Condition</td>
-            <td>emptyReason</td>
+            <td><code>emptyReason</code></td>
             <td>AU PS Condition</td>
             <td>AU PS Condition</td>
             <td>AU PS Condition</td>
@@ -71,7 +71,7 @@ How to read this table:
             <td><code>Composition.section:sectionAllergies</code></td>
             <td>AU PS AllergyIntolerance</td>
             <td>AU PS AllergyIntolerance</td>
-            <td>emptyReason</td>
+            <td><code>emptyReason</code></td>
             <td>AU PS AllergyIntolerance</td>
             <td>AU PS AllergyIntolerance</td>
             <td>AU PS AllergyIntolerance</td>
@@ -80,7 +80,7 @@ How to read this table:
             <td><code>Composition.section:sectionMedications</code></td>
             <td>AU PS MedicationStatement</td>
             <td>AU PS MedicationStatement</td>
-            <td>emptyReason</td>
+            <td><code>emptyReason</code></td>
             <td>AU PS MedicationRequest</td>
             <td>AU PS MedicationStatement</td>
             <td>AU PS MedicationStatement</td>
@@ -89,7 +89,7 @@ How to read this table:
             <td><code>Composition.section:sectionImmunizations</code></td>
             <td>-</td>
             <td>-</td>
-            <td>emptyReason</td>
+            <td><code>emptyReason</code></td>
             <td>AU PS Immunization</td>
             <td>AU PS Immunization</td>
             <td>AU PS Immunization</td>
