@@ -283,15 +283,15 @@ For example, in a cardiology referral viewer use case:
 
 ##### Reject Based on Business Rules
 For example, where an AU PS Consumer builds a local active problems list:
-- the consumer system evaluates `Condition.clinicalStatus` value and imports only Conditions with a value of "active", rejecting Conditions with status "recurrence", "remission" or "relapse" because these are not supported by its definition of active problems.
+- the consumer system evaluates `Condition.clinicalStatus` value and may import only Conditions with a value of "active", rejecting Conditions with status "recurrence", "remission" or "relapse" because these are not supported by its definition of active problems.
 
 ##### Handle Multiple Values (Persist vs Display)
 For example, when an AU PS Consumer receives multiple patient addresses:
-- the consumer system stores all `Patient.address` values but chooses to display only one (e.g. the most current one or the address with `address.use` value "home" ), rather than ignoring the others.
+- the consumer system may store all `Patient.address` values but choose to display only one (e.g. the most current one or the address with `address.use` value "home" ), rather than ignoring the others.
 
 ##### Persist vs Use
 For example, when an AU PS Consumer receives multiple patient identifiers:
-- the consumer system persist all `Patient.identifier` values but uses and displays only a selected subset for its workflows (e.g. IHI and MRN), rather than ignoring the remaining identifiers.
+- the consumer system may persist all `Patient.identifier` values but use and display only a selected subset for its workflows (e.g. IHI and MRN), rather than ignoring the remaining identifiers.
 
 #### Presentation of Must Support and Obligation in Profiles
 All elements with *Must Support* in AU PS are accompanied by an explicit obligation that identifies the expectations for one or more actors. When rendered in an implementation guide, each profile is presented in different formal views under tabs labelled "Differential Table", "Key Elements Table", and "Snapshot Table". Elements labelled with *Must Support* and stated obligations in these views are represented by <span style="padding-left: 1px; padding-right: 1px; color: white; background-color: red" title="This element must be supported">S</span><span style="padding-left: 1px; padding-right: 1px; color: white; background-color: red" title="This element has obligations">O</span> as shown below. 
