@@ -13,6 +13,7 @@
 - The patient summary document may be constructed by a human or an automated process, regardless of whether the patient summary contains some content of both kinds. In all instances, document level authorship information is required. As per the guidance in [IPS](https://hl7.org/fhir/uv/ips/STU2/Design-Conventions.html#provenance):
    - The distinction between the two types of IPS, human-curated or software-assembled, is based on the authors recorded in the composition: the author will be a human (e.g. Practitioner), if the IPS provenance type is "human-curated", or a device if the IPS provenance type is "software-assembled". In the case of a software-assembled IPS that is then verified by a human, the document provenance type will be "software-assembled" and the author will be the device or system that constructed the IPS document, but an additional attester identity will name the human who performed this check.
    - Additional provenance information below the document level is optional. There are no Provenance profiles currently defined by this guide, IPS or AU Core.
-- 
+
+**Examples for this Profile**: [Bundle/aups-basicsummary](Bundle-aups-basicsummary.html), [Bundle/aups-gpvisit-retrieval](Bundle-aups-gpvisit-retrieval.html), [Bundle/aups-noknownx](Bundle-aups-noknownx.html), [Bundle/aups-referral-endoconsult-autogen](Bundle-aups-referral-endoconsult-autogen.html), [Bundle/aups-referral-endoconsult-curated](Bundle-aups-referral-endoconsult-curated.html) and [Bundle/aups-section-emptyreason](Bundle-aups-section-emptyreason.html)
 
 
