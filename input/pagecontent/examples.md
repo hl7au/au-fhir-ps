@@ -47,7 +47,7 @@ TBD
     </thead>
     <tbody>
         <tr style="background-color:#fbcca6;">
-            <td>Use Case</td>
+            <td><strong>Use Case</strong></td>
             <td>-</td>
             <td>-</td>
             <td>-</td>
@@ -256,7 +256,7 @@ TBD
         </tr>
         <tr>
             <td rowspan="2">Suppressed Data</td>
-            <td><code>Patient.identifier<code></td>
+            <td><code>Patient.identifier</code></td>
             <td rowspan="2">-</td>
             <td rowspan="2">-</td>
         <tr>
