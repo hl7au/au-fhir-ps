@@ -1,14 +1,17 @@
 ### Introduction
 AU Patient Summary (AU PS) is provided to support the use of patient summaries in HL7® FHIR®© in an Australian context. AU PS is based on [IPS](https://hl7.org/fhir/uv/ips/STU2/index.html) and [AU Core](https://build.fhir.org/ig/hl7au/au-fhir-core), setting the minimum conformance expectations for implementing support for AU PS documents in systems.
 
+AU PS is compliant with the requirements of IPS, e.g. AU PS data is conformant to IPS and systems that generate and consume AU PS documents are conformant to the requirements in IPS:
+* A valid AU PS document IS a valid IPS document - the document instance validates against both IGs. 
+* A conformant AU PS actor IS a conformant IPS actor - the conformance expectations for implementation for IPS are satisfied when implementing AU PS actor requirements.
+
+For a detailed description of the requirements for implementing AU PS, see the [General Requirements](general-requirements.html#general-requirements) page.
+
 A Patient Summary is:
 * a health record extract comprising a core set of digital health and administrative data elements that provide a snapshot in time of a subject of care’s health information and healthcare.
 * designed for supporting use case scenarios including planned and unplanned care, continuity of care and transition of care.
 
 See [The AU PS](the-aups.html) for more information on the purpose, scope, context, and use of AU PS.
-
-For a detailed description of the requirements for implementing AU PS, see the [General Requirements](general-requirements.html#general-requirements) page.
-
 
 ### Project Background
 
