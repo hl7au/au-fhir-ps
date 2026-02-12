@@ -116,10 +116,8 @@ sequenceDiagram
   ReceivingUser ->> ReceivingApp: View SHL #shlink:/ ...
   ReceivingApp ->> SharingApp: POST manifest-url { recipient, passcode }
   SharingApp -->> ReceivingApp: Manifest { files: [ { contentType, location | embedded } ]}
-  alt 
-    ReceivingApp ->> SharingApp: GET location
-    SharingApp -->> ReceivingApp: encrypted(Bundle { type: 'document' })
-  end
+  ReceivingApp ->> SharingApp: GET location
+  SharingApp -->> ReceivingApp: encrypted(Bundle { type: 'document' })
   ReceivingApp ->> ReceivingApp: Decrypt (SHL key)
 </p>
 *Figure 3: SMART Health Links Patient Summary Exchange*
