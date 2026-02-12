@@ -80,6 +80,16 @@ The extension http://hl7.org/fhir/StructureDefinition/regex|5.2.0 is deprecated 
 # === INFORMATION 04: Known NCTS published CodeSystem published as experimental. ===
 Reference to experimental CodeSystem http://www.abs.gov.au/ausstats/abs@.nsf/mf/1292.0|20130626
 
+# === INFORMATION 06: INHERITED FROM AU Base or IPS: ValueSets published in AU Base and IPS are published as trial use to match the IG standards status. ===
+Reference to trial-use ValueSet http://hl7.org/fhir/uv/ips/ValueSet/results-coded-values-laboratory-pathology-uv-ips|2.0.0
+Reference to trial-use ValueSet http://hl7.org/fhir/uv/ips/ValueSet/results-microorganism-uv-ips|2.0.0 
+Reference to trial-use ValueSet http://hl7.org/fhir/uv/ips/ValueSet/results-presence-absence-uv-ips|2.0.0
+Reference to trial-use ValueSet http://hl7.org/fhir/uv/ips/ValueSet/results-blood-group-uv-ips|2.0.0
+Reference to trial-use ValueSet http://hl7.org/fhir/uv/ips/ValueSet/results-pathology-uv-ips|2.0.0
+Reference to trial-use ValueSet http://hl7.org/fhir/uv/ips/ValueSet/pregnancy-status-uv-ips|2.0.0
+Reference to trial-use ValueSet http://hl7.org/fhir/uv/ips/ValueSet/edd-method-uv-ips|2.0.0
+Reference to trial-use ValueSet http://terminology.hl7.org.au/ValueSet/v3-ServiceDeliveryLocationRoleType-extended|6.0.1-ci-build
+
 # === INFORMATION 08: The use of the obligation extension generates multiple slicing information messages in the snapshot. This extension is reused across many resources in leading to repeated validation messages that do not appear to indicate an actual problem. Other IGs that are using obligations (e.g. IPS, IPA, EPS) show the same set of QA "element does not match any known slice" slicing information messages that have been accepted for publication (see https://chat.fhir.org/#narrow/channel/179252-IG-creation/topic/Obligations.20extension.20does.20not.20meet.20slice/with/553529895). ===
 This element does not match any known slice defined in the profile http://hl7.org/fhir/StructureDefinition/obligation|5.2.0 (this may not be a problem, but you should check that it's not intended to match a slice)
 
