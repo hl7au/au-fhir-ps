@@ -271,19 +271,19 @@ Handling does not require a consumer system to understand every possible value o
 
 The following examples illustrate how AU PS Consumers can apply the SHALL:handle obligation in different use cases.
 
-##### Display Relevant Content
+##### Display or Render Data
 For example, in a cardiology referral viewer use case:
 - the consumer system may display `MedicationStatement.medication[x]` (e.g. antihypertensives and prior chemotherapy) so that the clinician can see medicines that may be clinically relevant, even if the system does not process them.
 
-##### Reject Based on Business Rules
+##### Reject Based on Business or Safety Rules
 For example, where an AU PS Consumer builds a local active problems list:
 - the consumer system evaluates `Condition.clinicalStatus` value and may import only Conditions with a value of "active", rejecting Conditions with status "recurrence", "remission" or "relapse" because these are not supported by its definition of active problems.
 
-##### Handle Multiple Values (Persist vs Display)
+##### Handle Multiple Values (Persist and Selective Display)
 For example, when an AU PS Consumer receives multiple patient addresses:
 - the consumer system may store all `Patient.address` values but choose to display only one (e.g. the most current one or the address with `address.use` value "home" ), rather than ignoring the others.
 
-##### Persist vs Use
+##### Persist for Later Use
 For example, when an AU PS Consumer receives multiple patient identifiers:
 - the consumer system may persist all `Patient.identifier` values but use and display only a selected subset for its workflows (e.g. IHI and MRN), rather than ignoring the remaining identifiers.
 
