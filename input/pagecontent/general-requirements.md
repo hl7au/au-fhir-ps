@@ -255,38 +255,6 @@ Actor | Code | Definition | Notes
 
 *Must Support* elements are treated differently between [AU PS Consumer](ActorDefinition-au-ps-actor-consumer.html) and [AU PS Producer](ActorDefinition-au-ps-actor-producer.html) actors. *Must Support* on a profile element **SHALL** be interpreted as follows.
 
-#### When Considering the SHALL:handle Obligation
-The [SHALL:handle](https://hl7.org/fhir/extensions/CodeSystem-obligation.html#obligation-SHALL.58handle) obligation is defined broadly in the FHIR standard. This section provides additional guidance on how this obligation is intended to be interpreted in AU PS.
-
-In AU PS, all elements labelled as _Must Support_ for AU PS Consumer actor have the SHALL:handle obligation. This obligation does not prescribe a specific handling for the element. 
-
-The SHALL:handle obligation requires a consumer systems to understand the meaning of the element and recognise the consequences of not using any of the element data. Ignoring an element without considering these consequences constitutes non-conformance. During testing, system providers can be required to explain how their system uses element data and the implications of receiving values that are not supported. 
-
-When applying the SHALL:handle obligation:
-- AU PS Consumers **SHALL** handle all occurrences of the element if present in the resource and containing any valid value.
-
-Handling can take different forms depending on the system and use case, provided the approach is documented and and justifiable. Acceptable forms of handling include (but are not limited to) processing the data, displaying or rendering the data, printing, persisting for later use, rejecting the resource based on business or safety rules or applying a fallback behaviour (e.g. using narrative when structured data is unknown).
-
-Handling does not require a consumer system to understand every possible value of an element, but it does require the system to understand the meaning of the element and to behave predictably when encountering unfamiliar values for example by applying a documented approach such as displaying available text or rejecting the content.
-
-The following examples illustrate how AU PS Consumers can apply the SHALL:handle obligation in different use cases.
-
-##### Display or Render Data
-For example, in a cardiology referral viewer use case:
-- the consumer system may display `MedicationStatement.medication[x]` (e.g. antihypertensives and prior chemotherapy) so that the clinician can see medicines that may be clinically relevant, even if the system does not process them.
-
-##### Reject Based on Business or Safety Rules
-For example, where an AU PS Consumer builds a local active problems list:
-- the consumer system evaluates `Condition.clinicalStatus` value and may import only Conditions with a value of "active", rejecting Conditions with status "recurrence", "remission" or "relapse" because these are not supported by its definition of active problems.
-
-##### Handle Multiple Values (Persist and Selective Display)
-For example, when an AU PS Consumer receives multiple patient addresses:
-- the consumer system may store all `Patient.address` values but choose to display only one (e.g. the most current one or the address with `address.use` value "home" ), rather than ignoring the others.
-
-##### Persist for Later Use
-For example, when an AU PS Consumer receives multiple patient identifiers:
-- the consumer system may persist all `Patient.identifier` values but use and display only a selected subset for its workflows (e.g. IHI and MRN), rather than ignoring the remaining identifiers.
-
 #### Presentation of Must Support and Obligation in Profiles
 All elements with *Must Support* in AU PS are accompanied by an explicit obligation that identifies the expectations for one or more actors. When rendered in an implementation guide, each profile is presented in different formal views under tabs labelled "Differential Table", "Key Elements Table", and "Snapshot Table". Elements labelled with *Must Support* and stated obligations in these views are represented by <span style="padding-left: 1px; padding-right: 1px; color: white; background-color: red" title="This element must be supported">S</span><span style="padding-left: 1px; padding-right: 1px; color: white; background-color: red" title="This element has obligations">O</span> as shown below. 
 
@@ -492,3 +460,31 @@ When claiming conformance to the AU PS Medication profile:
 - AU PS Consumers **SHALL** handle `Medication.code.coding` if present and containing any valid value. A valid value may be text, or may be a code from [Australian Medication](https://healthterminologies.gov.au/fhir/ValueSet/australian-medication-1) or [PBS Item Codes](https://build.fhir.org/ig/hl7au/au-fhir-base//ValueSet-pbs-item.html), or both, or some other code. AU PS Consumers **SHOULD** display the value of this element when presenting the data to a human user.
 
 Systems **MAY** populate other code systems but this is not a requirement of AU PS.
+
+#### Understandin the SHALL:handle Obligation
+In AU PS, all elements labelled as _Must Support_ have the [SHALL:handle](https://hl7.org/fhir/extensions/CodeSystem-obligation.html#obligation-SHALL.58handle) obligation for the AU PS Consumers. For these elements:
+- AU PS Consumers **SHALL** handle all occurrences of the element if present in the resource and containing any valid value.
+
+This section elaborates on the definition of SHALL:handle obligation in the [Must Support and Obligation](#must-support-and-obligation) table. As this obligation is defined broadly and does not presribe a specific handling for an element, it provides further inforation on what that might mean for the AU PS Consumers in the AU PS context. 
+
+The SHALL:handle obligation requires a consuming system to understand the meaning of the element and recognise the consequences of not using any of the element data. Ignoring an element without considering these consequences constitutes non-conformance. During testing, system providers can be required to explain how their system uses element data and the implications of receiving values that are not supported. 
+
+Handling might involve processing the data, displaying or rendering the data, printing, persisting for later use, rejecting the resource or the entire document based on business or safety rules or applying a fallback behaviour (e.g. using narrative when structured data is unknown).
+
+The following examples illustrate how AU PS Consumers can apply the SHALL:handle obligation in different use cases.
+
+##### Display or Render Data
+For example, in a cardiology referral viewer use case:
+- the consumer system may display `MedicationStatement.medication[x]` (e.g. antihypertensives and prior chemotherapy) so that the clinician can see medicines that may be clinically relevant, even if the system does not process them.
+
+##### Reject Based on Business or Safety Rules
+For example, where an AU PS Consumer builds a local active problems list:
+- the consumer system evaluates `Condition.clinicalStatus` value and may import only Conditions with a value of "active", rejecting Conditions with status "recurrence", "remission" or "relapse" because these are not supported by its definition of active problems.
+
+##### Handle Multiple Values (Persist and Selective Display)
+For example, when an AU PS Consumer receives multiple patient addresses:
+- the consumer system may store all `Patient.address` values but choose to display only one (e.g. the most current one or the address with `address.use` value "home" ), rather than ignoring the others.
+
+##### Persist for Later Use
+For example, when an AU PS Consumer receives multiple patient identifiers:
+- the consumer system may persist all `Patient.identifier` values but use and display only a selected subset for its workflows (e.g. IHI and MRN), rather than ignoring the remaining identifiers.
