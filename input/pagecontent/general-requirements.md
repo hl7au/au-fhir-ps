@@ -484,48 +484,83 @@ The following examples illustrate how a consuming system may choose to handle a 
 Examples illustrating SHALL:handle:
 
 **Display**
+
 A consuming system receiving an AU PS document with a MedicationStatement resource may choose to display `MedicationStatement.medication[x]` (e.g. antihypertensives or prior chemotherapy) so that a clinician can see medicines that may be clinically relevant, even if the system does not otherwise process medication data.
 
 **Selective import**
+
 A consuming system receiving an AU PS document with Condition resources may choose to import only Conditions with `Condition.clinicalStatus` value of "active" and reject Conditions with values such as "recurrence", "remission" or "relapse" that are not supported by its local definition of active problems.
 
 **Store and selective display**
+
 A consuming system receiving an AU PS document with a Patient resource with multiple addresses may choose to store all addresses and display only one (e.g. the address with `address.use` value "home"), store and display all addresses, or only use the most recent address.
 
 **Print selected data**
+
 A consuming system receiving an AU PS document with a Patient resource that includes multiple identifiers may choose to print only selected identifiers relevant to its workflows (e.g. IHI and MRN).
 
 **Reject document**
+
 A consuming system receiving an AU PS document with `Composition.status` value of "entered-in-error" may choose to not accept the patient summary document.
 
 **Do not use operationally**
+
 A consuming system receiving an AU PS document may choose not to use `MedicationStatement.reasonCode` or `MedicationStatement.reasonReference` where this information is not required for its purpose, for example in a medication dispensing system preparing blister packaging.
 
 **Terminology selection**
+
 A consuming system receiving an AU PS document with an AllergyIntolerance resource may choose to use a code from the SNOMED substance value set in `AllergyIntolerance.code` to support adverse reaction checking while disregarding other unsupported codings. If a supported coding is not available, the system can consider using the code text and present appropriate warnings to users that automated reaction checking is unavailable for the imported entry.
 
-|Handling approach|Example behaviour a system may choose|
-|---|---|
-|Display|A consuming system receiving an AU PS document with a MedicationStatement resource may choose to display `MedicationStatement.medication[x]` (e.g. antihypertensives or prior chemotherapy) so that a clinician can see medicines that may be clinically relevant, even if the system does not otherwise process medication data.|
-|Selective import|A consuming system receiving an AU PS document with Condition resources may choose to import only Conditions with `Condition.clinicalStatus` value of "active" and reject Conditions with values such as "recurrence", "remission" or "relapse" that are not supported by its local definition of active problems.|
-|Store and selective display|A consuming system receiving an AU PS document with a Patient resource with multiple addresses may choose to store all addresses and display only one (e.g. the address with `address.use` value "home"), store and display all addresses, or only use the most recent address.|
-|Print selected data|A consuming system receiving an AU PS document with a Patient resource that includes multiple identifiers may choose to print only selected identifiers relevant to its workflows (e.g. IHI and MRN).|
-|Reject document|A consuming system receiving an AU PS document with `Composition.status` value of "entered-in-error" may choose to not accept the patient summary document.|
-|Do not use operationally|A consuming system receiving an AU PS document may choose not to use `MedicationStatement.reasonCode` or `MedicationStatement.reasonReference` where this information is not required for its purpose, for example in a medication dispensing system preparing blister packaging.|
-|Terminology selection|A consuming system receiving an AU PS document with an AllergyIntolerance resource may choose to use a code from the SNOMED substance value set in `AllergyIntolerance.code` to support adverse reaction checking while disregarding other unsupported codings. If a supported coding is not available, the system can consider using the code text and present appropriate warnings to users that automated reaction checking is unavailable for the imported entry.|
 
-##### Display or Render Data
-For example, in a cardiology referral viewer use case:
-- the consumer system may display `MedicationStatement.medication[x]` (e.g. antihypertensives and prior chemotherapy) so that the clinician can see medicines that may be clinically relevant, even if the system does not process them.
-
-##### Reject Based on Business or Safety Rules
-For example, where an AU PS Consumer builds a local active problems list:
-- the consumer system evaluates `Condition.clinicalStatus` value and may import only Conditions with a value of "active", rejecting Conditions with status "recurrence", "remission" or "relapse" because these are not supported by its definition of active problems.
-
-##### Handle Multiple Values (Persist and Selective Display)
-For example, when an AU PS Consumer receives multiple patient addresses:
-- the consumer system may store all `Patient.address` values but choose to display only one (e.g. the most current one or the address with `address.use` value "home" ), rather than ignoring the others.
-
-##### Persist for Later Use
-For example, when an AU PS Consumer receives multiple patient identifiers:
-- the consumer system may persist all `Patient.identifier` values but use and display only a selected subset for its workflows (e.g. IHI and MRN), rather than ignoring the remaining identifiers.
+<table border="1" style="width:100%; border-collapse: collapse;">
+  <thead>
+    <tr>
+      <th>Handling approach</th>
+      <th>Example behaviour a system may choose</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Display</td>
+      <td>
+        A consuming system receiving an AU PS document with a MedicationStatement resource may choose to display <code>MedicationStatement.medication[x]</code> (e.g. antihypertensives or prior chemotherapy) so that a clinician can see medicines that may be clinically relevant, even if the system does not otherwise process medication data.
+      </td>
+    </tr>
+    <tr>
+      <td>Selective import</td>
+      <td>
+        A consuming system receiving an AU PS document with Condition resources may choose to import only Conditions with <code>Condition.clinicalStatus</code> value of "active" and reject Conditions with values such as "recurrence", "remission" or "relapse" that are not supported by its local definition of active problems.
+      </td>
+    </tr>
+    <tr>
+      <td>Store and selective display</td>
+      <td>
+        A consuming system receiving an AU PS document with a Patient resource with multiple addresses may choose to store all addresses and display only one (e.g. the address with <code>address.use</code> value "home"), store and display all addresses, or only use the most recent address.
+      </td>
+    </tr>
+    <tr>
+      <td>Print selected data</td>
+      <td>
+        A consuming system receiving an AU PS document with a Patient resource that includes multiple identifiers may choose to print only selected identifiers relevant to its workflows (e.g. IHI and MRN).
+      </td>
+    </tr>
+    <tr>
+      <td>Reject document</td>
+      <td>
+        A consuming system receiving an AU PS document with <code>Composition.status</code> value of "entered-in-error" may choose to not accept the patient summary document.
+      </td>
+    </tr>
+    <tr>
+      <td>Do not use operationally</td>
+      <td>
+        A consuming system receiving an AU PS document may choose not to use <code>MedicationStatement.reasonCode</code> or <code>MedicationStatement.reasonReference</code> where this information is not required for its purpose, for example in a medication dispensing system preparing blister packaging.
+      </td>
+    </tr>
+    <tr>
+      <td>Terminology selection</td>
+      <td>
+        A consuming system receiving an AU PS document with an AllergyIntolerance resource may choose to use a code from the SNOMED substance value set in <code>AllergyIntolerance.code</code> to support adverse reaction checking while disregarding other unsupported codings. If a supported coding is not available, the system can consider using the code text and present appropriate warnings to users that automated reaction checking is unavailable for the imported entry.
+      </td>
+    </tr>
+  </tbody>
+</table>
