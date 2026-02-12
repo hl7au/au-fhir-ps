@@ -255,27 +255,41 @@ Actor | Code | Definition | Notes
 
 *Must Support* elements are treated differently between [AU PS Consumer](ActorDefinition-au-ps-actor-consumer.html) and [AU PS Producer](ActorDefinition-au-ps-actor-producer.html) actors. *Must Support* on a profile element **SHALL** be interpreted as follows.
 
-#### Meaning of SHALL:handle Obligation
-The default _Must Support_ obligation for AU PS Consumer actors is [SHALL:handle](https://hl7.org/fhir/extensions/CodeSystem-obligation.html#obligation-SHALL.58handle). This obligation does not prescribe a specific handling for the element. 
+#### When Considering the SHALL:handle Obligation
+The SHALL:handle obligation is defined broadly in the FHIR standard. This section provides additional guidance on how this obligation is intended to be interpreted in AU PS.
 
-The SHALL:handle obligation requires AU PS Consumer actors to understand the meaning of the element and recognise the consequences of not using any of the element data. Ignoring an element without considering these consequences constitutes non-conformance. During testing, system providers can be required to explain how their system uses element data and the implications of receiving values that are not supported. 
+All elements labelled as _Must Support_ for AU PS Consumer actor in AU PS have the [SHALL:handle](https://hl7.org/fhir/extensions/CodeSystem-obligation.html#obligation-SHALL.58handle) obligation. This obligation does not prescribe a specific handling for the element. 
 
-When an element with multiple cardinality is labelled as _Must Support_ with an obligation of SHALL:handle, an AU PS Consumer **SHALL** handle all occurrences of the element by evaluating the consequences of not using any of the element occurrences. 
+When applying the SHALL:handle obligation:
+- AU PS Consumers **SHALL** handle all occurrences of the element if present in the resource and containing any valid value.
 
-For example, an AU PS Consumer that:
-- functions as a referral patient summary attachment viewer and has received an AU Patient Summary to support a cardiology referral for palpitations and dizziness on exertion needs to consider the value of `MedicationStatement.medication[x]`. This content is considered relevant when presented as it may be clinically important to the referred clinician, such as:
-  - antihypertensive medicines (e.g. enalapril) cannot be ignored and should be displayed because they can contribute to symptoms such as dizziness
-  - PCV chemotherapy medicines received six years ago (e.g. procarbazine, lomustine, vincristine) cannot be ignored and should be displayed because of the possibility of delayed cardiotoxicity
-  - antibiotics received during the same chemotherapy cycles (e.g. ciprofloxacin, clarithromycin) cannot be ignored and should be available to the clinician, even though they may not be directly relevant to the cardiology referral context
-- functions as a patient summary attachment viewer and has received an AU Patient Summary to support dental implant treatment where the patient summary contains both a refuted penicillin allergy and a confirmed, active nut allergy, needs to consider the values of `AllergyIntolerance.code`, `AllergyIntolerance.verificationStatus`, and `AllergyIntolerance.clinicalStatus`. In this context
-  - for a refuted extended-spectrum penicillin allergy (`AllergyIntolerance.code` with `AllergyIntolerance.verificationStatus` = "refuted"), the consumer cannot ignore either value and is expected to treat the allergy as refuted, not as confirmed or without the status
-  - for a confirmed, active nut allergy (`AllergyIntolerance.code` with `AllergyIntolerance.clinicalStatus` = "active" and `AllergyIntolerance.verificationStatus` = "confirmed"), the consumer cannot ignore these values and needs to consider them as part of the AU PS content, even if the system later chooses not to prioritise this information for the dental implant use case.
-- functions as a patient controlled shared document repository for AU Patient Summary content needs to consider the document subject `Patient.identifier` values. For this  consumer application the identifier type is relevant and any identifiers that are internal or unknown types may not be considered required to be persisted for shared use, for example:
-	- Medical Record Number is a key identifier supplied by the source health care service and retained to enable patient identification with that entity when shared
-	- IHI is a national identifier and retained to enable identification of the patient nationally for healthcare service provision when shared
-	- Patient Internal Identifier is an application assigned internal identifier and considered not useful for sharing with others so is not retained for sharing
+The SHALL:handle obligation requires a consumer systems to understand the meaning of the element and recognise the consequences of not using any of the element data. Ignoring an element without considering these consequences constitutes non-conformance. During testing, system providers can be required to explain how their system uses element data and the implications of receiving values that are not supported. 
 
-For how this obligation is applied to specific profile elements, see [Interpreting Profile Elements Labelled Must Support](#interpreting-profile-elements-labelled-must-support).
+Handling can take different forms depending on the system and use case, provided they are documented and justifiable:
+- processing the data
+- displaying or rendering it
+- printing
+- persisting it for later use
+- rejecting the resource based on business or safety rules
+- fallback behaviour (e.g., using narrative when structured data is unknown)
+
+Handling does not require a system to understand every possible value of an element, but it does require system to understand the meaning of the element and to behave predictably when encountering unknown values for example i.e. apply documented handling approach (for example displaying available text, or rejecting the content).
+
+The following examples illustrate how AU PS Consumers may apply the SHALL:handle obligation in different use cases.
+
+##### Display Relevant Content
+A cardiology referral viewer displays `MedicationStatement.medication[x] (e.g. antihypertensives and prior chemotherapy) so that the clinician can see medicines that may be clinically relevant, even if the consumer system does not process them.
+
+##### Reject Based on Business Rules
+A consumer system that imports Condition resource into a local active problems list evaluates `Condition.clinicalStatus` and only imports Conditions with a value of "active" (e.g. excluding those with "recurrence", "remission" or "relapse"), applying this consistently to all received Conditions.
+
+A consumer system that maintains an active problems list evaluates `Condition.clinicalStatus` and  rejects Conditions with statuses such as "recurrence", "remission" or "relapse" as they are not supported (e.g. the system's definition of active problems is limited to status "active").
+
+##### Handle Multiple Values (Persist vs Display)
+A consumer system receiving five `Patient.address` values stores all five but chooses to display only one (e.g. the most current one or ), rather than ignoring the others.
+
+##### Persist vs Use
+A consumer system persist all `Patient.identifier` values but uses and displays only a selected subset (e.g. IHI and MRN) for its workflows, rather than ignoring the remaining identifiers.
 
 #### Presentation of Must Support and Obligation in Profiles
 All elements with *Must Support* in AU PS are accompanied by an explicit obligation that identifies the expectations for one or more actors. When rendered in an implementation guide, each profile is presented in different formal views under tabs labelled "Differential Table", "Key Elements Table", and "Snapshot Table". Elements labelled with *Must Support* and stated obligations in these views are represented by <span style="padding-left: 1px; padding-right: 1px; color: white; background-color: red" title="This element must be supported">S</span><span style="padding-left: 1px; padding-right: 1px; color: white; background-color: red" title="This element has obligations">O</span> as shown below. 
