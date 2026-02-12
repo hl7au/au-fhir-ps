@@ -231,7 +231,10 @@ TBD
 
 
 
-TBD
+### Missing and Suppressed Data
+The table below identifies examples that demonstrate missing data or suppressed data for selected elements.
+
+
 <table border="1" style="width: 100%; margin: auto; border-collapse: collapse;">
     <thead>
         <tr>
@@ -249,7 +252,7 @@ TBD
             <td rowspan="3">Observation.performer</td>
         </tr>
         <tr>
-            <td><code>Immunization.occurenceDateTime</code></td>
+            <td><code>Immunization.occurrenceDateTime</code></td>
         </tr>
         <tr>
             <td><code>Observation.performer</code></td>
@@ -259,6 +262,7 @@ TBD
             <td><code>Patient.identifier</code></td>
             <td rowspan="2">-</td>
             <td rowspan="2">-</td>
+        </tr>
         <tr>
             <td><code>Patient.gender</code></td>
         </tr>
