@@ -216,8 +216,8 @@ How to read this table:
 
 
 
-### Missing and Suppressed Data
-The table below identifies examples defined in this implementation guide that demonstrate missing or suppressed data.
+### Missing Data and Suppressed Data
+The table below identifies examples defined in this implementation guide that demonstrate missing data or suppressed data.
 
 How to read this table:
 <ul>
