@@ -37,13 +37,10 @@ sequenceDiagram
   participant Server as Patient Summary Server
   participant Consumer as Patient Summary Consumer
 
-  alt
-    Consumer->>Server: Patient/$summary { identifier, ... }
-  else 
-    Consumer->>Server: Patient/[id]/$summary { ... }
-  end
+  Consumer->>Server: Patient/$summary { identifier, ... }
+  Consumer->>Server: Patient/[id]/$summary { ... }
 
-    Server-->>Consumer: Bundle { type: 'document' }
+  Server-->>Consumer: Bundle { type: 'document' }
 </p>
 *Figure 1: The IPS Summary operation*
 <br/>
