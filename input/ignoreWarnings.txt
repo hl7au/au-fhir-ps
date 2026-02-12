@@ -64,6 +64,10 @@ No definition could be found for URL value 'http://ns.electronichealth.net.au/id
 A definition for CodeSystem 'http://pbs.gov.au/code/item' could not be found, so the code cannot be validated
 A definition for CodeSystem 'http://www.mims.com.au/codes' could not be found, so the code cannot be validated
 
+=== WARNING 10: INHERITED FROM AU BASE: Example codes are tested against bound terminology (MIMS/PBS). These AU Base CodeSystems referenced do not include any codes in their definition so can not be validated. ===
+Unable to check whether the code is in the value set 'http://terminology.hl7.org.au/ValueSet/mims|6.0.1-ci-build' because the code system http://snomed.info/sct was not found
+Unable to check whether the code is in the value set 'http://terminology.hl7.org.au/ValueSet/pbs-item|6.0.1-ci-build' because the code system http://snomed.info/sct was not found
+
 # === INFORMATION 01: INHERITED FROM FHIR STANDARD: Some FHIR standard ValueSets are published as draft. ===
 Reference to draft ValueSet http://hl7.org/fhir/ValueSet/condition-severity|4.0.1
 Reference to draft ValueSet http://hl7.org/fhir/ValueSet/encounter-reason|4.0.1
