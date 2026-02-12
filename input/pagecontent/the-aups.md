@@ -132,18 +132,18 @@ In this context consuming an IPS document that is NOT an AU Patient Summary may 
 If a system receives this IPS document somehow (email, upload, QR Code, etc) - What does the system do with it? 
 * Display the document to a user?
 * Display the data in the document to a user?
-* Import some data out of it (usually, a subset, human selected?)?
+* Import some data out of it (usually, a subset, human selected)?
 * Attempt to process and store?
 * Raise an error?
 
 **Is the patient summary an AU PS?**
-During the [AU PS workshop 13 November 2025](https://confluence.hl7.org/spaces/HAFWG/pages/358895090/2025-11-13+AU+Core+TDG+Agenda+Minutes) it was raised and agreed that there needs to be some way to tell by inspection that a patient summary document is an AU PS document, rather than some other kind of patient summary (including IPS only), without doing validation.
+During the [AU PS workshop 13 November 2025](https://confluence.hl7.org/spaces/HAFWG/pages/358895090/2025-11-13+AU+Core+TDG+Agenda+Minutes) it was agreed that there is a need for some way to tell by inspection that a patient summary document is an AU PS document, rather than some other kind of patient summary (including IPS only), without needing to do validation.
 
-Implementers are requested to contribute to identifying the means for reliably identifying an AU Patient Summary by inspecting the document. Some of the proposed options include:
-1.	use meta.profile in Composition
-2.	use another code in Composition.type
-3.	use the Application Feature Framework feature-assertion extension
+Implementers are requested to contribute to identifying the means for reliably identifying a document as an AU PS document by inspection. Currently proposed options include:
+1.	use `meta.profile` in the Composition or `meta.profile` in the Bundle
+2.	specify an additional coding in `Composition.type` that is equiavlent to "AU PS"
+3.	use the [Application Feature Framework](https://build.fhir.org/ig/HL7/capstmt/) and [Feature Assertion](https://build.fhir.org/ig/HL7/fhir-extensions/StructureDefinition-feature-assertion.html) extension
 
-Implementers are requested to contribute their thoughts on these considerations and limitations when receiving an IPS document that does not conform to the AU PS document expectations. Contribute via comment on <a href="https://jira.hl7.org/browse/FHIR-51547">FHIR-51547
+Contribute via comment on [FHIR-51547](TBD).
 
 </div>
