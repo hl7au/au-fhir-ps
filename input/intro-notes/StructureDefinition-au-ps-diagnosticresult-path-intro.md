@@ -11,3 +11,5 @@
 2. There is a current tool limitation that prevents the Observation.specimen element referencing the intended target profile: [Specimen (IPS)](http://hl7.org/fhir/uv/ips/StructureDefinition/Specimen-uv-ips).
 
 </div><!-- stu-note -->
+
+**Examples for this Profile**: [Bundle/aups-gpvisit-retrieval](Bundle-aups-gpvisit-retrieval.html) and [Bundle/aups-referral-endoconsult-autogen](Bundle-aups-referral-endoconsult-autogen.html)
