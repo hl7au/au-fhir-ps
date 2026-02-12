@@ -126,6 +126,7 @@ As AU PS incorporates requirements additional to IPS it is important to consider
 
 <div class="request-for-feedback" markdown=1>
 **What are the considerations and limitations when receiving an IPS document?**
+
 Implementers are requested to contribute their thoughts on these considerations and limitations when receiving an IPS document that does not conform to the AU PS document expectations. Contribute via comment on [FHIR-51547](https://jira.hl7.org/browse/FHIR-51547).
 
 In this context consuming an IPS document that is NOT an AU Patient Summary may be an IPS Document produced by a system that specifically supports only the IPS Implementation Guide, or another jurisdiction’s national patient summary implementation based on the IPS Implementation guide. 
@@ -138,6 +139,7 @@ If a system receives this IPS document somehow (email, upload, QR Code, etc) - W
 * Raise an error?
 
 **Is the patient summary an AU PS?**
+
 During the [AU PS workshop 13 November 2025](https://confluence.hl7.org/spaces/HAFWG/pages/358895090/2025-11-13+AU+Core+TDG+Agenda+Minutes) it was agreed that there is a need for some way to tell by inspection that a patient summary document is an AU PS document, rather than some other kind of patient summary (including IPS only), without needing to do validation.
 
 Implementers are requested to contribute to identifying the means for reliably identifying a document as an AU PS document by inspection. Currently proposed options include:
