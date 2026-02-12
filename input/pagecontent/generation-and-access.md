@@ -37,8 +37,7 @@ sequenceDiagram
   participant Server as Patient Summary Server
   participant Consumer as Patient Summary Consumer
 
-  Consumer->>Server: Patient/$summary { identifier, ... }
-  Consumer->>Server: Patient/[id]/$summary { ... }
+  Consumer->>Server: Patient/$summary { identifier, ... } or Patient/[id]/$summary { ... }
 
   Server-->>Consumer: Bundle { type: 'document' }
 </p>
@@ -126,10 +125,8 @@ sequenceDiagram
   alt 
     ReceivingApp ->> SharingApp: GET location
     SharingApp -->> ReceivingApp: encrypted(Bundle { type: 'document' })
-  else
-    ReceivingApp ->> ReceivingApp: Decode embedded content
   end
-
+  
   ReceivingApp ->> ReceivingApp: Decrypt (SHL key)
 </p>
 *Figure 3: SMART Health Links Patient Summary Exchange*
