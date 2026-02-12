@@ -512,7 +512,7 @@ A consuming system receiving an AU PS document may choose not to use `Medication
 A consuming system receiving an AU PS document with an AllergyIntolerance resource may choose to use a code from the SNOMED substance value set in `AllergyIntolerance.code` to support adverse reaction checking while disregarding other unsupported codings. If a supported coding is not available, the system can consider using the code text and present appropriate warnings to users that automated reaction checking is unavailable for the imported entry.
 
 
-<table border="1" style="width:100%; border-collapse: collapse;">
+<table border="1" cellspacing="0" cellpadding="0">
   <thead>
     <tr>
       <th>Handling approach</th>
