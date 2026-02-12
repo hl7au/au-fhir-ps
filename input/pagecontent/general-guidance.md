@@ -189,6 +189,7 @@ Implementers intending to populate the AU PS with an unprofiled resource type, e
 #### Extensibility – 'Additional' Sections
 Implementers need to be aware, the rules of the `Composition.section:All Slices` defined in the AU PS Composition profile apply to all sections, defined or undefined:
 - `Composition.section.title` is mandatory and has obligations defined for AU PS Producers and AU PS Consumers
+- `Composition.section.code` is mandatory and has obligations defined for AU PS Producers and AU PS Consumers
 - `Composition.section.text` is mandatory and has obligations defined for AU PS Producers and AU PS Consumers
 
 It is recommended that where a producing system intends to populate 'additional' sections there is some definition available in a specification describing the intended contents and use of these additional sections. 
