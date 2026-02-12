@@ -31,7 +31,7 @@ How to read this table:
         </tr>
     </thead>
     <tbody>
-        <tr style="background-color:#fbcca6;">
+        <tr>
             <td><strong>Use Case</strong></td>
             <td>-</td>
             <td>-</td>
