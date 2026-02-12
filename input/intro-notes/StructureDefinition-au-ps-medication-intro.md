@@ -7,4 +7,4 @@
   - Producers **MAY** populate with only text if no coded value is known.
 - The Medication resource **SHALL NOT** be used to represent that a patient is not currently taking any medications; systems **SHOULD** use the MedicationStatement resource following the [profile specific implementation guidance](StructureDefinition-au-ps-medicationstatement.html#profile-specific-implementation-guidance) in [AU PS MedicationStatement](StructureDefinition-au-ps-medicationstatement.html).
 
-**Examples for this Profile**: [Bundle/aups-gpvisit-retrieval](Bundle-aups-gpvisit-retrieval.html)
+**Examples for this Profile**: [Bundle/aups-gpvisit-retrieval](Bundle-aups-gpvisit-retrieval.html), [Bundle/aups-referral-endoconsult-autogen](Bundle-aups-referral-endoconsult-autogen.html) and [Bundle/aups-referral-endoconsult-curated](Bundle-aups-referral-endoconsult-curated.html)
