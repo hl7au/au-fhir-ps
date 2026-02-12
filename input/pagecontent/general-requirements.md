@@ -256,22 +256,16 @@ Actor | Code | Definition | Notes
 *Must Support* elements are treated differently between [AU PS Consumer](ActorDefinition-au-ps-actor-consumer.html) and [AU PS Producer](ActorDefinition-au-ps-actor-producer.html) actors. *Must Support* on a profile element **SHALL** be interpreted as follows.
 
 #### When Considering the SHALL:handle Obligation
-The SHALL:handle obligation is defined broadly in the FHIR standard. This section provides additional guidance on how this obligation is intended to be interpreted in AU PS.
+The [SHALL:handle](https://hl7.org/fhir/extensions/CodeSystem-obligation.html#obligation-SHALL.58handle) obligation is defined broadly in the FHIR standard. This section provides additional guidance on how this obligation is intended to be interpreted in AU PS.
 
-In AU PS, all elements labelled as _Must Support_ for AU PS Consumer actor have the [SHALL:handle](https://hl7.org/fhir/extensions/CodeSystem-obligation.html#obligation-SHALL.58handle) obligation. This obligation does not prescribe a specific handling for the element. 
+In AU PS, all elements labelled as _Must Support_ for AU PS Consumer actor have the SHALL:handle obligation. This obligation does not prescribe a specific handling for the element. 
 
 The SHALL:handle obligation requires a consumer systems to understand the meaning of the element and recognise the consequences of not using any of the element data. Ignoring an element without considering these consequences constitutes non-conformance. During testing, system providers can be required to explain how their system uses element data and the implications of receiving values that are not supported. 
 
 When applying the SHALL:handle obligation:
 - AU PS Consumers **SHALL** handle all occurrences of the element if present in the resource and containing any valid value.
 
-Handling can take different forms depending on the system and use case, provided the approach is documented and and justifiable. Acceptable forms of handling include but are not limited to:
-- processing the data
-- displaying or rendering it
-- printing
-- persisting it for later use
-- rejecting the resource based on business or safety rules
-- fallback behaviour (e.g., using narrative when structured data is unknown)
+Handling can take different forms depending on the system and use case, provided the approach is documented and and justifiable. Acceptable forms of handling include (but are not limited to) processing the data, displaying or rendering the data, printing, persisting for later use, rejecting the resource based on business or safety rules or applying a fallback behaviour (e.g. using narrative when structured data is unknown).
 
 Handling does not require a consumer system to understand every possible value of an element, but it does require the system to understand the meaning of the element and to behave predictably when encountering unfamiliar values for example by applying a documented approach such as displaying available text or rejecting the content.
 
