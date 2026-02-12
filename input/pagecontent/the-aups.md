@@ -145,6 +145,6 @@ Implementers are requested to contribute to identifying the means for reliably i
 2.	specify an additional coding in `Composition.type` that is equiavlent to "AU PS"
 3.	use the [Application Feature Framework](https://build.fhir.org/ig/HL7/capstmt/) and [Feature Assertion](https://build.fhir.org/ig/HL7/fhir-extensions/StructureDefinition-feature-assertion.html) extension
 
-Contribute via comment on [FHIR-51547](TBD).
+Contribute via comment on [FHIR-55739](https://jira.hl7.org/browse/FHIR-55739).
 
 </div>
