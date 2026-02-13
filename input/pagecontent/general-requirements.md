@@ -541,7 +541,7 @@ The following are examples of how a consuming system might choose to handle a _M
     <tr>
       <td>Handling CodeableConcept data type</td>
       <td>A consuming system when handling <code>AllergyIntolerance.code</code> element, upon consideration, might choose to:<ul>
-          <li>use a code from the SNOMED substance value set in `AllergyIntolerance.code` to support adverse reaction checking while disregarding other unsupported codings</li>
+          <li>use a code from the SNOMED substance value set in <code>AllergyIntolerance.code</code> to support adverse reaction checking while disregarding other unsupported codings</li>
           <li>if a supported coding is not available, use the code text and present appropriate warnings to users that automated reaction checking is unavailable for the imported entry</li>
           <li>store unsupported codings without operational use (e.g. retain them but do not use them for decision support)</li>
           <li>reject the resource or document where required by business or safety rules (e.g. if the system cannot safely support allergy checking without a usable coding)</li>
