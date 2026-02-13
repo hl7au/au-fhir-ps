@@ -517,7 +517,7 @@ The following are examples of how a consuming system might choose to handle a _M
       <td>A consuming system handling <code>Patient.identifier</code> element, upon consideration, might choose to:<ul>
         <li>print only selected identifiers relevant to its workflows (e.g. IHI and MRN)</li>
         <li>print all received identifiers</li>
-        <li>store all identifiers but print only a subset (e.g. IHI and MRN) based on local rules.</li>
+        <li>store all identifiers but print only a subset (e.g. IHI and MRN) based on local rules</li>
         </ul>
       </td>
     </tr>
