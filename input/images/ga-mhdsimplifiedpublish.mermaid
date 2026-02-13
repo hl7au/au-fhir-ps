@@ -1,0 +1,15 @@
+%%{ init: { "theme": "default", "themeVariables": { "background": "transparent" } } }%%
+
+sequenceDiagram
+    participant Producer as Patient Summary Producer
+    participant Server as Patient Summary Server
+    participant Consumer as Patient Summary Consumer
+
+    Producer->>Server: DocumentReference create { content: { attachment: { data: [base64Binary(Bundle { type: 'document' } )}] }}}
+    Server-->>Producer: DocumentReference { content: { attachment: { url: [baseUrl]/Bundle/[id] }}}
+
+    Consumer->>Server: DocumentReference search
+    Server-->>Consumer: Bundle { type: 'searchset', entry[]: DocumentReference }
+
+    Consumer->>Server: Bundle/[id] read
+    Server-->>Consumer: Bundle { type: 'document' }
