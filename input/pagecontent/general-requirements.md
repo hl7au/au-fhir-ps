@@ -508,7 +508,7 @@ The following are examples of how a consuming system might choose to handle a _M
           <li>store all addresses but only display the most recent one</li>
           <li>store all addresses but only display a subset based on local rules</li>
           <li>store all addresses for internal workflows (e.g. matching) and display none</li>
-          <li>choose not to display the structured address elements and instead fall back to narrative content (e.g. relevant text in `Composition.section.text`)</li>
+          <li>choose not to display the structured address elements and instead fall back to narrative content (e.g. relevant text in <code>Composition.section.text</code>)</li>
         </ul>
       </td>
     </tr>
