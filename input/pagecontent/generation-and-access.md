@@ -34,12 +34,16 @@ config:
   theme: default
 ---
 sequenceDiagram
-  participant Server as Patient Summary Server
-  participant Consumer as Patient Summary Consumer
+participant Server as Patient Summary Server
+    participant Consumer as Patient Summary Consumer
 
-  Consumer->>Server: Patient/$summary { identifier, ... } or Patient/[id]/$summary { ... }
+    alt
+        Consumer->>Server: Patient/$summary { identifier, ... }
+    else 
+        Consumer->>Server: Patient/[id]/$summary { ... }
+    end
 
-  Server-->>Consumer: Bundle { type: 'document' }
+    Server-->>Consumer: Bundle { type: 'document' }
 </p>
 *Figure 1: The IPS Summary operation*
 <br/>
