@@ -2,6 +2,8 @@
 
 # === ERROR 01: This error is caused by an IPS 2.0.0 internal dependency on hl7.fhir.uv.extensions.r4#5.3.0-ballot-tc1 that downstream IGs don’t load. Not an AU PS defect. IPS will publish a 2.0.1 errata/technical correction to resolve this for downstream IGs. See Zulip: https://chat.fhir.org/#narrow/channel/207835-IPS/topic/IPS.202.2E0.2E1.20errata.2Ftechnical.20correction/with/547940503 ===
 This profile does not comply with claimed profile 'http://hl7.org/fhir/uv/ips/StructureDefinition/Patient-uv-ips'
+Unable to find a profile match for urn:uuid:85822a88-55b1-460c-bb7b-e8fc22d8568f among choices: http://hl7.org/fhir/uv/ips/StructureDefinition/Patient-uv-ips
+Unable to find a profile match for urn:uuid:ad82d71b-ca1c-4db6-a726-cc70cf638306 among choices: http://hl7.org/fhir/uv/ips/StructureDefinition/Observation-pregnancy-edd-uv-ips
 
 # === ERROR 02: This issue will be fixed in a later version of the IG Publisher (see: https://chat.fhir.org/#narrow/channel/179252-IG-creation/topic/Publisher.20v2.2E0.2E24.20-.20error.20in.20local.20build). ===
 No definition could be found for URL value 'http://hl7.org/fhir/tools/StructureDefinition/expansion-parameters' 
@@ -118,3 +120,8 @@ The content was signed by OU=IG Publisher, L=Ann Arbor, CN=hl7.org, O=HL7, ST=Mi
 The content was signed for the purpose of Verification Signature (urn:oid:1.2.840.10065.1.12.1.5) (and this has been verified by the signature)
 The signature verified OK
 Signature Verification is a work in progress. Feedback welcome at https://chat.fhir.org/#narrow/channel/179247-Security-and-Privacy/topic/Signature/with/524324965
+
+# === INFORMATION 10: This information message is caused by an IPS 2.0.0 internal dependency on hl7.fhir.uv.extensions.r4#5.3.0-ballot-tc1 that downstream IGs don’t load. Not an AU PS defect. IPS will publish a 2.0.1 errata/technical correction to resolve this for downstream IGs. See Zulip: https://chat.fhir.org/#narrow/channel/207835-IPS/topic/IPS.202.2E0.2E1.20errata.2Ftechnical.20correction/with/547940503 ===
+The entry resource did not match the profile http://hl7.org/fhir/StructureDefinition/Observation because: Unable to find a profile match for urn:uuid:85822a88-55b1-460c-bb7b-e8fc22d8568f among choices: http://hl7.org/fhir/uv/ips/StructureDefinition/Patient-uv-ips
+The entry resource did not match the profile http://hl7.org/fhir/uv/ips/StructureDefinition/Observation-pregnancy-edd-uv-ips because: Unable to find a profile match for urn:uuid:85822a88-55b1-460c-bb7b-e8fc22d8568f among choices: http://hl7.org/fhir/uv/ips/StructureDefinition/Patient-uv-ips
+Details for urn:uuid:ad82d71b-ca1c-4db6-a726-cc70cf638306 matching against profile http://hl7.org/fhir/uv/ips/StructureDefinition/Observation-pregnancy-edd-uv-ips|2.0.0
