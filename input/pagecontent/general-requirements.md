@@ -503,7 +503,7 @@ The following are examples of how a consuming system might choose to handle a _M
     <tr>
       <td>Store and selective display</td>
       <td>A consuming system handling multiple <code>Patient.address</code> element (e.g. receiving five addresses), upon consideration, might choose to:<ul>
-          <li>store all received addresses and display only one (e.g. the address with `address.use` value "home")</li>
+          <li>store all received addresses and display only one (e.g. the address with <code>address.use</code> value "home")</li>
           <li>store and display all addresses</li>
           <li>store all addresses but only display the most recent one</li>
           <li>store all addresses but only display a subset based on local rules</li>
