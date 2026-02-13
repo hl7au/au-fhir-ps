@@ -471,52 +471,13 @@ The SHALL:handle obligation requires a consuming system to understand the meanin
 
 Handling might involve processing the data, displaying or rendering the data, printing, persisting for later use, rejecting the resource or the entire document based on business or safety rules or applying a fallback behaviour (e.g. using narrative when structured data is unknown).
 
-The following examples illustrate how a consuming system may choose to handle a _Must Support_ element in an AU PS document:
-
-- display `MedicationStatement.medication[x]` (e.g. antihypertensives or prior chemotherapy) so that a clinician can see medicines that may be clinically relevant, even if the system does not otherwise process medication data.
-- import only Conditions with `Condition.clinicalStatus` value of "active" and reject Conditions with values such as "recurrence", "remission" or "relapse" that are not supported by its local definition of active problems.
-- for a Patient resource with multiple addresses, store all addresses and display only one (e.g. the address with `address.use` value "home"), store and display all addresses, or only use the most recent address.
-- for a Patient resource that includes multiple identifiers may choose to print only selected identifiers relevant to its workflows (e.g. IHI and MRN).
-- not accept a patient summary document where `Composition.status` has a value of "entered-in-error"
-- not use `MedicationStatement.reasonCode` or `MedicationStatement.reasonReference` where this information is not required for its purpose, for example in a medication dispensing system preparing blister packaging.
-- for an AllergyIntolerance resource may choose to use a code from the SNOMED substance value set in `AllergyIntolerance.code` to support adverse reaction checking while disregarding other unsupported codings. If a supported coding is not available, the system can consider using the code text and present appropriate warnings to users that automated reaction checking is unavailable for the imported entry.
-
-Examples illustrating SHALL:handle:
-
-**Display**
-
-A consuming system receiving an AU PS document with a MedicationStatement resource may choose to display `MedicationStatement.medication[x]` (e.g. antihypertensives or prior chemotherapy) so that a clinician can see medicines that may be clinically relevant, even if the system does not otherwise process medication data.
-
-**Selective import**
-
-A consuming system receiving an AU PS document with Condition resources may choose to import only Conditions with `Condition.clinicalStatus` value of "active" and reject Conditions with values such as "recurrence", "remission" or "relapse" that are not supported by its local definition of active problems.
-
-**Store and selective display**
-
-A consuming system receiving an AU PS document with a Patient resource with multiple addresses may choose to store all addresses and display only one (e.g. the address with `address.use` value "home"), store and display all addresses, or only use the most recent address.
-
-**Print selected data**
-
-A consuming system receiving an AU PS document with a Patient resource that includes multiple identifiers may choose to print only selected identifiers relevant to its workflows (e.g. IHI and MRN).
-
-**Reject document**
-
-A consuming system receiving an AU PS document with `Composition.status` value of "entered-in-error" may choose to not accept the patient summary document.
-
-**Do not use operationally**
-
-A consuming system receiving an AU PS document may choose not to use `MedicationStatement.reasonCode` or `MedicationStatement.reasonReference` where this information is not required for its purpose, for example in a medication dispensing system preparing blister packaging.
-
-**Terminology selection**
-
-A consuming system receiving an AU PS document with an AllergyIntolerance resource may choose to use a code from the SNOMED substance value set in `AllergyIntolerance.code` to support adverse reaction checking while disregarding other unsupported codings. If a supported coding is not available, the system can consider using the code text and present appropriate warnings to users that automated reaction checking is unavailable for the imported entry.
-
+The following are examples of how a consuming system might choose to handle a _Must Support_ element in an AU PS document. These examples show some possible behaviours only and do not represent all possible or valid ways systems may handle these elements.
 
 <table border="1" cellspacing="0" cellpadding="0">
   <thead>
     <tr>
-      <th>Handling approach</th>
-      <th>Example behaviour a system may choose</th>
+      <th>Example of handling</th>
+      <th>Example behaviour a system might choose</th>
     </tr>
   </thead>
   <tbody>
@@ -557,7 +518,7 @@ A consuming system receiving an AU PS document with an AllergyIntolerance resour
       </td>
     </tr>
     <tr>
-      <td>Terminology selection</td>
+      <td>Handling CodeableConcept data type</td>
       <td>
         A consuming system receiving an AU PS document with an AllergyIntolerance resource may choose to use a code from the SNOMED substance value set in <code>AllergyIntolerance.code</code> to support adverse reaction checking while disregarding other unsupported codings. If a supported coding is not available, the system can consider using the code text and present appropriate warnings to users that automated reaction checking is unavailable for the imported entry.
       </td>
