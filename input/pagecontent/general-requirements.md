@@ -483,7 +483,7 @@ The following are examples of how a consuming system might choose to handle a _M
   <tbody>
     <tr>
       <td>Display</td>
-      <td>A consuming system handling <code>MedicationStatement.medication[x]</code> upon consideration might choose to:<ul>
+      <td>A consuming system handling <code>MedicationStatement.medication[x]</code> element, upon consideration, might choose to:<ul>
           <li>display the medication text representation (`CodeableConcept.text`)</li>
           <li>display both the element value and narrative content</li>
           <li>display the narrative content only (`Composition.section.text`)</li>
@@ -493,7 +493,7 @@ The following are examples of how a consuming system might choose to handle a _M
     </tr>
     <tr>
       <td>Selective import</td>
-      <td>A consuming system when handling <code>Condition.clinicalStatus</code> after consideration might choose to: <ul>
+      <td>A consuming system when handling <code>Condition.clinicalStatus</code> element, upon consideration, might choose to:<ul>
           <li>import only Conditions with code>Condition.clinicalStatus</code> value of "active" and reject Conditions with values such as "recurrence", "remission" or "relapse"</li>
           <li>store all received Condition resources but only use a supported subset operationally (e.g. treat only Conditions with <code>Condition.clinicalStatus</code> of "active" as active problems)</li>
           <li>reject the resource or the document where required by business or safety rules (e.g. if the system cannot safely interpret the clinical status)</li>
@@ -502,7 +502,7 @@ The following are examples of how a consuming system might choose to handle a _M
     </tr>
     <tr>
       <td>Store and selective display</td>
-      <td>A consuming system handling multiple `Patient.address` elements (e.g. receiving five addresses), upon consideration might choose to:<ul>
+      <td>A consuming system handling multiple `Patient.address` element (e.g. receiving five addresses), upon consideration, might choose to:<ul>
           <li>store all received addresses and display only one (e.g. the address with `address.use` value "home")</li>
           <li>store and display all addresses</li>
           <li>store all addresses but only display the most recent one</li>
@@ -514,7 +514,7 @@ The following are examples of how a consuming system might choose to handle a _M
     </tr>
     <tr>
       <td>Print selected data</td>
-      <td>A consuming system handling `Patient.identifier` element upon consideration might choose to: <ul>
+      <td>A consuming system handling `Patient.identifier` element, upon consideration, might choose to:<ul>
         <li>print only selected identifiers relevant to its workflows (e.g. IHI and MRN)</li>
         <li>print all received identifiers</li>
         <li>store all identifiers but print only a subset (e.g. IHI and MRN) based on local rules.</li>
@@ -532,7 +532,7 @@ The following are examples of how a consuming system might choose to handle a _M
     </tr>
     <tr>
       <td>Do not use operationally</td>
-      <td>A consuming system when handling <code>MedicationStatement.reasonCode</code> and <code>MedicationStatement.reasonReference</code> elements, upon consideration might choose to: <ul>
+      <td>A consuming system when handling <code>MedicationStatement.reasonCode</code> and <code>MedicationStatement.reasonReference</code> elements, upon consideration, might choose to:<ul>
           <li>not use `MedicationStatement.reasonCode` or `MedicationStatement.reasonReference` where this information is not required for its purpose, for example in a medication dispensing system preparing blister packaging</li>
           <li>store the data but don't use it operationally (e.g. retain the data do not use for decision support)</li>
         </ul>
@@ -540,7 +540,7 @@ The following are examples of how a consuming system might choose to handle a _M
     </tr>
     <tr>
       <td>Handling CodeableConcept data type</td>
-      <td>A consuming system when handling `AllergyIntolerance.code` element upon consideration might choose to:<ul>
+      <td>A consuming system when handling `AllergyIntolerance.code` element, upon consideration, might choose to:<ul>
           <li>use a code from the SNOMED substance value set in `AllergyIntolerance.code` to support adverse reaction checking while disregarding other unsupported codings</li>
           <li>if a supported coding is not available, use the code text and present appropriate warnings to users that automated reaction checking is unavailable for the imported entry</li>
           <li>store unsupported codings without operational use (e.g. retain them but do not use them for decision support)</li>
