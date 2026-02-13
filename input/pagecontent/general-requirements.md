@@ -471,7 +471,7 @@ The SHALL:handle obligation requires a consuming system to understand the meanin
 
 Handling might involve processing the data, displaying or rendering the data, printing, persisting for later use, rejecting the resource or the entire document based on business or safety rules or applying a fallback behaviour (e.g. using narrative when structured data is unknown).
 
-The following are examples of how a consuming system might choose to handle a _Must Support_ element in an AU PS document. These examples are not exhaustive and other valid handling behaviours are possible.
+The following are examples of how a consuming system might choose to handle a _Must Support_ element in an AU PS document. These examples are not exhaustive and other handling behaviours are possible.
 
 <table border="1" cellspacing="0" cellpadding="0">
   <thead>
