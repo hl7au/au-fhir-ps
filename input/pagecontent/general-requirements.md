@@ -283,6 +283,35 @@ Typically AU PS profiles will inherit extended sub-elements from the base HL7 AU
 
 The full set of sub-elements is visible in the "Key Elements Table" or "Snapshot Table" which shows the sub-elements defined in this profile (shown in the "Differential Table") and the sub-elements inherited from a base profile.
 
+<div class="request-for-feedback" markdown=1>
+*Must Support - Elements with multiple cardinality**
+AU Patient Summary profiles include *Must Support* elements that have multiple cardinality (maximum > 1). These elements have one or more obligation codes of SHALL:populate-if-known, SHALL:populate, SHALL:handle, SHOULD:display. Examples of these elements include:
+* Composition.author
+*	Organization.identifier
+*	Patient.name
+*	AllergyIntolerance.reaction
+*	AllergyIntolerance.reaction.manifestion
+* AllergyIntolerance.reaction.manifestatin.coding
+
+Different systems can can have different internal support for profile elements with multiple occurrences. For example: 
+*	a system may support just one patient name with a maximum of 2 given names
+*	a system may support an internal organization identifier, ABN and HPIO 
+*	a system may support an ongoing history of allergy reaction events, each with an onset date and up to 2 manifestations 
+*	a system may support just a manifestation
+*	a system may use a local categorisation of Condition that does not align with concepts in the specified value set binding
+*	a system uses a proprietary medicines database that has partial mapping to pbs codes
+
+Implementers are requested to contribute to clarifying the minimum expectations of Must Support obligation on elements with multiple cardinality by commenting on the content of the [AU PS Must Support - Elements with multiple cardinality](https://confluence.hl7.org/spaces/HAFWG/pages/413055047/AU+PS+Must+Support+-+Elements+with+multiple+cardinality) Confluence page.
+
+The following feedback is requested:
+1. For elements in AU patient Summary profile with multiple cardinality and Must Support obligation of SHALL:populate-if-known or SHALL:populate, is the minimum expectation that an AU PS Producer:
+ *SHALL populate all known occurrences of the element; or
+ *SHALL populate at least 1 known occurrence of the element; or
+ *SHALL populate all relevant occurrences of the element?
+2. Confirm that for AU Patient Summary, the obligation of SHALL:handle for an AU PS consumder is the minimum expectation that an AU PS Consumer SHALL handle ALL known occurrences of an element?
+
+</div>
+
 ##### Must Support - Composition Sections
 Obligations vary significantly for elements in the AU PS Composition profile, in particular obligations on `Composition.section` reflect the expectations of [The "IPS"](https://hl7.org/fhir/uv/ips/STU2/Structure-of-the-International-Patient-Summary.html) and  [ISO 27269](https://www.iso.org/standard/79491.html). A summary is provided below:
 - AU PS Consumers **SHALL** handle the Composition section if present and containing any valid value, and **SHOULD** display the content of the section when presenting the data to a human user.
