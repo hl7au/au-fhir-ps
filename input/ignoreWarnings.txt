@@ -130,6 +130,7 @@ The entry resource did not match the profile http://hl7.org/fhir/StructureDefini
 Details for urn:uuid:ad82d71b-ca1c-4db6-a726-cc70cf638306 matching against profile http://hl7.org/fhir/uv/ips/StructureDefinition/Observation-pregnancy-edd-uv-ips|2.0.0
 Details for urn:uuid:f85ad223-7bed-46f3-893d-e89d6082f9a9 matching against profile http://hl7.org/fhir/StructureDefinition/Observation|4.0.1
 Details for urn:uuid:85822a88-55b1-460c-bb7b-e8fc22d8568f matching against profile http://hl7.org/fhir/uv/ips/StructureDefinition/Patient-uv-ips|2.0.0
+Details for urn:uuid:ad82d71b-ca1c-4db6-a726-cc70cf638306 matching against profile http://hl7.org/fhir/StructureDefinition/Observation|4.0.1
 
 # === INFORMATION 11: This example demonstrates how to represent missing or supressed data and therefore uses the Data Absent Reason extension as per AU PS rules. The IG Publisher triggers a slicing information message because of this, but the example is intentionally designed to show the correct handling of missing data and does not indicate any issues with the IG. ===
 This element does not match any known slice defined in the profile http://hl7.org.au/fhir/ps/StructureDefinition/au-ps-patient|0.6.0-cibuild (this may not be a problem, but you should check that it's not intended to match a slice)
