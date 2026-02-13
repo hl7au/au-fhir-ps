@@ -60,6 +60,9 @@ There are multiple different potential matches for the url 'http://hl7.org/fhir/
 # === WARNING 05: Examples of ABN or HPIO scoped identifier system URLs do not have formal definition as they are examples. ===
 No definition could be found for URL value 'http://ns.electronichealth.net.au/id/abn-scoped/service-provider-individual/1.0/12345678901'
 
+# === WARNING 06: Flags aspects of FHIR implementation of best practice. These warnings do not indicate an error in the specification, and ignore profiled requirements. ===
+Best Practice Recommendation: In general, all observations should have a performer
+
 # === WARNING 08: INHERITED FROM AU BASE: These AU Base CodeSystems referenced do not include any codes in their definition so can not be validated. ===
 A definition for CodeSystem 'http://pbs.gov.au/code/item' could not be found, so the code cannot be validated
 A definition for CodeSystem 'http://www.mims.com.au/codes' could not be found, so the code cannot be validated
