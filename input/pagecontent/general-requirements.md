@@ -483,44 +483,69 @@ The following are examples of how a consuming system might choose to handle a _M
   <tbody>
     <tr>
       <td>Display</td>
-      <td>
-        A consuming system receiving an AU PS document with a MedicationStatement resource may choose to display <code>MedicationStatement.medication[x]</code> (e.g. antihypertensives or prior chemotherapy) so that a clinician can see medicines that may be clinically relevant, even if the system does not otherwise process medication data.
+      <td>A consuming system handling <code>MedicationStatement.medication[x]</code> upon consideration might choose to:<ul>
+          <li>display the medication text representation (`CodeableConcept.text`)</li>
+          <li>display both the element value and narrative content</li>
+          <li>display the narrative content only (`Composition.section.text`)</li>
+          <li>not display the element</li>
+        </ul>
       </td>
     </tr>
     <tr>
       <td>Selective import</td>
-      <td>
-        A consuming system receiving an AU PS document with Condition resources may choose to import only Conditions with <code>Condition.clinicalStatus</code> value of "active" and reject Conditions with values such as "recurrence", "remission" or "relapse" that are not supported by its local definition of active problems.
+      <td>A consuming system when handling <code>Condition.clinicalStatus</code> after consideration might choose to: <ul>
+          <li>import only Conditions with code>Condition.clinicalStatus</code> value of "active" and reject Conditions with values such as "recurrence", "remission" or "relapse"</li>
+          <li>store all received Condition resources but only use a supported subset operationally (e.g. treat only Conditions with <code>Condition.clinicalStatus</code> of "active" as active problems)</li>
+          <li>reject the resource or the document where required by business or safety rules (e.g. if the system cannot safely interpret the clinical status)</li>
+        </ul>
       </td>
     </tr>
     <tr>
       <td>Store and selective display</td>
-      <td>
-        A consuming system receiving an AU PS document with a Patient resource with multiple addresses may choose to store all addresses and display only one (e.g. the address with <code>address.use</code> value "home"), store and display all addresses, or only use the most recent address.
+      <td>A consuming system handling multiple `Patient.address` elements (e.g. receiving five addresses), upon consideration might choose to:<ul>
+          <li>store all received addresses and display only one (e.g. the address with `address.use` value "home")</li>
+          <li>store and display all addresses</li>
+          <li>store all addresses but only display the most recent one</li>
+          <li>store all addresses but only display a subset based on local rules</li>
+          <li>store all addresses for internal workflows (e.g. matching) and display none</li>
+          <li>choose not to display the structured address elements and instead fall back to narrative content (e.g. relevant text in `Composition.section.text`)</li>
+        </ul>
       </td>
     </tr>
     <tr>
       <td>Print selected data</td>
-      <td>
-        A consuming system receiving an AU PS document with a Patient resource that includes multiple identifiers may choose to print only selected identifiers relevant to its workflows (e.g. IHI and MRN).
+      <td>A consuming system handling `Patient.identifier` element upon consideration might choose to: <ul>
+        <li>print only selected identifiers relevant to its workflows (e.g. IHI and MRN)</li>
+        <li>print all received identifiers</li>
+        <li>store all identifiers but print only a subset (e.g. IHI and MRN) based on local rules.</li>
+        </ul>
       </td>
     </tr>
     <tr>
-      <td>Reject document</td>
-      <td>
-        A consuming system receiving an AU PS document with <code>Composition.status</code> value of "entered-in-error" may choose to not accept the patient summary document.
+      <td>Handling documents with entered-in-error status</td>
+      <td>A consuming system when handling <code>Composition.status</code>, upon consideration, might choose to:<ul>
+          <li>not accept the patient summary document where `Composition.status` has value "entered-in-error"</li>
+          <li>accept and store the document with `Composition.status` "entered-in-error" but prevent its operational use (e.g. treat as not clinically valid for ongoing care)</li>
+          <li>display a warning indicating the document is entered in error, and restrict further actions</li>
+        </ul>
       </td>
     </tr>
     <tr>
       <td>Do not use operationally</td>
-      <td>
-        A consuming system receiving an AU PS document may choose not to use <code>MedicationStatement.reasonCode</code> or <code>MedicationStatement.reasonReference</code> where this information is not required for its purpose, for example in a medication dispensing system preparing blister packaging.
+      <td>A consuming system when handling <code>MedicationStatement.reasonCode</code> and <code>MedicationStatement.reasonReference</code> elements, upon consideration might choose to: <ul>
+          <li>not use `MedicationStatement.reasonCode` or `MedicationStatement.reasonReference` where this information is not required for its purpose, for example in a medication dispensing system preparing blister packaging</li>
+          <li>store the data but don't use it operationally (e.g. retain the data do not use for decision support)</li>
+        </ul>
       </td>
     </tr>
     <tr>
       <td>Handling CodeableConcept data type</td>
-      <td>
-        A consuming system receiving an AU PS document with an AllergyIntolerance resource may choose to use a code from the SNOMED substance value set in <code>AllergyIntolerance.code</code> to support adverse reaction checking while disregarding other unsupported codings. If a supported coding is not available, the system can consider using the code text and present appropriate warnings to users that automated reaction checking is unavailable for the imported entry.
+      <td>A consuming system when handling `AllergyIntolerance.code` element upon consideration might choose to:<ul>
+          <li>use a code from the SNOMED substance value set in `AllergyIntolerance.code` to support adverse reaction checking while disregarding other unsupported codings</li>
+          <li>if a supported coding is not available, use the code text and present appropriate warnings to users that automated reaction checking is unavailable for the imported entry</li>
+          <li>store unsupported codings without operational use (e.g. retain them but do not use them for decision support)</li>
+          <li>reject the resource or document where required by business or safety rules (e.g. if the system cannot safely support allergy checking without a usable coding)</li>
+        </ul>
       </td>
     </tr>
   </tbody>
