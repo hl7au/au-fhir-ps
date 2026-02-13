@@ -36,7 +36,11 @@ Found multiple matching profiles among 2 choices: http://hl7.org.au/fhir/Structu
 Found multiple matching profiles among 2 choices: http://hl7.org.au/fhir/StructureDefinition/au-medicarecardnumber, http://hl7.org/fhir/StructureDefinition/Identifier
 Found multiple matching profiles among 2 choices: http://hl7.org.au/fhir/StructureDefinition/au-pbsprescribernumber, http://hl7.org/fhir/StructureDefinition/Identifier
 
-# === WARNING 03: The canonical URL for following identifier types currently resolves to a html page and not a FHIR artefact. See the list of AU Base identifier profiles for the corresponding data type profile. ===
+# === WARNING 03: AU PS Bundle profile is sliced by resource type. For profiles of type Observation, the slice includes all relevant profiles and to remain open (allowing for additional profiles of Observation) includes the Observation resource. This means that Artefacts inherit multiple profiles for certain data types (e.g., Address, Identifier). The IG Publisher cannot match example instances to a single profile and generates these warnings. This behaviour is expected and consistent with the design of AU PS (and IPS). ===
+Found multiple matching profiles among 2 choices: http://hl7.org.au/fhir/ps/StructureDefinition/au-ps-diagnosticresult-path, http://hl7.org/fhir/StructureDefinition/Observation
+Found multiple matching profiles among 2 choices: http://hl7.org.au/fhir/ps/StructureDefinition/au-ps-smokingstatus, http://hl7.org/fhir/StructureDefinition/Observation
+
+# === WARNING 04: The canonical URL for following identifier types currently resolves to a html page and not a FHIR artefact. See the list of AU Base identifier profiles for the corresponding data type profile. ===
 No definition could be found for URL value 'http://hl7.org.au/id/abn'
 No definition could be found for URL value 'http://ns.electronichealth.net.au/id/hi/hpio/1.0'
 No definition could be found for URL value 'http://ns.electronichealth.net.au/id/dva'
@@ -45,7 +49,7 @@ No definition could be found for URL value 'http://ns.electronichealth.net.au/id
 No definition could be found for URL value 'http://ns.electronichealth.net.au/id/medicare-number'
 No definition could be found for URL value 'http://ns.electronichealth.net.au/id/medicare-prescriber-number'
 
-# === WARNING 04: INHERITED FROM AU BASE: AU Base does not pin the version of these standard FHIR extensions sourced from the FHIR Extensions Pack. ===
+# === WARNING 05: INHERITED FROM AU BASE: AU Base does not pin the version of these standard FHIR extensions sourced from the FHIR Extensions Pack. ===
 There are multiple different potential matches for the url 'http://hl7.org/fhir/StructureDefinition/individual-recordedSexOrGender'. It might be a good idea to fix to the correct version to reduce the likelihood of a wrong version being selected by an implementation/implementer, or use the [IG Parameter `pin-canonicals`](https://hl7.org/fhir/tools/CodeSystem-ig-parameters.html). Using version '5.2.0', found versions: 1.0.0 (from hl7.fhir.uv.extensions.r4#1.0.0), 5.1.0-cibuild (from hl7.fhir.uv.extensions.r4#5.1.0-snapshot1), 5.2.0 (from hl7.fhir.uv.extensions.r4#5.2.0). Suggested fix: change the canonical reference from 'http://hl7.org/fhir/StructureDefinition/individual-recordedSexOrGender' to 'http://hl7.org/fhir/StructureDefinition/individual-recordedSexOrGender|5.2.0'
 There are multiple different potential matches for the url 'http://hl7.org/fhir/StructureDefinition/individual-pronouns'. It might be a good idea to fix to the correct version to reduce the likelihood of a wrong version being selected by an implementation/implementer, or use the [IG Parameter `pin-canonicals`](https://hl7.org/fhir/tools/CodeSystem-ig-parameters.html). Using version '5.2.0', found versions: 1.0.0 (from hl7.fhir.uv.extensions.r4#1.0.0), 5.1.0-cibuild (from hl7.fhir.uv.extensions.r4#5.1.0-snapshot1), 5.2.0 (from hl7.fhir.uv.extensions.r4#5.2.0). Suggested fix: change the canonical reference from 'http://hl7.org/fhir/StructureDefinition/individual-pronouns' to 'http://hl7.org/fhir/StructureDefinition/individual-pronouns|5.2.0'
 There are multiple different potential matches for the url 'http://hl7.org/fhir/StructureDefinition/individual-genderIdentity'. It might be a good idea to fix to the correct version to reduce the likelihood of a wrong version being selected by an implementation/implementer, or use the [IG Parameter `pin-canonicals`](https://hl7.org/fhir/tools/CodeSystem-ig-parameters.html). Using version '5.2.0', found versions: 1.0.0 (from hl7.fhir.uv.extensions.r4#1.0.0), 5.1.0-cibuild (from hl7.fhir.uv.extensions.r4#5.1.0-snapshot1), 5.2.0 (from hl7.fhir.uv.extensions.r4#5.2.0). Suggested fix: change the canonical reference from 'http://hl7.org/fhir/StructureDefinition/individual-genderIdentity' to 'http://hl7.org/fhir/StructureDefinition/individual-genderIdentity|5.2.0'
@@ -57,8 +61,19 @@ There are multiple different potential matches for the url 'http://hl7.org/fhir/
 There are multiple different potential matches for the url 'http://hl7.org/fhir/StructureDefinition/patient-mothersMaidenName'. It might be a good idea to fix to the correct version to reduce the likelihood of a wrong version being selected by an implementation/implementer, or use the [IG Parameter `pin-canonicals`](https://hl7.org/fhir/tools/CodeSystem-ig-parameters.html). Using version '5.2.0', found versions: 1.0.0 (from hl7.fhir.uv.extensions.r4#1.0.0), 4.0.1 (from hl7.fhir.r4.core#4.0.1), 5.1.0-cibuild (from hl7.fhir.uv.extensions.r4#5.1.0-snapshot1), 5.2.0 (from hl7.fhir.uv.extensions.r4#5.2.0). Suggested fix: change the canonical reference from 'http://hl7.org/fhir/StructureDefinition/patient-mothersMaidenName' to 'http://hl7.org/fhir/StructureDefinition/patient-mothersMaidenName|5.2.0'
 There are multiple different potential matches for the url 'http://hl7.org/fhir/StructureDefinition/patient-birthPlace'. It might be a good idea to fix to the correct version to reduce the likelihood of a wrong version being selected by an implementation/implementer, or use the [IG Parameter `pin-canonicals`](https://hl7.org/fhir/tools/CodeSystem-ig-parameters.html). Using version '5.2.0', found versions: 1.0.0 (from hl7.fhir.uv.extensions.r4#1.0.0), 4.0.1 (from hl7.fhir.r4.core#4.0.1), 5.1.0-cibuild (from hl7.fhir.uv.extensions.r4#5.1.0-snapshot1), 5.2.0 (from hl7.fhir.uv.extensions.r4#5.2.0). Suggested fix: change the canonical reference from 'http://hl7.org/fhir/StructureDefinition/patient-birthPlace' to 'http://hl7.org/fhir/StructureDefinition/patient-birthPlace|5.2.0'
 
-# === WARNING 05: Examples of ABN or HPIO scoped identifier system URLs do not have formal definition as they are examples. ===
+# === WARNING 06: Examples of ABN or HPIO scoped identifier system URLs do not have formal definition as they are examples. ===
 No definition could be found for URL value 'http://ns.electronichealth.net.au/id/abn-scoped/service-provider-individual/1.0/12345678901'
+
+# === WARNING 07: Flags aspects of FHIR implementation of best practice. These warnings do not indicate an error in the specification, and ignore profiled requirements. ===
+Best Practice Recommendation: In general, all observations should have a performer
+
+# === WARNING 08: INHERITED FROM AU BASE: These AU Base CodeSystems referenced do not include any codes in their definition so can not be validated. ===
+A definition for CodeSystem 'http://pbs.gov.au/code/item' could not be found, so the code cannot be validated
+A definition for CodeSystem 'http://www.mims.com.au/codes' could not be found, so the code cannot be validated
+
+=== WARNING 10: INHERITED FROM AU BASE: Example codes are tested against bound terminology (MIMS/PBS). These AU Base CodeSystems referenced do not include any codes in their definition so can not be validated. ===
+Unable to check whether the code is in the value set 'http://terminology.hl7.org.au/ValueSet/mims|6.0.1-ci-build' because the code system http://snomed.info/sct was not found
+Unable to check whether the code is in the value set 'http://terminology.hl7.org.au/ValueSet/pbs-item|6.0.1-ci-build' because the code system http://snomed.info/sct was not found
 
 # === INFORMATION 01: INHERITED FROM FHIR STANDARD: Some FHIR standard ValueSets are published as draft. ===
 Reference to draft ValueSet http://hl7.org/fhir/ValueSet/condition-severity|4.0.1
@@ -75,6 +90,23 @@ The extension http://hl7.org/fhir/StructureDefinition/regex|5.2.0 is deprecated 
 
 # === INFORMATION 04: Known NCTS published CodeSystem published as experimental. ===
 Reference to experimental CodeSystem http://www.abs.gov.au/ausstats/abs@.nsf/mf/1292.0|20130626
+
+# === INFORMATION 05: INHERITED FROM AU Base or IPS: ValueSets published in AU Base and IPS are published as trial use to match the IG standards status. ===
+Reference to trial-use ValueSet http://hl7.org/fhir/uv/ips/ValueSet/results-coded-values-laboratory-pathology-uv-ips|2.0.0
+Reference to trial-use ValueSet http://hl7.org/fhir/uv/ips/ValueSet/results-microorganism-uv-ips|2.0.0 
+Reference to trial-use ValueSet http://hl7.org/fhir/uv/ips/ValueSet/results-presence-absence-uv-ips|2.0.0
+Reference to trial-use ValueSet http://hl7.org/fhir/uv/ips/ValueSet/results-blood-group-uv-ips|2.0.0
+Reference to trial-use ValueSet http://hl7.org/fhir/uv/ips/ValueSet/results-pathology-uv-ips|2.0.0
+Reference to trial-use ValueSet http://hl7.org/fhir/uv/ips/ValueSet/pregnancy-status-uv-ips|2.0.0
+Reference to trial-use ValueSet http://hl7.org/fhir/uv/ips/ValueSet/edd-method-uv-ips|2.0.0
+Reference to trial-use ValueSet http://terminology.hl7.org.au/ValueSet/v3-ServiceDeliveryLocationRoleType-extended|6.0.1-ci-build
+
+# === INFORMATION 06: AU PS includes only complete examples i.e. Bundle examples. While each profile does have at least one Bundle instace with an example of this profile this information message is present in an IG if a standalone resource instance example is not present, it does not look inside Bundles or other resource types (e.g. if a resource instance is contained). ===
+The Implementation Guide contains no explicitly linked examples for this profile
+
+# === INFORMATION 07: AU PS Bundle profile is sliced by resource type. For profiles of type Observation, the slice includes all relevant profiles and to remain open (allowing for additional profiles of Observation) includes the Observation resource. This means that Artefacts inherit multiple profiles for certain data types (e.g., Address, Identifier). The IG Publisher cannot match example instances to a single profile and generates these warnings. This behaviour is expected and consistent with the design of AU PS (and IPS). ===
+The entry resource matched more than one of the allowed profiles (http://hl7.org/fhir/StructureDefinition/Observation, http://hl7.org.au/fhir/ps/StructureDefinition/au-ps-diagnosticresult-path)
+The entry resource matched more than one of the allowed profiles (http://hl7.org/fhir/StructureDefinition/Observation, http://hl7.org.au/fhir/ps/StructureDefinition/au-ps-smokingstatus)
 
 # === INFORMATION 08: The use of the obligation extension generates multiple slicing information messages in the snapshot. This extension is reused across many resources in leading to repeated validation messages that do not appear to indicate an actual problem. Other IGs that are using obligations (e.g. IPS, IPA, EPS) show the same set of QA "element does not match any known slice" slicing information messages that have been accepted for publication (see https://chat.fhir.org/#narrow/channel/179252-IG-creation/topic/Obligations.20extension.20does.20not.20meet.20slice/with/553529895). ===
 This element does not match any known slice defined in the profile http://hl7.org/fhir/StructureDefinition/obligation|5.2.0 (this may not be a problem, but you should check that it's not intended to match a slice)

@@ -20,11 +20,24 @@ An interpretation of AUCDI clinical information requirements through community c
 
 AUCDI R2 builds upon R1, expanding on the initial “core”, introducing additional data groups to support different use cases including "Patient summary":
 
-AUCDI Version | AU PS Version
----|---
-R1| -
-R2 (Patient summary)|1.0.0
-{:.grid}
+<table border="1" cellspacing="0" cellpadding="0" >
+  <thead>
+    <tr style="background-color: #f2f2f2;">
+      <th>AUCDI Version</th>
+      <th>AU PS Version</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>R1</td>
+      <td>-</td>
+    </tr>
+    <tr>
+      <td>R2 (Patient summary)</td>
+      <td>1.0.0</td>
+    </tr>
+  </tbody>
+</table>
 
 ### AUCDI (Patient summary) Mappings Into AU PS
 
@@ -37,7 +50,6 @@ Column attribute descriptions are as follows:
 - **AU PS Profile(s)**: The title of the AU PS profile relevant for exchange.
 - **FHIR Path**: The [FHIRPath expression](https://build.fhir.org/ig/HL7/FHIRPath/) to the FHIR element relevant for exchange, i.e. the FHIR element that can be populated with data from a source system that represents the clinical concept expressed in the AUCDI data element. 
 - **Comment**: Additional information about the mapping including an explanation of where an element or group is not yet mapped.
-
 <table border="1" cellspacing="0" cellpadding="0" width="100%">
 <thead>
   <tr style="background-color: #f2f2f2;">
@@ -46,7 +58,7 @@ Column attribute descriptions are as follows:
     <th>AU PS Document Section</th>
     <th>AU PS Profile(s)</th>
     <th>FHIR Path</th>
-    <th>Comment</th>
+    <th style="min-width:300px">Comment</th>
   </tr>
 </thead>
 <tbody>
@@ -61,12 +73,8 @@ Column attribute descriptions are as follows:
   <tr>
     <td colspan="2">Date/time of onset of first reaction</td>
     <td><a href="StructureDefinition-au-ps-allergyintolerance.html">AU PS AllergyIntolerance</a></td>
-    <td>TBD</td>
-    <td>There is no native FHIR element or extension available with this exact meaning. Possible options are to:
-<ul><li>map to AllergyIntolerance.onsetDateTime noting that allergies and intolerances may be identified without a reaction so this may not identify a first reaction.</li>
-<li>map to AllergyIntolerance.reaction.onsetDateTime and the first reaction is just understood as the earliest noting that not all reactions may be captured.</li>
-<li>develop a FHIR extension to capture the date time of the first reaction - to be submitted for consideration in the FHIR Extensions Pack.</li>
-</ul>&#xA;&#xA;Please provide your feedback on possible mapping options on <a href="https://confluence.hl7.org/spaces/HAFWG/pages/288069416/AUCDI+R2+in+AU+PS+R1">this page</a>.</td>
+    <td><code>AllergyIntolerance.onset[x]</code></td>
+    <td>This AUCDI element aligns with the first identification of an allergy or intolerance. The onset value may be patient reported or clinically determined; estimated or actual; age or date and be imprecise (partial date), range of ages or a period of time.</td>
   </tr>
   <tr>
     <td colspan="2">Manifestation</td>
@@ -335,12 +343,12 @@ Column attribute descriptions are as follows:
   </tr>
   <tr>
     <td colspan="2">Justification</td>
-     | <td><a href="https://hl7.org/fhir/uv/ips/STU2/StructureDefinition-Observation-pregnancy-status-uv-ips.html">Observation Pregnancy - Status (IPS)</a></td>
+     <td><a href="https://hl7.org/fhir/uv/ips/STU2/StructureDefinition-Observation-pregnancy-status-uv-ips.html">Observation Pregnancy - Status (IPS)</a></td>
     <td><code>Observation.note</code></td>
   </tr>
   <tr>
     <td colspan="2">Date of assertion</td>
-     | <td><a href="https://hl7.org/fhir/uv/ips/STU2/StructureDefinition-Observation-pregnancy-status-uv-ips.html">Observation Pregnancy - Status (IPS)</a></td>
+     <td><a href="https://hl7.org/fhir/uv/ips/STU2/StructureDefinition-Observation-pregnancy-status-uv-ips.html">Observation Pregnancy - Status (IPS)</a></td>
     <td><code>Observation.effectiveDateTime</code></td>
   </tr>
 </tbody>
