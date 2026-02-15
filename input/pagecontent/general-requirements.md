@@ -541,7 +541,7 @@ The following examples provide further examples of handling that a consuming sys
     </tr>
     <tr>
       <td>Print selected data</td>
-      <td><code>Patient.identifier</code>
+      <td><code>Patient.identifier</code></td>
       <td>A consuming system, upon consideration, might choose to:<ul>
         <li>print only selected identifiers relevant to its workflows (e.g. IHI and MRN)</li>
         <li>print all received identifiers</li>
@@ -561,7 +561,7 @@ The following examples provide further examples of handling that a consuming sys
     </tr>
     <tr>
       <td>Do not use operationally</td>
-      <td><code>MedicationStatement.reasonCode</code> and <code>MedicationStatement.reasonReference</code></td>>
+      <td><code>MedicationStatement.reasonCode</code>, <code>MedicationStatement.reasonReference</code></td>
       <td>A consuming system, upon consideration, might choose to:<ul>
           <li>not use <code>MedicationStatement.reasonCode</code> and <code>MedicationStatement.reasonReference</code> where this information is not required for its purpose, for example in a medication dispensing system preparing blister packaging</li>
           <li>store but don't use it operationally (e.g. retain but do not use for decision support)</li>
@@ -570,7 +570,7 @@ The following examples provide further examples of handling that a consuming sys
     </tr>
     <tr>
       <td>Selected use of supported coded values</td>
-      <td>AllergyIntolerance.code</td>
+      <td><code>AllergyIntolerance.code</code></td>
       <td>A consuming system, upon consideration, might choose to:<ul>
           <li>use a supported coding from the received <code>AllergyIntolerance.code</code> (e.g. SNOMED substance code) to support adverse reaction checking while disregarding other unsupported codings</li>
           <li>if a supported coding is not available, use the code text (<code>CodeableConcept.text</code>) and present appropriate warnings to users that automated reaction checking is unavailable for the imported entry</li>
