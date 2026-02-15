@@ -286,14 +286,14 @@ The full set of sub-elements is visible in the "Key Elements Table" or "Snapshot
 <div class="request-for-feedback" markdown=1>
 **Must Support - Elements with multiple cardinality**
 
-AU Patient Summary profiles include *Must Support* elements that have multiple cardinality (maximum > 1) e.g. `Composition.author`, `Patient.address` or `AllergyIntolerance.reaction.manifestation.coding`. Implementers are requested to contribute to clarifying the minimum expectations of Must Support obligation on elements with multiple cardinality by commenting on the Confluence page [AU PS Must Support - Elements with multiple cardinality](https://confluence.hl7.org/spaces/HAFWG/pages/413055047/AU+PS+Must+Support+-+Elements+with+multiple+cardinality).
+AU Patient Summary profiles include *Must Support* elements that have multiple cardinality (maximum > 1) e.g. `Composition.author`, `Patient.address` or `AllergyIntolerance.reaction.manifestation.coding`. Implementers are requested to contribute to clarifying the minimum expectations of *Must Support* obligation on elements with multiple cardinality by commenting on the Confluence page [AU PS Must Support - Elements with multiple cardinality](https://confluence.hl7.org/spaces/HAFWG/pages/413055047/AU+PS+Must+Support+-+Elements+with+multiple+cardinality).
 
 Different systems can have different internal support for elements with multiple occurrences. For example: 
-*	a system might have support just one patient name with a maximum of 2 given names
-*	a system might have support an internal organisation identifier, ABN and one HPI-O or it might support storing multiple HPI-Os
-*	a system might have support an ongoing history of allergy reaction events, each with an onset date and up to 2 manifestations 
+*	a system might have support for just one patient name with a maximum of 2 given names
+*	a system might have support for an internal organisation identifier, ABN and one HPI-O or it might support storing multiple HPI-Os
+*	a system might have support for an ongoing history of allergy reaction events, each with an onset date and up to 2 manifestations 
 *	a system might have support for a single manifestation field in their database
-*	a system might use a proprietary medicines database that has partial mapping to pbs codes
+*	a system might use a proprietary medicines database that has partial mapping to PBS item codes
 
 The following feedback on 'minimum' expectations of multiple cardinality and obligations is requested:
 1. For *Must Support* elements in an AU PS profile with multiple cardinality and obligation of SHALL:populate-if-known or SHALL:populate, is the minimum expectation that an AU PS Producer:
