@@ -7,7 +7,7 @@ This change log documents the significant updates and resolutions implemented fr
 
 #### Changes in this version
 - changed AU PS Consumer guidance to align wording with the handle obligation (replace "consume resources" with "handle") in [General Requirements](general-requirements.html) page [AU PS: FHIR-52616](https://jira.hl7.org/browse/FHIR-52616).
-- added plain language explanatory text claryfying the meaning of SHALL:handle obligation for AU PS Consumers in [General Requirements](general-requirements.html) page [AU PS: FHIR-53033](https://jira.hl7.org/browse/FHIR-53033).
+- added plain language text clarifying the meaning of SHALL:handle obligation for AU PS Consumers in [General Requirements](general-requirements.html) page [AU PS: FHIR-53033](https://jira.hl7.org/browse/FHIR-53033).
 - changed [Generation and Access](generation-and-access.html) page to retain only options in line with current community interest [au-fhir-ps #91](https://github.com/hl7au/au-fhir-ps/issues/91).
 - updated mapping of AUCDI element Date/time of onset of first reaction in the Adverse reaction risk summary data group to be AllergyIntolerance.onset[x] [AU PS: FHIR-53631](https://jira.hl7.org/browse/FHIR-53631).
 - [AU PS AllergyIntolerance](StructureDefinition-au-ps-allergyintolerance.html):

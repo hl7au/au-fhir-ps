@@ -482,60 +482,67 @@ When claiming conformance to the AU PS Medication profile:
 
 Systems **MAY** populate other code systems but this is not a requirement of AU PS.
 
-#### Understanding the SHALL:handle Obligation
-In AU PS, all elements labelled as _Must Support_ have the [SHALL:handle](https://hl7.org/fhir/extensions/CodeSystem-obligation.html#obligation-SHALL.58handle) obligation for the AU PS Consumers. For these elements:
+##### Understanding the SHALL:handle Obligation
+In AU PS, all elements labelled as _Must Support_ have the [SHALL:handle](https://hl7.org/fhir/extensions/CodeSystem-obligation.html#obligation-SHALL.58handle) obligation for AU PS Consumers. For these elements:
 - AU PS Consumers **SHALL** handle all occurrences of the element if present in the resource and containing any valid value.
 
-This section elaborates on the definition of the SHALL:handle obligation in the [Must Support and Obligation](#must-support-and-obligation) table. As this obligation is defined broadly and does not prescribe a specific handling for an element, further information is provided on what this may mean for AU PS Consumers in the AU PS context. 
+The SHALL:handle obligation is defined broadly and does not specify what is required to handle the meaning of an element correctly. Additional support in understanding the application of this obligation in the context of AU PS is provided below.
 
 The SHALL:handle obligation requires a consuming system to understand the meaning of the element and recognise the consequences of not using any of the element data. Ignoring an element without considering these consequences constitutes non-conformance. During testing, system providers can be required to explain how their system uses element data and the implications of receiving values that are not supported. 
 
-Handling might involve processing the data, displaying or rendering the data, printing, persisting for later use, rejecting the resource or the entire document based on business or safety rules or applying a fallback behaviour (e.g. using narrative when structured data is unknown).
+Handling might involve processing, displaying or rendering the data, printing, persisting for later use, not using a particular element occurrence, raising an error, rejecting an entire document based on business or safety rules or applying a fallback behaviour (e.g. using narrative when structured data is unknown).
 
 The following are examples of how a consuming system might choose to handle a _Must Support_ element in an AU PS document. These examples are not exhaustive and other handling behaviours are possible.
+
+The following examples provide further examples of handling that a consuming system might implement based on understanding the meaning of an element and the consequences of not using the element within the system's context of use. These examples are non-exhaustive and intended to be useful but they are not a normative part of the specification nor are they fully representative of real world examples.
 
 <table border="1" cellspacing="0" cellpadding="0">
   <thead>
     <tr>
       <th>Example of handling</th>
+      <th>Element handled</th>
       <th>Example behaviour a system might choose</th>
     </tr>
   </thead>
   <tbody>
     <tr>
       <td>Display</td>
-      <td>A consuming system handling <code>MedicationStatement.medication[x]</code> element, upon consideration, might choose to:<ul>
+      <td><code>MedicationStatement.medication[x]</code></td>
+      <td>A consuming system, upon consideration, might choose to:<ul>
           <li>display the medication text representation (<code>CodeableConcept.text</code>)</li>
-          <li>display both the element value and narrative content</li>
+          <li>display both the element value and section narrative</li>
           <li>display the narrative content only (<code>Composition.section.text</code>)</li>
-          <li>not display the element</li>
+          <li>look up the code and display the retrieved display name from the terminology server</li>
+          <li>not display the element value</li>
         </ul>
       </td>
     </tr>
     <tr>
       <td>Selective import</td>
-      <td>A consuming system when handling <code>Condition.clinicalStatus</code> element, upon consideration, might choose to:<ul>
-          <li>import only Conditions with <code>Condition.clinicalStatus</code> value of "active" and reject Conditions with values such as "recurrence", "remission" or "relapse"</li>
-          <li>store all received Condition resources but only use a supported subset operationally (e.g. treat only Conditions with <code>Condition.clinicalStatus</code> of "active" as active problems)</li>
-          <li>reject the resource or the document where required by business or safety rules (e.g. if the system cannot safely interpret the clinical status)</li>
+      <td><code>Condition.clinicalStatus</code></td>
+      <td>A consuming system, upon consideration, might choose to:<ul>
+          <li>import only Condition resources with <code>Condition.clinicalStatus</code> value of "active" and not use Condition resources with values such as "recurrence", "remission" or "relapse"</li>
+          <li>store all received Condition resources but only use a supported subset operationally (e.g. process only Condition resources with <code>Condition.clinicalStatus</code> of "active" as active problems)</li>
+          <li>reject the resource or the document where required by business or safety rules (e.g. if the system cannot safely interpret the clinical status. This can be because a non valid code was supplied.)</li>
         </ul>
       </td>
     </tr>
     <tr>
       <td>Store and selective display</td>
-      <td>A consuming system handling multiple <code>Patient.address</code> element (e.g. receiving five addresses), upon consideration, might choose to:<ul>
-          <li>store all received addresses and display only one (e.g. the address with <code>address.use</code> value "home")</li>
+      <td><code>Patient.address</code></td>
+      <td>A consuming system , upon consideration, might choose to:<ul>
+          <li>store all addresses and display only addresses with <code>address.use</code> value "home"</li>
           <li>store and display all addresses</li>
           <li>store all addresses but only display the most recent one</li>
-          <li>store all addresses but only display a subset based on local rules</li>
-          <li>store all addresses for internal workflows (e.g. matching) and display none</li>
-          <li>not display the structured address elements and instead fall back to narrative content (e.g. relevant text in <code>Composition.section.text</code>)</li>
+          <li>store only addresses with <code>address.use</code> value of "home" or "billing" and display none</li>
+          <li>display structured address elements (e.g.<code>Address.line</code>, <code>Address.city</code>, <code>Address.postalCode</code>) and display <code>Address.text</code> where structured elements are unavailable</li>
         </ul>
       </td>
     </tr>
     <tr>
       <td>Print selected data</td>
-      <td>A consuming system handling <code>Patient.identifier</code> element, upon consideration, might choose to:<ul>
+      <td><code>Patient.identifier</code>
+      <td>A consuming system, upon consideration, might choose to:<ul>
         <li>print only selected identifiers relevant to its workflows (e.g. IHI and MRN)</li>
         <li>print all received identifiers</li>
         <li>store all identifiers but print only a subset (e.g. IHI and MRN) based on local rules</li>
@@ -543,8 +550,9 @@ The following are examples of how a consuming system might choose to handle a _M
       </td>
     </tr>
     <tr>
-      <td>Handling documents with entered-in-error status</td>
-      <td>A consuming system when handling <code>Composition.status</code>, upon consideration, might choose to:<ul>
+      <td>Reject or restrict use</td>
+      <td><code>Composition.status</code></td>
+      <td>A consuming system, upon consideration, might choose to:<ul>
           <li>not accept the patient summary document where <code>Composition.status</code> has value "entered-in-error"</li>
           <li>accept and store the document with <code>Composition.status</code> "entered-in-error" but prevent its operational use (e.g. treat as not clinically valid for ongoing care)</li>
           <li>display a warning indicating the document is entered in error, and restrict further actions</li>
@@ -553,18 +561,21 @@ The following are examples of how a consuming system might choose to handle a _M
     </tr>
     <tr>
       <td>Do not use operationally</td>
-      <td>A consuming system when handling <code>MedicationStatement.reasonCode</code> and <code>MedicationStatement.reasonReference</code> elements, upon consideration, might choose to:<ul>
+      <td><code>MedicationStatement.reasonCode</code> and <code>MedicationStatement.reasonReference</code></td>>
+      <td>A consuming system, upon consideration, might choose to:<ul>
           <li>not use <code>MedicationStatement.reasonCode</code> and <code>MedicationStatement.reasonReference</code> where this information is not required for its purpose, for example in a medication dispensing system preparing blister packaging</li>
-          <li>store the data but don't use it operationally (e.g. retain the data do not use for decision support)</li>
+          <li>store but don't use it operationally (e.g. retain but do not use for decision support)</li>
         </ul>
       </td>
     </tr>
     <tr>
-      <td>Handling CodeableConcept data type</td>
-      <td>A consuming system when handling <code>AllergyIntolerance.code</code> element, upon consideration, might choose to:<ul>
-          <li>use a code from the SNOMED substance value set in <code>AllergyIntolerance.code</code> to support adverse reaction checking while disregarding other unsupported codings</li>
-          <li>if a supported coding is not available, use the code text and present appropriate warnings to users that automated reaction checking is unavailable for the imported entry</li>
-          <li>store unsupported codings without operational use (e.g. retain them but do not use them for decision support)</li>
+      <td>Selected use of supported coded values</td>
+      <td>AllergyIntolerance.code</td>
+      <td>A consuming system, upon consideration, might choose to:<ul>
+          <li>use a supported coding from the received <code>AllergyIntolerance.code</code> (e.g. SNOMED substance code) to support adverse reaction checking while disregarding other unsupported codings</li>
+          <li>if a supported coding is not available, use the code text (<code>CodeableConcept.text</code>) and present appropriate warnings to users that automated reaction checking is unavailable for the imported entry</li>
+          <li>store all received codings but only use supported codings operationally (e.g. use supported codings for decision support)</li>
+          <li>store only supported codings and ignore unsupported codings</li>
           <li>reject the resource or document where required by business or safety rules (e.g. if the system cannot safely support allergy checking without a usable coding)</li>
         </ul>
       </td>
