@@ -2,25 +2,19 @@ The following examples are published with this guide and all are available as a 
 
 {% include nonnormative-example-boilerplate.md %}
 
-In addition to the examples defined in this implementation, synthetic (realistic but not real) test data for developers and testers that conforms to HL7 Australia FHIR implementation guides is maintained in the [HL7 AU FHIR Test Data](https://github.com/hl7au/au-fhir-test-data) repository. 
+In addition to the examples defined in this implementation guide, synthetic (realistic but not real) test data for developers and testers that conforms to HL7 Australia FHIR implementation guides is maintained in the [HL7 AU FHIR Test Data](https://github.com/hl7au/au-fhir-test-data) repository. 
 
-The AU PS Bundle examples include both technically focused examples intended to demonstrate specific features of AU PS profiles (e.g. `Composition.section.emptyReason`) and examples that demonstrate technical and clinical use case aspects that conform to AU PS requirements.  
-Data within the use cases examples (e.g. medications) is provided by the [Sparked Patient Summary Clinical Focus Group](https://sparked.csiro.au/index.php/design-groups/).
+### AU PS Bundle Examples
+The AU PS Bundle examples include both technically focused examples intended to demonstrate specific features of AU PS profiles (e.g. `Composition.section.emptyReason`) and examples that demonstrate technical and clinical use case aspects that conform to AU PS requirements.  Data within the use cases examples (e.g. medications) is provided by the [Sparked Patient Summary Clinical Focus Group](https://sparked.csiro.au/index.php/design-groups/).
 
-### Bundle Examples
-The table below identifies examples defined in this implementation guide.
+The examples defined in this implementation guide are limited to AU PS Bundle examples only. Standalone examples of AU PS profiles outside the context of a Bundle are not included.
 
-How to read this table:
-<ul>
-  <li><strong>Column headers</strong>: AU PS Bundle example name, linking to the rendered example in this guide.</li>
-  <li><strong>Use Case row</strong>: Links to the relevant Use Cases page in this guide, where applicable.</li>
-  <li><strong>Element rows</strong>: Composition elements are included only where AU PS allows reference to other profiles or resources. Elements that allow only one reference type are not listed (e.g. <code>Composition.subject</code>). <br> Cells show how the element is represented in each example, either by identifying the AU PS profile referenced in the Bundle or by identifying a specific Composition element used in the example (e.g. `emptyReason`).</li>
-  <li><strong>-</strong>: The example does not include this element.</li>
-</ul>
+#### Use Case Bundle Examples
+The table below identifies examples defined in this implementation guide. Where AU PS allows reference to more than one profile or resource, the Composition element is listed in the table along with the relevant AU PS profile or Composition element (e.g. `emptyReason`) used in the example.
 
 <table border="1" style="width: 100%; margin: auto; border-collapse: collapse;">
     <thead>
-        <tr>
+        <tr style="background-color: #cccccc;">
             <th>AU PS Bundle Example</th>
             <th><a href="Bundle-aups-basicsummary.html">Basic Summary</a></th>
             <th><a href="Bundle-aups-noknownx.html">No Known X</a></th>
@@ -31,7 +25,7 @@ How to read this table:
         </tr>
     </thead>
     <tbody>
-        <tr>
+        <tr style="background-color: #f0f8ff;">
             <td><strong>Use Case</strong></td>
             <td>-</td>
             <td>-</td>
@@ -62,7 +56,7 @@ How to read this table:
             <td><code>Composition.section:sectionProblems</code></td>
             <td>AU PS Condition</td>
             <td>AU PS Condition</td>
-            <td><code>emptyReason</code></td>
+            <td>emptyReason</td>
             <td>AU PS Condition</td>
             <td>AU PS Condition</td>
             <td>AU PS Condition</td>
@@ -71,7 +65,7 @@ How to read this table:
             <td><code>Composition.section:sectionAllergies</code></td>
             <td>AU PS AllergyIntolerance</td>
             <td>AU PS AllergyIntolerance</td>
-            <td><code>emptyReason</code></td>
+            <td>emptyReason</td>
             <td>AU PS AllergyIntolerance</td>
             <td>AU PS AllergyIntolerance</td>
             <td>AU PS AllergyIntolerance</td>
@@ -80,7 +74,7 @@ How to read this table:
             <td><code>Composition.section:sectionMedications</code></td>
             <td>AU PS MedicationStatement</td>
             <td>AU PS MedicationStatement</td>
-            <td><code>emptyReason</code></td>
+            <td>emptyReason</td>
             <td>AU PS MedicationRequest</td>
             <td>AU PS MedicationStatement</td>
             <td>AU PS MedicationStatement</td>
@@ -89,7 +83,7 @@ How to read this table:
             <td><code>Composition.section:sectionImmunizations</code></td>
             <td>-</td>
             <td>-</td>
-            <td><code>emptyReason</code></td>
+            <td>emptyReason</td>
             <td>AU PS Immunization</td>
             <td>AU PS Immunization</td>
             <td>AU PS Immunization</td>
@@ -215,22 +209,12 @@ How to read this table:
 </table>
 
 
-
-### Missing Data and Suppressed Data
-The table below identifies examples defined in this implementation guide that demonstrate missing data or suppressed data.
-
-How to read this table:
-<ul>
-  <li><strong>Column headers</strong>: AU PS Bundle example name, linking to the rendered example in this guide.</li>
-  <li><strong>Row groups</strong>: Indicate whether the example is demonstrating missing data or suppressed data.</li>
-  <li><strong>Element rows</strong>: Identify the element(s) in the example that demonstrate the missing or suppressed data.</li>
-  <li><strong>-</strong>: The example does not represent missing or suppressed data.</li>
-</ul>
-
+#### Missing Data and Suppressed Data Bundle Examples
+The table below identifies examples defined in this implementation guide that demonstrate missing data or suppressed data. The elements listed indicate the location of missing or suppressed data.
 
 <table border="1" style="width: 100%; margin: auto; border-collapse: collapse;">
     <thead>
-        <tr>
+        <tr style="background-color: #cccccc;">
             <th>AU PS Bundle example</th>
             <th><a href="Bundle-aups-section-emptyreason.html">Section empty reason</a></th>
             <th><a href="Bundle-aups-gpvisit-retrieval.html">Jeramy 27 May</a></th>
