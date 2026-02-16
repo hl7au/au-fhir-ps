@@ -5,14 +5,14 @@ The following examples are published with this guide and all are available as a 
 In addition to the examples defined in this implementation guide, synthetic (realistic but not real) test data for developers and testers that conforms to HL7 Australia FHIR implementation guides is maintained in the [HL7 AU FHIR Test Data](https://github.com/hl7au/au-fhir-test-data) repository. 
 
 ### AU PS Bundle Examples
-The only examples included in this guide are AU PS documents (i.e. Bundles); standalone examples of AU PS profiles are not provided.
+The examples included in this guide are AU PS documents (i.e. Bundles); standalone examples of AU PS profiles are not provided.
 
-The following examples are provided to demonstrate some parts of AU PS profiles (e.g. `Composition.section.emptyReason`, No Known X, Data Absent Reason extension) but are not intended to demonstrate clinical workflow or use case:
+A set of examples are provided to demonstrate some parts of AU PS profiles (e.g. `Composition.section.emptyReason`, No Known X, Data Absent Reason extension) but are not intended to demonstrate clinical workflows or use cases:
 - [Basic Summary](Bundle-aups-basicsummary.html)
 - [No Known X](Bundle-aups-noknownx.html)
 - [Section empty reason](Bundle-aups-section-emptyreason.html)
 
-The below examples demonstrate technical and clinical use case aspects, conforming to the AU PS requirements. Data within the use cases examples (e.g. medications) is provided by the [Sparked Patient Summary Clinical Focus Group](https://sparked.csiro.au/index.php/design-groups/).
+A set of examples demonstrate technical and clinical use case aspects, conforming to the AU PS requirements. Data within the use cases examples (e.g. medications) is provided by the [Sparked Patient Summary Clinical Focus Group](https://sparked.csiro.au/index.php/design-groups/):
 - [Jeramy 27 May](Bundle-aups-gpvisit-retrieval.html)
 - [Joyce 28 October](Bundle-aups-referral-endoconsult-curated.html)
 - [Joyce 07 November 2024](Bundle-aups-referral-endoconsult-autogen.html)
@@ -217,7 +217,7 @@ The table below identifies some major characteristics of the examples defined in
 
 
 #### Missing Data, Empty Sections, Known Absence of Data and Suppressed Data
-The table below identifies examples defined in this IG that demonstrate missing data, empty sections, known absence of data or suppressed data, and indicates example elements that illustrate each case. 
+The table below indicates the elements within examples that demonstrate apsects of [Missing Data, Empty Sections, Known Absence of Data](general-requirements.html#missing-data-empty-sections-known-absence-of-data). 
 
 <table border="1" style="width: 100%; margin: auto; border-collapse: collapse;">
     <thead>

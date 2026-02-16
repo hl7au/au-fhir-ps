@@ -253,7 +253,7 @@ Actor | Code | Definition | Notes
 |  [MAY:able-to-populate](https://hl7.org/fhir/extensions/CodeSystem-obligation.html#obligation-MAY.58able-to-populate)| Conformant applications producing resources MAY be able to correctly populate this element. | Typically, this means that an application needs to demonstrate during some conformance testing process that there are some conditions under which it populates the element with a correct value. (i.e. not a data-absent-reason or equivalent.)  
 {:.grid}
 
-*Must Support* elements are treated differently between [AU PS Consumer](ActorDefinition-au-ps-actor-consumer.html) and [AU PS Producer](ActorDefinition-au-ps-actor-producer.html) actors. *Must Support* on a profile element **SHALL** be interpreted as follows.
+Additional information on the SHALL:handle obligation is provided in the [Understanding the SHALL:handle Obligation](#understanding-the-shallhandle-obligation) section. *Must Support* elements are treated differently between [AU PS Consumer](ActorDefinition-au-ps-actor-consumer.html) and [AU PS Producer](ActorDefinition-au-ps-actor-producer.html) actors. *Must Support* on a profile element **SHALL** be interpreted as detailed in the [Interpreting Profile Elements Labelled Must Support](#interpreting-profile-elements-labelled-must-support) section.
 
 #### Presentation of Must Support and Obligation in Profiles
 All elements with *Must Support* in AU PS are accompanied by an explicit obligation that identifies the expectations for one or more actors. When rendered in an implementation guide, each profile is presented in different formal views under tabs labelled "Differential Table", "Key Elements Table", and "Snapshot Table". Elements labelled with *Must Support* and stated obligations in these views are represented by <span style="padding-left: 1px; padding-right: 1px; color: white; background-color: red" title="This element must be supported">S</span><span style="padding-left: 1px; padding-right: 1px; color: white; background-color: red" title="This element has obligations">O</span> as shown below. 
@@ -481,3 +481,92 @@ When claiming conformance to the AU PS Medication profile:
 - AU PS Consumers **SHALL** handle `Medication.code.coding` if present and containing any valid value. A valid value may be text, or may be a code from [Australian Medication](https://healthterminologies.gov.au/fhir/ValueSet/australian-medication-1) or [PBS Item Codes](https://build.fhir.org/ig/hl7au/au-fhir-base//ValueSet-pbs-item.html), or both, or some other code. AU PS Consumers **SHOULD** display the value of this element when presenting the data to a human user.
 
 Systems **MAY** populate other code systems but this is not a requirement of AU PS.
+
+##### Understanding the SHALL:handle Obligation
+In AU PS, all elements labelled as _Must Support_ have the [SHALL:handle](https://hl7.org/fhir/extensions/CodeSystem-obligation.html#obligation-SHALL.58handle) obligation for AU PS Consumers. For these elements:
+- AU PS Consumers **SHALL** handle all occurrences of the element if present in the resource and containing any valid value.
+
+The SHALL:handle obligation is defined broadly and does not specify what is required to handle the meaning of an element correctly. Additional support in understanding the application of this obligation in the context of AU PS is provided below.
+
+The SHALL:handle obligation requires a consuming system to understand the meaning of the element and recognise the consequences of not using any of the element data. Ignoring an element without considering these consequences constitutes non-conformance. During testing, system providers can be required to explain how their system uses element data and the implications of receiving values that are not supported. 
+
+Handling might involve processing, displaying, printing, persisting for later use, not using a particular element occurrence, raising an error, rejecting an entire document based on business or safety rules or applying a fallback behaviour (e.g. using narrative when structured data is unknown).
+
+The following table provides some examples of handling that a consuming system might implement based on understanding the meaning of an element and the consequences of not using the element within the system's context of use. These examples are non-exhaustive and intended to be useful but they are not a normative part of the specification nor are they fully representative of real world examples.
+
+<table border="1" cellspacing="0" cellpadding="0">
+  <thead>
+    <tr>
+      <th>Handling</th>
+      <th>Element</th>
+      <th>Example handling behaviour a system might choose, upon consideration</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Display</td>
+      <td><code>MedicationStatement.medication[x]</code></td>
+      <td><ul>
+          <li>display the medication text representation (<code>CodeableConcept.text</code>)</li>
+          <li>display both the element value and section narrative</li>
+          <li>display the section narrative only (<code>Composition.section.text</code>)</li>
+          <li>look up the code and display the retrieved display name from the terminology server</li>
+          <li>not display the element value</li>
+        </ul>
+      </td>
+    </tr>
+    <tr>
+      <td>Store and selective display</td>
+      <td><code>Patient.address</code></td>
+      <td><ul>
+          <li>store all addresses and display only addresses with <code>Address.use</code> value "home"</li>
+          <li>store and display all addresses</li>
+          <li>store all addresses but only display the most recent one</li>
+          <li>store only addresses with <code>Address.use</code> value of "home" or "billing" and display none</li>
+          <li>display validated structured address elements (e.g.<code>Address.line</code>, <code>Address.city</code>, <code>Address.postalCode</code>), otherwise display <code>Address.text</code></li>
+        </ul>
+      </td>
+    </tr>
+    <tr>
+      <td>Selective import</td>
+      <td><code>Condition.clinicalStatus</code></td>
+      <td><ul>
+          <li>import only Condition resources with <code>Condition.clinicalStatus</code> value of "active" and not use Condition resources with values such as "recurrence", "remission" or "relapse"</li>
+          <li>store all received Condition resources but only use a supported subset operationally (e.g. process only Condition resources with <code>Condition.clinicalStatus</code> of "active" as active problems)</li>
+          <li>reject the resource or the document where required by business or safety rules (e.g. if the system cannot safely interpret the clinical status. This can be because a non valid code was supplied.)</li>
+        </ul>
+      </td>
+    </tr>
+    <tr>
+      <td>Reject or restrict use</td>
+      <td><code>Composition.status</code></td>
+      <td><ul>
+          <li>not accept the document where <code>Composition.status</code> has value "entered-in-error"</li>
+          <li>accept and store the document with <code>Composition.status</code> "entered-in-error" but prevent its operational use (e.g. process as not clinically valid for ongoing care)</li>
+          <li>display a warning indicating the document is entered in error, and restrict further actions</li>
+        </ul>
+      </td>
+    </tr>
+    <tr>
+      <td>Do not use operationally</td>
+      <td><code>MedicationStatement.reasonCode</code>, <code>MedicationStatement.reasonReference</code></td>
+      <td><ul>
+          <li>not use <code>MedicationStatement.reasonCode</code> and <code>MedicationStatement.reasonReference</code> where this information is not required for its purpose, for example in a medication dispensing system preparing blister packaging</li>
+          <li>store but don't use it operationally (e.g. retain but do not use for decision support)</li>
+        </ul>
+      </td>
+    </tr>
+    <tr>
+      <td>Use of coded values</td>
+      <td><code>AllergyIntolerance.code</code></td>
+      <td><ul>
+          <li>use a supported coding (i.e. from the SNOMED CT value set) to support adverse reaction checking and not use other codings if present</li>
+          <li>use text (<code>CodeableConcept.text</code>) if a supported coding is not available and present appropriate warnings to users that automated adverse reaction checking is unavailable for the imported entry</li>
+          <li>store all received codings but only use supported codings operationally (e.g. use supported codings for decision support)</li>
+          <li>store only supported codings and not store unsupported codings</li>
+          <li>not accept the resource or document where required by business or safety rules (e.g. if the system cannot safely support adverse reaction checking because a supported coding has not been supplied)</li>
+        </ul>
+      </td>
+    </tr>
+  </tbody>
+</table>
