@@ -21,7 +21,7 @@ jobs:
       image: hl7fhir/ig-publisher-base  
       volumes:
         - /webroot:/webroot
-    
+            
     steps:
     
     # to save load time can build custom image with dependencies and push to docker hub
