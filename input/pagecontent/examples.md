@@ -270,9 +270,6 @@ The table below indicates the elements within examples that demonstrate apsects 
             <td><code>MedicationStatement.medicationCodeableConcept</code></td>
         </tr>
         <tr>
-            <td><code>MedicationStatement.medicationCodeableConcept</code></td>
-        </tr>
-        <tr>
             <td><code>Condition.code</code></td>
         </tr>
         <tr>
