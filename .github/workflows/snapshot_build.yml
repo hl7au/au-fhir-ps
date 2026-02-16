@@ -40,7 +40,7 @@ jobs:
       with:
         repository: hl7au/publications
 
-     - name: Download past versions
+    - name: Download past versions
       run: |
         aws s3 sync s3://hl7au-fhir-ig /webroot --only-show-errors
         ln -s /webroot webroot   
