@@ -10,7 +10,7 @@ The AU PS Bundle examples include both technically focused examples intended to 
 The examples defined in this implementation guide are limited to AU PS Bundle examples only. Standalone examples of AU PS profiles outside the context of a Bundle are not included.
 
 #### Use Case Bundle Examples
-The table below identifies use case examples defined in this implementation guide. Where AU PS allows reference to more than one profile or resource, the Composition element is listed in the table along with the relevant AU PS profile or Composition element (e.g. `emptyReason`) used in the example.
+The table below identifies examples defined in this implementation guide. Where AU PS allows reference to more than one profile or resource, the table shows the Composition element and the relevant AU PS profile or Composition element (e.g. `emptyReason`) used in the example.
 
 <table border="1" style="width: 100%; margin: auto; border-collapse: collapse;">
     <thead>
@@ -210,7 +210,7 @@ The table below identifies use case examples defined in this implementation guid
 
 
 #### Missing Data and Suppressed Data Bundle Examples
-The table below identifies examples defined in this implementation guide that demonstrate missing data or suppressed data. The elements listed indicate the location of missing or suppressed data.
+The table below identifies examples defined in this implementation guide that demonstrate missing data or suppressed data, and the specific elements in which data is missing or suppressed.
 
 <table border="1" style="width: 100%; margin: auto; border-collapse: collapse;">
     <thead>
@@ -226,7 +226,7 @@ The table below identifies examples defined in this implementation guide that de
             <td rowspan="3"><strong>Missing Data</strong></td>
             <td rowspan="3"><code>Patient.birthDate</code></td>
             <td><code>MedicationRequest.authoredOn</code></td>
-            <td rowspan="3">Observation.performer</td>
+            <td rowspan="3"><code>Observation.performer</code></td>
         </tr>
         <tr>
             <td><code>Immunization.occurrenceDateTime</code></td>
