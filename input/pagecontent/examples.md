@@ -5,12 +5,16 @@ The following examples are published with this guide and all are available as a 
 In addition to the examples defined in this implementation guide, synthetic (realistic but not real) test data for developers and testers that conforms to HL7 Australia FHIR implementation guides is maintained in the [HL7 AU FHIR Test Data](https://github.com/hl7au/au-fhir-test-data) repository. 
 
 ### AU PS Bundle Examples
-The AU PS Bundle examples include both technically focused examples intended to demonstrate specific features of AU PS profiles (e.g. `Composition.section.emptyReason`) and examples that demonstrate technical and clinical use case aspects that conform to AU PS requirements.  Data within the use cases examples (e.g. medications) is provided by the [Sparked Patient Summary Clinical Focus Group](https://sparked.csiro.au/index.php/design-groups/).
+The only examples included in this guide are AU PS documents (i.e. Bundles); standalone examples of AU PS profiles are not provided.
 
-The examples defined in this implementation guide are limited to AU PS Bundle examples only. Standalone examples of AU PS profiles outside the context of a Bundle are not included.
+The following examples are provided to demonstrate some parts of AU PS profiles (e.g. `Composition.section.emptyReason`, No Known X, Data Absent Reason extension) but are not intended to demonstrate clinical workflow or use case:
+- [Basic Summary](Bundle-aups-basicsummary.html)
+- [No Known X](Bundle-aups-noknownx.html)
+- [Section empty reason](Bundle-aups-section-emptyreason.html)
 
-#### Use Case Bundle Examples
-The table below identifies examples defined in this implementation guide. Where AU PS allows reference to more than one profile or resource, the table shows the Composition element and the relevant AU PS profile or Composition element (e.g. `emptyReason`) used in the example.
+The below examples demonstrate technical and clinical use case aspects, conforming to the AU PS requirements. Data within the use cases examples (e.g. medications) is provided by the [Sparked Patient Summary Clinical Focus Group](https://sparked.csiro.au/index.php/design-groups/).
+
+The table below identifies some major characteristics of the examples defined in this IG, e.g. the profile a section entry or Composition element is populated with.
 
 <table border="1" style="width: 100%; margin: auto; border-collapse: collapse;">
     <thead>
@@ -209,8 +213,8 @@ The table below identifies examples defined in this implementation guide. Where 
 </table>
 
 
-#### Missing Data and Suppressed Data Bundle Examples
-The table below identifies examples defined in this implementation guide that demonstrate missing data or suppressed data, and the specific elements in which data is missing or suppressed.
+#### Missing Data, Empty Sections, Known Absence of Data and Suppressed Data
+The table below identifies examples defined in this IG that demonstrate missing data, empty sections, known absence of data or suppressed data, and indicates example elements that illustrate each case. 
 
 <table border="1" style="width: 100%; margin: auto; border-collapse: collapse;">
     <thead>
@@ -219,6 +223,7 @@ The table below identifies examples defined in this implementation guide that de
             <th><a href="Bundle-aups-section-emptyreason.html">Section empty reason</a></th>
             <th><a href="Bundle-aups-gpvisit-retrieval.html">Jeramy 27 May</a></th>
             <th><a href="Bundle-aups-referral-endoconsult-autogen.html">Joyce 07 November 2024</a></th>
+            <th><a href="Bundle-aups-noknownx.html">No Known X</a></th>
         </tr>
     </thead>
     <tbody>
@@ -227,6 +232,7 @@ The table below identifies examples defined in this implementation guide that de
             <td rowspan="3"><code>Patient.birthDate</code></td>
             <td><code>MedicationRequest.authoredOn</code></td>
             <td rowspan="3"><code>Observation.performer</code></td>
+            <td rowspan="3"><code>-</code></td>
         </tr>
         <tr>
             <td><code>Immunization.occurrenceDateTime</code></td>
@@ -235,8 +241,35 @@ The table below identifies examples defined in this implementation guide that de
             <td><code>Observation.performer</code></td>
         </tr>
         <tr>
+            <td rowspan="4"><strong>Empty Sections</strong></td>
+            <td><code>Composition.section:sectionProblems</code></td>
+            <td rowspan="4">-</td>
+            <td rowspan="4">-</td>
+            <td rowspan="4">-</td>
+        </tr>
+        <tr>
+            <td><code>Composition.section:sectionAllergies</code></td>
+        </tr>
+        <tr>
+            <td><code>Composition.section:sectionMedications</code></td>
+        </tr>
+        <tr>
+            <td><code>Composition.section:sectionImmunizations</code></td>
+        </tr>
+        <tr>
+            <td rowspan="2"><strong>Known Absence of Data</strong></td>
+            <td rowspan="2">-</td>
+            <td rowspan="2">-</td>
+            <td rowspan="2">-</td>
+            <td><code>AllergyIntolerance.code</code></td>
+        </tr>
+        <tr>
+            <td><code>MedicationStatement.medicationCodeableConcept</code></td>
+        </tr>
+        <tr>
             <td rowspan="2"><strong>Suppressed Data</strong></td>
             <td><code>Patient.identifier</code></td>
+            <td rowspan="2">-</td>
             <td rowspan="2">-</td>
             <td rowspan="2">-</td>
         </tr>
