@@ -6,7 +6,7 @@ Systems claiming conformance to AU PS will represent digital health information 
 
 The requirements of the FHIR standard and [FHIR Conformance Rules](http://hl7.org/fhir/conformance-rules.html) apply, and define the use of terms in this guide including the conformance verbs - **SHALL**, **SHALL NOT**, **SHOULD**, **SHOULD NOT**, **MAY**.
 
-Implementers are advised to be familiar with the requirements of the FHIR standard and IPS when implementing AU PS, in particular:
+Implementers are advised to be familiar with the requirements of the FHIR standard and the IPS when implementing AU PS, in particular:
 - [IPS Generation and Data Inclusion](https://hl7.org/fhir/uv/ips/STU2/Generation-and-Data-Inclusion.html#generation-and-data-inclusion)
 - [IPS Narrative and Language Translation](https://hl7.org/fhir/uv/ips/STU2/Design-Conventions.html#narrative-and-language-translation)
 - [FHIR Terminology requirements](http://hl7.org/fhir/R4/terminologies.html)
@@ -94,7 +94,7 @@ For a mandatory section (minimum cardinality is > 0), the section **SHALL** be p
 
 AU PS Consumers are advised that other meaningful values can be captured in `Composition.section.emptyReason` beyond missing or suppressed.
   
-  Example: AU PS - Allergies and Intolerances Section where the patient's allergy information is not available.
+  Example: Allergies and Intolerances Section where the patient's allergy information is not available.
   ~~~
     ...
     "section" : [
@@ -134,7 +134,7 @@ Where the system does not have information for a particular section and there is
 * Asked but not known may be represented by sending the [Data Absent Reason](http://terminology.hl7.org/CodeSystem/data-absent-reason) code "asked-unknown"
 * Where the workflow does not obtain the information, it may be represented by sending the [List Empty Reason](https://hl7.org/fhir/R4/codesystem-list-empty-reason.html) code "notasked"
 
-Example: AU PS - Allergies and Intolerances Section where there is a workflow reason the patient's allergy information is not available.
+Example: Allergies and Intolerances Section where there is a workflow reason the patient's allergy information is not available.
 ~~~
   ...
   "section" : [
@@ -173,7 +173,7 @@ Where the system can assert "no known X" (for example, no known conditions) or "
 
 For example, to represent that a patient does not have an allergy or category of allergies, an appropriate negation code (e.g. 716186003 \|No known allergy\| or 1003774007 \|No known Hevea brasiliensis latex allergy\|) is used in `AllergyIntolerance.code` as per the profile specific implementation guidance.
 
-In AU PS this approach is preferred to using `Composition.section.emptyReason` due to the widely known and implemented patterns established within FHIR, IPS, and AU Core to assert "no known X" or "no history of X". 
+In AU PS this approach is preferred to using `Composition.section.emptyReason` due to the widely known and implemented patterns established within the FHIR standard, IPS, and AU Core. 
 
 
 Example: Condition resource representing 'No Known Problems'
@@ -202,7 +202,7 @@ In some circumstances, specific pieces of data are hidden:
 * if an optional element (minimum cardinality = 0) is not able to be shared, it **SHALL** be omitted.
 * if a mandatory element (minimum cardinality > 0) is not able to be shared, use the code `unknown` or `masked` from the [DataAbsentReason Code System](http://terminology.hl7.org/CodeSystem/data-absent-reason) following the section on [Missing Data](#missing-data).
 
-    Example: AU PS - Allergies and Intolerances Section where the patient's allergy information is not allowed to be shared.
+    Example: Allergies and Intolerances Section where the patient's allergy information is not allowed to be shared.
     ~~~
         ...
         "section" : [
