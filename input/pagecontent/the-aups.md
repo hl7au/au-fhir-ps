@@ -124,7 +124,7 @@ AU PS includes additional fixed value constraints on some elements either direct
 
 As AU PS incorporates requirements additional to IPS it is important to consider what is intended to happen (or the possible problems) if a system is expecting an AU PS document and receives an IPS document that doesn't conform to the national specification. For example an IPS document may not include Australian identifiers, or mandatory AU PS elements, or clinical terminology from a national set (see specific localisations listed above), or may include structured clinical data (e.g. allergies) that does not conform to either the IPS or AU PS profile.
 
-<div class="request-for-feedback" markdown=1>
+<div class="note-to-balloters" markdown=1>
 **What are the considerations and limitations when receiving an IPS document?**
 
 Implementers are requested to contribute their thoughts on considerations and limitations when receiving an IPS document that does not conform to AU PS document expectations. Contribute via comment on [FHIR-51547](https://jira.hl7.org/browse/FHIR-51547).
