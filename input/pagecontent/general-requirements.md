@@ -561,10 +561,10 @@ The following table provides some examples of handling that a consuming system m
       <td><code>AllergyIntolerance.code</code></td>
       <td><ul>
           <li>use a supported coding (i.e. from the SNOMED CT value set) to support adverse reaction checking and not use other codings if present</li>
-          <li>use text (<code>CodeableConcept.text</code>) if a supported coding is not available and present appropriate warnings to users that automated reaction checking is unavailable for the imported entry</li>
+          <li>use text (<code>CodeableConcept.text</code>) if a supported coding is not available and present appropriate warnings to users that automated adverse reaction checking is unavailable for the imported entry</li>
           <li>store all received codings but only use supported codings operationally (e.g. use supported codings for decision support)</li>
           <li>store only supported codings and not store unsupported codings</li>
-          <li>not accept the resource or document where required by business or safety rules (e.g. if the system cannot safely support allergy checking because a supported coding has not been supplied)</li>
+          <li>not accept the resource or document where required by business or safety rules (e.g. if the system cannot safely support adverse reaction checking because a supported coding has not been supplied)</li>
         </ul>
       </td>
     </tr>
