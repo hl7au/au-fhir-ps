@@ -59,7 +59,7 @@ The AU PS is based on [IPS](https://hl7.org/fhir/uv/ips/STU2//) and [AU Core](ht
 *Figure 3: The AU PS 'Passport'*
 <br/>
 
-While AU PS has no variance (i.e. fully compliant) from IPS Implementation Guide version 2.0.0-ci-build ([current](https://hl7.org/fhir/uv/ips/STU2/)), AU PS does impose requirements additional to IPS to support requirements in the Australian healthcare context (these primarily come from AUCDI and AU Core). These additional requirements are intentionally limited to maximise interoperability with IPS-aware systems. See [Comparison with other national and international IGs](comparison.html) and [Relationship with other IGs](relationship.html) for information on the national and international standards context of AU PS.
+While AU PS has no variance (i.e. fully compliant) from [IPS Implementation Guide 2.0.0](https://hl7.org/fhir/uv/ips/STU2/), AU PS does impose requirements additional to IPS to support requirements in the Australian healthcare context (these primarily come from AUCDI and AU Core). These additional requirements are intentionally limited to maximise interoperability with IPS-aware systems. See [Comparison with other national and international IGs](comparison.html) and [Relationship with other IGs](relationship.html) for information on the national and international standards context of AU PS.
 
 Additional requirements for the Australian healthcare context include:
 * additionally profiled resources
