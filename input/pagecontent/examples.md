@@ -232,7 +232,7 @@ The table below identifies examples defined in this IG that demonstrate missing 
             <td rowspan="3"><code>Patient.birthDate</code></td>
             <td><code>MedicationRequest.authoredOn</code></td>
             <td rowspan="3"><code>Observation.performer</code></td>
-            <td rowspan="3"><code>-</code></td>
+            <td rowspan="3">-</td>
         </tr>
         <tr>
             <td><code>Immunization.occurrenceDateTime</code></td>
