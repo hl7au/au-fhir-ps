@@ -260,14 +260,20 @@ The table below indicates the elements within examples that demonstrate apsects 
             <td><code>Composition.section:sectionImmunizations</code></td>
         </tr>
         <tr>
-            <td rowspan="2"><strong>Known Absence of Data</strong></td>
-            <td rowspan="2">-</td>
-            <td rowspan="2">-</td>
-            <td rowspan="2">-</td>
+            <td rowspan="3"><strong>Known Absence of Data</strong></td>
+            <td rowspan="3">-</td>
+            <td rowspan="3">-</td>
+            <td rowspan="3">-</td>
             <td><code>AllergyIntolerance.code</code></td>
         </tr>
         <tr>
             <td><code>MedicationStatement.medicationCodeableConcept</code></td>
+        </tr>
+        <tr>
+            <td><code>MedicationStatement.medicationCodeableConcept</code></td>
+        </tr>
+        <tr>
+            <td><code>Condition.code</code></td>
         </tr>
         <tr>
             <td rowspan="2"><strong>Suppressed Data</strong></td>
