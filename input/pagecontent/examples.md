@@ -10,7 +10,7 @@ The AU PS Bundle examples include both technically focused examples intended to 
 The examples defined in this implementation guide are limited to AU PS Bundle examples only. Standalone examples of AU PS profiles outside the context of a Bundle are not included.
 
 #### Use Case Bundle Examples
-The table below identifies examples defined in this implementation guide. Where AU PS allows reference to more than one profile or resource, the Composition element is listed in the table along with the relevant AU PS profile or Composition element (e.g. `emptyReason`) used in the example.
+The table below identifies use case examples defined in this implementation guide. Where AU PS allows reference to more than one profile or resource, the Composition element is listed in the table along with the relevant AU PS profile or Composition element (e.g. `emptyReason`) used in the example.
 
 <table border="1" style="width: 100%; margin: auto; border-collapse: collapse;">
     <thead>
