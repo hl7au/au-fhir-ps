@@ -13,6 +13,9 @@ The following examples are provided to demonstrate some parts of AU PS profiles 
 - [Section empty reason](Bundle-aups-section-emptyreason.html)
 
 The below examples demonstrate technical and clinical use case aspects, conforming to the AU PS requirements. Data within the use cases examples (e.g. medications) is provided by the [Sparked Patient Summary Clinical Focus Group](https://sparked.csiro.au/index.php/design-groups/).
+- [Jeramy 27 May](Bundle-aups-gpvisit-retrieval.html)
+- [Joyce 28 October](Bundle-aups-referral-endoconsult-curated.html)
+- [Joyce 07 November 2024](Bundle-aups-referral-endoconsult-autogen.html)
 
 The table below identifies some major characteristics of the examples defined in this IG, e.g. the profile a section entry or Composition element is populated with.
 
