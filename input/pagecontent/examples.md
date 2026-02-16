@@ -14,7 +14,7 @@ The table below identifies examples defined in this implementation guide. Where 
 
 <table border="1" style="width: 100%; margin: auto; border-collapse: collapse;">
     <thead>
-        <tr style="background-color: #cccccc;">
+        <tr style="background-color: #f2f2f2;">
             <th>AU PS Bundle Example</th>
             <th><a href="Bundle-aups-basicsummary.html">Basic Summary</a></th>
             <th><a href="Bundle-aups-noknownx.html">No Known X</a></th>
@@ -214,7 +214,7 @@ The table below identifies examples defined in this implementation guide that de
 
 <table border="1" style="width: 100%; margin: auto; border-collapse: collapse;">
     <thead>
-        <tr style="background-color: #cccccc;">
+        <tr style="background-color: #f2f2f2;">
             <th>AU PS Bundle example</th>
             <th><a href="Bundle-aups-section-emptyreason.html">Section empty reason</a></th>
             <th><a href="Bundle-aups-gpvisit-retrieval.html">Jeramy 27 May</a></th>
