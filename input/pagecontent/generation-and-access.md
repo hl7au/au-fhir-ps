@@ -26,9 +26,23 @@ The `$summary` operation returns a FHIR Bundle resource of type document. The re
 
 A consuming system can invoke the Patient `$summary` operation on a server to retrieve an on-demand, system generated patient summary document. The operation can also be used within a system to generate an initial patient summary document that a user can review, curate, assert, display, persist or take further action on.
 
-<div> 
-  <img src="ga-summaryoperation.png" alt="IPS Summary Operation" style="width:50%"/>
-</div>
+<p class="mermaid" alt="IPS Summary Operation">
+---
+config:
+  theme: default
+---
+sequenceDiagram
+participant Server as Patient Summary Server
+    participant Consumer as Patient Summary Consumer
+
+    alt
+        Consumer->>Server: Patient/$summary { identifier, ... }
+    else 
+        Consumer->>Server: Patient/[id]/$summary { ... }
+    end
+
+    Server-->>Consumer: Bundle { type: 'document' }
+</p>
 *Figure 1: The IPS Summary operation*
 <br/>
 
@@ -56,9 +70,19 @@ The document metadata provided in the returned DocumentReference resource can be
 
 The `$docref` operation supports multiple document retrieval use cases, including retrieving a patient summary document from a previous point in time, accessing the current patient summary document, and generating a new document on demand. The benefit of this operation is the use of a single endpoint to support these scenarios, including retrieval of other document types and formats such as HL7 CDA or PDF documents. This flexibility suggests that jurisdictional and implementation-level profiles may be necessary to clearly specify supported input parameters, document capabilities, and the expected output of the operation.
 
-<div> 
-  <img src="ga-docrefoperation.png" alt="IPA Fetch DocumentReference Operation" style="width:60%"/>
-</div>
+<p class="mermaid" alt="IPS DocumentReference Operation">
+---
+config:
+  theme: default
+---
+sequenceDiagram
+  participant Server as Patient Summary Server
+  participant Consumer as Patient Summary Consumer
+  Consumer->>Server: DocumentReference/$docref { ... }
+  Server-->>Consumer: Bundle { type: 'searchset', entry[]: DocumentReference }
+  Consumer->>Server: Bundle/[id] read
+  Server-->>Consumer: Bundle { type: 'document' }
+</p>
 *Figure 2: The IPA Fetch DocumentReference operation*
 <br/>
 
@@ -72,9 +96,37 @@ The user can optionally specify a passcode, which serves as the only access cont
 To aid in viewing and processing the patient summary document, the SHL can be prefixed with a URL to an SHL Receiving Application, and the complete link can be encoded as a QR code to facilitate sharing.
 
 When the receiving user submits the SHL to an SHL Receiving Application, the application decodes the SHL and, if required, requests a passcode from the receiving user. The decoded data and passcode is used to retrieve a file manifest from the SHL Sharing Application. The manifest contains a list of files - either via external URLs or embedded directly in the response. Once a file is retrieved or decoded, it is decrypted using the key contained in the SHL. The decrypted file contains the patient summary document as a FHIR Bundle resource, which can then be used by the SHL Receiving Application.
-<div> 
-  <img src="ga-smarthealthlinks.png" alt="SMART Health Links Patient Summary Exchange" style="width:100%"/>
-</div>
-*Figure 3: SMART Health Links Patient Summary exchange*
+
+<p class="mermaid"  alt="SMART Health Links Patient Summary Exchange" >
+---
+config:
+  theme: default
+---
+sequenceDiagram
+
+    participant SharingUser as Sharing User
+    participant SharingApp as SHL Sharing Application
+    participant ReceivingApp as SHL Receiving Application
+    participant ReceivingUser as Receiving User
+
+    SharingUser ->> SharingApp: Create SHL { passcode }
+    SharingApp -->> SharingUser: shlink:/ ...
+
+    SharingUser -->> ReceivingUser: Sharing user exchanges SHL with receiving user
+
+    ReceivingUser ->> ReceivingApp: View SHL #shlink:/ ...
+    ReceivingApp ->> SharingApp: POST manifest-url { recipient, passcode }
+    SharingApp -->> ReceivingApp: Manifest { files: [ { contentType, location | embedded } ]}
+
+    alt 
+        ReceivingApp ->> SharingApp: GET location
+        SharingApp -->> ReceivingApp: encrypted(Bundle { type: 'document' })
+    else
+        ReceivingApp ->> ReceivingApp: Decode embedded content
+    end
+
+    ReceivingApp ->> ReceivingApp: Decrypt (SHL key)
+</p>
+*Figure 3: SMART Health Links Patient Summary Exchange*
 <br/>
 

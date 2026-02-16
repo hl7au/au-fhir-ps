@@ -173,7 +173,7 @@ Where the system can assert "no known X" (for example, no known conditions) or "
 
 For example, to represent that a patient does not have an allergy or category of allergies, an appropriate negation code (e.g. 716186003 \|No known allergy\| or 1003774007 \|No known Hevea brasiliensis latex allergy\|) is used in `AllergyIntolerance.code` as per the profile specific implementation guidance.
 
-In AU PS this approach is preferred to using `Composition.section.emptyReason` due to the widely known and implemented patterns established within FHIR, IPS, and AU Core to assert "no known X" or "no history of X". 
+In AU PS this approach is preferred to using `Composition.section.emptyReason` due to the widely known and implemented patterns established within the FHIR standard, IPS, and AU Core to assert "no known X" or "no history of X". 
 
 
 Example: Condition resource representing 'No Known Problems'
@@ -282,6 +282,27 @@ For example, the profile [AU PS Patient](StructureDefinition-au-ps-patient.html)
 Typically AU PS profiles will inherit extended sub-elements from the base HL7 AU Core profile (which itself is based on an HL7 AU Base profile), e.g. the element `Medication.code` in profile [AU PS Medication](StructureDefinition-au-ps-medication.html) is of type CodeableConcept and is extended by inheriting a medicine specific sub-element `Medication.code.coding.extension` [Medication Type extension](http://build.fhir.org/ig/hl7au/au-fhir-base/StructureDefinition-medication-type.html) from the source profile [AU Base Medication](https://build.fhir.org/ig/hl7au/au-fhir-base/StructureDefinition-au-medication.html). 
 
 The full set of sub-elements is visible in the "Key Elements Table" or "Snapshot Table" which shows the sub-elements defined in this profile (shown in the "Differential Table") and the sub-elements inherited from a base profile.
+
+<div class="request-for-feedback" markdown=1>
+**Must Support - Elements with multiple cardinality**
+
+AU Patient Summary profiles include *Must Support* elements that have multiple cardinality (maximum > 1) e.g. `Composition.author`, `Patient.address` or `AllergyIntolerance.reaction.manifestation.coding`. Implementers are requested to contribute to clarifying the minimum expectations of *Must Support* obligation on elements with multiple cardinality by commenting on the Confluence page [AU PS Must Support - Elements with multiple cardinality](https://confluence.hl7.org/spaces/HAFWG/pages/413055047/AU+PS+Must+Support+-+Elements+with+multiple+cardinality).
+
+Different systems can have different internal support for elements with multiple occurrences. For example: 
+*	a system might have support for just one patient name with a maximum of 2 given names
+*	a system might have support for an internal organisation identifier, ABN and one HPI-O or it might support storing multiple HPI-Os
+*	a system might have support for an ongoing history of allergy reaction events, each with an onset date and up to 2 manifestations 
+*	a system might have support for a single manifestation field in their database
+*	a system might use a proprietary medicines database that has partial mapping to PBS item codes
+
+The following feedback on 'minimum' expectations of multiple cardinality and obligations is requested:
+1. For *Must Support* elements in an AU PS profile with multiple cardinality and obligation of SHALL:populate-if-known or SHALL:populate, is the minimum expectation that an AU PS Producer:
+* SHALL populate all known occurrences of the element; or
+* SHALL populate at least 1 known occurrence of the element; or
+* SHALL populate all relevant occurrences of the element?
+2. Confirm that for *Must Support* elements in an AU PS profile with obligation SHALL:handle, the minimum expectation is that an AU PS Consumer SHALL handle ALL known occurrences of an element?
+
+</div>
 
 ##### Must Support - Composition Sections
 Obligations vary significantly for elements in the AU PS Composition profile, in particular obligations on `Composition.section` reflect the expectations of [The "IPS"](https://hl7.org/fhir/uv/ips/STU2/Structure-of-the-International-Patient-Summary.html) and  [ISO 27269](https://www.iso.org/standard/79491.html). A summary is provided below:

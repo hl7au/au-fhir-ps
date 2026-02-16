@@ -12,6 +12,8 @@ As part of profile comparison, the requirements, constraints, and standards spec
 
 The table below provides a profile only comparison from AU PS to profiles in key implementation guides. Compliance in the reverse direction is not guaranteed, i.e. a resource that is compliant with an International Patient Summary profile **MAY NOT** be compliant with AU PS.
 
+The comparison considers **SHALL** and **SHOULD** requirements. **MAY** requirements are not compared.
+
 **Legend:**
 
 <img src="green_checkmark.png" width="20"/> **Compliant**: An AU PS compliant resource meets all requirements of the compared profile.
@@ -141,9 +143,6 @@ The table below provides a profile only comparison from AU PS to profiles in key
 </table>
 
 #### IPA Profile Additional Requirements
-[IPA 1.1.0](https://hl7.org/fhir/uv/ipa/STU1.1/) describes how an application acting on behalf of a patient can access patient information from a clinical records system using a FHIR-based API.
-
-##### Additional Requirements
 The following IPA profile(s) contain additional requirements. Implementers are advised to note that some code changes may be required to support these profiles.
 
 <table border="1" style="width: 100%; margin: auto; border-collapse: collapse;">
@@ -215,6 +214,10 @@ The following IPA profile(s) contain additional requirements. Implementers are a
 
 ##### Missing and Suppressed Data
 AU PS compliant resources are compliant with IPA requirements for Missing Data. IPA does not include requirements for Suppressed Data.
+
+##### Additional Profiles
+This version of AU PS has no equivalent profile for the following IPA profiles:
+- IPA-DocumentReference
 
 ### Capability Statement Comparison
 
