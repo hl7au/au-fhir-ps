@@ -253,9 +253,7 @@ Actor | Code | Definition | Notes
 |  [MAY:able-to-populate](https://hl7.org/fhir/extensions/CodeSystem-obligation.html#obligation-MAY.58able-to-populate)| Conformant applications producing resources MAY be able to correctly populate this element. | Typically, this means that an application needs to demonstrate during some conformance testing process that there are some conditions under which it populates the element with a correct value. (i.e. not a data-absent-reason or equivalent.)  
 {:.grid}
 
-*Must Support* elements are treated differently between [AU PS Consumer](ActorDefinition-au-ps-actor-consumer.html) and [AU PS Producer](ActorDefinition-au-ps-actor-producer.html) actors. *Must Support* on a profile element **SHALL** be interpreted as follows.
-
-Additional information on the SHALL:handle obligation is provided in the [Understanding the SHALL:handle Obligation](#understanding-the-shallhandle-obligation) section.
+Additional information on the SHALL:handle obligation is provided in the [Understanding the SHALL:handle Obligation](#understanding-the-shallhandle-obligation) section. *Must Support* elements are treated differently between [AU PS Consumer](ActorDefinition-au-ps-actor-consumer.html) and [AU PS Producer](ActorDefinition-au-ps-actor-producer.html) actors. *Must Support* on a profile element **SHALL** be interpreted as detailed in the [Interpreting Profile Elements Labelled Must Support](#interpreting-profile-elements-labelled-must-support) section.
 
 #### Presentation of Must Support and Obligation in Profiles
 All elements with *Must Support* in AU PS are accompanied by an explicit obligation that identifies the expectations for one or more actors. When rendered in an implementation guide, each profile is presented in different formal views under tabs labelled "Differential Table", "Key Elements Table", and "Snapshot Table". Elements labelled with *Must Support* and stated obligations in these views are represented by <span style="padding-left: 1px; padding-right: 1px; color: white; background-color: red" title="This element must be supported">S</span><span style="padding-left: 1px; padding-right: 1px; color: white; background-color: red" title="This element has obligations">O</span> as shown below. 
@@ -518,16 +516,6 @@ The following table provides some examples of handling that a consuming system m
       </td>
     </tr>
     <tr>
-      <td>Selective import</td>
-      <td><code>Condition.clinicalStatus</code></td>
-      <td><ul>
-          <li>import only Condition resources with <code>Condition.clinicalStatus</code> value of "active" and not use Condition resources with values such as "recurrence", "remission" or "relapse"</li>
-          <li>store all received Condition resources but only use a supported subset operationally (e.g. process only Condition resources with <code>Condition.clinicalStatus</code> of "active" as active problems)</li>
-          <li>reject the resource or the document where required by business or safety rules (e.g. if the system cannot safely interpret the clinical status. This can be because a non valid code was supplied.)</li>
-        </ul>
-      </td>
-    </tr>
-    <tr>
       <td>Store and selective display</td>
       <td><code>Patient.address</code></td>
       <td><ul>
@@ -540,11 +528,12 @@ The following table provides some examples of handling that a consuming system m
       </td>
     </tr>
     <tr>
-      <td>Print selected data</td>
-      <td><code>Patient.identifier</code></td>
+      <td>Selective import</td>
+      <td><code>Condition.clinicalStatus</code></td>
       <td><ul>
-        <li>print only selected identifiers relevant to its workflows (e.g. IHI and MRN)</li>
-        <li>print all received identifiers</li>
+          <li>import only Condition resources with <code>Condition.clinicalStatus</code> value of "active" and not use Condition resources with values such as "recurrence", "remission" or "relapse"</li>
+          <li>store all received Condition resources but only use a supported subset operationally (e.g. process only Condition resources with <code>Condition.clinicalStatus</code> of "active" as active problems)</li>
+          <li>reject the resource or the document where required by business or safety rules (e.g. if the system cannot safely interpret the clinical status. This can be because a non valid code was supplied.)</li>
         </ul>
       </td>
     </tr>
@@ -568,10 +557,10 @@ The following table provides some examples of handling that a consuming system m
       </td>
     </tr>
     <tr>
-      <td>Use of supported and unsupported coded values</td>
+      <td>Use of coded values</td>
       <td><code>AllergyIntolerance.code</code></td>
       <td><ul>
-          <li>use a supported coding from the received <code>AllergyIntolerance.code</code> (i.e. from the SNOMED CT value set)  to support adverse reaction checking and not use other codings if present</li>
+          <li>use a supported coding (i.e. from the SNOMED CT value set) to support adverse reaction checking and not use other codings if present</li>
           <li>use text (<code>CodeableConcept.text</code>) if a supported coding is not available and present appropriate warnings to users that automated reaction checking is unavailable for the imported entry</li>
           <li>store all received codings but only use supported codings operationally (e.g. use supported codings for decision support)</li>
           <li>store only supported codings and not store unsupported codings</li>
