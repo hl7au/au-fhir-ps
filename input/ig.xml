@@ -29,7 +29,7 @@
 			<code value="AU"/>
 		</coding>
 	</jurisdiction>
-	<copyright value="Used by permission of HL7 International, all rights reserved Creative Commons License. HL7 Australia© 2022+; Licensed Under Creative Commons No Rights Reserved."/>
+	<copyright value="Used by permission of HL7 International, all rights reserved Creative Commons License. HL7 Australia© 2024+; Licensed Under Creative Commons No Rights Reserved."/>
 	<packageId value="hl7.fhir.au.ps"/>
 	<license value="CC0-1.0"/>
 	<fhirVersion value="4.0.1"/>
