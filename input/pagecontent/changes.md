@@ -8,7 +8,7 @@ This change log documents the significant updates and resolutions implemented fr
 #### Changes in this version
 
 ###  Release 1.0.0-ballot
-- Publication date: 2025-02-16
+- Publication date: 2026-02-16
 - Publication status: Ballot for Working Standard
 - Based on FHIR version: 4.0.1
 
