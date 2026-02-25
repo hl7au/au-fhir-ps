@@ -341,6 +341,23 @@ For example, in the AU PS Practitioner Profile, the `name` element is labelled *
 - AU PS Producers **SHALL** correctly populate a value in `Practitioner.name.family` and `Practitioner.name.given` if the value for those sub-elements is known.
 - AU PS Consumers **SHALL** handle `Practitioner.name` if present and containing valid values in `Practitioner.name.family` and `Practitioner.name.given` sub-elements, and **SHOULD** display the value of at least the sub elements`Practitioner.name.family` and `Practitioner.name.given` when presenting the data to a human user.
 
+##### Must Support - Elements with multiple cardinality
+AU Patient Summary profiles have several *Must Support* elements that have multiple cardinality (max > 1), which may have obligation codes of *SHALL:populate-if-known* and *SHALL:handle*.  
+
+When an element with multiple cardinality is labelled as *Must Support* with an obligation of *SHALL:populate-if-known*, an AU PS Producer **SHALL** correctly populate *at least one known occurrence*. Where more than one occurrence is known, *all known occurrences* **SHOULD** be populated. 
+
+The following examples describe how systems can meet the *SHALL:populate-if-known* obligation for elements with multiple cardinality.
+
+* Organization identifier : An AU PS Producer can populate a single organisation identifier, such as an national provider identifier, rather than all known identifiers (e.g. medicare minor identifier, ABN, ACN). If a national provider identifier is not known, another known identifier would be used.
+
+* AllergyIntolerance reaction: An AU PS Producer can populate only the most recent reaction occurrence, even if a history of multiple occurrences with the same manifestation is available.
+  
+* CodeableConcept coding: An AU PS Producer can populate only a single coding from an international clinical terminology such as SNOMED-CT rather than also including additional local system coding values. However, if an appropriate SNOMED-CT coding is not known, the local system coding would be used.
+
+When an element with multiple cardinality is labelled as *Must Support* with an obligation of *SHALL:handle*, an AU PS Consumer **SHALL** *handle all occurrences* of the element by evaluating the consequences of not using any of the element occurrences. 
+
+See [Interpretation of the SHALL:handle Obligation](#interpretation-of-the-shallhandle-obligation) for examples using *SHALL:handle* obligation on elements with multiple cardinality.
+
 ##### Must Support - Resource References
 Some elements labelled as *Must Support* reference multiple resource types or profiles such as `Observation.performer`. In such cases: 
 - AU PS Producers **SHALL** correctly populate the element with at least one referenced resource or allowed profile if the value is known. 
@@ -366,7 +383,6 @@ Profile |Must Support Element|Reference
 [AU PS Pathology Result Observation](StructureDefinition-au-ps-diagnosticresult-path.html)|Observation.performer|AU PS Practitioner, AU PS PractitionerRole, AU PS Organization, AU PS Patient, AU PS RelatedPerson
 [AU PS Procedure](StructureDefinition-au-ps-procedure.html)|Procedure.reasonReference|AU PS Condition, Observation, AU PS Procedure, DocumentReference
 {:.grid}
-
 
 ##### Must Support - Choice of Data Types
 Some elements labelled as *Must Support* allow different data types such as `Observation.effective[x]`. In such cases:
