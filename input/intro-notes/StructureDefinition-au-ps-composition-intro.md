@@ -1,7 +1,7 @@
 {% include comparison-note-boilerplate.md %}
 
 ### Profile specific implementation guidance
-- Implementers need to be consider narrative content expectations and considerations, see the guidance in IPS [Narrative Content Guidance](https://hl7.org/fhir/uv/ips/STU2/Design-Conventions.html#narrative-content-guidance) for more information.
+- Implementers need to consider narrative content expectations and considerations, see the guidance in IPS [Narrative Content Guidance](https://hl7.org/fhir/uv/ips/STU2/Design-Conventions.html#narrative-content-guidance) for more information.
 - Implementers need to be aware of the requirements for representing missing data, empty sections, known absence of data:
    - Where data is missing for an element within a resource and the reason is not known (for example, the onset date of a particular allergy is not available in the system and the system does not know the reason for the absence), systems **SHALL** implement the requirements of the [Missing Data](general-requirements.html#missing-data) section.
    - Where data is missing for a section and the reason is not known (for example, where a source system does not have information on a patient's allergies), systems **SHALL** implement the requirements of the [Empty Sections](general-requirements.html#empty-sections) section.
