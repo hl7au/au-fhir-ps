@@ -32,6 +32,7 @@
         </type>
         <subject>
           <reference value="urn:uuid:03b8cc8a-df59-4daf-b9f2-8b49d3c7579a"/>
+        </subject>  
         <date value="2025-05-14"/>
         <author>
           <reference value="urn:uuid:719de42c-3b25-45d6-b24f-ebec9a753175"/>
