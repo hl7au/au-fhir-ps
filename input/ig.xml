@@ -43,6 +43,11 @@
 		<packageId value="hl7.fhir.au.core"/>
 		<version value="current"/>
 	</dependsOn>
+	<dependsOn>
+		<uri value="http://hl7.org/fhir/us/pcs/ImplementationGuide/hl7.fhir.us.pcs"/>
+		<packageId value="hl7.fhir.us.pcs"/>
+		<version value="current"/>
+	</dependsOn>
 	<definition>
 		<resource>
 			<reference>

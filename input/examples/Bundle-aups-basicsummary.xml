@@ -3,6 +3,7 @@
   <id value="aups-basicsummary"/>
   <meta>
     <profile value="http://hl7.org.au/fhir/ps/StructureDefinition/au-ps-bundle"/>
+    <profile value="http://hl7.org/fhir/us/pcs/StructureDefinition/Bundle-us-pcs"/>
   </meta>
   <language value="en-AU"/>
   <identifier>
