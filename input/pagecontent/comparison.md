@@ -270,8 +270,8 @@ The following US-PCS profile(s) contain additional requirements. Implementers ar
             <td style="width: 20%;"><i>Must Support</i> element in US-PCS.</td>
         </tr>
         <tr>
-            <td rowspan="20" style="width: 20%;"><a href="StructureDefinition-au-ps-composition.html">AU PS Composition</a></td>
-            <td rowspan="20" style="width: 20%;"><a href="https://build.fhir.org/ig/HL7/us-fhir-ps/en/StructureDefinition-Composition-us-pcs.html">Composition (US-PCS)</a></td>
+            <td rowspan="24" style="width: 20%;"><a href="StructureDefinition-au-ps-composition.html">AU PS Composition</a></td>
+            <td rowspan="24" style="width: 20%;"><a href="https://build.fhir.org/ig/HL7/us-fhir-ps/en/StructureDefinition-Composition-us-pcs.html">Composition (US-PCS)</a></td>
             <td style="width: 20%;">Composition.language</td>
             <td style="width: 20%;"><i>Must Support</i> element in US-PCS. Requires language of “en-US”.</td>
         </tr>
@@ -326,6 +326,22 @@ The following US-PCS profile(s) contain additional requirements. Implementers ar
         <tr>
             <td style="width: 20%;">Composition.relatesTo</td>
             <td style="width: 20%;"><i>Must Support</i> element in US-PCS.</td>
+        </tr>
+        <tr>
+            <td style="width: 20%;">Composition.relatesTo.target[x]</td>
+            <td style="width: 20%;">US-PCS allows type choice Identifier only.</td>
+        </tr>
+        <tr>
+            <td style="width: 20%;">Composition.relatesTo:replaced_document.targetIdentifier.system</td>
+            <td style="width: 20%;">US-PCS requires minimum of 1.</td>
+        </tr>
+        <tr>
+            <td style="width: 20%;">Composition.relatesTo:replaced_document.targetIdentifier.value</td>
+            <td style="width: 20%;">US-PCS requires minimum of 1.</td>
+        </tr>
+        <tr>
+            <td style="width: 20%;">Composition.relatesTo:appended_document.targetIdentifier.use</td>
+            <td style="width: 20%;">US-PCS requires minimum of 1.</td>
         </tr>
         <tr>
             <td style="width: 20%;">Composition.section[all slices].change-made</td>
