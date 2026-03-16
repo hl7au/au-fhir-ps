@@ -262,7 +262,7 @@ The following US-PCS profile(s) contain additional requirements. Implementers ar
             <td style="width: 20%;">US-PCS requires all entries to have a resource (1..1). <i>Must Support</i> element in IPA.</td>
         </tr>
         <tr>
-            <td style="width: 20%;">Bundle.timestamp</td>
+            <td style="width: 20%;">Bundle</td>
             <td style="width: 20%;">US-PCS requires the Bundle timestamp to be the same or after the Composition date (clindoc-timestamp-ge-compoDate).</td>
         </tr>
         <tr>
@@ -270,8 +270,8 @@ The following US-PCS profile(s) contain additional requirements. Implementers ar
             <td style="width: 20%;"><i>Must Support</i> element in US-PCS.</td>
         </tr>
         <tr>
-            <td rowspan="14" style="width: 20%;"><a href="StructureDefinition-au-ps-composition.html">AU PS Composition</a></td>
-            <td rowspan="14" style="width: 20%;"><a href="https://build.fhir.org/ig/HL7/us-fhir-ps/en/StructureDefinition-Composition-us-pcs.html">Composition (US-PCS)</a></td>
+            <td rowspan="20" style="width: 20%;"><a href="StructureDefinition-au-ps-composition.html">AU PS Composition</a></td>
+            <td rowspan="20" style="width: 20%;"><a href="https://build.fhir.org/ig/HL7/us-fhir-ps/en/StructureDefinition-Composition-us-pcs.html">Composition (US-PCS)</a></td>
             <td style="width: 20%;">Composition.language</td>
             <td style="width: 20%;"><i>Must Support</i> element in US-PCS. Requires language of “en-US”.</td>
         </tr>
@@ -324,9 +324,33 @@ The following US-PCS profile(s) contain additional requirements. Implementers ar
             <td style="width: 20%;">US-PCS requires minimum of 1.</td>
         </tr>
         <tr>
-            <td style="width: 20%;">Composition.section.change-made</td>
+            <td style="width: 20%;">Composition.relatesTo</td>
             <td style="width: 20%;"><i>Must Support</i> element in US-PCS.</td>
-        </tr>       
+        </tr>
+        <tr>
+            <td style="width: 20%;">Composition.section[all slices].change-made</td>
+            <td style="width: 20%;"><i>Must Support</i> element in US-PCS.</td>
+        </tr>   
+        <tr>
+            <td style="width: 20%;">Composition.section:sectionEncounters</td>
+            <td style="width: 20%;">US-PCS requires either section.entry or emptyReason (cmp-uspcs-1).</td>
+        </tr>
+        <tr>
+            <td style="width: 20%;">Composition.section:sectionImmunizations</td>
+            <td style="width: 20%;">US-PCS requires either section.entry or emptyReason (cmp-uspcs-1).</td>
+        </tr>
+        <tr>
+            <td style="width: 20%;">Composition.section:sectionProceduresHx</td>
+            <td style="width: 20%;">US-PCS requires either section.entry or emptyReason (cmp-uspcs-1).</td>
+        </tr>
+        <tr>
+            <td style="width: 20%;">Composition.section:sectionResults</td>
+            <td style="width: 20%;">US-PCS requires either section.entry or emptyReason (cmp-uspcs-1).</td>
+        </tr>
+        <tr>
+            <td style="width: 20%;">Composition</td>
+            <td style="width: 20%;">US-PCS prohibits participation types ENT (data enterer), INF (informant), IRCP (information recipient), PRCP (primary information recipient) and TRC (tracker) from being recorded in <a href="http://hl7.org/fhir/uv/fhir-clinical-document/StructureDefinition/ParticipantExtension">Participant Extension</a>; dedicated extensions shall be used instead (clindoc-limit-participantType).</td>
+        </tr>      
     </tbody>
 </table>
 
@@ -626,7 +650,7 @@ The following US Core profile(s) contain additional requirements. Implementers a
             <td style="width: 20%;">US Core requires minimum of 1. Element flagged as <i>Must Support</i> in US Core.</td>
         </tr>    
     <tr>
-            <td rowspan="6" style="width: 20%;"><a href="StructureDefinition-au-core-smokingstatus.html">AU Core Smoking Status</a></td>
+            <td rowspan="6" style="width: 20%;"><a href="StructureDefinition-au-ps-smokingstatus.html">AU PS Smoking Status</a></td>
             <td rowspan="6" style="width: 20%;"><a href="https://hl7.org/fhir/us/core/STU8/StructureDefinition-us-core-smokingstatus.html">US Core Smoking Status Observation Profile</a></td>
             <td style="width: 20%;">Observation.status</td>
             <td style="width: 20%;">US Core requires status of 'final' or 'entered-in-error'.</td>
@@ -650,25 +674,7 @@ The following US Core profile(s) contain additional requirements. Implementers a
         <tr>
             <td style="width: 20%;">Observation.value[x]:valueQuantity</td>
             <td style="width: 20%;">This US Core profile supports capture of tobacco smoking consumption as well as smoking status; AU Core does not. An instantiation of Tobacco smoking consumption is considered an 'additional profile' not an additional requirement.</td>
-        </tr>
-        <tr>
-            <td rowspan="4" style="width: 20%;"><a href="StructureDefinition-au-core-waistcircum.html">AU Core Waist Circumference</a></td>
-            <td rowspan="4" style="width: 20%;"><a href="https://hl7.org/fhir/us/core/STU8/StructureDefinition-us-core-simple-observation.html">US Core Vital Signs Profile</a></td>
-            <td style="width: 20%;">Observation.performer</td>
-            <td style="width: 20%;">Element flagged as <i>Must Support</i> in US Core.</td>
-        </tr>
-        <tr>
-            <td style="width: 20%;">Observation.code</td>
-            <td style="width: 20%;">US Core extensible binding to <a href="https://vsac.nlm.nih.gov/valueset/2.16.840.1.113883.3.88.12.80.62/expansion">Vital Sign Result Type</a>.</td>
-        </tr>
-        <tr>
-            <td style="width: 20%;">Observation.component.value[x]</td>
-            <td style="width: 20%;">Type choice Quantity is flagged as <i>Must Support</i> in US Core.</td>
-        </tr>
-        <tr>
-            <td style="width: 20%;">Observation.component.code</td>
-            <td style="width: 20%;">US Core extensible binding to <a href="https://vsac.nlm.nih.gov/valueset/2.16.840.1.113883.3.88.12.80.62/expansion">Vital Sign Result Type</a>.</td>
-        </tr>                                  
+        </tr>                              
     </tbody>
 </table>
 
