@@ -246,9 +246,9 @@ Actor | Code | Definition | Notes
 [AU PS Consumer actor](ActorDefinition-au-ps-actor-consumer.html) | [SHALL:handle](https://hl7.org/fhir/extensions/CodeSystem-obligation.html#obligation-SHALL.58handle) | Conformant applications SHALL handle the meaning of this element correctly. |  This rule is vague in that doesn't specify any particular handling of the element. But it's important because an application that ignores this element is non-conformant. A good example would be a status code of 'entered-in-error' - how exactly a Resource Consumer handles this depends on the use case etc., but the application can never simply ignore such a status code. Note that whether the resource or information from it is stored for later use is irrelevant - when the resource or information in it is processed, the consequences of the element are considered. In AU PS, all elements marked as _Must Support_ have this obligation applied.
 | [SHOULD:display](https://hl7.org/fhir/extensions/CodeSystem-obligation.html#obligation-SHOULD.58display) | Conformant applications SHOULD display the value of this element when presenting the data to a human user. | Exactly how it is displayed is not specified, but it means that a human looking at the content of the resource is made aware of the value of the element so that they can consider the meaning of the resource. In AU PS, most elements marked as _Must Support_ have this obligation applied.
 [AU PS Producer actor](ActorDefinition-au-ps-actor-producer.html) |[SHALL:populate](https://hl7.org/fhir/extensions/CodeSystem-obligation.html#obligation-SHALL.58populate)|Conformant applications producing resources SHALL include this element if a value is known and allowed to be shared| This implementation obligation means that whenever the producer knows the correct value for an element, it populates it. This is NOT the same as cardinality, as a 'populate' element can be omitted if no data exists or the data that exists is prohibited from being shared. SHALL:populate combines able-to-populate and populate-if-known for the element. 
-| [SHALL:able-to-populate](https://hl7.org/fhir/extensions/CodeSystem-obligation.html#obligation-SHALL.58able-to-populate) | Conformant applications producing resources SHALL be able to correctly populate this element. | Typically, this means that an application needs to demonstrate during some conformance testing process that there are some conditions under which it populates the element with a correct value. (i.e. not a data-absent-reason or equivalent.) This obligation does not impose expectations on the circumstances in which the element will be sent, only that it can be in at least some situations.
+| [SHALL:able-to-populate](https://hl7.org/fhir/extensions/CodeSystem-obligation.html#obligation-SHALL.58able-to-populate) | Conformant applications producing resources SHALL be able to correctly populate this element. | Typically, this means that an application needs to demonstrate during some conformance testing process that there are some conditions under which it populates the element with a correct value (i.e. not a data-absent-reason or equivalent). This obligation does not impose expectations on the circumstances in which the element will be sent, only that it can be in at least some situations.
 | [SHALL:populate-if-known](https://hl7.org/fhir/extensions/CodeSystem-obligation.html#obligation-SHALL.58populate-if-known) | Conformant applications producing resources SHALL correctly populate this element if they know a value for the element, but it is acceptable if the system is unable to ever know a value for the element. | This obligation does not impose a requirement to be able to know a value, unlike populate and able-to-populate which do. 'Knowing' an element means that a value for the element is available in memory, persistent store, or is otherwise available within the system claiming conformance. With the exception of AU PS Composition, all profiles referenced by AU PS Bundle have this obligation applied to elements marked as _Must Support_.
-| [SHOULD:able-to-populate](https://hl7.org/fhir/extensions/CodeSystem-obligation.html#obligation-SHOULD.58able-to-populate) | Conformant applications producing resources SHOULD be able to correctly populate this element. | Typically, this means that an application needs to demonstrate during some conformance testing process that there are some conditions under which it populates the element with a correct value. (i.e. not a data-absent-reason or equivalent.) This obligation does not impose expectations on the circumstances in which the element will be sent, only that it can be in at least some situations.
+| [SHOULD:able-to-populate](https://hl7.org/fhir/extensions/CodeSystem-obligation.html#obligation-SHOULD.58able-to-populate) | Conformant applications producing resources SHOULD be able to correctly populate this element. | Typically, this means that an application needs to demonstrate during some conformance testing process that there are some conditions under which it populates the element with a correct value (i.e. not a data-absent-reason or equivalent). This obligation does not impose expectations on the circumstances in which the element will be sent, only that it can be in at least some situations.
 | [SHOULD:populate-if-known](https://hl7.org/fhir/extensions/CodeSystem-obligation.html#obligation-SHOULD.58populate-if-known) | Conformant applications producing resources SHOULD correctly populate this element if they know a value for the element, but it is acceptable if the system is unable to ever know a value for the element. | This obligation does not impose a requirement to be able to know a value, unlike populate and able-to-populate which do. 'Knowing' an element means that a value for the element is available in memory, persistent store, or is otherwise available within the system claiming conformance. 
 |  [MAY:able-to-populate](https://hl7.org/fhir/extensions/CodeSystem-obligation.html#obligation-MAY.58able-to-populate)| Conformant applications producing resources MAY be able to correctly populate this element. | Typically, this means that an application needs to demonstrate during some conformance testing process that there are some conditions under which it populates the element with a correct value. (i.e. not a data-absent-reason or equivalent.)  
 {:.grid}
@@ -269,7 +269,7 @@ Implementers need to refer to the "Key Elements Table" to see the full set of el
 
 #### Interpreting Profile Elements Labelled Must Support
 
-The section is provided as additional support in understanding the application of *Must Support* and Obligations on elements in AU PS. This section does not override the Obligations defined for an actor - implementers are recommended to also read the profile specific implementation guidance for any qualifying requirements placed on the Obligations for a *Must Support* element.
+The section is provided as additional support in understanding the application of *Must Support* and obligations on elements in AU PS. This section does not override the obligations defined for an actor - implementers are recommended to also read the profile specific implementation guidance for any qualifying requirements placed on the obligations for a *Must Support* element.
 
 Profiles defined in this implementation guide flag *Must Support* on elements (e.g. `Patient.name`) and sub-elements of a data type (e.g. `Patient.name.use`). The explanation on how to interpret *Must Support* for an element does not address rules defined in each profile - which may limit or extend what is allowed for each element.
 
@@ -316,7 +316,7 @@ See [Structure of the Australian Patient Summary (AU PS)](the-aups.html#structur
 ##### Must Support - Primitive Elements
 Primitive elements are single elements with a primitive value. If a primitive element is labelled as *Must Support*: 
 - AU PS Producers **SHALL** correctly populate the element if a value is known. 
-- AU PS Consumers **SHALL** handle the element if present and containing any valid value, and **SHOULD** display the value of this element (if the SHOULD:display Obligation is defined) when presenting the data to a human user.
+- AU PS Consumers **SHALL** handle the element if present and containing any valid value, and **SHOULD** display the value of this element (if the SHOULD:display obligation is defined) when presenting the data to a human user.
 
 For example, the AU PS Organization Profile `name` element is a primitive string datatype. Therefore, when claiming conformance to this profile:
 - AU PS Producers **SHALL** correctly populate a value in `Organization.name` if a value is known.
@@ -327,7 +327,7 @@ Complex elements are composed of primitive and other complex elements. Elements 
 
 If a complex element is labelled as *Must Support*:
 - AU PS Producers **SHALL** correctly populate the element with at least one of the sub-element values if the value is known.
-- AU PS Consumers **SHALL** handle the element if present and containing any valid sub-element, and **SHOULD** display the value of this element (if the SHOULD:display Obligation is defined) when presenting the data to a human user.
+- AU PS Consumers **SHALL** handle the element if present and containing any valid sub-element, and **SHOULD** display the value of this element (if the SHOULD:display obligation is defined) when presenting the data to a human user.
 
 For example, the AU PS AllergyIntolerance Profile `note` element is labelled *Must Support* and has no *Must Support* sub-elements. When claiming conformance to this profile:
 - AU PS Producers **SHALL** correctly populate a value in any valid `AllergyIntolerance.note` sub-element if a value is known e.g. `AllergyIntolerance.note.text`.
@@ -335,16 +335,16 @@ For example, the AU PS AllergyIntolerance Profile `note` element is labelled *Mu
 
 If a sub-element is labelled as *Must Support*: 
 - AU PS Producers **SHALL** correctly populate the element with all *Must Support* sub-elements for which a value is known. 
-- AU PS Consumers **SHALL** handle the element if present and containing any *Must Support* sub-elements containing any valid value, and **SHOULD** display the value of this element (if the SHOULD:display Obligation is defined) when presenting the data to a human user.
+- AU PS Consumers **SHALL** handle the element if present and containing any *Must Support* sub-elements containing any valid value, and **SHOULD** display the value of this element (if the SHOULD:display obligation is defined) when presenting the data to a human user.
 
 For example, in the AU PS Practitioner Profile, the `name` element is labelled *Must Support* and has *Must Support* sub-elements `family` and `given`. When claiming conformance to this profile:
 - AU PS Producers **SHALL** correctly populate a value in `Practitioner.name.family` and `Practitioner.name.given` if the value for those sub-elements is known.
-- AU PS Consumers **SHALL** handle `Practitioner.name` if present and containing valid values in `Practitioner.name.family` and `Practitioner.name.given` sub-elements, and **SHOULD** display the value of at least the sub elements`Practitioner.name.family` and `Practitioner.name.given` when presenting the data to a human user.
+- AU PS Consumers **SHALL** handle `Practitioner.name` if present and containing valid values in `Practitioner.name.family` and `Practitioner.name.given` sub-elements, and **SHOULD** display the value of at least the sub elements `Practitioner.name.family` and `Practitioner.name.given` when presenting the data to a human user.
 
 ##### Must Support - Resource References
 Some elements labelled as *Must Support* reference multiple resource types or profiles such as `Observation.performer`. In such cases: 
 - AU PS Producers **SHALL** correctly populate the element with at least one referenced resource or allowed profile if the value is known. 
-- AU PS Consumers **SHALL** handle the element if present and containing any valid referenced resource or profiles, and **SHOULD** display the value of this element (if the SHOULD:display Obligation is defined) when presenting the data to a human user.
+- AU PS Consumers **SHALL** handle the element if present and containing any valid referenced resource or profiles, and **SHOULD** display the value of this element (if the SHOULD:display obligation is defined) when presenting the data to a human user.
 
 The table below provides a list of AU PS profile elements that allow multiple referenced resource types or profiles.
 
@@ -371,7 +371,7 @@ Profile |Must Support Element|Reference
 ##### Must Support - Choice of Data Types
 Some elements labelled as *Must Support* allow different data types such as `Observation.effective[x]`. In such cases:
 - AU PS Producers **SHALL** correctly populate the element with at least one data type allowed by the element definition if the value is known.
-- AU PS Consumers **SHALL** handle the element if present and containing any valid data type allowed by the element definition, and **SHOULD** display the value of this element (if the SHOULD:display Obligation is defined) when presenting the data to a human user.
+- AU PS Consumers **SHALL** handle the element if present and containing any valid data type allowed by the element definition, and **SHOULD** display the value of this element (if the SHOULD:display obligation is defined) when presenting the data to a human user.
 
 The table below provides a list of AU PS profile elements that allow multiple data types.
 

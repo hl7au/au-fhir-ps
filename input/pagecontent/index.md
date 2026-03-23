@@ -15,16 +15,16 @@ See [The AU PS](the-aups.html) for more information on the purpose, scope, conte
 
 ### Project Background
 
-This implementation guide is under development through the [AU Patient Summary FHIR IG project](https://confluence.hl7.org/display/HAFWG/AU+Patient+Summary+FHIR+IG+Project) as part of the [Sparked AU FHIR Accelerator](https://sparked.csiro.au). The Sparked AU FHIR Accelerator is a community comprising government, technology vendors, provider organisations, peak bodies, practitioners, and domain experts, to accelerate the creation and use of national FHIR standards in health care information exchange.
+This implementation guide is under development through the [AU Patient Summary FHIR IG project](https://confluence.hl7.org/spaces/HAAUCOREWG/pages/281216147/AU+Patient+Summary+FHIR+IG+Project) as part of the [Sparked AU FHIR Accelerator](https://sparked.csiro.au). The Sparked AU FHIR Accelerator is a community comprising government, technology vendors, provider organisations, peak bodies, practitioners, and domain experts, to accelerate the creation and use of national FHIR standards in health care information exchange.
 
 The AU Patient Summary Sparked project includes:
-- AUCDI - clinician focussed data requirements project.
+- Australian Clinical Data for Interoperability (AUCDI) - clinician focussed data requirements project.
 - AU PS FHIR Implementation Guide - HL7 Australia technical data specification.
 
 Additionally, a Patient Summary Clinical Focus Group (CFG), a sub-group of the Clinical Design Group, has developed a series of [consumer journeys](https://sparked.csiro.au/index.php/products-resources/au-ps-consumer-journeys/) that have been elaborated into a set of example use cases in this IG to provide guidance on how AU PS could be implemented.
 
 <div> 
-   <img src="AUPSTeamsContextb.png" alt="AU Patient Summary Development Context" style="width:75%"/>
+   <img src="AUPSTeamsContextb.png" alt="AU Patient Summary Development Context" style="width:100%"/>
   </div>
 *Figure 1: AU PS development context*
 <br/>
@@ -71,7 +71,7 @@ This guide is divided into several pages which are listed at the top of each pag
 ### Collaboration
 This guide is the product of collaborative work undertaken with participants from:
 
-* [HL7 Australia AU Core Technical Design Group](https://confluence.hl7.org/display/HAFWG/HL7+Australia+-+AU+Core+Technical+Design+Group+Home)
+* [HL7 Australia AU Core Work Group](https://confluence.hl7.org/spaces/HAAUCOREWG/pages/184913442/HL7+Australia+-+AU+Core+Work+Group+Home)
 * [HL7 Australia FHIR Working Group](https://confluence.hl7.org/display/HAFWG/HL7+Australia+FHIR+Work+Group+Home)
 * Australian FHIR Implementers Community
 
