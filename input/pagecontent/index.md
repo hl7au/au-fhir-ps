@@ -24,7 +24,7 @@ The AU Patient Summary Sparked project includes:
 Additionally, a Patient Summary Clinical Focus Group (CFG), a sub-group of the Clinical Design Group, has developed a series of [consumer journeys](https://sparked.csiro.au/index.php/products-resources/au-ps-consumer-journeys/) that have been elaborated into a set of example use cases in this IG to provide guidance on how AU PS could be implemented.
 
 <div> 
-   <img src="AUPSTeamsContextb.png" alt="AU Patient Summary Development Context" style="width:85%"/>
+   <img src="AUPSTeamsContextb.png" alt="AU Patient Summary Development Context" style="width:75%"/>
   </div>
 *Figure 1: AU PS development context*
 <br/>
