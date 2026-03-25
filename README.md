@@ -12,9 +12,9 @@ AU Patient Summary R1 is in currently in development.
 
 ### 1. Join the AU Patient Summary FHIR IG Calls
 
-See [How to Register - Participant Information](https://confluence.csiro.au/display/FHIR/How+to+Register+-+Participant+Information) for information on how to participate in AU Patient Summary FHIR IG call, the AU Core Technical Design Group, and Clinical Design Group as part of [Sparked](https://sparked.csiro.au/), the Australian FHIR Accelerator. 
+See [Register for Sparked](https://sparked.csiro.au/index.php/registration-form/) for information on how to participate in AU Patient Summary FHIR IG call, the AU Core Work Group, and Clinical Design Group as part of [Sparked](https://sparked.csiro.au/), the Australian FHIR Accelerator. 
 
-Visit the [AU Patient Summary FHIR IG Project page](https://confluence.hl7.org/display/HAFWG/AU+Patient+Summary+FHIR+IG+Project#AUPatientSummaryFHIRIGProject-MeetingIndex) and the [HL7 Australia - AU Core Technical Design Group Home](https://confluence.hl7.org/display/HAFWG/HL7+Australia+-+AU+Core+Technical+Design+Group+Home)
+Visit the [AU Patient Summary FHIR IG Project page](https://confluence.hl7.org/spaces/HAAUCOREWG/pages/281216147/AU+Patient+Summary+FHIR+IG+Project) and the [HL7 Australia - AU Core Work Group Home](https://confluence.hl7.org/spaces/HAAUCOREWG/pages/184913442/HL7+Australia+-+AU+Core+Work+Group+Home).
 
 ### 2. Discuss an issue in chat.fhir.org
 

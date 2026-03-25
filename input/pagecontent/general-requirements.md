@@ -259,7 +259,7 @@ Additional information on the SHALL:handle obligation is provided in the [Unders
 All elements with *Must Support* in AU PS are accompanied by an explicit obligation that identifies the expectations for one or more actors. When rendered in an implementation guide, each profile is presented in different formal views under tabs labelled "Differential Table", "Key Elements Table", and "Snapshot Table". Elements labelled with *Must Support* and stated obligations in these views are represented by <span style="padding-left: 1px; padding-right: 1px; color: white; background-color: red" title="This element must be supported">S</span><span style="padding-left: 1px; padding-right: 1px; color: white; background-color: red" title="This element has obligations">O</span> as shown below. 
 
  <div> 
-    <img src="allergyintolerance-keyelementstable.png" alt="AU PS AllergyIntolerance Key Elements Table" style="width:75%"/>
+    <img src="allergyintolerance-keyelementstable.png" alt="AU PS AllergyIntolerance Key Elements Table" style="width:60%"/>
   </div>
 *Figure 1: Key Elements Table View*
 <br/>
@@ -269,7 +269,7 @@ Implementers need to refer to the "Key Elements Table" to see the full set of el
 
 #### Interpreting Profile Elements Labelled Must Support
 
-The section is provided as additional support in understanding the application of *Must Support* and Obligations on elements in AU PS. This section does not override the Obligations defined for an actor - implementers are recommended to also read the profile specific implementation guidance for any qualifying requirements placed on the Obligations for a *Must Support* element.
+The section is provided as additional support in understanding the application of *Must Support* and obligations on elements in AU PS. This section does not override the obligations defined for an actor - implementers are recommended to also read the profile specific implementation guidance for any qualifying requirements placed on the obligations for a *Must Support* element.
 
 Profiles defined in this implementation guide flag *Must Support* on elements (e.g. `Patient.name`) and sub-elements of a data type (e.g. `Patient.name.use`). The explanation on how to interpret *Must Support* for an element does not address rules defined in each profile - which may limit or extend what is allowed for each element.
 
@@ -316,7 +316,7 @@ See [Structure of the Australian Patient Summary (AU PS)](the-aups.html#structur
 ##### Must Support - Primitive Elements
 Primitive elements are single elements with a primitive value. If a primitive element is labelled as *Must Support*: 
 - AU PS Producers **SHALL** correctly populate the element if a value is known. 
-- AU PS Consumers **SHALL** handle the element if present and containing any valid value, and **SHOULD** display the value of this element (if the SHOULD:display Obligation is defined) when presenting the data to a human user.
+- AU PS Consumers **SHALL** handle the element if present and containing any valid value, and **SHOULD** display the value of this element (if the SHOULD:display obligation is defined) when presenting the data to a human user.
 
 For example, the AU PS Organization Profile `name` element is a primitive string datatype. Therefore, when claiming conformance to this profile:
 - AU PS Producers **SHALL** correctly populate a value in `Organization.name` if a value is known.
@@ -327,7 +327,7 @@ Complex elements are composed of primitive and other complex elements. Elements 
 
 If a complex element is labelled as *Must Support*:
 - AU PS Producers **SHALL** correctly populate the element with at least one of the sub-element values if the value is known.
-- AU PS Consumers **SHALL** handle the element if present and containing any valid sub-element, and **SHOULD** display the value of this element (if the SHOULD:display Obligation is defined) when presenting the data to a human user.
+- AU PS Consumers **SHALL** handle the element if present and containing any valid sub-element, and **SHOULD** display the value of this element (if the SHOULD:display obligation is defined) when presenting the data to a human user.
 
 For example, the AU PS AllergyIntolerance Profile `note` element is labelled *Must Support* and has no *Must Support* sub-elements. When claiming conformance to this profile:
 - AU PS Producers **SHALL** correctly populate a value in any valid `AllergyIntolerance.note` sub-element if a value is known e.g. `AllergyIntolerance.note.text`.
@@ -335,16 +335,16 @@ For example, the AU PS AllergyIntolerance Profile `note` element is labelled *Mu
 
 If a sub-element is labelled as *Must Support*: 
 - AU PS Producers **SHALL** correctly populate the element with all *Must Support* sub-elements for which a value is known. 
-- AU PS Consumers **SHALL** handle the element if present and containing any *Must Support* sub-elements containing any valid value, and **SHOULD** display the value of this element (if the SHOULD:display Obligation is defined) when presenting the data to a human user.
+- AU PS Consumers **SHALL** handle the element if present and containing any *Must Support* sub-elements containing any valid value, and **SHOULD** display the value of this element (if the SHOULD:display obligation is defined) when presenting the data to a human user.
 
 For example, in the AU PS Practitioner Profile, the `name` element is labelled *Must Support* and has *Must Support* sub-elements `family` and `given`. When claiming conformance to this profile:
 - AU PS Producers **SHALL** correctly populate a value in `Practitioner.name.family` and `Practitioner.name.given` if the value for those sub-elements is known.
-- AU PS Consumers **SHALL** handle `Practitioner.name` if present and containing valid values in `Practitioner.name.family` and `Practitioner.name.given` sub-elements, and **SHOULD** display the value of at least the sub elements`Practitioner.name.family` and `Practitioner.name.given` when presenting the data to a human user.
+- AU PS Consumers **SHALL** handle `Practitioner.name` if present and containing valid values in `Practitioner.name.family` and `Practitioner.name.given` sub-elements, and **SHOULD** display the value of at least the sub elements `Practitioner.name.family` and `Practitioner.name.given` when presenting the data to a human user.
 
 ##### Must Support - Resource References
 Some elements labelled as *Must Support* reference multiple resource types or profiles such as `Observation.performer`. In such cases: 
 - AU PS Producers **SHALL** correctly populate the element with at least one referenced resource or allowed profile if the value is known. 
-- AU PS Consumers **SHALL** handle the element if present and containing any valid referenced resource or profiles, and **SHOULD** display the value of this element (if the SHOULD:display Obligation is defined) when presenting the data to a human user.
+- AU PS Consumers **SHALL** handle the element if present and containing any valid referenced resource or profiles, and **SHOULD** display the value of this element (if the SHOULD:display obligation is defined) when presenting the data to a human user.
 
 The table below provides a list of AU PS profile elements that allow multiple referenced resource types or profiles.
 
@@ -371,7 +371,7 @@ Profile |Must Support Element|Reference
 ##### Must Support - Choice of Data Types
 Some elements labelled as *Must Support* allow different data types such as `Observation.effective[x]`. In such cases:
 - AU PS Producers **SHALL** correctly populate the element with at least one data type allowed by the element definition if the value is known.
-- AU PS Consumers **SHALL** handle the element if present and containing any valid data type allowed by the element definition, and **SHOULD** display the value of this element (if the SHOULD:display Obligation is defined) when presenting the data to a human user.
+- AU PS Consumers **SHALL** handle the element if present and containing any valid data type allowed by the element definition, and **SHOULD** display the value of this element (if the SHOULD:display obligation is defined) when presenting the data to a human user.
 
 The table below provides a list of AU PS profile elements that allow multiple data types.
 
@@ -396,7 +396,7 @@ Profile |Must Support Element|Data Types
 {:.grid}
 
 Some data type choices are labelled as *Must Support* and apply an additional obligation of [SHOULD:able-to-populate](https://hl7.org/fhir/extensions/CodeSystem-obligation.html#obligation-SHOULD.58able-to-populate). In such cases:
-- AU PS Producers **SHOULD** be capable of correctly populating the element with this data type. Typically, this means that an application needs to demonstrate during some conformance testing process that there are some conditions under which it populates the element with a correct value. (i.e. not a data-absent-reason or equivalent.)
+- AU PS Producers **SHOULD** be capable of correctly populating the element with this data type. Typically, this means that an application needs to demonstrate during some conformance testing process that there are some conditions under which it populates the element with a correct value (i.e. not a data-absent-reason or equivalent).
 
 The table below provides a list of AU PS profile elements where a data type choice is labelled [SHOULD:able-to-populate](https://hl7.org/fhir/extensions/CodeSystem-obligation.html#obligation-SHOULD.58able-to-populate).
 

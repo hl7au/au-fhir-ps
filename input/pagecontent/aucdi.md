@@ -314,7 +314,7 @@ Column attribute descriptions are as follows:
     <td colspan="2">Date of ultrasound</td>
     <td><a href="https://hl7.org/fhir/uv/ips/STU2/StructureDefinition-Observation-pregnancy-edd-uv-ips.html">Observation Pregnancy - Expected Delivery Date (IPS)</a></td>
     <td><code>Observation.effectiveDateTime</code></td>
-    <td rowspan="2">AUCDI elements Date of ultrasound and Estimated data of delivery by ultrasound would be grouped together in the same Observation, separate to Estimated data of delivery by menstrual cycle.</td>
+    <td rowspan="2">AUCDI elements Date of ultrasound and Estimated date of delivery by ultrasound would be grouped together in the same Observation, separate to Estimated data of delivery by menstrual cycle.</td>
   </tr>
   <tr>
     <td colspan="2">EDD by ultrasound</td>
