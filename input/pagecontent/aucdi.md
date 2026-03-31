@@ -285,7 +285,7 @@ Column attribute descriptions are as follows:
   <tr>
     <td colspan="2">Date of administration</td>
     <td><a href="StructureDefinition-au-ps-immunization.html">AU PS Immunization</a></td>
-    <td><code>Immunization.occurenceDateTime</code></td>
+    <td><code>Immunization.occurrenceDateTime</code></td>
     <td></td>
   </tr>
   <tr>

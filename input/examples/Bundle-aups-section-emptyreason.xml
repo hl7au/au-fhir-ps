@@ -12,10 +12,10 @@
   <type value="document"/>
   <timestamp value="2025-01-08T20:42:11.0607701+10:00"/>
   <entry>
-    <fullUrl value="urn:uuid:514af4c1-194d-48b4-8afe-7be09d3f895a"/>
+    <fullUrl value="urn:uuid:40e448e9-e323-4941-bb7c-60b0a91ac950"/>
     <resource>
       <Composition>
-        <id value="514af4c1-194d-48b4-8afe-7be09d3f895a"/>
+        <id value="40e448e9-e323-4941-bb7c-60b0a91ac950"/>
         <meta>
           <versionId value="1"/>
         </meta>
@@ -35,7 +35,7 @@
         <author>
           <reference value="urn:uuid:715076f4-007a-4c9d-beed-c155cc46f765"/>
         </author>
-        <title value="International Patient Summary"/>
+        <title value="Australian Patient Summary"/>
         <custodian>
           <reference value="urn:uuid:70a756e3-20b3-4637-8601-a222983e295a"/>
         </custodian>
