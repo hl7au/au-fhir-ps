@@ -1713,7 +1713,7 @@
         </extension>
       </extension>
       <path value="Composition.section.entry"/>
-      <comment value="Implementers populating `Composition.section:sectionResults.entry:results-observation-radiology` with [Observation Results - Radiology (IPS)](https://hl7.org/fhir/uv/ips/STU2/StructureDefinition-Observation-results-radiology-uv-ips.html) are recommended to consider the corresponding [AU Base Diagnostic Imaging Report](https://build.fhir.org/ig/hl7au/au-fhir-base/StructureDefinition-au-imagingresult.html#usage-notes) profile as guidance for that resource type in an Australian healthcare context."/>
+      <comment value="Implementers populating `Composition.section:sectionResults.entry:results-observation-radiology` with [Observation Results - Radiology (IPS)](https://hl7.org/fhir/uv/ips/STU2/StructureDefinition-Observation-results-radiology-uv-ips.html) are recommended to consider the corresponding [AU Base Diagnostic Imaging Report](https://build.fhir.org/ig/hl7au/au-fhir-base/StructureDefinition-au-imagingresult.html) profile as guidance for that resource type in an Australian healthcare context."/>
       <sliceName value="results-observation-radiology"/>
       <min value="0"/>
       <max value="*"/>
@@ -1741,7 +1741,7 @@
         </extension>
       </extension>
       <path value="Composition.section.entry"/>
-      <comment value="Implementers populating `Composition.section:sectionResults.entry:results-diagnosticReport` with [DiagnosticReport (IPS)](https://hl7.org/fhir/uv/ips/STU2/StructureDefinition-DiagnosticReport-uv-ips.html) are recommended to consider the corresponding [AU Base DiagnosticReport](https://build.fhir.org/ig/hl7au/au-fhir-base/StructureDefinition-au-diagnosticreport.html#usage-notes) profile as guidance for that resource type in an Australian healthcare context."/>
+      <comment value="Implementers populating `Composition.section:sectionResults.entry:results-diagnosticReport` with [DiagnosticReport (IPS)](https://hl7.org/fhir/uv/ips/STU2/StructureDefinition-DiagnosticReport-uv-ips.html) are recommended to consider the corresponding [AU Base DiagnosticReport](https://build.fhir.org/ig/hl7au/au-fhir-base/StructureDefinition-au-diagnosticreport.html) profile as guidance for that resource type in an Australian healthcare context."/>
       <sliceName value="results-diagnosticReport"/>
       <min value="0"/>
       <max value="*"/>
