@@ -18,13 +18,13 @@ Dr Cruickshank accesses and compares both the original embedded summary and the 
 Based on updated data - particularly around Joyce's medication regimen - Dr Cruickshank adjusts Joyce’s insulin dosage and documents the decision.
 
 An updated treatment plan is then shared with Joyce and Dr Burrows to maintain continuity of care across providers.
+
+This use case demonstrates use of patient summary during step 4. Endocrinologist Consultation of the [Referral to Specialist and Allied Health consumer journey](https://sparked.csiro.au/index.php/products-resources/au-ps-consumer-journeys/).
 <div> 
   <img src="uc-referral-cj.png" alt="Referral to Specialist and Allied Health consumer journey" style="width:65%" />
 </div>
 *Figure 1: Referral to Specialist and Allied Health consumer journey*
 <br/>
-
-This use case demonstrates use of patient summary during step 4. Endocrinologist Consultation of the [Referral to Specialist and Allied Health consumer journey](https://sparked.csiro.au/index.php/products-resources/au-ps-consumer-journeys/).
 
 ### Actors
 
@@ -75,5 +75,5 @@ sequenceDiagram
 ### Examples
 
 The following examples demonstrate technical and clinical use case aspects, conforming to the AU Patient Summary requirements. Data within these examples, e.g. medications, is provided by the [Sparked Patient Summary Clinical Focus Group](https://sparked.csiro.au/index.php/design-groups/):
-1. Patient Summary Embedded in Referral: [Patient Summary for Joyce Johnson as of 28 OCT 2024 (Bundle)](Bundle-aups-referral-endoconsult-curated.html)
-1. More recent Patient Summary: [Patient Summary for Joyce Johnson as of 07 NOV 2024 (Bundle)](Bundle-aups-referral-endoconsult-autogen.html)
+1. Patient Summary Embedded in Referral (Human Authored): [Patient Summary for Joyce Johnson as of 28 OCT 2024 (Bundle)](Bundle-aups-referral-endoconsult-curated.html)
+1. More recent Patient Summary (Device Authored): [Patient Summary for Joyce Johnson as of 07 NOV 2024 (Bundle)](Bundle-aups-referral-endoconsult-autogen.html)
