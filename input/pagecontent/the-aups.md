@@ -56,7 +56,6 @@ The AU PS is based on [IPS](https://hl7.org/fhir/uv/ips/STU2//) and [AU Core](ht
 <div> 
    <img src="AUPSPassport.png" alt="The AU PS 'Passport'" style="width:35%"/>
   </div>
-<br/>
 *Figure 3: The AU PS - a valid AU PS document is a valid IPS document.*
 <br/>
 
