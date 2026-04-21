@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Bundle xmlns="http://hl7.org/fhir">
+  <id value="aups-patient-story"/>
+  <meta>
+    <profile value="http://hl7.org.au/fhir/ps/StructureDefinition/au-ps-bundle"/>
+  </meta>
+  <language value="en-AU"/>
+  <identifier>
+    <system value="urn:ietf:rfc:3986"/>
+    <value value="urn:uuid:e4f12f49-43e8-435e-8680-453c509dc0e5"/>
+  </identifier>
+  <type value="document"/>
+  <timestamp value="2025-04-21T19:32:10.0607701+10:00"/>
+  <entry>
+    <fullUrl value="urn:uuid:40e448e9-e323-4941-bb7c-60b0a91ac950"/>
+    <resource>
+      <Composition>
+        <id value="048c37d9-9f41-4223-a8b2-ed322cb2f056"/>
+        <language value="en-AU"/>
+        <status value="final"/>
+        <type>
+          <coding>
+            <system value="http://loinc.org"/>
+            <code value="60591-5"/>
+            <display value="Patient summary Document"/>
+          </coding>
+        </type>
+        <subject>
+          <reference value="urn:uuid:f88cc963-56bd-42e7-930d-3b18db0fa723"/>
+        </subject>
+        <date value="2025-04-21"/>
+        <author>
+          <reference value="urn:uuid:f88cc963-56bd-42e7-930d-3b18db0fa723"/>
+        </author>
+        <title value="Australian Patient Summary"/>
+        <event>
+          <code>
+            <coding>
+              <system value="http://terminology.hl7.org/CodeSystem/v3-ActClass"/>
+              <code value="PCPR"/>
+            </coding>
+          </code>
+          <period>
+            <end value="2025-01-08"/>
+          </period>
+        </event>
+        <section>
+          <title value="Allergies and Intolerances"/>
+          <code>
+            <coding>
+              <system value="http://loinc.org"/>
+              <code value="48765-2"/>
+              <display value="Allergies and adverse reactions Document"/>
+            </coding>
+          </code>
+          <text>
+            <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml" lang="en-AU" xml:lang="en-AU">No information is provided about the patient's allergies and intolerances.</div>
+          </text>
+          <emptyReason>
+            <coding>
+              <system value="http://terminology.hl7.org/CodeSystem/list-empty-reason"/>
+              <code value="unavailable"/>
+              <display value="Unavailable"/>
+            </coding>
+            <text value="No information available"/>
+          </emptyReason>
+        </section>
+        <section>
+          <title value="Problem List"/>
+          <code>
+            <coding>
+              <system value="http://loinc.org"/>
+              <code value="11450-4"/>
+              <display value="Problem list - Reported"/>
+            </coding>
+          </code>
+          <text>
+            <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml" lang="en-AU" xml:lang="en-AU">No information is provided about the patient's medical problems.</div>
+          </text>
+          <emptyReason>
+            <coding>
+              <system value="http://terminology.hl7.org/CodeSystem/list-empty-reason"/>
+              <code value="unavailable"/>
+              <display value="Unavailable"/>
+            </coding>
+            <text value="No information available"/>
+          </emptyReason>
+        </section>
+        <section>
+          <title value="Medication Summary"/>
+          <code>
+            <coding>
+              <system value="http://loinc.org"/>
+              <code value="10160-0"/>
+              <display value="History of Medication use Narrative"/>
+            </coding>
+          </code>
+          <text>
+            <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml" lang="en-AU" xml:lang="en-AU">No information is provided about the patient's medications.</div>
+          </text>
+          <emptyReason>
+            <coding>
+              <system value="http://terminology.hl7.org/CodeSystem/list-empty-reason"/>
+              <code value="unavailable"/>
+              <display value="Unavailable"/>
+            </coding>
+            <text value="No information available"/>
+          </emptyReason>
+        </section>
+        <section>
+          <title value="Patient Story"/>
+          <code>
+            <coding>
+              <system value="http://loinc.org"/>
+              <code value="81338-6"/>
+              <display value="Patient Goals, preferences, and priorities for care experience"/>
+            </coding>
+          </code>
+          <text>
+            <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml" lang="en-AU" xml:lang="en-AU"><p>I'm 81 and I've been dealing with prostate cancer that's come back and spread to my bones. Recently I ended up in hospital with terrible pain in my back and stomach, along with some other problems, but they got me sorted and I'm back home now.</p>\n<p>My wife and I live in a beautiful valley that we've called home for many years. Our garden is my pride and joy - I've put decades of work into it and being able to potter around out there means everything to me. We're active in our local community too, especially with the choral group that puts on the Christmas carols each year. It's a close-knit community and I know most of the staff at the local hospital.\nOur kids are spread out across the country, with some a couple of hours away in the city. That's where my GP is too - I've been seeing him for years and really trust him, but I'll be honest, the two-hour drive is getting harder and harder.\nThe cancer has caused me quite a few problems - my digestion is troublesome, I've had skin issues, and I'm not fighting off infections like I used to. I'm taking supplements to keep my weight up. I've also noticed I'm not quite as sharp as I was, which is frustrating.\nWhat matters most to me is staying in my own home, in my garden, for as long as I possibly can. I know there may come a time when that's not practical, and I'm trying to accept that. My main worry is keeping the pain under control - I don't want to suffer. If it comes to it, I'd rather have quality time than drag things out. This is my home, and I want to make the most of whatever time I have left here.\n<strong>Goals:</strong>\n<ol>
+              <li>Stay comfortable and keep the pain under control</li>
+              <li>Stay in my home and garden for as long as I can</li>
+              <li>Have honest conversations and make sure everyone knows what I want</li>
+              </ol></p></div>
+          </text>
+        </section>
+      </Composition>
+    </resource>
+  </entry>
+  <entry>
+    <fullUrl value="urn:uuid:f88cc963-56bd-42e7-930d-3b18db0fa723"/>
+    <resource>
+      <Patient>
+        <id value="f88cc963-56bd-42e7-930d-3b18db0fa723"/>
+        <identifier>
+          <extension url="http://hl7.org.au/fhir/StructureDefinition/ihi-status">
+              <valueCoding>
+                  <system value="https://healthterminologies.gov.au/fhir/CodeSystem/ihi-status-1"/>
+                  <code value="active"/>
+              </valueCoding>
+          </extension>
+          <extension url="http://hl7.org.au/fhir/StructureDefinition/ihi-record-status">
+              <valueCoding>
+                  <system value="https://healthterminologies.gov.au/fhir/CodeSystem/ihi-record-status-1"/>
+                  <code value="unverified"/>
+                  <display value="unverified"/>
+              </valueCoding>
+          </extension>
+          <type>
+              <coding>
+                  <system value="http://terminology.hl7.org/CodeSystem/v2-0203"/>
+                  <code value="NI"/>
+              </coding>
+              <text value="IHI"/>
+          </type>
+          <system value="http:/\ns.electronichealth.net.au/id/hi/ihi/1.0"/>
+          <value value="8003608833648454"/>
+        </identifier>
+        <name>
+          <use value="official"/>
+          <family value="Martin"/>
+          <given value="Shawn"/>
+        <\name>
+        <telecom>
+          <system value="phone"/>
+          <value value="0770106438"/>
+          <use value="home"/>
+        </telecom>
+        <telecom>
+          <system value="phone"/>
+          <value value="0491571266"/>
+          <use value="mobile"/>
+        </telecom>
+        <gender value="other"/>
+        <birthDate value="1942-07-11"/>
+        <address>
+          <use value="home"/>
+          <line value="12 Pheonix Lane"/>
+          <city value="Walliebum"/>
+          <state value="QLD"/>
+          <postalCode value="4655"/>
+          <country value="AU"/>
+        </address>
+      </Patient>
+    </resource>
+  </entry>
+</Bundle>
