@@ -166,7 +166,7 @@
           <use value="official"/>
           <family value="Martin"/>
           <given value="Shawn"/>
-        <\name>
+        </name>
         <telecom>
           <system value="phone"/>
           <value value="0770106438"/>
