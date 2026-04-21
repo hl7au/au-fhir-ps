@@ -54,9 +54,9 @@ The AU PS is based on [IPS](https://hl7.org/fhir/uv/ips/STU2//) and [AU Core](ht
 * A conformant AU PS actor IS NOT a conformant AU Core actor - AU Core, like IPA, defines actors for FHIR resource access via a RESTful API. AU PS (and IPS) do not define 'access' they define production and consumption of patient summary documents.
 
 <div> 
-   <img src="AUPSPassport.png" alt="The AU PS 'Passport'" style="width:25%"/>
+   <img src="AUPSPassport.png" alt="The AU PS 'Passport'" style="width:35%"/>
   </div>
-*Figure 3: The AU PS 'Passport'*
+*Figure 3: The AU PS - a valid AU PS document is a valid IPS document*
 <br/>
 
 While AU PS has no variance (i.e. fully compliant) from [IPS Implementation Guide 2.0.0](https://hl7.org/fhir/uv/ips/STU2/), AU PS does impose requirements additional to IPS to support requirements in the Australian healthcare context (these primarily come from AUCDI and AU Core). These additional requirements are intentionally limited to maximise interoperability with IPS-aware systems. See [Comparison with other national and international IGs](comparison.html) and [Relationship with other IGs](relationship.html) for information on the national and international standards context of AU PS.
