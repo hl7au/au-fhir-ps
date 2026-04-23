@@ -222,7 +222,7 @@ The table below indicates the elements within examples that demonstrate aspects 
 <table border="1" style="width: 100%; margin: auto; border-collapse: collapse;">
     <thead>
         <tr style="background-color: #f2f2f2;">
-            <th>AU PS Bundle example</th>
+            <th style="width:25%;">AU PS Bundle example</th>
             <th><a href="Bundle-aups-basicsummary.html">Basic Summary</a></th>
             <th><a href="Bundle-aups-noknownx.html">No Known X</a></th>
             <th><a href="Bundle-aups-section-emptyreason.html">Section empty reason</a></th>
