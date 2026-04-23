@@ -235,32 +235,32 @@ The table below indicates the elements within examples that demonstrate aspects 
             <td rowspan="3"><strong>Missing Data</strong></td>
             <td rowspan="3">-</td>
             <td rowspan="3">-</td>
-            <td rowspan="3">Patient.birthDate</td>
-            <td>MedicationRequest.authoredOn</td>
-            <td rowspan="3">Observation.performer</td>
+            <td rowspan="3"><code>Patient.birthDate</code></td>
+            <td><code>MedicationRequest.authoredOn</code></td>
+            <td rowspan="3"><code>Observation.performer</code></td>
         </tr>
          <tr>
-             <td>Immunization.occurrenceDateTime</td>
+             <td><code>Immunization.occurrenceDateTime</code></td>
         </tr>
         <tr>
-            <td>Observation.performer</td>
+            <td><code>Observation.performer</code></td>
         </tr>
         <tr>
             <td rowspan="4"><strong>Empty Sections</strong></td>
             <td rowspan="4">-</td>
             <td rowspan="4">-</td>
-            <td>Composition.section:sectionProblems</td>
+            <td><code>Composition.section:sectionProblems</code></td>
             <td rowspan="4">-</td>
             <td rowspan="4">-</td>
         </tr>
         <tr>
-            <td>Composition.section:sectionAllergies</td>
+            <td><code>Composition.section:sectionAllergies</code></td>
         </tr>
         <tr>
-            <td>Composition.section:sectionMedications</td>
+            <td><code>Composition.section:sectionMedications</code></td>
         </tr>
         <tr>
-            <td>Composition.section:sectionImmunizations</td>
+            <td><code>Composition.section:sectionImmunizations</code></td>
         </tr>
         <tr>
             <td><strong>Known Absence of Data Due to Workflow</strong></td>
@@ -272,28 +272,28 @@ The table below indicates the elements within examples that demonstrate aspects 
         </tr>
         <tr>
             <td rowspan="3"><strong>No Known X</strong></td>
-            <td rowspan="3">Condition.code</td>
-            <td>AllergyIntolerance.code</td>
+            <td rowspan="3"><code>Condition.code</code></td>
+            <td><code>AllergyIntolerance.code</code></td>
             <td rowspan="3">-</td>
             <td rowspan="3">-</td>
             <td rowspan="3">-</td>
         </tr>
         <tr>
-            <td>MedicationStatement.medicationCodeableConcept</td>
+            <td><code>MedicationStatement.medicationCodeableConcept</code></td>
         </tr>
         <tr>
-            <td>Condition.code</td>
+            <td><code>Condition.code</code></td>
         </tr>
         <tr>
             <td rowspan="2"><strong>Suppressed Data</strong></td>
             <td rowspan="2">-</td>
             <td rowspan="2">-</td>
-            <td>Patient.identifier</td>
+            <td><code>Patient.identifier</code></td>
             <td rowspan="2">-</td>
             <td rowspan="2">-</td>
         </tr>
         <tr>
-            <td>Patient.gender</td>
+            <td><code>Patient.gender</code></td>
         </tr>
     </tbody>
 </table>
