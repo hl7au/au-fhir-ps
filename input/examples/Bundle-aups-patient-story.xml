@@ -32,18 +32,7 @@
         <author>
           <reference value="urn:uuid:f88cc963-56bd-42e7-930d-3b18db0fa723"/>
         </author>
-        <title value="Australian Patient Summary"/>
-        <event>
-          <code>
-            <coding>
-              <system value="http://terminology.hl7.org/CodeSystem/v3-ActClass"/>
-              <code value="PCPR"/>
-            </coding>
-          </code>
-          <period>
-            <end value="2025-01-08"/>
-          </period>
-        </event>
+        <title value="Patient Summary"/>
         <section>
           <title value="Allergies and Intolerances"/>
           <code>
