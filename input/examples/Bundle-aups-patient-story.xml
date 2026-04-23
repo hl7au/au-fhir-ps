@@ -148,7 +148,7 @@
               </coding>
               <text value="IHI"/>
           </type>
-          <system value="http:/\ns.electronichealth.net.au/id/hi/ihi/1.0"/>
+          <system value="http://ns.electronichealth.net.au/id/hi/ihi/1.0"/>
           <value value="8003608833648454"/>
         </identifier>
         <name>
