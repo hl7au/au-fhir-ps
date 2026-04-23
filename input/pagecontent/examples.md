@@ -216,71 +216,84 @@ The table below identifies some major characteristics of the examples defined in
 </table>
 
 
-#### Missing Data, Empty Sections, Known Absence of Data and Suppressed Data
+#### Missing Data, Empty Sections, Known Absence of Data, No Known X and Suppressed Data
 The table below indicates the elements within examples that demonstrate aspects of [Missing Data, Empty Sections, Known Absence of Data](general-requirements.html#missing-data-empty-sections-known-absence-of-data). 
 
 <table border="1" style="width: 100%; margin: auto; border-collapse: collapse;">
     <thead>
         <tr style="background-color: #f2f2f2;">
             <th>AU PS Bundle example</th>
+            <th><a href="Bundle-aups-basicsummary.html">Basic Summary</a></th>
+            <th><a href="Bundle-aups-noknownx.html">No Known X</a></th>
             <th><a href="Bundle-aups-section-emptyreason.html">Section empty reason</a></th>
             <th><a href="Bundle-aups-gpvisit-retrieval.html">Jeramy 27 May</a></th>
             <th><a href="Bundle-aups-referral-endoconsult-autogen.html">Joyce 07 November 2024</a></th>
-            <th><a href="Bundle-aups-noknownx.html">No Known X</a></th>
         </tr>
     </thead>
     <tbody>
         <tr>
             <td rowspan="3"><strong>Missing Data</strong></td>
-            <td rowspan="3"><code>Patient.birthDate</code></td>
-            <td><code>MedicationRequest.authoredOn</code></td>
-            <td rowspan="3"><code>Observation.performer</code></td>
             <td rowspan="3">-</td>
+            <td rowspan="3">-</td>
+            <td rowspan="3">Patient.birthDate</td>
+            <td>MedicationRequest.authoredOn</td>
+            <td rowspan="3">Observation.performer</td>
+        </tr>
+         <tr>
+             <td>Immunization.occurrenceDateTime</td>
         </tr>
         <tr>
-            <td><code>Immunization.occurrenceDateTime</code></td>
-        </tr>
-        <tr>
-            <td><code>Observation.performer</code></td>
+            <td>Observation.performer</td>
         </tr>
         <tr>
             <td rowspan="4"><strong>Empty Sections</strong></td>
-            <td><code>Composition.section:sectionProblems</code></td>
             <td rowspan="4">-</td>
             <td rowspan="4">-</td>
+            <td>Composition.section:sectionProblems</td>
+            <td rowspan="4">-</td>
             <td rowspan="4">-</td>
         </tr>
         <tr>
-            <td><code>Composition.section:sectionAllergies</code></td>
+            <td>Composition.section:sectionAllergies</td>
         </tr>
         <tr>
-            <td><code>Composition.section:sectionMedications</code></td>
+            <td>Composition.section:sectionMedications</td>
         </tr>
         <tr>
-            <td><code>Composition.section:sectionImmunizations</code></td>
+            <td>Composition.section:sectionImmunizations</td>
         </tr>
         <tr>
-            <td rowspan="3"><strong>Known Absence of Data</strong></td>
+            <td><strong>Known Absence of Data Due to Workflow</strong></td>
+            <td>-</td>
+            <td>-</td>
+            <td>-</td>
+            <td>-</td>
+            <td>-</td>
+        </tr>
+        <tr>
+            <td rowspan="3"><strong>No Known X</strong></td>
+            <td rowspan="3">Condition.code</td>
+            <td>AllergyIntolerance.code</td>
             <td rowspan="3">-</td>
             <td rowspan="3">-</td>
             <td rowspan="3">-</td>
-            <td><code>AllergyIntolerance.code</code></td>
         </tr>
         <tr>
-            <td><code>MedicationStatement.medicationCodeableConcept</code></td>
+            <td>MedicationStatement.medicationCodeableConcept</td>
         </tr>
         <tr>
-            <td><code>Condition.code</code></td>
+            <td>Condition.code</td>
         </tr>
         <tr>
             <td rowspan="2"><strong>Suppressed Data</strong></td>
-            <td><code>Patient.identifier</code></td>
             <td rowspan="2">-</td>
+            <td rowspan="2">-</td>
+            <td>Patient.identifier</td>
             <td rowspan="2">-</td>
             <td rowspan="2">-</td>
         </tr>
         <tr>
-            <td><code>Patient.gender</code></td>
+            <td>Patient.gender</td>
         </tr>
     </tbody>
 </table>
