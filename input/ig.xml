@@ -206,7 +206,7 @@
 				<reference value="Bundle/aups-patient-story"/>
 			</reference>
 			<name value="Patient Story"/>
-			<description value="TBD. Example for the *AU PS Bundle* and *AU PS Composition* profile. Patient: Shawn Martin."/>
+			<description value="Shows an example of a patient generated patient summary that includes a Patient Story section capturing the patient's perspective, goals, and preferences for care. Example for the *AU PS Bundle* and *AU PS Composition* profiles. Patient: Shawn Martin."/>
 			<exampleCanonical value="http://hl7.org.au/fhir/ps/StructureDefinition/au-ps-bundle"/>
 		</resource>
 		<!-- PAGES-->
