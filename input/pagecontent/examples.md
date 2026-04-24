@@ -12,6 +12,9 @@ A set of examples are provided to demonstrate some parts of AU PS profiles (e.g.
 - [No Known X](Bundle-aups-noknownx.html)
 - [Section empty reason](Bundle-aups-section-emptyreason.html)
 
+Examples to demonstrate the use of optional sections (e.g. Patient Story):
+- [Patient Story](Bundle-aups-patient-story.html)
+
 A set of examples demonstrate technical and clinical use case aspects, conforming to the AU PS requirements. Data within the use cases examples (e.g. medications) is provided by the [Sparked Patient Summary Clinical Focus Group](https://sparked.csiro.au/index.php/design-groups/):
 - [Jeramy 27 May](Bundle-aups-gpvisit-retrieval.html)
 - [Joyce 28 October](Bundle-aups-referral-endoconsult-curated.html)
@@ -26,6 +29,7 @@ The table below identifies some major characteristics of the examples defined in
             <th><a href="Bundle-aups-basicsummary.html">Basic Summary</a></th>
             <th><a href="Bundle-aups-noknownx.html">No Known X</a></th>
             <th><a href="Bundle-aups-section-emptyreason.html">Section empty reason</a></th>
+            <th><a href="Bundle-aups-patient-story.html">Patient Story</a></th>
             <th><a href="Bundle-aups-gpvisit-retrieval.html">Jeramy 27 May</a></th>
             <th><a href="Bundle-aups-referral-endoconsult-curated.html">Joyce 28 October</a></th>
             <th><a href="Bundle-aups-referral-endoconsult-autogen.html">Joyce 07 November 2024</a></th>
@@ -34,6 +38,7 @@ The table below identifies some major characteristics of the examples defined in
     <tbody>
         <tr style="background-color: #f0f8ff;">
             <td><strong>Use Case</strong></td>
+            <td>-</td>
             <td>-</td>
             <td>-</td>
             <td>-</td>
@@ -46,12 +51,14 @@ The table below identifies some major characteristics of the examples defined in
             <td>AU PS PractitionerRole</td>
             <td>AU PS PractitionerRole</td>
             <td>AU PS RelatedPerson</td>
+            <td>AU PS Patient</td>
             <td>AU PS Practitioner</td>
             <td>AU PS PractitionerRole</td>
             <td>Device</td>
         </tr>
         <tr>
             <td><code>Composition.attester</code></td>
+            <td>-</td>
             <td>-</td>
             <td>-</td>
             <td>-</td>
@@ -64,6 +71,7 @@ The table below identifies some major characteristics of the examples defined in
             <td>AU PS Condition</td>
             <td>AU PS Condition</td>
             <td>emptyReason</td>
+            <td>emptyReason</td
             <td>AU PS Condition</td>
             <td>AU PS Condition</td>
             <td>AU PS Condition</td>
@@ -73,6 +81,7 @@ The table below identifies some major characteristics of the examples defined in
             <td>AU PS AllergyIntolerance</td>
             <td>AU PS AllergyIntolerance</td>
             <td>emptyReason</td>
+            <td>emptyReason</td
             <td>AU PS AllergyIntolerance</td>
             <td>AU PS AllergyIntolerance</td>
             <td>AU PS AllergyIntolerance</td>
@@ -82,6 +91,7 @@ The table below identifies some major characteristics of the examples defined in
             <td>AU PS MedicationStatement</td>
             <td>AU PS MedicationStatement</td>
             <td>emptyReason</td>
+            <td>emptyReason</td
             <td>AU PS MedicationRequest</td>
             <td>AU PS MedicationStatement</td>
             <td>AU PS MedicationStatement</td>
@@ -91,6 +101,7 @@ The table below identifies some major characteristics of the examples defined in
             <td>-</td>
             <td>-</td>
             <td>emptyReason</td>
+            <td>-</td>
             <td>AU PS Immunization</td>
             <td>AU PS Immunization</td>
             <td>AU PS Immunization</td>
@@ -100,12 +111,14 @@ The table below identifies some major characteristics of the examples defined in
             <td>-</td>
             <td>-</td>
             <td>-</td>
+            <td>-</td>
             <td>AU PS Pathology Result</td>
             <td>-</td>
             <td>AU PS Pathology Result</td>
         </tr>
         <tr>
             <td><code>Composition.section:sectionProceduresHx</code></td>
+            <td>-</td>
             <td>-</td>
             <td>-</td>
             <td>-</td>
@@ -121,9 +134,11 @@ The table below identifies some major characteristics of the examples defined in
             <td>-</td>
             <td>-</td>
             <td>-</td>
+            <td>-</td>
         </tr>
         <tr>
             <td><code>Composition.section:sectionAdvanceDirectives</code></td>
+            <td>-</td>
             <td>-</td>
             <td>-</td>
             <td>-</td>
@@ -139,9 +154,11 @@ The table below identifies some major characteristics of the examples defined in
             <td>-</td>
             <td>-</td>
             <td>-</td>
+            <td>-</td>
         </tr>
         <tr>
             <td><code>Composition.section:sectionFunctionalStatus</code></td>
+            <td>-</td>
             <td>-</td>
             <td>-</td>
             <td>-</td>
@@ -156,10 +173,12 @@ The table below identifies some major characteristics of the examples defined in
             <td>-</td>
             <td>-</td>
             <td>-</td>
+            <td>-</td>
             <td>AU PS Condition</td>
         </tr>
         <tr>
             <td><code>Composition.section:sectionPregnancyHx</code></td>
+            <td>-</td>
             <td>-</td>
             <td>-</td>
             <td>-</td>
@@ -172,6 +191,7 @@ The table below identifies some major characteristics of the examples defined in
             <td>-</td>
             <td>-</td>
             <td>-</td>
+            <td>text</td>
             <td>-</td>
             <td>-</td>
             <td>-</td>
@@ -184,9 +204,11 @@ The table below identifies some major characteristics of the examples defined in
             <td>-</td>
             <td>-</td>
             <td>-</td>
+            <td>-</td>
         </tr>
         <tr>
             <td><code>Composition.section:sectionSocialHistory</code></td>
+            <td>-</td>
             <td>-</td>
             <td>-</td>
             <td>-</td>
@@ -202,9 +224,11 @@ The table below identifies some major characteristics of the examples defined in
             <td>-</td>
             <td>-</td>
             <td>-</td>
+            <td>-</td>
         </tr>
         <tr>
             <td><code>Bundle.signature.who</code></td>
+            <td>-</td>
             <td>-</td>
             <td>-</td>
             <td>-</td>
@@ -224,6 +248,7 @@ The table below indicates the elements within examples that demonstrate aspects 
         <tr style="background-color: #f2f2f2;">
             <th>AU PS Bundle example</th>
             <th><a href="Bundle-aups-section-emptyreason.html">Section empty reason</a></th>
+            <th><a href="Bundle-aups-patient-story.html">Patient Story</a></th>
             <th><a href="Bundle-aups-gpvisit-retrieval.html">Jeramy 27 May</a></th>
             <th><a href="Bundle-aups-referral-endoconsult-autogen.html">Joyce 07 November 2024</a></th>
             <th><a href="Bundle-aups-noknownx.html">No Known X</a></th>
@@ -233,6 +258,7 @@ The table below indicates the elements within examples that demonstrate aspects 
         <tr>
             <td rowspan="3"><strong>Missing Data</strong></td>
             <td rowspan="3"><code>Patient.birthDate</code></td>
+            <td rowspan="3">-</td>
             <td><code>MedicationRequest.authoredOn</code></td>
             <td rowspan="3"><code>Observation.performer</code></td>
             <td rowspan="3">-</td>
@@ -246,21 +272,25 @@ The table below indicates the elements within examples that demonstrate aspects 
         <tr>
             <td rowspan="4"><strong>Empty Sections</strong></td>
             <td><code>Composition.section:sectionProblems</code></td>
+            <td><code>Composition.section:sectionProblems</code></td>
             <td rowspan="4">-</td>
             <td rowspan="4">-</td>
             <td rowspan="4">-</td>
         </tr>
         <tr>
             <td><code>Composition.section:sectionAllergies</code></td>
+            <td><code>Composition.section:sectionAllergies</code></td>
         </tr>
         <tr>
             <td><code>Composition.section:sectionMedications</code></td>
+            <td rowspan="2"><code>Composition.section:sectionMedications</code></td>
         </tr>
         <tr>
             <td><code>Composition.section:sectionImmunizations</code></td>
         </tr>
         <tr>
             <td rowspan="3"><strong>Known Absence of Data</strong></td>
+            <td rowspan="3">-</td>
             <td rowspan="3">-</td>
             <td rowspan="3">-</td>
             <td rowspan="3">-</td>
@@ -275,6 +305,7 @@ The table below indicates the elements within examples that demonstrate aspects 
         <tr>
             <td rowspan="2"><strong>Suppressed Data</strong></td>
             <td><code>Patient.identifier</code></td>
+            <td rowspan="2">-</td>
             <td rowspan="2">-</td>
             <td rowspan="2">-</td>
             <td rowspan="2">-</td>
