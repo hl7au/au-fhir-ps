@@ -71,7 +71,7 @@ The table below identifies some major characteristics of the examples defined in
             <td>AU PS Condition</td>
             <td>AU PS Condition</td>
             <td>emptyReason</td>
-            <td>emptyReason</td
+            <td>emptyReason</td>
             <td>AU PS Condition</td>
             <td>AU PS Condition</td>
             <td>AU PS Condition</td>
@@ -81,7 +81,7 @@ The table below identifies some major characteristics of the examples defined in
             <td>AU PS AllergyIntolerance</td>
             <td>AU PS AllergyIntolerance</td>
             <td>emptyReason</td>
-            <td>emptyReason</td
+            <td>emptyReason</td>
             <td>AU PS AllergyIntolerance</td>
             <td>AU PS AllergyIntolerance</td>
             <td>AU PS AllergyIntolerance</td>
@@ -91,7 +91,7 @@ The table below identifies some major characteristics of the examples defined in
             <td>AU PS MedicationStatement</td>
             <td>AU PS MedicationStatement</td>
             <td>emptyReason</td>
-            <td>emptyReason</td
+            <td>emptyReason</td>
             <td>AU PS MedicationRequest</td>
             <td>AU PS MedicationStatement</td>
             <td>AU PS MedicationStatement</td>
