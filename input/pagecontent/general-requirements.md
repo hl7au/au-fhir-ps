@@ -33,7 +33,7 @@ An element can be both *Must Support* and mandatory, and in this circumstance th
 
 The convention in this guide is to mark all mandatory and conditionally mandatory elements as *Must Support* unless they are nested under an optional element.
 
-### Missing Data, Empty Sections, Known Absence of Data
+### Missing Data, Empty Sections, Known Absence of Data, No Known X
 It is important to differentiate between the following mutually exclusive circumstances:
 * Affirmatively stating that a patient has "no known X" or "no history of X" (for example, that a patient has no known allergies). 
 * Not having data in the record for a particular section (for example, where a source system does not have information on a patient's allergies). 
