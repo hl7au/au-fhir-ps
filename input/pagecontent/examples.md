@@ -227,6 +227,7 @@ The table below indicates the elements within examples that demonstrate aspects 
             <th><a href="Bundle-aups-noknownx.html">No Known X</a></th>
             <th><a href="Bundle-aups-section-emptyreason.html">Section empty reason</a></th>
             <th><a href="Bundle-aups-gpvisit-retrieval.html">Jeramy 27 May</a></th>
+            <th><a href="Bundle-aups-referral-endoconsult-curated.html">Joyce 28 October</a></th>
             <th><a href="Bundle-aups-referral-endoconsult-autogen.html">Joyce 07 November 2024</a></th>
         </tr>
     </thead>
@@ -237,6 +238,7 @@ The table below indicates the elements within examples that demonstrate aspects 
             <td rowspan="3">-</td>
             <td rowspan="3"><code>Patient.birthDate</code></td>
             <td><code>MedicationRequest.authoredOn</code></td>
+            <td rowspan="3">-</td>
             <td rowspan="3"><code>Observation.performer</code></td>
         </tr>
          <tr>
@@ -250,6 +252,7 @@ The table below indicates the elements within examples that demonstrate aspects 
             <td rowspan="4">-</td>
             <td rowspan="4">-</td>
             <td><code>Composition.section:sectionProblems</code></td>
+            <td rowspan="4">-</td>
             <td rowspan="4">-</td>
             <td rowspan="4">-</td>
         </tr>
@@ -269,13 +272,15 @@ The table below indicates the elements within examples that demonstrate aspects 
             <td>-</td>
             <td>-</td>
             <td>-</td>
+            <td>-</td>
         </tr>
         <tr>
             <td rowspan="3"><strong>No Known X</strong></td>
             <td rowspan="3"><code>Condition.code</code></td>
             <td><code>AllergyIntolerance.code</code></td>
             <td rowspan="3">-</td>
-            <td rowspan="3">-</td>
+            <td rowspan="3"><code>AllergyIntolerance.code</code></td>
+            <td rowspan="3"><code>AllergyIntolerance.code</code></td>
             <td rowspan="3">-</td>
         </tr>
         <tr>
@@ -289,6 +294,7 @@ The table below indicates the elements within examples that demonstrate aspects 
             <td rowspan="2">-</td>
             <td rowspan="2">-</td>
             <td><code>Patient.identifier</code></td>
+            <td rowspan="2">-</td>
             <td rowspan="2">-</td>
             <td rowspan="2">-</td>
         </tr>
