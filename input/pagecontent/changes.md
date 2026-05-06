@@ -6,6 +6,13 @@
 This change log documents the significant updates and resolutions implemented from version [1.0.0-ballot](https://hl7.org.au/fhir/ps/1.0.0-ballot/index.html) to TBD.
 
 #### Changes in this version
+- [AU PS Medication](StructureDefinition-au-ps-medication.html):
+  - removed profile specific implementation guidance for representing no known current medications for a patient as it is inherited from AU Core [AU PS: FHIR-52274](https://jira.hl7.org/browse/FHIR-52274), [AU Core: FHIR-52286](https://jira.hl7.org/browse/FHIR-52286)
+- [AU PS MedicationRequest](StructureDefinition-au-ps-medicationrequest.html):
+  - removed profile specific implementation guidance for representing no known current medications for a patient as it is inherited from AU Core [AU PS: FHIR-52274](https://jira.hl7.org/browse/FHIR-52274), [AU Core: FHIR-52286](https://jira.hl7.org/browse/FHIR-52286)
+- [AU PS MedicationStatement](StructureDefinition-au-ps-medicationstatement.html):
+  - changed MedicationStatement.medicationCodeableConcept binding to Australian Medication Use (preferred) [AU Base: FHIR-53469](https://jira.hl7.org/browse/FHIR-53469)
+  - removed profile specific implementation guidance for representing no known current medications as the guidance is inherited from AU Core and aligned with current IPS guidance, including  the use of SNOMED CT 787481004 &#124;No known medications&#124; [AU PS: FHIR-52274](https://jira.hl7.org/browse/FHIR-52274), [AU Core: FHIR-52286](https://jira.hl7.org/browse/FHIR-52286)
 - [AU PS RelatedPerson](StructureDefinition-au-ps-relatedperson.html):
   - applied technical correction to remove SHOULD:display obligation on RelatedPerson.patient.reference for the AU PS Consumer [AU PS: FHIR-56175](https://jira.hl7.org/browse/FHIR-56175)
 
