@@ -341,6 +341,15 @@ For example, in the AU PS Practitioner Profile, the `name` element is labelled *
 - AU PS Producers **SHALL** correctly populate a value in `Practitioner.name.family` and `Practitioner.name.given` if the value for those sub-elements is known.
 - AU PS Consumers **SHALL** handle `Practitioner.name` if present and containing valid values in `Practitioner.name.family` and `Practitioner.name.given` sub-elements, and **SHOULD** display the value of at least the sub elements `Practitioner.name.family` and `Practitioner.name.given` when presenting the data to a human user.
 
+##### Must Support - Elements with Multiple Cardinality
+Some elements labelled as *Must Support* have multiple cardinality (maximum cardinality> 1) such as `Composition.author`or `AllergyIntolerance.reaction.manifestation.coding`. In such cases:
+- AU PS Producers **SHALL** correctly populate all known values of the element. 
+- AU PS Consumers **SHALL** handle all valid values present in the element.
+
+For example, in the AU PS Patient Profile, the `address` element is labelled *Must Support*. When claiming conformance to this profile:
+- AU PS Producers **SHALL** correctly populate all known values in `Patient.address`, for example populating both a home and postal address if both are known.
+- AU PS Consumers **SHALL** handle all valid values present in `Patient.address`.
+
 ##### Must Support - Resource References
 Some elements labelled as *Must Support* reference multiple resource types or profiles such as `Observation.performer`. In such cases: 
 - AU PS Producers **SHALL** correctly populate the element with at least one referenced resource or allowed profile if the value is known. 
