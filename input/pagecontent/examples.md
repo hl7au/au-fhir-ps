@@ -216,35 +216,41 @@ The table below identifies some major characteristics of the examples defined in
 </table>
 
 
-#### Missing Data, Empty Sections, Known Absence of Data and Suppressed Data
+#### Missing Data, Empty Sections, Known Absence of Data, No Known X and Suppressed Data
 The table below indicates the elements within examples that demonstrate aspects of [Missing Data, Empty Sections, Known Absence of Data](general-requirements.html#missing-data-empty-sections-known-absence-of-data). 
 
 <table border="1" style="width: 100%; margin: auto; border-collapse: collapse;">
     <thead>
         <tr style="background-color: #f2f2f2;">
-            <th>AU PS Bundle example</th>
+            <th style="width:25%;">AU PS Bundle example</th>
+            <th><a href="Bundle-aups-basicsummary.html">Basic Summary</a></th>
+            <th><a href="Bundle-aups-noknownx.html">No Known X</a></th>
             <th><a href="Bundle-aups-section-emptyreason.html">Section empty reason</a></th>
             <th><a href="Bundle-aups-gpvisit-retrieval.html">Jeramy 27 May</a></th>
+            <th><a href="Bundle-aups-referral-endoconsult-curated.html">Joyce 28 October</a></th>
             <th><a href="Bundle-aups-referral-endoconsult-autogen.html">Joyce 07 November 2024</a></th>
-            <th><a href="Bundle-aups-noknownx.html">No Known X</a></th>
         </tr>
     </thead>
     <tbody>
         <tr>
             <td rowspan="3"><strong>Missing Data</strong></td>
+            <td rowspan="3">-</td>
+            <td rowspan="3">-</td>
             <td rowspan="3"><code>Patient.birthDate</code></td>
             <td><code>MedicationRequest.authoredOn</code></td>
-            <td rowspan="3"><code>Observation.performer</code></td>
             <td rowspan="3">-</td>
+            <td rowspan="3"><code>Observation.performer</code></td>
         </tr>
-        <tr>
-            <td><code>Immunization.occurrenceDateTime</code></td>
+         <tr>
+             <td><code>Immunization.occurrenceDateTime</code></td>
         </tr>
         <tr>
             <td><code>Observation.performer</code></td>
         </tr>
         <tr>
             <td rowspan="4"><strong>Empty Sections</strong></td>
+            <td rowspan="4">-</td>
+            <td rowspan="4">-</td>
             <td><code>Composition.section:sectionProblems</code></td>
             <td rowspan="4">-</td>
             <td rowspan="4">-</td>
@@ -260,11 +266,22 @@ The table below indicates the elements within examples that demonstrate aspects 
             <td><code>Composition.section:sectionImmunizations</code></td>
         </tr>
         <tr>
-            <td rowspan="3"><strong>Known Absence of Data</strong></td>
-            <td rowspan="3">-</td>
-            <td rowspan="3">-</td>
-            <td rowspan="3">-</td>
+            <td><strong>Known Absence of Data Due to Workflow</strong></td>
+            <td>-</td>
+            <td>-</td>
+            <td>-</td>
+            <td>-</td>
+            <td>-</td>
+            <td>-</td>
+        </tr>
+        <tr>
+            <td rowspan="3"><strong>No Known X</strong></td>
+            <td rowspan="3"><code>Condition.code</code></td>
             <td><code>AllergyIntolerance.code</code></td>
+            <td rowspan="3">-</td>
+            <td rowspan="3"><code>AllergyIntolerance.code</code></td>
+            <td rowspan="3"><code>AllergyIntolerance.code</code></td>
+            <td rowspan="3">-</td>
         </tr>
         <tr>
             <td><code>MedicationStatement.medicationCodeableConcept</code></td>
@@ -274,6 +291,8 @@ The table below indicates the elements within examples that demonstrate aspects 
         </tr>
         <tr>
             <td rowspan="2"><strong>Suppressed Data</strong></td>
+            <td rowspan="2">-</td>
+            <td rowspan="2">-</td>
             <td><code>Patient.identifier</code></td>
             <td rowspan="2">-</td>
             <td rowspan="2">-</td>
