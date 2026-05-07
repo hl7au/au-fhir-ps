@@ -29,7 +29,7 @@ Example: CapabilityStatement resource for a server supporting the AU PS Patient 
               ...
               {
                 "type": "Patient",
-                "profile": "http://hl7.org/fhir/ps/StructureDefinition/au-ps-patient",
+                "profile": "http://hl7.org.au/fhir/ps/StructureDefinition/au-ps-patient",
                 ...
               }
             ]
