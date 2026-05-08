@@ -53,6 +53,7 @@ For:
    - *Must Support*
    - Terminology bindings
 * AU PS profiles **SHALL** validate reference elements against AU PS profiles (where available), otherwise the AU Core profile where available, otherwise the IPS profile where available, otherwise the AU Base profile where available
+   - AU PS profiles do not constrain references if an element is not labelled *Must Support*, see [Profiling Approach](general-guidance.html#profiling-approach) for more information on profiling approach
 * In AU PS profiles, terminology bindings inherited from the underlying AU Core profile are preferenced over terminology bindings in IPS profiles:
    - where an element has a [required](https://hl7.org/fhir/R4/terminologies.html#required) binding, the element **SHALL** apply the intersection of both value sets (AU Core and IPS)
    - where an element has a lesser binding strength ([extensible](https://hl7.org/fhir/R4/terminologies.html#extensible), [preferred](https://hl7.org/fhir/R4/terminologies.html#preferred), [example](https://hl7.org/fhir/R4/terminologies.html#example)), use the AU Core value set and binding strength (where the AU Core binding strength is equal or stronger than the IPS binding strength) or use the IPS value set where the IPS binding strength is stronger than the AU Core binding strength
