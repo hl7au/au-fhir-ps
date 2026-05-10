@@ -63,7 +63,7 @@ This guide is divided into several pages which are listed at the top of each pag
   - [Terminology](terminology.html): This page lists the value sets and code systems supported in this guide.
   - [Actor Definitions](actors.html): This page defines the AU PS actors, AU PS Consumer and AU PS Producer.
 - [Examples](examples.html): This page lists all the examples used in this guide.
-- [Support](downloads.html): These pages provide supporting material for implementation of AU PS.
+- [Support](support.html): These pages provide supporting material for implementation of AU PS.
   - [Downloads](downloads.html): This page provides links to downloadable artefacts.
   - [License and Legal](license.html): This page outlines the license and legal requirements for material in AU PS.
 - [Change Log](changes.html): This page documents the changes across versions of this guide.

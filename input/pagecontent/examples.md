@@ -217,7 +217,7 @@ The table below identifies some major characteristics of the examples defined in
 
 
 #### Missing Data, Empty Sections, Known Absence of Data, No Known X and Suppressed Data
-The table below indicates the elements within examples that demonstrate aspects of [Missing Data, Empty Sections, Known Absence of Data](general-requirements.html#missing-data-empty-sections-known-absence-of-data). 
+The table below indicates the elements within examples that demonstrate aspects of [Missing Data, Empty Sections, Known Absence of Data, No Known X](general-requirements.html#missing-data-empty-sections-known-absence-of-data-no-known-x). 
 
 <table border="1" style="width: 100%; margin: auto; border-collapse: collapse;">
     <thead>

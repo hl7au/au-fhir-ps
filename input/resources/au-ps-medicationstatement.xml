@@ -107,6 +107,10 @@
         <code value="CodeableConcept"/>
         <profile value="http://hl7.org/fhir/uv/ips/StructureDefinition/CodeableConcept-uv-ips"/>
       </type>
+      <binding>
+        <strength value="preferred" />
+        <valueSet value="https://healthterminologies.gov.au/fhir/ValueSet/australian-medication-use-1" />
+      </binding>
     </element>
     <element id="MedicationStatement.medication[x]:medicationCodeableConcept.coding:pbs">
       <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
