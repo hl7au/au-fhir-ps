@@ -27,7 +27,7 @@ AU PS profile elements include mandatory and *Must Support* requirements. [Manda
 The [Actor Definitions](actors.html) page lists the AU PS actors defined for this implementation guide and the requirements for implementing that actor. An AU PS profile [StructureDefinition](http://hl7.org/fhir/R4/structuredefinition.html) defines the obligations for an AU PS actor when implementing that profile.
 
 ### Mandatory Elements
-Mandatory elements are elements with minimum cardinality > 0. When an element is mandatory, the data is expected to always be present. Very rarely, it may not be, and in this circumstance the requirements defined by AU Core for [Missing Data](https://build.fhir.org/ig/hl7au/au-fhir-core/general-requirements.html#missing-data) **SHALL** be applied. 
+§conf-1:Mandatory elements are elements with minimum cardinality > 0. When an element is mandatory, the data is expected to always be present. Very rarely, it may not be, and in this circumstance the requirements defined by AU Core for [Missing Data](https://build.fhir.org/ig/hl7au/au-fhir-core/general-requirements.html#missing-data) **SHALL** be applied.§
 
 An element can be both *Must Support* and mandatory, and in this circumstance the requirements defined for [Missing Must Support and Mandatory Data](general-requirements.html#missing-must-support-and-mandatory-data) **SHALL** be applied.
 

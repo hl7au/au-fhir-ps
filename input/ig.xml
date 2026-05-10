@@ -225,6 +225,11 @@
 					<title value="Declaring Conformance"/>
 					<generation value="markdown"/>
 				</page>
+				<page>
+					<nameUrl value="requirements.html"/>
+					<title value="Requirements Tables"/>
+					<generation value="markdown"/>
+				</page>
 			</page>
 			<page>
 				<nameUrl value="the-aups.html"/>
