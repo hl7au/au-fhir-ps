@@ -349,7 +349,8 @@ Some elements labelled as *Must Support* have multiple cardinality (maximum card
 
 For example, in the AU PS Patient Profile, the `address` element is labelled *Must Support*. When claiming conformance to this profile:
 - AU PS Producers **SHALL** correctly populate all known values of `Patient.address`, for example populating both a home and postal address if both are known.
-- AU PS Consumers **SHALL** handle all occurrences of `Patient.address` if present in the resource and containing any valid value, and **SHOULD** display all occurrences of `Patient.address` when presenting the data to a human user.
+- AU PS Consumers **SHALL** handle all occurrences of `Patient.address` if present in the resource and containing any valid value. 
+- AU PS Consumers **SHOULD** display all occurrences of `Patient.address` when presenting the data to a human user.
 
 ##### Must Support - Resource References
 Some elements labelled as *Must Support* reference multiple resource types or profiles such as `Observation.performer`. In such cases: 
