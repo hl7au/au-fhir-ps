@@ -70,14 +70,12 @@ jobs:
       run: |
         echo "Generating Publish for  Au patient summary IG..."
         java -jar input-cache/publisher.jar -ig hl7au/au-fhir-ps/ig.ini
-      
+
     - name: Download package-list.json
       run: |
-        rm -rf hl7au/au-fhir-base/package-list.json
-        URL="https://hl7.org.au/fhir"
-        FULL_URL="$URL/package-list.json"
-        curl --output webroot/fhir/package-list.json --url $FULL_URL
-      
+        rm -rf hl7au/au-fhir-ps/package-list.json
+        curl --output webroot/fhir/ps/package-list.json --url "https://hl7.org.au/fhir/ps/package-list.json"
+    
     - name: Generate Package Registry
       run: |
         java -jar input-cache/publisher.jar -generate-package-registry webroot
