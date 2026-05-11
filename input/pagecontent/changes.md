@@ -3,7 +3,7 @@
 - Publication status: Preview
 - Based on FHIR version: 4.0.1
 
-This change log documents the significant updates and resolutions implemented from version [1.0.0-ballot](https://hl7.org.au/fhir/ps/1.0.0-ballot/index.html) to 1.0.0-preview.
+This change log documents the significant updates and resolutions implemented from version [1.0.0-ballot](https://hl7.org.au/fhir/ps/1.0.0-ballot/index.html) to [1.0.0-preview]((https://hl7.org.au/fhir/ps/1.0.0-preview/index.html)).
 
 #### Changes in this version
 - [AU PS MedicationStatement](StructureDefinition-au-ps-medicationstatement.html):
