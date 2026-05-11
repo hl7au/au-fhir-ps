@@ -5,6 +5,6 @@
     "mode" : "working",
     "status" : "preview",
     "sequence" : "R1",
-    "desc" : "This preview snapshot is published for HL7 FHIR May 2026 Connectathon and HL7 Australia July 2026 Test Event, and incorporates updates from AU PS 1.0.0-ballot reconciliation",
+    "desc" : "This preview snapshot is published for HL7 FHIR May 2026 Connectathon and incorporates updates from AU PS 1.0.0-ballot reconciliation",
     "first" : false
 }

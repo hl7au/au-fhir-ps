@@ -2,7 +2,7 @@
 
 #### AU Patient Summary 1.0.0-preview for Testing
 
-This May 2026 preview snapshot incorporates the normative changes from AU PS ballot reconciliation. This snapshot supports the HL7 FHIR May 2026 Connectathon and HL7 Australia July 2025 Test Event.
+This May 2026 preview snapshot incorporates the normative changes from AU PS ballot reconciliation. This snapshot supports the HL7 FHIR May 2026 Connectathon.
 
 Key updates and changes in this version are shown in the AU Patient Summary [Change Log](changes.html).
 
