@@ -1,0 +1,31 @@
+name: Publish IG - manual trigger to commit to production
+
+on:
+  workflow_dispatch:
+
+permissions:
+  id-token: write # This is required for requesting the JWT
+  contents: read  # This is required for actions/checkout
+  
+jobs:
+  build:
+    runs-on: [self-hosted, Linux, X64]
+    # use ig publisher base image https://hub.docker.com/r/hl7fhir/ig-publisher-base
+    container: 
+      image: hl7fhir/ig-publisher-base  
+      volumes:
+        - /webroot:/webroot
+            
+    steps:
+
+    # to save load time can build custom image with dependencies and push to docker hub
+    - name: install aws cli
+      run: |
+        curl "https://awscli.amazonaws.com/awscli-exe-linux-x86_64.zip" -o "awscliv2.zip"
+        unzip -q awscliv2.zip
+        ./aws/install --update
+        
+    - name: Upload All Updates
+      run: |
+        aws s3 sync /webroot s3://hl7au-fhir-ig
+  
