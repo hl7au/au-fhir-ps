@@ -6,6 +6,7 @@
 This change log documents the significant updates and resolutions implemented from version [1.0.0-ballot](https://hl7.org.au/fhir/ps/1.0.0-ballot/index.html) to [1.0.0-preview]((https://hl7.org.au/fhir/ps/1.0.0-preview/index.html)).
 
 #### Changes in this version
+- added guidance clarifying expectations for Must Support obligations on elements with multiple cardinality in [General Requirements](general-requirements.html) page [AU PS: FHIR-53114](https://jira.hl7.org/browse/FHIR-53114)
 - [AU PS MedicationStatement](StructureDefinition-au-ps-medicationstatement.html):
   - changed MedicationStatement.medicationCodeableConcept binding to Australian Medication Use (preferred) [AU Base: FHIR-53469](https://jira.hl7.org/browse/FHIR-53469)
   - changed guidance for representing no known medications using SNOMED CT 787481004 &#124;No known medications&#124;, aligned with IPS guidance [AU PS: FHIR-52274](https://jira.hl7.org/browse/FHIR-52274)
