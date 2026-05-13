@@ -33,7 +33,7 @@ An element can be both *Must Support* and mandatory, and in this circumstance th
 
 The convention in this guide is to mark all mandatory and conditionally mandatory elements as *Must Support* unless they are nested under an optional element.
 
-### Missing Data, Empty Sections, Known Absence of Data
+### Missing Data, Empty Sections, Known Absence of Data, No Known X
 It is important to differentiate between the following mutually exclusive circumstances:
 * Affirmatively stating that a patient has "no known X" or "no history of X" (for example, that a patient has no known allergies). 
 * Not having data in the record for a particular section (for example, where a source system does not have information on a patient's allergies). 
@@ -283,27 +283,6 @@ Typically AU PS profiles will inherit extended sub-elements from the base HL7 AU
 
 The full set of sub-elements is visible in the "Key Elements Table" or "Snapshot Table" which shows the sub-elements defined in this profile (shown in the "Differential Table") and the sub-elements inherited from a base profile.
 
-<div class="request-for-feedback" markdown=1>
-**Must Support - Elements with multiple cardinality**
-
-AU Patient Summary profiles include *Must Support* elements that have multiple cardinality (maximum > 1) e.g. `Composition.author`, `Patient.address` or `AllergyIntolerance.reaction.manifestation.coding`. Implementers are requested to contribute to clarifying the minimum expectations of *Must Support* obligation on elements with multiple cardinality by commenting on the Confluence page [AU PS Must Support - Elements with multiple cardinality](https://confluence.hl7.org/spaces/HAFWG/pages/413055047/AU+PS+Must+Support+-+Elements+with+multiple+cardinality).
-
-Different systems can have different internal support for elements with multiple occurrences. For example: 
-*	a system might have support for just one patient name with a maximum of 2 given names
-*	a system might have support for an internal organisation identifier, ABN and one HPI-O or it might support storing multiple HPI-Os
-*	a system might have support for an ongoing history of allergy reaction events, each with an onset date and up to 2 manifestations 
-*	a system might have support for a single manifestation field in their database
-*	a system might use a proprietary medicines database that has partial mapping to PBS item codes
-
-The following feedback on 'minimum' expectations of multiple cardinality and obligations is requested:
-1. For *Must Support* elements in an AU PS profile with multiple cardinality and obligation of SHALL:populate-if-known or SHALL:populate, is the minimum expectation that an AU PS Producer:
-* SHALL populate all known occurrences of the element; or
-* SHALL populate at least 1 known occurrence of the element; or
-* SHALL populate all relevant occurrences of the element?
-2. Confirm that for *Must Support* elements in an AU PS profile with obligation SHALL:handle, the minimum expectation is that an AU PS Consumer SHALL handle ALL known occurrences of an element?
-
-</div>
-
 ##### Must Support - Composition Sections
 Obligations vary significantly for elements in the AU PS Composition profile, in particular obligations on `Composition.section` reflect the expectations of [The "IPS"](https://hl7.org/fhir/uv/ips/STU2/Structure-of-the-International-Patient-Summary.html) and  [ISO 27269](https://www.iso.org/standard/79491.html). A summary is provided below:
 - AU PS Consumers **SHALL** handle the Composition section if present and containing any valid value, and **SHOULD** display the content of the section when presenting the data to a human user.
@@ -340,6 +319,17 @@ If a sub-element is labelled as *Must Support*:
 For example, in the AU PS Practitioner Profile, the `name` element is labelled *Must Support* and has *Must Support* sub-elements `family` and `given`. When claiming conformance to this profile:
 - AU PS Producers **SHALL** correctly populate a value in `Practitioner.name.family` and `Practitioner.name.given` if the value for those sub-elements is known.
 - AU PS Consumers **SHALL** handle `Practitioner.name` if present and containing valid values in `Practitioner.name.family` and `Practitioner.name.given` sub-elements, and **SHOULD** display the value of at least the sub elements `Practitioner.name.family` and `Practitioner.name.given` when presenting the data to a human user.
+
+##### Must Support - Elements with Multiple Cardinality
+Some elements labelled as *Must Support* have multiple cardinality (maximum cardinality> 1) such as `Composition.author`or `AllergyIntolerance.reaction.manifestation.coding`. In such cases:
+- AU PS Producers **SHALL** correctly populate all known values of the element. 
+- AU PS Consumers **SHALL** handle all occurrences of the element if present in the resource and containing any valid value.
+- AU PS Consumers **SHOULD** display all occurrences of the element when presenting the data to a human user.
+
+For example, in the AU PS Patient Profile, the `address` element is labelled *Must Support*. When claiming conformance to this profile:
+- AU PS Producers **SHALL** correctly populate all known values of `Patient.address`, for example populating both a home and postal address if both are known.
+- AU PS Consumers **SHALL** handle all occurrences of `Patient.address` if present in the resource and containing any valid value. 
+- AU PS Consumers **SHOULD** display all occurrences of `Patient.address` when presenting the data to a human user.
 
 ##### Must Support - Resource References
 Some elements labelled as *Must Support* reference multiple resource types or profiles such as `Observation.performer`. In such cases: 
@@ -432,9 +422,9 @@ Profile |Must Support Element|Supported Identifiers
 [AU PS PractitionerRole](StructureDefinition-au-ps-practitionerrole.html)|PractitionerRole.identifier|Medicare Provider Number
 {:.grid}
 
-For example, the profile [AU PS Organization](StructureDefinition-au-ps-organization.html) defines support for the Healthcare Provider Identifier - Organisation (HPI-O) and Australian Business Number (ABN) identifier types as slices of `Organization.identifier` flagged with *Must Support*. When claiming conformance to the AU Core Organization Profile:
-- AU PS Producers **SHALL** correctly populate `Organization.identifier` with at least one of HPI-O or ABN if known, or any other identifier type when neither HPI-O or ABN are known but some other identifier is known (e.g. NATA Accredication Number).
-- AU PS Consumers **SHALL** handle `Patient.identifier` if present and containing any valid value. A valid value may be an HPI-O or ABN, or may be any other valid identifier type allowed by the element definition (e.g. NATA Accredication Number). The AU PS Consumer **SHOULD** display the value of each populated identifier type (IHI, Medicare Number, DVA Number, or some other identifier) when presenting the data to a human user.
+For example, the profile [AU PS Organization](StructureDefinition-au-ps-organization.html) defines support for the Healthcare Provider Identifier - Organisation (HPI-O) and Australian Business Number (ABN) identifier types as slices of `Organization.identifier` flagged with *Must Support*. When claiming conformance to the AU PS Organization Profile:
+- AU PS Producers **SHALL** correctly populate `Organization.identifier` with at least one of HPI-O or ABN if known, or any other identifier type when neither HPI-O or ABN are known but some other identifier is known (e.g. NATA Accreditation Number).
+- AU PS Consumers **SHALL** handle `Organization.identifier` if present and containing any valid value. A valid value may be an HPI-O or ABN, or may be any other valid identifier type allowed by the element definition (e.g. NATA Accreditation Number). The AU PS Consumer **SHOULD** display the value of each populated identifier type (HPI-O, ABN, or some other identifier) when presenting the data to a human user.
 
 Systems **MAY** support populating other identifiers, but this is not a requirement of AU PS.
 
