@@ -1,3 +1,4 @@
 * @brettesler-ext @dt-r @dbojicic @JayMurdoch
 
 /.github/CODEOWNERS @brettesler-ext @dt-r 
+/.github/workflows/pipeline-release.yml @brettesler-ext
