@@ -9,6 +9,7 @@ permissions:
   
 jobs:
   build:
+    if: github.actor == 'brettesler-ext'  
     runs-on: [self-hosted, Linux, X64]
     # use ig publisher base image https://hub.docker.com/r/hl7fhir/ig-publisher-base
     container: 
