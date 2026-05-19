@@ -35,8 +35,8 @@ This change log documents the significant updates and resolutions implemented fr
   - AllergyIntolerance.patient.reference:
     - removed SHOULD:display obligation for the AU PS Consumer [IPS: FHIR-51258](https://jira.hl7.org/browse/FHIR-51258)
     - changed obligation for the AU PS Producer from SHALL:populate-if-known to SHALL:populate [AU PS: FHIR-53115](https://jira.hl7.org/browse/FHIR-53115)
-    - AllergyIntolerance.reaction.manifestation:
-      - changed binding to Adverse Reaction Clinical Manifestation (preferred) [AU Base: FHIR-47076](https://jira.hl7.org/browse/FHIR-47076)
+  - AllergyIntolerance.reaction.manifestation:
+    - changed binding to Adverse Reaction Clinical Manifestation (preferred) [AU Base: FHIR-47076](https://jira.hl7.org/browse/FHIR-47076)
 - [AU PS Bundle](https://hl7.org.au/fhir/ps/1.0.0-ballot/StructureDefinition-au-ps-bundle.html)
   - changed obligations for all mandatory elements for the AU PS Producer from SHALL:able-to-populate to SHALL:populate [AU PS: FHIR-51440](https://jira.hl7.org/browse/FHIR-51440)
 - [AU PS Composition](https://hl7.org.au/fhir/ps/1.0.0-ballot/StructureDefinition-au-ps-composition.html)
@@ -76,7 +76,7 @@ This change log documents the significant updates and resolutions implemented fr
     - removed SHOULD:display obligation for the AU PS Consumer [IPS: FHIR-51258](https://jira.hl7.org/browse/FHIR-51258)
 - [AU PS Condition](https://hl7.org.au/fhir/ps/1.0.0-ballot/StructureDefinition-au-ps-condition.html)
   - Condition.bodySite:
-    - changed to remove use of CodeableConceptIPS [IPS: FHIR-51257](https://jira.hl7.org/browse/FHIR-51257)
+    - changed to remove use of the CodeableConceptIPS [IPS: FHIR-51257](https://jira.hl7.org/browse/FHIR-51257)
   - Condition.code:
     - changed obligation for the AU PS Producer from SHALL:populate-if-known to SHALL:populate [AU PS: FHIR-52411](https://jira.hl7.org/browse/FHIR-52411)
   - Condition.subject:
@@ -85,8 +85,7 @@ This change log documents the significant updates and resolutions implemented fr
     - removed SHOULD:display obligation for the AU PS Consumer [IPS: FHIR-51258](https://jira.hl7.org/browse/FHIR-51258)
     - changed obligation for the AU PS Producer from SHALL:populate-if-known to SHALL:populate [AU PS: FHIR-53115](https://jira.hl7.org/browse/FHIR-53115)
 - [AU PS Consumer ActorDefinition](https://hl7.org.au/fhir/ps/1.0.0-ballot/ActorDefinition-au-ps-actor-consumer.html)
-  - Composition.section.entry:
-    - changed requirement for recommended AU PS Composition sections from SHOULD to SHALL to implement referenced profiles  [AU PS: FHIR-52345](https://jira.hl7.org/browse/FHIR-52345)
+  - changed requirement for recommended AU PS Composition sections from SHOULD to SHALL to implement the profiles referenced by Composition.section.entry [AU PS: FHIR-52345](https://jira.hl7.org/browse/FHIR-52345)
 - [AU PS Encounter](https://hl7.org.au/fhir/ps/1.0.0-ballot/StructureDefinition-au-ps-encounter.html)
   - Encounter.participant.type:
     - changed to use CodeableConceptIPS [AU PS: FHIR-51872](https://jira.hl7.org/browse/FHIR-51872)
