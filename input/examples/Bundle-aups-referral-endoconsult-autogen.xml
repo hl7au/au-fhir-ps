@@ -332,6 +332,12 @@
           <entry>
             <reference value="urn:uuid:c4e7d351-cd85-435d-9fa5-2db04108651f"/>
           </entry>
+          <entry>
+            <reference value="urn:uuid:b996826c-a62c-4d5f-b7c2-3b6bef0e4f35"/>
+          </entry>
+          <entry>
+            <reference value="urn:uuid:108240fd-5fc7-4c7e-b1ec-5bd58ec42fbf"/>
+          </entry>
         </section>
         <section>
           <title value="Past Medical History (Problems)"/>
