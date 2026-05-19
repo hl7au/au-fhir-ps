@@ -1562,7 +1562,7 @@ Norfloxacin: Susceptible</td><td>05/11/2024</td></tr>
     </resource>
   </entry>
   <entry>
-    <fullUrl value="urn:uuid:c4e7d351-cd85-435d-9fa5-2db04108651f"/>
+    <fullUrl value="urn:uuid:b996826c-a62c-4d5f-b7c2-3b6bef0e4f35"/>
     <resource>
       <Immunization>
         <meta>
@@ -1586,7 +1586,7 @@ Norfloxacin: Susceptible</td><td>05/11/2024</td></tr>
     </resource>
   </entry>
   <entry>
-    <fullUrl value="urn:uuid:c4e7d351-cd85-435d-9fa5-2db04108651f"/>
+    <fullUrl value="urn:uuid:108240fd-5fc7-4c7e-b1ec-5bd58ec42fbf"/>
     <resource>
       <Immunization>
         <meta>
