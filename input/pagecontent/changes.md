@@ -12,8 +12,9 @@ This change log documents the significant updates and resolutions implemented fr
   - MedicationStatement.medicationCodeableConcept:
     - changed binding to Australian Medication Use (preferred) [AU Base: FHIR-53469](https://jira.hl7.org/browse/FHIR-53469)
 - [AU PS Organization](StructureDefinition-au-ps-organization.html):
-  - added AU HAE as an allowed type for Organization.identifier [AU Base: FHIR-54928](https://jira.hl7.org/browse/FHIR-54928)
-  - added AU HSP-O as an allowed type for Organization.identifier [AU Base: FHIR-54923](https://jira.hl7.org/browse/FHIR-54923)
+  - Organization.identifier:
+    - added AU HAE as an allowed type [AU Base: FHIR-54928](https://jira.hl7.org/browse/FHIR-54928)
+    - added AU HSP-O as an allowed type [AU Base: FHIR-54923](https://jira.hl7.org/browse/FHIR-54923)
 - [AU PS RelatedPerson](StructureDefinition-au-ps-relatedperson.html):
   - RelatedPerson.patient.reference:
     - applied technical correction to remove SHOULD:display obligation for the AU PS Consumer [AU PS: FHIR-56175](https://jira.hl7.org/browse/FHIR-56175)
