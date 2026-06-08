@@ -225,7 +225,7 @@
     <fullUrl value="urn:uuid:719de42c-3b25-45d6-b24f-ebec9a753175"/>
     <resource>
       <PractitionerRole>
-        <id value="afead11c-3bee-4020-af4f-44040abfa961"/>
+        <id value="719de42c-3b25-45d6-b24f-ebec9a753175"/>
         <meta>
           <profile value="http://hl7.org.au/fhir/ps/StructureDefinition/au-ps-practitionerrole"/>
         </meta>

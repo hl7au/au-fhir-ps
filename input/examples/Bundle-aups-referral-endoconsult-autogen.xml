@@ -288,6 +288,16 @@
                     <td>03/05/2020</td>
                     <td/>
                   </tr>
+                  <tr>
+                    <td>Influenza vaccine</td>
+                    <td>19/05/2019</td>
+                    <td/>
+                  </tr>
+                  <tr>
+                    <td>Influenza vaccine</td>
+                    <td>15/05/2018</td>
+                    <td/>
+                  </tr>
                 </tbody>
               </table>
             </div>
@@ -321,6 +331,12 @@
           </entry>
           <entry>
             <reference value="urn:uuid:c4e7d351-cd85-435d-9fa5-2db04108651f"/>
+          </entry>
+          <entry>
+            <reference value="urn:uuid:b996826c-a62c-4d5f-b7c2-3b6bef0e4f35"/>
+          </entry>
+          <entry>
+            <reference value="urn:uuid:108240fd-5fc7-4c7e-b1ec-5bd58ec42fbf"/>
           </entry>
         </section>
         <section>
@@ -1438,9 +1454,9 @@ Norfloxacin: Susceptible</td><td>05/11/2024</td></tr>
         <vaccineCode>
           <coding>
             <system value="https://www.humanservices.gov.au/organisations/health-professionals/enablers/air-vaccine-code-formats"/>
-            <code value="PANVAX"/>
+            <code value="INFLTA"/>
           </coding>
-          <text value="Panvax"/>
+          <text value="Influvac Tetra"/>
         </vaccineCode>
         <patient>
           <reference value="urn:uuid:85822a88-55b1-460c-bb7b-e8fc22d8568f"/>
@@ -1461,9 +1477,9 @@ Norfloxacin: Susceptible</td><td>05/11/2024</td></tr>
         <vaccineCode>
           <coding>
             <system value="https://www.humanservices.gov.au/organisations/health-professionals/enablers/air-vaccine-code-formats"/>
-            <code value="PANVAX"/>
+            <code value="INFLTA"/>
           </coding>
-          <text value="Panvax"/>
+          <text value="Influvac Tetra"/>
         </vaccineCode>
         <patient>
           <reference value="urn:uuid:85822a88-55b1-460c-bb7b-e8fc22d8568f"/>
@@ -1484,9 +1500,9 @@ Norfloxacin: Susceptible</td><td>05/11/2024</td></tr>
         <vaccineCode>
           <coding>
             <system value="https://www.humanservices.gov.au/organisations/health-professionals/enablers/air-vaccine-code-formats"/>
-            <code value="PANVAX"/>
+            <code value="INFLTA"/>
           </coding>
-          <text value="Panvax"/>
+          <text value="Influvac Tetra"/>
         </vaccineCode>
         <patient>
           <reference value="urn:uuid:85822a88-55b1-460c-bb7b-e8fc22d8568f"/>
@@ -1513,10 +1529,10 @@ Norfloxacin: Susceptible</td><td>05/11/2024</td></tr>
         <vaccineCode>
           <coding>
             <system value="https://www.humanservices.gov.au/organisations/health-professionals/enablers/air-vaccine-code-formats"/>
-            <code value="PANVAX"/>
-            <display value="Panvax"/>
+            <code value="INFLTA"/>
+            <display value="Influvac Tetra"/>
           </coding>
-          <text value="Panvax"/>
+          <text value="Influvac Tetra"/>
         </vaccineCode>
         <patient>
           <reference value="urn:uuid:85822a88-55b1-460c-bb7b-e8fc22d8568f"/>
@@ -1538,15 +1554,63 @@ Norfloxacin: Susceptible</td><td>05/11/2024</td></tr>
         <vaccineCode>
           <coding>
             <system value="https://www.humanservices.gov.au/organisations/health-professionals/enablers/air-vaccine-code-formats"/>
-            <code value="PANVAX"/>
-            <display value="Panvax"/>
+            <code value="INFLTA"/>
+            <display value="Influvac Tetra"/>
           </coding>
-          <text value="Panvax"/>
+          <text value="Influvac Tetra"/>
         </vaccineCode>
         <patient>
           <reference value="urn:uuid:85822a88-55b1-460c-bb7b-e8fc22d8568f"/>
         </patient>
         <occurrenceDateTime value="2020-05-03"/>
+        <primarySource value="true"/>
+      </Immunization>
+    </resource>
+  </entry>
+  <entry>
+    <fullUrl value="urn:uuid:b996826c-a62c-4d5f-b7c2-3b6bef0e4f35"/>
+    <resource>
+      <Immunization>
+        <meta>
+          <profile value="http://hl7.org.au/fhir/ps/StructureDefinition/au-ps-immunization"/>
+        </meta>
+        <status value="completed"/>
+        <vaccineCode>
+          <coding>
+            <system value="https://www.humanservices.gov.au/organisations/health-professionals/enablers/air-vaccine-code-formats"/>
+            <code value="INFLTA"/>
+            <display value="Influvac Tetra"/>
+          </coding>
+          <text value="Influvac Tetra"/>
+        </vaccineCode>
+        <patient>
+          <reference value="urn:uuid:85822a88-55b1-460c-bb7b-e8fc22d8568f"/>
+        </patient>
+        <occurrenceDateTime value="2019-05-19"/>
+        <primarySource value="true"/>
+      </Immunization>
+    </resource>
+  </entry>
+  <entry>
+    <fullUrl value="urn:uuid:108240fd-5fc7-4c7e-b1ec-5bd58ec42fbf"/>
+    <resource>
+      <Immunization>
+        <meta>
+          <profile value="http://hl7.org.au/fhir/ps/StructureDefinition/au-ps-immunization"/>
+        </meta>
+        <status value="completed"/>
+        <vaccineCode>
+          <coding>
+            <system value="https://www.humanservices.gov.au/organisations/health-professionals/enablers/air-vaccine-code-formats"/>
+            <code value="INFLTA"/>
+            <display value="Influvac Tetra"/>
+          </coding>
+          <text value="Influvac Tetra"/>
+        </vaccineCode>
+        <patient>
+          <reference value="urn:uuid:85822a88-55b1-460c-bb7b-e8fc22d8568f"/>
+        </patient>
+        <occurrenceDateTime value="2018-05-15"/>
         <primarySource value="true"/>
       </Immunization>
     </resource>
