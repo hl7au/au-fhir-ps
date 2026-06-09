@@ -10,9 +10,9 @@
     <value value="urn:uuid:e4f12f49-43e8-435e-8680-453c509dc0e5"/>
   </identifier>
   <type value="document"/>
-  <timestamp value="2025-04-21T19:32:10.0607701+10:00"/>
+  <timestamp value="2025-08-21T19:32:10.0607701+10:00"/>
   <entry>
-    <fullUrl value="urn:uuid:40e448e9-e323-4941-bb7c-60b0a91ac950"/>
+    <fullUrl value="urn:uuid:048c37d9-9f41-4223-a8b2-ed322cb2f056"/>
     <resource>
       <Composition>
         <id value="048c37d9-9f41-4223-a8b2-ed322cb2f056"/>
@@ -28,7 +28,7 @@
         <subject>
           <reference value="urn:uuid:f88cc963-56bd-42e7-930d-3b18db0fa723"/>
         </subject>
-        <date value="2025-04-21"/>
+        <date value="2025-08-21"/>
         <author>
           <reference value="urn:uuid:f88cc963-56bd-42e7-930d-3b18db0fa723"/>
         </author>
@@ -64,16 +64,37 @@
             </coding>
           </code>
           <text>
-            <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml" lang="en-AU" xml:lang="en-AU">No information is provided about the patient's medical problems.</div>
+            <status value="generated"/>
+              <div xmlns="http://www.w3.org/1999/xhtml" lang="en-AU" xml:lang="en-AU">
+                <p>Health problems as reported by the patient:</p>
+                  <ul>
+                    <li>My prostate cancer has come back and spread to my bones</li>
+                    <li>Trouble with my digestion</li>
+                    <li>Problems with my skin</li>
+                    <li>Getting infections more than I used to</li>
+                    <li>Not as sharp mentally as I used to be</li>
+                    <li>Bad pain in my back and stomach</li>
+                  </ul>
+              </div>
           </text>
-          <emptyReason>
-            <coding>
-              <system value="http://terminology.hl7.org/CodeSystem/list-empty-reason"/>
-              <code value="unavailable"/>
-              <display value="Unavailable"/>
-            </coding>
-            <text value="No information available"/>
-          </emptyReason>
+          <entry>
+            <reference value="urn:uuid:03e7d19a-a796-4779-a9c0-b72b9a63f7d6"/>
+          </entry>
+          <entry>
+            <reference value="urn:uuid:a0deca67-656f-43bc-a6d7-ded0e4416804"/>
+          </entry>
+          <entry>
+            <reference value="urn:uuid:7fe97b01-3def-4c5e-a53a-735b1aea6a62"/>
+          </entry>
+          <entry>
+            <reference value="urn:uuid:6768ef5c-7e36-4124-a83b-f7a1d8f026e4"/>
+          </entry>
+          <entry>
+            <reference value="urn:uuid:99d8f634-8dd6-4d48-8f79-c4dbfd9ee714"/>
+          </entry>
+          <entry>
+            <reference value="urn:uuid:b2038034-fc91-4de8-83e2-44442fb33ceb"/>
+          </entry>
         </section>
         <section>
           <title value="Medication Summary"/>
@@ -166,17 +187,191 @@
           <value value="0491571266"/>
           <use value="mobile"/>
         </telecom>
-        <gender value="other"/>
+        <gender value="male"/>
         <birthDate value="1942-07-11"/>
         <address>
           <use value="home"/>
-          <line value="12 Pheonix Lane"/>
+          <line value="12 Phoenix Lane"/>
           <city value="Walliebum"/>
           <state value="QLD"/>
           <postalCode value="4655"/>
           <country value="AU"/>
         </address>
       </Patient>
+    </resource>
+  </entry>
+  <entry>
+    <fullUrl value="urn:uuid:03e7d19a-a796-4779-a9c0-b72b9a63f7d6"/>
+    <resource>
+      <Condition>
+        <id value="03e7d19a-a796-4779-a9c0-b72b9a63f7d6"/>
+        <clinicalStatus>
+            <coding>
+                <system value="http://terminology.hl7.org/CodeSystem/condition-clinical"/>
+                <code value="active"/>
+                <display value="Active"/>
+            </coding>
+        </clinicalStatus>
+        <category>
+            <coding>
+                <system value="http://terminology.hl7.org/CodeSystem/condition-category"/>
+                <code value="problem-list-item"/>
+                <display value="Problem List Item"/>
+            </coding>
+        </category>
+        <code>
+          <text value="My prostate cancer has come back and spread to my bones"/>
+        </code>
+        <subject>
+            <reference value="urn:uuid:f88cc963-56bd-42e7-930d-3b18db0fa723"/>
+        </subject>
+        <recordedDate value="2025-08-21"/>
+      </Condition>
+    </resource>
+  </entry>
+  <entry>
+    <fullUrl value="urn:uuid:a0deca67-656f-43bc-a6d7-ded0e4416804"/>
+    <resource>
+      <Condition>
+        <id value="a0deca67-656f-43bc-a6d7-ded0e4416804"/>
+        <clinicalStatus>
+            <coding>
+                <system value="http://terminology.hl7.org/CodeSystem/condition-clinical"/>
+                <code value="active"/>
+                <display value="Active"/>
+            </coding>
+        </clinicalStatus>
+        <category>
+            <coding>
+                <system value="http://terminology.hl7.org/CodeSystem/condition-category"/>
+                <code value="problem-list-item"/>
+                <display value="Problem List Item"/>
+            </coding>
+        </category>
+        <code>
+          <text value="Trouble with my digestion"/>
+        </code>
+        <subject>
+            <reference value="urn:uuid:f88cc963-56bd-42e7-930d-3b18db0fa723"/>
+        </subject>
+        <recordedDate value="2025-08-21"/>
+      </Condition>
+    </resource>
+  </entry>
+  <entry>
+    <fullUrl value="urn:uuid:7fe97b01-3def-4c5e-a53a-735b1aea6a62"/>
+    <resource>
+      <Condition>
+        <id value="7fe97b01-3def-4c5e-a53a-735b1aea6a62"/>
+        <clinicalStatus>
+            <coding>
+                <system value="http://terminology.hl7.org/CodeSystem/condition-clinical"/>
+                <code value="active"/>
+                <display value="Active"/>
+            </coding>
+        </clinicalStatus>
+        <category>
+            <coding>
+                <system value="http://terminology.hl7.org/CodeSystem/condition-category"/>
+                <code value="problem-list-item"/>
+                <display value="Problem List Item"/>
+            </coding>
+        </category>
+        <code>
+          <text value="Problems with my skin"/>
+        </code>
+        <subject>
+            <reference value="urn:uuid:f88cc963-56bd-42e7-930d-3b18db0fa723"/>
+        </subject>
+        <recordedDate value="2025-08-21"/>
+      </Condition>
+    </resource>
+  </entry>
+  <entry>
+    <fullUrl value="urn:uuid:6768ef5c-7e36-4124-a83b-f7a1d8f026e4"/>
+    <resource>
+      <Condition>
+        <id value="6768ef5c-7e36-4124-a83b-f7a1d8f026e4"/>
+        <clinicalStatus>
+            <coding>
+                <system value="http://terminology.hl7.org/CodeSystem/condition-clinical"/>
+                <code value="active"/>
+                <display value="Active"/>
+            </coding>
+        </clinicalStatus>
+        <category>
+            <coding>
+                <system value="http://terminology.hl7.org/CodeSystem/condition-category"/>
+                <code value="problem-list-item"/>
+                <display value="Problem List Item"/>
+            </coding>
+        </category>
+        <code>
+          <text value="Getting infections more than I used to"/>
+        </code>
+        <subject>
+            <reference value="urn:uuid:f88cc963-56bd-42e7-930d-3b18db0fa723"/>
+        </subject>
+        <recordedDate value="2025-08-21"/>
+      </Condition>
+    </resource>
+  </entry>
+  <entry>
+    <fullUrl value="urn:uuid:99d8f634-8dd6-4d48-8f79-c4dbfd9ee714"/>
+    <resource>
+      <Condition>
+        <id value="99d8f634-8dd6-4d48-8f79-c4dbfd9ee714"/>
+        <clinicalStatus>
+            <coding>
+                <system value="http://terminology.hl7.org/CodeSystem/condition-clinical"/>
+                <code value="active"/>
+                <display value="Active"/>
+            </coding>
+        </clinicalStatus>
+        <category>
+            <coding>
+                <system value="http://terminology.hl7.org/CodeSystem/condition-category"/>
+                <code value="problem-list-item"/>
+                <display value="Problem List Item"/>
+            </coding>
+        </category>
+        <code>
+          <text value="Not as sharp mentally as I used to be"/>
+        </code>
+        <subject>
+            <reference value="urn:uuid:f88cc963-56bd-42e7-930d-3b18db0fa723"/>
+        </subject>
+        <recordedDate value="2025-08-21"/>
+      </Condition>
+    </resource>
+  </entry>
+  <entry>
+    <fullUrl value="urn:uuid:b2038034-fc91-4de8-83e2-44442fb33ceb"/>
+    <resource>
+      <Condition>
+        <id value="b2038034-fc91-4de8-83e2-44442fb33ceb"/>
+        <clinicalStatus>
+            <coding>
+                <system value="http://terminology.hl7.org/CodeSystem/condition-clinical"/>
+                <code value="active"/>
+                <display value="Active"/>
+            </coding>
+        </clinicalStatus>
+        <category>
+            <coding>
+                <system value="http://terminology.hl7.org/CodeSystem/condition-category"/>
+                <code value="problem-list-item"/>
+                <display value="Problem List Item"/>
+            </coding>
+        </category>
+        <code>
+          <text value="Bad pain in my back and stomach"/>
+        </code>
+        <subject>
+            <reference value="urn:uuid:f88cc963-56bd-42e7-930d-3b18db0fa723"/>
+        </subject>
+        <recordedDate value="2025-08-21"/>
+      </Condition>
     </resource>
   </entry>
 </Bundle>
