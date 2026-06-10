@@ -275,19 +275,19 @@ The table below indicates the elements within examples that demonstrate aspects 
             <td rowspan="4"><strong>Empty Sections</strong></td>
             <td rowspan="4">-</td>
             <td rowspan="4">-</td>
-            <td><code>Composition.section:sectionProblems</code></td>
-            <td rowspan="4">-</td>
-            <td rowspan="4">-</td>
-            <td rowspan="4">-</td>
-            <td rowspan="4">-</td>
-        </tr>
-        <tr>
             <td><code>Composition.section:sectionAllergies</code></td>
             <td><code>Composition.section:sectionAllergies</code></td>
+            <td rowspan="4">-</td>
+            <td rowspan="4">-</td>
+            <td rowspan="4">-</td>
         </tr>
         <tr>
             <td><code>Composition.section:sectionMedications</code></td>
-            <td rowspan="2"><code>Composition.section:sectionMedications</code></td>
+            <td><code>Composition.section:sectionMedications</code></td>
+        </tr>
+        <tr>
+            <td><code>Composition.section:sectionProblems</code></td>
+            <td rowspan="2">-</td>
         </tr>
         <tr>
             <td><code>Composition.section:sectionImmunizations</code></td>
@@ -309,6 +309,7 @@ The table below indicates the elements within examples that demonstrate aspects 
             <td rowspan="3">-</td>
             <td rowspan="3">-</td>
             <td rowspan="3"><code>AllergyIntolerance.code</code></td>
+            <td rowspan="3">-</td>
             <td rowspan="3">-</td>
         </tr>
         <tr>
