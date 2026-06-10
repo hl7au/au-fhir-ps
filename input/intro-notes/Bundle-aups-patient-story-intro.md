@@ -1,1 +1,1 @@
-<p class="stu-note">test</p>
+<p class="stu-note">This example represents a patient authored AU PS where the patient's own narrative is represented as unstructured text in a Patient Story section and condition entries in the Problem List are uncoded and entered by the patient. AU PS does not currently provide guidance on patient authored documents or on the Patient Story section, including when it should be used and how its content should be represented. Feedback is sought from implementers on the representation of patient authored content in AU PS.</p>
