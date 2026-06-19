@@ -1,0 +1,344 @@
+name: AU PS build → working+milestone previews → gated working/milestone publish
+
+# ONE pipeline for both release shapes, for the hl7.fhir.au.ps SIBLING IG. au-ps is co-hosted in the
+# SAME S3 bucket as au-base (hl7au-fhir-ig) but owns only the /fhir/ps subtree — au-base owns the /fhir
+# ROOT (its package-list.json, history.html, index.html). See docs/build-pipeline.md "Per-repo
+# independent publish". This workflow mirrors au-fhir-base/.github/workflows/build-review-publish.yml;
+# the au-ps-specific differences are called out inline (look for "au-ps:").
+#
+# Renders the IG ONCE (publication mode), then runs go-publish TWICE off that single render
+# (-reuse-build → the 2nd is ~100s, not another render) to produce BOTH:
+#   - a WORKING preview   (the new version as a non-current snapshot — au-ps's normal cadence:
+#                          preview/ballot/draft, e.g. 1.0.0-preview)
+#   - a MILESTONE preview (the same version promoted to current; dynamic-publish-box ⇒ old versions
+#                          untouched, no version tree needed — for the eventual 1.0.0 trial-use release)
+# Both deploy side-by-side to GitHub Pages (previews/<slug>/{working,milestone}/fhir/ps) so reviewers
+# can compare them on a feature branch / PR with ZERO prod writes.
+#
+# PROD PUBLISH (gated by the `production` GitHub environment — required reviewers) has TWO paths:
+#   - WORKING   (preview/ballot/draft snapshots): published at their versioned path under /fhir/ps,
+#     NOT promoted to "current". au-ps's common cadence. Trigger: dispatch publish_working=true.
+#   - MILESTONE (the R-numbered trial-use "current" release, future): published AND promoted to current.
+#     Trigger: a version tag push (refs/tags/v*), or dispatch publish_milestone=true.
+#
+# ★ au-ps SYNC SCOPING (the real difference from au-base). au-base owns /fhir and syncs out/fhir →
+#   s3://hl7au-fhir-ig/fhir. au-ps must NOT do that — a blanket /fhir sync would clobber au-base's root
+#   files (history.html, package-list.json, index.html). au-ps publishes:
+#     (a) its OWN subtree:  out/<mode>/fhir/ps → s3://hl7au-fhir-ig/fhir/ps  (additive, no --delete), AND
+#     (b) ONLY the SHARED, read-modify-written root files it legitimately updated, uploaded INDIVIDUALLY
+#         (package-feed.xml, publication-feed.xml, package-registry.json) — NOT a blanket /fhir sync.
+#   These shared files are seeded from the LIVE prod copies below, so go-publish inserts au-ps's entry
+#   and au-base's entries survive. Never --delete.
+#
+# TRIGGERS
+#   - push to master / PR to master  → render once + both Pages previews (NO publish)
+#   - push a tag  v*                  → both previews + gated MILESTONE publish to prod S3
+#   - workflow_dispatch               → both previews; publish_milestone=true → gated MILESTONE publish;
+#                                       publish_working=true   → gated WORKING publish (non-current)
+#
+# For a real milestone release: set publication-request.json version/path to the milestone version,
+# commit, then tag v<version> (or dispatch with publish_milestone=true). The milestone build forces
+# mode=milestone + status=trial-use.
+#
+# CROSS-IG ORDERING: au-ps depends on au-base. When both change, publish au-base BEFORE au-ps so au-ps
+# sees au-base's just-written shared-feed entries (docs/build-pipeline.md "Per-repo independent publish").
+#
+# INPUTS this build consumes (kept deliberately minimal):
+#   - au-fhir-ps (this repo)        : the IG source (ig.ini/ig.xml, input/, publication-request.json).
+#   - KyleOps/publications@au-pipeline-config → publish-setup.json (server=cloud + dynamic-publish-box +
+#                                     layout-rules mapping hl7.fhir.au.ps → /fhir/ps) + templates/. SHARED
+#                                     with au-base. TEMP fork/branch; revert to hl7au/publications once
+#                                     config + custom jar are merged.
+#   - HL7/fhir-ig-history-template  : history template for go-publish -history.
+#   - hl7au/ig-registry             : fhir-ig-list.json for go-publish -registry.
+#   - combined custom publisher.jar : KyleOps/fhir-ig-publisher release (5 opt-in, unmerged features:
+#                                     #1327 cloud redirects, A2 dynamic publish-box + page-versions,
+#                                     skip-version-tree, A3 source viewers, C -reuse-build). TEMP
+#                                     until merged — then revert to ./_updatePublisher.sh -f -y.
+
+on:
+  push:
+    branches: [master]
+    tags: ['v*']
+  pull_request:
+    branches: [master]
+  workflow_dispatch:
+    inputs:
+      ref:
+        description: "Tag/branch of au-fhir-ps to build"
+        default: master
+      publish_milestone:
+        description: "Promote the MILESTONE build to prod S3 (becomes 'current'; gated by production env)"
+        type: boolean
+        default: false
+      publish_working:
+        description: "Publish the WORKING build to prod S3 (versioned snapshot, NOT current; gated)"
+        type: boolean
+        default: false
+
+permissions:
+  id-token: write   # OIDC → AWS (publish jobs only)
+  contents: write   # push the previews to the gh-pages branch
+
+concurrency:
+  group: au-ps-publish   # never publish/deploy two au-ps runs at once
+  cancel-in-progress: false
+
+env:
+  PUBLISHER_JAR_URL: https://github.com/KyleOps/fhir-ig-publisher/releases/download/au-pipeline-combined/publisher.jar
+  PUBLICATIONS_REPO: KyleOps/publications        # TEMP: revert to hl7au/publications once merged
+  PUBLICATIONS_REF: au-pipeline-config           # TEMP: revert to (default branch) once merged
+  TX_SERVER: https://tx.fhir.org
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    container: hl7fhir/ig-publisher-base
+    outputs:
+      slug: ${{ steps.meta.outputs.slug }}
+      ver: ${{ steps.render.outputs.ver }}
+    steps:
+      - name: Compute build label (branch / pr-N / tag / dispatch ref)
+        id: meta
+        run: |
+          if [ "${{ github.event_name }}" = "pull_request" ]; then
+            slug="pr-${{ github.event.pull_request.number }}"
+          elif [ "${{ github.event_name }}" = "workflow_dispatch" ]; then
+            slug="${{ inputs.ref }}"
+          else
+            slug="${{ github.ref_name }}"
+          fi
+          slug=$(echo "$slug" | tr '/' '-' | tr -cd 'A-Za-z0-9._-')
+          echo "slug=$slug" >> "$GITHUB_OUTPUT"
+          echo "Build label: $slug"
+
+      - name: Checkout IG source (au-fhir-ps)
+        uses: actions/checkout@v4
+        with:
+          ref: ${{ inputs.ref || github.sha }}
+          path: au-fhir-ps
+
+      - name: Checkout publish-setup.json + templates (sparse, from publications)
+        uses: actions/checkout@v4
+        with:
+          repository: ${{ env.PUBLICATIONS_REPO }}
+          ref: ${{ env.PUBLICATIONS_REF }}
+          path: publications
+          sparse-checkout: |
+            publish-setup.json
+            templates
+          sparse-checkout-cone-mode: false
+
+      - name: Checkout history template (go-publish -history)
+        uses: actions/checkout@v4
+        with: { repository: HL7/fhir-ig-history-template, path: fhir-history }
+
+      - name: Checkout IG registry (go-publish -registry)
+        uses: actions/checkout@v4
+        with: { repository: hl7au/ig-registry, path: ig-registry }
+
+      - name: Download combined IG Publisher jar (temporary — until the 5 PRs merge)
+        working-directory: au-fhir-ps
+        run: |
+          # TEMP: until the opt-in publisher changes merge upstream and ship in a release, use the
+          # combined jar. Revert to `./_updatePublisher.sh -f -y` once they're in the released jar.
+          mkdir -p input-cache
+          curl -sSL -o input-cache/publisher.jar "$PUBLISHER_JAR_URL"
+          echo "publisher.jar: $(du -h input-cache/publisher.jar | cut -f1)"
+
+      # Persist the FHIR package cache across runs so the render doesn't re-download packages each time.
+      # Keyed on the IG's dependency declarations (ig.xml dependsOn + ig.ini). NOTE: only the -ig render
+      # honors -package-cache-folder; go-publish ignores it, but -reuse-build makes go-publish skip the
+      # render so its package use is negligible.
+      - name: Cache FHIR packages (speeds up the render)
+        uses: actions/cache@v4
+        with:
+          path: ${{ github.workspace }}/.fhir-cache
+          key: fhir-pkgcache-v1-${{ hashFiles('au-fhir-ps/input/ig.xml', 'au-fhir-ps/ig.ini') }}
+          restore-keys: fhir-pkgcache-v1-
+
+      - name: Render IG in publication mode (reused by both go-publish runs via -reuse-build, lever C)
+        id: render
+        working-directory: au-fhir-ps
+        run: |
+          # Render once, to the final publish path, so the output is publishable and BOTH go-publish
+          # runs below can adopt it (no re-render). Path (not mode) drives the reuse match, so flipping
+          # mode for each preview below still reuses this one render.
+          mkdir -p "$GITHUB_WORKSPACE/.fhir-cache"
+          PUBPATH=$(grep -o '"path"[^,}]*' publication-request.json | head -1 | sed 's/.*:[[:space:]]*"\([^"]*\)".*/\1/')
+          echo "Publication path: $PUBPATH"
+          echo "ver=${PUBPATH##*/}" >> "$GITHUB_OUTPUT"   # version folder name, for preview deep-links
+          java -jar input-cache/publisher.jar -ig . -publish "$PUBPATH" \
+            -package-cache-folder "$GITHUB_WORKSPACE/.fhir-cache" -tx "$TX_SERVER"
+
+      # au-ps: seed au-ps's OWN /fhir/ps/package-list.json (NOT /fhir/package-list.json — that's
+      # au-base's) PLUS the SHARED root files (/fhir/package-feed.xml, /fhir/publication-feed.xml,
+      # /package-registry.json) from the LIVE prod copies, so go-publish read-modify-writes them and
+      # au-base's (and the other sibling IGs') entries survive. See docs/build-pipeline.md.
+      - name: Seed lean -web template (au-ps subtree package-list + shared root files — no 15GB sync)
+        run: |
+          mkdir -p web-seed/fhir/ps
+          cp publications/publish-setup.json web-seed/publish-setup.json
+          curl -sS -o web-seed/fhir/ps/package-list.json  https://hl7.org.au/fhir/ps/package-list.json
+          curl -sS -o web-seed/fhir/package-feed.xml       https://hl7.org.au/fhir/package-feed.xml
+          curl -sS -o web-seed/fhir/publication-feed.xml   https://hl7.org.au/fhir/publication-feed.xml
+          curl -sS -o web-seed/package-registry.json       https://hl7.org.au/package-registry.json || true
+          # publisher requires the source to NOT contain package-list.json
+          rm -f au-fhir-ps/package-list.json
+
+      # Both previews ADOPT the single render above (-reuse-build → no re-render), so each go-publish is
+      # ~100s. The publication-request mode is forced per run so the previews are consistent regardless
+      # of what's committed. ABSOLUTE paths required (IGReleaseRedirectionBuilder substrings the
+      # web-root prefix off the version dest folder; a relative path throws StringIndexOutOfBounds).
+      - name: Build WORKING preview (go-publish, mode=working, -reuse-build)
+        run: |
+          node -e 'const fs=require("fs");const p="au-fhir-ps/publication-request.json";const d=JSON.parse(fs.readFileSync(p,"utf8"));d.mode="working";fs.writeFileSync(p,JSON.stringify(d,null,2));'
+          cp -a web-seed webroot-working
+          java -jar "$GITHUB_WORKSPACE/au-fhir-ps/input-cache/publisher.jar" -go-publish -reuse-build \
+            -source "$GITHUB_WORKSPACE/au-fhir-ps" -web "$GITHUB_WORKSPACE/webroot-working" \
+            -history "$GITHUB_WORKSPACE/fhir-history" -registry "$GITHUB_WORKSPACE/ig-registry/fhir-ig-list.json" \
+            -templates "$GITHUB_WORKSPACE/publications/templates" -temp "$GITHUB_WORKSPACE/temp-working" \
+            -tx "$TX_SERVER"
+          mkdir -p preview/working && mv webroot-working/fhir preview/working/fhir
+          # au-ps owns no /fhir root files except the shared feeds/registry — but go-publish wrote the
+          # shared package-registry.json at the WEB ROOT (not under fhir/). Carry it into the preview
+          # tree so the publish job can find + upload it.
+          [ -f webroot-working/package-registry.json ] && cp webroot-working/package-registry.json preview/working/package-registry.json || true
+
+      - name: Build MILESTONE preview (go-publish, mode=milestone, -reuse-build)
+        continue-on-error: true   # review aid — a hiccup here must not block previews or the publish
+        run: |
+          # Force milestone + trial-use. Same publish path → -reuse-build still adopts the one render.
+          node -e 'const fs=require("fs");const p="au-fhir-ps/publication-request.json";const d=JSON.parse(fs.readFileSync(p,"utf8"));d.mode="milestone";d.status="trial-use";fs.writeFileSync(p,JSON.stringify(d,null,2));'
+          cp -a web-seed webroot-milestone
+          java -jar "$GITHUB_WORKSPACE/au-fhir-ps/input-cache/publisher.jar" -go-publish -reuse-build \
+            -source "$GITHUB_WORKSPACE/au-fhir-ps" -web "$GITHUB_WORKSPACE/webroot-milestone" \
+            -history "$GITHUB_WORKSPACE/fhir-history" -registry "$GITHUB_WORKSPACE/ig-registry/fhir-ig-list.json" \
+            -templates "$GITHUB_WORKSPACE/publications/templates" -temp "$GITHUB_WORKSPACE/temp-milestone" \
+            -tx "$TX_SERVER"
+          mkdir -p preview/milestone && mv webroot-milestone/fhir preview/milestone/fhir
+          [ -f webroot-milestone/package-registry.json ] && cp webroot-milestone/package-registry.json preview/milestone/package-registry.json || true
+
+      - name: Package previews (working + milestone) as tar.gz
+        run: |
+          # No preview-only redirect added here — this same artifact feeds the publish jobs, which must
+          # NOT carry a fabricated /fhir/ps/index.html. The redirect is added in the preview job only.
+          tar -czf "$GITHUB_WORKSPACE/preview-${{ steps.meta.outputs.slug }}.tar.gz" -C preview .
+          echo "Archived $(du -h "$GITHUB_WORKSPACE/preview-${{ steps.meta.outputs.slug }}.tar.gz" | cut -f1)"
+
+      - name: Upload review artifact (working + milestone)
+        uses: actions/upload-artifact@v4
+        with:
+          name: site-${{ steps.meta.outputs.slug }}
+          path: preview-${{ steps.meta.outputs.slug }}.tar.gz
+          retention-days: 14
+
+  # Per-branch / per-PR live PREVIEWS on GitHub Pages — BOTH the working and milestone renders.
+  # Deploys to the gh-pages branch under previews/<slug>/{working,milestone}/ so branches coexist.
+  # URLs: https://<owner>.github.io/<repo>/previews/<slug>/{working|milestone}/fhir/ps/<version>/index.html
+  # REQUIRES: GitHub Pages enabled on this repo with source = gh-pages branch (one-time settings step).
+  # CAVEAT: pages bake absolute hl7.org.au canonical URLs and Pages does not run the CloudFront
+  # `fhir-canonical` function, so cross-page/version links resolve to PROD, not the preview — good
+  # for "does the new version render / how does the milestone look", not for canonical/version redirects.
+  preview-pages:
+    needs: build
+    runs-on: ubuntu-latest
+    steps:
+      - name: Download built previews
+        uses: actions/download-artifact@v4
+        with: { name: "site-${{ needs.build.outputs.slug }}" }
+      - name: Unpack previews + add preview-only subtree redirects
+        run: |
+          mkdir -p preview && tar -xzf "preview-${{ needs.build.outputs.slug }}.tar.gz" -C preview
+          # The lean build has no /fhir/ps/index.html (au-ps's current-version landing isn't built here).
+          # Add a PREVIEW-ONLY redirect per mode so the bare …/fhir/ps/ URL lands on the new version.
+          ver="${{ needs.build.outputs.ver }}"
+          for m in working milestone; do
+            if [ -d "preview/$m/fhir/ps" ] && [ ! -f "preview/$m/fhir/ps/index.html" ]; then
+              printf '<!doctype html><meta http-equiv="refresh" content="0; url=%s/index.html"><a href="%s/index.html">%s</a>\n' \
+                "$ver" "$ver" "$ver" > "preview/$m/fhir/ps/index.html"
+            fi
+          done
+      - name: Deploy previews to gh-pages/previews/<slug>
+        uses: peaceiris/actions-gh-pages@v4
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./preview
+          destination_dir: previews/${{ needs.build.outputs.slug }}
+          keep_files: true          # don't wipe other branches' previews
+          commit_message: "preview: ${{ needs.build.outputs.slug }} working+milestone (${{ github.sha }})"
+      - name: Report preview URLs
+        run: |
+          base="https://${{ github.repository_owner }}.github.io/${{ github.event.repository.name }}/previews/${{ needs.build.outputs.slug }}"
+          ver="${{ needs.build.outputs.ver }}"
+          {
+            echo "### Previews (GitHub Pages, source = gh-pages branch)";
+            echo "| mode | new version | directory of versions |";
+            echo "|------|-------------|------------------------|";
+            echo "| **working** | $base/working/fhir/ps/$ver/index.html | $base/working/fhir/ps/history.html |";
+            echo "| **milestone** | $base/milestone/fhir/ps/$ver/index.html | $base/milestone/fhir/ps/history.html |";
+            echo "";
+            echo "_Working = the new version as a non-current preview. Milestone = the same version promoted to";
+            echo "current (publish box reads 'this is the current version'; old versions untouched via dynamic-publish-box)._";
+            echo "_Goes live ~1–2 min after this job — GitHub publishes the gh-pages update via a separate";
+            echo "'pages build and deployment' run; this job only pushes to gh-pages, it doesn't wait._";
+          } >> "$GITHUB_STEP_SUMMARY"
+
+  # Promote the MILESTONE build to PROD — gated by the `production` environment (required reviewers).
+  # Runs ONLY on a version-tag push or an explicit dispatch with publish_milestone=true.
+  publish-milestone:
+    needs: build   # not preview-pages: a Pages hiccup must not block prod; the production env is the gate
+    if: ${{ (github.event_name == 'push' && startsWith(github.ref, 'refs/tags/')) || (github.event_name == 'workflow_dispatch' && inputs.publish_milestone) }}
+    runs-on: ubuntu-latest
+    environment: production
+    steps:
+      - name: Download reviewed previews
+        uses: actions/download-artifact@v4
+        with: { name: "site-${{ needs.build.outputs.slug }}" }
+      - name: Configure AWS credentials from GitHub OIDC
+        uses: aws-actions/configure-aws-credentials@v4
+        with:
+          role-to-assume: arn:aws:iam::966489602583:role/ghactions_publications_oidc
+          aws-region: ap-southeast-2
+      # ★ au-ps publishes ONLY its own /fhir/ps subtree + the shared root files it read-modify-wrote.
+      # NEVER a blanket out/fhir sync — that would clobber au-base's /fhir root. Additive; never --delete.
+      - name: Publish MILESTONE build to prod S3 (au-ps subtree + shared root files; additive)
+        run: |
+          mkdir -p out && tar -xzf "preview-${{ needs.build.outputs.slug }}.tar.gz" -C out
+          test -d out/milestone/fhir/ps || { echo "::error::milestone build missing (the milestone step failed) — not publishing"; exit 1; }
+          # (a) au-ps's own subtree — the new (now-current) version dir (incl. full-ig.zip + package.tgz)
+          #     + au-ps's own package-list.json / history.html / publish-box. Additive, no --delete.
+          aws s3 sync out/milestone/fhir/ps s3://hl7au-fhir-ig/fhir/ps --only-show-errors
+          # (b) ONLY the SHARED root files go-publish read-modify-wrote (au-base's entries preserved
+          #     because -web was seeded from the live copies). Uploaded individually — NOT a /fhir sync.
+          aws s3 cp out/milestone/fhir/package-feed.xml      s3://hl7au-fhir-ig/fhir/package-feed.xml      --only-show-errors
+          aws s3 cp out/milestone/fhir/publication-feed.xml  s3://hl7au-fhir-ig/fhir/publication-feed.xml  --only-show-errors
+          [ -f out/milestone/package-registry.json ] && aws s3 cp out/milestone/package-registry.json s3://hl7au-fhir-ig/package-registry.json --only-show-errors || echo "no package-registry.json in output — skipping"
+
+  # Publish the WORKING build to PROD — au-ps's common case (preview/ballot/draft). Gated by the same
+  # `production` environment. Dispatch-only (publish_working=true), mutually exclusive with
+  # publish_milestone so a `v*` tag never accidentally publishes a working snapshot as current.
+  publish-working:
+    needs: build
+    if: ${{ github.event_name == 'workflow_dispatch' && inputs.publish_working && !inputs.publish_milestone }}
+    runs-on: ubuntu-latest
+    environment: production
+    steps:
+      - name: Download reviewed previews
+        uses: actions/download-artifact@v4
+        with: { name: "site-${{ needs.build.outputs.slug }}" }
+      - name: Configure AWS credentials from GitHub OIDC
+        uses: aws-actions/configure-aws-credentials@v4
+        with:
+          role-to-assume: arn:aws:iam::966489602583:role/ghactions_publications_oidc
+          aws-region: ap-southeast-2
+      - name: Publish WORKING build to prod S3 (au-ps subtree + shared root files; additive)
+        run: |
+          mkdir -p out && tar -xzf "preview-${{ needs.build.outputs.slug }}.tar.gz" -C out
+          test -d out/working/fhir/ps || { echo "::error::working build missing — not publishing"; exit 1; }
+          # New (non-current) version dir + regenerated au-ps package-list/history under /fhir/ps. Does
+          # NOT touch the /fhir/ps current landing or any /fhir root file owned by au-base. Additive.
+          aws s3 sync out/working/fhir/ps s3://hl7au-fhir-ig/fhir/ps --only-show-errors
+          aws s3 cp out/working/fhir/package-feed.xml      s3://hl7au-fhir-ig/fhir/package-feed.xml      --only-show-errors
+          aws s3 cp out/working/fhir/publication-feed.xml  s3://hl7au-fhir-ig/fhir/publication-feed.xml  --only-show-errors
+          [ -f out/working/package-registry.json ] && aws s3 cp out/working/package-registry.json s3://hl7au-fhir-ig/package-registry.json --only-show-errors || echo "no package-registry.json in output — skipping"
