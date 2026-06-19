@@ -45,10 +45,9 @@ name: AU PS build → working+milestone previews → gated working/milestone pub
 #
 # INPUTS this build consumes (kept deliberately minimal):
 #   - au-fhir-ps (this repo)        : the IG source (ig.ini/ig.xml, input/, publication-request.json).
-#   - KyleOps/publications@au-pipeline-config → publish-setup.json (server=cloud + dynamic-publish-box +
+#   - hl7au/publications@master    → publish-setup.json (server=cloud + dynamic-publish-box +
 #                                     layout-rules mapping hl7.fhir.au.ps → /fhir/ps) + templates/. SHARED
-#                                     with au-base. TEMP fork/branch; revert to hl7au/publications once
-#                                     config + custom jar are merged.
+#                                     with au-base. Sparse checkout.
 #   - HL7/fhir-ig-history-template  : history template for go-publish -history.
 #   - hl7au/ig-registry             : fhir-ig-list.json for go-publish -registry.
 #   - combined custom publisher.jar : KyleOps/fhir-ig-publisher release (5 opt-in, unmerged features:
@@ -86,8 +85,8 @@ concurrency:
 
 env:
   PUBLISHER_JAR_URL: https://github.com/KyleOps/fhir-ig-publisher/releases/download/au-pipeline-combined/publisher.jar
-  PUBLICATIONS_REPO: KyleOps/publications        # TEMP: revert to hl7au/publications once merged
-  PUBLICATIONS_REF: au-pipeline-config           # TEMP: revert to (default branch) once merged
+  PUBLICATIONS_REPO: hl7au/publications          # publish-setup.json + templates/ (config now on master)
+  PUBLICATIONS_REF: master
   TX_SERVER: https://tx.fhir.org
 
 jobs:
