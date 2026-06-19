@@ -1,0 +1,81 @@
+# Referral to Specialist and Allied Health - AU Patient Summary Implementation Guide v1.0.0-ci-build
+
+* [**Table of Contents**](toc.md)
+* [**Use Cases**](usecase.md)
+* **Referral to Specialist and Allied Health**
+
+## Referral to Specialist and Allied Health
+
+| |
+| :--- |
+| *Page standards status:*[Informative](http://hl7.org/fhir/R4/versions.html#std-process) |
+
+This example use case demonstrates a possible scenario where, during a specialist consultation, the specialist accesses the patient summary created at the time of the referral and confirms the latest patient summary available for a patient.
+
+The example use cases in AU Patient Summary (AU PS) are provided for **illustrative purposes only** and are intended to support understanding of how patient summaries conformant to AU PS can be produced and consumed. While every effort has been made to provide useful examples, these use cases are not a normative part of the specification, nor are they fully representative of real world clinical workflows.
+
+When reviewing clinical information such as an AU PS document, a clinician should use their clinical discretion as to the relevance of that information, as the AU PS document cannot be assumed to be complete or the most recent as it is relying on information from source systems and is not the system of record, or the system used in the creation of clinical data, rather a summary of data that can be used by a clinician as part of their clinical process to support and inform and individuals care/treatment.
+
+### Use Case Description
+
+Joyce Johnson, a 39-year-old woman from New South Wales, is pregnant and has recently been diagnosed with gestational diabetes. To provide Joyce with more comprehensive support, her regular general practitioner (GP), Dr Ginger Burrows, refers Joyce to both an endocrinologist and a dietitian.
+
+As part of the referral, Dr Burrows includes an embedded patient summary that captures Joyce’s medical history and current medications at the time. This embedded summary is curated from Dr Burrows' clinical information system (CIS) and attested at the time of creation, ensuring its integrity and alignment with clinical standards.
+
+The referral is received and triaged by both the endocrinologist (Dr Bryce Cruickshank) and the dietitian. When Joyce later attends her appointment with Dr Cruickshank, the endocrinologist's CIS alerts the provider that a more recent patient summary is available from an external source - in this case, Dr Burrows’ CIS.
+
+Dr Cruickshank accesses and compares both the original embedded summary and the newer version to verify the currency and accuracy of Joyce’s clinical information. The more recent patient summary has been generated at the time of request for access by Dr Burrows' CIS and digitally signed to ensure integrity in transit.
+
+Based on updated data - particularly around Joyce's medication regimen - Dr Cruickshank adjusts Joyce’s insulin dosage and documents the decision.
+
+An updated treatment plan is then shared with Joyce and Dr Burrows to maintain continuity of care across providers.
+
+This use case demonstrates use of patient summary during step 4. Endocrinologist Consultation of the [Referral to Specialist and Allied Health consumer journey](https://sparked.csiro.au/index.php/products-resources/au-ps-consumer-journeys/).
+
+**Figure 1: Referral to Specialist and Allied Health consumer journey** 
+
+### Actors
+
+#### People
+
+1. Patient - Joyce Johnson
+1. Referring GP - Dr Ginger Burrows
+1. Endocrinologist - Dr Bryce Cruickshank
+
+#### Systems
+
+1. GP CIS
+1. Endocrinologist CIS
+
+### Precondition(s)
+
+1. The referral from Dr Ginger Burrows includes a patient summary at the time of referral.
+1. A more recent patient summary is available from Dr Burrows’ CIS at the time of consultation.
+1. Dr Cruickshank’s CIS is capable of accessing and displaying both the embedded and updated patient summaries.
+1. Joyce attends her scheduled consultation with Dr Cruickshank.
+
+### Postcondition(s)
+
+1. Dr Cruickshank uses the patient summary information to guide clinical decision-making.
+1. Treatment changes, including the updated insulin dose, are documented in the CIS.
+1. An updated treatment plan is shared with Joyce and Dr Burrows to support continuity of care.
+
+### Flow
+
+1. Dr Cruickshank opens the referral in the Endocrinologist CIS and views embedded referral patient summary.
+1. The Endocrinologist CIS detects and retrieves a current patient summary from the GP CIS.
+1. Dr Cruickshank views the current retrieved patient summary.
+
+#### Sequence Diagram
+
+--- config: theme: default --- sequenceDiagram participant GP CIS as GP CIS actor Endocrinologist as Endocrinologist participant Endocrinologist CIS as Endocrinologist CIS Endocrinologist ->> Endocrinologist CIS: Access Referral and embedded Patient Summary Endocrinologist CIS ->> GP CIS: Check for updates and retrieve current Patient Summary Endocrinologist ->> Endocrinologist CIS: View current Patient Summary
+
+**Figure 2: Sequence diagram showing access to embedded and updated patient summaries** 
+
+### Examples
+
+The following examples demonstrate technical and clinical use case aspects, conforming to the AU Patient Summary requirements. Data within these examples, e.g. medications, is provided by the [Sparked Patient Summary Clinical Focus Group](https://sparked.csiro.au/index.php/design-groups/):
+
+1. Patient Summary Embedded in Referral (human authored):[Patient Summary for Joyce Johnson as of 28 OCT 2024 (Bundle)](Bundle-aups-referral-endoconsult-curated.md)
+1. More recent Patient Summary (computer generated):[Patient Summary for Joyce Johnson as of 07 NOV 2024 (Bundle)](Bundle-aups-referral-endoconsult-autogen.md)
+

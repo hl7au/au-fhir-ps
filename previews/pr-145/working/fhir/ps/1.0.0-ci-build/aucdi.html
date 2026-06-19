@@ -1,0 +1,700 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE HTML>
+<html xml:lang="en" xmlns="http://www.w3.org/1999/xhtml" lang="en">
+  <head>
+    <meta content="text/html;charset=utf-8" http-equiv="Content-Type"/>
+    <title>AUCDI - AU Patient Summary Implementation Guide v1.0.0-ci-build</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta name="author" content="http://hl7.org/fhir"/>
+
+    <link href="fhir.css" rel="stylesheet"/>
+
+    <!-- Bootstrap core CSS -->
+    <link href="assets/css/bootstrap-fhir.css" rel="stylesheet"/>
+
+    <!-- Project extras -->
+    <link href="assets/css/project.css" rel="stylesheet"/>
+    <link href="assets/css/pygments-manni.css" rel="stylesheet"/>
+    <link href="assets/css/jquery-ui.css" rel="stylesheet"/>
+  	<link href="assets/css/prism.css" rel="stylesheet" />
+  	<link href="assets/css/cqf.css" rel="stylesheet" />
+    <!-- Placeholder for child template CSS declarations -->
+    <link href="assets/css/hl7.css" rel="stylesheet"/>
+
+    <link href="assets/css/fhir.css" rel="stylesheet"/>
+    <link href="assets/css/hl7au.css" rel="stylesheet"/>
+
+
+
+    <script type="text/javascript" src="fhir-table-scripts.js"> </script>
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+    <script src="assets/js/html5shiv.js"></script>
+    <script src="assets/js/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- Favicons -->
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="assets/ico/icon-fhir-144.png"/>
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="assets/ico/icon-fhir-114.png"/>
+    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="assets/ico/icon-fhir-72.png"/>
+    <link rel="apple-touch-icon-precomposed" href="assets/ico/icon-fhir-57.png"/>
+    <link rel="shortcut icon" href="assets/ico/favicon.png"/>
+  </head>
+  <body onload="document.body.style.opacity='1'">
+
+	  <script src="assets/js/prism.js"></script>
+    <script type="text/javascript" src="assets/js/mermaid.js"></script>
+    <script type="text/javascript" src="assets/js/mermaid-init.js"></script>
+    <style type="text/css">h2{--heading-prefix:"4.4"}
+    h3,h4,h5,h6{--heading-prefix:"4.4"}</style>
+    <div id="segment-header" class="segment">  <!-- segment-header -->
+      <div class="container">  <!-- container -->
+
+        <!-- Placeholder for child template header declarations -->
+
+        <div id="hl7-nav">
+          <a id="hl7-logo" data-no-external="true" href="http://hl7.com.au">
+            <img height="50" alt="Visit the HL7 Australia website" src="assets/images/hl7-logo-header.png"/>
+          </a>
+        </div>
+
+        <div id="family-nav">
+          <a id="family-logo" data-no-external="true" href="http://hl7.com.au">
+            <img height="50" alt="Visit the HL7 Australia website" src="assets/images/fhir-au-logo-www.png"/> </a>
+        </div>
+
+
+        <div id="project-nav">
+          <a id="project-logo" data-no-external="true" href="https://sparked.csiro.au/">
+            <img height="50" alt="Visit the Sparked website" src="assets/images/sparked-logo.png"/> </a>
+        </div>
+
+        <!--<div id="hl7-search">
+          <a id="hl7-search-lnk" data-no-external="true" href="http://hl7.org.au/fhir/search"><img alt="Search FHIR" src="assets/images/search.png"/></a>
+        </div>-->
+
+
+        <div id="ig-status">
+          <p><span style="font-size:12pt;font-weight:bold">AU Patient Summary Implementation Guide</span>
+            <br/>
+            <span style="display:inline-block;">1.0.0-ci-build - CI Build
+
+
+
+  <img alt="Australia flag" src="assets/images/aus.svg" height="16" title="Australia"/>
+
+
+            </span>
+          </p>
+        </div>
+      </div> <!-- /container -->
+    </div>  <!-- /segment-header -->
+
+    <div id="segment-navbar" class="segment">  <!-- segment-navbar -->
+      <div id="stripe"> </div>
+      <div class="container">  <!-- container -->
+        <!-- HEADER CONTENT -->
+
+        <nav class="navbar navbar-inverse">
+          <!--status-bar-->
+          <div class="container">
+            <button data-target=".navbar-inverse-collapse" class="navbar-toggle" data-toggle="collapse" type="button">
+              <span class="icon-bar"> </span>
+              <span class="icon-bar"> </span>
+              <span class="icon-bar"> </span>
+            </button>
+            <a class="navbar-brand hidden" href="http://hl7.org/fhir/R4/index.html">FHIR</a>
+            <div class="nav-collapse collapse navbar-inverse-collapse">
+              <ul xmlns="http://www.w3.org/1999/xhtml" class="nav navbar-nav">
+  <li>
+    <a href="index.html">Home</a>
+  </li>
+  <li class="dropdown">
+    <a data-toggle="dropdown" href="#" class="dropdown-toggle">Conformance
+      <b class="caret"></b>
+    </a>
+    <ul class="dropdown-menu">
+      <li>
+        <a href="general-requirements.html">General Requirements</a>
+        <a href="declaring-conformance.html">Declaring Conformance</a>
+      </li>
+    </ul>
+  </li>
+  <li>
+    <a href="the-aups.html">The AU PS</a>
+  </li>
+  <li class="dropdown">
+    <a data-toggle="dropdown" href="#" class="dropdown-toggle">Guidance
+      <b class="caret"></b>
+    </a>
+     <ul class="dropdown-menu">
+      <li>
+        <a href="general-guidance.html">General Guidance</a>
+      </li>
+      <li>
+        <a href="generation-and-access.html">Generation and Access</a>
+      </li>
+      <li>
+        <a href="sex-and-gender.html">Sex and Gender</a>
+      </li>
+      <li>
+        <a href="aucdi.html">AUCDI</a>
+      </li>
+       <li>
+        <a href="relationship.html">Relationship With Other IGs</a>
+      </li>
+      <li>
+        <a href="variance.html">AU Variance Statement</a>
+      </li>
+      <li>
+        <a href="comparison.html">Comparison With Other National and International IGs</a>
+      </li>
+      <li>
+        <a href="future.html">Future of AU PS</a>
+      </li> 
+    </ul>
+  </li>
+  <li class="dropdown">
+    <a data-toggle="dropdown" href="#" class="dropdown-toggle">Use Cases
+      <b class="caret"></b>
+    </a>
+     <ul class="dropdown-menu">
+      <li>
+        <a href="uc-interstate.html">Interstate GP Visit</a>
+      </li>
+      <li>
+        <a href="uc-referral.html">Referral to Specialist and Allied Health</a>
+      </li>
+    </ul>
+  </li>
+  <li>
+    <a href="security.html">Security and Privacy</a>
+  </li>
+  <li class="dropdown">
+    <a data-toggle="dropdown" href="#" class="dropdown-toggle">FHIR Artefacts
+      <b class="caret"></b>
+    </a>
+    <ul class="dropdown-menu">
+       <li>
+        <a href="artifacts.html">Artefacts Summary</a>
+      </li>
+      <li>
+        <a href="profiles-and-extensions.html">Profiles and Extensions</a>
+      </li>
+      <!-- <li>
+        <a href="search-parameters.html">Search Parameters</a>
+      </li>-->
+      <li>
+        <a href="terminology.html">Terminology</a>
+      </li>
+      <!-- <li>
+        <a href="capability-statements.html">Capability Statements</a>
+      </li> -->
+      <li>
+        <a href="actors.html">Actor Definitions</a>
+      </li>
+    </ul>
+  </li>
+  <li>
+    <a href="examples.html">Examples</a>
+  </li>
+  <li class="dropdown">
+    <a data-toggle="dropdown" href="#" class="dropdown-toggle">Support
+      <b class="caret"></b>
+    </a>
+    <ul class="dropdown-menu">
+      <li>
+        <a href="downloads.html">Downloads</a>
+      </li>
+      <li>
+        <a href="license.html">License and Legal</a>
+      </li>
+    </ul>
+  </li>
+  <li>
+    <a href="changes.html">Change Log</a>
+  </li>
+</ul>
+            </div>  <!-- /.nav-collapse -->
+          </div>  <!-- /.container -->
+        </nav>  <!-- /.navbar -->
+      <!-- /HEADER CONTENT -->
+      </div>  <!-- /container -->
+    </div>  <!-- /segment-navbar -->
+    <!--status-bar-->
+
+    <div id="segment-breadcrumb" class="segment">  <!-- segment-breadcrumb -->
+      <div class="container">  <!-- container -->
+        <ul class="breadcrumb">
+          <li><a href='toc.html'><b>Table of Contents</b></a></li><li><a href='guidance.html'><b>Guidance</b></a></li><li><b>AUCDI</b></li>
+
+        </ul>
+      </div>  <!-- /container -->
+    </div>  <!-- /segment-breadcrumb -->
+
+    <a name="top"> </a>
+    <div id="segment-content" class="segment">  <!-- segment-content -->
+      <div class="container">  <!-- container -->
+        <div class="row">
+          <div class="inner-wrapper">
+
+<style type="text/css">
+h2:before{color:silver;counter-increment:section;content:var(--heading-prefix) " ";}
+h3:before{color:silver;counter-increment:sub-section;content:var(--heading-prefix) "." counter(sub-section) " ";}
+h4:before{color:silver;counter-increment:composite;content:var(--heading-prefix) "." counter(sub-section) "." counter(composite) " ";}
+h5:before{color:silver;counter-increment:detail;content:var(--heading-prefix) "." counter(sub-section) "." counter(composite) "." counter(detail) " ";}
+h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefix) "." counter(sub-section) "." counter(composite) "." counter(detail) "." counter(more-detail)" ";}
+</style>
+<div class="col-12">
+  <!--ReleaseHeader--><p id="publish-box">This page is part of the AU Patient Summary (v1.0.0-ci-build: QA Preview) based on <a data-no-external="true" href="http://hl7.org/fhir/R4">FHIR (HL7® FHIR® Standard) R4</a>. <span class="fhir-pb-dynamic" data-pb-version="1.0.0-ci-build" data-pb-canonical="http://hl7.org.au/fhir/ps"><span class="fhir-pb-superseded">The current version which supersedes this version is <a class="fhir-pb-current-link" data-no-external="true" href="http://hl7.org.au/fhir/ps"><span class="fhir-pb-current-version">the current version</span></a></span><span class="fhir-pb-iscurrent" style="display:none">This is the current published version</span><span class="fhir-pb-prerelease" style="display:none">This version is a pre-release. The current official version is <a class="fhir-pb-current-link" data-no-external="true" href="http://hl7.org.au/fhir/ps"><span class="fhir-pb-current-version">the current version</span></a></span></span><script type="text/javascript">(function(){function cmp(a,b){if(a===b)return 0;function p(v){var s=String(v).split('-');return{n:s[0].split('.').map(function(x){return parseInt(x,10)||0;}),pre:s.length>1?s.slice(1).join('-'):null};}var pa=p(a),pb=p(b),i,m=Math.max(pa.n.length,pb.n.length);for(i=0;i<m;i++){var d=(pa.n[i]||0)-(pb.n[i]||0);if(d!==0)return d>0?1:-1;}if(pa.pre&&!pb.pre)return -1;if(!pa.pre&&pb.pre)return 1;if(pa.pre&&pb.pre)return pa.pre<pb.pre?-1:(pa.pre>pb.pre?1:0);return 0;}function sh(el,on){if(el)el.style.display=on?'':'none';}function pn(u){try{return new URL(u,document.baseURI).pathname.replace(/\/+$/,'');}catch(e){return null;}}function init(){var dyn=document.querySelectorAll('span.fhir-pb-dynamic');var pv=document.querySelectorAll('span.fhir-pb-page-versions');if(!dyn.length&&!pv.length)return;var canonical=dyn.length?dyn[0].getAttribute('data-pb-canonical'):null;if(!canonical)return;var pgVer=(dyn.length?dyn[0]:pv[0]).getAttribute('data-pb-version');var igRoot=null;if(pgVer){var seg='/'+pgVer+'/';var si=location.pathname.indexOf(seg);if(si>=0)igRoot=location.pathname.slice(0,si);}if(igRoot===null)igRoot=pn(canonical);if(igRoot===null)return;var plUrl=igRoot+'/package-list.json';fetch(plUrl,{cache:'no-cache'}).then(function(r){return r.json();}).then(function(pl){var list=(pl&&pl.list)||[];var cur=null;list.forEach(function(e){if(e&&e.current===true&&e.version!=='current'&&typeof e.path==='string'&&e.path.indexOf(canonical)===0){cur=e;}});if(cur)Array.prototype.forEach.call(dyn,function(box){if(box.getAttribute('data-pb-done'))return;box.setAttribute('data-pb-done','1');var thisVer=box.getAttribute('data-pb-version');Array.prototype.forEach.call(box.querySelectorAll('.fhir-pb-current-version'),function(s){s.textContent=cur.version;});Array.prototype.forEach.call(box.querySelectorAll('a.fhir-pb-current-link'),function(a){a.setAttribute('href',cur.path);});var d=cmp(cur.version,thisVer);sh(box.querySelector('.fhir-pb-superseded'),d>0);sh(box.querySelector('.fhir-pb-iscurrent'),d===0);sh(box.querySelector('.fhir-pb-prerelease'),d<0);});var ms=list.filter(function(e){return e&&e.milestoneName&&typeof e.path==='string'&&e.path.indexOf(canonical)===0;});Array.prototype.forEach.call(pv,function(span){if(span.getAttribute('data-pb-done'))return;span.setAttribute('data-pb-done','1');var thisVer=span.getAttribute('data-pb-version');var mine=list.filter(function(e){return e.version===thisVer;})[0];var myBase=mine?pn(mine.path):null;var here=location.pathname;var rel=(myBase&&here.indexOf(myBase+'/')===0)?here.slice(myBase.length+1):here.substring(here.lastIndexOf('/')+1);Promise.all(ms.map(function(m){var href=pn(m.path)+'/'+rel;if(m.version===thisVer)return Promise.resolve({m:m,href:href,ok:true,self:true});return fetch(href,{method:'HEAD'}).then(function(r){return{m:m,href:href,ok:r.ok,self:false};}).catch(function(){return{m:m,href:href,ok:false};});})).then(function(res){var parts=res.filter(function(x){return x.ok;}).map(function(x){return x.self?('<b>'+x.m.milestoneName+'</b>'):('<a data-no-external="true" href="'+x.href+'">'+x.m.milestoneName+'</a>');});if(parts.length){span.innerHTML='. Page versions: '+parts.join(' ');}});});}).catch(function(){});}if(document.readyState!=='loading'){init();}else{document.addEventListener('DOMContentLoaded',init);}})();</script>.  For a full list of available versions, see the <a data-no-external="true" href="http://hl7.org.au/fhir/ps/history.html">Directory of published versions</a><span class="fhir-pb-page-versions" data-pb-version="1.0.0-ci-build"></span></p><!--EndReleaseHeader-->
+  <h2>AUCDI</h2>
+  
+
+
+
+
+
+  <table class="colsi">
+    <tr>
+  
+      <td>
+        <i>Page standards status:</i> <a href="http://hl7.org/fhir/R4/versions.html#std-process" title="Standard Status">Informative</a>
+        
+      </td>
+  
+  
+    </tr>
+  </table>
+
+
+
+
+
+
+
+
+    <p><!-- white space is critical inside of capture --></p>
+<div class="markdown-toc">
+<ul id="markdown-toc">
+  <li><a href="#aucdi-and-au-ps-versions" id="markdown-toc-aucdi-and-au-ps-versions">AUCDI and AU PS Versions</a></li>
+  <li><a href="#aucdi-patient-summary-mappings-into-au-ps" id="markdown-toc-aucdi-patient-summary-mappings-into-au-ps">AUCDI (Patient summary) Mappings Into AU PS</a></li>
+</ul>
+
+</div>
+<p><a href="https://sparked.csiro.au/index.php/sparked-products-resources/aucdi/">Australian Clinical Data for Interoperability (AUCDI)</a> and AU Patient Summary (AU PS) complement each other assisting in common understanding of clinical data concepts when implemented in systems and exchanged between systems.</p>
+
+<p>AUCDI defines data groups comprising one or more data elements and references clinical terminology concepts, forming the foundation of a common language to allow systems to exchange semantically accurate data more efficiently. AUCDI defines clinical requirements for the data required to support the provision of care, exchange, aggregation for analysis, and to support clinical decision support. AUCDI may define requirements that are future focussed and as yet do not align with system implementation of the clinical concept.</p>
+
+<p>AU PS is a technical specification that addresses constraints and obligations on data representation for generation, exchange, and consumption of patient summaries in the Australian healthcare context. AU PS enables system data to be mapped to an agreed FHIR format for systems in Australia.</p>
+
+<div> 
+    <img src="aucdi2ps.png" alt="AUCDI and AU Patient Summary Development Approach" style="width:55%" />
+  </div>
+<p><em>Figure 1: AUCDI and AU PS development approach</em>
+<br /><br /></p>
+
+<p>An interpretation of AUCDI clinical information requirements through community consensus is undertaken to define support for the exchange of clinical and administrative data within technical constraints. Note that:</p>
+<ul>
+  <li>In any particular release, AU Core or AU PS may not cover all AUCDI data concepts, especially when AUCDI data concepts are not supported in existing systems.</li>
+  <li>AU PS includes exchange for concepts that are commonly implemented in systems and not included in AUCDI e.g. <code class="language-plaintext highlighter-rouge">Patient.name</code>, <code class="language-plaintext highlighter-rouge">Practitioner.identifier</code>, <code class="language-plaintext highlighter-rouge">Procedure.encounter</code>.</li>
+  <li>AU PS includes exchange for clinical concepts not yet included in AUCDI, e.g. MedicationRequest, which are included through reference to IPS or AU Core.</li>
+  <li>AU PS includes data elements not included in AUCDI that are required to make FHIR implementable e.g. <code class="language-plaintext highlighter-rouge">Observation.status</code>, <code class="language-plaintext highlighter-rouge">MedicationRequest.intent</code>.</li>
+</ul>
+
+<h3 id="aucdi-and-au-ps-versions">AUCDI and AU PS Versions</h3>
+
+<p>AUCDI R2 builds upon R1, expanding on the initial “core”, introducing additional data groups to support different use cases including "Patient summary":</p>
+
+<table border="1" cellspacing="0" cellpadding="0">
+  <thead>
+    <tr style="background-color: #f2f2f2;">
+      <th>AUCDI Version</th>
+      <th>AU PS Version</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>R1</td>
+      <td>-</td>
+    </tr>
+    <tr>
+      <td>R2 (Patient summary)</td>
+      <td>1.0.0</td>
+    </tr>
+  </tbody>
+</table>
+
+<h3 id="aucdi-patient-summary-mappings-into-au-ps">AUCDI (Patient summary) Mappings Into AU PS</h3>
+
+<p>The table below shows the relationship between data defined in the "Patient summary" AUCDI Data Groups and Elements, AU Core profiles, and AU PS profiles.<br /></p>
+
+<p>Column attribute descriptions are as follows:</p>
+<ul>
+  <li><strong>AUCDI Data Group</strong>: The name of the AUCDI data group.</li>
+  <li><strong>AUCDI Data Element</strong>: The name of the AUCDI data element within an AUCDI data group.</li>
+  <li><strong>AU PS Document Section</strong>: The AU PS Document section relevant for exchange (see <a href="the-aups.html#structure-of-the-au-ps">Structure of the Australian Patient Summary (AU PS)</a>).</li>
+  <li><strong>AU PS Profile(s)</strong>: The title of the AU PS profile relevant for exchange.</li>
+  <li><strong>FHIR Path</strong>: The <a href="https://build.fhir.org/ig/HL7/FHIRPath/">FHIRPath expression</a> to the FHIR element relevant for exchange, i.e. the FHIR element that can be populated with data from a source system that represents the clinical concept expressed in the AUCDI data element.</li>
+  <li><strong>Comment</strong>: Additional information about the mapping including an explanation of where an element or group is not yet mapped.</li>
+</ul>
+<table border="1" cellspacing="0" cellpadding="0" width="100%">
+<thead>
+  <tr style="background-color: #f2f2f2;">
+    <th>AUCDI Data Group</th>
+    <th colspan="2">AUCDI Data Element</th>
+    <th>AU PS Document Section</th>
+    <th>AU PS Profile(s)</th>
+    <th>FHIR Path</th>
+    <th style="min-width:300px">Comment</th>
+  </tr>
+</thead>
+<tbody>
+  <tr>
+    <td rowspan="6">Adverse reaction risk summary</td>
+    <td colspan="2">Substance name</td>
+    <td rowspan="6">Allergies and Intolerances</td>
+    <td><a href="StructureDefinition-au-ps-allergyintolerance.html">AU PS AllergyIntolerance</a></td>
+    <td><code>AllergyIntolerance.code</code></td>
+    <td></td>
+  </tr>
+  <tr>
+    <td colspan="2">Date/time of onset of first reaction</td>
+    <td><a href="StructureDefinition-au-ps-allergyintolerance.html">AU PS AllergyIntolerance</a></td>
+    <td><code>AllergyIntolerance.onset[x]</code></td>
+    <td>This AUCDI element aligns with the first identification of an allergy or intolerance. The onset value may be patient reported or clinically determined; estimated or actual; age or date and be imprecise (partial date), range of ages or a period of time.</td>
+  </tr>
+  <tr>
+    <td colspan="2">Manifestation</td>
+    <td><a href="StructureDefinition-au-ps-allergyintolerance.html">AU PS AllergyIntolerance</a></td>
+    <td><code>AllergyInterolance.reaction</code></td>
+    <td></td>
+  </tr>
+  <tr>
+    <td colspan="2">Severity of reaction</td>
+    <td><a href="StructureDefinition-au-ps-allergyintolerance.html">AU PS AllergyIntolerance</a></td>
+    <td><code>AllergyIntolerance.reaction.severity</code></td>
+    <td></td>
+  </tr>
+  <tr>
+    <td colspan="2">Comment</td>
+    <td><a href="StructureDefinition-au-ps-allergyintolerance.html">AU PS AllergyIntolerance</a></td>
+    <td><code>AllergyIntolerance.note</code></td>
+    <td></td>
+  </tr>
+  <tr>
+    <td colspan="2">Last updated</td>
+    <td>-</td>
+    <td>-</td>
+    <td>This AUCDI element is a <a href="future.html#future-candidate-requirements-under-consideration">Future Candidate Requirement Under Consideration</a>.</td>
+  </tr>
+  <tr>
+    <td rowspan="3">Last Menstrual Period (LMP) assertion</td>
+    <td colspan="2">Date of onset</td>
+    <td rowspan="3">History of pregnancy</td>
+    <td>-</td>
+    <td>-</td>
+    <td rowspan="3">This AUCDI data group is a <a href="future.html#future-candidate-requirements-under-consideration">Future Candidate Requirement Under Consideration</a>.</td>
+  </tr>
+  <tr>
+    <td colspan="2">Certainty</td>
+    <td>-</td>
+    <td>-</td>
+  </tr>
+  <tr>
+    <td colspan="2">Date of assertion</td>
+    <td>-</td>
+    <td>-</td>
+  </tr>
+  <tr>
+    <td rowspan="9">Medication use statement</td>
+    <td colspan="2">Medication name</td>
+    <td rowspan="9">Medication Summary</td>
+    <td><a href="StructureDefinition-au-ps-medicationstatement.html">AU PS MedicationStatement</a> | <a href="StructureDefinition-au-ps-medication.html">AU PS Medication</a></td>
+    <td><code>MedicationStatement.medication[x] | Medication.code</code></td>
+    <td rowspan="9">See the <a href="https://build.fhir.org/ig/hl7au/au-fhir-core/medicine-information.html">Medicine Information</a> guidance page in AU Core.</td>
+  </tr>
+  <tr>
+    <td colspan="2">Clinical indication</td>
+    <td><a href="StructureDefinition-au-ps-medicationstatement.html">AU PS MedicationStatement</a></td>
+    <td><code>MedicationStatement.reasonCode | MedicationStatement.reasonReference</code></td>
+  </tr>
+  <tr>
+    <td colspan="2">Strength</td>
+    <td><a href="StructureDefinition-au-ps-medicationstatement.html">AU PS MedicationStatement</a> | <a href="StructureDefinition-au-ps-medication.html">AU PS Medication</a></td>
+    <td><code>MedicationStatement.medication[x] | Medication.code | Medication.ingredient</code></td>
+  </tr>
+  <tr>
+    <td colspan="2">Form</td>
+    <td><a href="StructureDefinition-au-ps-medicationstatement.html">AU PS MedicationStatement</a> | <a href="StructureDefinition-au-ps-medication.html">AU PS Medication</a></td>
+    <td><code>MedicationStatement.medication[x] | Medication.form</code></td>
+  </tr>
+  <tr>
+    <td colspan="2">Dose amount</td>
+    <td><a href="StructureDefinition-au-ps-medicationstatement.html">AU PS MedicationStatement</a></td>
+    <td><code>MedicationStatement.dosage.doseAndRate</code></td>
+  </tr>
+  <tr>
+    <td colspan="2">Route of administration</td>
+    <td><a href="StructureDefinition-au-ps-medicationstatement.html">AU PS MedicationStatement</a></td>
+    <td><code>MedicationStatement.dosage.route</code></td>
+  </tr>
+  <tr>
+    <td colspan="2">Dose timing</td>
+    <td><a href="StructureDefinition-au-ps-medicationstatement.html">AU PS MedicationStatement</a></td>
+    <td><code>MedicationStatement.dosage.timing</code></td>
+  </tr>
+  <tr>
+    <td colspan="2">Comment</td>
+    <td><a href="StructureDefinition-au-ps-medicationstatement.html">AU PS MedicationStatement</a></td>
+    <td><code>MedicationStatement.note</code></td>
+  </tr>
+  <tr>
+    <td colspan="2">Date of assertion</td>
+    <td><a href="StructureDefinition-au-ps-medicationstatement.html">AU PS MedicationStatement</a></td>
+    <td><code>MedicationStatement.dateAsserted</code></td>
+  </tr>
+  <tr>
+    <td rowspan="7">Problem/Diagnosis summary</td>
+    <td colspan="2">Problem / Diagnosis name</td>
+    <td rowspan="7">Problems | History of Past Problems</td>
+    <td><a href="StructureDefinition-au-ps-condition.html">AU PS Condition</a></td>
+    <td><code>Condition.code</code></td>
+    <td></td>
+  </tr>
+  <tr>
+    <td colspan="2">Body site</td>
+    <td><a href="StructureDefinition-au-ps-condition.html">AU PS Condition</a></td>
+    <td><code>Condition.code</code></td>
+    <td></td>
+  </tr>
+  <tr>
+    <td colspan="2">Date/time of onset</td>
+    <td><a href="StructureDefinition-au-ps-condition.html">AU PS Condition</a></td>
+    <td><code>Condition.onsetDateTime</code></td>
+    <td></td>
+  </tr>
+  <tr>
+    <td colspan="2">Date/time of resolution</td>
+    <td><a href="StructureDefinition-au-ps-condition.html">AU PS Condition</a></td>
+    <td><code>Condition.abatementDateTime</code></td>
+    <td></td>
+  </tr>
+  <tr>
+    <td colspan="2">Status</td>
+    <td><a href="StructureDefinition-au-ps-condition.html">AU PS Condition</a></td>
+    <td><code>Condition.clinicalStatus</code></td>
+    <td></td>
+  </tr>
+  <tr>
+    <td colspan="2">Comment</td>
+    <td><a href="StructureDefinition-au-ps-condition.html">AU PS Condition</a></td>
+    <td><code>Condition.note</code></td>
+    <td></td>
+  </tr>
+  <tr>
+    <td colspan="2">Last updated</td>
+    <td>-</td>
+    <td>-</td>
+    <td>This AUCDI element is a <a href="future.html#future-candidate-requirements-under-consideration">Future Candidate Requirement Under Consideration</a>.</td>
+  </tr>
+  <tr>
+    <td rowspan="5">Procedure</td>
+    <td colspan="2">Procedure name</td>
+    <td rowspan="5">History of Procedures</td>
+    <td><a href="StructureDefinition-au-ps-procedure.html">AU PS Procedure</a></td>
+    <td><code>Procedure.code</code></td>
+    <td></td>
+  </tr>
+  <tr>
+    <td colspan="2">Clinical indication</td>
+    <td><a href="StructureDefinition-au-ps-procedure.html">AU PS Procedure</a></td>
+    <td><code>Procedure.reasonCode | Procedure.reasonReference[x]</code></td>
+    <td></td>
+  </tr>
+  <tr>
+    <td colspan="2">Body site/laterality</td>
+    <td><a href="StructureDefinition-au-ps-procedure.html">AU PS Procedure</a></td>
+    <td><code>Procedure.code</code></td>
+    <td></td>
+  </tr>
+  <tr>
+    <td colspan="2">Date/time performed</td>
+    <td><a href="StructureDefinition-au-ps-procedure.html">AU PS Procedure</a></td>
+    <td><code>Procedure.performed[x] | Procedure.performedDateTime</code></td>
+    <td></td>
+  </tr>
+  <tr>
+    <td colspan="2">Comment</td>
+    <td><a href="StructureDefinition-au-ps-procedure.html">AU PS Procedure</a></td>
+    <td><code>Procedure.note</code></td>
+    <td></td>
+  </tr>
+  <tr>
+    <td rowspan="4">Sex and gender summary</td>
+    <td colspan="2">Sex assigned at birth</td>
+    <td rowspan="4">N/A</td>
+    <td><a href="StructureDefinition-au-ps-patient.html">AU PS Patient</a></td>
+    <td><code>Patient.extension.where(url='http://hl7.org/fhir/StructureDefinition/individual-recordedSexOrGender')</code></td>
+    <td>The <a href="http://hl7.org/fhir/StructureDefinition/individual-recordedSexOrGender">Person Recorded Sex or Gender extension</a> is profiled by <a href="https://build.fhir.org/ig/hl7au/au-fhir-core/StructureDefinition-au-core-rsg-sexassignedab.html">AU Core Sex Assigned At Birth (RSG)</a> to represent the concept of Sex assigned at birth.</td>
+  </tr>
+  <tr>
+    <td colspan="2">Gender identity</td>
+    <td><a href="StructureDefinition-au-ps-patient.html">AU PS Patient</a></td>
+    <td><code>Patient.extension.where(url='http://hl7.org/fhir/StructureDefinition/individual-genderIdentity')</code></td>
+    <td></td>
+  </tr>
+  <tr>
+    <td colspan="2">Pronoun/s</td>
+    <td><a href="StructureDefinition-au-ps-patient.html">AU PS Patient</a></td>
+    <td><code>Patient.extension.where(url='http://hl7.org/fhir/StructureDefinition/individual-pronouns')</code></td>
+    <td></td>
+  </tr>
+  <tr>
+    <td colspan="2">Last updated</td>
+    <td>-</td>
+    <td>-</td>
+    <td>This AUCDI element is a <a href="future.html#future-candidate-requirements-under-consideration">Future Candidate Requirement Under Consideration</a>.</td>
+  </tr>
+  <tr>
+    <td rowspan="4">Vaccination</td>
+    <td colspan="2">Vaccine name</td>
+    <td rowspan="4">Immunizations</td>
+    <td><a href="StructureDefinition-au-ps-immunization.html">AU PS Immunization</a></td>
+    <td><code>Immunization.vaccineCode</code></td>
+    <td></td>
+  </tr>
+  <tr>
+    <td colspan="2">Sequence</td>
+    <td><a href="StructureDefinition-au-ps-immunization.html">AU PS Immunization</a></td>
+    <td><code>Immunization.protocolApplied.doseNumber[x]</code></td>
+    <td></td>
+  </tr>
+  <tr>
+    <td colspan="2">Date of administration</td>
+    <td><a href="StructureDefinition-au-ps-immunization.html">AU PS Immunization</a></td>
+    <td><code>Immunization.occurrenceDateTime</code></td>
+    <td></td>
+  </tr>
+  <tr>
+    <td colspan="2">Comment</td>
+    <td><a href="StructureDefinition-au-ps-immunization.html">AU PS Immunization</a></td>
+    <td><code>Immunization.note</code></td>
+    <td></td>
+  </tr>
+  <tr style="background-color: #f2f2f2;">
+    <th>AUCDI Data Group</th>
+    <th colspan="2">AUCDI Data Element</th>
+    <th>AU PS Document Section</th>
+    <th>IPS Profile(s)</th>
+    <th>FHIR Path</th>
+    <th>Comment</th>
+  </tr>
+  <tr>
+    <td rowspan="5">Estimated Date of Delivery (EDD) summary</td>
+    <td colspan="2">EDD by menstrual cycle</td>
+    <td rowspan="5">History of pregnancy</td>
+    <td><a href="https://hl7.org/fhir/uv/ips/STU2/StructureDefinition-Observation-pregnancy-edd-uv-ips.html">Observation Pregnancy - Expected Delivery Date (IPS)</a></td>
+    <td><code>Observation.valueDateTime</code></td>
+    <td>This data group maps to an IPS profile; This AUCDI data group is a <a href="future.html#future-candidate-requirements-under-consideration">Future Candidate Requirement Under Consideration</a>.</td>
+  </tr>
+  <tr>
+    <td colspan="2">Date of ultrasound</td>
+    <td><a href="https://hl7.org/fhir/uv/ips/STU2/StructureDefinition-Observation-pregnancy-edd-uv-ips.html">Observation Pregnancy - Expected Delivery Date (IPS)</a></td>
+    <td><code>Observation.effectiveDateTime</code></td>
+    <td rowspan="2">AUCDI elements Date of ultrasound and Estimated date of delivery by ultrasound would be grouped together in the same Observation, separate to Estimated data of delivery by menstrual cycle.</td>
+  </tr>
+  <tr>
+    <td colspan="2">EDD by ultrasound</td>
+    <td><a href="https://hl7.org/fhir/uv/ips/STU2/StructureDefinition-Observation-pregnancy-edd-uv-ips.html">Observation Pregnancy - Expected Delivery Date (IPS)</a></td>
+    <td><code>Observation.valueDateTime</code></td>
+  </tr>
+  <tr>
+    <td colspan="2">Last updated</td>
+    <td>-</td>
+    <td>-</td>
+    <td>This AUCDI element is a <a href="future.html#future-candidate-requirements-under-consideration">Future Candidate Requirement Under Consideration</a>.</td>
+  </tr>
+  <tr>
+    <td colspan="2">Gestation by ultrasound</td>
+    <td>-</td>
+    <td>-</td>
+    <td>This AUCDI element is a <a href="future.html#future-candidate-requirements-under-consideration">Future Candidate Requirement Under Consideration</a>.</td>
+  </tr>
+  <tr>
+    <td rowspan="3">Pregnancy assertion</td>
+    <td colspan="2">Pregnancy assertion</td>
+    <td rowspan="3">History of pregnancy</td>
+    <td><a href="https://hl7.org/fhir/uv/ips/STU2/StructureDefinition-Observation-pregnancy-status-uv-ips.html">Observation Pregnancy - Status (IPS)</a></td>
+    <td><code>Observation.valueCodeableConcept</code></td>
+    <td rowspan="3">This data group maps to an IPS profile; This AUCDI data group is a <a href="future.html#future-candidate-requirements-under-consideration">Future Candidate Requirement Under Consideration</a>.</td>
+  </tr>
+  <tr>
+    <td colspan="2">Justification</td>
+     <td><a href="https://hl7.org/fhir/uv/ips/STU2/StructureDefinition-Observation-pregnancy-status-uv-ips.html">Observation Pregnancy - Status (IPS)</a></td>
+    <td><code>Observation.note</code></td>
+  </tr>
+  <tr>
+    <td colspan="2">Date of assertion</td>
+     <td><a href="https://hl7.org/fhir/uv/ips/STU2/StructureDefinition-Observation-pregnancy-status-uv-ips.html">Observation Pregnancy - Status (IPS)</a></td>
+    <td><code>Observation.effectiveDateTime</code></td>
+  </tr>
+</tbody>
+</table>
+
+
+
+</div>
+        </div>  <!-- /inner-wrapper -->
+      </div>  <!-- /row -->
+    </div>  <!-- /container -->
+  </div>  <!-- /segment-content -->
+
+  <script type="text/javascript" src="assets/js/jquery.js"> </script>     <!-- note keep space here, otherwise it will be transformed to empty tag -> fails -->
+  <script type="text/javascript" src="assets/js/jquery-ui.min.js"> </script>
+
+  <script type="text/javascript" src="assets/js/window-hash.js"> </script>
+  <a name="bottom"> </a>
+  <div id="segment-footer" igtool="footer" class="segment">  <!-- segment-footer -->
+    <div class="container">  <!-- container -->
+
+      <div class="inner-wrapper">
+        <p>
+          IG &#169; 2024+ <a style="color:var(--footer-hyperlink-text-color)" href="https://confluence.hl7.org/display/HAFWG">HL7 Australia</a>.  Package hl7.fhir.au.ps#1.0.0-ci-build based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Fri, Jun 19, 2026 03:09+0000">2026-06-19</span>
+          <br/>
+          <span style="color: var(--footer-highlight-text-color)">
+                      Links: <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Table of Contents</a> |
+                 <a style="color: var(--footer-hyperlink-text-color)" href="qa.html">QA Report</a>
+                 
+                
+                 | <a style="color: #81BEF7" target="_blank" href="http://hl7.org.au/fhir/ps/history.html">Version History</a> |
+                 <a style="color: #81BEF7" rel="license" href="http://hl7.org/fhir/R4/license.html"><img style="border-style: none;" alt="CC0" src="cc0.png"/></a> |
+                 <a style="color: #81BEF7" target="_blank" href="http://hl7.org/fhir-issues">Propose a change</a>
+
+          </span>
+        </p>
+      </div>  <!-- /inner-wrapper -->
+    </div>  <!-- /container -->
+  </div>  <!-- /segment-footer -->
+  
+  <div id="segment-post-footer" class="segment hidden">  <!-- segment-post-footer -->
+    <div class="container">  <!-- container -->
+    </div>  <!-- /container -->
+  </div>  <!-- /segment-post-footer -->
+
+  <!-- JS and analytics only. -->
+  <!-- Bootstrap core JavaScript
+  ================================================== -->
+  <!-- Placed at the end of the document so the pages load faster -->
+  <script type="text/javascript" src="assets/js/bootstrap.min.js"> </script>
+  <script type="text/javascript" src="assets/js/respond.min.js"> </script>
+  <script type="text/javascript" src="assets/js/anchor.min.js"> </script>
+  <script type="text/javascript" src="assets/js/clipboard.min.js"> </script>
+  <script type="text/javascript" src="assets/js/clipboard-btn.js"> </script>
+  <script type="text/javascript" src="assets/js/anchor-hover.js"> </script>
+  <!-- Analytics Below
+  ================================================== -->
+  </body>
+</html>
+

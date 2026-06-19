@@ -1,0 +1,33 @@
+{
+  "resourceType" : "ValueSet",
+  "id" : "b31ca674-365d-4488-9949-cbbeff1c9145-104",
+  "url" : "http://hl7.org/fhir/comparison/ValueSet/b31ca674-365d-4488-9949-cbbeff1c9145-104",
+  "name" : "UnionMedicineActiveSubstancesUvIpsAndMedicationIngredient",
+  "title" : "Union of Medicine Active Substances - IPS And Medication Ingredient",
+  "status" : "active",
+  "date" : "2026-06-19T03:13:12+00:00",
+  "jurisdiction" : [{
+    "coding" : [{
+      "system" : "http://unstats.un.org/unsd/methods/m49/m49.htm",
+      "code" : "001",
+      "display" : "World"
+    }]
+  }],
+  "compose" : {
+    "include" : [{
+      "filter" : [{
+        "property" : "concept",
+        "op" : "descendent-of",
+        "value" : "410942007"
+      },
+      {
+        "property" : "concept",
+        "op" : "in",
+        "value" : "929360061000036106"
+      }]
+    },
+    {
+      "valueSet" : ["https://healthterminologies.gov.au/fhir/ValueSet/substance-1"]
+    }]
+  }
+}

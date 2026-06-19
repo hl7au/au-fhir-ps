@@ -1,0 +1,18 @@
+{
+  "resourceType" : "ValueSet",
+  "id" : "b31ca674-365d-4488-9949-cbbeff1c9145-140",
+  "url" : "http://hl7.org/fhir/comparison/ValueSet/b31ca674-365d-4488-9949-cbbeff1c9145-140",
+  "name" : "UnionOrganizationTypeAndHealthcareOrganisationRoleType",
+  "title" : "Union of Organization type And Healthcare Organisation Role Type",
+  "status" : "draft",
+  "date" : "2026-06-19T03:13:12+00:00",
+  "compose" : {
+    "include" : [{
+      "filter" : [{
+        "property" : "constraint",
+        "op" : "=",
+        "value" : "<< 224884006|Location within hospital premises| OR << 43741000|Site of care| OR << 440655000|Outpatient environment| OR << 440654001|Inpatient environment|"
+      }]
+    }]
+  }
+}

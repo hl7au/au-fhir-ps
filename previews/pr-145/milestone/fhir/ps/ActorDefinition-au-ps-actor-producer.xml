@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Basic xmlns="http://hl7.org/fhir">
+  <id value="au-ps-actor-producer"/>
+  <text>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p class="res-header-id"><b>Generated Narrative: ActorDefinition au-ps-actor-producer</b></p><a name="au-ps-actor-producer"> </a><a name="hcau-ps-actor-producer"> </a><table class="grid"><tr><td><b>Actor: AUPSProducer </b></td><td>AU PS Producer</td><td>Type: system </td></tr><tr><td colspan="3"><div><p>An AU PS Producer <strong>SHALL</strong> comply with the requirements of the <a href="https://hl7.org/fhir/uv/ips/STU2/ActorDefinition-Creator.html">Creator (IPS)</a>, and:</p>
+<ul>
+<li>
+<p><strong>SHALL</strong> implement the AU PS Bundle, AU PS Composition and AU PS Patient profiles</p>
+</li>
+<li>
+<p><strong>SHALL</strong> for each mandatory section in AU PS Composition, implement the AU PS profiles referenced by the corresponding section entry (i.e. AU PS AllergyIntolerance, AU PS Condition, and at least one of AU PS MedicationStatement and AU PS MedicationRequest)</p>
+</li>
+<li>
+<p><strong>SHOULD</strong> for each recommended section in AU PS Composition, implement the profiles referenced by the corresponding section entry (e.g. AU PS Immunization, Observation Results - Radiology (IPS), AU PS Procedure, and DeviceUseStatement (IPS))</p>
+</li>
+<li>
+<p><strong>SHOULD</strong> for each optional or undefined section, implement profiles referenced in the AU PS Bundle, otherwise implement an AU Core or AU Base profile where applicable</p>
+</li>
+<li>
+<p><strong>SHALL</strong> implement the AU PS Producer obligations defined in the implemented profiles. Where an IPS profile is referenced in the AU PS Bundle, the obligations of the Creator (IPS) actor <strong>SHALL</strong> apply</p>
+</li>
+<li>
+<p><strong>SHALL</strong> implement the requirements on <a href="general-requirements.html#suppressed-data">Suppressed Data</a> when data is NOT allowed to be shared</p>
+</li>
+<li>
+<p><strong>SHALL</strong> implement the requirements on <a href="general-requirements.html#missing-data-empty-sections-known-absence-of-data-no-known-x">Missing Data, Empty Sections, Known Absence of Data, No Known X</a></p>
+</li>
+</ul>
+</div></td></tr><tr><td>Derived from:</td><td colspan="2"><a href="http://hl7.org/fhir/uv/ips/STU2/ActorDefinition-Creator.html">http://hl7.org/fhir/uv/ips/ActorDefinition/Creator</a></td></tr></table></div>
+  </text>
+  <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-fmm">
+    <valueInteger value="2"/>
+  </extension>
+  <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status">
+    <valueCode value="draft">
+      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-conformance-derivedFrom">
+        <valueCanonical value="http://hl7.org.au/fhir/ps/ImplementationGuide/hl7.fhir.au.ps"/>
+      </extension>
+    </valueCode>
+  </extension>
+  <extension url="http://hl7.org/fhir/5.0/StructureDefinition/extension-ActorDefinition.url">
+    <valueUri value="http://hl7.org.au/fhir/ps/ActorDefinition/au-ps-actor-producer"/>
+  </extension>
+  <extension url="http://hl7.org/fhir/5.0/StructureDefinition/extension-ActorDefinition.version">
+    <valueString value="1.0.0-ci-build"/>
+  </extension>
+  <extension url="http://hl7.org/fhir/5.0/StructureDefinition/extension-ActorDefinition.name">
+    <valueString value="AUPSProducer"/>
+  </extension>
+  <extension url="http://hl7.org/fhir/5.0/StructureDefinition/extension-ActorDefinition.title">
+    <valueString value="AU PS Producer"/>
+  </extension>
+  <extension url="http://hl7.org/fhir/5.0/StructureDefinition/extension-ActorDefinition.status">
+    <valueCode value="active"/>
+  </extension>
+  <extension url="http://hl7.org/fhir/5.0/StructureDefinition/extension-ActorDefinition.date">
+    <valueDateTime value="2026-06-19T03:09:13+00:00"/>
+  </extension>
+  <extension url="http://hl7.org/fhir/5.0/StructureDefinition/extension-ActorDefinition.publisher">
+    <valueString value="HL7 Australia"/>
+  </extension>
+  <extension url="http://hl7.org/fhir/5.0/StructureDefinition/extension-ActorDefinition.contact">
+    <valueContactDetail>
+      <name value="HL7 Australia FHIR Work Group"/>
+      <telecom>
+        <system value="url"/>
+        <value value="https://confluence.hl7.org/display/HAFWG"/>
+        <use value="work"/>
+      </telecom>
+    </valueContactDetail>
+  </extension>
+  <extension url="http://hl7.org/fhir/5.0/StructureDefinition/extension-ActorDefinition.description">
+    <valueMarkdown value="An AU PS Producer is a system which creates or assembles an AU PS Bundle through automated generation or human curation of the patient summary content. This actor is based on the Creator (IPS) actor, and describes the additional requirements and documentation applied for the Australian context."/>
+  </extension>
+  <extension url="http://hl7.org/fhir/5.0/StructureDefinition/extension-ActorDefinition.jurisdiction">
+    <valueCodeableConcept>
+      <coding>
+        <system value="urn:iso:std:iso:3166"/>
+        <code value="AU"/>
+      </coding>
+    </valueCodeableConcept>
+  </extension>
+  <extension url="http://hl7.org/fhir/5.0/StructureDefinition/extension-ActorDefinition.copyright">
+    <valueMarkdown value="Used by permission of HL7 International, all rights reserved Creative Commons License. HL7 Australia© 2024+; Licensed Under Creative Commons No Rights Reserved."/>
+  </extension>
+  <extension url="http://hl7.org/fhir/5.0/StructureDefinition/extension-ActorDefinition.type">
+    <valueCode value="system"/>
+  </extension>
+  <extension url="http://hl7.org/fhir/5.0/StructureDefinition/extension-ActorDefinition.documentation">
+    <valueMarkdown value="An AU PS Producer **SHALL** comply with the requirements of the [Creator (IPS)](https://hl7.org/fhir/uv/ips/STU2/ActorDefinition-Creator.html), and:&#xA;&#xA; - **SHALL** implement the AU PS Bundle, AU PS Composition and AU PS Patient profiles&#xA;&#xA; - **SHALL** for each mandatory section in AU PS Composition, implement the AU PS profiles referenced by the corresponding section entry (i.e. AU PS AllergyIntolerance, AU PS Condition, and at least one of AU PS MedicationStatement and AU PS MedicationRequest)&#xA;&#xA; - **SHOULD** for each recommended section in AU PS Composition, implement the profiles referenced by the corresponding section entry (e.g. AU PS Immunization, Observation Results - Radiology (IPS), AU PS Procedure, and DeviceUseStatement (IPS))&#xA;&#xA; - **SHOULD** for each optional or undefined section, implement profiles referenced in the AU PS Bundle, otherwise implement an AU Core or AU Base profile where applicable&#xA;&#xA; - **SHALL** implement the AU PS Producer obligations defined in the implemented profiles. Where an IPS profile is referenced in the AU PS Bundle, the obligations of the Creator (IPS) actor **SHALL** apply&#xA;&#xA; - **SHALL** implement the requirements on [Suppressed Data](general-requirements.html#suppressed-data) when data is NOT allowed to be shared&#xA;&#xA; - **SHALL** implement the requirements on [Missing Data, Empty Sections, Known Absence of Data, No Known X](general-requirements.html#missing-data-empty-sections-known-absence-of-data-no-known-x)"/>
+  </extension>
+  <extension url="http://hl7.org/fhir/5.0/StructureDefinition/extension-ActorDefinition.derivedFrom">
+    <valueCanonical value="http://hl7.org/fhir/uv/ips/ActorDefinition/Creator"/>
+  </extension>
+  <code>
+    <coding>
+      <system value="http://hl7.org/fhir/fhir-types"/>
+      <code value="ActorDefinition"/>
+    </coding>
+  </code>
+</Basic>

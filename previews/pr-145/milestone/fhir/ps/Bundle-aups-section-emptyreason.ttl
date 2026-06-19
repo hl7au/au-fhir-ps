@@ -1,0 +1,319 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix loinc: <https://loinc.org/rdf/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix sct: <http://snomed.info/id/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://hl7.org.au/fhir/ps/Bundle/aups-section-emptyreason> a fhir:Bundle ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:id [ fhir:v "aups-section-emptyreason"] ; # 
+  fhir:meta [
+     fhir:profile ( [
+       fhir:v "http://hl7.org.au/fhir/ps/StructureDefinition/au-ps-bundle"^^xsd:anyURI ;
+       fhir:link <http://hl7.org.au/fhir/ps/StructureDefinition/au-ps-bundle>
+     ] )
+  ] ; # 
+  fhir:language [ fhir:v "en-AU"] ; # 
+  fhir:identifier [
+     fhir:system [ fhir:v "urn:ietf:rfc:3986"^^xsd:anyURI ] ;
+     fhir:value [ fhir:v "urn:uuid:b6c2419f-3add-455b-9825-7d835b41f34a" ]
+  ] ; # 
+  fhir:type [ fhir:v "document"] ; # 
+  fhir:timestamp [ fhir:v "2025-01-08T20:42:11.0607701+10:00"^^xsd:dateTime] ; # 
+  fhir:entry ( [
+     fhir:fullUrl [ fhir:v "urn:uuid:40e448e9-e323-4941-bb7c-60b0a91ac950"^^xsd:anyURI ] ;
+     fhir:resource ( <urn:uuid:40e448e9-e323-4941-bb7c-60b0a91ac950> )
+  ] [
+     fhir:fullUrl [ fhir:v "urn:uuid:9be88cc6-09e8-4dc6-b058-88676240dbc7"^^xsd:anyURI ] ;
+     fhir:resource ( <urn:uuid:9be88cc6-09e8-4dc6-b058-88676240dbc7> )
+  ] [
+     fhir:fullUrl [ fhir:v "urn:uuid:715076f4-007a-4c9d-beed-c155cc46f765"^^xsd:anyURI ] ;
+     fhir:resource ( <urn:uuid:715076f4-007a-4c9d-beed-c155cc46f765> )
+  ] [
+     fhir:fullUrl [ fhir:v "urn:uuid:70a756e3-20b3-4637-8601-a222983e295a"^^xsd:anyURI ] ;
+     fhir:resource ( <urn:uuid:70a756e3-20b3-4637-8601-a222983e295a> )
+  ] ) . # 
+
+<urn:uuid:40e448e9-e323-4941-bb7c-60b0a91ac950> a fhir:Composition ;
+  fhir:id [ fhir:v "40e448e9-e323-4941-bb7c-60b0a91ac950"] ; # 
+  fhir:meta [
+     fhir:versionId [ fhir:v "1" ]
+  ] ; # 
+  fhir:language [ fhir:v "en-AU"] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "generated" ] ;
+     fhir:div [ fhir:v "<div xmlns=\"http://www.w3.org/1999/xhtml\" xml:lang=\"en-AU\" lang=\"en-AU\"><a name=\"Composition_40e448e9-e323-4941-bb7c-60b0a91ac950\"> </a><p class=\"res-header-id\"><b>Generated Narrative: Composition 40e448e9-e323-4941-bb7c-60b0a91ac950</b></p><a name=\"40e448e9-e323-4941-bb7c-60b0a91ac950\"> </a><a name=\"hc40e448e9-e323-4941-bb7c-60b0a91ac950\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\">version: 1; Language: en-AU</p></div><p><b>status</b>: Final</p><p><b>type</b>: <span title=\"Codes:{http://loinc.org 60591-5}\">Patient summary Document</span></p><p><b>date</b>: 2025-01-08</p><p><b>author</b>: <a href=\"Bundle-aups-section-emptyreason.html#urn-uuid-715076f4-007a-4c9d-beed-c155cc46f765\">RelatedPerson Mr. Sonny Irvine</a></p><p><b>title</b>: Australian Patient Summary</p><p><b>custodian</b>: <a href=\"Bundle-aups-basicsummary.html#urn-uuid-70a756e3-20b3-4637-8601-a222983e295a\">Organization Bobrester Medical Center</a></p><h3>Events</h3><table class=\"grid\"><tr><td style=\"display: none\">-</td><td><b>Code</b></td><td><b>Period</b></td></tr><tr><td style=\"display: none\">*</td><td><span title=\"Codes:{http://terminology.hl7.org/CodeSystem/v3-ActClass PCPR}\">care provision</span></td><td>?? --&gt; 2025-01-08</td></tr></table></div>"^^rdf:XMLLiteral ]
+  ] ; # 
+  fhir:status [ fhir:v "final"] ; # 
+  fhir:type [
+     fhir:coding ( [
+       a loinc:60591-5 ;
+       fhir:system [ fhir:v "http://loinc.org"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "60591-5" ] ;
+       fhir:display [ fhir:v "Patient summary Document" ]
+     ] )
+  ] ; # 
+  fhir:subject [
+     fhir:reference [ fhir:v "urn:uuid:9be88cc6-09e8-4dc6-b058-88676240dbc7" ]
+  ] ; # 
+  fhir:date [ fhir:v "2025-01-08"^^xsd:date] ; # 
+  fhir:author ( [
+     fhir:reference [ fhir:v "urn:uuid:715076f4-007a-4c9d-beed-c155cc46f765" ]
+  ] ) ; # 
+  fhir:title [ fhir:v "Australian Patient Summary"] ; # 
+  fhir:custodian [
+     fhir:reference [ fhir:v "urn:uuid:70a756e3-20b3-4637-8601-a222983e295a" ]
+  ] ; # 
+  fhir:event ( [
+     fhir:code ( [
+       fhir:coding ( [
+         fhir:system [ fhir:v "http://terminology.hl7.org/CodeSystem/v3-ActClass"^^xsd:anyURI ] ;
+         fhir:code [ fhir:v "PCPR" ]
+       ] )
+     ] ) ;
+     fhir:period [
+       fhir:end [ fhir:v "2025-01-08"^^xsd:date ]
+     ]
+  ] ) ; # 
+  fhir:section ( [
+     fhir:title [ fhir:v "Allergies and Intolerances" ] ;
+     fhir:code [
+       fhir:coding ( [
+         a loinc:48765-2 ;
+         fhir:system [ fhir:v "http://loinc.org"^^xsd:anyURI ] ;
+         fhir:code [ fhir:v "48765-2" ] ;
+         fhir:display [ fhir:v "Allergies and adverse reactions Document" ]
+       ] )
+     ] ;
+     fhir:text [
+       fhir:status [ fhir:v "generated" ] ;
+       fhir:div [ fhir:v "<div xmlns=\"http://www.w3.org/1999/xhtml\" xml:lang=\"en-AU\" lang=\"en-AU\">There is no information available regarding the consumer's allergy conditions.</div>"^^rdf:XMLLiteral ]
+     ] ;
+     fhir:emptyReason [
+       fhir:coding ( [
+         fhir:system [ fhir:v "http://terminology.hl7.org/CodeSystem/list-empty-reason"^^xsd:anyURI ] ;
+         fhir:code [ fhir:v "unavailable" ] ;
+         fhir:display [ fhir:v "Unavailable" ]
+       ] ) ;
+       fhir:text [ fhir:v "No information available" ]
+     ]
+  ] [
+     fhir:title [ fhir:v "Problem List" ] ;
+     fhir:code [
+       fhir:coding ( [
+         a loinc:11450-4 ;
+         fhir:system [ fhir:v "http://loinc.org"^^xsd:anyURI ] ;
+         fhir:code [ fhir:v "11450-4" ] ;
+         fhir:display [ fhir:v "Problem list - Reported" ]
+       ] )
+     ] ;
+     fhir:text [
+       fhir:status [ fhir:v "generated" ] ;
+       fhir:div [ fhir:v "<div xmlns=\"http://www.w3.org/1999/xhtml\" xml:lang=\"en-AU\" lang=\"en-AU\">There is no information available about the consumer's health problems or disabilities.</div>"^^rdf:XMLLiteral ]
+     ] ;
+     fhir:emptyReason [
+       fhir:coding ( [
+         fhir:system [ fhir:v "http://terminology.hl7.org/CodeSystem/list-empty-reason"^^xsd:anyURI ] ;
+         fhir:code [ fhir:v "unavailable" ] ;
+         fhir:display [ fhir:v "Unavailable" ]
+       ] ) ;
+       fhir:text [ fhir:v "No information available" ]
+     ]
+  ] [
+     fhir:title [ fhir:v "Medication Summary" ] ;
+     fhir:code [
+       fhir:coding ( [
+         a loinc:10160-0 ;
+         fhir:system [ fhir:v "http://loinc.org"^^xsd:anyURI ] ;
+         fhir:code [ fhir:v "10160-0" ] ;
+         fhir:display [ fhir:v "History of Medication use Narrative" ]
+       ] )
+     ] ;
+     fhir:text [
+       fhir:status [ fhir:v "generated" ] ;
+       fhir:div [ fhir:v "<div xmlns=\"http://www.w3.org/1999/xhtml\" xml:lang=\"en-AU\" lang=\"en-AU\">There is no information available about the consumer's medication use or administration.</div>"^^rdf:XMLLiteral ]
+     ] ;
+     fhir:emptyReason [
+       fhir:coding ( [
+         fhir:system [ fhir:v "http://terminology.hl7.org/CodeSystem/list-empty-reason"^^xsd:anyURI ] ;
+         fhir:code [ fhir:v "unavailable" ] ;
+         fhir:display [ fhir:v "Unavailable" ]
+       ] ) ;
+       fhir:text [ fhir:v "No information available" ]
+     ]
+  ] [
+     fhir:title [ fhir:v "Immunizations" ] ;
+     fhir:code [
+       fhir:coding ( [
+         a loinc:11369-6 ;
+         fhir:system [ fhir:v "http://loinc.org"^^xsd:anyURI ] ;
+         fhir:code [ fhir:v "11369-6" ] ;
+         fhir:display [ fhir:v "History of Immunization note" ]
+       ] )
+     ] ;
+     fhir:text [
+       fhir:status [ fhir:v "generated" ] ;
+       fhir:div [ fhir:v "<div xmlns=\"http://www.w3.org/1999/xhtml\" xml:lang=\"en-AU\" lang=\"en-AU\">There is no information available about the consumer's immunisations.</div>"^^rdf:XMLLiteral ]
+     ] ;
+     fhir:emptyReason [
+       fhir:coding ( [
+         fhir:system [ fhir:v "http://terminology.hl7.org/CodeSystem/list-empty-reason"^^xsd:anyURI ] ;
+         fhir:code [ fhir:v "unavailable" ] ;
+         fhir:display [ fhir:v "Unavailable" ]
+       ] ) ;
+       fhir:text [ fhir:v "No information available" ]
+     ]
+  ] ) . # 
+
+<urn:uuid:9be88cc6-09e8-4dc6-b058-88676240dbc7> a fhir:Patient ;
+  fhir:id [ fhir:v "9be88cc6-09e8-4dc6-b058-88676240dbc7"] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "generated" ] ;
+     fhir:div [ fhir:v "<div xmlns=\"http://www.w3.org/1999/xhtml\"><a name=\"Patient_9be88cc6-09e8-4dc6-b058-88676240dbc7\"> </a><p class=\"res-header-id\"><b>Generated Narrative: Patient 9be88cc6-09e8-4dc6-b058-88676240dbc7</b></p><a name=\"9be88cc6-09e8-4dc6-b058-88676240dbc7\"> </a><a name=\"hc9be88cc6-09e8-4dc6-b058-88676240dbc7\"> </a><p style=\"border: 1px #661aff solid; background-color: #e6e6ff; padding: 10px;\">Mr. Ronny Lawrence Irvine Unknown, DoB:  ( ?ngen-9?)</p><hr/><table class=\"grid\"><tr><td style=\"background-color: #f3f5da\" title=\"Ways to contact the Patient\">Contact Detail</td><td colspan=\"3\"><ul><li><a href=\"mailto:ronny.irvine@myownpersonaldomain.com\">ronny.irvine@myownpersonaldomain.com</a></li><li>180 Hermann Rd Belmore River NSW 2440 AU (home)</li></ul></td></tr><tr><td style=\"background-color: #f3f5da\" title=\"This extension applies to the Patient, Person, and RelatedPerson resources and is used to indicate whether a person identifies as being of Aboriginal or Torres Strait Islander origin.\"><a href=\"http://hl7.org.au/fhir/6.0.0/StructureDefinition-indigenous-status.html\">Australian Indigenous Status</a></td><td colspan=\"3\">australian-indigenous-status-1: 2 (Torres Strait Islander but not Aboriginal origin)</td></tr></table></div>"^^rdf:XMLLiteral ]
+  ] ; # 
+  fhir:extension ( [
+     fhir:url [ fhir:v "http://hl7.org.au/fhir/StructureDefinition/indigenous-status"^^xsd:anyURI ] ;
+     fhir:value [
+       a fhir:Coding ;
+       fhir:system [ fhir:v "https://healthterminologies.gov.au/fhir/CodeSystem/australian-indigenous-status-1"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "2" ] ;
+       fhir:display [ fhir:v "Torres Strait Islander but not Aboriginal origin" ]
+     ]
+  ] ) ; # 
+  fhir:identifier ( [
+     fhir:extension ( [
+       fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/data-absent-reason"^^xsd:anyURI ] ;
+       fhir:value [
+         a fhir:code ;
+         fhir:v "masked"
+       ]
+     ] )
+  ] ) ; # 
+  fhir:name ( [
+     fhir:use [ fhir:v "usual" ] ;
+     fhir:text [ fhir:v "Mr. Ronny Lawrence Irvine" ] ;
+     fhir:family [ fhir:v "Irvine" ] ;
+     fhir:given ( [ fhir:v "Ronny" ] [ fhir:v "Lawrence" ] )
+  ] ) ; # 
+  fhir:telecom ( [
+     fhir:system [ fhir:v "email" ] ;
+     fhir:value [ fhir:v "ronny.irvine@myownpersonaldomain.com" ] ;
+     fhir:use [ fhir:v "home" ]
+  ] ) ; # 
+  fhir:gender [ fhir:v "unknown"] ; # 
+  fhir:birthDate [
+     fhir:extension ( [
+       fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/data-absent-reason"^^xsd:anyURI ] ;
+       fhir:value [
+         a fhir:code ;
+         fhir:v "unknown"
+       ]
+     ] )
+  ] ; # 
+  fhir:address ( [
+     fhir:use [ fhir:v "home" ] ;
+     fhir:line ( [ fhir:v "180 Hermann Rd" ] ) ;
+     fhir:city [ fhir:v "Belmore River" ] ;
+     fhir:state [ fhir:v "NSW" ] ;
+     fhir:postalCode [ fhir:v "2440" ] ;
+     fhir:country [ fhir:v "AU" ]
+  ] ) . # 
+
+<urn:uuid:715076f4-007a-4c9d-beed-c155cc46f765> a fhir:RelatedPerson ;
+  fhir:id [ fhir:v "715076f4-007a-4c9d-beed-c155cc46f765"] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "generated" ] ;
+     fhir:div [ fhir:v "<div xmlns=\"http://www.w3.org/1999/xhtml\"><a name=\"RelatedPerson_715076f4-007a-4c9d-beed-c155cc46f765\"> </a><p class=\"res-header-id\"><b>Generated Narrative: RelatedPerson 715076f4-007a-4c9d-beed-c155cc46f765</b></p><a name=\"715076f4-007a-4c9d-beed-c155cc46f765\"> </a><a name=\"hc715076f4-007a-4c9d-beed-c155cc46f765\"> </a><p><b>patient</b>: <a href=\"Bundle-aups-basicsummary.html#urn-uuid-9be88cc6-09e8-4dc6-b058-88676240dbc7\">Mia Leanne Banks  Female, DoB: 1983-08-25 ( IHI: Austalian Healthcare Identifier - Individual#8003608333647261)</a></p><p><b>relationship</b>: <span title=\"Codes:{http://terminology.hl7.org/CodeSystem/v3-RoleCode SON}\">Son</span></p><p><b>name</b>: Mr. Sonny Irvine</p><p><b>telecom</b>: ph: 0491570737(Mobile)</p><p><b>address</b>: 1415 Right Bank Rd Belmore River NSW 2440 AU (home)</p></div>"^^rdf:XMLLiteral ]
+  ] ; # 
+  fhir:patient [
+     fhir:reference [ fhir:v "urn:uuid:9be88cc6-09e8-4dc6-b058-88676240dbc7" ]
+  ] ; # 
+  fhir:relationship ( [
+     fhir:coding ( [
+       fhir:system [ fhir:v "http://terminology.hl7.org/CodeSystem/v3-RoleCode"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "SON" ]
+     ] ) ;
+     fhir:text [ fhir:v "Son" ]
+  ] ) ; # 
+  fhir:name ( [
+     fhir:use [ fhir:v "usual" ] ;
+     fhir:text [ fhir:v "Mr. Sonny Irvine" ] ;
+     fhir:family [ fhir:v "Irvine" ] ;
+     fhir:given ( [ fhir:v "Sonny" ] )
+  ] ) ; # 
+  fhir:telecom ( [
+     fhir:system [ fhir:v "phone" ] ;
+     fhir:value [ fhir:v "0491570737" ] ;
+     fhir:use [ fhir:v "mobile" ]
+  ] ) ; # 
+  fhir:address ( [
+     fhir:use [ fhir:v "home" ] ;
+     fhir:line ( [ fhir:v "1415 Right Bank Rd" ] ) ;
+     fhir:city [ fhir:v "Belmore River" ] ;
+     fhir:state [ fhir:v "NSW" ] ;
+     fhir:postalCode [ fhir:v "2440" ] ;
+     fhir:country [ fhir:v "AU" ]
+  ] ) . # 
+
+<urn:uuid:70a756e3-20b3-4637-8601-a222983e295a> a fhir:Organization ;
+  fhir:id [ fhir:v "70a756e3-20b3-4637-8601-a222983e295a"] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "generated" ] ;
+     fhir:div [ fhir:v "<div xmlns=\"http://www.w3.org/1999/xhtml\"><a name=\"Organization_70a756e3-20b3-4637-8601-a222983e295a\"> </a><p class=\"res-header-id\"><b>Generated Narrative: Organization 70a756e3-20b3-4637-8601-a222983e295a</b></p><a name=\"70a756e3-20b3-4637-8601-a222983e295a\"> </a><a name=\"hc70a756e3-20b3-4637-8601-a222983e295a\"> </a><p><b>identifier</b>: HPI-O/8003629900040482, ABN/81132303164</p><p><b>type</b>: <span title=\"Codes:{http://www.abs.gov.au/ausstats/abs@.nsf/mf/1292.0 8520}, {http://snomed.info/sct 708175003}\">Diagnostic Radiology</span></p><p><b>name</b>: Douglas Radiology</p><p><b>telecom</b>: ph: 0355500107(Work), <a href=\"mailto:reception@douglasradiology.example.com.au\">reception@douglasradiology.example.com.au</a></p><p><b>address</b>: 74 Freedom Lane Douglas VIC 3401 </p></div>"^^rdf:XMLLiteral ]
+  ] ; # 
+  fhir:identifier ( [
+     fhir:type [
+       fhir:coding ( [
+         fhir:system [ fhir:v "http://terminology.hl7.org.au/CodeSystem/v2-0203"^^xsd:anyURI ] ;
+         fhir:code [ fhir:v "NOI" ]
+       ] ) ;
+       fhir:text [ fhir:v "HPI-O" ]
+     ] ;
+     fhir:system [ fhir:v "http://ns.electronichealth.net.au/id/hi/hpio/1.0"^^xsd:anyURI ] ;
+     fhir:value [ fhir:v "8003629900040482" ]
+  ] [
+     fhir:type [
+       fhir:coding ( [
+         fhir:system [ fhir:v "http://terminology.hl7.org/CodeSystem/v2-0203"^^xsd:anyURI ] ;
+         fhir:code [ fhir:v "XX" ]
+       ] ) ;
+       fhir:text [ fhir:v "ABN" ]
+     ] ;
+     fhir:system [ fhir:v "http://hl7.org.au/id/abn"^^xsd:anyURI ] ;
+     fhir:value [ fhir:v "81132303164" ]
+  ] ) ; # 
+  fhir:type ( [
+     fhir:coding ( [
+       fhir:system [ fhir:v "http://www.abs.gov.au/ausstats/abs@.nsf/mf/1292.0"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "8520" ] ;
+       fhir:display [ fhir:v "Pathology and Diagnostic Imaging Services" ]
+     ] [
+       a sct:708175003 ;
+       fhir:system [ fhir:v "http://snomed.info/sct"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "708175003" ] ;
+       fhir:display [ fhir:v "Diagnostic imaging service" ]
+     ] ) ;
+     fhir:text [ fhir:v "Diagnostic Radiology" ]
+  ] ) ; # 
+  fhir:name [ fhir:v "Douglas Radiology"] ; # 
+  fhir:telecom ( [
+     fhir:system [ fhir:v "phone" ] ;
+     fhir:value [ fhir:v "0355500107" ] ;
+     fhir:use [ fhir:v "work" ]
+  ] [
+     fhir:system [ fhir:v "email" ] ;
+     fhir:value [ fhir:v "reception@douglasradiology.example.com.au" ]
+  ] ) ; # 
+  fhir:address ( [
+     fhir:line ( [ fhir:v "74 Freedom Lane" ] ) ;
+     fhir:city [ fhir:v "Douglas" ] ;
+     fhir:state [ fhir:v "VIC" ] ;
+     fhir:postalCode [ fhir:v "3401" ]
+  ] ) . # 
+
+# -------------------------------------------------------------------------------------
+

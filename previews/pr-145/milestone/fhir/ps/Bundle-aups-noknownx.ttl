@@ -1,0 +1,450 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix loinc: <https://loinc.org/rdf/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix sct: <http://snomed.info/id/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://hl7.org.au/fhir/ps/Bundle/aups-noknownx> a fhir:Bundle ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:id [ fhir:v "aups-noknownx"] ; # 
+  fhir:meta [
+     fhir:profile ( [
+       fhir:v "http://hl7.org.au/fhir/ps/StructureDefinition/au-ps-bundle"^^xsd:anyURI ;
+       fhir:link <http://hl7.org.au/fhir/ps/StructureDefinition/au-ps-bundle>
+     ] )
+  ] ; # 
+  fhir:language [ fhir:v "en-AU"] ; # 
+  fhir:identifier [
+     fhir:system [ fhir:v "urn:ietf:rfc:3986"^^xsd:anyURI ] ;
+     fhir:value [ fhir:v "urn:uuid:c1b07c4e-7a7a-4711-93e2-9a589b8c87e0" ]
+  ] ; # 
+  fhir:type [ fhir:v "document"] ; # 
+  fhir:timestamp [ fhir:v "2025-05-14T08:17:43.912+10:00"^^xsd:dateTime] ; # 
+  fhir:entry ( [
+     fhir:fullUrl [ fhir:v "urn:uuid:63b319ec-7321-4a70-973b-2cead2b28c28"^^xsd:anyURI ] ;
+     fhir:resource ( <urn:uuid:63b319ec-7321-4a70-973b-2cead2b28c28> )
+  ] [
+     fhir:fullUrl [ fhir:v "urn:uuid:03b8cc8a-df59-4daf-b9f2-8b49d3c7579a"^^xsd:anyURI ] ;
+     fhir:resource ( <urn:uuid:03b8cc8a-df59-4daf-b9f2-8b49d3c7579a> )
+  ] [
+     fhir:fullUrl [ fhir:v "urn:uuid:abfb35a4-7b89-46d1-be21-dec293999a1b"^^xsd:anyURI ] ;
+     fhir:resource ( <urn:uuid:abfb35a4-7b89-46d1-be21-dec293999a1b> )
+  ] [
+     fhir:fullUrl [ fhir:v "urn:uuid:719de42c-3b25-45d6-b24f-ebec9a753175"^^xsd:anyURI ] ;
+     fhir:resource ( <urn:uuid:719de42c-3b25-45d6-b24f-ebec9a753175> )
+  ] [
+     fhir:fullUrl [ fhir:v "urn:uuid:f8135a88-5992-4a78-8d9f-6bc3f533292d"^^xsd:anyURI ] ;
+     fhir:resource ( <urn:uuid:f8135a88-5992-4a78-8d9f-6bc3f533292d> )
+  ] [
+     fhir:fullUrl [ fhir:v "urn:uuid:9840a67e-3621-470d-9a7c-e559422591f5"^^xsd:anyURI ] ;
+     fhir:resource ( <urn:uuid:9840a67e-3621-470d-9a7c-e559422591f5> )
+  ] [
+     fhir:fullUrl [ fhir:v "urn:uuid:0fc878c1-a158-425f-ba08-ea4366fbb4e1"^^xsd:anyURI ] ;
+     fhir:resource ( <urn:uuid:0fc878c1-a158-425f-ba08-ea4366fbb4e1> )
+  ] [
+     fhir:fullUrl [ fhir:v "urn:uuid:df366c47-c739-4c16-939e-b5cf9afb0b7d"^^xsd:anyURI ] ;
+     fhir:resource ( <urn:uuid:df366c47-c739-4c16-939e-b5cf9afb0b7d> )
+  ] ) . # 
+
+<urn:uuid:63b319ec-7321-4a70-973b-2cead2b28c28> a fhir:Composition ;
+  fhir:id [ fhir:v "63b319ec-7321-4a70-973b-2cead2b28c28"] ; # 
+  fhir:meta [
+     fhir:profile ( [
+       fhir:v "http://hl7.org.au/fhir/ps/StructureDefinition/au-ps-composition"^^xsd:anyURI ;
+       fhir:link <http://hl7.org.au/fhir/ps/StructureDefinition/au-ps-composition>
+     ] )
+  ] ; # 
+  fhir:language [ fhir:v "en-AU"] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "generated" ] ;
+     fhir:div [ fhir:v "<div xmlns=\"http://www.w3.org/1999/xhtml\" xml:lang=\"en-AU\" lang=\"en-AU\"><a name=\"Composition_63b319ec-7321-4a70-973b-2cead2b28c28\"> </a><p class=\"res-header-id\"><b>Generated Narrative: Composition 63b319ec-7321-4a70-973b-2cead2b28c28</b></p><a name=\"63b319ec-7321-4a70-973b-2cead2b28c28\"> </a><a name=\"hc63b319ec-7321-4a70-973b-2cead2b28c28\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\">Language: en-AU</p><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-au-ps-composition.html\">AU PS Composition</a></p></div><p><b>status</b>: Final</p><p><b>type</b>: <span title=\"Codes:{http://loinc.org 60591-5}\">Patient summary Document</span></p><p><b>date</b>: 2025-05-14</p><p><b>author</b>: <a href=\"Bundle-aups-noknownx.html#urn-uuid-719de42c-3b25-45d6-b24f-ebec9a753175\">PractitionerRole Diagnostic and Interventional Radiologist</a></p><p><b>title</b>: Australian Patient Summary</p><p><b>custodian</b>: <a href=\"Bundle-aups-noknownx.html#urn-uuid-abfb35a4-7b89-46d1-be21-dec293999a1b\">Organization Douglas Radiology</a></p></div>"^^rdf:XMLLiteral ]
+  ] ; # 
+  fhir:status [ fhir:v "final"] ; # 
+  fhir:type [
+     fhir:coding ( [
+       a loinc:60591-5 ;
+       fhir:system [ fhir:v "http://loinc.org"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "60591-5" ] ;
+       fhir:display [ fhir:v "Patient summary Document" ]
+     ] )
+  ] ; # 
+  fhir:subject [
+     fhir:reference [ fhir:v "urn:uuid:03b8cc8a-df59-4daf-b9f2-8b49d3c7579a" ]
+  ] ; # 
+  fhir:date [ fhir:v "2025-05-14"^^xsd:date] ; # 
+  fhir:author ( [
+     fhir:reference [ fhir:v "urn:uuid:719de42c-3b25-45d6-b24f-ebec9a753175" ]
+  ] ) ; # 
+  fhir:title [ fhir:v "Australian Patient Summary"] ; # 
+  fhir:custodian [
+     fhir:reference [ fhir:v "urn:uuid:abfb35a4-7b89-46d1-be21-dec293999a1b" ]
+  ] ; # 
+  fhir:section ( [
+     fhir:title [ fhir:v "Active Problems" ] ;
+     fhir:code [
+       fhir:coding ( [
+         a loinc:11450-4 ;
+         fhir:system [ fhir:v "http://loinc.org"^^xsd:anyURI ] ;
+         fhir:code [ fhir:v "11450-4" ] ;
+         fhir:display [ fhir:v "Problem list - Reported" ]
+       ] )
+     ] ;
+     fhir:text [
+       fhir:status [ fhir:v "generated" ] ;
+       fhir:div [ fhir:v "<div xmlns=\"http://www.w3.org/1999/xhtml\" xml:lang=\"en-AU\" lang=\"en-AU\">30/03/2025 No current problem or disability</div>"^^rdf:XMLLiteral ]
+     ] ;
+     fhir:entry ( [
+       fhir:reference [ fhir:v "urn:uuid:df366c47-c739-4c16-939e-b5cf9afb0b7d" ]
+     ] )
+  ] [
+     fhir:title [ fhir:v "Active Allergies or Intolerances" ] ;
+     fhir:code [
+       fhir:coding ( [
+         a loinc:48765-2 ;
+         fhir:system [ fhir:v "http://loinc.org"^^xsd:anyURI ] ;
+         fhir:code [ fhir:v "48765-2" ] ;
+         fhir:display [ fhir:v "Allergies and adverse reactions Document" ]
+       ] )
+     ] ;
+     fhir:text [
+       fhir:status [ fhir:v "generated" ] ;
+       fhir:div [ fhir:v "<div xmlns=\"http://www.w3.org/1999/xhtml\" xml:lang=\"en-AU\" lang=\"en-AU\">10/12/2024 No known allergy</div>"^^rdf:XMLLiteral ]
+     ] ;
+     fhir:entry ( [
+       fhir:reference [ fhir:v "urn:uuid:9840a67e-3621-470d-9a7c-e559422591f5" ]
+     ] )
+  ] [
+     fhir:title [ fhir:v "Current Medicines" ] ;
+     fhir:code [
+       fhir:coding ( [
+         a loinc:10160-0 ;
+         fhir:system [ fhir:v "http://loinc.org"^^xsd:anyURI ] ;
+         fhir:code [ fhir:v "10160-0" ] ;
+         fhir:display [ fhir:v "History of Medication use Narrative" ]
+       ] )
+     ] ;
+     fhir:text [
+       fhir:status [ fhir:v "generated" ] ;
+       fhir:div [ fhir:v "<div xmlns=\"http://www.w3.org/1999/xhtml\" xml:lang=\"en-AU\" lang=\"en-AU\">14/05/2025 No known current medicines</div>"^^rdf:XMLLiteral ]
+     ] ;
+     fhir:entry ( [
+       fhir:reference [ fhir:v "urn:uuid:0fc878c1-a158-425f-ba08-ea4366fbb4e1" ]
+     ] )
+  ] ) . # 
+
+<urn:uuid:03b8cc8a-df59-4daf-b9f2-8b49d3c7579a> a fhir:Patient ;
+  fhir:id [ fhir:v "03b8cc8a-df59-4daf-b9f2-8b49d3c7579a"] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "generated" ] ;
+     fhir:div [ fhir:v "<div xmlns=\"http://www.w3.org/1999/xhtml\"><a name=\"Patient_03b8cc8a-df59-4daf-b9f2-8b49d3c7579a\"> </a><p class=\"res-header-id\"><b>Generated Narrative: Patient 03b8cc8a-df59-4daf-b9f2-8b49d3c7579a</b></p><a name=\"03b8cc8a-df59-4daf-b9f2-8b49d3c7579a\"> </a><a name=\"hc03b8cc8a-df59-4daf-b9f2-8b49d3c7579a\"> </a><p style=\"border: 1px #661aff solid; background-color: #e6e6ff; padding: 10px;\">Charlotte MORRIS  Female, DoB: 1994-11-11 ( IHI: Austalian Healthcare Identifier - Individual#8003608500314687)</p><hr/><table class=\"grid\"><tr><td style=\"background-color: #f3f5da\" title=\"Ways to contact the Patient\">Contact Detail</td><td colspan=\"3\"><ul><li>ph: 0370106762(Work)</li><li>ph: 0491577644(Mobile)</li><li><a href=\"mailto:charlotte.morris@my-own-personal-domain.com\">charlotte.morris@my-own-personal-domain.com</a></li><li>ph: 0370103886(Home)</li><li>175 Zeppelin Ave Mountain View VIC 3988 AU </li></ul></td></tr><tr><td style=\"background-color: #f3f5da\" title=\"This extension applies to the Patient, Person, and RelatedPerson resources and is used to indicate whether a person identifies as being of Aboriginal or Torres Strait Islander origin.\"><a href=\"http://hl7.org.au/fhir/6.0.0/StructureDefinition-indigenous-status.html\">Australian Indigenous Status</a></td><td colspan=\"3\">australian-indigenous-status-1: 1 (Aboriginal but not Torres Strait Islander origin)</td></tr></table></div>"^^rdf:XMLLiteral ]
+  ] ; # 
+  fhir:extension ( [
+     fhir:url [ fhir:v "http://hl7.org.au/fhir/StructureDefinition/indigenous-status"^^xsd:anyURI ] ;
+     fhir:value [
+       a fhir:Coding ;
+       fhir:system [ fhir:v "https://healthterminologies.gov.au/fhir/CodeSystem/australian-indigenous-status-1"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "1" ] ;
+       fhir:display [ fhir:v "Aboriginal but not Torres Strait Islander origin" ]
+     ]
+  ] ) ; # 
+  fhir:identifier ( [
+     fhir:extension ( [
+       fhir:url [ fhir:v "http://hl7.org.au/fhir/StructureDefinition/ihi-status"^^xsd:anyURI ] ;
+       fhir:value [
+         a fhir:Coding ;
+         fhir:system [ fhir:v "https://healthterminologies.gov.au/fhir/CodeSystem/ihi-status-1"^^xsd:anyURI ] ;
+         fhir:code [ fhir:v "active" ]
+       ]
+     ] [
+       fhir:url [ fhir:v "http://hl7.org.au/fhir/StructureDefinition/ihi-record-status"^^xsd:anyURI ] ;
+       fhir:value [
+         a fhir:Coding ;
+         fhir:system [ fhir:v "https://healthterminologies.gov.au/fhir/CodeSystem/ihi-record-status-1"^^xsd:anyURI ] ;
+         fhir:code [ fhir:v "verified" ] ;
+         fhir:display [ fhir:v "verified" ]
+       ]
+     ] ) ;
+     fhir:type [
+       fhir:coding ( [
+         fhir:system [ fhir:v "http://terminology.hl7.org/CodeSystem/v2-0203"^^xsd:anyURI ] ;
+         fhir:code [ fhir:v "NI" ]
+       ] ) ;
+       fhir:text [ fhir:v "IHI" ]
+     ] ;
+     fhir:system [ fhir:v "http://ns.electronichealth.net.au/id/hi/ihi/1.0"^^xsd:anyURI ] ;
+     fhir:value [ fhir:v "8003608500314687" ]
+  ] ) ; # 
+  fhir:name ( [
+     fhir:use [ fhir:v "usual" ] ;
+     fhir:family [ fhir:v "MORRIS" ] ;
+     fhir:given ( [ fhir:v "Charlotte" ] )
+  ] ) ; # 
+  fhir:telecom ( [
+     fhir:system [ fhir:v "phone" ] ;
+     fhir:value [ fhir:v "0370106762" ] ;
+     fhir:use [ fhir:v "work" ]
+  ] [
+     fhir:system [ fhir:v "phone" ] ;
+     fhir:value [ fhir:v "0491577644" ] ;
+     fhir:use [ fhir:v "mobile" ]
+  ] [
+     fhir:system [ fhir:v "email" ] ;
+     fhir:value [ fhir:v "charlotte.morris@my-own-personal-domain.com" ]
+  ] [
+     fhir:system [ fhir:v "phone" ] ;
+     fhir:value [ fhir:v "0370103886" ] ;
+     fhir:use [ fhir:v "home" ]
+  ] ) ; # 
+  fhir:gender [ fhir:v "female"] ; # 
+  fhir:birthDate [ fhir:v "1994-11-11"^^xsd:date] ; # 
+  fhir:address ( [
+     fhir:line ( [ fhir:v "175 Zeppelin Ave" ] ) ;
+     fhir:city [ fhir:v "Mountain View" ] ;
+     fhir:state [ fhir:v "VIC" ] ;
+     fhir:postalCode [ fhir:v "3988" ] ;
+     fhir:country [ fhir:v "AU" ]
+  ] ) . # 
+
+<urn:uuid:abfb35a4-7b89-46d1-be21-dec293999a1b> a fhir:Organization ;
+  fhir:id [ fhir:v "abfb35a4-7b89-46d1-be21-dec293999a1b"] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "generated" ] ;
+     fhir:div [ fhir:v "<div xmlns=\"http://www.w3.org/1999/xhtml\"><a name=\"Organization_abfb35a4-7b89-46d1-be21-dec293999a1b\"> </a><p class=\"res-header-id\"><b>Generated Narrative: Organization abfb35a4-7b89-46d1-be21-dec293999a1b</b></p><a name=\"abfb35a4-7b89-46d1-be21-dec293999a1b\"> </a><a name=\"hcabfb35a4-7b89-46d1-be21-dec293999a1b\"> </a><p><b>identifier</b>: HPI-O/8003629900040482, ABN/81132303164</p><p><b>type</b>: <span title=\"Codes:{http://www.abs.gov.au/ausstats/abs@.nsf/mf/1292.0 8520}, {http://snomed.info/sct 708175003}\">Diagnostic Radiology</span></p><p><b>name</b>: Douglas Radiology</p><p><b>telecom</b>: ph: 0355500107(Work), <a href=\"mailto:reception@douglasradiology.example.com.au\">reception@douglasradiology.example.com.au</a></p><p><b>address</b>: 74 Freedom Lane Douglas VIC 3401 </p></div>"^^rdf:XMLLiteral ]
+  ] ; # 
+  fhir:identifier ( [
+     fhir:type [
+       fhir:coding ( [
+         fhir:system [ fhir:v "http://terminology.hl7.org.au/CodeSystem/v2-0203"^^xsd:anyURI ] ;
+         fhir:code [ fhir:v "NOI" ]
+       ] ) ;
+       fhir:text [ fhir:v "HPI-O" ]
+     ] ;
+     fhir:system [ fhir:v "http://ns.electronichealth.net.au/id/hi/hpio/1.0"^^xsd:anyURI ] ;
+     fhir:value [ fhir:v "8003629900040482" ]
+  ] [
+     fhir:type [
+       fhir:coding ( [
+         fhir:system [ fhir:v "http://terminology.hl7.org/CodeSystem/v2-0203"^^xsd:anyURI ] ;
+         fhir:code [ fhir:v "XX" ]
+       ] ) ;
+       fhir:text [ fhir:v "ABN" ]
+     ] ;
+     fhir:system [ fhir:v "http://hl7.org.au/id/abn"^^xsd:anyURI ] ;
+     fhir:value [ fhir:v "81132303164" ]
+  ] ) ; # 
+  fhir:type ( [
+     fhir:coding ( [
+       fhir:system [ fhir:v "http://www.abs.gov.au/ausstats/abs@.nsf/mf/1292.0"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "8520" ] ;
+       fhir:display [ fhir:v "Pathology and Diagnostic Imaging Services" ]
+     ] [
+       a sct:708175003 ;
+       fhir:system [ fhir:v "http://snomed.info/sct"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "708175003" ] ;
+       fhir:display [ fhir:v "Diagnostic imaging service" ]
+     ] ) ;
+     fhir:text [ fhir:v "Diagnostic Radiology" ]
+  ] ) ; # 
+  fhir:name [ fhir:v "Douglas Radiology"] ; # 
+  fhir:telecom ( [
+     fhir:system [ fhir:v "phone" ] ;
+     fhir:value [ fhir:v "0355500107" ] ;
+     fhir:use [ fhir:v "work" ]
+  ] [
+     fhir:system [ fhir:v "email" ] ;
+     fhir:value [ fhir:v "reception@douglasradiology.example.com.au" ]
+  ] ) ; # 
+  fhir:address ( [
+     fhir:line ( [ fhir:v "74 Freedom Lane" ] ) ;
+     fhir:city [ fhir:v "Douglas" ] ;
+     fhir:state [ fhir:v "VIC" ] ;
+     fhir:postalCode [ fhir:v "3401" ]
+  ] ) . # 
+
+<urn:uuid:719de42c-3b25-45d6-b24f-ebec9a753175> a fhir:PractitionerRole ;
+  fhir:id [ fhir:v "719de42c-3b25-45d6-b24f-ebec9a753175"] ; # 
+  fhir:meta [
+     fhir:profile ( [
+       fhir:v "http://hl7.org.au/fhir/ps/StructureDefinition/au-ps-practitionerrole"^^xsd:anyURI ;
+       fhir:link <http://hl7.org.au/fhir/ps/StructureDefinition/au-ps-practitionerrole>
+     ] )
+  ] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "generated" ] ;
+     fhir:div [ fhir:v "<div xmlns=\"http://www.w3.org/1999/xhtml\"><a name=\"PractitionerRole_719de42c-3b25-45d6-b24f-ebec9a753175\"> </a><p class=\"res-header-id\"><b>Generated Narrative: PractitionerRole 719de42c-3b25-45d6-b24f-ebec9a753175</b></p><a name=\"719de42c-3b25-45d6-b24f-ebec9a753175\"> </a><a name=\"hc719de42c-3b25-45d6-b24f-ebec9a753175\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-au-ps-practitionerrole.html\">AU PS PractitionerRole</a></p></div><p><b>identifier</b>: Medicare Provider Number/2449191X</p><p><b>practitioner</b>: <a href=\"Bundle-aups-noknownx.html#urn-uuid-f8135a88-5992-4a78-8d9f-6bc3f533292d\">Practitioner Palmer BURDETT </a></p><p><b>organization</b>: <a href=\"Bundle-aups-noknownx.html#urn-uuid-abfb35a4-7b89-46d1-be21-dec293999a1b\">Organization Douglas Radiology</a></p><p><b>code</b>: <span title=\"Codes:{http://www.abs.gov.au/ausstats/abs@.nsf/mf/1220.0 253917}\">Diagnostic and Interventional Radiologist</span></p><p><b>specialty</b>: <span title=\"Codes:{http://snomed.info/sct 408455009}\">Interventional radiology - speciality</span></p><p><b>telecom</b>: ph: 0370101180(Work), <a href=\"mailto:palmer.burdett@douglasradiology.example.com.au\">palmer.burdett@douglasradiology.example.com.au</a></p></div>"^^rdf:XMLLiteral ]
+  ] ; # 
+  fhir:identifier ( [
+     fhir:type [
+       fhir:coding ( [
+         fhir:system [ fhir:v "http://terminology.hl7.org.au/CodeSystem/v2-0203"^^xsd:anyURI ] ;
+         fhir:code [ fhir:v "UPIN" ]
+       ] ) ;
+       fhir:text [ fhir:v "Medicare Provider Number" ]
+     ] ;
+     fhir:system [ fhir:v "http://ns.electronichealth.net.au/id/medicare-provider-number"^^xsd:anyURI ] ;
+     fhir:value [ fhir:v "2449191X" ]
+  ] ) ; # 
+  fhir:practitioner [
+     fhir:reference [ fhir:v "urn:uuid:f8135a88-5992-4a78-8d9f-6bc3f533292d" ]
+  ] ; # 
+  fhir:organization [
+     fhir:reference [ fhir:v "urn:uuid:abfb35a4-7b89-46d1-be21-dec293999a1b" ]
+  ] ; # 
+  fhir:code ( [
+     fhir:coding ( [
+       fhir:system [ fhir:v "http://www.abs.gov.au/ausstats/abs@.nsf/mf/1220.0"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "253917" ]
+     ] )
+  ] ) ; # 
+  fhir:specialty ( [
+     fhir:coding ( [
+       a sct:408455009 ;
+       fhir:system [ fhir:v "http://snomed.info/sct"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "408455009" ]
+     ] )
+  ] ) ; # 
+  fhir:telecom ( [
+     fhir:system [ fhir:v "phone" ] ;
+     fhir:value [ fhir:v "0370101180" ] ;
+     fhir:use [ fhir:v "work" ]
+  ] [
+     fhir:system [ fhir:v "email" ] ;
+     fhir:value [ fhir:v "palmer.burdett@douglasradiology.example.com.au" ] ;
+     fhir:use [ fhir:v "work" ]
+  ] ) . # 
+
+<urn:uuid:f8135a88-5992-4a78-8d9f-6bc3f533292d> a fhir:Practitioner ;
+  fhir:id [ fhir:v "f8135a88-5992-4a78-8d9f-6bc3f533292d"] ; # 
+  fhir:meta [
+     fhir:profile ( [
+       fhir:v "http://hl7.org.au/fhir/ps/StructureDefinition/au-ps-practitioner"^^xsd:anyURI ;
+       fhir:link <http://hl7.org.au/fhir/ps/StructureDefinition/au-ps-practitioner>
+     ] )
+  ] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "generated" ] ;
+     fhir:div [ fhir:v "<div xmlns=\"http://www.w3.org/1999/xhtml\"><a name=\"Practitioner_f8135a88-5992-4a78-8d9f-6bc3f533292d\"> </a><p class=\"res-header-id\"><b>Generated Narrative: Practitioner f8135a88-5992-4a78-8d9f-6bc3f533292d</b></p><a name=\"f8135a88-5992-4a78-8d9f-6bc3f533292d\"> </a><a name=\"hcf8135a88-5992-4a78-8d9f-6bc3f533292d\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-au-ps-practitioner.html\">AU PS Practitioner</a></p></div><p><b>identifier</b>: HPI-I/8003616566719012</p><p><b>name</b>: Palmer BURDETT </p><p><b>telecom</b>: ph: 0370101180(Work), <a href=\"mailto:palmer.burdett@douglasradiology.example.com.au\">palmer.burdett@douglasradiology.example.com.au</a></p><p><b>address</b>: 31 Museum Pde Douglas VIC 3401 </p></div>"^^rdf:XMLLiteral ]
+  ] ; # 
+  fhir:identifier ( [
+     fhir:type [
+       fhir:coding ( [
+         fhir:system [ fhir:v "http://terminology.hl7.org/CodeSystem/v2-0203"^^xsd:anyURI ] ;
+         fhir:code [ fhir:v "NPI" ] ;
+         fhir:display [ fhir:v "National provider identifier" ]
+       ] ) ;
+       fhir:text [ fhir:v "HPI-I" ]
+     ] ;
+     fhir:system [ fhir:v "http://ns.electronichealth.net.au/id/hi/hpii/1.0"^^xsd:anyURI ] ;
+     fhir:value [ fhir:v "8003616566719012" ]
+  ] ) ; # 
+  fhir:name ( [
+     fhir:family [ fhir:v "BURDETT" ] ;
+     fhir:given ( [ fhir:v "Palmer" ] )
+  ] ) ; # 
+  fhir:telecom ( [
+     fhir:system [ fhir:v "phone" ] ;
+     fhir:value [ fhir:v "0370101180" ] ;
+     fhir:use [ fhir:v "work" ]
+  ] [
+     fhir:system [ fhir:v "email" ] ;
+     fhir:value [ fhir:v "palmer.burdett@douglasradiology.example.com.au" ]
+  ] ) ; # 
+  fhir:address ( [
+     fhir:line ( [ fhir:v "31 Museum Pde" ] ) ;
+     fhir:city [ fhir:v "Douglas" ] ;
+     fhir:state [ fhir:v "VIC" ] ;
+     fhir:postalCode [ fhir:v "3401" ]
+  ] ) . # 
+
+<urn:uuid:9840a67e-3621-470d-9a7c-e559422591f5> a fhir:AllergyIntolerance ;
+  fhir:id [ fhir:v "9840a67e-3621-470d-9a7c-e559422591f5"] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "generated" ] ;
+     fhir:div [ fhir:v "<div xmlns=\"http://www.w3.org/1999/xhtml\"><a name=\"AllergyIntolerance_9840a67e-3621-470d-9a7c-e559422591f5\"> </a><p class=\"res-header-id\"><b>Generated Narrative: AllergyIntolerance 9840a67e-3621-470d-9a7c-e559422591f5</b></p><a name=\"9840a67e-3621-470d-9a7c-e559422591f5\"> </a><a name=\"hc9840a67e-3621-470d-9a7c-e559422591f5\"> </a><p><b>clinicalStatus</b>: <span title=\"Codes:{http://terminology.hl7.org/CodeSystem/allergyintolerance-clinical active}\">Active</span></p><p><b>code</b>: <span title=\"Codes:{http://snomed.info/sct 716186003}\">No known allergy</span></p><p><b>patient</b>: <a href=\"Bundle-aups-noknownx.html#urn-uuid-03b8cc8a-df59-4daf-b9f2-8b49d3c7579a\">Charlotte MORRIS  Female, DoB: 1994-11-11 ( IHI: Austalian Healthcare Identifier - Individual#8003608500314687)</a></p><p><b>recordedDate</b>: 2024-12-10</p></div>"^^rdf:XMLLiteral ]
+  ] ; # 
+  fhir:clinicalStatus [
+     fhir:coding ( [
+       fhir:system [ fhir:v "http://terminology.hl7.org/CodeSystem/allergyintolerance-clinical"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "active" ] ;
+       fhir:display [ fhir:v "Active" ]
+     ] )
+  ] ; # 
+  fhir:code [
+     fhir:coding ( [
+       a sct:716186003 ;
+       fhir:system [ fhir:v "http://snomed.info/sct"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "716186003" ] ;
+       fhir:display [ fhir:v "No known allergy" ]
+     ] ) ;
+     fhir:text [ fhir:v "No known allergy" ]
+  ] ; # 
+  fhir:patient [
+     fhir:reference [ fhir:v "urn:uuid:03b8cc8a-df59-4daf-b9f2-8b49d3c7579a" ]
+  ] ; # 
+  fhir:recordedDate [ fhir:v "2024-12-10"^^xsd:date] . # 
+
+<urn:uuid:0fc878c1-a158-425f-ba08-ea4366fbb4e1> a fhir:MedicationStatement ;
+  fhir:id [ fhir:v "0fc878c1-a158-425f-ba08-ea4366fbb4e1"] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "generated" ] ;
+     fhir:div [ fhir:v "<div xmlns=\"http://www.w3.org/1999/xhtml\"><a name=\"MedicationStatement_0fc878c1-a158-425f-ba08-ea4366fbb4e1\"> </a><p class=\"res-header-id\"><b>Generated Narrative: MedicationStatement 0fc878c1-a158-425f-ba08-ea4366fbb4e1</b></p><a name=\"0fc878c1-a158-425f-ba08-ea4366fbb4e1\"> </a><a name=\"hc0fc878c1-a158-425f-ba08-ea4366fbb4e1\"> </a><p><b>status</b>: Active</p><p><b>medication</b>: <span title=\"Codes:{http://snomed.info/sct 787481004}\">No known current medicines</span></p><p><b>subject</b>: <a href=\"Bundle-aups-noknownx.html#urn-uuid-03b8cc8a-df59-4daf-b9f2-8b49d3c7579a\">Charlotte MORRIS  Female, DoB: 1994-11-11 ( IHI: Austalian Healthcare Identifier - Individual#8003608500314687)</a></p><p><b>effective</b>: 2025-05-14</p></div>"^^rdf:XMLLiteral ]
+  ] ; # 
+  fhir:status [ fhir:v "active"] ; # 
+  fhir:medication [
+     a fhir:CodeableConcept ;
+     fhir:coding ( [
+       a sct:787481004 ;
+       fhir:system [ fhir:v "http://snomed.info/sct"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "787481004" ] ;
+       fhir:display [ fhir:v "No known medications" ]
+     ] ) ;
+     fhir:text [ fhir:v "No known current medicines" ]
+  ] ; # 
+  fhir:subject [
+     fhir:reference [ fhir:v "urn:uuid:03b8cc8a-df59-4daf-b9f2-8b49d3c7579a" ]
+  ] ; # 
+  fhir:effective [
+     a fhir:dateTime ;
+     fhir:v "2025-05-14"^^xsd:date
+  ] . # 
+
+<urn:uuid:df366c47-c739-4c16-939e-b5cf9afb0b7d> a fhir:Condition ;
+  fhir:id [ fhir:v "df366c47-c739-4c16-939e-b5cf9afb0b7d"] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "generated" ] ;
+     fhir:div [ fhir:v "<div xmlns=\"http://www.w3.org/1999/xhtml\"><a name=\"Condition_df366c47-c739-4c16-939e-b5cf9afb0b7d\"> </a><p class=\"res-header-id\"><b>Generated Narrative: Condition df366c47-c739-4c16-939e-b5cf9afb0b7d</b></p><a name=\"df366c47-c739-4c16-939e-b5cf9afb0b7d\"> </a><a name=\"hcdf366c47-c739-4c16-939e-b5cf9afb0b7d\"> </a><p><b>clinicalStatus</b>: <span title=\"Codes:{http://terminology.hl7.org/CodeSystem/condition-clinical active}\">Active</span></p><p><b>category</b>: <span title=\"Codes:{http://terminology.hl7.org/CodeSystem/condition-category problem-list-item}\">Problem List Item</span></p><p><b>code</b>: <span title=\"Codes:{http://snomed.info/sct 160245001}\">No current problems or disability</span></p><p><b>subject</b>: <a href=\"Bundle-aups-noknownx.html#urn-uuid-03b8cc8a-df59-4daf-b9f2-8b49d3c7579a\">Charlotte MORRIS  Female, DoB: 1994-11-11 ( IHI: Austalian Healthcare Identifier - Individual#8003608500314687)</a></p><p><b>recordedDate</b>: 2025-03-30</p></div>"^^rdf:XMLLiteral ]
+  ] ; # 
+  fhir:clinicalStatus [
+     fhir:coding ( [
+       fhir:system [ fhir:v "http://terminology.hl7.org/CodeSystem/condition-clinical"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "active" ] ;
+       fhir:display [ fhir:v "Active" ]
+     ] )
+  ] ; # 
+  fhir:category ( [
+     fhir:coding ( [
+       fhir:system [ fhir:v "http://terminology.hl7.org/CodeSystem/condition-category"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "problem-list-item" ] ;
+       fhir:display [ fhir:v "Problem List Item" ]
+     ] )
+  ] ) ; # 
+  fhir:code [
+     fhir:coding ( [
+       a sct:160245001 ;
+       fhir:system [ fhir:v "http://snomed.info/sct"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "160245001" ] ;
+       fhir:display [ fhir:v "No current problems or disability" ]
+     ] ) ;
+     fhir:text [ fhir:v "No current problems or disability" ]
+  ] ; # 
+  fhir:subject [
+     fhir:reference [ fhir:v "urn:uuid:03b8cc8a-df59-4daf-b9f2-8b49d3c7579a" ]
+  ] ; # 
+  fhir:recordedDate [ fhir:v "2025-03-30"^^xsd:date] . # 
+
+# -------------------------------------------------------------------------------------
+

@@ -1,0 +1,34 @@
+{
+  "resourceType" : "ValueSet",
+  "id" : "b31ca674-365d-4488-9949-cbbeff1c9145-110",
+  "url" : "http://hl7.org/fhir/comparison/ValueSet/b31ca674-365d-4488-9949-cbbeff1c9145-110",
+  "name" : "UnionCondition/Problem/DiagnosisCodesAndReasonForRequest",
+  "title" : "Union of Condition/Problem/Diagnosis Codes And Reason for Request",
+  "status" : "draft",
+  "date" : "2026-06-19T03:13:12+00:00",
+  "compose" : {
+    "include" : [{
+      "system" : "http://snomed.info/sct",
+      "filter" : [{
+        "property" : "concept",
+        "op" : "is-a",
+        "value" : "404684003"
+      }]
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "concept" : [{
+        "code" : "160245001",
+        "display" : "No current problems or disability"
+      }]
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "filter" : [{
+        "property" : "constraint",
+        "op" : "=",
+        "value" : "^ 32570581000036105|Problem/Diagnosis reference set| OR ^ 32570141000036105|Procedure foundation reference set| OR ^ 1244621000168103|Australian emergency department reference set|"
+      }]
+    }]
+  }
+}

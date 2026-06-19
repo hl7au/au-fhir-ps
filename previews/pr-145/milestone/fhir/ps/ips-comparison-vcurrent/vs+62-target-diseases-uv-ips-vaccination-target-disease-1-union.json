@@ -1,0 +1,225 @@
+{
+  "resourceType" : "ValueSet",
+  "id" : "b31ca674-365d-4488-9949-cbbeff1c9145-92",
+  "url" : "http://hl7.org/fhir/comparison/ValueSet/b31ca674-365d-4488-9949-cbbeff1c9145-92",
+  "name" : "UnionVaccineTargetDiseasesUvIpsAndVaccinationTargetDisease",
+  "title" : "Union of Vaccine Target Diseases - IPS And Vaccination Target Disease",
+  "status" : "active",
+  "date" : "2026-06-19T03:13:12+00:00",
+  "jurisdiction" : [{
+    "coding" : [{
+      "system" : "http://unstats.un.org/unsd/methods/m49/m49.htm",
+      "code" : "001",
+      "display" : "World"
+    }]
+  }],
+  "compose" : {
+    "include" : [{
+      "concept" : [{
+        "code" : "4834000",
+        "display" : "Typhoid fever (disorder)"
+      },
+      {
+        "code" : "6142004",
+        "display" : "Influenza (disorder)"
+      },
+      {
+        "code" : "16541001",
+        "display" : "Yellow fever (disorder)"
+      },
+      {
+        "code" : "14189004",
+        "display" : "Measles (disorder)"
+      },
+      {
+        "code" : "14168008",
+        "display" : "Rabies (disorder)"
+      },
+      {
+        "code" : "18624000",
+        "display" : "Disease caused by Rotavirus (disorder)"
+      },
+      {
+        "code" : "23502006",
+        "display" : "Lyme disease (disorder)"
+      },
+      {
+        "code" : "23511006",
+        "display" : "Meningococcal infectious disease (disorder)"
+      },
+      {
+        "code" : "24662006",
+        "display" : "Influenza caused by Influenza B virus (disorder)"
+      },
+      {
+        "code" : "25225006",
+        "display" : "Disease caused by Adenovirus (disorder)"
+      },
+      {
+        "code" : "27836007",
+        "display" : "Pertussis (disorder)"
+      },
+      {
+        "code" : "32398004",
+        "display" : "Bronchitis (disorder)"
+      },
+      {
+        "code" : "36653000",
+        "display" : "Rubella (disorder)"
+      },
+      {
+        "code" : "36989005",
+        "display" : "Mumps (disorder)"
+      },
+      {
+        "code" : "37246009",
+        "display" : "Disease caused by rickettsiae (disorder)"
+      },
+      {
+        "code" : "38907003",
+        "display" : "Varicella (disorder)"
+      },
+      {
+        "code" : "40468003",
+        "display" : "Viral hepatitis, type A (disorder)"
+      },
+      {
+        "code" : "50711007",
+        "display" : "Viral hepatitis type C (disorder)"
+      },
+      {
+        "code" : "52947006",
+        "display" : "Japanese encephalitis virus disease (disorder)"
+      },
+      {
+        "code" : "56717001",
+        "display" : "Tuberculosis (disorder)"
+      },
+      {
+        "code" : "58750007",
+        "display" : "Plague (disorder)"
+      },
+      {
+        "code" : "63650001",
+        "display" : "Cholera (disorder)"
+      },
+      {
+        "code" : "66071002",
+        "display" : "Viral hepatitis type B (disorder)"
+      },
+      {
+        "code" : "67924001",
+        "display" : "Smallpox (disorder)"
+      },
+      {
+        "code" : "70036007",
+        "display" : "Haemophilus influenzae pneumonia (disorder)"
+      },
+      {
+        "code" : "75702008",
+        "display" : "Brucellosis (disorder)"
+      },
+      {
+        "code" : "76902006",
+        "display" : "Tetanus (disorder)"
+      },
+      {
+        "code" : "85904008",
+        "display" : "Paratyphoid fever (disorder)"
+      },
+      {
+        "code" : "111852003",
+        "display" : "Vaccinia (disorder)"
+      },
+      {
+        "code" : "186150001",
+        "display" : "Enteritis caused by rotavirus (disorder)"
+      },
+      {
+        "code" : "186772009",
+        "display" : "Rocky Mountain spotted fever (disorder)"
+      },
+      {
+        "code" : "186788009",
+        "display" : "Q fever (disorder)"
+      },
+      {
+        "code" : "240532009",
+        "display" : "Human papillomavirus infection (disorder)"
+      },
+      {
+        "code" : "240613006",
+        "display" : "Typhus group rickettsial disease (disorder)"
+      },
+      {
+        "code" : "372244006",
+        "display" : "Malignant melanoma (disorder)"
+      },
+      {
+        "code" : "397430003",
+        "display" : "Diphtheria caused by Corynebacterium diphtheriae (disorder)"
+      },
+      {
+        "code" : "398102009",
+        "display" : "Acute poliomyelitis (disorder)"
+      },
+      {
+        "code" : "398565003",
+        "display" : "Infection caused by Clostridium botulinum (disorder)"
+      },
+      {
+        "code" : "409498004",
+        "display" : "Anthrax (disorder)"
+      },
+      {
+        "code" : "417093003",
+        "display" : "Disease caused by West Nile virus (disorder)"
+      },
+      {
+        "code" : "442438000",
+        "display" : "Influenza caused by Influenza A virus (disorder)"
+      },
+      {
+        "code" : "442696006",
+        "display" : "Influenza caused by Influenza A virus subtype H1N1 (disorder)"
+      },
+      {
+        "code" : "450715004",
+        "display" : "Influenza caused by Influenza A virus subtype H7 (disorder)"
+      },
+      {
+        "code" : "707448003",
+        "display" : "Influenza caused by Influenza A virus subtype H7N9 (disorder)"
+      },
+      {
+        "code" : "709410003",
+        "display" : "Haemophilus influenzae type b infection (disorder)"
+      },
+      {
+        "code" : "712986001",
+        "display" : "Encephalitis caused by tick-borne encephalitis virus (disorder)"
+      },
+      {
+        "code" : "713083002",
+        "display" : "Influenza caused by Influenza A virus subtype H5 (disorder)"
+      },
+      {
+        "code" : "772810003",
+        "display" : "Influenza caused by Influenza A virus subtype H3N2 (disorder)"
+      },
+      {
+        "code" : "772828001",
+        "display" : "Influenza caused by Influenza A virus subtype H5N1 (disorder)"
+      },
+      {
+        "code" : "840539006",
+        "display" : "Disease caused by severe acute respiratory syndrome coronavirus 2 (disorder)"
+      }],
+      "filter" : [{
+        "property" : "constraint",
+        "op" : "=",
+        "value" : "^ 1203181000168101|Disease caused by microorganism or bacterial toxin reference set|"
+      }]
+    }]
+  }
+}

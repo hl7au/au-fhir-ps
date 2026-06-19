@@ -1,0 +1,2006 @@
+{
+  "codeSystems" : [{
+    "url" : "http://hl7.org/fhir/ValueSet/additional-instruction-codes",
+    "version" : "4.0.1",
+    "status" : "draft",
+    "name" : "SNOMEDCTAdditionalDosageInstructions",
+    "title" : "SNOMED CT Additional Dosage Instructions",
+    "description" : "This value set includes all SNOMED CT Additional Dosage Instructions.",
+    "systems" : ["http://snomed.info/sct"],
+    "oids" : ["2.16.840.1.113883.4.642.3.95"],
+    "sources" : ["2.16.840.1.113883.4.642.3.95"],
+    "uses" : {
+    },
+    "StructureDefinition-au-ps-medicationrequest.html" : "AU PS MedicationRequest",
+    "StructureDefinition-au-ps-medicationstatement.html" : "AU PS MedicationStatement"
+  },
+  {
+    "url" : "http://hl7.org/fhir/ValueSet/administration-method-codes",
+    "version" : "4.0.1",
+    "status" : "draft",
+    "name" : "SNOMEDCTAdministrationMethodCodes",
+    "title" : "SNOMED CT Administration Method Codes",
+    "description" : "This value set includes some method codes from SNOMED CT - provided as an exemplar",
+    "systems" : ["http://snomed.info/sct"],
+    "oids" : ["2.16.840.1.113883.4.642.3.97"],
+    "sources" : ["2.16.840.1.113883.4.642.3.97"],
+    "uses" : {
+    },
+    "StructureDefinition-au-ps-medicationrequest.html" : "AU PS MedicationRequest",
+    "StructureDefinition-au-ps-medicationstatement.html" : "AU PS MedicationStatement"
+  },
+  {
+    "url" : "http://hl7.org/fhir/ValueSet/administrative-gender",
+    "version" : "4.0.1",
+    "status" : "active",
+    "name" : "AdministrativeGender",
+    "title" : "AdministrativeGender",
+    "description" : "The gender of a person used for administrative purposes.",
+    "systems" : ["http://hl7.org/fhir/administrative-gender"],
+    "oids" : ["2.16.840.1.113883.4.642.3.1"],
+    "sources" : ["2.16.840.1.113883.4.642.3.1"],
+    "uses" : {
+    },
+    "StructureDefinition-au-ps-relatedperson.html" : "AU PS RelatedPerson",
+    "StructureDefinition-au-ps-practitioner.html" : "AU PS Practitioner",
+    "StructureDefinition-au-ps-patient.html" : "AU PS Patient"
+  },
+  {
+    "url" : "http://hl7.org/fhir/ValueSet/allergy-intolerance-category",
+    "version" : "4.0.1",
+    "status" : "draft",
+    "name" : "AllergyIntoleranceCategory",
+    "title" : "AllergyIntoleranceCategory",
+    "description" : "Category of an identified substance associated with allergies or intolerances.",
+    "systems" : ["http://hl7.org/fhir/allergy-intolerance-category"],
+    "oids" : ["2.16.840.1.113883.4.642.3.133"],
+    "sources" : ["2.16.840.1.113883.4.642.3.133"],
+    "uses" : {
+    },
+    "StructureDefinition-au-ps-allergyintolerance.html" : "AU PS AllergyIntolerance"
+  },
+  {
+    "url" : "http://hl7.org/fhir/ValueSet/allergy-intolerance-criticality",
+    "version" : "4.0.1",
+    "status" : "draft",
+    "name" : "AllergyIntoleranceCriticality",
+    "title" : "AllergyIntoleranceCriticality",
+    "description" : "Estimate of the potential clinical harm, or seriousness, of a reaction to an identified substance.",
+    "systems" : ["http://hl7.org/fhir/allergy-intolerance-criticality"],
+    "oids" : ["2.16.840.1.113883.4.642.3.129"],
+    "sources" : ["2.16.840.1.113883.4.642.3.129"],
+    "uses" : {
+    },
+    "StructureDefinition-au-ps-allergyintolerance.html" : "AU PS AllergyIntolerance"
+  },
+  {
+    "url" : "http://hl7.org/fhir/ValueSet/allergy-intolerance-type",
+    "version" : "4.0.1",
+    "status" : "draft",
+    "name" : "AllergyIntoleranceType",
+    "title" : "AllergyIntoleranceType",
+    "description" : "Identification of the underlying physiological mechanism for a Reaction Risk.",
+    "systems" : ["http://hl7.org/fhir/allergy-intolerance-type"],
+    "oids" : ["2.16.840.1.113883.4.642.3.131"],
+    "sources" : ["2.16.840.1.113883.4.642.3.131"],
+    "uses" : {
+    },
+    "StructureDefinition-au-ps-allergyintolerance.html" : "AU PS AllergyIntolerance"
+  },
+  {
+    "url" : "http://hl7.org/fhir/ValueSet/allergyintolerance-clinical",
+    "version" : "4.0.1",
+    "status" : "draft",
+    "name" : "AllergyIntoleranceClinicalStatusCodes",
+    "title" : "AllergyIntolerance Clinical Status Codes",
+    "description" : "Preferred value set for AllergyIntolerance Clinical Status.",
+    "systems" : ["http://terminology.hl7.org/CodeSystem/allergyintolerance-clinical"],
+    "oids" : ["2.16.840.1.113883.4.642.3.1372"],
+    "sources" : ["2.16.840.1.113883.4.642.3.1372"],
+    "uses" : {
+    },
+    "StructureDefinition-au-ps-allergyintolerance.html" : "AU PS AllergyIntolerance"
+  },
+  {
+    "url" : "http://hl7.org/fhir/ValueSet/allergyintolerance-verification",
+    "version" : "4.0.1",
+    "status" : "draft",
+    "name" : "AllergyIntoleranceVerificationStatusCodes",
+    "title" : "AllergyIntolerance Verification Status Codes",
+    "description" : "Preferred value set for AllergyIntolerance Verification Status.",
+    "systems" : ["http://terminology.hl7.org/CodeSystem/allergyintolerance-verification"],
+    "oids" : ["2.16.840.1.113883.4.642.3.1370"],
+    "sources" : ["2.16.840.1.113883.4.642.3.1370"],
+    "uses" : {
+    },
+    "StructureDefinition-au-ps-allergyintolerance.html" : "AU PS AllergyIntolerance"
+  },
+  {
+    "url" : "http://hl7.org/fhir/ValueSet/body-site",
+    "version" : "4.0.1",
+    "status" : "draft",
+    "name" : "SNOMEDCTBodyStructures",
+    "title" : "SNOMED CT Body Structures",
+    "description" : "This value set includes all codes from [SNOMED CT](http://snomed.info/sct) where concept is-a 442083009 (Anatomical or acquired body site (body structure)).",
+    "systems" : ["http://snomed.info/sct"],
+    "oids" : ["2.16.840.1.113883.4.642.3.141"],
+    "sources" : ["2.16.840.1.113883.4.642.3.141"],
+    "uses" : {
+    },
+    "StructureDefinition-au-ps-diagnosticresult-path.html" : "AU PS Pathology Result Observation",
+    "StructureDefinition-au-ps-smokingstatus.html" : "AU PS Smoking Status"
+  },
+  {
+    "url" : "http://hl7.org/fhir/ValueSet/bundle-type",
+    "version" : "4.0.1",
+    "status" : "active",
+    "name" : "BundleType",
+    "title" : "BundleType",
+    "description" : "Indicates the purpose of a bundle - how it is intended to be used.",
+    "systems" : ["http://hl7.org/fhir/bundle-type"],
+    "oids" : ["2.16.840.1.113883.4.642.3.620"],
+    "sources" : ["2.16.840.1.113883.4.642.3.620"],
+    "uses" : {
+    },
+    "StructureDefinition-au-ps-bundle.html" : "AU PS Bundle"
+  },
+  {
+    "url" : "http://hl7.org/fhir/ValueSet/common-tags",
+    "version" : "4.0.1",
+    "status" : "draft",
+    "name" : "CommonTags",
+    "title" : "Common Tags",
+    "description" : "Common Tag Codes defined by FHIR project",
+    "systems" : ["http://terminology.hl7.org/CodeSystem/common-tags"],
+    "oids" : ["2.16.840.1.113883.4.642.3.79"],
+    "sources" : ["2.16.840.1.113883.4.642.3.79"],
+    "uses" : {
+    },
+    "StructureDefinition-au-ps-composition.html" : "AU PS Composition"
+  },
+  {
+    "url" : "http://hl7.org/fhir/ValueSet/composition-attestation-mode",
+    "version" : "4.0.1",
+    "status" : "draft",
+    "name" : "CompositionAttestationMode",
+    "title" : "CompositionAttestationMode",
+    "description" : "The way in which a person authenticated a composition.",
+    "systems" : ["http://hl7.org/fhir/composition-attestation-mode"],
+    "oids" : ["2.16.840.1.113883.4.642.3.238"],
+    "sources" : ["2.16.840.1.113883.4.642.3.238"],
+    "uses" : {
+    },
+    "StructureDefinition-au-ps-composition.html" : "AU PS Composition"
+  },
+  {
+    "url" : "http://hl7.org/fhir/ValueSet/composition-status",
+    "version" : "4.0.1",
+    "status" : "draft",
+    "name" : "CompositionStatus",
+    "title" : "CompositionStatus",
+    "description" : "The workflow/clinical status of the composition.",
+    "systems" : ["http://hl7.org/fhir/composition-status"],
+    "oids" : ["2.16.840.1.113883.4.642.3.241"],
+    "sources" : ["2.16.840.1.113883.4.642.3.241"],
+    "uses" : {
+    },
+    "StructureDefinition-au-ps-composition.html" : "AU PS Composition"
+  },
+  {
+    "url" : "http://hl7.org/fhir/ValueSet/condition-category",
+    "version" : "4.0.1",
+    "status" : "draft",
+    "name" : "ConditionCategoryCodes",
+    "title" : "Condition Category Codes",
+    "description" : "Preferred value set for Condition Categories.",
+    "systems" : ["http://terminology.hl7.org/CodeSystem/condition-category"],
+    "oids" : ["2.16.840.1.113883.4.642.3.162"],
+    "sources" : ["2.16.840.1.113883.4.642.3.162"],
+    "uses" : {
+    },
+    "StructureDefinition-au-ps-condition.html" : "AU PS Condition"
+  },
+  {
+    "url" : "http://hl7.org/fhir/ValueSet/condition-clinical",
+    "version" : "4.0.1",
+    "status" : "draft",
+    "name" : "ConditionClinicalStatusCodes",
+    "title" : "Condition Clinical Status Codes",
+    "description" : "Preferred value set for Condition Clinical Status.",
+    "systems" : ["http://terminology.hl7.org/CodeSystem/condition-clinical"],
+    "oids" : ["2.16.840.1.113883.4.642.3.164"],
+    "sources" : ["2.16.840.1.113883.4.642.3.164"],
+    "uses" : {
+    },
+    "StructureDefinition-au-ps-condition.html" : "AU PS Condition"
+  },
+  {
+    "url" : "http://hl7.org/fhir/ValueSet/condition-code",
+    "version" : "4.0.1",
+    "status" : "draft",
+    "name" : "Condition/Problem/DiagnosisCodes",
+    "title" : "Condition/Problem/Diagnosis Codes",
+    "description" : "Example value set for Condition/Problem/Diagnosis codes.",
+    "systems" : ["http://snomed.info/sct"],
+    "oids" : ["2.16.840.1.113883.4.642.3.161"],
+    "sources" : ["2.16.840.1.113883.4.642.3.161"],
+    "uses" : {
+    },
+    "StructureDefinition-au-ps-procedure.html" : "AU PS Procedure"
+  },
+  {
+    "url" : "http://hl7.org/fhir/ValueSet/condition-severity",
+    "version" : "4.0.1",
+    "status" : "draft",
+    "name" : "Condition/DiagnosisSeverity",
+    "title" : "Condition/Diagnosis Severity",
+    "description" : "Preferred value set for Condition/Diagnosis severity grading.",
+    "systems" : ["http://snomed.info/sct"],
+    "oids" : ["2.16.840.1.113883.4.642.3.168"],
+    "sources" : ["2.16.840.1.113883.4.642.3.168"],
+    "uses" : {
+    },
+    "StructureDefinition-au-ps-condition.html" : "AU PS Condition"
+  },
+  {
+    "url" : "http://hl7.org/fhir/ValueSet/condition-stage",
+    "version" : "4.0.1",
+    "status" : "draft",
+    "name" : "ConditionStage",
+    "title" : "Condition Stage",
+    "description" : "Example value set for stages of cancer and other conditions.",
+    "systems" : ["http://snomed.info/sct"],
+    "oids" : ["2.16.840.1.113883.4.642.3.170"],
+    "sources" : ["2.16.840.1.113883.4.642.3.170"],
+    "uses" : {
+    },
+    "StructureDefinition-au-ps-condition.html" : "AU PS Condition"
+  },
+  {
+    "url" : "http://hl7.org/fhir/ValueSet/condition-stage-type",
+    "version" : "4.0.1",
+    "status" : "draft",
+    "name" : "ConditionStageType",
+    "title" : "Condition Stage Type",
+    "description" : "Example value set for the type of stages of cancer and other conditions",
+    "systems" : ["http://snomed.info/sct"],
+    "oids" : ["2.16.840.1.113883.4.642.3.171"],
+    "sources" : ["2.16.840.1.113883.4.642.3.171"],
+    "uses" : {
+    },
+    "StructureDefinition-au-ps-condition.html" : "AU PS Condition"
+  },
+  {
+    "url" : "http://hl7.org/fhir/ValueSet/condition-ver-status",
+    "version" : "4.0.1",
+    "status" : "draft",
+    "name" : "ConditionVerificationStatus",
+    "title" : "ConditionVerificationStatus",
+    "description" : "The verification status to support or decline the clinical status of the condition or diagnosis.",
+    "systems" : ["http://terminology.hl7.org/CodeSystem/condition-ver-status"],
+    "oids" : ["2.16.840.1.113883.4.642.3.166"],
+    "sources" : ["2.16.840.1.113883.4.642.3.166"],
+    "uses" : {
+    },
+    "StructureDefinition-au-ps-condition.html" : "AU PS Condition"
+  },
+  {
+    "url" : "http://hl7.org/fhir/ValueSet/contact-point-system",
+    "version" : "4.0.1",
+    "status" : "active",
+    "name" : "ContactPointSystem",
+    "title" : "ContactPointSystem",
+    "description" : "Telecommunications form for contact point.",
+    "systems" : ["http://hl7.org/fhir/contact-point-system"],
+    "oids" : ["2.16.840.1.113883.4.642.3.71"],
+    "sources" : ["2.16.840.1.113883.4.642.3.71"],
+    "uses" : {
+    },
+    "StructureDefinition-au-ps-practitionerrole.html" : "AU PS PractitionerRole",
+    "StructureDefinition-au-ps-organization.html" : "AU PS Organization",
+    "StructureDefinition-au-ps-patient.html" : "AU PS Patient"
+  },
+  {
+    "url" : "http://hl7.org/fhir/ValueSet/contact-point-use",
+    "version" : "4.0.1",
+    "status" : "active",
+    "name" : "ContactPointUse",
+    "title" : "ContactPointUse",
+    "description" : "Use of contact point.",
+    "systems" : ["http://hl7.org/fhir/contact-point-use"],
+    "oids" : ["2.16.840.1.113883.4.642.3.73"],
+    "sources" : ["2.16.840.1.113883.4.642.3.73"],
+    "uses" : {
+    },
+    "StructureDefinition-au-ps-practitionerrole.html" : "AU PS PractitionerRole",
+    "StructureDefinition-au-ps-organization.html" : "AU PS Organization",
+    "StructureDefinition-au-ps-patient.html" : "AU PS Patient"
+  },
+  {
+    "url" : "http://hl7.org/fhir/ValueSet/data-absent-reason",
+    "version" : "4.0.1",
+    "status" : "active",
+    "name" : "DataAbsentReason",
+    "title" : "DataAbsentReason",
+    "description" : "Used to specify why the normally expected content of the data element is missing.",
+    "systems" : ["http://terminology.hl7.org/CodeSystem/data-absent-reason"],
+    "oids" : ["2.16.840.1.113883.4.642.3.5"],
+    "sources" : ["2.16.840.1.113883.4.642.3.5"],
+    "uses" : {
+    },
+    "StructureDefinition-au-ps-diagnosticresult-path.html" : "AU PS Pathology Result Observation",
+    "StructureDefinition-au-ps-smokingstatus.html" : "AU PS Smoking Status"
+  },
+  {
+    "url" : "http://hl7.org/fhir/ValueSet/days-of-week",
+    "version" : "4.0.1",
+    "status" : "active",
+    "name" : "DaysOfWeek",
+    "title" : "DaysOfWeek",
+    "description" : "The days of the week.",
+    "systems" : ["http://hl7.org/fhir/days-of-week"],
+    "oids" : ["2.16.840.1.113883.4.642.3.512"],
+    "sources" : ["2.16.840.1.113883.4.642.3.512"],
+    "uses" : {
+    },
+    "StructureDefinition-au-ps-practitionerrole.html" : "AU PS PractitionerRole"
+  },
+  {
+    "url" : "http://hl7.org/fhir/ValueSet/device-action",
+    "version" : "4.0.1",
+    "status" : "draft",
+    "name" : "ProcedureDeviceActionCodes",
+    "title" : "Procedure Device Action Codes",
+    "description" : "Example codes indicating the change that happened to the device during the procedure.  Note that these are in no way complete and might not even be appropriate for some uses.",
+    "systems" : ["http://snomed.info/sct"],
+    "oids" : ["2.16.840.1.113883.4.642.3.425"],
+    "sources" : ["2.16.840.1.113883.4.642.3.425"],
+    "uses" : {
+    },
+    "StructureDefinition-au-ps-procedure.html" : "AU PS Procedure"
+  },
+  {
+    "url" : "http://hl7.org/fhir/ValueSet/device-kind",
+    "version" : "4.0.1",
+    "status" : "draft",
+    "name" : "FHIRDeviceTypes",
+    "title" : "FHIR Device Types",
+    "description" : "Codes used to identify medical devices. Includes concepts from SNOMED CT (http://www.snomed.org/) where concept is-a 49062001 (Device)  and is provided as a suggestive example.",
+    "systems" : ["http://snomed.info/sct"],
+    "oids" : ["2.16.840.1.113883.4.642.3.208"],
+    "sources" : ["2.16.840.1.113883.4.642.3.208"],
+    "uses" : {
+    },
+    "StructureDefinition-au-ps-procedure.html" : "AU PS Procedure"
+  },
+  {
+    "url" : "http://hl7.org/fhir/ValueSet/diagnosis-role",
+    "version" : "4.0.1",
+    "status" : "draft",
+    "name" : "DiagnosisRole",
+    "title" : "DiagnosisRole",
+    "description" : "This value set defines a set of codes that can be used to express the role of a diagnosis on the Encounter or EpisodeOfCare record.",
+    "systems" : ["http://terminology.hl7.org/CodeSystem/diagnosis-role"],
+    "oids" : ["2.16.840.1.113883.4.642.3.49"],
+    "sources" : ["2.16.840.1.113883.4.642.3.49"],
+    "uses" : {
+    },
+    "StructureDefinition-au-ps-encounter.html" : "AU PS Encounter"
+  },
+  {
+    "url" : "http://hl7.org/fhir/ValueSet/doc-section-codes",
+    "version" : "4.0.1",
+    "status" : "draft",
+    "name" : "DocumentSectionCodes",
+    "title" : "Document Section Codes",
+    "description" : "Document section codes (LOINC codes used in CCDA sections).",
+    "systems" : ["http://loinc.org"],
+    "oids" : ["2.16.840.1.113883.4.642.3.237"],
+    "sources" : ["2.16.840.1.113883.4.642.3.237"],
+    "uses" : {
+    },
+    "StructureDefinition-au-ps-composition.html" : "AU PS Composition"
+  },
+  {
+    "url" : "http://hl7.org/fhir/ValueSet/doc-typecodes",
+    "version" : "4.0.1",
+    "status" : "draft",
+    "name" : "FHIRDocumentTypeCodes",
+    "title" : "FHIR Document Type Codes",
+    "description" : "FHIR Document Codes - all LOINC codes where scale type = 'DOC'.",
+    "systems" : ["http://loinc.org"],
+    "oids" : ["2.16.840.1.113883.4.642.3.240"],
+    "sources" : ["2.16.840.1.113883.4.642.3.240"],
+    "uses" : {
+    },
+    "StructureDefinition-au-ps-composition.html" : "AU PS Composition"
+  },
+  {
+    "url" : "http://hl7.org/fhir/ValueSet/document-classcodes",
+    "version" : "4.0.1",
+    "status" : "active",
+    "name" : "DocumentClassValueSet",
+    "title" : "Document Class Value Set",
+    "description" : "This is the code specifying the high-level kind of document (e.g. Prescription, Discharge Summary, Report, etc.). Note: Class code for documents comes from LOINC, and is based upon one of the following:The type of service described by the document. It is described at a very high level in Section 7.3 of the LOINC Manual. The type study performed. It was determined by identifying modalities for study reports. The section of the chart where the document is placed. It was determined from the SETs created for Claims Attachment requests.",
+    "systems" : ["http://loinc.org"],
+    "oids" : ["2.16.840.1.113883.3.88.12.80.46"],
+    "sources" : ["2.16.840.1.113883.3.88.12.80.46"],
+    "uses" : {
+    },
+    "StructureDefinition-au-ps-composition.html" : "AU PS Composition"
+  },
+  {
+    "url" : "http://hl7.org/fhir/ValueSet/document-relationship-type",
+    "version" : "4.0.1",
+    "status" : "draft",
+    "name" : "DocumentRelationshipType",
+    "title" : "DocumentRelationshipType",
+    "description" : "The type of relationship between documents.",
+    "systems" : ["http://hl7.org/fhir/document-relationship-type"],
+    "oids" : ["2.16.840.1.113883.4.642.3.244"],
+    "sources" : ["2.16.840.1.113883.4.642.3.244"],
+    "uses" : {
+    },
+    "StructureDefinition-au-ps-composition.html" : "AU PS Composition"
+  },
+  {
+    "url" : "http://hl7.org/fhir/ValueSet/dose-rate-type",
+    "version" : "4.0.1",
+    "status" : "draft",
+    "name" : "DoseAndRateType",
+    "title" : "DoseAndRateType",
+    "description" : "The kind of dose or rate specified.",
+    "systems" : ["http://terminology.hl7.org/CodeSystem/dose-rate-type"],
+    "oids" : ["2.16.840.1.113883.4.642.3.981"],
+    "sources" : ["2.16.840.1.113883.4.642.3.981"],
+    "uses" : {
+    },
+    "StructureDefinition-au-ps-medicationrequest.html" : "AU PS MedicationRequest",
+    "StructureDefinition-au-ps-medicationstatement.html" : "AU PS MedicationStatement"
+  },
+  {
+    "url" : "http://hl7.org/fhir/ValueSet/encounter-admit-source",
+    "version" : "4.0.1",
+    "status" : "draft",
+    "name" : "AdmitSource",
+    "title" : "Admit source",
+    "description" : "This value set defines a set of codes that can be used to indicate from where the patient came in.",
+    "systems" : ["http://terminology.hl7.org/CodeSystem/admit-source"],
+    "oids" : ["2.16.840.1.113883.4.642.3.257"],
+    "sources" : ["2.16.840.1.113883.4.642.3.257"],
+    "uses" : {
+    },
+    "StructureDefinition-au-ps-encounter.html" : "AU PS Encounter"
+  },
+  {
+    "url" : "http://hl7.org/fhir/ValueSet/encounter-diet",
+    "version" : "4.0.1",
+    "status" : "draft",
+    "name" : "Diet",
+    "title" : "Diet",
+    "description" : "This value set defines a set of codes that can be used to indicate dietary preferences or restrictions a patient may have.",
+    "systems" : ["http://terminology.hl7.org/CodeSystem/diet"],
+    "oids" : ["2.16.840.1.113883.4.642.3.255"],
+    "sources" : ["2.16.840.1.113883.4.642.3.255"],
+    "uses" : {
+    },
+    "StructureDefinition-au-ps-encounter.html" : "AU PS Encounter"
+  },
+  {
+    "url" : "http://hl7.org/fhir/ValueSet/encounter-location-status",
+    "version" : "4.0.1",
+    "status" : "draft",
+    "name" : "EncounterLocationStatus",
+    "title" : "EncounterLocationStatus",
+    "description" : "The status of the location.",
+    "systems" : ["http://hl7.org/fhir/encounter-location-status"],
+    "oids" : ["2.16.840.1.113883.4.642.3.262"],
+    "sources" : ["2.16.840.1.113883.4.642.3.262"],
+    "uses" : {
+    },
+    "StructureDefinition-au-ps-encounter.html" : "AU PS Encounter"
+  },
+  {
+    "url" : "http://hl7.org/fhir/ValueSet/encounter-participant-type",
+    "version" : "4.0.1",
+    "status" : "draft",
+    "name" : "ParticipantType",
+    "title" : "Participant type",
+    "description" : "This value set defines a set of codes that can be used to indicate how an individual participates in an encounter.",
+    "systems" : ["http://terminology.hl7.org/CodeSystem/participant-type",
+    "http://terminology.hl7.org/CodeSystem/v3-ParticipationType"],
+    "oids" : ["2.16.840.1.113883.4.642.3.250"],
+    "sources" : ["2.16.840.1.113883.4.642.3.250"],
+    "uses" : {
+    },
+    "StructureDefinition-au-ps-encounter.html" : "AU PS Encounter"
+  },
+  {
+    "url" : "http://hl7.org/fhir/ValueSet/encounter-special-arrangements",
+    "version" : "4.0.1",
+    "status" : "draft",
+    "name" : "SpecialArrangements",
+    "title" : "Special arrangements",
+    "description" : "This value set defines a set of codes that can be used to indicate the kinds of special arrangements in place for a patients visit.",
+    "systems" : ["http://terminology.hl7.org/CodeSystem/encounter-special-arrangements"],
+    "oids" : ["2.16.840.1.113883.4.642.3.253"],
+    "sources" : ["2.16.840.1.113883.4.642.3.253"],
+    "uses" : {
+    },
+    "StructureDefinition-au-ps-encounter.html" : "AU PS Encounter"
+  },
+  {
+    "url" : "http://hl7.org/fhir/ValueSet/encounter-special-courtesy",
+    "version" : "4.0.1",
+    "status" : "draft",
+    "name" : "SpecialCourtesy",
+    "title" : "Special courtesy",
+    "description" : "This value set defines a set of codes that can be used to indicate special courtesies provided to the patient.",
+    "systems" : ["http://terminology.hl7.org/CodeSystem/v3-EncounterSpecialCourtesy",
+    "http://terminology.hl7.org/CodeSystem/v3-NullFlavor"],
+    "oids" : ["2.16.840.1.113883.4.642.3.252"],
+    "sources" : ["2.16.840.1.113883.4.642.3.252"],
+    "uses" : {
+    },
+    "StructureDefinition-au-ps-encounter.html" : "AU PS Encounter"
+  },
+  {
+    "url" : "http://hl7.org/fhir/ValueSet/encounter-status",
+    "version" : "4.0.1",
+    "status" : "draft",
+    "name" : "EncounterStatus",
+    "title" : "EncounterStatus",
+    "description" : "Current state of the encounter.",
+    "systems" : ["http://hl7.org/fhir/encounter-status"],
+    "oids" : ["2.16.840.1.113883.4.642.3.246"],
+    "sources" : ["2.16.840.1.113883.4.642.3.246"],
+    "uses" : {
+    },
+    "StructureDefinition-au-ps-encounter.html" : "AU PS Encounter"
+  },
+  {
+    "url" : "http://hl7.org/fhir/ValueSet/event-status",
+    "version" : "4.0.1",
+    "status" : "draft",
+    "name" : "EventStatus",
+    "title" : "EventStatus",
+    "description" : "Codes identifying the lifecycle stage of an event.",
+    "systems" : ["http://hl7.org/fhir/event-status"],
+    "oids" : ["2.16.840.1.113883.4.642.3.109"],
+    "sources" : ["2.16.840.1.113883.4.642.3.109"],
+    "uses" : {
+    },
+    "StructureDefinition-au-ps-procedure.html" : "AU PS Procedure"
+  },
+  {
+    "url" : "http://hl7.org/fhir/ValueSet/http-verb",
+    "version" : "4.0.1",
+    "status" : "active",
+    "name" : "HTTPVerb",
+    "title" : "HTTPVerb",
+    "description" : "HTTP verbs (in the HTTP command line). See [HTTP rfc](https://tools.ietf.org/html/rfc7231) for details.",
+    "systems" : ["http://hl7.org/fhir/http-verb"],
+    "oids" : ["2.16.840.1.113883.4.642.3.624"],
+    "sources" : ["2.16.840.1.113883.4.642.3.624"],
+    "uses" : {
+    },
+    "StructureDefinition-au-ps-bundle.html" : "AU PS Bundle"
+  },
+  {
+    "url" : "http://hl7.org/fhir/ValueSet/immunization-funding-source",
+    "version" : "4.0.1",
+    "status" : "draft",
+    "name" : "ImmunizationFundingSource",
+    "title" : "Immunization Funding Source",
+    "description" : "The value set to instantiate this attribute should be drawn from a terminologically robust code system that consists of or contains concepts to support describing the source of the vaccine administered. This value set is provided as a suggestive example.",
+    "systems" : ["http://terminology.hl7.org/CodeSystem/immunization-funding-source"],
+    "oids" : ["2.16.840.1.113883.4.642.3.293"],
+    "sources" : ["2.16.840.1.113883.4.642.3.293"],
+    "uses" : {
+    },
+    "StructureDefinition-au-ps-immunization.html" : "AU PS Immunization"
+  },
+  {
+    "url" : "http://hl7.org/fhir/ValueSet/immunization-origin",
+    "version" : "4.0.1",
+    "status" : "draft",
+    "name" : "ImmunizationOriginCodes",
+    "title" : "Immunization Origin Codes",
+    "description" : "The value set to instantiate this attribute should be drawn from a terminologically robust code system that consists of or contains concepts to support describing the source of the data when the report of the immunization event is not based on information from the person, entity or organization who administered the vaccine. This value set is provided as a suggestive example.",
+    "systems" : ["http://terminology.hl7.org/CodeSystem/immunization-origin"],
+    "oids" : ["2.16.840.1.113883.4.642.3.296"],
+    "sources" : ["2.16.840.1.113883.4.642.3.296"],
+    "uses" : {
+    },
+    "StructureDefinition-au-ps-immunization.html" : "AU PS Immunization"
+  },
+  {
+    "url" : "http://hl7.org/fhir/ValueSet/immunization-program-eligibility",
+    "version" : "4.0.1",
+    "status" : "draft",
+    "name" : "ImmunizationProgramEligibility",
+    "title" : "Immunization Program Eligibility",
+    "description" : "The value set to instantiate this attribute should be drawn from a terminologically robust code system that consists of or contains concepts to support describing the patient's eligibility for a vaccination program. This value set is provided as a suggestive example.",
+    "systems" : ["http://terminology.hl7.org/CodeSystem/immunization-program-eligibility"],
+    "oids" : ["2.16.840.1.113883.4.642.3.291"],
+    "sources" : ["2.16.840.1.113883.4.642.3.291"],
+    "uses" : {
+    },
+    "StructureDefinition-au-ps-immunization.html" : "AU PS Immunization"
+  },
+  {
+    "url" : "http://hl7.org/fhir/ValueSet/immunization-status",
+    "version" : "4.0.1",
+    "status" : "draft",
+    "name" : "ImmunizationStatusCodes",
+    "title" : "Immunization Status Codes",
+    "description" : "The value set to instantiate this attribute should be drawn from a terminologically robust code system that consists of or contains concepts to support describing the current status of the administered dose of vaccine.",
+    "systems" : ["http://hl7.org/fhir/event-status"],
+    "oids" : ["2.16.840.1.113883.4.642.3.295"],
+    "sources" : ["2.16.840.1.113883.4.642.3.295"],
+    "uses" : {
+    },
+    "StructureDefinition-au-ps-immunization.html" : "AU PS Immunization"
+  },
+  {
+    "url" : "http://hl7.org/fhir/ValueSet/immunization-subpotent-reason",
+    "version" : "4.0.1",
+    "status" : "draft",
+    "name" : "ImmunizationSubpotentReason",
+    "title" : "Immunization Subpotent Reason",
+    "description" : "The value set to instantiate this attribute should be drawn from a terminologically robust code system that consists of or contains concepts to support describing the reason why a dose is considered to be subpotent. This value set is provided as a suggestive example.",
+    "systems" : ["http://terminology.hl7.org/CodeSystem/immunization-subpotent-reason"],
+    "oids" : ["2.16.840.1.113883.4.642.3.993"],
+    "sources" : ["2.16.840.1.113883.4.642.3.993"],
+    "uses" : {
+    },
+    "StructureDefinition-au-ps-immunization.html" : "AU PS Immunization"
+  },
+  {
+    "url" : "http://hl7.org/fhir/ValueSet/languages",
+    "version" : "4.0.1",
+    "status" : "draft",
+    "name" : "CommonLanguages",
+    "title" : "Common Languages",
+    "description" : "This value set includes common codes from BCP-47 (http://tools.ietf.org/html/bcp47)",
+    "systems" : ["urn:ietf:bcp:47"],
+    "oids" : ["2.16.840.1.113883.4.642.3.20"],
+    "sources" : ["2.16.840.1.113883.4.642.3.20"],
+    "uses" : {
+    },
+    "StructureDefinition-au-ps-relatedperson.html" : "AU PS RelatedPerson",
+    "StructureDefinition-au-ps-condition.html" : "AU PS Condition",
+    "StructureDefinition-au-ps-practitioner.html" : "AU PS Practitioner",
+    "StructureDefinition-au-ps-composition.html" : "AU PS Composition",
+    "StructureDefinition-au-ps-medicationrequest.html" : "AU PS MedicationRequest",
+    "StructureDefinition-au-ps-immunization.html" : "AU PS Immunization",
+    "StructureDefinition-au-ps-allergyintolerance.html" : "AU PS AllergyIntolerance",
+    "StructureDefinition-au-ps-procedure.html" : "AU PS Procedure",
+    "StructureDefinition-au-ps-diagnosticresult-path.html" : "AU PS Pathology Result Observation",
+    "StructureDefinition-au-ps-practitionerrole.html" : "AU PS PractitionerRole",
+    "StructureDefinition-au-ps-medication.html" : "AU PS Medication",
+    "StructureDefinition-au-ps-bundle.html" : "AU PS Bundle",
+    "StructureDefinition-au-ps-smokingstatus.html" : "AU PS Smoking Status",
+    "StructureDefinition-au-ps-organization.html" : "AU PS Organization",
+    "StructureDefinition-au-ps-medicationstatement.html" : "AU PS MedicationStatement",
+    "StructureDefinition-au-ps-encounter.html" : "AU PS Encounter",
+    "StructureDefinition-au-ps-patient.html" : "AU PS Patient"
+  },
+  {
+    "url" : "http://hl7.org/fhir/ValueSet/link-type",
+    "version" : "4.0.1",
+    "status" : "active",
+    "name" : "LinkType",
+    "title" : "LinkType",
+    "description" : "The type of link between this patient resource and another patient resource.",
+    "systems" : ["http://hl7.org/fhir/link-type"],
+    "oids" : ["2.16.840.1.113883.4.642.3.423"],
+    "sources" : ["2.16.840.1.113883.4.642.3.423"],
+    "uses" : {
+    },
+    "StructureDefinition-au-ps-patient.html" : "AU PS Patient"
+  },
+  {
+    "url" : "http://hl7.org/fhir/ValueSet/list-empty-reason",
+    "version" : "4.0.1",
+    "status" : "draft",
+    "name" : "ListEmptyReasons",
+    "title" : "List Empty Reasons",
+    "description" : "General reasons for a list to be empty. Reasons are either related to a summary list (i.e. problem or medication list) or to a workflow related list (i.e. consultation list).",
+    "systems" : ["http://terminology.hl7.org/CodeSystem/list-empty-reason"],
+    "oids" : ["2.16.840.1.113883.4.642.3.322"],
+    "sources" : ["2.16.840.1.113883.4.642.3.322"],
+    "uses" : {
+    },
+    "StructureDefinition-au-ps-composition.html" : "AU PS Composition"
+  },
+  {
+    "url" : "http://hl7.org/fhir/ValueSet/list-mode",
+    "version" : "4.0.1",
+    "status" : "draft",
+    "name" : "ListMode",
+    "title" : "ListMode",
+    "description" : "The processing mode that applies to this list.",
+    "systems" : ["http://hl7.org/fhir/list-mode"],
+    "oids" : ["2.16.840.1.113883.4.642.3.318"],
+    "sources" : ["2.16.840.1.113883.4.642.3.318"],
+    "uses" : {
+    },
+    "StructureDefinition-au-ps-composition.html" : "AU PS Composition"
+  },
+  {
+    "url" : "http://hl7.org/fhir/ValueSet/list-order",
+    "version" : "4.0.1",
+    "status" : "draft",
+    "name" : "ListOrderCodes",
+    "title" : "List Order Codes",
+    "description" : "Base values for the order of the items in a list resource.",
+    "systems" : ["http://terminology.hl7.org/CodeSystem/list-order"],
+    "oids" : ["2.16.840.1.113883.4.642.3.324"],
+    "sources" : ["2.16.840.1.113883.4.642.3.324"],
+    "uses" : {
+    },
+    "StructureDefinition-au-ps-composition.html" : "AU PS Composition"
+  },
+  {
+    "url" : "http://hl7.org/fhir/ValueSet/location-physical-type",
+    "version" : "4.0.1",
+    "status" : "draft",
+    "name" : "LocationType",
+    "title" : "Location type",
+    "description" : "This example value set defines a set of codes that can be used to indicate the physical form of the Location.",
+    "systems" : ["http://terminology.hl7.org/CodeSystem/location-physical-type"],
+    "oids" : ["2.16.840.1.113883.4.642.3.328"],
+    "sources" : ["2.16.840.1.113883.4.642.3.328"],
+    "uses" : {
+    },
+    "StructureDefinition-au-ps-encounter.html" : "AU PS Encounter"
+  },
+  {
+    "url" : "http://hl7.org/fhir/ValueSet/marital-status",
+    "version" : "4.0.1",
+    "status" : "active",
+    "name" : "Marital Status Codes",
+    "title" : "MaritalStatus",
+    "description" : "This value set defines the set of codes that can be used to indicate the marital status of a person.",
+    "systems" : ["http://terminology.hl7.org/CodeSystem/v3-MaritalStatus",
+    "http://terminology.hl7.org/CodeSystem/v3-NullFlavor"],
+    "oids" : ["2.16.840.1.113883.4.642.3.29"],
+    "sources" : ["2.16.840.1.113883.4.642.3.29"],
+    "uses" : {
+    },
+    "StructureDefinition-au-ps-patient.html" : "AU PS Patient"
+  },
+  {
+    "url" : "http://hl7.org/fhir/ValueSet/medication-codes",
+    "version" : "4.0.1",
+    "status" : "draft",
+    "name" : "SNOMEDCTMedicationCodes",
+    "title" : "SNOMED CT Medication Codes",
+    "description" : "This value set includes all drug or medicament substance codes and all pharmaceutical/biologic products from SNOMED CT - provided as an exemplar value set.",
+    "systems" : ["http://snomed.info/sct"],
+    "oids" : ["2.16.840.1.113883.4.642.3.375"],
+    "sources" : ["2.16.840.1.113883.4.642.3.375"],
+    "uses" : {
+    },
+    "StructureDefinition-au-ps-medication.html" : "AU PS Medication",
+    "StructureDefinition-au-ps-medicationrequest.html" : "AU PS MedicationRequest",
+    "StructureDefinition-au-ps-medicationstatement.html" : "AU PS MedicationStatement"
+  },
+  {
+    "url" : "http://hl7.org/fhir/ValueSet/medication-statement-category",
+    "version" : "4.0.1",
+    "status" : "draft",
+    "name" : "Medication usage category codes",
+    "title" : "Medication usage category codes",
+    "description" : "Medication Status Codes",
+    "systems" : ["http://terminology.hl7.org/CodeSystem/medication-statement-category"],
+    "oids" : ["2.16.840.1.113883.4.642.3.370"],
+    "sources" : ["2.16.840.1.113883.4.642.3.370"],
+    "uses" : {
+    },
+    "StructureDefinition-au-ps-medicationstatement.html" : "AU PS MedicationStatement"
+  },
+  {
+    "url" : "http://hl7.org/fhir/ValueSet/medication-statement-status",
+    "version" : "4.0.1",
+    "status" : "draft",
+    "name" : "Medication Status Codes",
+    "title" : "Medication  status  codes",
+    "description" : "Medication Status Codes",
+    "systems" : ["http://hl7.org/fhir/CodeSystem/medication-statement-status"],
+    "oids" : ["2.16.840.1.113883.4.642.3.367"],
+    "sources" : ["2.16.840.1.113883.4.642.3.367"],
+    "uses" : {
+    },
+    "StructureDefinition-au-ps-medicationstatement.html" : "AU PS MedicationStatement"
+  },
+  {
+    "url" : "http://hl7.org/fhir/ValueSet/medication-status",
+    "version" : "4.0.1",
+    "status" : "draft",
+    "name" : "Medication Status Codes",
+    "title" : "Medication  status  codes",
+    "description" : "Medication Status Codes",
+    "systems" : ["http://hl7.org/fhir/CodeSystem/medication-status"],
+    "oids" : ["2.16.840.1.113883.4.642.3.376"],
+    "sources" : ["2.16.840.1.113883.4.642.3.376"],
+    "uses" : {
+    },
+    "StructureDefinition-au-ps-medication.html" : "AU PS Medication"
+  },
+  {
+    "url" : "http://hl7.org/fhir/ValueSet/medicationrequest-category",
+    "version" : "4.0.1",
+    "status" : "draft",
+    "name" : "medicationRequest Category Codes",
+    "title" : "Medication request  category  codes",
+    "description" : "MedicationRequest Category Codes",
+    "systems" : ["http://terminology.hl7.org/CodeSystem/medicationrequest-category"],
+    "oids" : ["2.16.840.1.113883.4.642.3.1322"],
+    "sources" : ["2.16.840.1.113883.4.642.3.1322"],
+    "uses" : {
+    },
+    "StructureDefinition-au-ps-medicationrequest.html" : "AU PS MedicationRequest"
+  },
+  {
+    "url" : "http://hl7.org/fhir/ValueSet/medicationrequest-course-of-therapy",
+    "version" : "4.0.1",
+    "status" : "draft",
+    "name" : "medicationRequest Course of Therapy Codes",
+    "title" : "Medication request  course of  therapy  codes",
+    "description" : "MedicationRequest Course of Therapy Codes",
+    "systems" : ["http://terminology.hl7.org/CodeSystem/medicationrequest-course-of-therapy"],
+    "oids" : ["2.16.840.1.113883.4.642.3.1326"],
+    "sources" : ["2.16.840.1.113883.4.642.3.1326"],
+    "uses" : {
+    },
+    "StructureDefinition-au-ps-medicationrequest.html" : "AU PS MedicationRequest"
+  },
+  {
+    "url" : "http://hl7.org/fhir/ValueSet/medicationrequest-intent",
+    "version" : "4.0.1",
+    "status" : "draft",
+    "name" : "medicationRequest Intent",
+    "title" : "Medication request  intent",
+    "description" : "MedicationRequest Intent Codes",
+    "systems" : ["http://hl7.org/fhir/CodeSystem/medicationrequest-intent"],
+    "oids" : ["2.16.840.1.113883.4.642.3.1321"],
+    "sources" : ["2.16.840.1.113883.4.642.3.1321"],
+    "uses" : {
+    },
+    "StructureDefinition-au-ps-medicationrequest.html" : "AU PS MedicationRequest"
+  },
+  {
+    "url" : "http://hl7.org/fhir/ValueSet/medicationrequest-status",
+    "version" : "4.0.1",
+    "status" : "draft",
+    "name" : "medicationrequest Status",
+    "title" : "Medicationrequest  status",
+    "description" : "MedicationRequest Status Codes",
+    "systems" : ["http://hl7.org/fhir/CodeSystem/medicationrequest-status"],
+    "oids" : ["2.16.840.1.113883.4.642.3.1320"],
+    "sources" : ["2.16.840.1.113883.4.642.3.1320"],
+    "uses" : {
+    },
+    "StructureDefinition-au-ps-medicationrequest.html" : "AU PS MedicationRequest"
+  },
+  {
+    "url" : "http://hl7.org/fhir/ValueSet/medicationrequest-status-reason",
+    "version" : "4.0.1",
+    "status" : "draft",
+    "name" : "medicationRequest Status Reason Codes",
+    "title" : "Medication request  status  reason  codes",
+    "description" : "MedicationRequest Status Reason Codes",
+    "systems" : ["http://terminology.hl7.org/CodeSystem/medicationrequest-status-reason"],
+    "oids" : ["2.16.840.1.113883.4.642.3.1324"],
+    "sources" : ["2.16.840.1.113883.4.642.3.1324"],
+    "uses" : {
+    },
+    "StructureDefinition-au-ps-medicationrequest.html" : "AU PS MedicationRequest"
+  },
+  {
+    "url" : "http://hl7.org/fhir/ValueSet/name-use",
+    "version" : "4.0.1",
+    "status" : "active",
+    "name" : "NameUse",
+    "title" : "NameUse",
+    "description" : "The use of a human name.",
+    "systems" : ["http://hl7.org/fhir/name-use"],
+    "oids" : ["2.16.840.1.113883.4.642.3.65"],
+    "sources" : ["2.16.840.1.113883.4.642.3.65"],
+    "uses" : {
+    },
+    "StructureDefinition-au-ps-relatedperson.html" : "AU PS RelatedPerson",
+    "StructureDefinition-au-ps-practitioner.html" : "AU PS Practitioner",
+    "StructureDefinition-au-ps-patient.html" : "AU PS Patient"
+  },
+  {
+    "url" : "http://hl7.org/fhir/ValueSet/observation-category",
+    "version" : "4.0.1",
+    "status" : "draft",
+    "name" : "ObservationCategoryCodes",
+    "title" : "Observation Category Codes",
+    "description" : "Observation Category codes.",
+    "systems" : ["http://terminology.hl7.org/CodeSystem/observation-category"],
+    "oids" : ["2.16.840.1.113883.4.642.3.403"],
+    "sources" : ["2.16.840.1.113883.4.642.3.403"],
+    "uses" : {
+    },
+    "StructureDefinition-au-ps-diagnosticresult-path.html" : "AU PS Pathology Result Observation",
+    "StructureDefinition-au-ps-smokingstatus.html" : "AU PS Smoking Status"
+  },
+  {
+    "url" : "http://hl7.org/fhir/ValueSet/observation-codes",
+    "version" : "4.0.1",
+    "status" : "draft",
+    "name" : "LOINCCodes",
+    "title" : "LOINC Codes",
+    "description" : "This value set includes all LOINC codes",
+    "systems" : ["http://loinc.org"],
+    "oids" : ["2.16.840.1.113883.4.642.3.396"],
+    "sources" : ["2.16.840.1.113883.4.642.3.396"],
+    "uses" : {
+    },
+    "StructureDefinition-au-ps-smokingstatus.html" : "AU PS Smoking Status"
+  },
+  {
+    "url" : "http://hl7.org/fhir/ValueSet/observation-interpretation",
+    "version" : "4.0.1",
+    "status" : "active",
+    "name" : "ObservationInterpretationCodes",
+    "title" : "Observation Interpretation Codes",
+    "description" : "A categorical assessment, providing a rough qualitative interpretation of the observation value,    such as “normal”/ “abnormal”,”low” / “high”, “better” / “worse”, “susceptible” / “resistant”, “expected”/ “not expected”.    The value set is intended to be for ANY use where coded representation of an interpretation is needed.   \r\n   \r\n   Notes:\r\n   \r\n   This is being communicated in v2.x in OBX-8 (Observation Interpretation), in v3 in ObservationInterpretation (CWE) in R1 (Representative Realm) and in FHIR in    Observation.interpretation. Historically these values come from the laboratory domain, and these codes are extensively    used. The value set binding is extensible, so codes outside the value set that are needed for interpretation concepts    (i.e. particular meanings) that are not included in the value set can be used, and these new codes may also be added to    the value set and published in a future version.",
+    "systems" : ["http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation"],
+    "oids" : ["2.16.840.1.113883.4.642.3.399"],
+    "sources" : ["2.16.840.1.113883.4.642.3.399"],
+    "uses" : {
+    },
+    "StructureDefinition-au-ps-diagnosticresult-path.html" : "AU PS Pathology Result Observation",
+    "StructureDefinition-au-ps-smokingstatus.html" : "AU PS Smoking Status"
+  },
+  {
+    "url" : "http://hl7.org/fhir/ValueSet/observation-methods",
+    "version" : "4.0.1",
+    "status" : "draft",
+    "name" : "ObservationMethods",
+    "title" : "Observation Methods",
+    "description" : "Observation Method codes from [SNOMED CT](http://snomed.info/sct) where concept is-a 272394005 (Technique (qualifier value)) or is-a 129264002 (Action (qualifier value)) or is-a 386053000 (Evaluation procedure(procedure))",
+    "systems" : ["http://snomed.info/sct"],
+    "oids" : ["2.16.840.1.113883.4.642.3.395"],
+    "sources" : ["2.16.840.1.113883.4.642.3.395"],
+    "uses" : {
+    },
+    "StructureDefinition-au-ps-diagnosticresult-path.html" : "AU PS Pathology Result Observation",
+    "StructureDefinition-au-ps-smokingstatus.html" : "AU PS Smoking Status"
+  },
+  {
+    "url" : "http://hl7.org/fhir/ValueSet/observation-status",
+    "version" : "4.0.1",
+    "status" : "active",
+    "name" : "ObservationStatus",
+    "title" : "ObservationStatus",
+    "description" : "Codes providing the status of an observation.",
+    "systems" : ["http://hl7.org/fhir/observation-status"],
+    "oids" : ["2.16.840.1.113883.4.642.3.400"],
+    "sources" : ["2.16.840.1.113883.4.642.3.400"],
+    "uses" : {
+    },
+    "StructureDefinition-au-ps-smokingstatus.html" : "AU PS Smoking Status"
+  },
+  {
+    "url" : "http://hl7.org/fhir/ValueSet/performer-role",
+    "version" : "4.0.1",
+    "status" : "draft",
+    "name" : "ProcedurePerformerRoleCodes",
+    "title" : "Procedure Performer Role Codes",
+    "description" : "This example value set defines the set of codes that can be used to indicate a role of a procedure performer.",
+    "systems" : ["http://snomed.info/sct"],
+    "oids" : ["2.16.840.1.113883.4.642.3.433"],
+    "sources" : ["2.16.840.1.113883.4.642.3.433"],
+    "uses" : {
+    },
+    "StructureDefinition-au-ps-procedure.html" : "AU PS Procedure",
+    "StructureDefinition-au-ps-medicationrequest.html" : "AU PS MedicationRequest"
+  },
+  {
+    "url" : "http://hl7.org/fhir/ValueSet/procedure-category",
+    "version" : "4.0.1",
+    "status" : "draft",
+    "name" : "ProcedureCategoryCodes(SNOMEDCT)",
+    "title" : "Procedure Category Codes (SNOMED CT)",
+    "description" : "Procedure Category code: A selection of relevant SNOMED CT codes.",
+    "systems" : ["http://snomed.info/sct"],
+    "oids" : ["2.16.840.1.113883.4.642.3.430"],
+    "sources" : ["2.16.840.1.113883.4.642.3.430"],
+    "uses" : {
+    },
+    "StructureDefinition-au-ps-procedure.html" : "AU PS Procedure"
+  },
+  {
+    "url" : "http://hl7.org/fhir/ValueSet/procedure-followup",
+    "version" : "4.0.1",
+    "status" : "draft",
+    "name" : "ProcedureFollowUpCodes(SNOMEDCT)",
+    "title" : "Procedure Follow up Codes (SNOMED CT)",
+    "description" : "Procedure follow up codes: A selection of SNOMED CT codes relevant to procedure follow up.",
+    "systems" : ["http://snomed.info/sct"],
+    "oids" : ["2.16.840.1.113883.4.642.3.429"],
+    "sources" : ["2.16.840.1.113883.4.642.3.429"],
+    "uses" : {
+    },
+    "StructureDefinition-au-ps-procedure.html" : "AU PS Procedure"
+  },
+  {
+    "url" : "http://hl7.org/fhir/ValueSet/procedure-not-performed-reason",
+    "version" : "4.0.1",
+    "status" : "active",
+    "name" : "ProcedureNotPerformedReason(SNOMED-CT)",
+    "title" : "Procedure Not Performed Reason (SNOMED-CT)",
+    "description" : "Situation codes describing the reason that a procedure, which might otherwise be expected, was not performed, or a procedure that was started and was not completed. Consists of SNOMED CT codes, children of procedure contraindicated (183932001), procedure discontinued (416406003), procedure not done (416237000), procedure not indicated (428119001), procedure not offered (416064006), procedure not wanted (416432009), procedure refused (183944003), and procedure stopped (394908001).",
+    "systems" : ["http://snomed.info/sct"],
+    "oids" : ["2.16.840.1.113883.4.642.3.431"],
+    "sources" : ["2.16.840.1.113883.4.642.3.431"],
+    "uses" : {
+    },
+    "StructureDefinition-au-ps-procedure.html" : "AU PS Procedure"
+  },
+  {
+    "url" : "http://hl7.org/fhir/ValueSet/procedure-outcome",
+    "version" : "4.0.1",
+    "status" : "draft",
+    "name" : "ProcedureOutcomeCodes(SNOMEDCT)",
+    "title" : "Procedure Outcome Codes (SNOMED CT)",
+    "description" : "Procedure Outcome code: A selection of relevant SNOMED CT codes.",
+    "systems" : ["http://snomed.info/sct"],
+    "oids" : ["2.16.840.1.113883.4.642.3.428"],
+    "sources" : ["2.16.840.1.113883.4.642.3.428"],
+    "uses" : {
+    },
+    "StructureDefinition-au-ps-procedure.html" : "AU PS Procedure"
+  },
+  {
+    "url" : "http://hl7.org/fhir/ValueSet/procedure-reason",
+    "version" : "4.0.1",
+    "status" : "draft",
+    "name" : "ProcedureReasonCodes",
+    "title" : "Procedure Reason Codes",
+    "description" : "This example value set defines the set of codes that can be used to indicate a reason for a procedure.",
+    "systems" : ["http://snomed.info/sct"],
+    "oids" : ["2.16.840.1.113883.4.642.3.432"],
+    "sources" : ["2.16.840.1.113883.4.642.3.432"],
+    "uses" : {
+    },
+    "StructureDefinition-au-ps-procedure.html" : "AU PS Procedure"
+  },
+  {
+    "url" : "http://hl7.org/fhir/ValueSet/reaction-event-severity",
+    "version" : "4.0.1",
+    "status" : "draft",
+    "name" : "AllergyIntoleranceSeverity",
+    "title" : "AllergyIntoleranceSeverity",
+    "description" : "Clinical assessment of the severity of a reaction event as a whole, potentially considering multiple different manifestations.",
+    "systems" : ["http://hl7.org/fhir/reaction-event-severity"],
+    "oids" : ["2.16.840.1.113883.4.642.3.135"],
+    "sources" : ["2.16.840.1.113883.4.642.3.135"],
+    "uses" : {
+    },
+    "StructureDefinition-au-ps-allergyintolerance.html" : "AU PS AllergyIntolerance"
+  },
+  {
+    "url" : "http://hl7.org/fhir/ValueSet/reason-medication-status-codes",
+    "version" : "4.0.1",
+    "status" : "draft",
+    "name" : "SNOMEDCTDrugTherapyStatusCodes",
+    "title" : "SNOMED CT Drug Therapy Status codes ",
+    "description" : "This value set includes some taken and not taken reason codes from SNOMED CT - provided as an exemplar",
+    "systems" : ["http://snomed.info/sct"],
+    "oids" : ["2.16.840.1.113883.4.642.3.369"],
+    "sources" : ["2.16.840.1.113883.4.642.3.369"],
+    "uses" : {
+    },
+    "StructureDefinition-au-ps-medicationstatement.html" : "AU PS MedicationStatement"
+  },
+  {
+    "url" : "http://hl7.org/fhir/ValueSet/referencerange-appliesto",
+    "version" : "4.0.1",
+    "status" : "draft",
+    "name" : "ObservationReferenceRangeAppliesToCodes",
+    "title" : "Observation Reference Range Applies To Codes",
+    "description" : "This value set defines a set of codes that can be used to indicate the particular target population the reference range applies to.",
+    "systems" : ["http://terminology.hl7.org/CodeSystem/v3-Race",
+    "http://snomed.info/sct"],
+    "oids" : ["2.16.840.1.113883.4.642.3.407"],
+    "sources" : ["2.16.840.1.113883.4.642.3.407"],
+    "uses" : {
+    },
+    "StructureDefinition-au-ps-diagnosticresult-path.html" : "AU PS Pathology Result Observation",
+    "StructureDefinition-au-ps-smokingstatus.html" : "AU PS Smoking Status"
+  },
+  {
+    "url" : "http://hl7.org/fhir/ValueSet/referencerange-meaning",
+    "version" : "4.0.1",
+    "status" : "draft",
+    "name" : "ObservationReferenceRangeMeaningCodes",
+    "title" : "Observation Reference Range Meaning Codes",
+    "description" : "This value set defines a set of codes that can be used to indicate the meaning/use of a reference range for a particular target population.",
+    "systems" : ["http://terminology.hl7.org/CodeSystem/referencerange-meaning"],
+    "oids" : ["2.16.840.1.113883.4.642.3.397"],
+    "sources" : ["2.16.840.1.113883.4.642.3.397"],
+    "uses" : {
+    },
+    "StructureDefinition-au-ps-diagnosticresult-path.html" : "AU PS Pathology Result Observation",
+    "StructureDefinition-au-ps-smokingstatus.html" : "AU PS Smoking Status"
+  },
+  {
+    "url" : "http://hl7.org/fhir/ValueSet/request-priority",
+    "version" : "4.0.1",
+    "status" : "draft",
+    "name" : "RequestPriority",
+    "title" : "Request priority",
+    "description" : "The clinical priority of a diagnostic order.",
+    "systems" : ["http://hl7.org/fhir/request-priority"],
+    "oids" : ["2.16.840.1.113883.4.642.3.115"],
+    "sources" : ["2.16.840.1.113883.4.642.3.115"],
+    "uses" : {
+    },
+    "StructureDefinition-au-ps-medicationrequest.html" : "AU PS MedicationRequest"
+  },
+  {
+    "url" : "http://hl7.org/fhir/ValueSet/resource-types",
+    "version" : "4.0.1",
+    "status" : "active",
+    "name" : "ResourceType",
+    "title" : "ResourceType",
+    "description" : "One of the resource types defined as part of this version of FHIR.",
+    "systems" : ["http://hl7.org/fhir/resource-types"],
+    "oids" : ["2.16.840.1.113883.4.642.3.27"],
+    "sources" : ["2.16.840.1.113883.4.642.3.27"],
+    "uses" : {
+    },
+    "StructureDefinition-au-ps-relatedperson.html" : "AU PS RelatedPerson",
+    "StructureDefinition-au-ps-allergyintolerance.html" : "AU PS AllergyIntolerance",
+    "StructureDefinition-au-ps-condition.html" : "AU PS Condition",
+    "StructureDefinition-au-ps-procedure.html" : "AU PS Procedure",
+    "StructureDefinition-au-ps-diagnosticresult-path.html" : "AU PS Pathology Result Observation",
+    "StructureDefinition-au-ps-smokingstatus.html" : "AU PS Smoking Status",
+    "StructureDefinition-au-ps-composition.html" : "AU PS Composition",
+    "StructureDefinition-au-ps-medicationrequest.html" : "AU PS MedicationRequest",
+    "StructureDefinition-au-ps-medicationstatement.html" : "AU PS MedicationStatement",
+    "StructureDefinition-au-ps-immunization.html" : "AU PS Immunization"
+  },
+  {
+    "url" : "http://hl7.org/fhir/ValueSet/search-entry-mode",
+    "version" : "4.0.1",
+    "status" : "active",
+    "name" : "SearchEntryMode",
+    "title" : "SearchEntryMode",
+    "description" : "Why an entry is in the result set - whether it's included as a match or because of an _include requirement, or to convey information or warning information about the search process.",
+    "systems" : ["http://hl7.org/fhir/search-entry-mode"],
+    "oids" : ["2.16.840.1.113883.4.642.3.622"],
+    "sources" : ["2.16.840.1.113883.4.642.3.622"],
+    "uses" : {
+    },
+    "StructureDefinition-au-ps-bundle.html" : "AU PS Bundle"
+  },
+  {
+    "url" : "http://hl7.org/fhir/ValueSet/security-labels",
+    "version" : "4.0.1",
+    "status" : "active",
+    "name" : "All Security Labels",
+    "title" : "SecurityLabels",
+    "description" : "A single value set for all security labels defined by FHIR.",
+    "systems" : ["http://terminology.hl7.org/CodeSystem/v3-ActReason",
+    "http://terminology.hl7.org/CodeSystem/v3-ActUSPrivacyLaw",
+    "http://terminology.hl7.org/CodeSystem/v3-ObservationValue",
+    "http://terminology.hl7.org/CodeSystem/v3-ActCode",
+    "http://terminology.hl7.org/CodeSystem/v3-Confidentiality"],
+    "oids" : ["2.16.840.1.113883.4.642.3.47"],
+    "sources" : ["2.16.840.1.113883.4.642.3.47"],
+    "uses" : {
+    },
+    "StructureDefinition-au-ps-composition.html" : "AU PS Composition"
+  },
+  {
+    "url" : "http://hl7.org/fhir/ValueSet/vaccine-code",
+    "version" : "4.0.1",
+    "status" : "active",
+    "name" : "VaccineAdministeredValueSet",
+    "title" : "Vaccine Administered Value Set",
+    "description" : "This identifies the vaccine substance administered - CVX codes.",
+    "systems" : ["urn:oid:1.2.36.1.2001.1005.17", "http://hl7.org/fhir/sid/cvx"],
+    "oids" : ["2.16.840.1.113883.3.88.12.80.22"],
+    "sources" : ["2.16.840.1.113883.3.88.12.80.22"],
+    "uses" : {
+    },
+    "StructureDefinition-au-ps-immunization.html" : "AU PS Immunization"
+  },
+  {
+    "url" : "http://hl7.org/fhir/uv/ips/ValueSet/results-coded-values-laboratory-pathology-uv-ips",
+    "version" : "2.0.0",
+    "status" : "active",
+    "name" : "ResultsCodedValuesLaboratoryPathologyUvIps",
+    "title" : "Results Coded Values Laboratory/Pathology - IPS",
+    "description" : "IPS Results Coded Values Laboratory/Pathology value set.  This value set includes the codes from the [Results Blood Group - IPS](ValueSet-results-blood-group-uv-ips.html), [Results Presence/Absence - IPS](ValueSet-results-presence-absence-uv-ips.html), [Results Microorganism - IPS](ValueSet-results-microorganism-uv-ips.html) and [Results Pathology - IPS](ValueSet-results-pathology-uv-ips.html) value sets.\n\nSNOMED CT® ECL definition:\\\n< 365636006 \\|Finding of blood group (finding)\\| OR < 260411009 \\|Presence findings (qualifier value)\\| OR < 272519000 \\|Absence findings (qualifier value)\\| OR < 409822003 \\|Domain Bacteria (organism)\\| OR < 441649000 \\|Class Cestoda and/or Class Trematoda and/or Phylum Nemata (organism)\\| OR < 414561005 \\|Kingdom Fungi (organism)\\| OR < 84676004 \\|Prion (organism)\\| OR < 49872002 \\|Virus (organism)\\| OR < 417396000 \\|Kingdom Protozoa (organism)\\| OR < 419036000 \\|Domain Archaea (organism)\\| OR < 426785004 \\|Kingdom Chromista (organism)\\| OR < 370570004 \\|Kingdom Protoctista (organism)\\| OR < 417377004 \\|Kingdom Viridiplantae (organism)\\| OR < 243565002 \\|Slime mold (organism)\\| OR < 106253005 \\|Histologic grading differentiation AND/OR behavior (qualifier value)\\| OR < 373369003 \\|Finding of histologic grading differentiation AND/OR behavior (finding)\\| OR < 399981008 \\|Neoplasm and/or hamartoma (disorder)\\|",
+    "systems" : ["http://snomed.info/sct"],
+    "uses" : {
+    },
+    "StructureDefinition-au-ps-diagnosticresult-path.html" : "AU PS Pathology Result Observation"
+  },
+  {
+    "url" : "http://hl7.org/fhir/uv/ips/ValueSet/results-status-uv-ips",
+    "version" : "2.0.0",
+    "status" : "active",
+    "name" : "ResultsStatusUvIps",
+    "title" : "Results Status Codes - IPS",
+    "description" : "IPS Observation status codes allowable for results.  This value set includes all observation status codes except \\\"entered-in-error\\\" from http://hl7.org/fhir/observation-status.",
+    "systems" : ["http://hl7.org/fhir/observation-status"],
+    "uses" : {
+    },
+    "StructureDefinition-au-ps-diagnosticresult-path.html" : "AU PS Pathology Result Observation"
+  },
+  {
+    "url" : "http://terminology.hl7.org.au/ValueSet/contact-purpose",
+    "version" : "6.0.0",
+    "status" : "active",
+    "name" : "ContactPurpose",
+    "title" : "Contact Purpose",
+    "description" : "The purpose for which an associated contact can be reached.",
+    "systems" : ["http://terminology.hl7.org/CodeSystem/contactentity-type",
+    "http://terminology.hl7.org.au/CodeSystem/contact-purpose"],
+    "oids" : ["2.16.840.1.113883.2.3.4.2.4.19"],
+    "sources" : ["2.16.840.1.113883.2.3.4.2.4.19"],
+    "uses" : {
+    },
+    "StructureDefinition-au-ps-organization.html" : "AU PS Organization"
+  },
+  {
+    "url" : "http://terminology.hl7.org.au/ValueSet/mims",
+    "version" : "6.0.0",
+    "status" : "active",
+    "name" : "MIMS",
+    "title" : "MIMS",
+    "description" : "The MIMS value set includes all values from the Monthly Index of Medical Specialties (MIMS) published by MIMS Australia. Further details can be found at https://www.mims.com.au/.",
+    "systems" : ["http://www.mims.com.au/codes"],
+    "oids" : ["2.16.840.1.113883.2.3.4.2.4.7"],
+    "sources" : ["2.16.840.1.113883.2.3.4.2.4.7"],
+    "uses" : {
+    },
+    "StructureDefinition-au-ps-medication.html" : "AU PS Medication",
+    "StructureDefinition-au-ps-medicationrequest.html" : "AU PS MedicationRequest",
+    "StructureDefinition-au-ps-medicationstatement.html" : "AU PS MedicationStatement"
+  },
+  {
+    "url" : "http://terminology.hl7.org.au/ValueSet/pbs-item",
+    "version" : "6.0.0",
+    "status" : "active",
+    "name" : "PBSItemCodes",
+    "title" : "PBS Item Codes",
+    "description" : "The PBS Item Codes value set includes all values from Australian Pharmaceutical Benefits Scheme (PBS) schedule published by the Department of Health. Further details can be found at https://www.pbs.gov.au/pbs/.",
+    "systems" : ["http://pbs.gov.au/code/item"],
+    "oids" : ["2.16.840.1.113883.2.3.4.2.4.8"],
+    "sources" : ["2.16.840.1.113883.2.3.4.2.4.8"],
+    "uses" : {
+    },
+    "StructureDefinition-au-ps-medication.html" : "AU PS Medication",
+    "StructureDefinition-au-ps-medicationrequest.html" : "AU PS MedicationRequest",
+    "StructureDefinition-au-ps-medicationstatement.html" : "AU PS MedicationStatement"
+  },
+  {
+    "url" : "http://terminology.hl7.org.au/ValueSet/v2-0360-extended",
+    "version" : "6.0.0",
+    "status" : "active",
+    "name" : "Hl7VSDegreeLicenseCertificateAUExtended",
+    "title" : "hl7VS-degreeLicenseCertificate - AU Extended",
+    "description" : "hl7VS-degreeLicenseCertificate extended for use in an Australian context. Includes HL7 international codes plus Australian additions to create a complete set.",
+    "systems" : ["http://terminology.hl7.org.au/CodeSystem/v2-0360",
+    "http://terminology.hl7.org/CodeSystem/v2-0360"],
+    "oids" : ["2.16.840.1.113883.2.3.4.2.3.360"],
+    "sources" : ["2.16.840.1.113883.2.3.4.2.3.360"],
+    "uses" : {
+    },
+    "StructureDefinition-au-ps-practitioner.html" : "AU PS Practitioner"
+  },
+  {
+    "url" : "http://terminology.hl7.org.au/ValueSet/v2-0443-extended",
+    "version" : "6.0.0",
+    "status" : "active",
+    "name" : "Hl7VSProviderRoleAUExtended",
+    "title" : "hl7VS-providerRole - AU Extended",
+    "description" : "hl7VS-providerRole extended for use in an Australian context. Includes HL7 international codes plus Australian additions to create a complete set.",
+    "systems" : ["http://terminology.hl7.org.au/CodeSystem/v2-0443",
+    "http://terminology.hl7.org/CodeSystem/v2-0443"],
+    "oids" : ["2.16.840.1.113883.2.3.4.2.3.443"],
+    "sources" : ["2.16.840.1.113883.2.3.4.2.3.443"],
+    "uses" : {
+    },
+    "StructureDefinition-au-ps-immunization.html" : "AU PS Immunization"
+  },
+  {
+    "url" : "http://terminology.hl7.org.au/ValueSet/v3-ActEncounterCode-extended",
+    "version" : "6.0.0",
+    "status" : "active",
+    "name" : "ActEncounterCodeAUExtended",
+    "title" : "ActEncounterCode - AU Extended",
+    "description" : "v3 Act Encounter Code extended for use in an Australian context. Includes HL7 international codes plus Australian additions to create a complete set.",
+    "systems" : ["http://terminology.hl7.org.au/CodeSystem/v3-ActCode",
+    "http://terminology.hl7.org/CodeSystem/v3-ActCode"],
+    "oids" : ["2.16.840.1.113883.2.3.4.2.4.20"],
+    "sources" : ["2.16.840.1.113883.2.3.4.2.4.20"],
+    "uses" : {
+    },
+    "StructureDefinition-au-ps-encounter.html" : "AU PS Encounter"
+  },
+  {
+    "url" : "http://terminology.hl7.org/ValueSet/v2-0092",
+    "version" : "3.0.0",
+    "status" : "active",
+    "name" : "Hl7VSReAdmissionIndicator",
+    "title" : "hl7VS-re-admissionIndicator",
+    "description" : "Value Set of codes which are used to specify that a patient is being re-admitted to a healthcare facility from which they were discharged, and indicates the circumstances around such re-admission.",
+    "systems" : ["http://terminology.hl7.org/CodeSystem/v2-0092"],
+    "oids" : ["2.16.840.1.113883.21.40"],
+    "sources" : ["2.16.840.1.113883.21.40"],
+    "uses" : {
+    },
+    "StructureDefinition-au-ps-encounter.html" : "AU PS Encounter"
+  },
+  {
+    "url" : "http://terminology.hl7.org/ValueSet/v3-ActCode",
+    "version" : "3.0.0",
+    "status" : "active",
+    "name" : "ActCode",
+    "title" : "v3 Code System ActCode",
+    "description" : "A code specifying the particular kind of Act that the Act-instance represents within its class.  Constraints:\r\nThe kind of Act (e.g. physical examination, serum potassium, inpatient encounter, charge financial transaction, etc.) is specified with a code from one of several, typically external, coding systems.  The coding system will depend on the class of Act, such as LOINC for observations, etc. Conceptually, the Act.code must be a specialization of the Act.classCode. This is why the structure of ActClass domain should be reflected in the superstructure of the ActCode domain and then individual codes or externally referenced vocabularies subordinated under these domains that reflect the ActClass structure. Act.classCode and Act.code are not modifiers of each other but the Act.code concept should really imply the Act.classCode concept. For a negative example, it is not appropriate to use an Act.code \"potassium\" together with and Act.classCode for \"laboratory observation\" to somehow mean \"potassium laboratory observation\" and then use the same Act.code for \"potassium\" together with Act.classCode for \"medication\" to mean \"substitution of potassium\". This mutually modifying use of Act.code and Act.classCode is not permitted.",
+    "systems" : ["http://terminology.hl7.org/CodeSystem/v3-ActCode"],
+    "uses" : {
+    },
+    "StructureDefinition-au-ps-composition.html" : "AU PS Composition"
+  },
+  {
+    "url" : "http://terminology.hl7.org/ValueSet/v3-ActEncounterCode",
+    "version" : "3.0.0",
+    "status" : "active",
+    "name" : "ActEncounterCode",
+    "title" : "ActEncounterCode",
+    "description" : "Domain provides codes that qualify the ActEncounterClass (ENC)",
+    "systems" : ["http://terminology.hl7.org/CodeSystem/v3-ActCode"],
+    "oids" : ["2.16.840.1.113883.1.11.13955"],
+    "sources" : ["2.16.840.1.113883.1.11.13955"],
+    "uses" : {
+    },
+    "StructureDefinition-au-ps-encounter.html" : "AU PS Encounter"
+  },
+  {
+    "url" : "http://terminology.hl7.org/ValueSet/v3-ActPriority",
+    "version" : "3.0.0",
+    "status" : "active",
+    "name" : "ActPriority",
+    "title" : "ActPriority",
+    "description" : "A code or set of codes (e.g., for routine, emergency,) specifying the urgency under which the Act happened, can happen, is happening, is intended to happen, or is requested/demanded to happen.\r\n\r\n*Discussion:* This attribute is used in orders to indicate the ordered priority, and in event documentation it indicates the actual priority used to perform the act. In definition mood it indicates the available priorities.",
+    "systems" : ["http://terminology.hl7.org/CodeSystem/v3-ActPriority"],
+    "oids" : ["2.16.840.1.113883.1.11.16866"],
+    "sources" : ["2.16.840.1.113883.1.11.16866"],
+    "uses" : {
+    },
+    "StructureDefinition-au-ps-encounter.html" : "AU PS Encounter"
+  },
+  {
+    "url" : "http://terminology.hl7.org/ValueSet/v3-ActSubstanceAdminSubstitutionCode",
+    "version" : "3.0.0",
+    "status" : "active",
+    "name" : "ActSubstanceAdminSubstitutionCode",
+    "title" : "ActSubstanceAdminSubstitutionCode",
+    "description" : "***No description***",
+    "systems" : ["http://terminology.hl7.org/CodeSystem/v3-substanceAdminSubstitution"],
+    "oids" : ["2.16.840.1.113883.1.11.16621"],
+    "sources" : ["2.16.840.1.113883.1.11.16621"],
+    "uses" : {
+    },
+    "StructureDefinition-au-ps-medicationrequest.html" : "AU PS MedicationRequest"
+  },
+  {
+    "url" : "http://terminology.hl7.org/ValueSet/v3-ConfidentialityClassification",
+    "version" : "2014-03-26",
+    "status" : "active",
+    "name" : "v3.ConfidentialityClassification",
+    "title" : "V3 Value SetConfidentialityClassification",
+    "description" : " Set of codes used to value Act.Confidentiality and Role.Confidentiality attribute in accordance with the definition for concept domain \"Confidentiality\".",
+    "systems" : ["http://terminology.hl7.org/CodeSystem/v3-Confidentiality"],
+    "oids" : ["2.16.840.1.113883.1.11.10228"],
+    "sources" : ["2.16.840.1.113883.1.11.10228"],
+    "uses" : {
+    },
+    "StructureDefinition-au-ps-composition.html" : "AU PS Composition"
+  },
+  {
+    "url" : "http://terminology.hl7.org/ValueSet/v3-GTIN",
+    "version" : "3.0.0",
+    "status" : "active",
+    "name" : "GTIN",
+    "title" : "GTIN",
+    "description" : "**Description:**Global Trade Item Number is an identifier for trade items developed by GS1 (comprising the former EAN International and Uniform Code Council).",
+    "systems" : ["http://terminology.hl7.org/CodeSystem/v3-ActCode"],
+    "oids" : ["2.16.840.1.113883.1.11.19885"],
+    "sources" : ["2.16.840.1.113883.1.11.19885"],
+    "uses" : {
+    },
+    "StructureDefinition-au-ps-medication.html" : "AU PS Medication",
+    "StructureDefinition-au-ps-medicationrequest.html" : "AU PS MedicationRequest",
+    "StructureDefinition-au-ps-medicationstatement.html" : "AU PS MedicationStatement"
+  },
+  {
+    "url" : "https://healthterminologies.gov.au/fhir/ValueSet/adverse-reaction-agent-1",
+    "version" : "1.1.1",
+    "status" : "active",
+    "name" : "AdverseReactionAgent",
+    "title" : "Adverse Reaction Agent",
+    "description" : "The Adverse Reaction Agent value set includes values that support the recording of agents that may be responsible for causing adverse reactions. It is a broad set encompassing medicinal and non-medicinal agents.",
+    "systems" : ["http://snomed.info/sct"],
+    "oids" : ["1.2.36.1.2001.1004.201.10036"],
+    "sources" : ["1.2.36.1.2001.1004.201.10036"],
+    "uses" : {
+    },
+    "StructureDefinition-au-ps-allergyintolerance.html" : "AU PS AllergyIntolerance"
+  },
+  {
+    "url" : "https://healthterminologies.gov.au/fhir/ValueSet/adverse-reaction-clinical-manifestation-1",
+    "version" : "1.0.0",
+    "status" : "active",
+    "name" : "AdverseReactionClinicalManifestation",
+    "title" : "Adverse Reaction Clinical Manifestation",
+    "description" : "The Adverse Reaction Clinical Manifestation value set supports the recording of clinical manifestations of adverse reactions (including allergies and intolerances).",
+    "systems" : ["http://snomed.info/sct"],
+    "oids" : ["1.2.36.1.2001.1004.201.10296"],
+    "sources" : ["1.2.36.1.2001.1004.201.10296"],
+    "uses" : {
+    },
+    "StructureDefinition-au-ps-allergyintolerance.html" : "AU PS AllergyIntolerance"
+  },
+  {
+    "url" : "https://healthterminologies.gov.au/fhir/ValueSet/adverse-reaction-substances-and-negated-findings-1",
+    "version" : "1.0.0",
+    "status" : "active",
+    "name" : "AdverseReactionSubstancesandNegatedFindings",
+    "title" : "Adverse Reaction Substances and Negated Findings",
+    "description" : "The Adverse Reaction Substances and Negated Findings value set comprises terms used to identify a predisposition to adverse reactions to substances, as well as negated findings.",
+    "systems" : ["http://snomed.info/sct"],
+    "oids" : ["1.2.36.1.2001.1004.201.10286"],
+    "sources" : ["1.2.36.1.2001.1004.201.10286"],
+    "uses" : {
+    },
+    "StructureDefinition-au-ps-allergyintolerance.html" : "AU PS AllergyIntolerance"
+  },
+  {
+    "url" : "https://healthterminologies.gov.au/fhir/ValueSet/amt-vaccine-1",
+    "version" : "1.0.2",
+    "status" : "active",
+    "name" : "AustralianMedicinesTerminologyVaccine",
+    "title" : "Australian Medicines Terminology Vaccine",
+    "description" : "The Australian Medicines Terminology (AMT) Vaccine value set includes AMT product concepts that may be used to record a vaccine product.",
+    "systems" : ["http://snomed.info/sct"],
+    "oids" : ["1.2.36.1.2001.1004.201.10042"],
+    "sources" : ["1.2.36.1.2001.1004.201.10042"],
+    "uses" : {
+    },
+    "StructureDefinition-au-ps-immunization.html" : "AU PS Immunization"
+  },
+  {
+    "url" : "https://healthterminologies.gov.au/fhir/ValueSet/australian-immunisation-register-vaccine-1",
+    "version" : "1.0.2",
+    "status" : "active",
+    "name" : "AustralianImmunisationRegisterVaccine",
+    "title" : "Australian Immunisation Register Vaccine",
+    "description" : "The Australian Immunisation Register Vaccine value set includes values that may be used to represent a vaccine product according to the Australian Immunisation Register vaccine code formats.",
+    "systems" : ["https://www.humanservices.gov.au/organisations/health-professionals/enablers/air-vaccine-code-formats"],
+    "oids" : ["1.2.36.1.2001.1004.201.10043"],
+    "sources" : ["1.2.36.1.2001.1004.201.10043"],
+    "uses" : {
+    },
+    "StructureDefinition-au-ps-immunization.html" : "AU PS Immunization"
+  },
+  {
+    "url" : "https://healthterminologies.gov.au/fhir/ValueSet/australian-medication-1",
+    "version" : "1.0.2",
+    "status" : "active",
+    "name" : "AustralianMedication",
+    "title" : "Australian Medication",
+    "description" : "The Australian Medication value set includes all Australian Medicines Terminology (AMT) product concepts that may be used for the identification of a medicine, vaccine or other therapeutic good. This is suitable for the recording of a product which may be ordered for, administered to, or used by an individual.",
+    "systems" : ["http://snomed.info/sct"],
+    "oids" : ["1.2.36.1.2001.1004.201.10003"],
+    "sources" : ["1.2.36.1.2001.1004.201.10003"],
+    "uses" : {
+    },
+    "StructureDefinition-au-ps-medication.html" : "AU PS Medication",
+    "StructureDefinition-au-ps-medicationrequest.html" : "AU PS MedicationRequest",
+    "StructureDefinition-au-ps-medicationstatement.html" : "AU PS MedicationStatement"
+  },
+  {
+    "url" : "https://healthterminologies.gov.au/fhir/ValueSet/australian-medication-use-1",
+    "version" : "1.0.0",
+    "status" : "active",
+    "name" : "AustralianMedicationUse",
+    "title" : "Australian Medication Use",
+    "description" : "The Australian Medication Use value set extends the NCTS Australian Medication value set by including all Australian Medicines Terminology (AMT) product concepts that may be used for the identification of a medicine, vaccine or other therapeutic good, together with the concept 787481004 |No known medications| (SNOMED CT). This value set is suitable for recording the medication or asserting the absence of known medications in a Medication Statement.",
+    "systems" : ["http://snomed.info/sct"],
+    "oids" : ["1.2.36.1.2001.1004.201.10303"],
+    "sources" : ["1.2.36.1.2001.1004.201.10303"],
+    "uses" : {
+    },
+    "StructureDefinition-au-ps-medicationstatement.html" : "AU PS MedicationStatement"
+  },
+  {
+    "url" : "https://healthterminologies.gov.au/fhir/ValueSet/body-site-1",
+    "version" : "1.0.2",
+    "status" : "active",
+    "name" : "BodySite",
+    "title" : "Body Site",
+    "description" : "The Body Site value set includes values that cover a broad range of anatomical and acquired body structures suitable for identifying a body site.",
+    "systems" : ["http://snomed.info/sct"],
+    "oids" : ["1.2.36.1.2001.1004.201.10031"],
+    "sources" : ["1.2.36.1.2001.1004.201.10031"],
+    "uses" : {
+    },
+    "StructureDefinition-au-ps-condition.html" : "AU PS Condition",
+    "StructureDefinition-au-ps-procedure.html" : "AU PS Procedure",
+    "StructureDefinition-au-ps-medicationrequest.html" : "AU PS MedicationRequest",
+    "StructureDefinition-au-ps-medicationstatement.html" : "AU PS MedicationStatement"
+  },
+  {
+    "url" : "https://healthterminologies.gov.au/fhir/ValueSet/clinical-condition-1",
+    "version" : "1.0.2",
+    "status" : "active",
+    "name" : "ClinicalCondition",
+    "title" : "Clinical Condition",
+    "description" : "The Clinical Condition value set includes values that cover a broad range of clinical concepts to support the representation of conditions, including problems, diagnoses and disorders.",
+    "systems" : ["http://snomed.info/sct"],
+    "oids" : ["1.2.36.1.2001.1004.201.10035"],
+    "sources" : ["1.2.36.1.2001.1004.201.10035"],
+    "uses" : {
+    },
+    "StructureDefinition-au-ps-condition.html" : "AU PS Condition"
+  },
+  {
+    "url" : "https://healthterminologies.gov.au/fhir/ValueSet/clinical-finding-1",
+    "version" : "1.0.2",
+    "status" : "active",
+    "name" : "ClinicalFinding",
+    "title" : "Clinical Finding",
+    "description" : "The Clinical Finding value set includes a broad range of values that support the recording of disorders and clinical findings, including observations, judgments or assessments about subjects of care.",
+    "systems" : ["http://snomed.info/sct"],
+    "oids" : ["1.2.36.1.2001.1004.201.10037"],
+    "sources" : ["1.2.36.1.2001.1004.201.10037"],
+    "uses" : {
+    },
+    "StructureDefinition-au-ps-condition.html" : "AU PS Condition",
+    "StructureDefinition-au-ps-medicationrequest.html" : "AU PS MedicationRequest",
+    "StructureDefinition-au-ps-medicationstatement.html" : "AU PS MedicationStatement"
+  },
+  {
+    "url" : "https://healthterminologies.gov.au/fhir/ValueSet/clinical-specialty-1",
+    "version" : "1.1.0",
+    "status" : "active",
+    "name" : "ClinicalSpecialty",
+    "title" : "Clinical Specialty",
+    "description" : "The Clinical Specialty value set includes values that may be used to describe a clinical specialty performed by an entity.",
+    "systems" : ["http://snomed.info/sct"],
+    "oids" : ["1.2.36.1.2001.1004.201.10186"],
+    "sources" : ["1.2.36.1.2001.1004.201.10186"],
+    "uses" : {
+    },
+    "StructureDefinition-au-ps-practitionerrole.html" : "AU PS PractitionerRole"
+  },
+  {
+    "url" : "https://healthterminologies.gov.au/fhir/ValueSet/common-languages-australia-2",
+    "version" : "2.2.1",
+    "status" : "active",
+    "name" : "CommonLanguagesInAustralia",
+    "title" : "Common Languages in Australia",
+    "description" : "The Common Languages in Australia value set includes languages that are commonly encountered in Australia, including a comprehensive set of Australian Indigenous languages.",
+    "systems" : ["urn:ietf:bcp:47"],
+    "oids" : ["1.2.36.1.2001.1004.201.10069"],
+    "sources" : ["1.2.36.1.2001.1004.201.10069"],
+    "uses" : {
+    },
+    "StructureDefinition-au-ps-relatedperson.html" : "AU PS RelatedPerson",
+    "StructureDefinition-au-ps-practitioner.html" : "AU PS Practitioner",
+    "StructureDefinition-au-ps-patient.html" : "AU PS Patient"
+  },
+  {
+    "url" : "https://healthterminologies.gov.au/fhir/ValueSet/contact-relationship-type-3",
+    "version" : "3.1.0",
+    "status" : "active",
+    "name" : "ContactRelationshipType",
+    "title" : "Contact Relationship Type",
+    "description" : "The Contact Relationship Type value set includes values that may be used to describe the nature of the relationship between the subject and the contact person.",
+    "systems" : ["http://terminology.hl7.org/CodeSystem/v2-0131",
+    "http://snomed.info/sct"],
+    "oids" : ["1.2.36.1.2001.1004.201.10187"],
+    "sources" : ["1.2.36.1.2001.1004.201.10187"],
+    "uses" : {
+    },
+    "StructureDefinition-au-ps-patient.html" : "AU PS Patient"
+  },
+  {
+    "url" : "https://healthterminologies.gov.au/fhir/ValueSet/encounter-type-1",
+    "version" : "1.0.1",
+    "status" : "active",
+    "name" : "EncounterType",
+    "title" : "Encounter Type",
+    "description" : "The Encounter Type value set includes values that can be used to represent types of healthcare interactions.",
+    "systems" : ["http://snomed.info/sct"],
+    "oids" : ["1.2.36.1.2001.1004.201.10086"],
+    "sources" : ["1.2.36.1.2001.1004.201.10086"],
+    "uses" : {
+    },
+    "StructureDefinition-au-ps-encounter.html" : "AU PS Encounter"
+  },
+  {
+    "url" : "https://healthterminologies.gov.au/fhir/ValueSet/healthcare-organisation-role-type-1",
+    "version" : "1.1.0",
+    "status" : "active",
+    "name" : "HealthcareOrganisationRoleType",
+    "title" : "Healthcare Organisation Role Type",
+    "description" : "The Healthcare Organisation Role Type value set includes values that can represent the role, use or function of a healthcare related organisation or facility.",
+    "systems" : ["http://snomed.info/sct"],
+    "oids" : ["1.2.36.1.2001.1004.201.10112"],
+    "sources" : ["1.2.36.1.2001.1004.201.10112"],
+    "uses" : {
+    },
+    "StructureDefinition-au-ps-organization.html" : "AU PS Organization"
+  },
+  {
+    "url" : "https://healthterminologies.gov.au/fhir/ValueSet/immunisation-anatomical-site-1",
+    "version" : "1.0.2",
+    "status" : "active",
+    "name" : "ImmunisationAnatomicalSite",
+    "title" : "Immunisation Anatomical Site",
+    "description" : "The Immunisation Anatomical Site value set includes values that can be used to describe the anatomical site where an immunisation may be administered.",
+    "systems" : ["http://snomed.info/sct"],
+    "oids" : ["1.2.36.1.2001.1004.201.10045"],
+    "sources" : ["1.2.36.1.2001.1004.201.10045"],
+    "uses" : {
+    },
+    "StructureDefinition-au-ps-immunization.html" : "AU PS Immunization"
+  },
+  {
+    "url" : "https://healthterminologies.gov.au/fhir/ValueSet/immunisation-route-of-administration-1",
+    "version" : "1.0.2",
+    "status" : "active",
+    "name" : "ImmunisationRouteOfAdministration",
+    "title" : "Immunisation Route of Administration",
+    "description" : "The Immunisation Route of Administration value set includes values that can be used to describe the route by which a vaccine is administered.",
+    "systems" : ["http://snomed.info/sct"],
+    "oids" : ["1.2.36.1.2001.1004.201.10050"],
+    "sources" : ["1.2.36.1.2001.1004.201.10050"],
+    "uses" : {
+    },
+    "StructureDefinition-au-ps-immunization.html" : "AU PS Immunization"
+  },
+  {
+    "url" : "https://healthterminologies.gov.au/fhir/ValueSet/indicator-hypersensitivity-intolerance-to-substance-2",
+    "version" : "2.1.0",
+    "status" : "active",
+    "name" : "IndicatorOfHypersensitivityOrIntoleranceToSubstance",
+    "title" : "Indicator of Hypersensitivity or Intolerance to Substance",
+    "description" : "The Indicator of Hypersensitivity or Intolerance to Substance value set includes values that may be used to indicate or state a propensity to adverse reaction to a substance. The values represent a range of concept types such as substances, medicines, clinical findings and negated allergy findings.",
+    "systems" : ["http://snomed.info/sct"],
+    "oids" : ["1.2.36.1.2001.1004.201.10087"],
+    "sources" : ["1.2.36.1.2001.1004.201.10087"],
+    "uses" : {
+    },
+    "StructureDefinition-au-ps-allergyintolerance.html" : "AU PS AllergyIntolerance"
+  },
+  {
+    "url" : "https://healthterminologies.gov.au/fhir/ValueSet/medication-form-1",
+    "version" : "1.1.1",
+    "status" : "active",
+    "name" : "MedicationForm",
+    "title" : "Medication Form",
+    "description" : "The Medication Form value set includes values that represent the dose form of a medication.",
+    "systems" : ["http://snomed.info/sct"],
+    "oids" : ["1.2.36.1.2001.1004.201.10046"],
+    "sources" : ["1.2.36.1.2001.1004.201.10046"],
+    "uses" : {
+    },
+    "StructureDefinition-au-ps-medication.html" : "AU PS Medication"
+  },
+  {
+    "url" : "https://healthterminologies.gov.au/fhir/ValueSet/medication-ingredient-1",
+    "version" : "1.0.0",
+    "status" : "active",
+    "name" : "MedicationIngredient",
+    "title" : "Medication Ingredient",
+    "description" : "The Medication Ingredient value set includes values that may be used to identify a substance or a medicinal product that is an ingredient of a medication.",
+    "systems" : ["http://snomed.info/sct"],
+    "oids" : ["1.2.36.1.2001.1004.201.10295"],
+    "sources" : ["1.2.36.1.2001.1004.201.10295"],
+    "uses" : {
+    },
+    "StructureDefinition-au-ps-medication.html" : "AU PS Medication"
+  },
+  {
+    "url" : "https://healthterminologies.gov.au/fhir/ValueSet/medication-reason-taken-1",
+    "version" : "1.1.0",
+    "status" : "active",
+    "name" : "MedicationReasonTaken",
+    "title" : "Medication Reason Taken",
+    "description" : "The Medication Reason Taken value set includes values that identify a reason why a medication has been or is being taken.",
+    "systems" : ["http://snomed.info/sct"],
+    "oids" : ["1.2.36.1.2001.1004.201.10048"],
+    "sources" : ["1.2.36.1.2001.1004.201.10048"],
+    "uses" : {
+    },
+    "StructureDefinition-au-ps-medicationstatement.html" : "AU PS MedicationStatement"
+  },
+  {
+    "url" : "https://healthterminologies.gov.au/fhir/ValueSet/medicine-substitution-reason-1",
+    "version" : "1.0.1",
+    "status" : "active",
+    "name" : "MedicineSubstitutionReason",
+    "title" : "Medicine Substitution Reason",
+    "description" : "The Medicine Substitution Reason value set includes values that may be used to record the reason for medicine substitution.",
+    "systems" : ["http://snomed.info/sct"],
+    "oids" : ["1.2.36.1.2001.1004.201.10067"],
+    "sources" : ["1.2.36.1.2001.1004.201.10067"],
+    "uses" : {
+    },
+    "StructureDefinition-au-ps-medicationrequest.html" : "AU PS MedicationRequest"
+  },
+  {
+    "url" : "https://healthterminologies.gov.au/fhir/ValueSet/pathology-diagnostic-service-category-1",
+    "version" : "1.0.0",
+    "status" : "active",
+    "name" : "PathologyDiagnosticServiceCategory",
+    "title" : "Pathology Diagnostic Service Category",
+    "description" : "The Pathology Diagnostic Service Category value set includes values that may be used to indicate the diagnostic service where a pathology observation was performed.",
+    "systems" : ["http://terminology.hl7.org/CodeSystem/v2-0074"],
+    "oids" : ["1.2.36.1.2001.1004.201.10180"],
+    "sources" : ["1.2.36.1.2001.1004.201.10180"],
+    "uses" : {
+    },
+    "StructureDefinition-au-ps-diagnosticresult-path.html" : "AU PS Pathology Result Observation"
+  },
+  {
+    "url" : "https://healthterminologies.gov.au/fhir/ValueSet/practitioner-role-1",
+    "version" : "1.0.2",
+    "status" : "active",
+    "name" : "PractitionerRole",
+    "title" : "Practitioner Role",
+    "description" : "The Practitioner Role value set includes values that describe the role that a practitioner is authorised to perform within an organisation.",
+    "systems" : ["http://snomed.info/sct"],
+    "oids" : ["1.2.36.1.2001.1004.201.10028"],
+    "sources" : ["1.2.36.1.2001.1004.201.10028"],
+    "uses" : {
+    },
+    "StructureDefinition-au-ps-practitionerrole.html" : "AU PS PractitionerRole"
+  },
+  {
+    "url" : "https://healthterminologies.gov.au/fhir/ValueSet/procedure-1",
+    "version" : "1.0.2",
+    "status" : "active",
+    "name" : "Procedure",
+    "title" : "Procedure",
+    "description" : "The Procedure value set includes values that cover a broad range of procedures and clinical interventions that can be associated with a subject of care.",
+    "systems" : ["http://snomed.info/sct"],
+    "oids" : ["1.2.36.1.2001.1004.201.10033"],
+    "sources" : ["1.2.36.1.2001.1004.201.10033"],
+    "uses" : {
+    },
+    "StructureDefinition-au-ps-procedure.html" : "AU PS Procedure"
+  },
+  {
+    "url" : "https://healthterminologies.gov.au/fhir/ValueSet/reason-for-encounter-1",
+    "version" : "1.0.0",
+    "status" : "active",
+    "name" : "ReasonForEncounter",
+    "title" : "Reason For Encounter",
+    "description" : "The Reason For Encounter value set includes values that can be used to represent the reason an encounter takes place.",
+    "systems" : ["http://snomed.info/sct"],
+    "oids" : ["1.2.36.1.2001.1004.201.10210"],
+    "sources" : ["1.2.36.1.2001.1004.201.10210"],
+    "uses" : {
+    },
+    "StructureDefinition-au-ps-encounter.html" : "AU PS Encounter"
+  },
+  {
+    "url" : "https://healthterminologies.gov.au/fhir/ValueSet/reason-for-request-1",
+    "version" : "1.0.1",
+    "status" : "active",
+    "name" : "ReasonForRequest",
+    "title" : "Reason for Request",
+    "description" : "The Reason for Request value set includes values that can be used to indicate the rationale for a request. For example, this may include the reason for requesting a service or diagnostic procedure.",
+    "systems" : ["http://snomed.info/sct"],
+    "oids" : ["1.2.36.1.2001.1004.201.10078"],
+    "sources" : ["1.2.36.1.2001.1004.201.10078"],
+    "uses" : {
+    },
+    "StructureDefinition-au-ps-medicationrequest.html" : "AU PS MedicationRequest"
+  },
+  {
+    "url" : "https://healthterminologies.gov.au/fhir/ValueSet/reason-vaccine-administered-1",
+    "version" : "1.0.2",
+    "status" : "active",
+    "name" : "ReasonVaccineAdministered",
+    "title" : "Reason Vaccine Administered",
+    "description" : "The Reason Vaccine Administered value set includes values that describe why a vaccine may be administered.",
+    "systems" : ["http://snomed.info/sct"],
+    "oids" : ["1.2.36.1.2001.1004.201.10058"],
+    "sources" : ["1.2.36.1.2001.1004.201.10058"],
+    "uses" : {
+    },
+    "StructureDefinition-au-ps-immunization.html" : "AU PS Immunization"
+  },
+  {
+    "url" : "https://healthterminologies.gov.au/fhir/ValueSet/reason-vaccine-not-administered-3",
+    "version" : "3.0.0",
+    "status" : "active",
+    "name" : "ReasonVaccineNotAdministered",
+    "title" : "Reason Vaccine Not Administered",
+    "description" : "The Reason Vaccine Not Administered value set includes values that describe why a vaccine was not administered.",
+    "systems" : ["http://snomed.info/sct"],
+    "oids" : ["1.2.36.1.2001.1004.201.10269"],
+    "sources" : ["1.2.36.1.2001.1004.201.10269"],
+    "uses" : {
+    },
+    "StructureDefinition-au-ps-immunization.html" : "AU PS Immunization"
+  },
+  {
+    "url" : "https://healthterminologies.gov.au/fhir/ValueSet/related-person-relationship-type-1",
+    "version" : "1.2.2",
+    "status" : "active",
+    "name" : "RelatedPersonRelationshipType",
+    "title" : "Related Person Relationship Type",
+    "description" : "The Related Person Relationship Type value set includes values that may be used to describe the nature of the relationship between the subject and the related person.",
+    "systems" : ["http://terminology.hl7.org/CodeSystem/v3-RoleCode",
+    "http://terminology.hl7.org/CodeSystem/v2-0131",
+    "http://snomed.info/sct"],
+    "oids" : ["1.2.36.1.2001.1004.201.10016"],
+    "sources" : ["1.2.36.1.2001.1004.201.10016"],
+    "uses" : {
+    },
+    "StructureDefinition-au-ps-relatedperson.html" : "AU PS RelatedPerson"
+  },
+  {
+    "url" : "https://healthterminologies.gov.au/fhir/ValueSet/route-of-administration-1",
+    "version" : "1.0.2",
+    "status" : "active",
+    "name" : "RouteOfAdministration",
+    "title" : "Route of Administration",
+    "description" : "The Route of Administration value set includes values that describe the route by which a medicine may be administered.",
+    "systems" : ["http://snomed.info/sct"],
+    "oids" : ["1.2.36.1.2001.1004.201.10041"],
+    "sources" : ["1.2.36.1.2001.1004.201.10041"],
+    "uses" : {
+    },
+    "StructureDefinition-au-ps-allergyintolerance.html" : "AU PS AllergyIntolerance",
+    "StructureDefinition-au-ps-medicationrequest.html" : "AU PS MedicationRequest",
+    "StructureDefinition-au-ps-medicationstatement.html" : "AU PS MedicationStatement"
+  },
+  {
+    "url" : "https://healthterminologies.gov.au/fhir/ValueSet/separation-mode-1",
+    "version" : "1.0.1",
+    "status" : "active",
+    "name" : "SeparationMode",
+    "title" : "Separation Mode",
+    "description" : "The Separation Mode value set includes values that can be used to indicate the category of discharge of a patient. Separation refers to the process by which an episode of care for an admitted patient ceases.",
+    "systems" : ["https://healthterminologies.gov.au/fhir/CodeSystem/separation-mode-1"],
+    "oids" : ["1.2.36.1.2001.1004.201.10070"],
+    "sources" : ["1.2.36.1.2001.1004.201.10070"],
+    "uses" : {
+    },
+    "StructureDefinition-au-ps-encounter.html" : "AU PS Encounter"
+  },
+  {
+    "url" : "https://healthterminologies.gov.au/fhir/ValueSet/service-type-1",
+    "version" : "1.0.0",
+    "status" : "active",
+    "name" : "ServiceType",
+    "title" : "Service Type",
+    "description" : "The Service Type value set includes values that describe a broad range of service types.",
+    "systems" : ["http://snomed.info/sct"],
+    "oids" : ["1.2.36.1.2001.1004.201.10184"],
+    "sources" : ["1.2.36.1.2001.1004.201.10184"],
+    "uses" : {
+    },
+    "StructureDefinition-au-ps-encounter.html" : "AU PS Encounter"
+  },
+  {
+    "url" : "https://healthterminologies.gov.au/fhir/ValueSet/smoking-status-1",
+    "version" : "1.0.0",
+    "status" : "active",
+    "name" : "SmokingStatus",
+    "title" : "Smoking Status",
+    "description" : "The Smoking Status value set includes values that may be used to represent an individual’s current behaviour of tobacco smoking.",
+    "systems" : ["http://snomed.info/sct"],
+    "oids" : ["1.2.36.1.2001.1004.201.10244"],
+    "sources" : ["1.2.36.1.2001.1004.201.10244"],
+    "uses" : {
+    },
+    "StructureDefinition-au-ps-smokingstatus.html" : "AU PS Smoking Status"
+  },
+  {
+    "url" : "https://healthterminologies.gov.au/fhir/ValueSet/spia-pathology-reporting-1",
+    "version" : "1.0.0",
+    "status" : "active",
+    "name" : "RCPASPIAPathologyReporting",
+    "title" : "RCPA SPIA Pathology Reporting",
+    "description" : "The RCPA SPIA Pathology Reporting value set includes standard codes for use in reporting chemical pathology, haematology, immunopathology and microbiology serology results in Australia. The values represent the observables against which results are reported. It combines several Royal College of Pathologists of Australasia (RCPA) Standards for Pathology Informatics in Australia (SPIA) value sets. The composition of this value set, in referencing other value sets, does not transiently include the designations and displays defined in the referenced value sets.",
+    "systems" : ["http://loinc.org"],
+    "oids" : ["1.2.36.1.2001.1004.201.10214"],
+    "sources" : ["1.2.36.1.2001.1004.201.10214"],
+    "uses" : {
+    },
+    "StructureDefinition-au-ps-diagnosticresult-path.html" : "AU PS Pathology Result Observation"
+  },
+  {
+    "url" : "https://healthterminologies.gov.au/fhir/ValueSet/vaccination-target-disease-1",
+    "version" : "1.0.2",
+    "status" : "active",
+    "name" : "VaccinationTargetDisease",
+    "title" : "Vaccination Target Disease",
+    "description" : "The Vaccination Target Disease value set includes values that can represent vaccine preventable diseases. The content coverage includes diseases caused by a microorganism or bacterial toxin.",
+    "systems" : ["http://snomed.info/sct"],
+    "oids" : ["1.2.36.1.2001.1004.201.10059"],
+    "sources" : ["1.2.36.1.2001.1004.201.10059"],
+    "uses" : {
+    },
+    "StructureDefinition-au-ps-immunization.html" : "AU PS Immunization"
+  },
+  {
+    "url" : "https://www.rcpa.edu.au/fhir/ValueSet/spia-chemical-pathology-refset-3",
+    "version" : "3.20260228.0",
+    "status" : "active",
+    "name" : "spia-chemical-pathology-refset",
+    "title" : "RCPA - SPIA Chemical Pathology Value Set",
+    "description" : "Standard codes for use in reporting chemical pathology results in Australia. Content is derived from the RCPA Standardised Pathology Informatics in Australia (SPIA) Guidelines. See: https://www.rcpa.edu.au/Library/Practising-Pathology/PTIS/SPIA-Terminology-Reference",
+    "systems" : ["http://loinc.org"],
+    "oids" : ["1.2.36.1.2001.1004.300.100.1001"],
+    "sources" : ["1.2.36.1.2001.1004.300.100.1001"],
+    "uses" : {
+    },
+    "StructureDefinition-au-ps-diagnosticresult-path.html" : "AU PS Pathology Result Observation"
+  },
+  {
+    "url" : "https://www.rcpa.edu.au/fhir/ValueSet/spia-haematology-refset-3",
+    "version" : "3.20260531.0",
+    "status" : "active",
+    "name" : "spia-haematology-refset",
+    "title" : "RCPA - SPIA Haematology Value Set",
+    "description" : "Standard codes for use in reporting haematology pathology results in Australia. Content is derived from the RCPA Standardised Pathology Informatics in Australia (SPIA) Guidelines. See: https://www.rcpa.edu.au/Library/Practising-Pathology/PTIS/SPIA-Terminology-Reference",
+    "systems" : ["http://loinc.org"],
+    "oids" : ["1.2.36.1.2001.1004.300.100.1007"],
+    "sources" : ["1.2.36.1.2001.1004.300.100.1007"],
+    "uses" : {
+    },
+    "StructureDefinition-au-ps-diagnosticresult-path.html" : "AU PS Pathology Result Observation"
+  },
+  {
+    "url" : "https://www.rcpa.edu.au/fhir/ValueSet/spia-immunopathology-refset-3",
+    "version" : "3.20251231.1",
+    "status" : "active",
+    "name" : "spia-immunopathology-refset",
+    "title" : "RCPA - SPIA Immunopathology Value Set",
+    "description" : "Standard codes for use in reporting immunopathology results in Australia. Content is derived from the RCPA Standardised Pathology Informatics in Australia (SPIA) Guidelines. See: https://www.rcpa.edu.au/Library/Practising-Pathology/PTIS/SPIA-Terminology-Reference",
+    "systems" : ["http://loinc.org"],
+    "oids" : ["1.2.36.1.2001.1004.300.100.1009"],
+    "sources" : ["1.2.36.1.2001.1004.300.100.1009"],
+    "uses" : {
+    },
+    "StructureDefinition-au-ps-diagnosticresult-path.html" : "AU PS Pathology Result Observation"
+  },
+  {
+    "url" : "https://www.rcpa.edu.au/fhir/ValueSet/spia-microbiology-serology-molecular-refset-3",
+    "version" : "3.20251231.1",
+    "status" : "active",
+    "name" : "spia-microbiology-serology-molecular-refset",
+    "title" : "RCPA - SPIA Microbiology Serology Molecular Pathology Value Set",
+    "description" : "Standard codes for use in reporting microbiology pathology results in Australia. Content is derived from the RCPA Standardised Pathology Informatics in Australia (SPIA) Guidelines. See: https://www.rcpa.edu.au/Library/Practising-Pathology/PTIS/SPIA-Terminology-Reference",
+    "systems" : ["http://loinc.org"],
+    "oids" : ["1.2.36.1.2001.1004.300.100.1004"],
+    "sources" : ["1.2.36.1.2001.1004.300.100.1004"],
+    "uses" : {
+    },
+    "StructureDefinition-au-ps-diagnosticresult-path.html" : "AU PS Pathology Result Observation"
+  }]
+}

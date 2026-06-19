@@ -1,0 +1,525 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE HTML>
+<html xml:lang="en" xmlns="http://www.w3.org/1999/xhtml" lang="en">
+  <head>
+    <meta content="text/html;charset=utf-8" http-equiv="Content-Type"/>
+    <title>The AU PS - AU Patient Summary Implementation Guide v1.0.0-ci-build</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta name="author" content="http://hl7.org/fhir"/>
+
+    <link href="fhir.css" rel="stylesheet"/>
+
+    <!-- Bootstrap core CSS -->
+    <link href="assets/css/bootstrap-fhir.css" rel="stylesheet"/>
+
+    <!-- Project extras -->
+    <link href="assets/css/project.css" rel="stylesheet"/>
+    <link href="assets/css/pygments-manni.css" rel="stylesheet"/>
+    <link href="assets/css/jquery-ui.css" rel="stylesheet"/>
+  	<link href="assets/css/prism.css" rel="stylesheet" />
+  	<link href="assets/css/cqf.css" rel="stylesheet" />
+    <!-- Placeholder for child template CSS declarations -->
+    <link href="assets/css/hl7.css" rel="stylesheet"/>
+
+    <link href="assets/css/fhir.css" rel="stylesheet"/>
+    <link href="assets/css/hl7au.css" rel="stylesheet"/>
+
+
+
+    <script type="text/javascript" src="fhir-table-scripts.js"> </script>
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+    <script src="assets/js/html5shiv.js"></script>
+    <script src="assets/js/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- Favicons -->
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="assets/ico/icon-fhir-144.png"/>
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="assets/ico/icon-fhir-114.png"/>
+    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="assets/ico/icon-fhir-72.png"/>
+    <link rel="apple-touch-icon-precomposed" href="assets/ico/icon-fhir-57.png"/>
+    <link rel="shortcut icon" href="assets/ico/favicon.png"/>
+  </head>
+  <body onload="document.body.style.opacity='1'">
+
+	  <script src="assets/js/prism.js"></script>
+    <script type="text/javascript" src="assets/js/mermaid.js"></script>
+    <script type="text/javascript" src="assets/js/mermaid-init.js"></script>
+    <style type="text/css">h2{--heading-prefix:"3"}
+    h3,h4,h5,h6{--heading-prefix:"3"}</style>
+    <div id="segment-header" class="segment">  <!-- segment-header -->
+      <div class="container">  <!-- container -->
+
+        <!-- Placeholder for child template header declarations -->
+
+        <div id="hl7-nav">
+          <a id="hl7-logo" data-no-external="true" href="http://hl7.com.au">
+            <img height="50" alt="Visit the HL7 Australia website" src="assets/images/hl7-logo-header.png"/>
+          </a>
+        </div>
+
+        <div id="family-nav">
+          <a id="family-logo" data-no-external="true" href="http://hl7.com.au">
+            <img height="50" alt="Visit the HL7 Australia website" src="assets/images/fhir-au-logo-www.png"/> </a>
+        </div>
+
+
+        <div id="project-nav">
+          <a id="project-logo" data-no-external="true" href="https://sparked.csiro.au/">
+            <img height="50" alt="Visit the Sparked website" src="assets/images/sparked-logo.png"/> </a>
+        </div>
+
+        <!--<div id="hl7-search">
+          <a id="hl7-search-lnk" data-no-external="true" href="http://hl7.org.au/fhir/search"><img alt="Search FHIR" src="assets/images/search.png"/></a>
+        </div>-->
+
+
+        <div id="ig-status">
+          <p><span style="font-size:12pt;font-weight:bold">AU Patient Summary Implementation Guide</span>
+            <br/>
+            <span style="display:inline-block;">1.0.0-ci-build - CI Build
+
+
+
+  <img alt="Australia flag" src="assets/images/aus.svg" height="16" title="Australia"/>
+
+
+            </span>
+          </p>
+        </div>
+      </div> <!-- /container -->
+    </div>  <!-- /segment-header -->
+
+    <div id="segment-navbar" class="segment">  <!-- segment-navbar -->
+      <div id="stripe"> </div>
+      <div class="container">  <!-- container -->
+        <!-- HEADER CONTENT -->
+
+        <nav class="navbar navbar-inverse">
+          <!--status-bar-->
+          <div class="container">
+            <button data-target=".navbar-inverse-collapse" class="navbar-toggle" data-toggle="collapse" type="button">
+              <span class="icon-bar"> </span>
+              <span class="icon-bar"> </span>
+              <span class="icon-bar"> </span>
+            </button>
+            <a class="navbar-brand hidden" href="http://hl7.org/fhir/R4/index.html">FHIR</a>
+            <div class="nav-collapse collapse navbar-inverse-collapse">
+              <ul xmlns="http://www.w3.org/1999/xhtml" class="nav navbar-nav">
+  <li>
+    <a href="index.html">Home</a>
+  </li>
+  <li class="dropdown">
+    <a data-toggle="dropdown" href="#" class="dropdown-toggle">Conformance
+      <b class="caret"></b>
+    </a>
+    <ul class="dropdown-menu">
+      <li>
+        <a href="general-requirements.html">General Requirements</a>
+        <a href="declaring-conformance.html">Declaring Conformance</a>
+      </li>
+    </ul>
+  </li>
+  <li>
+    <a href="the-aups.html">The AU PS</a>
+  </li>
+  <li class="dropdown">
+    <a data-toggle="dropdown" href="#" class="dropdown-toggle">Guidance
+      <b class="caret"></b>
+    </a>
+     <ul class="dropdown-menu">
+      <li>
+        <a href="general-guidance.html">General Guidance</a>
+      </li>
+      <li>
+        <a href="generation-and-access.html">Generation and Access</a>
+      </li>
+      <li>
+        <a href="sex-and-gender.html">Sex and Gender</a>
+      </li>
+      <li>
+        <a href="aucdi.html">AUCDI</a>
+      </li>
+       <li>
+        <a href="relationship.html">Relationship With Other IGs</a>
+      </li>
+      <li>
+        <a href="variance.html">AU Variance Statement</a>
+      </li>
+      <li>
+        <a href="comparison.html">Comparison With Other National and International IGs</a>
+      </li>
+      <li>
+        <a href="future.html">Future of AU PS</a>
+      </li> 
+    </ul>
+  </li>
+  <li class="dropdown">
+    <a data-toggle="dropdown" href="#" class="dropdown-toggle">Use Cases
+      <b class="caret"></b>
+    </a>
+     <ul class="dropdown-menu">
+      <li>
+        <a href="uc-interstate.html">Interstate GP Visit</a>
+      </li>
+      <li>
+        <a href="uc-referral.html">Referral to Specialist and Allied Health</a>
+      </li>
+    </ul>
+  </li>
+  <li>
+    <a href="security.html">Security and Privacy</a>
+  </li>
+  <li class="dropdown">
+    <a data-toggle="dropdown" href="#" class="dropdown-toggle">FHIR Artefacts
+      <b class="caret"></b>
+    </a>
+    <ul class="dropdown-menu">
+       <li>
+        <a href="artifacts.html">Artefacts Summary</a>
+      </li>
+      <li>
+        <a href="profiles-and-extensions.html">Profiles and Extensions</a>
+      </li>
+      <!-- <li>
+        <a href="search-parameters.html">Search Parameters</a>
+      </li>-->
+      <li>
+        <a href="terminology.html">Terminology</a>
+      </li>
+      <!-- <li>
+        <a href="capability-statements.html">Capability Statements</a>
+      </li> -->
+      <li>
+        <a href="actors.html">Actor Definitions</a>
+      </li>
+    </ul>
+  </li>
+  <li>
+    <a href="examples.html">Examples</a>
+  </li>
+  <li class="dropdown">
+    <a data-toggle="dropdown" href="#" class="dropdown-toggle">Support
+      <b class="caret"></b>
+    </a>
+    <ul class="dropdown-menu">
+      <li>
+        <a href="downloads.html">Downloads</a>
+      </li>
+      <li>
+        <a href="license.html">License and Legal</a>
+      </li>
+    </ul>
+  </li>
+  <li>
+    <a href="changes.html">Change Log</a>
+  </li>
+</ul>
+            </div>  <!-- /.nav-collapse -->
+          </div>  <!-- /.container -->
+        </nav>  <!-- /.navbar -->
+      <!-- /HEADER CONTENT -->
+      </div>  <!-- /container -->
+    </div>  <!-- /segment-navbar -->
+    <!--status-bar-->
+
+    <div id="segment-breadcrumb" class="segment">  <!-- segment-breadcrumb -->
+      <div class="container">  <!-- container -->
+        <ul class="breadcrumb">
+          <li><a href='toc.html'><b>Table of Contents</b></a></li><li><b>The AU PS</b></li>
+
+        </ul>
+      </div>  <!-- /container -->
+    </div>  <!-- /segment-breadcrumb -->
+
+    <a name="top"> </a>
+    <div id="segment-content" class="segment">  <!-- segment-content -->
+      <div class="container">  <!-- container -->
+        <div class="row">
+          <div class="inner-wrapper">
+
+<style type="text/css">
+h2:before{color:silver;counter-increment:section;content:var(--heading-prefix) " ";}
+h3:before{color:silver;counter-increment:sub-section;content:var(--heading-prefix) "." counter(sub-section) " ";}
+h4:before{color:silver;counter-increment:composite;content:var(--heading-prefix) "." counter(sub-section) "." counter(composite) " ";}
+h5:before{color:silver;counter-increment:detail;content:var(--heading-prefix) "." counter(sub-section) "." counter(composite) "." counter(detail) " ";}
+h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefix) "." counter(sub-section) "." counter(composite) "." counter(detail) "." counter(more-detail)" ";}
+</style>
+<div class="col-12">
+  <!--ReleaseHeader--><p id="publish-box">This page is part of the AU Patient Summary (v1.0.0-ci-build: R1) based on <a data-no-external="true" href="http://hl7.org/fhir/R4">FHIR (HL7® FHIR® Standard) R4</a>. <span class="fhir-pb-dynamic" data-pb-version="1.0.0-ci-build" data-pb-canonical="http://hl7.org.au/fhir/ps"><span class="fhir-pb-superseded">The current version which supersedes this version is <a class="fhir-pb-current-link" data-no-external="true" href="http://hl7.org.au/fhir/ps"><span class="fhir-pb-current-version">the current version</span></a></span><span class="fhir-pb-iscurrent" style="display:none">This is the current published version</span><span class="fhir-pb-prerelease" style="display:none">This version is a pre-release. The current official version is <a class="fhir-pb-current-link" data-no-external="true" href="http://hl7.org.au/fhir/ps"><span class="fhir-pb-current-version">the current version</span></a></span></span><script type="text/javascript">(function(){function cmp(a,b){if(a===b)return 0;function p(v){var s=String(v).split('-');return{n:s[0].split('.').map(function(x){return parseInt(x,10)||0;}),pre:s.length>1?s.slice(1).join('-'):null};}var pa=p(a),pb=p(b),i,m=Math.max(pa.n.length,pb.n.length);for(i=0;i<m;i++){var d=(pa.n[i]||0)-(pb.n[i]||0);if(d!==0)return d>0?1:-1;}if(pa.pre&&!pb.pre)return -1;if(!pa.pre&&pb.pre)return 1;if(pa.pre&&pb.pre)return pa.pre<pb.pre?-1:(pa.pre>pb.pre?1:0);return 0;}function sh(el,on){if(el)el.style.display=on?'':'none';}function pn(u){try{return new URL(u,document.baseURI).pathname.replace(/\/+$/,'');}catch(e){return null;}}function init(){var dyn=document.querySelectorAll('span.fhir-pb-dynamic');var pv=document.querySelectorAll('span.fhir-pb-page-versions');if(!dyn.length&&!pv.length)return;var canonical=dyn.length?dyn[0].getAttribute('data-pb-canonical'):null;if(!canonical)return;var pgVer=(dyn.length?dyn[0]:pv[0]).getAttribute('data-pb-version');var igRoot=null;if(pgVer){var seg='/'+pgVer+'/';var si=location.pathname.indexOf(seg);if(si>=0)igRoot=location.pathname.slice(0,si);}if(igRoot===null)igRoot=pn(canonical);if(igRoot===null)return;var plUrl=igRoot+'/package-list.json';fetch(plUrl,{cache:'no-cache'}).then(function(r){return r.json();}).then(function(pl){var list=(pl&&pl.list)||[];var cur=null;list.forEach(function(e){if(e&&e.current===true&&e.version!=='current'&&typeof e.path==='string'&&e.path.indexOf(canonical)===0){cur=e;}});if(cur)Array.prototype.forEach.call(dyn,function(box){if(box.getAttribute('data-pb-done'))return;box.setAttribute('data-pb-done','1');var thisVer=box.getAttribute('data-pb-version');Array.prototype.forEach.call(box.querySelectorAll('.fhir-pb-current-version'),function(s){s.textContent=cur.version;});Array.prototype.forEach.call(box.querySelectorAll('a.fhir-pb-current-link'),function(a){a.setAttribute('href',cur.path);});var d=cmp(cur.version,thisVer);sh(box.querySelector('.fhir-pb-superseded'),d>0);sh(box.querySelector('.fhir-pb-iscurrent'),d===0);sh(box.querySelector('.fhir-pb-prerelease'),d<0);});var ms=list.filter(function(e){return e&&e.milestoneName&&typeof e.path==='string'&&e.path.indexOf(canonical)===0;});Array.prototype.forEach.call(pv,function(span){if(span.getAttribute('data-pb-done'))return;span.setAttribute('data-pb-done','1');var thisVer=span.getAttribute('data-pb-version');var mine=list.filter(function(e){return e.version===thisVer;})[0];var myBase=mine?pn(mine.path):null;var here=location.pathname;var rel=(myBase&&here.indexOf(myBase+'/')===0)?here.slice(myBase.length+1):here.substring(here.lastIndexOf('/')+1);Promise.all(ms.map(function(m){var href=pn(m.path)+'/'+rel;if(m.version===thisVer)return Promise.resolve({m:m,href:href,ok:true,self:true});return fetch(href,{method:'HEAD'}).then(function(r){return{m:m,href:href,ok:r.ok,self:false};}).catch(function(){return{m:m,href:href,ok:false};});})).then(function(res){var parts=res.filter(function(x){return x.ok;}).map(function(x){return x.self?('<b>'+x.m.milestoneName+'</b>'):('<a data-no-external="true" href="'+x.href+'">'+x.m.milestoneName+'</a>');});if(parts.length){span.innerHTML='. Page versions: '+parts.join(' ');}});});}).catch(function(){});}if(document.readyState!=='loading'){init();}else{document.addEventListener('DOMContentLoaded',init);}})();</script>.  For a full list of available versions, see the <a data-no-external="true" href="http://hl7.org.au/fhir/ps/history.html">Directory of published versions</a><span class="fhir-pb-page-versions" data-pb-version="1.0.0-ci-build"></span></p><!--EndReleaseHeader-->
+  <h2>The AU PS</h2>
+  
+
+
+
+
+
+  <table class="colsi">
+    <tr>
+  
+      <td>
+        <i>Page standards status:</i> <a href="http://hl7.org/fhir/R4/versions.html#std-process" title="Standard Status">Informative</a>
+        
+      </td>
+  
+  
+    </tr>
+  </table>
+
+
+
+
+
+
+
+
+    <p><!-- white space is critical inside of capture --></p>
+<div class="markdown-toc">
+<ul id="markdown-toc">
+  <li><a href="#the-au-ps-au-patient-summary" id="markdown-toc-the-au-ps-au-patient-summary">The AU PS (AU Patient Summary)</a></li>
+  <li><a href="#structure-of-the-au-ps" id="markdown-toc-structure-of-the-au-ps">Structure of the AU PS</a></li>
+  <li><a href="#localisation-of-the-ips" id="markdown-toc-localisation-of-the-ips">Localisation of the IPS</a>    <ul>
+      <li><a href="#additionally-profiled-resources" id="markdown-toc-additionally-profiled-resources">Additionally Profiled Resources</a></li>
+      <li><a href="#must-support-extensions" id="markdown-toc-must-support-extensions">Must Support Extensions</a></li>
+      <li><a href="#terminology-localisation" id="markdown-toc-terminology-localisation">Terminology Localisation</a></li>
+      <li><a href="#cardinality-localisation" id="markdown-toc-cardinality-localisation">Cardinality Localisation</a></li>
+      <li><a href="#identifiers-localisation" id="markdown-toc-identifiers-localisation">Identifiers Localisation</a></li>
+      <li><a href="#use-of-fixed-values" id="markdown-toc-use-of-fixed-values">Use of Fixed Values</a></li>
+    </ul>
+  </li>
+  <li><a href="#considerations-when-consuming-ips-documents-in-au-healthcare-context" id="markdown-toc-considerations-when-consuming-ips-documents-in-au-healthcare-context">Considerations When Consuming IPS Documents in AU Healthcare Context</a></li>
+</ul>
+
+</div>
+
+<p class="stu-note">The content on this page is intended to address the need for <a href="https://chat.fhir.org/#narrow/channel/207835-IPS/topic/Jurisdictional.20Patient.20Summary.20Specifications">jurisdictional patient summaries</a> to (a) clarify whether they are based on the IPS and if they are (b) make it clear that their IPS summaries are proper IPS and (c) a reference to a section that describes the functional limitations of receiving an IPS document that does not conform to national expectations e.g. what is intended to happen or a possible problem if you are processing IPS documents that don't conform to the national specification.</p>
+
+<h3 id="the-au-ps-au-patient-summary">The AU PS (AU Patient Summary)</h3>
+
+<p>A patient summary is a standardised collection of patient information. Rather than an entire patient health record, it is the minimum necessary and sufficient data to ensure safe patient care. Patient summaries can enhance patient safety by ensuring critical information is readily accessible when it’s needed most and enables clinicians across different health sectors and health domains to provide more informed, consistent care.</p>
+
+<p>The <a href="https://hl7.org/fhir/uv/ips/STU2/">HL7 International Patient Summary FHIR Implementation Guide</a> (the <a href="https://hl7.org/fhir/uv/ips/STU2/">IPS</a>) is an internationally recognised patient summary specification that is an implementation of the ISO 27269:2021 Health informatics — International patient summary standard. In 2021, the G7 nations committed to working towards the adoption of the IPS with several international efforts currently underway to drive adoption, including the European Union, USA, Canada and New Zealand. Multinational vendors with presence in Australia are at various stages of implementation of the IPS.</p>
+
+<p>The AU PS will support the consumer on their healthcare journey, providing the consumer and their healthcare providers with timely and current access to relevant health information. It will provide a future pathway for individuals to share their healthcare information when travelling internationally.</p>
+
+<p>An AU PS is intended to:<a name="aupintendedto"></a></p>
+<ul>
+  <li>be an interoperable set of clinical data - it is an electronic health record extract containing essential healthcare information about a consumer</li>
+  <li>support individuals on their healthcare journey including transitions of care </li>
+  <li>contain as up to date information as possible based on available sources at a point in time</li>
+  <li>be portable and accessible to the individual and their healthcare providers</li>
+  <li>be able to be used within an Australian state or territory, across state and territory borders, internationally</li>
+</ul>
+
+<div> 
+   <img src="AU-context.png" alt="Context of AU PS across a Consumer's Healthcare Journey" style="width:70%" />
+  </div>
+<p><em>Figure 1: Context of AU PS across a Consumer's Healthcare Journey in Australia</em>
+<br /></p>
+
+<p>A sample set of <a href="https://sparked.csiro.au/index.php/products-resources/au-ps-consumer-journeys/">Consumer Journeys</a>, developed by the Sparked AU Patient Summary Clinical Focus Group, help illustrate the interactions and use of a patient summary during a consumer’s healthcare journey in the Australian healthcare context. These Consumer Journeys have been used to develop <a href="usecase.html">two example use cases</a> to assist implementers in understanding how AU PS could be implemented.</p>
+
+<h3 id="structure-of-the-au-ps">Structure of the AU PS</h3>
+<p>AU PS is specified in this guide as an HL7 FHIR document (a Bundle including a Composition), composed by a set of potentially reusable "minimal" data blocks (the AU PS profiles).</p>
+
+<p>Based on <a href="https://hl7.org/fhir/uv/ips/STU2/">IPS</a> and <a href="https://build.fhir.org/ig/hl7au/au-fhir-core">AU Core</a>, AU PS defines a patient summary in the context of providing information to downstream providers. While profiled sections can have content that reflect intentions or orders of clinical care, the patient summary is meant as an informative document and is not intended to be directly actionable. For example, a MedicationRequest resource in the Medication Summary section or a CarePlan resource in the Plan of Care section, is not intended to provide authorisation for fulfilment or actioning from the AU PS (or IPS) document.</p>
+
+<p>The AU PS Document shares the same structure as an IPS, shown below.</p>
+
+<div> 
+    <img src="IPS_composition.png" alt="The IPS composition" style="width:65%" />
+  </div>
+<p><em>Figure 2: The IPS composition (source: <a href="https://hl7.org/fhir/uv/ips/STU2//Structure-of-the-International-Patient-Summary.html#structure-of-the-international-patient-summary">IPS 2.0.0</a>)</em>
+<br /></p>
+
+<p>In the AU PS document:</p>
+<ul>
+  <li>Required (Mandatory) sections are Problems, Allergies and Intolerances, and Medication Summary</li>
+  <li>Recommended sections are Immunizations, Results (Diagnostics), History of Procedures, and Medical Devices</li>
+  <li>Optional sections are Advance Directives, Functional Status, History of Pregnancy, Plan of Care, Alerts, History of Past Problems, Patient Story, Social History, and Vital Signs</li>
+  <li>Undefined sections are "additional" sections not defined by the AU PS Composition</li>
+</ul>
+
+<p>See the description of each defined section in IPS <a href="https://hl7.org/fhir/uv/ips/STU2//Structure-of-the-International-Patient-Summary.html#sections-description">Sections description</a>.</p>
+
+<h3 id="localisation-of-the-ips">Localisation of the IPS</h3>
+
+<p>The AU PS is based on <a href="https://hl7.org/fhir/uv/ips/STU2//">IPS</a> and <a href="https://build.fhir.org/ig/hl7au/au-fhir-core/">AU Core</a>, allowing for localisations required to meet Australian requirements while still ensuring alignment to the IPS specification:</p>
+<ul>
+  <li>A valid AU PS document IS a valid IPS document - the document instance validates against both IGs.</li>
+  <li>A conformant AU PS actor IS a conformant IPS actor - the conformance expectations for implementation for IPS are satisfied when implementing AU PS actor requirements.</li>
+  <li>A conformant AU PS actor IS NOT a conformant AU Core actor - AU Core, like IPA, defines actors for FHIR resource access via a RESTful API. AU PS (and IPS) do not define 'access' they define production and consumption of patient summary documents.</li>
+</ul>
+
+<div> 
+   <img src="AUPSPassport.png" alt="The AU PS 'Passport'" style="width:35%" />
+  </div>
+<p><em>Figure 3: The AU PS - a valid AU PS document is a valid IPS document</em>
+<br /></p>
+
+<p>While AU PS has no variance (i.e. fully compliant) from <a href="https://hl7.org/fhir/uv/ips/STU2/">IPS Implementation Guide 2.0.0</a>, AU PS does impose requirements additional to IPS to support requirements in the Australian healthcare context (these primarily come from AUCDI and AU Core). These additional requirements are intentionally limited to maximise interoperability with IPS-aware systems. See <a href="comparison.html">Comparison with other national and international IGs</a> and <a href="relationship.html">Relationship with other IGs</a> for information on the national and international standards context of AU PS.</p>
+
+<p>Additional requirements for the Australian healthcare context include:</p>
+<ul>
+  <li>additionally profiled resources</li>
+  <li>additional elements and extensions labelled <em>Must Support</em></li>
+  <li>strengthened obligations on some <em>Must Support</em> elements</li>
+  <li>different and sometimes stronger value set bindings</li>
+  <li>strengthened cardinality</li>
+  <li>additional fixed values</li>
+  <li>additional business rules</li>
+  <li>clarified expectations for missing data, empty sections, and suppressed data</li>
+</ul>
+
+<p>A summary of these additional requirements is provided in the sections below. While every effort has been made to ensure this page is consistent with the requirements of AU PS this is not a normative part of the specification.</p>
+
+<h4 id="additionally-profiled-resources">Additionally Profiled Resources</h4>
+
+<p>AU PS profiles the following resources that are not profiled in IPS:</p>
+
+<ul>
+  <li><a href="StructureDefinition-au-ps-encounter.html">AU PS Encounter</a> profiles FHIR resource <a href="http://hl7.org/fhir/R4/encounter.html">Encounter</a></li>
+  <li><a href="StructureDefinition-au-ps-relatedperson.html">AU PS RelatedPerson</a> profiles FHIR resource <a href="http://hl7.org/fhir/R4/relatedperson.html">RelatedPerson</a></li>
+</ul>
+
+<p>In addition to the profiles defined in this implementation guide and in IPS, the following profiles defined elsewhere are used by AU PS as the target of a <em>Must Support</em> reference element in an AU PS profile:</p>
+<ul>
+  <li><a href="https://build.fhir.org/ig/hl7au/au-fhir-core/StructureDefinition-au-core-location.html">AU Core Location</a></li>
+  <li>AU Core localised Vital Signs profiles (with additional cardinality and fixed value constraints)
+    <ul>
+      <li><a href="https://build.fhir.org/ig/hl7au/au-fhir-core/StructureDefinition-au-core-bloodpressure.html">AU Core Blood Pressure</a></li>
+      <li><a href="https://build.fhir.org/ig/hl7au/au-fhir-core/StructureDefinition-au-core-bodyheight.html">AU Core Body Height</a></li>
+      <li><a href="https://build.fhir.org/ig/hl7au/au-fhir-core/StructureDefinition-au-core-bodytemp.html">AU Core Body Temperature</a></li>
+      <li><a href="https://build.fhir.org/ig/hl7au/au-fhir-core/StructureDefinition-au-core-bodyweight.html">AU Core Body Weight</a></li>
+      <li><a href="https://build.fhir.org/ig/hl7au/au-fhir-core/StructureDefinition-au-core-heartrate.html">AU Core Heart Rate</a></li>
+      <li><a href="https://build.fhir.org/ig/hl7au/au-fhir-core/StructureDefinition-au-core-resprate.html">AU Core Respiration Rate</a></li>
+      <li><a href="https://build.fhir.org/ig/hl7au/au-fhir-core/StructureDefinition-au-core-waistcircum.html">AU Core Waist Circumference</a></li>
+    </ul>
+  </li>
+</ul>
+
+<h4 id="must-support-extensions">Must Support Extensions</h4>
+<p>No extensions are labelled as <em>Must Support</em> in IPS. In AU PS, the following extensions are labelled as <em>Must Support</em>:</p>
+<ul>
+  <li><a href="https://build.fhir.org/ig/hl7au/au-fhir-base/StructureDefinition-indigenous-status.html">Australian Indigenous Status</a> in <a href="StructureDefinition-au-ps-patient.html">AU PS Patient</a></li>
+  <li><a href="https://hl7.org/fhir/extensions/5.1.0/StructureDefinition-individual-pronouns.html">Individual Pronouns</a> in <a href="StructureDefinition-au-ps-patient.html">AU PS Patient</a></li>
+  <li><a href="https://hl7.org/fhir/extensions/5.1.0/StructureDefinition-individual-genderIdentity.html">Individual Gender Identity</a> in <a href="StructureDefinition-au-ps-patient.html">AU PS Patient</a></li>
+</ul>
+
+<h4 id="terminology-localisation">Terminology Localisation</h4>
+<p>A full list of terminology differences is not provided, refer to the <a href="profiles-and-extensions.html">AU PS profiles</a> and the <a href="terminology.html">Terminology</a> page to understand the terminology supported for use in AU PS. Some differences are mentioned below to highlight their potential relevance to implementers of the AU PS.</p>
+
+<p>AU PS:</p>
+<ul>
+  <li>adopts terminology bound in AU Core in preference to IPS where the IPS binding strength is equivalent or weaker.</li>
+  <li>localised terminology bindings are present in the additionally profiled resources and <em>Must Support</em> extensions.</li>
+  <li>defines support for multiple terminologies for medicines and vaccines, see the table in the section <a href="general-requirements.html#must-support---multiple-terminologies">Must Support - Multiple Terminologies</a>.</li>
+  <li>applies a stronger binding strength (e.g. preferred -&gt; extensible) for some <em>Must Support</em> elements (the binding strength is inherited from AU Core).</li>
+</ul>
+
+<p>In many cases the difference between value sets bound in AU Core and IPS is the IPS use of international SNOMED CT concepts versus the AU Core use of SNOMED CT-AU concepts and international SNOMED CT concepts. Typically these Australian value sets are bound as <a href="https://hl7.org/fhir/R4/terminologies.html#preferred">preferred</a> in AU PS profiles; these are recommendations for use in the Australian healthcare context but do not prevent other coding or text only representations.</p>
+
+<h4 id="cardinality-localisation">Cardinality Localisation</h4>
+<p>While AU PS profiles do not apply unique maximum cardinality constraints, AU PS makes a number of elements mandatory (minimum cardinality &gt; 0) that are not mandatory in IPS either directly in the AU PS profile or by reference to an AU Core profile. These constrained cardinalities are typically in:</p>
+<ul>
+  <li>additionally profiled resource types that mandate reference to the patient.</li>
+  <li>simple observation profiles (e.g. body temperature or smoking status) that require either a value or a data absent reason.</li>
+  <li>profiles of individuals and entities (e.g. Location, Patient, RelatedPerson, PractitionerRole, Practitioner) that have additional mandatory administrative elements e.g. Patient.identifier or PractitionerRole.practitioner.</li>
+</ul>
+
+<h4 id="identifiers-localisation">Identifiers Localisation</h4>
+<p>IPS does not provide recommendations on the types of identifiers used in resources, this is expected to be defined as needed in jurisdictional specifications. In AU PS, a number of optional national Australian healthcare identifiers are labelled with <em>Must Support</em>, see the table in the section <a href="general-requirements.html#must-support---identifiers">Must Support - Identifiers</a> for the full list.</p>
+
+<h4 id="use-of-fixed-values">Use of Fixed Values</h4>
+<p>AU PS includes additional fixed value constraints on some elements either directly in an AU PS profile or via reference to an AU Core profile. These additional fixed values are typically in Observation profiles and add a fixed SNOMED CT concept in <code class="language-plaintext highlighter-rouge">Observation.code</code> in addition to the fixed LOINC code.</p>
+
+<h3 id="considerations-when-consuming-ips-documents-in-au-healthcare-context">Considerations When Consuming IPS Documents in AU Healthcare Context</h3>
+
+<p>As AU PS incorporates requirements additional to IPS it is important to consider what is intended to happen (or the possible problems) if a system is expecting an AU PS document and receives an IPS document that doesn't conform to the national specification. For example an IPS document may not include Australian identifiers, or mandatory AU PS elements, or clinical terminology from a national set (see specific localisations listed above), or may include structured clinical data (e.g. allergies) that does not conform to either the IPS or AU PS profile.</p>
+
+<div class="request-for-feedback">
+  <p><strong>What are the considerations and limitations when receiving an IPS document?</strong></p>
+
+  <p>Implementers are requested to contribute their thoughts on considerations and limitations when receiving an IPS document that does not conform to AU PS document expectations. Contribute via comment on <a href="https://jira.hl7.org/browse/FHIR-51547">FHIR-51547</a>.</p>
+
+  <p>In this context consuming an IPS document that is NOT an AU Patient Summary may be an IPS document produced by a system that specifically supports only IPS, or another jurisdiction’s national patient summary implementation based on the IPS. If a system receives this IPS document somehow (email, upload, QR code, etc.) - what does the system do with it?</p>
+  <ul>
+    <li>Display the document to a user?</li>
+    <li>Display the data in the document to a user?</li>
+    <li>Import some data out of it (usually, a subset, human selected)?</li>
+    <li>Attempt to process and store?</li>
+    <li>Raise an error?</li>
+  </ul>
+
+  <p><strong>Is the patient summary an AU PS?</strong></p>
+
+  <p>During the <a href="https://confluence.hl7.org/spaces/HAFWG/pages/358895090/2025-11-13+AU+Core+TDG+Agenda+Minutes">AU PS workshop 13 November 2025</a> it was agreed there is a need for some way to tell by inspection that a patient summary document is an AU PS document, rather than some other kind of patient summary (including IPS only), without needing to do validation.</p>
+
+  <p>Implementers are requested to contribute their preference for a means to reliably identify a document as an AU PS document by inspection. Currently proposed options include:</p>
+  <ol>
+    <li>use <code class="language-plaintext highlighter-rouge">meta.profile</code> in the Composition or <code class="language-plaintext highlighter-rouge">meta.profile</code> in the Bundle</li>
+    <li>specify an additional coding in <code class="language-plaintext highlighter-rouge">Composition.type</code> that is equivalent to "AU PS"</li>
+    <li>use the <a href="https://build.fhir.org/ig/HL7/capstmt/">Application Feature Framework</a> and <a href="https://build.fhir.org/ig/HL7/fhir-extensions/StructureDefinition-feature-assertion.html">Feature Assertion</a> extension</li>
+  </ol>
+
+  <p>Contribute via comment on <a href="https://jira.hl7.org/browse/FHIR-55739">FHIR-55739</a>.</p>
+
+</div>
+
+
+
+</div>
+        </div>  <!-- /inner-wrapper -->
+      </div>  <!-- /row -->
+    </div>  <!-- /container -->
+  </div>  <!-- /segment-content -->
+
+  <script type="text/javascript" src="assets/js/jquery.js"> </script>     <!-- note keep space here, otherwise it will be transformed to empty tag -> fails -->
+  <script type="text/javascript" src="assets/js/jquery-ui.min.js"> </script>
+
+  <script type="text/javascript" src="assets/js/window-hash.js"> </script>
+  <a name="bottom"> </a>
+  <div id="segment-footer" igtool="footer" class="segment">  <!-- segment-footer -->
+    <div class="container">  <!-- container -->
+
+      <div class="inner-wrapper">
+        <p>
+          IG &#169; 2024+ <a style="color:var(--footer-hyperlink-text-color)" href="https://confluence.hl7.org/display/HAFWG">HL7 Australia</a>.  Package hl7.fhir.au.ps#1.0.0-ci-build based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Fri, Jun 19, 2026 03:09+0000">2026-06-19</span>
+          <br/>
+          <span style="color: var(--footer-highlight-text-color)">
+                      Links: <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Table of Contents</a> |
+                 <a style="color: var(--footer-hyperlink-text-color)" href="qa.html">QA Report</a>
+                 
+                
+                 | <a style="color: #81BEF7" target="_blank" href="http://hl7.org.au/fhir/ps/history.html">Version History</a> |
+                 <a style="color: #81BEF7" rel="license" href="http://hl7.org/fhir/R4/license.html"><img style="border-style: none;" alt="CC0" src="cc0.png"/></a> |
+                 <a style="color: #81BEF7" target="_blank" href="http://hl7.org/fhir-issues">Propose a change</a>
+
+          </span>
+        </p>
+      </div>  <!-- /inner-wrapper -->
+    </div>  <!-- /container -->
+  </div>  <!-- /segment-footer -->
+  
+  <div id="segment-post-footer" class="segment hidden">  <!-- segment-post-footer -->
+    <div class="container">  <!-- container -->
+    </div>  <!-- /container -->
+  </div>  <!-- /segment-post-footer -->
+
+  <!-- JS and analytics only. -->
+  <!-- Bootstrap core JavaScript
+  ================================================== -->
+  <!-- Placed at the end of the document so the pages load faster -->
+  <script type="text/javascript" src="assets/js/bootstrap.min.js"> </script>
+  <script type="text/javascript" src="assets/js/respond.min.js"> </script>
+  <script type="text/javascript" src="assets/js/anchor.min.js"> </script>
+  <script type="text/javascript" src="assets/js/clipboard.min.js"> </script>
+  <script type="text/javascript" src="assets/js/clipboard-btn.js"> </script>
+  <script type="text/javascript" src="assets/js/anchor-hover.js"> </script>
+  <!-- Analytics Below
+  ================================================== -->
+  </body>
+</html>
+

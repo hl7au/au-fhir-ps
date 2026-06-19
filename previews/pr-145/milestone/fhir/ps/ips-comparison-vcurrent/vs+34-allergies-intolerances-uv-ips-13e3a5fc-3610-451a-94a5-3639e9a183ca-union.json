@@ -1,0 +1,61 @@
+{
+  "resourceType" : "ValueSet",
+  "id" : "b31ca674-365d-4488-9949-cbbeff1c9145-11",
+  "url" : "http://hl7.org/fhir/comparison/ValueSet/b31ca674-365d-4488-9949-cbbeff1c9145-11",
+  "name" : "UnionAllergiesIntolerancesUvIpsAndIndicatorOfHypersensitivityOrIntoleranceToSubstance",
+  "title" : "Union of Allergies & Intolerances - IPS And Indicator of Hypersensitivity or Intolerance to Substance",
+  "status" : "active",
+  "date" : "2026-06-19T03:13:12+00:00",
+  "jurisdiction" : [{
+    "coding" : [{
+      "system" : "http://unstats.un.org/unsd/methods/m49/m49.htm",
+      "code" : "001",
+      "display" : "World"
+    }]
+  }],
+  "compose" : {
+    "include" : [{
+      "system" : "http://snomed.info/sct",
+      "filter" : [{
+        "property" : "concept",
+        "op" : "descendent-of",
+        "value" : "105590001"
+      }]
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "filter" : [{
+        "property" : "concept",
+        "op" : "descendent-of",
+        "value" : "373873005"
+      }]
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "filter" : [{
+        "property" : "concept",
+        "op" : "descendent-of",
+        "value" : "420134006"
+      }]
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "filter" : [{
+        "property" : "concept",
+        "op" : "is-a",
+        "value" : "716186003"
+      }]
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "filter" : [{
+        "property" : "constraint",
+        "op" : "=",
+        "value" : "< 420134006 |Propensity to adverse reaction| OR << 716186003|No known allergy|"
+      }]
+    },
+    {
+      "valueSet" : ["https://healthterminologies.gov.au/fhir/ValueSet/adverse-reaction-agent-1"]
+    }]
+  }
+}

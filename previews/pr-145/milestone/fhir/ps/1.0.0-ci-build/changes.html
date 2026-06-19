@@ -1,0 +1,609 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE HTML>
+<html xml:lang="en" xmlns="http://www.w3.org/1999/xhtml" lang="en">
+  <head>
+    <meta content="text/html;charset=utf-8" http-equiv="Content-Type"/>
+    <title>Change Log - AU Patient Summary Implementation Guide v1.0.0-ci-build</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta name="author" content="http://hl7.org/fhir"/>
+
+    <link href="fhir.css" rel="stylesheet"/>
+
+    <!-- Bootstrap core CSS -->
+    <link href="assets/css/bootstrap-fhir.css" rel="stylesheet"/>
+
+    <!-- Project extras -->
+    <link href="assets/css/project.css" rel="stylesheet"/>
+    <link href="assets/css/pygments-manni.css" rel="stylesheet"/>
+    <link href="assets/css/jquery-ui.css" rel="stylesheet"/>
+  	<link href="assets/css/prism.css" rel="stylesheet" />
+  	<link href="assets/css/cqf.css" rel="stylesheet" />
+    <!-- Placeholder for child template CSS declarations -->
+    <link href="assets/css/hl7.css" rel="stylesheet"/>
+
+    <link href="assets/css/fhir.css" rel="stylesheet"/>
+    <link href="assets/css/hl7au.css" rel="stylesheet"/>
+
+
+
+    <script type="text/javascript" src="fhir-table-scripts.js"> </script>
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+    <script src="assets/js/html5shiv.js"></script>
+    <script src="assets/js/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- Favicons -->
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="assets/ico/icon-fhir-144.png"/>
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="assets/ico/icon-fhir-114.png"/>
+    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="assets/ico/icon-fhir-72.png"/>
+    <link rel="apple-touch-icon-precomposed" href="assets/ico/icon-fhir-57.png"/>
+    <link rel="shortcut icon" href="assets/ico/favicon.png"/>
+  </head>
+  <body onload="document.body.style.opacity='1'">
+
+	  <script src="assets/js/prism.js"></script>
+    <script type="text/javascript" src="assets/js/mermaid.js"></script>
+    <script type="text/javascript" src="assets/js/mermaid-init.js"></script>
+    <style type="text/css">h2{--heading-prefix:"10"}
+    h3,h4,h5,h6{--heading-prefix:"10"}</style>
+    <div id="segment-header" class="segment">  <!-- segment-header -->
+      <div class="container">  <!-- container -->
+
+        <!-- Placeholder for child template header declarations -->
+
+        <div id="hl7-nav">
+          <a id="hl7-logo" data-no-external="true" href="http://hl7.com.au">
+            <img height="50" alt="Visit the HL7 Australia website" src="assets/images/hl7-logo-header.png"/>
+          </a>
+        </div>
+
+        <div id="family-nav">
+          <a id="family-logo" data-no-external="true" href="http://hl7.com.au">
+            <img height="50" alt="Visit the HL7 Australia website" src="assets/images/fhir-au-logo-www.png"/> </a>
+        </div>
+
+
+        <div id="project-nav">
+          <a id="project-logo" data-no-external="true" href="https://sparked.csiro.au/">
+            <img height="50" alt="Visit the Sparked website" src="assets/images/sparked-logo.png"/> </a>
+        </div>
+
+        <!--<div id="hl7-search">
+          <a id="hl7-search-lnk" data-no-external="true" href="http://hl7.org.au/fhir/search"><img alt="Search FHIR" src="assets/images/search.png"/></a>
+        </div>-->
+
+
+        <div id="ig-status">
+          <p><span style="font-size:12pt;font-weight:bold">AU Patient Summary Implementation Guide</span>
+            <br/>
+            <span style="display:inline-block;">1.0.0-ci-build - CI Build
+
+
+
+  <img alt="Australia flag" src="assets/images/aus.svg" height="16" title="Australia"/>
+
+
+            </span>
+          </p>
+        </div>
+      </div> <!-- /container -->
+    </div>  <!-- /segment-header -->
+
+    <div id="segment-navbar" class="segment">  <!-- segment-navbar -->
+      <div id="stripe"> </div>
+      <div class="container">  <!-- container -->
+        <!-- HEADER CONTENT -->
+
+        <nav class="navbar navbar-inverse">
+          <!--status-bar-->
+          <div class="container">
+            <button data-target=".navbar-inverse-collapse" class="navbar-toggle" data-toggle="collapse" type="button">
+              <span class="icon-bar"> </span>
+              <span class="icon-bar"> </span>
+              <span class="icon-bar"> </span>
+            </button>
+            <a class="navbar-brand hidden" href="http://hl7.org/fhir/R4/index.html">FHIR</a>
+            <div class="nav-collapse collapse navbar-inverse-collapse">
+              <ul xmlns="http://www.w3.org/1999/xhtml" class="nav navbar-nav">
+  <li>
+    <a href="index.html">Home</a>
+  </li>
+  <li class="dropdown">
+    <a data-toggle="dropdown" href="#" class="dropdown-toggle">Conformance
+      <b class="caret"></b>
+    </a>
+    <ul class="dropdown-menu">
+      <li>
+        <a href="general-requirements.html">General Requirements</a>
+        <a href="declaring-conformance.html">Declaring Conformance</a>
+      </li>
+    </ul>
+  </li>
+  <li>
+    <a href="the-aups.html">The AU PS</a>
+  </li>
+  <li class="dropdown">
+    <a data-toggle="dropdown" href="#" class="dropdown-toggle">Guidance
+      <b class="caret"></b>
+    </a>
+     <ul class="dropdown-menu">
+      <li>
+        <a href="general-guidance.html">General Guidance</a>
+      </li>
+      <li>
+        <a href="generation-and-access.html">Generation and Access</a>
+      </li>
+      <li>
+        <a href="sex-and-gender.html">Sex and Gender</a>
+      </li>
+      <li>
+        <a href="aucdi.html">AUCDI</a>
+      </li>
+       <li>
+        <a href="relationship.html">Relationship With Other IGs</a>
+      </li>
+      <li>
+        <a href="variance.html">AU Variance Statement</a>
+      </li>
+      <li>
+        <a href="comparison.html">Comparison With Other National and International IGs</a>
+      </li>
+      <li>
+        <a href="future.html">Future of AU PS</a>
+      </li> 
+    </ul>
+  </li>
+  <li class="dropdown">
+    <a data-toggle="dropdown" href="#" class="dropdown-toggle">Use Cases
+      <b class="caret"></b>
+    </a>
+     <ul class="dropdown-menu">
+      <li>
+        <a href="uc-interstate.html">Interstate GP Visit</a>
+      </li>
+      <li>
+        <a href="uc-referral.html">Referral to Specialist and Allied Health</a>
+      </li>
+    </ul>
+  </li>
+  <li>
+    <a href="security.html">Security and Privacy</a>
+  </li>
+  <li class="dropdown">
+    <a data-toggle="dropdown" href="#" class="dropdown-toggle">FHIR Artefacts
+      <b class="caret"></b>
+    </a>
+    <ul class="dropdown-menu">
+       <li>
+        <a href="artifacts.html">Artefacts Summary</a>
+      </li>
+      <li>
+        <a href="profiles-and-extensions.html">Profiles and Extensions</a>
+      </li>
+      <!-- <li>
+        <a href="search-parameters.html">Search Parameters</a>
+      </li>-->
+      <li>
+        <a href="terminology.html">Terminology</a>
+      </li>
+      <!-- <li>
+        <a href="capability-statements.html">Capability Statements</a>
+      </li> -->
+      <li>
+        <a href="actors.html">Actor Definitions</a>
+      </li>
+    </ul>
+  </li>
+  <li>
+    <a href="examples.html">Examples</a>
+  </li>
+  <li class="dropdown">
+    <a data-toggle="dropdown" href="#" class="dropdown-toggle">Support
+      <b class="caret"></b>
+    </a>
+    <ul class="dropdown-menu">
+      <li>
+        <a href="downloads.html">Downloads</a>
+      </li>
+      <li>
+        <a href="license.html">License and Legal</a>
+      </li>
+    </ul>
+  </li>
+  <li>
+    <a href="changes.html">Change Log</a>
+  </li>
+</ul>
+            </div>  <!-- /.nav-collapse -->
+          </div>  <!-- /.container -->
+        </nav>  <!-- /.navbar -->
+      <!-- /HEADER CONTENT -->
+      </div>  <!-- /container -->
+    </div>  <!-- /segment-navbar -->
+    <!--status-bar-->
+
+    <div id="segment-breadcrumb" class="segment">  <!-- segment-breadcrumb -->
+      <div class="container">  <!-- container -->
+        <ul class="breadcrumb">
+          <li><a href='toc.html'><b>Table of Contents</b></a></li><li><b>Change Log</b></li>
+
+        </ul>
+      </div>  <!-- /container -->
+    </div>  <!-- /segment-breadcrumb -->
+
+    <a name="top"> </a>
+    <div id="segment-content" class="segment">  <!-- segment-content -->
+      <div class="container">  <!-- container -->
+        <div class="row">
+          <div class="inner-wrapper">
+
+<style type="text/css">
+h2:before{color:silver;counter-increment:section;content:var(--heading-prefix) " ";}
+h3:before{color:silver;counter-increment:sub-section;content:var(--heading-prefix) "." counter(sub-section) " ";}
+h4:before{color:silver;counter-increment:composite;content:var(--heading-prefix) "." counter(sub-section) "." counter(composite) " ";}
+h5:before{color:silver;counter-increment:detail;content:var(--heading-prefix) "." counter(sub-section) "." counter(composite) "." counter(detail) " ";}
+h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefix) "." counter(sub-section) "." counter(composite) "." counter(detail) "." counter(more-detail)" ";}
+</style>
+<div class="col-12">
+  <!--ReleaseHeader--><p id="publish-box">This page is part of the AU Patient Summary (v1.0.0-ci-build: R1) based on <a data-no-external="true" href="http://hl7.org/fhir/R4">FHIR (HL7® FHIR® Standard) R4</a>. <span class="fhir-pb-dynamic" data-pb-version="1.0.0-ci-build" data-pb-canonical="http://hl7.org.au/fhir/ps"><span class="fhir-pb-superseded">The current version which supersedes this version is <a class="fhir-pb-current-link" data-no-external="true" href="http://hl7.org.au/fhir/ps"><span class="fhir-pb-current-version">the current version</span></a></span><span class="fhir-pb-iscurrent" style="display:none">This is the current published version</span><span class="fhir-pb-prerelease" style="display:none">This version is a pre-release. The current official version is <a class="fhir-pb-current-link" data-no-external="true" href="http://hl7.org.au/fhir/ps"><span class="fhir-pb-current-version">the current version</span></a></span></span><script type="text/javascript">(function(){function cmp(a,b){if(a===b)return 0;function p(v){var s=String(v).split('-');return{n:s[0].split('.').map(function(x){return parseInt(x,10)||0;}),pre:s.length>1?s.slice(1).join('-'):null};}var pa=p(a),pb=p(b),i,m=Math.max(pa.n.length,pb.n.length);for(i=0;i<m;i++){var d=(pa.n[i]||0)-(pb.n[i]||0);if(d!==0)return d>0?1:-1;}if(pa.pre&&!pb.pre)return -1;if(!pa.pre&&pb.pre)return 1;if(pa.pre&&pb.pre)return pa.pre<pb.pre?-1:(pa.pre>pb.pre?1:0);return 0;}function sh(el,on){if(el)el.style.display=on?'':'none';}function pn(u){try{return new URL(u,document.baseURI).pathname.replace(/\/+$/,'');}catch(e){return null;}}function init(){var dyn=document.querySelectorAll('span.fhir-pb-dynamic');var pv=document.querySelectorAll('span.fhir-pb-page-versions');if(!dyn.length&&!pv.length)return;var canonical=dyn.length?dyn[0].getAttribute('data-pb-canonical'):null;if(!canonical)return;var pgVer=(dyn.length?dyn[0]:pv[0]).getAttribute('data-pb-version');var igRoot=null;if(pgVer){var seg='/'+pgVer+'/';var si=location.pathname.indexOf(seg);if(si>=0)igRoot=location.pathname.slice(0,si);}if(igRoot===null)igRoot=pn(canonical);if(igRoot===null)return;var plUrl=igRoot+'/package-list.json';fetch(plUrl,{cache:'no-cache'}).then(function(r){return r.json();}).then(function(pl){var list=(pl&&pl.list)||[];var cur=null;list.forEach(function(e){if(e&&e.current===true&&e.version!=='current'&&typeof e.path==='string'&&e.path.indexOf(canonical)===0){cur=e;}});if(cur)Array.prototype.forEach.call(dyn,function(box){if(box.getAttribute('data-pb-done'))return;box.setAttribute('data-pb-done','1');var thisVer=box.getAttribute('data-pb-version');Array.prototype.forEach.call(box.querySelectorAll('.fhir-pb-current-version'),function(s){s.textContent=cur.version;});Array.prototype.forEach.call(box.querySelectorAll('a.fhir-pb-current-link'),function(a){a.setAttribute('href',cur.path);});var d=cmp(cur.version,thisVer);sh(box.querySelector('.fhir-pb-superseded'),d>0);sh(box.querySelector('.fhir-pb-iscurrent'),d===0);sh(box.querySelector('.fhir-pb-prerelease'),d<0);});var ms=list.filter(function(e){return e&&e.milestoneName&&typeof e.path==='string'&&e.path.indexOf(canonical)===0;});Array.prototype.forEach.call(pv,function(span){if(span.getAttribute('data-pb-done'))return;span.setAttribute('data-pb-done','1');var thisVer=span.getAttribute('data-pb-version');var mine=list.filter(function(e){return e.version===thisVer;})[0];var myBase=mine?pn(mine.path):null;var here=location.pathname;var rel=(myBase&&here.indexOf(myBase+'/')===0)?here.slice(myBase.length+1):here.substring(here.lastIndexOf('/')+1);Promise.all(ms.map(function(m){var href=pn(m.path)+'/'+rel;if(m.version===thisVer)return Promise.resolve({m:m,href:href,ok:true,self:true});return fetch(href,{method:'HEAD'}).then(function(r){return{m:m,href:href,ok:r.ok,self:false};}).catch(function(){return{m:m,href:href,ok:false};});})).then(function(res){var parts=res.filter(function(x){return x.ok;}).map(function(x){return x.self?('<b>'+x.m.milestoneName+'</b>'):('<a data-no-external="true" href="'+x.href+'">'+x.m.milestoneName+'</a>');});if(parts.length){span.innerHTML='. Page versions: '+parts.join(' ');}});});}).catch(function(){});}if(document.readyState!=='loading'){init();}else{document.addEventListener('DOMContentLoaded',init);}})();</script>.  For a full list of available versions, see the <a data-no-external="true" href="http://hl7.org.au/fhir/ps/history.html">Directory of published versions</a><span class="fhir-pb-page-versions" data-pb-version="1.0.0-ci-build"></span></p><!--EndReleaseHeader-->
+  <h2>Change Log</h2>
+  
+
+
+
+
+
+  <table class="colsi">
+    <tr>
+  
+      <td>
+        <i>Page standards status:</i> <a href="http://hl7.org/fhir/R4/versions.html#std-process" title="Standard Status">Informative</a>
+        
+      </td>
+  
+  
+    </tr>
+  </table>
+
+
+
+
+
+
+
+
+    <p><!-- white space is critical inside of capture --></p>
+<div class="markdown-toc">
+<ul id="markdown-toc">
+  <li><a href="#release-tbd" id="markdown-toc-release-tbd">Release TBD</a></li>
+  <li><a href="#release-100-ballot" id="markdown-toc-release-100-ballot">Release 1.0.0-ballot</a></li>
+</ul>
+
+</div>
+<h3 id="release-tbd">Release TBD</h3>
+<ul>
+  <li>Publication date: TBD</li>
+  <li>Publication status: TBD</li>
+  <li>Based on FHIR version: 4.0.1</li>
+</ul>
+
+<p>This change log documents the significant updates and resolutions implemented from version <a href="https://hl7.org.au/fhir/ps/1.0.0-ballot/index.html">1.0.0-ballot</a> to TBD.</p>
+
+<h4 id="changes-in-this-version">Changes in this version</h4>
+<ul>
+  <li>added guidance clarifying expectations for Must Support obligations on elements with multiple cardinality in <a href="general-requirements.html">General Requirements</a> page <a href="https://jira.hl7.org/browse/FHIR-53114">AU PS: FHIR-53114</a></li>
+  <li><a href="StructureDefinition-au-ps-medicationstatement.html">AU PS MedicationStatement</a>:
+    <ul>
+      <li>changed MedicationStatement.medicationCodeableConcept binding to Australian Medication Use (preferred) <a href="https://jira.hl7.org/browse/FHIR-53469">AU Base: FHIR-53469</a></li>
+      <li>changed guidance for representing no known medications using SNOMED CT 787481004 |No known medications|, aligned with IPS guidance <a href="https://jira.hl7.org/browse/FHIR-52274">AU PS: FHIR-52274</a></li>
+    </ul>
+  </li>
+  <li><a href="StructureDefinition-au-ps-organization.html">AU PS Organization</a>:
+    <ul>
+      <li>added AU HAE as an allowed type for Organization.identifier <a href="https://jira.hl7.org/browse/FHIR-54928">AU Base: FHIR-54928</a></li>
+      <li>added AU HSP-O as an allowed type for Organization.identifier <a href="https://jira.hl7.org/browse/FHIR-54923">AU Base: FHIR-54923</a></li>
+    </ul>
+  </li>
+  <li><a href="StructureDefinition-au-ps-relatedperson.html">AU PS RelatedPerson</a>:
+    <ul>
+      <li>applied technical correction to remove SHOULD:display obligation on RelatedPerson.patient.reference for the AU PS Consumer <a href="https://jira.hl7.org/browse/FHIR-56175">AU PS: FHIR-56175</a></li>
+    </ul>
+  </li>
+</ul>
+
+<h3 id="release-100-ballot">Release 1.0.0-ballot</h3>
+<ul>
+  <li>Publication date: 2026-02-16</li>
+  <li>Publication status: Ballot for Working Standard</li>
+  <li>Based on FHIR version: 4.0.1</li>
+</ul>
+
+<p>This change log documents the significant updates and resolutions implemented from version <a href="https://hl7.org.au/fhir/ps/0.3.0-ballot/index.html">0.3.0-ballot</a> to <a href="https://hl7.org.au/fhir/ps/1.0.0-ballot/index.html">1.0.0-ballot</a>. The changes in this update are for ballot.</p>
+
+<h4 id="changes-in-this-version-1">Changes in this version</h4>
+<ul>
+  <li>changed AU PS Consumer guidance to align wording with the handle obligation (replace "consume resources" with "handle") in <a href="https://hl7.org.au/fhir/ps/1.0.0-ballot/general-requirements.html">General Requirements</a> page <a href="https://jira.hl7.org/browse/FHIR-52616">AU PS: FHIR-52616</a>.</li>
+  <li>added plain language text clarifying the meaning of SHALL:handle obligation for AU PS Consumers in <a href="https://hl7.org.au/fhir/ps/1.0.0-ballot/general-requirements.html">General Requirements</a> page <a href="https://jira.hl7.org/browse/FHIR-53033">AU PS: FHIR-53033</a>.</li>
+  <li>changed <a href="https://hl7.org.au/fhir/ps/1.0.0-ballot/generation-and-access.html">Generation and Access</a> page to retain only options in line with current community interest <a href="https://github.com/hl7au/au-fhir-ps/issues/91">au-fhir-ps #91</a>.</li>
+  <li>updated mapping of AUCDI element Date/time of onset of first reaction in the Adverse reaction risk summary data group to be AllergyIntolerance.onset[x] <a href="https://jira.hl7.org/browse/FHIR-53631">AU PS: FHIR-53631</a>.</li>
+  <li><a href="https://hl7.org.au/fhir/ps/1.0.0-ballot/StructureDefinition-au-ps-allergyintolerance.html">AU PS AllergyIntolerance</a>:
+    <ul>
+      <li>changed AllergyIntolerance.reaction.manifestation binding to Adverse Reaction Clinical Manifestation (preferred) <a href="https://jira.hl7.org/browse/FHIR-47076">AU Base: FHIR-47076</a></li>
+      <li>removed SHOULD:display obligation on AllergyIntolerance.patient.reference for the AU PS Consumer <a href="https://jira.hl7.org/browse/FHIR-51258">IPS: FHIR-51258</a></li>
+      <li>changed AllergyIntolerance.code obligation for the AU PS Producer from SHALL:populate-if-known to SHALL:populate <a href="https://jira.hl7.org/browse/FHIR-52411">AU PS: FHIR-52411</a></li>
+      <li>changed AllergyIntolerance.patient obligation for the AU PS Producer from SHALL:populate-if-known to SHALL:populate <a href="https://jira.hl7.org/browse/FHIR-52411">AU PS: FHIR-52411</a></li>
+      <li>changed AllergyIntolerance.patient.reference obligation for the AU PS Producer from SHALL:populate-if-known to SHALL:populate <a href="https://jira.hl7.org/browse/FHIR-53115">AU PS: FHIR-53115</a></li>
+    </ul>
+  </li>
+  <li><a href="https://hl7.org.au/fhir/ps/1.0.0-ballot/StructureDefinition-au-ps-bundle.html">AU PS Bundle</a>:
+    <ul>
+      <li>changed obligations for all mandatory elements for the AU PS Producer from SHALL:able-to-populate to SHALL:populate <a href="https://jira.hl7.org/browse/FHIR-51440">AU PS: FHIR-51440</a></li>
+    </ul>
+  </li>
+  <li><a href="https://hl7.org.au/fhir/ps/1.0.0-ballot/StructureDefinition-au-ps-composition.html">AU PS Composition</a>:
+    <ul>
+      <li>changed Composition.section[all slices].code cardinality from 0..1 to 1..1, and added Must Support and obligation SHALL:handle for the AU PS Consumer <a href="https://jira.hl7.org/browse/FHIR-51231">IPS: FHIR-51231</a></li>
+      <li>changed Composition.section.code to remove use of the CodeableConceptIPS <a href="https://jira.hl7.org/browse/FHIR-51231">IPS: FHIR-51231</a></li>
+      <li>removed the cardinality constraint on Composition.section[all slices].extension:section-note, changing it from 0..1 to 0..* <a href="https://jira.hl7.org/browse/FHIR-50271">IPS: FHIR-50271</a></li>
+      <li>removed SHOULD:display obligation on Composition.identifier, Composition.type, and Composition.subject.reference for the AU PS Consumer <a href="https://jira.hl7.org/browse/FHIR-51258">IPS: FHIR-51258</a></li>
+      <li>changed Composition.section[all slices].title and Composition.section[all slices].text obligations from SHALL:populate-if-known to SHALL:populate for the AU PS Producer <a href="https://jira.hl7.org/browse/FHIR-51259">IPS: FHIR-51259</a></li>
+      <li>added Composition.section.title and Composition.section.text with associated Must Support and obligations in each section slice <a href="https://jira.hl7.org/browse/FHIR-51871">AU PS: FHIR-51871</a></li>
+      <li>changed Composition.section.entry obligation for the AU PS Producer from SHOULD:populate-if-known to SHOULD:populate in the following sections <a href="https://jira.hl7.org/browse/FHIR-51834">AU PS: FHIR-51834</a>:
+        <ul>
+          <li>Patient Summary Immunizations Section (Composition.section:sectionImmunizations)</li>
+          <li>Patient Summary Results Section (Composition.section:sectionResults)</li>
+          <li>Patient Summary History of Procedures Section (Composition.section:sectionProceduresHx)</li>
+          <li>Patient Summary Medical Devices Section (Composition.section:sectionMedicalDevices)</li>
+        </ul>
+      </li>
+      <li>changed obligations for the following elements for the AU PS Producer from SHALL:able-to-populate to SHALL:populate <a href="https://jira.hl7.org/browse/FHIR-51972">IPS: FHIR-51972</a>:
+        <ul>
+          <li>Composition.author</li>
+          <li>Composition.title</li>
+          <li>Composition.event:careProvisioningEvent.code</li>
+        </ul>
+      </li>
+      <li>changed the following elements to use CodeableConceptIPS <a href="https://jira.hl7.org/browse/FHIR-52953">AU PS: FHIR-52953</a>:
+        <ul>
+          <li>Composition.event:careProvisioningEvent.code</li>
+          <li>Composition.section[all slices].code</li>
+          <li>Composition.section:sectionProblems.emptyReason</li>
+          <li>Composition.section:sectionAllergies.emptyReason</li>
+          <li>Composition.section:sectionMedications.emptyReason</li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+  <li><a href="https://hl7.org.au/fhir/ps/1.0.0-ballot/StructureDefinition-au-ps-condition.html">AU PS Condition</a>:
+    <ul>
+      <li>changed Condition.bodySite to remove use of the CodeableConceptIPS <a href="https://jira.hl7.org/browse/FHIR-51257">IPS: FHIR-51257</a></li>
+      <li>removed SHOULD:display obligation on Condition.subject.reference for the AU PS Consumer <a href="https://jira.hl7.org/browse/FHIR-51258">IPS: FHIR-51258</a></li>
+      <li>changed Condition.code obligation for the AU PS Producer from SHALL:populate-if-known to SHALL:populate <a href="https://jira.hl7.org/browse/FHIR-52411">AU PS: FHIR-52411</a></li>
+      <li>changed Condition.subject obligation for the AU PS Producer from SHALL:populate-if-known to SHALL:populate <a href="https://jira.hl7.org/browse/FHIR-52411">AU PS: FHIR-52411</a></li>
+      <li>changed Condition.subject.reference obligation for the AU PS Producer from SHALL:populate-if-known to SHALL:populate <a href="https://jira.hl7.org/browse/FHIR-53115">AU PS: FHIR-53115</a></li>
+    </ul>
+  </li>
+  <li><a href="https://hl7.org.au/fhir/ps/1.0.0-ballot/ActorDefinition-au-ps-actor-consumer.html">AU PS Consumer ActorDefinition</a>:
+    <ul>
+      <li>changed requirement for recommended AU PS Composition sections from SHOULD to SHALL to implement the profiles referenced by Composition.section.entry <a href="https://jira.hl7.org/browse/FHIR-52345">AU PS: FHIR-52345</a></li>
+    </ul>
+  </li>
+  <li><a href="https://hl7.org.au/fhir/ps/1.0.0-ballot/StructureDefinition-au-ps-encounter.html">AU PS Encounter</a>:
+    <ul>
+      <li>changed Encounter.serviceType to use CodeableConceptIPS <a href="https://jira.hl7.org/browse/FHIR-51872">AU PS: FHIR-51872</a></li>
+      <li>changed Encounter.participant.type to use CodeableConceptIPS <a href="https://jira.hl7.org/browse/FHIR-51872">AU PS: FHIR-51872</a></li>
+      <li>changed Encounter.reasonCode to use CodeableConceptIPS <a href="https://jira.hl7.org/browse/FHIR-51872">AU PS: FHIR-51872</a></li>
+    </ul>
+  </li>
+  <li><a href="https://hl7.org.au/fhir/ps/1.0.0-ballot/StructureDefinition-au-ps-immunization.html">AU PS Immunization</a>:
+    <ul>
+      <li>changed Immunization.site and Immunization.route to remove use of the CodeableConceptIPS <a href="https://jira.hl7.org/browse/FHIR-51257">IPS: FHIR-51257</a></li>
+      <li>removed SHOULD:display obligation on Immunization.patient.reference for the AU PS Consumer <a href="https://jira.hl7.org/browse/FHIR-51258">IPS: FHIR-51258</a></li>
+      <li>changed Immunization.vaccineCode obligation for the AU PS Producer from SHALL:populate-if-known to SHALL:populate <a href="https://jira.hl7.org/browse/FHIR-52411">AU PS: FHIR-52411</a></li>
+      <li>changed Immunization.patient obligation for the AU PS Producer from SHALL:populate-if-known to SHALL:populate <a href="https://jira.hl7.org/browse/FHIR-52411">AU PS: FHIR-52411</a></li>
+      <li>changed Immunization.patient.reference obligation for the AU PS Producer from SHALL:populate-if-known to SHALL:populate <a href="https://jira.hl7.org/browse/FHIR-53115">AU PS: FHIR-53115</a></li>
+      <li>removed SHOULD:display obligation on Immunization.vaccineCode coding slices amtVaccineCode and airVaccineCode for the AU PS Consumer <a href="https://jira.hl7.org/browse/FHIR-53077">AU PS: FHIR-53077</a></li>
+      <li>changed Immunization.status obligation for the AU PS Producer from SHALL:populate-if-known to SHALL:populate <a href="https://jira.hl7.org/browse/FHIR-53116">AU PS: FHIR-53116</a></li>
+    </ul>
+  </li>
+  <li><a href="https://hl7.org.au/fhir/ps/1.0.0-ballot/StructureDefinition-au-ps-medication.html">AU PS Medication</a>:
+    <ul>
+      <li>changed Medication to add a comment that the IPS guidance preferencing the use of Medication resource is not adopted by AU PS at this time <a href="https://jira.hl7.org/browse/FHIR-51876">AU PS: FHIR-51876</a></li>
+      <li>added profile specific implementation guidance that this resource SHALL NOT be used to represent no known current medications for a patient and MedicationStatement SHOULD be used instead <a href="https://jira.hl7.org/browse/FHIR-52274">AU PS: FHIR-52274</a></li>
+      <li>applied technical correction to add obligations SHALL:populate-if-known for the AU PS Producer, and SHALL:handle for the AU PS Consumer to Medication.code coding slices pbs and amt <a href="https://jira.hl7.org/browse/FHIR-53374">AU PS: FHIR-53374</a></li>
+      <li>changed Medication.ingredient.item[x] binding to Medication Ingredient (preferred) <a href="https://jira.hl7.org/browse/FHIR-44781">AU Base: FHIR-44781</a></li>
+    </ul>
+  </li>
+  <li><a href="https://hl7.org.au/fhir/ps/1.0.0-ballot/StructureDefinition-au-ps-medicationrequest.html">AU PS MedicationRequest</a>:
+    <ul>
+      <li>changed MedicationRequest.dosageInstruction.route to remove use of the CodeableConceptIPS <a href="https://jira.hl7.org/browse/FHIR-51257">IPS: FHIR-51257</a></li>
+      <li>changed MedicationRequest.doNotPerform to constrain out 'true' <a href="https://jira.hl7.org/browse/FHIR-51483">IPS: FHIR-51483</a></li>
+      <li>removed SHOULD:display obligation on MedicationRequest.subject.reference for the AU PS Consumer <a href="https://jira.hl7.org/browse/FHIR-51258">IPS: FHIR-51258</a></li>
+      <li>changed MedicationRequest.medication:medicationCodeableConcept to use CodeableConceptIPS <a href="https://jira.hl7.org/browse/FHIR-51970">IPS: FHIR-51970</a></li>
+      <li>changed MedicationRequest.medication[x] to add a comment that the IPS guidance preferencing the use of Medication resources, with use of medicationCodeableConcept only when no other information than a simple code is available, is not adopted by AU PS at this time <a href="https://jira.hl7.org/browse/FHIR-51876">AU PS: FHIR-51876</a></li>
+      <li>changed MedicationRequest.medication[x] obligation for the AU PS Producer from SHALL:populate-if-known to SHALL:populate (change applied to MedicationRequest.medication[x]:medicationCodeableConcept and MedicationRequest.medication[x]:medicationReference) <a href="https://jira.hl7.org/browse/FHIR-52411">AU PS: FHIR-52411</a></li>
+      <li>changed MedicationRequest.subject obligation for the AU PS Producer from SHALL:populate-if-known to SHALL:populate <a href="https://jira.hl7.org/browse/FHIR-52411">AU PS: FHIR-52411</a></li>
+      <li>changed MedicationRequest.reasonCode to use CodeableConceptIPS <a href="https://jira.hl7.org/browse/FHIR-52953">AU PS: FHIR-52953</a></li>
+      <li>changed MedicationRequest.subject.reference obligation for the AU PS Producer from SHALL:populate-if-known to SHALL:populate <a href="https://jira.hl7.org/browse/FHIR-53115">AU PS: FHIR-53115</a></li>
+      <li>added profile specific implementation guidance that this resource SHALL NOT be used to represent no known current medications for a patient and MedicationStatement SHOULD be used instead <a href="https://jira.hl7.org/browse/FHIR-52274">AU PS: FHIR-52274</a></li>
+      <li>removed SHOULD:display obligation on MedicationRequest.medication[x]:medicationCodeableConcept coding slices pbs and amt for the AU PS Consumer <a href="https://jira.hl7.org/browse/FHIR-53077">AU PS: FHIR-53077</a></li>
+      <li>changed MedicationRequest.status obligation for the AU PS Producer from SHALL:populate-if-known to SHALL:populate <a href="https://jira.hl7.org/browse/FHIR-53116">AU PS: FHIR-53116</a></li>
+      <li>changed MedicationRequest.intent obligation for the AU PS Producer from SHALL:populate-if-known to SHALL:populate <a href="https://jira.hl7.org/browse/FHIR-53116">AU PS: FHIR-53116</a></li>
+    </ul>
+  </li>
+  <li><a href="https://hl7.org.au/fhir/ps/1.0.0-ballot/StructureDefinition-au-ps-medicationstatement.html">AU PS MedicationStatement</a>:
+    <ul>
+      <li>changed MedicationStatement.dosage.route to remove use of the CodeableConceptIPS <a href="https://jira.hl7.org/browse/FHIR-51257">IPS: FHIR-51257</a></li>
+      <li>removed SHOULD:display obligation on MedicationStatement.subject.reference for the AU PS Consumer <a href="https://jira.hl7.org/browse/FHIR-51258">IPS: FHIR-51258</a></li>
+      <li>changed MedicationStatement.medication[x] to add a comment that the IPS guidance preferencing the use of Medication resources, with use of medicationCodeableConcept only when no other information than a simple code is available, is not adopted by AU PS at this time <a href="https://jira.hl7.org/browse/FHIR-51876">AU PS: FHIR-51876</a></li>
+      <li>changed MedicationStatement.medication[x] obligation for the AU PS Producer from SHALL:populate-if-known to SHALL:populate (change applied to MedicationStatement.medication[x]:medicationCodeableConcept and MedicationStatement.medication[x]:medicationReference) <a href="https://jira.hl7.org/browse/FHIR-52411">AU PS: FHIR-52411</a></li>
+      <li>changed MedicationStatement.subject obligation for the AU PS Producer from SHALL:populate-if-known to SHALL:populate <a href="https://jira.hl7.org/browse/FHIR-52411">AU PS: FHIR-52411</a></li>
+      <li>changed MedicationStatement.subject.reference obligation for the AU PS Producer from SHALL:populate-if-known to SHALL:populate <a href="https://jira.hl7.org/browse/FHIR-53115">AU PS: FHIR-53115</a></li>
+      <li>removed SHOULD:display obligation on MedicationStatement.medication[x]:medicationCodeableConcept coding slices pbs and amt for the AU PS Consumer <a href="https://jira.hl7.org/browse/FHIR-53077">AU PS: FHIR-53077</a></li>
+      <li>changed MedicationStatement.reasonCode to use CodeableConceptIPS <a href="https://jira.hl7.org/browse/FHIR-52953">AU PS: FHIR-52953</a></li>
+      <li>added profile specific implementation guidance for representing no known current medications for a patient <a href="https://jira.hl7.org/browse/FHIR-52274">AU PS: FHIR-52274</a></li>
+      <li>changed MedicationStatement.status obligation for the AU PS Producer from SHALL:populate-if-known to SHALL:populate <a href="https://jira.hl7.org/browse/FHIR-53116">AU PS: FHIR-53116</a></li>
+    </ul>
+  </li>
+  <li><a href="https://hl7.org.au/fhir/ps/1.0.0-ballot/StructureDefinition-au-ps-organization.html">AU PS Organization</a>:
+    <ul>
+      <li>applied technical correction to add obligations SHALL:populate-if-known for the AU PS Producer, and SHALL:handle and SHOULD:display for the AU PS Consumer to Organization.telecom.system <a href="https://jira.hl7.org/browse/FHIR-52835">AU PS: FHIR-52835</a></li>
+      <li>applied technical correction to add obligations SHALL:populate-if-known for the AU PS Producer, and SHALL:handle and SHOULD:display for the AU PS Consumer to Organization.telecom.value <a href="https://jira.hl7.org/browse/FHIR-52835">AU PS: FHIR-52835</a></li>
+      <li>changed Organization.type to use CodeableConceptIPS <a href="https://jira.hl7.org/browse/FHIR-52953">AU PS: FHIR-52953</a></li>
+      <li>removed SHOULD:display obligation on the following elements for the AU PS Consumer <a href="https://jira.hl7.org/browse/FHIR-52836">AU PS: FHIR-52836</a>:
+        <ul>
+          <li>Organization.telecom.system</li>
+          <li>Organization.telecom.value</li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+  <li><a href="https://hl7.org.au/fhir/ps/1.0.0-ballot/StructureDefinition-au-ps-diagnosticresult-path.html">AU PS Pathology Result Observation</a>:
+    <ul>
+      <li>changed Observation.interpretation to remove use of the CodeableConceptIPS <a href="https://jira.hl7.org/browse/FHIR-51257">IPS: FHIR-51257</a></li>
+      <li>removed SHOULD:display obligation on Observation.subject.reference for the AU PS Consumer <a href="https://jira.hl7.org/browse/FHIR-51258">IPS: FHIR-51258</a></li>
+      <li>changed Observation.code obligation for the AU PS Producer from SHALL:populate-if-known to SHALL:populate <a href="https://jira.hl7.org/browse/FHIR-52411">AU PS: FHIR-52411</a></li>
+      <li>changed Observation.subject obligation for the AU PS Producer from SHALL:populate-if-known to SHALL:populate <a href="https://jira.hl7.org/browse/FHIR-52411">AU PS: FHIR-52411</a></li>
+      <li>changed the following elements to use CodeableConceptIPS <a href="https://jira.hl7.org/browse/FHIR-52953">AU PS: FHIR-52953</a>:
+        <ul>
+          <li>Observation.category:lab</li>
+          <li>Observation.category:specificDiscipline</li>
+          <li>Observation.dataAbsentReason</li>
+          <li>Observation.interpretation</li>
+          <li>Observation.referenceRange.type</li>
+          <li>Observation.component.code</li>
+          <li>Observation.value[x]:valueCodeableConcept</li>
+          <li>Observation.component.dataAbsentReason</li>
+        </ul>
+      </li>
+      <li>changed Observation.subject.reference obligation for the AU PS Producer from SHALL:populate-if-known to SHALL:populate <a href="https://jira.hl7.org/browse/FHIR-53115">AU PS: FHIR-53115</a></li>
+    </ul>
+  </li>
+  <li><a href="https://hl7.org.au/fhir/ps/1.0.0-ballot/StructureDefinition-au-ps-patient.html">AU PS Patient</a>:
+    <ul>
+      <li>changed Patient.contact.relationship to remove use of the CodeableConceptIPS <a href="https://jira.hl7.org/browse/FHIR-51257">IPS: FHIR-51257</a></li>
+      <li>added SHOULD:able-to-populate obligation on Patient.name.text for the AU PS Producer <a href="https://jira.hl7.org/browse/FHIR-51877">AU PS: FHIR-51877</a></li>
+      <li>added a comment to Patient.name.text strongly recommending population of this element based on IPS guidance <a href="https://jira.hl7.org/browse/FHIR-51877">AU PS: FHIR-51877</a></li>
+      <li>changed Patient.communication.language to use CodeableConceptIPS <a href="https://jira.hl7.org/browse/FHIR-52953">AU PS: FHIR-52953</a></li>
+      <li>applied technical correction to invariants inv-pat-1 and inv-pat-2 to ensure terminology validation applies to the correct sub-extension values when multiple extension instances are present <a href="https://jira.hl7.org/browse/FHIR-53536">AU Base: FHIR-53536</a></li>
+      <li>removed SHOULD:display obligation on the following elements for the AU PS Consumer <a href="https://jira.hl7.org/browse/FHIR-52836">AU PS: FHIR-52836</a>:
+        <ul>
+          <li>Patient.telecom.system</li>
+          <li>Patient.telecom.value</li>
+          <li>Patient.telecom.use</li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+  <li><a href="https://hl7.org.au/fhir/ps/1.0.0-ballot/StructureDefinition-au-ps-practitionerrole.html">AU PS PractitionerRole</a>:
+    <ul>
+      <li>applied technical correction to add obligations SHALL:populate-if-known for the AU PS Producer, and SHALL:handle and SHOULD:display for the AU PS Consumer to PractitionerRole.telecom.system <a href="https://jira.hl7.org/browse/FHIR-52837">AU PS: FHIR-52837</a></li>
+      <li>applied technical correction to add obligations SHALL:populate-if-known for the AU PS Producer, and SHALL:handle and SHOULD:display for the AU PS Consumer to PractitionerRole.telecom.value <a href="https://jira.hl7.org/browse/FHIR-52837">AU PS: FHIR-52837</a></li>
+      <li>removed SHOULD:display obligation on the following elements for the AU PS Consumer <a href="https://jira.hl7.org/browse/FHIR-52836">AU PS: FHIR-52836</a>:
+        <ul>
+          <li>PractitionerRole.telecom.system</li>
+          <li>PractitionerRole.telecom.value</li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+  <li><a href="https://hl7.org.au/fhir/ps/1.0.0-ballot/StructureDefinition-au-ps-procedure.html">AU PS Procedure</a>:
+    <ul>
+      <li>changed Procedure.bodySite to remove use of the CodeableConceptIPS <a href="https://jira.hl7.org/browse/FHIR-51257">IPS: FHIR-51257</a></li>
+      <li>removed SHOULD:display obligation on Procedure.subject.reference for the AU PS Consumer <a href="https://jira.hl7.org/browse/FHIR-51258">IPS: FHIR-51258</a></li>
+      <li>changed Procedure.code obligation for the AU PS Producer from SHALL:populate-if-known to SHALL:populate <a href="https://jira.hl7.org/browse/FHIR-52411">AU PS: FHIR-52411</a></li>
+      <li>changed Procedure.subject obligation for the AU PS Producer from SHALL:populate-if-known to SHALL:populate <a href="https://jira.hl7.org/browse/FHIR-52411">AU PS: FHIR-52411</a></li>
+      <li>changed Procedure.reasonCode to use CodeableConceptIPS <a href="https://jira.hl7.org/browse/FHIR-52953">AU PS: FHIR-52953</a></li>
+      <li>changed Procedure.subject.reference obligation for the AU PS Producer from SHALL:populate-if-known to SHALL:populate <a href="https://jira.hl7.org/browse/FHIR-53115">AU PS: FHIR-53115</a></li>
+      <li>changed Procedure.status obligation for the AU PS Producer from SHALL:populate-if-known to SHALL:populate <a href="https://jira.hl7.org/browse/FHIR-53116">AU PS: FHIR-53116</a></li>
+    </ul>
+  </li>
+  <li><a href="https://hl7.org.au/fhir/ps/1.0.0-ballot/StructureDefinition-au-ps-relatedperson.html">AU PS RelatedPerson</a>:
+    <ul>
+      <li>removed SHOULD:display obligation on the following elements for the AU PS Consumer <a href="https://jira.hl7.org/browse/FHIR-52836">AU PS: FHIR-52836</a>:
+        <ul>
+          <li>RelatedPerson.name.use</li>
+          <li>RelatedPerson.name.family</li>
+          <li>RelatedPerson.name.given</li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+  <li><a href="https://hl7.org.au/fhir/ps/1.0.0-ballot/StructureDefinition-au-ps-smokingstatus.html">AU PS Smoking Status</a>:
+    <ul>
+      <li>changed Observation.valueCodeableConcept to remove use of the CodeableConceptIPS <a href="https://jira.hl7.org/browse/FHIR-51257">IPS: FHIR-51257</a></li>
+      <li>removed SHOULD:display obligation on Observation.subject.reference for the AU PS Consumer <a href="https://jira.hl7.org/browse/FHIR-51258">IPS: FHIR-51258</a></li>
+      <li>changed Observation.code obligation for the AU PS Producer from SHALL:populate-if-known to SHALL:populate <a href="https://jira.hl7.org/browse/FHIR-52411">AU PS: FHIR-52411</a></li>
+      <li>changed Observation.subject obligation for the AU PS Producer from SHALL:populate-if-known to SHALL:populate <a href="https://jira.hl7.org/browse/FHIR-52411">AU PS: FHIR-52411</a></li>
+      <li>changed the following elements to use CodeableConceptIPS <a href="https://jira.hl7.org/browse/FHIR-52953">AU PS: FHIR-52953</a>:
+        <ul>
+          <li>Observation.category</li>
+          <li>Observation.category:socialHistory</li>
+          <li>Observation.value[x]</li>
+          <li>Observation.dataAbsentReason</li>
+        </ul>
+      </li>
+      <li>changed Observation.subject.reference obligation for the AU PS Producer from SHALL:populate-if-known to SHALL:populate <a href="https://jira.hl7.org/browse/FHIR-53115">AU PS: FHIR-53115</a></li>
+    </ul>
+  </li>
+</ul>
+
+
+
+
+</div>
+        </div>  <!-- /inner-wrapper -->
+      </div>  <!-- /row -->
+    </div>  <!-- /container -->
+  </div>  <!-- /segment-content -->
+
+  <script type="text/javascript" src="assets/js/jquery.js"> </script>     <!-- note keep space here, otherwise it will be transformed to empty tag -> fails -->
+  <script type="text/javascript" src="assets/js/jquery-ui.min.js"> </script>
+
+  <script type="text/javascript" src="assets/js/window-hash.js"> </script>
+  <a name="bottom"> </a>
+  <div id="segment-footer" igtool="footer" class="segment">  <!-- segment-footer -->
+    <div class="container">  <!-- container -->
+
+      <div class="inner-wrapper">
+        <p>
+          IG &#169; 2024+ <a style="color:var(--footer-hyperlink-text-color)" href="https://confluence.hl7.org/display/HAFWG">HL7 Australia</a>.  Package hl7.fhir.au.ps#1.0.0-ci-build based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Fri, Jun 19, 2026 03:09+0000">2026-06-19</span>
+          <br/>
+          <span style="color: var(--footer-highlight-text-color)">
+                      Links: <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Table of Contents</a> |
+                 <a style="color: var(--footer-hyperlink-text-color)" href="qa.html">QA Report</a>
+                 
+                
+                 | <a style="color: #81BEF7" target="_blank" href="http://hl7.org.au/fhir/ps/history.html">Version History</a> |
+                 <a style="color: #81BEF7" rel="license" href="http://hl7.org/fhir/R4/license.html"><img style="border-style: none;" alt="CC0" src="cc0.png"/></a> |
+                 <a style="color: #81BEF7" target="_blank" href="http://hl7.org/fhir-issues">Propose a change</a>
+
+          </span>
+        </p>
+      </div>  <!-- /inner-wrapper -->
+    </div>  <!-- /container -->
+  </div>  <!-- /segment-footer -->
+  
+  <div id="segment-post-footer" class="segment hidden">  <!-- segment-post-footer -->
+    <div class="container">  <!-- container -->
+    </div>  <!-- /container -->
+  </div>  <!-- /segment-post-footer -->
+
+  <!-- JS and analytics only. -->
+  <!-- Bootstrap core JavaScript
+  ================================================== -->
+  <!-- Placed at the end of the document so the pages load faster -->
+  <script type="text/javascript" src="assets/js/bootstrap.min.js"> </script>
+  <script type="text/javascript" src="assets/js/respond.min.js"> </script>
+  <script type="text/javascript" src="assets/js/anchor.min.js"> </script>
+  <script type="text/javascript" src="assets/js/clipboard.min.js"> </script>
+  <script type="text/javascript" src="assets/js/clipboard-btn.js"> </script>
+  <script type="text/javascript" src="assets/js/anchor-hover.js"> </script>
+  <!-- Analytics Below
+  ================================================== -->
+  </body>
+</html>
+

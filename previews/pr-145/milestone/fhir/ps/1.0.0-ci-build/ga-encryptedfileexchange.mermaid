@@ -1,0 +1,11 @@
+%%{ init: { "theme": "default", "themeVariables": { "background": "transparent" } } }%%
+
+sequenceDiagram
+    participant Producer as Patient Summary Producer
+    participant Consumer as Patient Summary Consumer
+
+    Note over Producer: Create Patient Summary
+    Producer->>Producer: Encrypt (public key)
+    
+    Producer->>Consumer: Exchange multimedia { encrypted(Bundle { type: 'document' }) }
+    Consumer->>Consumer: Decrypt (private key)

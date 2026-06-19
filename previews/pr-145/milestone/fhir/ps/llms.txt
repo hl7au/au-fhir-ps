@@ -1,0 +1,84 @@
+# hl7.fhir.au.ps#1.0.0-ci-build: AU Patient Summary Implementation Guide
+
+## Pages
+
+* [Home](index.md)
+* [AU PS Producer - Testing](ActorDefinition-au-ps-actor-producer-testing.md)
+* [Generation and Access](generation-and-access.md)
+* [AU PS Producer](ActorDefinition-au-ps-actor-producer.md)
+* [AUCDI](aucdi.md)
+* [Future of AU Patient Summary](future.md)
+* [Use Cases](usecase.md)
+* [Downloads](downloads.md)
+* [AU PS Producer - TTL Representation](ActorDefinition-au-ps-actor-producer.ttl.md)
+* [General Requirements](general-requirements.md)
+* [AU PS Producer - JSON Representation](ActorDefinition-au-ps-actor-producer.json.md)
+* [Support](support.md)
+* [AU PS Consumer - Testing](ActorDefinition-au-ps-actor-consumer-testing.md)
+* [Actor Definitions](actors.md)
+* [AU Variance Statement](variance.md)
+* [AU PS Producer - XML Representation](ActorDefinition-au-ps-actor-producer.xml.md)
+* [General Guidance](general-guidance.md)
+* [Artefacts Summary](artifacts.md)
+* [](ActorDefinition-au-ps-actor-consumer.change.history.md)
+* [Comparison With Other National and International IGs](comparison.md)
+* [Conformance](conformance.md)
+* [Profiles and Extensions](profiles-and-extensions.md)
+* [FHIR artefacts](artefacts.md)
+* [AU PS Consumer - TTL Representation](ActorDefinition-au-ps-actor-consumer.ttl.md)
+* [Relationship With Other IGs](relationship.md)
+* [Terminology](terminology.md)
+* [AU PS Consumer - JSON Representation](ActorDefinition-au-ps-actor-consumer.json.md)
+* [Sex and Gender](sex-and-gender.md)
+* [Examples](examples.md)
+* [Guidance](guidance.md)
+* [](ActorDefinition-au-ps-actor-producer.change.history.md)
+* [License and Legal](license.md)
+* [Interstate GP Visit](uc-interstate.md)
+* [AU PS Consumer - XML Representation](ActorDefinition-au-ps-actor-consumer.xml.md)
+* [The AU PS](the-aups.md)
+* [Declaring Conformance](declaring-conformance.md)
+* [Referral to Specialist and Allied Health](uc-referral.md)
+* [Change Log](changes.md)
+* [AU PS Consumer](ActorDefinition-au-ps-actor-consumer.md)
+* [Security and Privacy](security.md)
+
+## Resources
+
+### Resource Profiles
+
+* [AU PS AllergyIntolerance](StructureDefinition-au-ps-allergyintolerance.md)
+* [AU PS Bundle](StructureDefinition-au-ps-bundle.md)
+* [AU PS Composition](StructureDefinition-au-ps-composition.md)
+* [AU PS Condition](StructureDefinition-au-ps-condition.md)
+* [AU PS Pathology Result Observation](StructureDefinition-au-ps-diagnosticresult-path.md)
+* [AU PS Encounter](StructureDefinition-au-ps-encounter.md)
+* [AU PS Immunization](StructureDefinition-au-ps-immunization.md)
+* [AU PS Medication](StructureDefinition-au-ps-medication.md)
+* [AU PS MedicationRequest](StructureDefinition-au-ps-medicationrequest.md)
+* [AU PS MedicationStatement](StructureDefinition-au-ps-medicationstatement.md)
+* [AU PS Organization](StructureDefinition-au-ps-organization.md)
+* [AU PS Patient](StructureDefinition-au-ps-patient.md)
+* [AU PS Practitioner](StructureDefinition-au-ps-practitioner.md)
+* [AU PS PractitionerRole](StructureDefinition-au-ps-practitionerrole.md)
+* [AU PS Procedure](StructureDefinition-au-ps-procedure.md)
+* [AU PS RelatedPerson](StructureDefinition-au-ps-relatedperson.md)
+* [AU PS Smoking Status](StructureDefinition-au-ps-smokingstatus.md)
+
+### Basics
+
+* [au-ps-actor-consumer](Basic-au-ps-actor-consumer.md)
+* [au-ps-actor-producer](Basic-au-ps-actor-producer.md)
+
+### ImplementationGuides
+
+* [AU Patient Summary Implementation Guide](index.md)
+
+### Examples
+
+* [aups-basicsummary (Bundle)](Bundle-aups-basicsummary.md)
+* [aups-gpvisit-retrieval (Bundle)](Bundle-aups-gpvisit-retrieval.md)
+* [aups-noknownx (Bundle)](Bundle-aups-noknownx.md)
+* [aups-referral-endoconsult-autogen (Bundle)](Bundle-aups-referral-endoconsult-autogen.md)
+* [aups-referral-endoconsult-curated (Bundle)](Bundle-aups-referral-endoconsult-curated.md)
+* [aups-section-emptyreason (Bundle)](Bundle-aups-section-emptyreason.md)

@@ -1,0 +1,23 @@
+{
+  "resourceType" : "ValueSet",
+  "id" : "b31ca674-365d-4488-9949-cbbeff1c9145-116",
+  "url" : "http://hl7.org/fhir/comparison/ValueSet/b31ca674-365d-4488-9949-cbbeff1c9145-116",
+  "name" : "UnionSNOMEDCTMedicationAsNeededReasonCodesAndClinicalFinding",
+  "title" : "Union of SNOMED CT Medication As Needed Reason Codes And Clinical Finding",
+  "status" : "draft",
+  "date" : "2026-06-19T03:13:12+00:00",
+  "compose" : {
+    "include" : [{
+      "filter" : [{
+        "property" : "concept",
+        "op" : "is-a",
+        "value" : "404684003"
+      },
+      {
+        "property" : "concept",
+        "op" : "in",
+        "value" : "32570071000036102"
+      }]
+    }]
+  }
+}

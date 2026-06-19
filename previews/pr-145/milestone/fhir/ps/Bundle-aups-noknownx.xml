@@ -1,0 +1,423 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Bundle xmlns="http://hl7.org/fhir">
+  <id value="aups-noknownx"/>
+  <meta>
+    <profile value="http://hl7.org.au/fhir/ps/StructureDefinition/au-ps-bundle"/>
+  </meta>
+  <language value="en-AU"/>
+  <identifier>
+    <system value="urn:ietf:rfc:3986"/>
+    <value value="urn:uuid:c1b07c4e-7a7a-4711-93e2-9a589b8c87e0"/>
+  </identifier>
+  <type value="document"/>
+  <timestamp value="2025-05-14T08:17:43.912+10:00"/>
+  <entry>
+    <fullUrl value="urn:uuid:63b319ec-7321-4a70-973b-2cead2b28c28"/>
+    <resource>
+      <Composition>
+        <id value="63b319ec-7321-4a70-973b-2cead2b28c28"/>
+        <meta>
+          <profile value="http://hl7.org.au/fhir/ps/StructureDefinition/au-ps-composition"/>
+        </meta>
+        <language value="en-AU"/>
+        <text>
+          <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-AU" lang="en-AU"><a name="Composition_63b319ec-7321-4a70-973b-2cead2b28c28"> </a><p class="res-header-id"><b>Generated Narrative: Composition 63b319ec-7321-4a70-973b-2cead2b28c28</b></p><a name="63b319ec-7321-4a70-973b-2cead2b28c28"> </a><a name="hc63b319ec-7321-4a70-973b-2cead2b28c28"> </a><div style="display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%"><p style="margin-bottom: 0px">Language: en-AU</p><p style="margin-bottom: 0px">Profile: <a href="StructureDefinition-au-ps-composition.html">AU PS Composition</a></p></div><p><b>status</b>: Final</p><p><b>type</b>: <span title="Codes:{http://loinc.org 60591-5}">Patient summary Document</span></p><p><b>date</b>: 2025-05-14</p><p><b>author</b>: <a href="Bundle-aups-noknownx.html#urn-uuid-719de42c-3b25-45d6-b24f-ebec9a753175">PractitionerRole Diagnostic and Interventional Radiologist</a></p><p><b>title</b>: Australian Patient Summary</p><p><b>custodian</b>: <a href="Bundle-aups-noknownx.html#urn-uuid-abfb35a4-7b89-46d1-be21-dec293999a1b">Organization Douglas Radiology</a></p></div>
+        </text>
+        <status value="final"/>
+        <type>
+          <coding>
+            <system value="http://loinc.org"/>
+            <code value="60591-5"/>
+            <display value="Patient summary Document"/>
+          </coding>
+        </type>
+        <subject>
+          <reference value="urn:uuid:03b8cc8a-df59-4daf-b9f2-8b49d3c7579a"/>
+        </subject>
+        <date value="2025-05-14"/>
+        <author>
+          <reference value="urn:uuid:719de42c-3b25-45d6-b24f-ebec9a753175"/>
+        </author>
+        <title value="Australian Patient Summary"/>
+        <custodian>
+          <reference value="urn:uuid:abfb35a4-7b89-46d1-be21-dec293999a1b"/>
+        </custodian>
+        <section>
+          <title value="Active Problems"/>
+          <code>
+            <coding>
+              <system value="http://loinc.org"/>
+              <code value="11450-4"/>
+              <display value="Problem list - Reported"/>
+            </coding>
+          </code>
+          <text>
+            <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-AU" lang="en-AU">30/03/2025 No current problem or disability</div>
+          </text>
+          <entry>
+            <reference value="urn:uuid:df366c47-c739-4c16-939e-b5cf9afb0b7d"/>
+          </entry>
+        </section>
+        <section>
+          <title value="Active Allergies or Intolerances"/>
+          <code>
+            <coding>
+              <system value="http://loinc.org"/>
+              <code value="48765-2"/>
+              <display value="Allergies and adverse reactions Document"/>
+            </coding>
+          </code>
+          <text>
+            <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-AU" lang="en-AU">10/12/2024 No known allergy</div>
+          </text>
+          <entry>
+            <reference value="urn:uuid:9840a67e-3621-470d-9a7c-e559422591f5"/>
+          </entry>
+        </section>
+        <section>
+          <title value="Current Medicines"/>
+          <code>
+            <coding>
+              <system value="http://loinc.org"/>
+              <code value="10160-0"/>
+              <display value="History of Medication use Narrative"/>
+            </coding>
+          </code>
+          <text>
+            <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-AU" lang="en-AU">14/05/2025 No known current medicines</div>
+          </text>
+          <entry>
+            <reference value="urn:uuid:0fc878c1-a158-425f-ba08-ea4366fbb4e1"/>
+          </entry>
+        </section>
+      </Composition>
+    </resource>
+  </entry>
+  <entry>
+    <fullUrl value="urn:uuid:03b8cc8a-df59-4daf-b9f2-8b49d3c7579a"/>
+    <resource>
+      <Patient>
+        <id value="03b8cc8a-df59-4daf-b9f2-8b49d3c7579a"/>
+        <text>
+          <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><a name="Patient_03b8cc8a-df59-4daf-b9f2-8b49d3c7579a"> </a><p class="res-header-id"><b>Generated Narrative: Patient 03b8cc8a-df59-4daf-b9f2-8b49d3c7579a</b></p><a name="03b8cc8a-df59-4daf-b9f2-8b49d3c7579a"> </a><a name="hc03b8cc8a-df59-4daf-b9f2-8b49d3c7579a"> </a><p style="border: 1px #661aff solid; background-color: #e6e6ff; padding: 10px;">Charlotte MORRIS  Female, DoB: 1994-11-11 ( IHI: Austalian Healthcare Identifier - Individual#8003608500314687)</p><hr/><table class="grid"><tr><td style="background-color: #f3f5da" title="Ways to contact the Patient">Contact Detail</td><td colspan="3"><ul><li>ph: 0370106762(Work)</li><li>ph: 0491577644(Mobile)</li><li><a href="mailto:charlotte.morris@my-own-personal-domain.com">charlotte.morris@my-own-personal-domain.com</a></li><li>ph: 0370103886(Home)</li><li>175 Zeppelin Ave Mountain View VIC 3988 AU </li></ul></td></tr><tr><td style="background-color: #f3f5da" title="This extension applies to the Patient, Person, and RelatedPerson resources and is used to indicate whether a person identifies as being of Aboriginal or Torres Strait Islander origin."><a href="http://hl7.org.au/fhir/6.0.0/StructureDefinition-indigenous-status.html">Australian Indigenous Status</a></td><td colspan="3">australian-indigenous-status-1: 1 (Aboriginal but not Torres Strait Islander origin)</td></tr></table></div>
+        </text>
+        <extension url="http://hl7.org.au/fhir/StructureDefinition/indigenous-status">
+          <valueCoding>
+            <system value="https://healthterminologies.gov.au/fhir/CodeSystem/australian-indigenous-status-1"/>
+            <code value="1"/>
+            <display value="Aboriginal but not Torres Strait Islander origin"/>
+          </valueCoding>
+        </extension>
+        <identifier>
+          <extension url="http://hl7.org.au/fhir/StructureDefinition/ihi-status">
+            <valueCoding>
+              <system value="https://healthterminologies.gov.au/fhir/CodeSystem/ihi-status-1"/>
+              <code value="active"/>
+            </valueCoding>
+          </extension>
+          <extension url="http://hl7.org.au/fhir/StructureDefinition/ihi-record-status">
+            <valueCoding>
+              <system value="https://healthterminologies.gov.au/fhir/CodeSystem/ihi-record-status-1"/>
+              <code value="verified"/>
+              <display value="verified"/>
+            </valueCoding>
+          </extension>
+          <type>
+            <coding>
+              <system value="http://terminology.hl7.org/CodeSystem/v2-0203"/>
+              <code value="NI"/>
+            </coding>
+            <text value="IHI"/>
+          </type>
+          <system value="http://ns.electronichealth.net.au/id/hi/ihi/1.0"/>
+          <value value="8003608500314687"/>
+        </identifier>
+        <name>
+          <use value="usual"/>
+          <family value="MORRIS"/>
+          <given value="Charlotte"/>
+        </name>
+        <telecom>
+          <system value="phone"/>
+          <value value="0370106762"/>
+          <use value="work"/>
+        </telecom>
+        <telecom>
+          <system value="phone"/>
+          <value value="0491577644"/>
+          <use value="mobile"/>
+        </telecom>
+        <telecom>
+          <system value="email"/>
+          <value value="charlotte.morris@my-own-personal-domain.com"/>
+        </telecom>
+        <telecom>
+          <system value="phone"/>
+          <value value="0370103886"/>
+          <use value="home"/>
+        </telecom>
+        <gender value="female"/>
+        <birthDate value="1994-11-11"/>
+        <address>
+          <line value="175 Zeppelin Ave"/>
+          <city value="Mountain View"/>
+          <state value="VIC"/>
+          <postalCode value="3988"/>
+          <country value="AU"/>
+        </address>
+      </Patient>
+    </resource>
+  </entry>
+  <entry>
+    <fullUrl value="urn:uuid:abfb35a4-7b89-46d1-be21-dec293999a1b"/>
+    <resource>
+      <Organization>
+        <id value="abfb35a4-7b89-46d1-be21-dec293999a1b"/>
+        <text>
+          <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><a name="Organization_abfb35a4-7b89-46d1-be21-dec293999a1b"> </a><p class="res-header-id"><b>Generated Narrative: Organization abfb35a4-7b89-46d1-be21-dec293999a1b</b></p><a name="abfb35a4-7b89-46d1-be21-dec293999a1b"> </a><a name="hcabfb35a4-7b89-46d1-be21-dec293999a1b"> </a><p><b>identifier</b>: HPI-O/8003629900040482, ABN/81132303164</p><p><b>type</b>: <span title="Codes:{http://www.abs.gov.au/ausstats/abs@.nsf/mf/1292.0 8520}, {http://snomed.info/sct 708175003}">Diagnostic Radiology</span></p><p><b>name</b>: Douglas Radiology</p><p><b>telecom</b>: ph: 0355500107(Work), <a href="mailto:reception@douglasradiology.example.com.au">reception@douglasradiology.example.com.au</a></p><p><b>address</b>: 74 Freedom Lane Douglas VIC 3401 </p></div>
+        </text>
+        <identifier>
+          <type>
+            <coding>
+              <system value="http://terminology.hl7.org.au/CodeSystem/v2-0203"/>
+              <code value="NOI"/>
+            </coding>
+            <text value="HPI-O"/>
+          </type>
+          <system value="http://ns.electronichealth.net.au/id/hi/hpio/1.0"/>
+          <value value="8003629900040482"/>
+        </identifier>
+        <identifier>
+          <type>
+            <coding>
+              <system value="http://terminology.hl7.org/CodeSystem/v2-0203"/>
+              <code value="XX"/>
+            </coding>
+            <text value="ABN"/>
+          </type>
+          <system value="http://hl7.org.au/id/abn"/>
+          <value value="81132303164"/>
+        </identifier>
+        <type>
+          <coding>
+            <system value="http://www.abs.gov.au/ausstats/abs@.nsf/mf/1292.0"/>
+            <code value="8520"/>
+            <display value="Pathology and Diagnostic Imaging Services"/>
+          </coding>
+          <coding>
+            <system value="http://snomed.info/sct"/>
+            <code value="708175003"/>
+            <display value="Diagnostic imaging service"/>
+          </coding>
+          <text value="Diagnostic Radiology"/>
+        </type>
+        <name value="Douglas Radiology"/>
+        <telecom>
+          <system value="phone"/>
+          <value value="0355500107"/>
+          <use value="work"/>
+        </telecom>
+        <telecom>
+          <system value="email"/>
+          <value value="reception@douglasradiology.example.com.au"/>
+        </telecom>
+        <address>
+          <line value="74 Freedom Lane"/>
+          <city value="Douglas"/>
+          <state value="VIC"/>
+          <postalCode value="3401"/>
+        </address>
+      </Organization>
+    </resource>
+  </entry>
+  <entry>
+    <fullUrl value="urn:uuid:719de42c-3b25-45d6-b24f-ebec9a753175"/>
+    <resource>
+      <PractitionerRole>
+        <id value="719de42c-3b25-45d6-b24f-ebec9a753175"/>
+        <meta>
+          <profile value="http://hl7.org.au/fhir/ps/StructureDefinition/au-ps-practitionerrole"/>
+        </meta>
+        <text>
+          <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><a name="PractitionerRole_719de42c-3b25-45d6-b24f-ebec9a753175"> </a><p class="res-header-id"><b>Generated Narrative: PractitionerRole 719de42c-3b25-45d6-b24f-ebec9a753175</b></p><a name="719de42c-3b25-45d6-b24f-ebec9a753175"> </a><a name="hc719de42c-3b25-45d6-b24f-ebec9a753175"> </a><div style="display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%"><p style="margin-bottom: 0px"/><p style="margin-bottom: 0px">Profile: <a href="StructureDefinition-au-ps-practitionerrole.html">AU PS PractitionerRole</a></p></div><p><b>identifier</b>: Medicare Provider Number/2449191X</p><p><b>practitioner</b>: <a href="Bundle-aups-noknownx.html#urn-uuid-f8135a88-5992-4a78-8d9f-6bc3f533292d">Practitioner Palmer BURDETT </a></p><p><b>organization</b>: <a href="Bundle-aups-noknownx.html#urn-uuid-abfb35a4-7b89-46d1-be21-dec293999a1b">Organization Douglas Radiology</a></p><p><b>code</b>: <span title="Codes:{http://www.abs.gov.au/ausstats/abs@.nsf/mf/1220.0 253917}">Diagnostic and Interventional Radiologist</span></p><p><b>specialty</b>: <span title="Codes:{http://snomed.info/sct 408455009}">Interventional radiology - speciality</span></p><p><b>telecom</b>: ph: 0370101180(Work), <a href="mailto:palmer.burdett@douglasradiology.example.com.au">palmer.burdett@douglasradiology.example.com.au</a></p></div>
+        </text>
+        <identifier>
+          <type>
+            <coding>
+              <system value="http://terminology.hl7.org.au/CodeSystem/v2-0203"/>
+              <code value="UPIN"/>
+            </coding>
+            <text value="Medicare Provider Number"/>
+          </type>
+          <system value="http://ns.electronichealth.net.au/id/medicare-provider-number"/>
+          <value value="2449191X"/>
+        </identifier>
+        <practitioner>
+          <reference value="urn:uuid:f8135a88-5992-4a78-8d9f-6bc3f533292d"/>
+        </practitioner>
+        <organization>
+          <reference value="urn:uuid:abfb35a4-7b89-46d1-be21-dec293999a1b"/>
+        </organization>
+        <code>
+          <coding>
+            <system value="http://www.abs.gov.au/ausstats/abs@.nsf/mf/1220.0"/>
+            <code value="253917"/>
+          </coding>
+        </code>
+        <specialty>
+          <coding>
+            <system value="http://snomed.info/sct"/>
+            <code value="408455009"/>
+          </coding>
+        </specialty>
+        <telecom>
+          <system value="phone"/>
+          <value value="0370101180"/>
+          <use value="work"/>
+        </telecom>
+        <telecom>
+          <system value="email"/>
+          <value value="palmer.burdett@douglasradiology.example.com.au"/>
+          <use value="work"/>
+        </telecom>
+      </PractitionerRole>
+    </resource>
+  </entry>
+  <entry>
+    <fullUrl value="urn:uuid:f8135a88-5992-4a78-8d9f-6bc3f533292d"/>
+    <resource>
+      <Practitioner>
+        <id value="f8135a88-5992-4a78-8d9f-6bc3f533292d"/>
+        <meta>
+          <profile value="http://hl7.org.au/fhir/ps/StructureDefinition/au-ps-practitioner"/>
+        </meta>
+        <text>
+          <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><a name="Practitioner_f8135a88-5992-4a78-8d9f-6bc3f533292d"> </a><p class="res-header-id"><b>Generated Narrative: Practitioner f8135a88-5992-4a78-8d9f-6bc3f533292d</b></p><a name="f8135a88-5992-4a78-8d9f-6bc3f533292d"> </a><a name="hcf8135a88-5992-4a78-8d9f-6bc3f533292d"> </a><div style="display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%"><p style="margin-bottom: 0px"/><p style="margin-bottom: 0px">Profile: <a href="StructureDefinition-au-ps-practitioner.html">AU PS Practitioner</a></p></div><p><b>identifier</b>: HPI-I/8003616566719012</p><p><b>name</b>: Palmer BURDETT </p><p><b>telecom</b>: ph: 0370101180(Work), <a href="mailto:palmer.burdett@douglasradiology.example.com.au">palmer.burdett@douglasradiology.example.com.au</a></p><p><b>address</b>: 31 Museum Pde Douglas VIC 3401 </p></div>
+        </text>
+        <identifier>
+          <type>
+            <coding>
+              <system value="http://terminology.hl7.org/CodeSystem/v2-0203"/>
+              <code value="NPI"/>
+              <display value="National provider identifier"/>
+            </coding>
+            <text value="HPI-I"/>
+          </type>
+          <system value="http://ns.electronichealth.net.au/id/hi/hpii/1.0"/>
+          <value value="8003616566719012"/>
+        </identifier>
+        <name>
+          <family value="BURDETT"/>
+          <given value="Palmer"/>
+        </name>
+        <telecom>
+          <system value="phone"/>
+          <value value="0370101180"/>
+          <use value="work"/>
+        </telecom>
+        <telecom>
+          <system value="email"/>
+          <value value="palmer.burdett@douglasradiology.example.com.au"/>
+        </telecom>
+        <address>
+          <line value="31 Museum Pde"/>
+          <city value="Douglas"/>
+          <state value="VIC"/>
+          <postalCode value="3401"/>
+        </address>
+      </Practitioner>
+    </resource>
+  </entry>
+  <entry>
+    <fullUrl value="urn:uuid:9840a67e-3621-470d-9a7c-e559422591f5"/>
+    <resource>
+      <AllergyIntolerance>
+        <id value="9840a67e-3621-470d-9a7c-e559422591f5"/>
+        <text>
+          <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><a name="AllergyIntolerance_9840a67e-3621-470d-9a7c-e559422591f5"> </a><p class="res-header-id"><b>Generated Narrative: AllergyIntolerance 9840a67e-3621-470d-9a7c-e559422591f5</b></p><a name="9840a67e-3621-470d-9a7c-e559422591f5"> </a><a name="hc9840a67e-3621-470d-9a7c-e559422591f5"> </a><p><b>clinicalStatus</b>: <span title="Codes:{http://terminology.hl7.org/CodeSystem/allergyintolerance-clinical active}">Active</span></p><p><b>code</b>: <span title="Codes:{http://snomed.info/sct 716186003}">No known allergy</span></p><p><b>patient</b>: <a href="Bundle-aups-noknownx.html#urn-uuid-03b8cc8a-df59-4daf-b9f2-8b49d3c7579a">Charlotte MORRIS  Female, DoB: 1994-11-11 ( IHI: Austalian Healthcare Identifier - Individual#8003608500314687)</a></p><p><b>recordedDate</b>: 2024-12-10</p></div>
+        </text>
+        <clinicalStatus>
+          <coding>
+            <system value="http://terminology.hl7.org/CodeSystem/allergyintolerance-clinical"/>
+            <code value="active"/>
+            <display value="Active"/>
+          </coding>
+        </clinicalStatus>
+        <code>
+          <coding>
+            <system value="http://snomed.info/sct"/>
+            <code value="716186003"/>
+            <display value="No known allergy"/>
+          </coding>
+          <text value="No known allergy"/>
+        </code>
+        <patient>
+          <reference value="urn:uuid:03b8cc8a-df59-4daf-b9f2-8b49d3c7579a"/>
+        </patient>
+        <recordedDate value="2024-12-10"/>
+      </AllergyIntolerance>
+    </resource>
+  </entry>
+  <entry>
+    <fullUrl value="urn:uuid:0fc878c1-a158-425f-ba08-ea4366fbb4e1"/>
+    <resource>
+      <MedicationStatement>
+        <id value="0fc878c1-a158-425f-ba08-ea4366fbb4e1"/>
+        <text>
+          <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><a name="MedicationStatement_0fc878c1-a158-425f-ba08-ea4366fbb4e1"> </a><p class="res-header-id"><b>Generated Narrative: MedicationStatement 0fc878c1-a158-425f-ba08-ea4366fbb4e1</b></p><a name="0fc878c1-a158-425f-ba08-ea4366fbb4e1"> </a><a name="hc0fc878c1-a158-425f-ba08-ea4366fbb4e1"> </a><p><b>status</b>: Active</p><p><b>medication</b>: <span title="Codes:{http://snomed.info/sct 787481004}">No known current medicines</span></p><p><b>subject</b>: <a href="Bundle-aups-noknownx.html#urn-uuid-03b8cc8a-df59-4daf-b9f2-8b49d3c7579a">Charlotte MORRIS  Female, DoB: 1994-11-11 ( IHI: Austalian Healthcare Identifier - Individual#8003608500314687)</a></p><p><b>effective</b>: 2025-05-14</p></div>
+        </text>
+        <status value="active"/>
+        <medicationCodeableConcept>
+          <coding>
+            <system value="http://snomed.info/sct"/>
+            <code value="787481004"/>
+            <display value="No known medications"/>
+          </coding>
+          <text value="No known current medicines"/>
+        </medicationCodeableConcept>
+        <subject>
+          <reference value="urn:uuid:03b8cc8a-df59-4daf-b9f2-8b49d3c7579a"/>
+        </subject>
+        <effectiveDateTime value="2025-05-14"/>
+      </MedicationStatement>
+    </resource>
+  </entry>
+  <entry>
+    <fullUrl value="urn:uuid:df366c47-c739-4c16-939e-b5cf9afb0b7d"/>
+    <resource>
+      <Condition>
+        <id value="df366c47-c739-4c16-939e-b5cf9afb0b7d"/>
+        <text>
+          <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><a name="Condition_df366c47-c739-4c16-939e-b5cf9afb0b7d"> </a><p class="res-header-id"><b>Generated Narrative: Condition df366c47-c739-4c16-939e-b5cf9afb0b7d</b></p><a name="df366c47-c739-4c16-939e-b5cf9afb0b7d"> </a><a name="hcdf366c47-c739-4c16-939e-b5cf9afb0b7d"> </a><p><b>clinicalStatus</b>: <span title="Codes:{http://terminology.hl7.org/CodeSystem/condition-clinical active}">Active</span></p><p><b>category</b>: <span title="Codes:{http://terminology.hl7.org/CodeSystem/condition-category problem-list-item}">Problem List Item</span></p><p><b>code</b>: <span title="Codes:{http://snomed.info/sct 160245001}">No current problems or disability</span></p><p><b>subject</b>: <a href="Bundle-aups-noknownx.html#urn-uuid-03b8cc8a-df59-4daf-b9f2-8b49d3c7579a">Charlotte MORRIS  Female, DoB: 1994-11-11 ( IHI: Austalian Healthcare Identifier - Individual#8003608500314687)</a></p><p><b>recordedDate</b>: 2025-03-30</p></div>
+        </text>
+        <clinicalStatus>
+          <coding>
+            <system value="http://terminology.hl7.org/CodeSystem/condition-clinical"/>
+            <code value="active"/>
+            <display value="Active"/>
+          </coding>
+        </clinicalStatus>
+        <category>
+          <coding>
+            <system value="http://terminology.hl7.org/CodeSystem/condition-category"/>
+            <code value="problem-list-item"/>
+            <display value="Problem List Item"/>
+          </coding>
+        </category>
+        <code>
+          <coding>
+            <system value="http://snomed.info/sct"/>
+            <code value="160245001"/>
+            <display value="No current problems or disability"/>
+          </coding>
+          <text value="No current problems or disability"/>
+        </code>
+        <subject>
+          <reference value="urn:uuid:03b8cc8a-df59-4daf-b9f2-8b49d3c7579a"/>
+        </subject>
+        <recordedDate value="2025-03-30"/>
+      </Condition>
+    </resource>
+  </entry>
+</Bundle>

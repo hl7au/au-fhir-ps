@@ -1,0 +1,78 @@
+{
+  "packages" : [{
+    "path" : "fhir/package-list.json",
+    "package-id" : "hl7.fhir.au.base",
+    "title" : "Australian Base IG",
+    "canonical" : "http://hl7.org.au/fhir",
+    "category" : "National Base",
+    "ci-build" : "http://build.fhir.org/ig/hl7au/au-fhir-base",
+    "version-count" : 27,
+    "latest" : {
+      "version" : "6.0.0",
+      "date" : "2026-01-15",
+      "path" : "http://hl7.org.au/fhir/6.0.0"
+    },
+    "milestone" : {
+      "version" : "6.0.0",
+      "date" : "2026-01-15",
+      "path" : "http://hl7.org.au/fhir/6.0.0"
+    }
+  },
+  {
+    "path" : "fhir/core/package-list.json",
+    "package-id" : "hl7.fhir.au.core",
+    "title" : "AU Core",
+    "canonical" : "http://hl7.org.au/fhir/core",
+    "category" : "National Base",
+    "ci-build" : "http://build.fhir.org/ig/hl7au/au-fhir-core",
+    "version-count" : 14,
+    "latest" : {
+      "version" : "2.0.0",
+      "date" : "2026-01-28",
+      "path" : "http://hl7.org.au/fhir/core/2.0.0"
+    },
+    "milestone" : {
+      "version" : "2.0.0",
+      "date" : "2026-01-28",
+      "path" : "http://hl7.org.au/fhir/core/2.0.0"
+    }
+  },
+  {
+    "path" : "fhir/ereq/package-list.json",
+    "package-id" : "hl7.fhir.au.ereq",
+    "title" : "AU eRequesting",
+    "canonical" : "http://hl7.org.au/fhir/ereq",
+    "category" : "National Base",
+    "ci-build" : "http://build.fhir.org/ig/hl7au/au-fhir-erequesting",
+    "version-count" : 7,
+    "latest" : {
+      "version" : "1.0.0",
+      "date" : "2026-02-11",
+      "path" : "http://hl7.org.au/fhir/ereq/1.0.0"
+    },
+    "milestone" : {
+      "version" : "1.0.0",
+      "date" : "2026-02-11",
+      "path" : "http://hl7.org.au/fhir/ereq/1.0.0"
+    }
+  },
+  {
+    "path" : "fhir/ps/package-list.json",
+    "package-id" : "hl7.fhir.au.ps",
+    "title" : "AU Patient Summary",
+    "canonical" : "http://hl7.org.au/fhir/ps",
+    "category" : "National Base",
+    "ci-build" : "http://build.fhir.org/ig/hl7au/au-fhir-ps",
+    "version-count" : 8,
+    "latest" : {
+      "version" : "1.0.0-ci-build",
+      "date" : "2026-06-19",
+      "path" : "http://hl7.org.au/fhir/ps/1.0.0-ci-build"
+    },
+    "milestone" : {
+      "version" : "1.0.0-ci-build",
+      "date" : "2026-06-19",
+      "path" : "http://hl7.org.au/fhir/ps/1.0.0-ci-build"
+    }
+  }]
+}

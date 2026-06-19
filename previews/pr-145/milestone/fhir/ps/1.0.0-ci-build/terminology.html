@@ -1,0 +1,1069 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE HTML>
+<html xml:lang="en" xmlns="http://www.w3.org/1999/xhtml" lang="en">
+  <head>
+    <meta content="text/html;charset=utf-8" http-equiv="Content-Type"/>
+    <title>Terminology - AU Patient Summary Implementation Guide v1.0.0-ci-build</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta name="author" content="http://hl7.org/fhir"/>
+
+    <link href="fhir.css" rel="stylesheet"/>
+
+    <!-- Bootstrap core CSS -->
+    <link href="assets/css/bootstrap-fhir.css" rel="stylesheet"/>
+
+    <!-- Project extras -->
+    <link href="assets/css/project.css" rel="stylesheet"/>
+    <link href="assets/css/pygments-manni.css" rel="stylesheet"/>
+    <link href="assets/css/jquery-ui.css" rel="stylesheet"/>
+  	<link href="assets/css/prism.css" rel="stylesheet" />
+  	<link href="assets/css/cqf.css" rel="stylesheet" />
+    <!-- Placeholder for child template CSS declarations -->
+    <link href="assets/css/hl7.css" rel="stylesheet"/>
+
+    <link href="assets/css/fhir.css" rel="stylesheet"/>
+    <link href="assets/css/hl7au.css" rel="stylesheet"/>
+
+
+
+    <script type="text/javascript" src="fhir-table-scripts.js"> </script>
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+    <script src="assets/js/html5shiv.js"></script>
+    <script src="assets/js/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- Favicons -->
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="assets/ico/icon-fhir-144.png"/>
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="assets/ico/icon-fhir-114.png"/>
+    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="assets/ico/icon-fhir-72.png"/>
+    <link rel="apple-touch-icon-precomposed" href="assets/ico/icon-fhir-57.png"/>
+    <link rel="shortcut icon" href="assets/ico/favicon.png"/>
+  </head>
+  <body onload="document.body.style.opacity='1'">
+
+	  <script src="assets/js/prism.js"></script>
+    <script type="text/javascript" src="assets/js/mermaid.js"></script>
+    <script type="text/javascript" src="assets/js/mermaid-init.js"></script>
+    <style type="text/css">h2{--heading-prefix:"7.3"}
+    h3,h4,h5,h6{--heading-prefix:"7.3"}</style>
+    <div id="segment-header" class="segment">  <!-- segment-header -->
+      <div class="container">  <!-- container -->
+
+        <!-- Placeholder for child template header declarations -->
+
+        <div id="hl7-nav">
+          <a id="hl7-logo" data-no-external="true" href="http://hl7.com.au">
+            <img height="50" alt="Visit the HL7 Australia website" src="assets/images/hl7-logo-header.png"/>
+          </a>
+        </div>
+
+        <div id="family-nav">
+          <a id="family-logo" data-no-external="true" href="http://hl7.com.au">
+            <img height="50" alt="Visit the HL7 Australia website" src="assets/images/fhir-au-logo-www.png"/> </a>
+        </div>
+
+
+        <div id="project-nav">
+          <a id="project-logo" data-no-external="true" href="https://sparked.csiro.au/">
+            <img height="50" alt="Visit the Sparked website" src="assets/images/sparked-logo.png"/> </a>
+        </div>
+
+        <!--<div id="hl7-search">
+          <a id="hl7-search-lnk" data-no-external="true" href="http://hl7.org.au/fhir/search"><img alt="Search FHIR" src="assets/images/search.png"/></a>
+        </div>-->
+
+
+        <div id="ig-status">
+          <p><span style="font-size:12pt;font-weight:bold">AU Patient Summary Implementation Guide</span>
+            <br/>
+            <span style="display:inline-block;">1.0.0-ci-build - CI Build
+
+
+
+  <img alt="Australia flag" src="assets/images/aus.svg" height="16" title="Australia"/>
+
+
+            </span>
+          </p>
+        </div>
+      </div> <!-- /container -->
+    </div>  <!-- /segment-header -->
+
+    <div id="segment-navbar" class="segment">  <!-- segment-navbar -->
+      <div id="stripe"> </div>
+      <div class="container">  <!-- container -->
+        <!-- HEADER CONTENT -->
+
+        <nav class="navbar navbar-inverse">
+          <!--status-bar-->
+          <div class="container">
+            <button data-target=".navbar-inverse-collapse" class="navbar-toggle" data-toggle="collapse" type="button">
+              <span class="icon-bar"> </span>
+              <span class="icon-bar"> </span>
+              <span class="icon-bar"> </span>
+            </button>
+            <a class="navbar-brand hidden" href="http://hl7.org/fhir/R4/index.html">FHIR</a>
+            <div class="nav-collapse collapse navbar-inverse-collapse">
+              <ul xmlns="http://www.w3.org/1999/xhtml" class="nav navbar-nav">
+  <li>
+    <a href="index.html">Home</a>
+  </li>
+  <li class="dropdown">
+    <a data-toggle="dropdown" href="#" class="dropdown-toggle">Conformance
+      <b class="caret"></b>
+    </a>
+    <ul class="dropdown-menu">
+      <li>
+        <a href="general-requirements.html">General Requirements</a>
+        <a href="declaring-conformance.html">Declaring Conformance</a>
+      </li>
+    </ul>
+  </li>
+  <li>
+    <a href="the-aups.html">The AU PS</a>
+  </li>
+  <li class="dropdown">
+    <a data-toggle="dropdown" href="#" class="dropdown-toggle">Guidance
+      <b class="caret"></b>
+    </a>
+     <ul class="dropdown-menu">
+      <li>
+        <a href="general-guidance.html">General Guidance</a>
+      </li>
+      <li>
+        <a href="generation-and-access.html">Generation and Access</a>
+      </li>
+      <li>
+        <a href="sex-and-gender.html">Sex and Gender</a>
+      </li>
+      <li>
+        <a href="aucdi.html">AUCDI</a>
+      </li>
+       <li>
+        <a href="relationship.html">Relationship With Other IGs</a>
+      </li>
+      <li>
+        <a href="variance.html">AU Variance Statement</a>
+      </li>
+      <li>
+        <a href="comparison.html">Comparison With Other National and International IGs</a>
+      </li>
+      <li>
+        <a href="future.html">Future of AU PS</a>
+      </li> 
+    </ul>
+  </li>
+  <li class="dropdown">
+    <a data-toggle="dropdown" href="#" class="dropdown-toggle">Use Cases
+      <b class="caret"></b>
+    </a>
+     <ul class="dropdown-menu">
+      <li>
+        <a href="uc-interstate.html">Interstate GP Visit</a>
+      </li>
+      <li>
+        <a href="uc-referral.html">Referral to Specialist and Allied Health</a>
+      </li>
+    </ul>
+  </li>
+  <li>
+    <a href="security.html">Security and Privacy</a>
+  </li>
+  <li class="dropdown">
+    <a data-toggle="dropdown" href="#" class="dropdown-toggle">FHIR Artefacts
+      <b class="caret"></b>
+    </a>
+    <ul class="dropdown-menu">
+       <li>
+        <a href="artifacts.html">Artefacts Summary</a>
+      </li>
+      <li>
+        <a href="profiles-and-extensions.html">Profiles and Extensions</a>
+      </li>
+      <!-- <li>
+        <a href="search-parameters.html">Search Parameters</a>
+      </li>-->
+      <li>
+        <a href="terminology.html">Terminology</a>
+      </li>
+      <!-- <li>
+        <a href="capability-statements.html">Capability Statements</a>
+      </li> -->
+      <li>
+        <a href="actors.html">Actor Definitions</a>
+      </li>
+    </ul>
+  </li>
+  <li>
+    <a href="examples.html">Examples</a>
+  </li>
+  <li class="dropdown">
+    <a data-toggle="dropdown" href="#" class="dropdown-toggle">Support
+      <b class="caret"></b>
+    </a>
+    <ul class="dropdown-menu">
+      <li>
+        <a href="downloads.html">Downloads</a>
+      </li>
+      <li>
+        <a href="license.html">License and Legal</a>
+      </li>
+    </ul>
+  </li>
+  <li>
+    <a href="changes.html">Change Log</a>
+  </li>
+</ul>
+            </div>  <!-- /.nav-collapse -->
+          </div>  <!-- /.container -->
+        </nav>  <!-- /.navbar -->
+      <!-- /HEADER CONTENT -->
+      </div>  <!-- /container -->
+    </div>  <!-- /segment-navbar -->
+    <!--status-bar-->
+
+    <div id="segment-breadcrumb" class="segment">  <!-- segment-breadcrumb -->
+      <div class="container">  <!-- container -->
+        <ul class="breadcrumb">
+          <li><a href='toc.html'><b>Table of Contents</b></a></li><li><a href='artefacts.html'><b>FHIR artefacts</b></a></li><li><b>Terminology</b></li>
+
+        </ul>
+      </div>  <!-- /container -->
+    </div>  <!-- /segment-breadcrumb -->
+
+    <a name="top"> </a>
+    <div id="segment-content" class="segment">  <!-- segment-content -->
+      <div class="container">  <!-- container -->
+        <div class="row">
+          <div class="inner-wrapper">
+
+<style type="text/css">
+h2:before{color:silver;counter-increment:section;content:var(--heading-prefix) " ";}
+h3:before{color:silver;counter-increment:sub-section;content:var(--heading-prefix) "." counter(sub-section) " ";}
+h4:before{color:silver;counter-increment:composite;content:var(--heading-prefix) "." counter(sub-section) "." counter(composite) " ";}
+h5:before{color:silver;counter-increment:detail;content:var(--heading-prefix) "." counter(sub-section) "." counter(composite) "." counter(detail) " ";}
+h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefix) "." counter(sub-section) "." counter(composite) "." counter(detail) "." counter(more-detail)" ";}
+</style>
+<div class="col-12">
+  <!--ReleaseHeader--><p id="publish-box">This page is part of the AU Patient Summary (v1.0.0-ci-build: R1) based on <a data-no-external="true" href="http://hl7.org/fhir/R4">FHIR (HL7® FHIR® Standard) R4</a>. <span class="fhir-pb-dynamic" data-pb-version="1.0.0-ci-build" data-pb-canonical="http://hl7.org.au/fhir/ps"><span class="fhir-pb-superseded">The current version which supersedes this version is <a class="fhir-pb-current-link" data-no-external="true" href="http://hl7.org.au/fhir/ps"><span class="fhir-pb-current-version">the current version</span></a></span><span class="fhir-pb-iscurrent" style="display:none">This is the current published version</span><span class="fhir-pb-prerelease" style="display:none">This version is a pre-release. The current official version is <a class="fhir-pb-current-link" data-no-external="true" href="http://hl7.org.au/fhir/ps"><span class="fhir-pb-current-version">the current version</span></a></span></span><script type="text/javascript">(function(){function cmp(a,b){if(a===b)return 0;function p(v){var s=String(v).split('-');return{n:s[0].split('.').map(function(x){return parseInt(x,10)||0;}),pre:s.length>1?s.slice(1).join('-'):null};}var pa=p(a),pb=p(b),i,m=Math.max(pa.n.length,pb.n.length);for(i=0;i<m;i++){var d=(pa.n[i]||0)-(pb.n[i]||0);if(d!==0)return d>0?1:-1;}if(pa.pre&&!pb.pre)return -1;if(!pa.pre&&pb.pre)return 1;if(pa.pre&&pb.pre)return pa.pre<pb.pre?-1:(pa.pre>pb.pre?1:0);return 0;}function sh(el,on){if(el)el.style.display=on?'':'none';}function pn(u){try{return new URL(u,document.baseURI).pathname.replace(/\/+$/,'');}catch(e){return null;}}function init(){var dyn=document.querySelectorAll('span.fhir-pb-dynamic');var pv=document.querySelectorAll('span.fhir-pb-page-versions');if(!dyn.length&&!pv.length)return;var canonical=dyn.length?dyn[0].getAttribute('data-pb-canonical'):null;if(!canonical)return;var pgVer=(dyn.length?dyn[0]:pv[0]).getAttribute('data-pb-version');var igRoot=null;if(pgVer){var seg='/'+pgVer+'/';var si=location.pathname.indexOf(seg);if(si>=0)igRoot=location.pathname.slice(0,si);}if(igRoot===null)igRoot=pn(canonical);if(igRoot===null)return;var plUrl=igRoot+'/package-list.json';fetch(plUrl,{cache:'no-cache'}).then(function(r){return r.json();}).then(function(pl){var list=(pl&&pl.list)||[];var cur=null;list.forEach(function(e){if(e&&e.current===true&&e.version!=='current'&&typeof e.path==='string'&&e.path.indexOf(canonical)===0){cur=e;}});if(cur)Array.prototype.forEach.call(dyn,function(box){if(box.getAttribute('data-pb-done'))return;box.setAttribute('data-pb-done','1');var thisVer=box.getAttribute('data-pb-version');Array.prototype.forEach.call(box.querySelectorAll('.fhir-pb-current-version'),function(s){s.textContent=cur.version;});Array.prototype.forEach.call(box.querySelectorAll('a.fhir-pb-current-link'),function(a){a.setAttribute('href',cur.path);});var d=cmp(cur.version,thisVer);sh(box.querySelector('.fhir-pb-superseded'),d>0);sh(box.querySelector('.fhir-pb-iscurrent'),d===0);sh(box.querySelector('.fhir-pb-prerelease'),d<0);});var ms=list.filter(function(e){return e&&e.milestoneName&&typeof e.path==='string'&&e.path.indexOf(canonical)===0;});Array.prototype.forEach.call(pv,function(span){if(span.getAttribute('data-pb-done'))return;span.setAttribute('data-pb-done','1');var thisVer=span.getAttribute('data-pb-version');var mine=list.filter(function(e){return e.version===thisVer;})[0];var myBase=mine?pn(mine.path):null;var here=location.pathname;var rel=(myBase&&here.indexOf(myBase+'/')===0)?here.slice(myBase.length+1):here.substring(here.lastIndexOf('/')+1);Promise.all(ms.map(function(m){var href=pn(m.path)+'/'+rel;if(m.version===thisVer)return Promise.resolve({m:m,href:href,ok:true,self:true});return fetch(href,{method:'HEAD'}).then(function(r){return{m:m,href:href,ok:r.ok,self:false};}).catch(function(){return{m:m,href:href,ok:false};});})).then(function(res){var parts=res.filter(function(x){return x.ok;}).map(function(x){return x.self?('<b>'+x.m.milestoneName+'</b>'):('<a data-no-external="true" href="'+x.href+'">'+x.m.milestoneName+'</a>');});if(parts.length){span.innerHTML='. Page versions: '+parts.join(' ');}});});}).catch(function(){});}if(document.readyState!=='loading'){init();}else{document.addEventListener('DOMContentLoaded',init);}})();</script>.  For a full list of available versions, see the <a data-no-external="true" href="http://hl7.org.au/fhir/ps/history.html">Directory of published versions</a><span class="fhir-pb-page-versions" data-pb-version="1.0.0-ci-build"></span></p><!--EndReleaseHeader-->
+  <h2>Terminology</h2>
+  
+
+
+
+
+
+  <table class="colsi">
+    <tr>
+  
+      <td>
+        <i>Page standards status:</i> <a href="http://hl7.org/fhir/R4/versions.html#std-process" title="Standard Status">Informative</a>
+        
+      </td>
+  
+  
+    </tr>
+  </table>
+
+
+
+
+
+
+
+
+    <p><!-- white space is critical inside of capture --></p>
+<div class="markdown-toc">
+<ul id="markdown-toc">
+  <li><a href="#value-sets" id="markdown-toc-value-sets">Value Sets</a></li>
+  <li><a href="#code-systems" id="markdown-toc-code-systems">Code Systems</a></li>
+</ul>
+
+</div>
+<p>This page includes the value sets and code systems supported in AU Patient Summary (AU PS).</p>
+
+<p>AU PS does not define any unique terminology FHIR artefacts. Terminology supported in AU PS are published in <a href="https://build.fhir.org/ig/hl7au/au-fhir-base/terminology.html">AU Base</a>, the FHIR standard, <a href="https://terminology.hl7.org/">HL7 Terminology (THO)</a>, or the <a href="https://www.healthterminologies.gov.au/">National Clinical Terminology Service (NCTS)</a>.</p>
+
+<div class="stu-note">
+Implementers are advised to take note that expansions of value sets visible in this guide may differ from expansions returned with a server using <a href="http://terminology.hl7.org">HL7 Terminology (THO)</a> version 6.0.0 or higher.
+</div>
+
+<h3 id="value-sets">Value Sets</h3>
+
+<p>The following value sets are supported in AU PS, i.e bound as <a href="https://hl7.org/fhir/R4/terminologies.html#preferred">preferred</a> or stronger to a supported element, element slice, or extension in an AU PS profile.</p>
+
+<p>Column attribute descriptions are as follows:</p>
+<ul>
+  <li><strong>ValueSet:</strong> The title of the value set.</li>
+  <li><strong>Profiles and Extensions where used:</strong> The profiles and extensions that reference the value set.</li>
+  <li><strong>Available from:</strong> Where the value set is published.</li>
+</ul>
+
+<table class="grid">
+  <thead>
+    <tr>
+      <th>ValueSet</th>
+      <th>Profiles and Extensions where used</th>
+      <th>Available from</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><a href="https://build.fhir.org/ig/hl7au/au-fhir-base//ValueSet-au-v3-ActEncounterCode-extended.html">ActEncounterCode - AU Extended</a></td>
+      <td><a href="StructureDefinition-au-ps-encounter.html">AU PS Encounter</a></td>
+      <td>AU Base</td>
+    </tr>
+    <tr>
+      <td><a href="https://hl7.org/fhir/R4/valueset-address-type.html">AddressType</a></td>
+      <td><a href="https://build.fhir.org/ig/hl7au/au-fhir-core/StructureDefinition-au-core-location.html">AU Core Location</a>, <a href="StructureDefinition-au-ps-organization.html">AU PS Organization</a>, <a href="StructureDefinition-au-ps-patient.html">AU PS Patient</a>, <a href="StructureDefinition-au-ps-practitioner.html">AU PS Practitioner</a>, <a href="StructureDefinition-au-ps-relatedperson.html">AU PS RelatedPerson</a></td>
+      <td>FHIR</td>
+    </tr>
+    <tr>
+      <td><a href="https://hl7.org/fhir/R4/valueset-address-use.html">AddressUse</a></td>
+      <td><a href="https://build.fhir.org/ig/hl7au/au-fhir-core/StructureDefinition-au-core-location.html">AU Core Location</a>, <a href="StructureDefinition-au-ps-organization.html">AU PS Organization</a>, <a href="StructureDefinition-au-ps-patient.html">AU PS Patient</a>, <a href="StructureDefinition-au-ps-practitioner.html">AU PS Practitioner</a>, <a href="StructureDefinition-au-ps-relatedperson.html">AU PS RelatedPerson</a></td>
+      <td>FHIR</td>
+    </tr>
+    <tr>
+      <td><a href="https://hl7.org/fhir/R4/valueset-administrative-gender.html">AdministrativeGender</a></td>
+      <td><a href="StructureDefinition-au-ps-patient.html">AU PS Patient</a></td>
+      <td>FHIR</td>
+    </tr>
+    <tr>
+      <td><a href="https://healthterminologies.gov.au/fhir/ValueSet/adverse-reaction-clinical-manifestation-1">Adverse Reaction Clinical Manifestation</a></td>
+      <td><a href="StructureDefinition-au-ps-allergyintolerance.html">AU PS AllergyIntolerance</a></td>
+      <td>NCTS</td>
+    </tr>
+    <tr>
+      <td><a href="https://hl7.org/fhir/R4/valueset-allergyintolerance-clinical.html">AllergyIntolerance Clinical Status Codes</a></td>
+      <td><a href="StructureDefinition-au-ps-allergyintolerance.html">AU PS AllergyIntolerance</a></td>
+      <td>FHIR</td>
+    </tr>
+    <tr>
+      <td><a href="http://hl7.org/fhir/R4/valueset-allergyintolerance-verification.html">AllergyIntolerance Verification Status Codes</a></td>
+      <td><a href="StructureDefinition-au-ps-allergyintolerance.html">AU PS AllergyIntolerance</a></td>
+      <td>FHIR</td>
+    </tr>
+    <tr>
+      <td><a href="http://hl7.org/fhir/R4/valueset-reaction-event-severity.html">AllergyIntoleranceSeverity</a></td>
+      <td><a href="StructureDefinition-au-ps-allergyintolerance.html">AU PS AllergyIntolerance</a></td>
+      <td>FHIR</td>
+    </tr>
+    <tr>
+      <td><a href="https://hl7.org/fhir/R4/valueset-allergy-intolerance-type.html">AllergyIntoleranceType</a></td>
+      <td><a href="StructureDefinition-au-ps-allergyintolerance.html">AU PS AllergyIntolerance</a></td>
+      <td>FHIR</td>
+    </tr>
+    <tr>
+      <td><a href="https://healthterminologies.gov.au/fhir/ValueSet/australian-immunisation-register-vaccine-1">Australian Immunisation Register Vaccine</a></td>
+      <td><a href="StructureDefinition-au-ps-immunization.html">AU PS Immunization</a></td>
+      <td>NCTS</td>
+    </tr>
+    <tr>
+      <td><a href="https://healthterminologies.gov.au/fhir/ValueSet/australian-indigenous-status-1">Australian Indigenous Status</a></td>
+      <td><a href="StructureDefinition-au-ps-patient.html">AU PS Patient</a></td>
+      <td>NCTS</td>
+    </tr>
+    <tr>
+      <td><a href="https://healthterminologies.gov.au/fhir/ValueSet/australian-medication-1">Australian Medication</a></td>
+      <td><a href="StructureDefinition-au-ps-medication.html">AU PS Medication</a>, <a href="StructureDefinition-au-ps-medicationrequest.html">AU PS MedicationRequest</a>, <a href="StructureDefinition-au-ps-medicationstatement.html">AU PS MedicationStatement</a></td>
+      <td>NCTS</td>
+    </tr>
+    <tr>
+      <td><a href="https://healthterminologies.gov.au/fhir/ValueSet/australian-medication-use-1">Australian Medication Use</a></td>
+      <td><a href="StructureDefinition-au-ps-medicationstatement.html">AU PS MedicationStatement</a></td>
+      <td>NCTS</td>
+    </tr>
+    <tr>
+      <td><a href="https://healthterminologies.gov.au/fhir/ValueSet/amt-vaccine-1">Australian Medicines Terminology Vaccine</a></td>
+      <td><a href="StructureDefinition-au-ps-immunization.html">AU PS Immunization</a></td>
+      <td>NCTS</td>
+    </tr>
+    <tr>
+      <td><a href="https://healthterminologies.gov.au/fhir/ValueSet/australian-pronouns-1">Australian Pronouns</a></td>
+      <td><a href="http://hl7.org/fhir/StructureDefinition/individual-pronouns">Individual Pronouns</a></td>
+      <td>NCTS</td>
+    </tr>
+    <tr>
+      <td><a href="https://healthterminologies.gov.au/fhir/ValueSet/australian-states-territories-2">Australian States and Territories</a></td>
+      <td><a href="https://build.fhir.org/ig/hl7au/au-fhir-core/StructureDefinition-au-core-location.html">AU Core Location</a>, <a href="https://build.fhir.org/ig/hl7au/au-fhir-ps/StructureDefinition-au-ps-organization.html">AU PS Organization</a>, <a href="https://build.fhir.org/ig/hl7au/au-fhir-ps/StructureDefinition-au-ps-patient.html">AU PS Patient</a>, <a href="StructureDefinition-au-ps-practitioner.html">AU PS Practitioner</a>, <a href="StructureDefinition-au-ps-relatedperson.html">AU PS RelatedPerson</a></td>
+      <td>NCTS</td>
+    </tr>
+    <tr>
+      <td><a href="https://healthterminologies.gov.au/fhir/ValueSet/body-site-1">Body Site</a></td>
+      <td><a href="StructureDefinition-au-ps-medicationrequest.html">AU PS MedicationRequest</a>, <a href="StructureDefinition-au-ps-medicationstatement.html">AU PS MedicationStatement</a></td>
+      <td>NCTS</td>
+    </tr>
+    <tr>
+      <td><a href="https://healthterminologies.gov.au/fhir/ValueSet/clinical-condition-1">Clinical Condition</a></td>
+      <td><a href="StructureDefinition-au-ps-condition.html">AU PS Condition</a></td>
+      <td>NCTS</td>
+    </tr>
+    <tr>
+      <td><a href="https://healthterminologies.gov.au/fhir/ValueSet/clinical-finding-1">Clinical Finding</a></td>
+      <td><a href="StructureDefinition-au-ps-medicationrequest.html">AU PS MedicationRequest</a>, <a href="StructureDefinition-au-ps-medicationstatement.html">AU PS MedicationStatement</a></td>
+      <td>NCTS</td>
+    </tr>
+    <tr>
+      <td><a href="https://healthterminologies.gov.au/fhir/ValueSet/clinical-specialty-1">Clinical Specialty</a></td>
+      <td><a href="StructureDefinition-au-ps-practitionerrole.html">AU PS PractitionerRole</a></td>
+      <td>NCTS</td>
+    </tr>
+    <tr>
+      <td><a href="https://healthterminologies.gov.au/fhir/ValueSet/common-languages-australia-2">Common Languages in Australia</a></td>
+      <td><a href="StructureDefinition-au-ps-patient.html">AU PS Patient</a></td>
+      <td>NCTS</td>
+    </tr>
+    <tr>
+      <td><a href="http://hl7.org/fhir/R4/valueset-composition-attestation-mode.html">CompositionAttestationMode</a></td>
+      <td><a href="StructureDefinition-au-ps-composition.html">AU PS Composition</a></td>
+      <td>FHIR</td>
+    </tr>
+    <tr>
+      <td><a href="http://hl7.org/fhir/ValueSet/composition-status">CompositionStatus</a></td>
+      <td><a href="StructureDefinition-au-ps-composition.html">AU PS Composition</a></td>
+      <td>FHIR</td>
+    </tr>
+    <tr>
+      <td><a href="https://hl7.org/fhir/R4/valueset-condition-category.html">Condition Category Codes</a></td>
+      <td><a href="StructureDefinition-au-ps-condition.html">AU PS Condition</a></td>
+      <td>FHIR</td>
+    </tr>
+    <tr>
+      <td><a href="https://hl7.org/fhir/R4/valueset-condition-clinical.html">Condition Clinical Status Codes</a></td>
+      <td><a href="StructureDefinition-au-ps-condition.html">AU PS Condition</a></td>
+      <td>FHIR</td>
+    </tr>
+    <tr>
+      <td><a href="https://hl7.org/fhir/R4/valueset-condition-severity.html">Condition/Diagnosis Severity</a></td>
+      <td><a href="StructureDefinition-au-ps-condition.html">AU PS Condition</a></td>
+      <td>FHIR</td>
+    </tr>
+    <tr>
+      <td><a href="https://hl7.org/fhir/R4/valueset-condition-ver-status.html">ConditionVerificationStatus</a></td>
+      <td><a href="StructureDefinition-au-ps-condition.html">AU PS Condition</a></td>
+      <td>FHIR</td>
+    </tr>
+    <tr>
+      <td><a href="https://hl7.org/fhir/R4/valueset-contact-point-system.html">ContactPointSystem</a></td>
+      <td><a href="StructureDefinition-au-ps-organization.html">AU PS Organization</a>, <a href="StructureDefinition-au-ps-patient.html">AU PS Patient</a>, <a href="StructureDefinition-au-ps-practitioner.html">AU PS Practitioner</a>, <a href="StructureDefinition-au-ps-practitionerrole.html">AU PS PractitionerRole</a>, <a href="StructureDefinition-au-ps-relatedperson.html">AU PS RelatedPerson</a></td>
+      <td>FHIR</td>
+    </tr>
+    <tr>
+      <td><a href="https://hl7.org/fhir/R4/valueset-contact-point-use.html">ContactPointUse</a></td>
+      <td><a href="StructureDefinition-au-ps-organization.html">AU PS Organization</a>, <a href="StructureDefinition-au-ps-patient.html">AU PS Patient</a>, <a href="StructureDefinition-au-ps-practitioner.html">AU PS Practitioner</a>, <a href="StructureDefinition-au-ps-practitionerrole.html">AU PS PractitionerRole</a>, <a href="StructureDefinition-au-ps-relatedperson.html">AU PS RelatedPerson</a></td>
+      <td>FHIR</td>
+    </tr>
+    <tr>
+      <td><a href="https://hl7.org/fhir/R4/valueset-data-absent-reason.html">DataAbsentReason</a></td>
+      <td><a href="StructureDefinition-au-ps-diagnosticresult-path.html">AU PS Pathology Result Observation</a>, <a href="StructureDefinition-au-ps-smokingstatus.html">AU PS Smoking Status</a></td>
+      <td>FHIR</td>
+    </tr>
+    <tr>
+      <td><a href="https://build.fhir.org/ig/hl7au/au-fhir-base/ValueSet-dva-entitlement.html">DVA Entitlement</a></td>
+      <td><a href="StructureDefinition-au-ps-patient.html">AU PS Patient</a></td>
+      <td>AU Base</td>
+    </tr>
+    <tr>
+      <td><a href="https://hl7.org/fhir/R4/valueset-encounter-status.html">EncounterStatus</a></td>
+      <td><a href="StructureDefinition-au-ps-encounter.html">AU PS Encounter</a></td>
+      <td>FHIR</td>
+    </tr>
+    <tr>
+      <td><a href="https://hl7.org/fhir/R4/valueset-event-status.html">EventStatus</a></td>
+      <td><a href="StructureDefinition-au-ps-procedure.html">AU PS Procedure</a></td>
+      <td>FHIR</td>
+    </tr>
+    <tr>
+      <td><a href="https://healthterminologies.gov.au/fhir/ValueSet/gender-identity-response-1">Gender Identity Response</a></td>
+      <td><a href="http://hl7.org/fhir/StructureDefinition/individual-genderIdentity">Individual Gender Identity</a></td>
+      <td>NCTS</td>
+    </tr>
+    <tr>
+      <td><a href="https://healthterminologies.gov.au/fhir/ValueSet/healthcare-organisation-role-type-1">Healthcare Organisation Role Type</a></td>
+      <td><a href="StructureDefinition-au-ps-organization.html">AU PS Organization</a></td>
+      <td>NCTS</td>
+    </tr>
+    <tr>
+      <td><a href="https://build.fhir.org/ig/hl7au/au-fhir-base//ValueSet-au-v2-0203-extended.html">hl7VS-identifierType - AU Extended</a></td>
+      <td><a href="StructureDefinition-au-ps-organization.html">AU PS Organization</a></td>
+      <td>AU Base</td>
+    </tr>
+    <tr>
+      <td><a href="https://hl7.org/fhir/R4/valueset-identifier-use.html">IdentifierUse</a></td>
+      <td><a href="StructureDefinition-au-ps-organization.html">AU PS Organization</a>, <a href="StructureDefinition-au-ps-patient.html">AU PS Patient</a>, <a href="StructureDefinition-au-ps-practitioner.html">AU PS Practitioner</a>, <a href="StructureDefinition-au-ps-practitionerrole.html">AU PS PractitionerRole</a></td>
+      <td>FHIR</td>
+    </tr>
+    <tr>
+      <td><a href="https://hl7.org/fhir/R4/valueset-immunization-status.html">Immunization Status Codes</a></td>
+      <td><a href="StructureDefinition-au-ps-immunization.html">AU PS Immunization</a></td>
+      <td>FHIR</td>
+    </tr>
+    <tr>
+      <td><a href="https://healthterminologies.gov.au/fhir/ValueSet/indicator-hypersensitivity-intolerance-to-substance-2">Indicator of Hypersensitivity or Intolerance to Substance</a></td>
+      <td><a href="StructureDefinition-au-ps-allergyintolerance.html">AU PS AllergyIntolerance</a></td>
+      <td>NCTS</td>
+    </tr>
+    <tr>
+      <td><a href="https://healthterminologies.gov.au/fhir/ValueSet/ihi-record-status-1">Individual Healthcare Identifier Record Status</a></td>
+      <td><a href="StructureDefinition-au-ps-patient.html">AU PS Patient</a></td>
+      <td>NCTS</td>
+    </tr>
+    <tr>
+      <td><a href="https://healthterminologies.gov.au/fhir/ValueSet/ihi-status-1">Individual Healthcare Identifier Status</a></td>
+      <td><a href="StructureDefinition-au-ps-patient.html">AU PS Patient</a></td>
+      <td>NCTS</td>
+    </tr>
+    <tr>
+      <td><a href="https://hl7.org/fhir/R4/valueset-list-empty-reason.html">List Empty Reasons</a></td>
+      <td><a href="StructureDefinition-au-ps-composition.html">AU PS Composition</a></td>
+      <td>FHIR</td>
+    </tr>
+    <tr>
+      <td><a href="https://build.fhir.org/ig/hl7au/au-fhir-base//ValueSet-au-location-physical-type-extended.html">Location Type (Physical) - AU Extended</a></td>
+      <td><a href="https://build.fhir.org/ig/hl7au/au-fhir-core/StructureDefinition-au-core-location.html">AU Core Location</a></td>
+      <td>AU Base</td>
+    </tr>
+    <tr>
+      <td><a href="https://hl7.org/fhir/R4/valueset-report-codes.html">LOINC Diagnostic Report Codes</a></td>
+      <td><a href="https://hl7.org/fhir/uv/ips/STU2/StructureDefinition-DiagnosticReport-uv-ips.html">DiagnosticReport (IPS)</a></td>
+      <td>FHIR</td>
+    </tr>
+    <tr>
+      <td><a href="https://hl7.org/fhir/uv/ips/STU2/ValueSet-medical-devices-uv-ips.html">Medical Devices - IPS</a></td>
+      <td><a href="https://hl7.org/fhir/uv/ips/STU2/StructureDefinition-Device-uv-ips.html">Device (IPS)</a></td>
+      <td>IPS</td>
+    </tr>
+    <tr>
+      <td><a href="https://healthterminologies.gov.au/fhir/ValueSet/medication-form-1">Medication Form</a></td>
+      <td><a href="StructureDefinition-au-ps-medication.html">AU PS Medication</a></td>
+      <td>FHIR</td>
+    </tr>
+    <tr>
+      <td><a href="https://healthterminologies.gov.au/fhir/ValueSet/medication-ingredient-1">Medication Ingredient</a></td>
+      <td><a href="StructureDefinition-au-ps-medication.html">AU PS Medication</a></td>
+      <td>NCTS</td>
+    </tr>
+    <tr>
+      <td><a href="https://healthterminologies.gov.au/fhir/ValueSet/medication-reason-taken-1">Medication Reason Taken</a></td>
+      <td><a href="StructureDefinition-au-ps-medicationstatement.html">AU PS MedicationStatement</a></td>
+      <td>FHIR</td>
+    </tr>
+    <tr>
+      <td><a href="https://hl7.org/fhir/R4/valueset-medicationrequest-intent.html">Medication request intent</a></td>
+      <td><a href="StructureDefinition-au-ps-medicationrequest.html">AU PS MedicationRequest</a></td>
+      <td>FHIR</td>
+    </tr>
+    <tr>
+      <td><a href="https://hl7.org/fhir/R4/valueset-medication-statement-status.html">Medication status codes</a></td>
+      <td><a href="StructureDefinition-au-ps-medicationstatement.html">AU PS MedicationStatement</a></td>
+      <td>FHIR</td>
+    </tr>
+    <tr>
+      <td><a href="https://hl7.org/fhir/R4/valueset-medicationrequest-status.html">Medicationrequest status</a></td>
+      <td><a href="StructureDefinition-au-ps-medicationrequest.html">AU PS MedicationRequest</a></td>
+      <td>FHIR</td>
+    </tr>
+    <tr>
+      <td><a href="https://hl7.org/fhir/R4/valueset-name-use.html">NameUse</a></td>
+      <td><a href="StructureDefinition-au-ps-patient.html">AU PS Patient</a>, <a href="StructureDefinition-au-ps-practitioner.html">AU PS Practitioner</a>, <a href="StructureDefinition-au-ps-relatedperson.html">AU PS RelatedPerson</a></td>
+      <td>FHIR</td>
+    </tr>
+    <tr>
+      <td><a href="https://hl7.org/fhir/R4/valueset-observation-category.html">Observation Category Codes</a></td>
+      <td><a href="StructureDefinition-au-ps-diagnosticresult-path.html">AU PS Pathology Result Observation</a>, <a href="StructureDefinition-au-ps-smokingstatus.html">AU PS Smoking Status</a>, <a href="https://hl7.org/fhir/uv/ips/STU2/StructureDefinition-Observation-results-radiology-uv-ips.html">Observation Results - Radiology (IPS)</a></td>
+      <td>FHIR</td>
+    </tr>
+    <tr>
+      <td><a href="https://hl7.org/fhir/R4/valueset-observation-interpretation.html">Observation Interpretation Codes</a></td>
+      <td><a href="StructureDefinition-au-ps-diagnosticresult-path.html">AU PS Pathology Result Observation</a></td>
+      <td>FHIR</td>
+    </tr>
+    <tr>
+      <td><a href="https://hl7.org/fhir/R4/valueset-referencerange-meaning.html">Observation Reference Range Meaning Codes</a></td>
+      <td><a href="StructureDefinition-au-ps-diagnosticresult-path.html">AU PS Pathology Result Observation</a></td>
+      <td>FHIR</td>
+    </tr>
+    <tr>
+      <td><a href="http://hl7.org/fhir/R4/valueset-observation-status.html">ObservationStatus</a></td>
+      <td><a href="StructureDefinition-au-ps-smokingstatus.html">AU PS Smoking Status</a></td>
+      <td>FHIR</td>
+    </tr>
+    <tr>
+      <td><a href="https://hl7.org/fhir/R4/valueset-encounter-participant-type.html">Participant type</a></td>
+      <td><a href="StructureDefinition-au-ps-encounter.html">AU PS Encounter</a></td>
+      <td>FHIR</td>
+    </tr>
+    <tr>
+      <td><a href="https://healthterminologies.gov.au/fhir/ValueSet/pathology-diagnostic-service-category-1">Pathology Diagnostic Service Category</a></td>
+      <td><a href="StructureDefinition-au-ps-diagnosticresult-path.html">AU PS Pathology Result Observation</a></td>
+      <td>NCTS</td>
+    </tr>
+    <tr>
+      <td><a href="https://build.fhir.org/ig/hl7au/au-fhir-base/ValueSet-pbs-item.html">PBS Item Codes</a></td>
+      <td><a href="StructureDefinition-au-ps-medication.html">AU PS Medication</a>, <a href="StructureDefinition-au-ps-medicationrequest.html">AU PS MedicationRequest</a>, <a href="StructureDefinition-au-ps-medicationstatement.html">AU PS MedicationStatement</a></td>
+      <td>AU Base</td>
+    </tr>
+    <tr>
+      <td><a href="https://healthterminologies.gov.au/fhir/ValueSet/practitioner-role-1">Practitioner Role</a></td>
+      <td><a href="StructureDefinition-au-ps-practitionerrole.html">AU PS PractitionerRole</a></td>
+      <td>NCTS</td>
+    </tr>
+    <tr>
+      <td><a href="https://healthterminologies.gov.au/fhir/ValueSet/procedure-1">Procedure</a></td>
+      <td><a href="StructureDefinition-au-ps-procedure.html">AU PS Procedure</a></td>
+      <td>NCTS</td>
+    </tr>
+    <tr>
+      <td><a href="https://healthterminologies.gov.au/fhir/ValueSet/spia-pathology-reporting-1">RCPA SPIA Pathology Reporting</a></td>
+      <td><a href="StructureDefinition-au-ps-diagnosticresult-path.html">AU PS Pathology Result Observation</a></td>
+      <td>NCTS</td>
+    </tr>
+    <tr>
+      <td><a href="https://healthterminologies.gov.au/fhir/ValueSet/reason-for-encounter-1">Reason for Encounter</a></td>
+      <td><a href="StructureDefinition-au-ps-encounter.html">AU PS Encounter</a></td>
+      <td>NCTS</td>
+    </tr>
+    <tr>
+      <td><a href="https://healthterminologies.gov.au/fhir/ValueSet/reason-for-request-1">Reason for Request</a></td>
+      <td><a href="StructureDefinition-au-ps-medicationrequest.html">AU PS MedicationRequest</a></td>
+      <td>NCTS</td>
+    </tr>
+    <tr>
+      <td><a href="https://healthterminologies.gov.au/fhir/ValueSet/related-person-relationship-type-1">Related Person Relationship Type</a></td>
+      <td><a href="StructureDefinition-au-ps-relatedperson.html">AU PS RelatedPerson</a></td>
+      <td>NCTS</td>
+    </tr>
+    <tr>
+      <td><a href="https://hl7.org/fhir/uv/ips/STU2/ValueSet-results-coded-values-laboratory-pathology-uv-ips.html">Results Coded Values Laboratory/Pathology - IPS</a></td>
+      <td><a href="StructureDefinition-au-ps-diagnosticresult-path.html">AU PS Pathology Result Observation</a></td>
+      <td>IPS</td>
+    </tr>
+    <tr>
+      <td><a href="https://hl7.org/fhir/uv/ips/STU2/ValueSet-results-radiology-observations-uv-ips.html">Results Radiology Observation - IPS</a></td>
+      <td><a href="https://hl7.org/fhir/uv/ips/STU2/StructureDefinition-Observation-results-radiology-uv-ips.html"> Observation Results - Radiology (IPS)</a></td>
+      <td>IPS</td>
+    </tr>
+    <tr>
+      <td><a href="https://hl7.org/fhir/uv/ips/STU2/ValueSet-results-status-uv-ips.html">Results Status Codes - IPS</a></td>
+      <td><a href="StructureDefinition-au-ps-diagnosticresult-path.html">AU PS Pathology Result Observation</a></td>
+      <td>IPS</td>
+    </tr>
+    <tr>
+      <td><a href="https://healthterminologies.gov.au/fhir/ValueSet/route-of-administration-1">Route of Administration</a></td>
+      <td><a href="StructureDefinition-au-ps-medicationrequest.html">AU PS MedicationRequest</a>, <a href="StructureDefinition-au-ps-medicationstatement.html">AU PS MedicationStatement</a></td>
+      <td>NCTS</td>
+    </tr>
+    <tr>
+      <td><a href="https://healthterminologies.gov.au/fhir/ValueSet/service-type-1">Service Type</a></td>
+      <td><a href="StructureDefinition-au-ps-encounter.html">AU PS Encounter</a></td>
+      <td>NCTS</td>
+    </tr>
+    <tr>
+      <td><a href="https://build.fhir.org/ig/hl7au/au-fhir-base//ValueSet-au-v3-ServiceDeliveryLocationRoleType-extended.html">ServiceDeliveryLocationRoleType - AU Extended</a></td>
+      <td><a href="https://build.fhir.org/ig/hl7au/au-fhir-core/StructureDefinition-au-core-location.html">AU Core Location</a></td>
+      <td>AU Base</td>
+    </tr>
+    <tr>
+      <td><a href="https://healthterminologies.gov.au/fhir/ValueSet/smoking-status-1">Smoking Status</a></td>
+      <td><a href="StructureDefinition-au-ps-smokingstatus.html">AU PS Smoking Status</a></td>
+      <td>NCTS</td>
+    </tr>
+    <tr>
+      <td><a href="https://hl7.org/fhir/R4/valueset-additional-instruction-codes.html">SNOMED CT Additional Dosage Instructions</a></td>
+      <td><a href="StructureDefinition-au-ps-medicationrequest.html">AU PS MedicationRequest</a>, <a href="StructureDefinition-au-ps-medicationstatement.html">AU PS MedicationStatement</a></td>
+      <td>FHIR</td>
+    </tr>
+    <tr>
+      <td><a href="https://hl7.org/fhir/R4/valueset-administration-method-codes.html">SNOMED CT Administration Method Codes</a></td>
+      <td><a href="StructureDefinition-au-ps-medicationrequest.html">AU PS MedicationRequest</a>, <a href="StructureDefinition-au-ps-medicationstatement.html">AU PS MedicationStatement</a></td>
+      <td>FHIR</td>
+    </tr>
+  </tbody>
+</table>
+
+<h3 id="code-systems">Code Systems</h3>
+
+<p>See the <a href="http://hl7.org/fhir/R4/terminologies-systems.html">FHIR terminology section</a> for a complete discussion on code systems and a list of code system names used in FHIR.</p>
+
+<p>The following code systems are referenced by the value sets listed above or are the code system for a fixed value in an AU PS profile.</p>
+
+<p>Column attribute descriptions are as follows:</p>
+<ul>
+  <li><strong>CodeSystem:</strong> The title of a code system.</li>
+  <li><strong>ValueSet where used:</strong> The value set(s) that reference the code system or the profile where a fixed value is applied.</li>
+  <li><strong>Available from:</strong> Where the code system is published.</li>
+  <li><strong>Publisher:</strong> Identifies the organisation responsible for maintaining the code system.</li>
+</ul>
+
+<table class="grid">
+  <thead>
+    <tr>
+      <th>CodeSystem</th>
+      <th>ValueSet where used</th>
+      <th>Available from</th>
+      <th>Publisher</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><a href="https://build.fhir.org/ig/hl7au/au-fhir-base/CodeSystem-au-v3-ActCode.html">ActCode AU</a></td>
+      <td><a href="https://build.fhir.org/ig/hl7au/au-fhir-base/ValueSet-au-v3-ActEncounterCode-extended.html">ActEncounterCode - AU Extended</a></td>
+      <td>AU Base</td>
+      <td>HL7 Australia</td>
+    </tr>
+    <tr>
+      <td><a href="http://terminology.hl7.org/CodeSystem/v3-ActCode">ActCode</a></td>
+      <td><a href="https://build.fhir.org/ig/hl7au/au-fhir-base/ValueSet-au-v3-ActEncounterCode-extended.html">ActEncounterCode - AU Extended</a></td>
+      <td>HL7 Terminology (THO)</td>
+      <td>Health Level Seven International</td>
+    </tr>
+    <tr>
+      <td><a href="https://hl7.org/fhir/R4/codesystem-address-type.html">AddressType</a></td>
+      <td><a href="https://hl7.org/fhir/R4/valueset-address-type.html">AddressType</a></td>
+      <td>FHIR</td>
+      <td>Health Level Seven International</td>
+    </tr>
+    <tr>
+      <td><a href="https://hl7.org/fhir/R4/codesystem-address-use.html">AddressUse</a></td>
+      <td><a href="https://hl7.org/fhir/R4/valueset-address-use.html">AddressUse</a></td>
+      <td>FHIR</td>
+      <td>Health Level Seven International</td>
+    </tr>
+    <tr>
+      <td><a href="https://hl7.org/fhir/R4/codesystem-administrative-gender.html">AdministrativeGender</a></td>
+      <td><a href="https://hl7.org/fhir/R4/valueset-administrative-gender.html">AdministrativeGender</a></td>
+      <td>FHIR</td>
+      <td>Health Level Seven International</td>
+    </tr>
+    <tr>
+      <td><a href="https://hl7.org/fhir/R4/codesystem-allergyintolerance-clinical.html">AllergyIntolerance Clinical Status Codes</a></td>
+      <td><a href="https://hl7.org/fhir/R4/valueset-allergyintolerance-clinical.html">AllergyIntolerance Clinical Status Codes</a></td>
+      <td>FHIR</td>
+      <td>Health Level Seven International</td>
+    </tr>
+    <tr>
+      <td><a href="https://hl7.org/fhir/R4/codesystem-allergyintolerance-verification.html">AllergyIntolerance Verification Status Codes</a></td>
+      <td><a href="http://hl7.org/fhir/R4/valueset-allergyintolerance-verification.html">AllergyIntolerance Verification Status Codes</a></td>
+      <td>FHIR</td>
+      <td>Health Level Seven International</td>
+    </tr>
+    <tr>
+      <td><a href="https://hl7.org/fhir/R4/codesystem-reaction-event-severity.html">AllergyIntoleranceSeverity</a></td>
+      <td><a href="https://hl7.org/fhir/R4/valueset-reaction-event-severity.html">AllergyIntoleranceSeverity</a></td>
+      <td>FHIR</td>
+      <td>Health Level Seven International</td>
+    </tr>
+    <tr>
+      <td><a href="https://hl7.org/fhir/R4/codesystem-allergy-intolerance-type.html">AllergyIntoleranceType</a></td>
+      <td><a href="https://hl7.org/fhir/R4/valueset-allergy-intolerance-type.html">AllergyIntoleranceType</a></td>
+      <td>FHIR</td>
+      <td>Health Level Seven International</td>
+    </tr>
+    <tr>
+      <td><a href="https://www.humanservices.gov.au/organisations/health-professionals/enablers/air-vaccine-code-formats">Australian Immunisation Register Vaccine</a></td>
+      <td><a href="https://healthterminologies.gov.au/fhir/ValueSet/australian-immunisation-register-vaccine-1">Australian Immunisation Register Vaccine</a></td>
+      <td>NCTS</td>
+      <td>Services Australia</td>
+    </tr>
+    <tr>
+      <td><a href="https://healthterminologies.gov.au/fhir/CodeSystem/australian-indigenous-status-1">Australian Indigenous Status</a></td>
+      <td><a href="https://healthterminologies.gov.au/fhir/ValueSet/australian-indigenous-status-1">Australian Indigenous Status</a></td>
+      <td>NCTS</td>
+      <td>Australian Digital Health Agency</td>
+    </tr>
+    <tr>
+      <td><a href="https://healthterminologies.gov.au/fhir/CodeSystem/australian-states-territories-1">Australian States and Territories</a></td>
+      <td><a href="https://healthterminologies.gov.au/fhir/ValueSet/australian-states-territories-2">Australian States and Territories</a></td>
+      <td>NCTS</td>
+      <td>Australian Digital Health Agency</td>
+    </tr>
+    <tr>
+      <td><a href="http://hl7.org/fhir/R4/codesystem-composition-attestation-mode.html">CompositionAttestationMode</a></td>
+      <td><a href="http://hl7.org/fhir/R4/valueset-composition-attestation-mode.html">CompositionAttestationMode</a></td>
+      <td>FHIR</td>
+      <td>Health Level Seven International</td>
+    </tr>
+    <tr>
+      <td><a href="http://hl7.org/fhir/R4/codesystem-composition-status.html">CompositionStatus</a></td>
+      <td><a href="http://hl7.org/fhir/R4/valueset-composition-status.html">CompositionStatus</a></td>
+      <td>FHIR</td>
+      <td>Health Level Seven International</td>
+    </tr>
+    <tr>
+      <td><a href="https://hl7.org/fhir/R4/codesystem-condition-category.html">Condition Category Codes</a></td>
+      <td><a href="https://hl7.org/fhir/R4/valueset-condition-category.html">Condition Category Codes</a></td>
+      <td>FHIR</td>
+      <td>Health Level Seven International</td>
+    </tr>
+    <tr>
+      <td><a href="https://hl7.org/fhir/R4/codesystem-condition-clinical.html">Condition Clinical Status Codes</a></td>
+      <td><a href="https://hl7.org/fhir/R4/valueset-condition-clinical.html">Condition Clinical Status Codes</a></td>
+      <td>FHIR</td>
+      <td>Health Level Seven International</td>
+    </tr>
+    <tr>
+      <td><a href="https://hl7.org/fhir/R4/codesystem-condition-ver-status.html">ConditionVerificationStatus</a></td>
+      <td><a href="https://hl7.org/fhir/R4/valueset-condition-ver-status.html">ConditionVerificationStatus</a></td>
+      <td>FHIR</td>
+      <td>Health Level Seven International</td>
+    </tr>
+    <tr>
+      <td><a href="https://hl7.org/fhir/R4/codesystem-contact-point-system.html">ContactPointSystem</a></td>
+      <td><a href="https://hl7.org/fhir/R4/valueset-contact-point-system.html">ContactPointSystem</a></td>
+      <td>FHIR</td>
+      <td>Health Level Seven International</td>
+    </tr>
+    <tr>
+      <td><a href="https://hl7.org/fhir/R4/codesystem-contact-point-use.html">ContactPointUse</a></td>
+      <td><a href="https://hl7.org/fhir/R4/valueset-contact-point-use.html">ContactPointUse</a></td>
+      <td>FHIR</td>
+      <td>Health Level Seven International</td>
+    </tr>
+    <tr>
+      <td><a href="http://terminology.hl7.org/CodeSystem/v2-0131">contactRole2</a></td>
+      <td><a href="https://healthterminologies.gov.au/fhir/ValueSet/related-person-relationship-type-1">Related Person Relationship Type</a></td>
+      <td>FHIR</td>
+      <td>Health Level Seven International</td>
+    </tr>
+    <tr>
+      <td><a href="http://terminology.hl7.org/CodeSystem/data-absent-reason">DataAbsentReason</a></td>
+      <td><a href="https://healthterminologies.gov.au/fhir/ValueSet/australian-pronouns-1">Australian Pronouns</a>, <a href="https://hl7.org/fhir/R4/valueset-data-absent-reason.html">DataAbsentReason</a>, <a href="https://healthterminologies.gov.au/fhir/ValueSet/gender-identity-response-1">Gender Identity Response</a></td>
+      <td>HL7 Terminology (THO)</td>
+      <td>Health Level Seven International</td>
+    </tr>
+    <tr>
+      <td><a href="http://terminology.hl7.org/CodeSystem/v2-0074">diagnosticServiceSectionId</a></td>
+      <td><a href="https://healthterminologies.gov.au/fhir/ValueSet/pathology-diagnostic-service-category-1">Pathology Diagnostic Service Category</a></td>
+      <td>FHIR</td>
+      <td>Health Level Seven International</td>
+    </tr>
+    <tr>
+      <td><a href="https://hl7.org/fhir/R4/codesystem-encounter-status.html">EncounterStatus</a></td>
+      <td><a href="https://hl7.org/fhir/R4/valueset-encounter-status.html">EncounterStatus</a></td>
+      <td>FHIR</td>
+      <td>Health Level Seven International</td>
+    </tr>
+    <tr>
+      <td><a href="https://hl7.org/fhir/R4/codesystem-event-status.html">EventStatus</a></td>
+      <td><a href="https://hl7.org/fhir/R4/valueset-event-status.html">EventStatus</a>, <a href="https://hl7.org/fhir/R4/valueset-immunization-status.html">Immunization Status Codes</a></td>
+      <td>FHIR</td>
+      <td>Health Level Seven International</td>
+    </tr>
+    <tr>
+      <td><a href="https://build.fhir.org/ig/hl7au/au-fhir-base//CodeSystem-au-v2-0203.html">IdentifierType AU</a></td>
+      <td><a href="https://build.fhir.org/ig/hl7au/au-fhir-base/ValueSet-dva-entitlement.html">DVA Entitlement</a>, <a href="https://build.fhir.org/ig/hl7au/au-fhir-base/ValueSet-au-v2-0203-extended.html">hl7VS-identifierType - AU Extended</a></td>
+      <td>AU Base</td>
+      <td>HL7 Australia</td>
+    </tr>
+    <tr>
+      <td><a href="http://terminology.hl7.org/CodeSystem/v2-0203">identifierType</a></td>
+      <td><a href="https://build.fhir.org/ig/hl7au/au-fhir-base/ValueSet-au-v2-0203-extended.html">hl7VS-identifierType - AU Extended</a></td>
+      <td>HL7 Terminology (THO)</td>
+      <td>Health Level Seven International</td>
+    </tr>
+    <tr>
+      <td><a href="https://hl7.org/fhir/R4/codesystem-identifier-use.html">IdentifierUse</a></td>
+      <td><a href="https://hl7.org/fhir/R4/valueset-identifier-use.html">IdentifierUse</a></td>
+      <td>FHIR</td>
+      <td>Health Level Seven International</td>
+    </tr>
+    <tr>
+      <td><a href="https://healthterminologies.gov.au/fhir/CodeSystem/ihi-record-status-1">Individual Healthcare Identifier Record Status</a></td>
+      <td><a href="https://healthterminologies.gov.au/fhir/ValueSet/ihi-record-status-1">Individual Healthcare Identifier Record Status</a></td>
+      <td>NCTS</td>
+      <td>Australian Digital Health Agency</td>
+    </tr>
+    <tr>
+      <td><a href="https://healthterminologies.gov.au/fhir/CodeSystem/ihi-status-1">Individual Healthcare Identifier Status</a></td>
+      <td><a href="https://healthterminologies.gov.au/fhir/ValueSet/ihi-status-1">Individual Healthcare Identifier Status</a></td>
+      <td>NCTS</td>
+      <td>Australian Digital Health Agency</td>
+    </tr>
+    <tr>
+      <td><a href="https://hl7.org/fhir/R4/codesystem-list-empty-reason.html">List Empty Reasons</a></td>
+      <td><a href="https://hl7.org/fhir/R4/valueset-list-empty-reason.html">List Empty Reasons</a></td>
+      <td>FHIR</td>
+      <td>Health Level Seven International</td>
+    </tr>
+    <tr>
+      <td><a href="https://build.fhir.org/ig/hl7au/au-fhir-base/CodeSystem-au-location-physical-type.html">Location Type (Physical) AU</a></td>
+      <td><a href="https://build.fhir.org/ig/hl7au/au-fhir-base/ValueSet-au-location-physical-type-extended.html">Location Type (Physical) - AU Extended</a></td>
+      <td>AU Base</td>
+      <td>HL7 Australia</td>
+    </tr>
+    <tr>
+      <td><a href="https://build.fhir.org/ig/hl7au/au-fhir-base/CodeSystem-au-location-type.html">Location Type AU</a></td>
+      <td><a href="https://build.fhir.org/ig/hl7au/au-fhir-base/ValueSet-au-v3-ServiceDeliveryLocationRoleType-extended.html">ServiceDeliveryLocationRoleType - AU Extended</a></td>
+      <td>AU Base</td>
+      <td>HL7 Australia</td>
+    </tr>
+    <tr>
+      <td><a href="http://terminology.hl7.org/CodeSystem/location-physical-type">Location Type</a></td>
+      <td><a href="https://build.fhir.org/ig/hl7au/au-fhir-base/ValueSet-au-location-physical-type-extended.html">Location Type (Physical) - AU Extended</a></td>
+      <td>HL7 Terminology (THO)</td>
+      <td>Health Level Seven International</td>
+    </tr>
+    <tr>
+      <td><a href="https://www.healthterminologies.gov.au/access-clinical-terminology/access-fhir-terminology-resources/code-systems/?ui:filter=loinc">LOINC</a></td>
+      <td><a href="https://healthterminologies.gov.au/fhir/ValueSet/australian-pronouns-1">Australian Pronouns</a>, <a href="https://hl7.org/fhir/R4/valueset-report-codes.html">LOINC Diagnostic Report Codes</a>, <a href="https://healthterminologies.gov.au/fhir/ValueSet/spia-pathology-reporting-1">RCPA SPIA Pathology Reporting</a>, <a href="https://hl7.org/fhir/uv/ips/STU2/ValueSet-results-radiology-observations-uv-ips.html">Results Radiology Observation - IPS</a></td>
+      <td>NCTS, HL7 Terminology (THO)</td>
+      <td>Regenstrief Institute, Inc</td>
+    </tr>
+    <tr>
+      <td><a href="https://hl7.org/fhir/R4/codesystem-medicationrequest-intent.html">Medication request intent</a></td>
+      <td><a href="https://hl7.org/fhir/R4/valueset-medicationrequest-intent.html">Medication request intent</a></td>
+      <td>FHIR</td>
+      <td>Health Level Seven International</td>
+    </tr>
+    <tr>
+      <td><a href="https://hl7.org/fhir/R4/codesystem-medication-statement-status.html">Medication status codes</a></td>
+      <td><a href="https://hl7.org/fhir/R4/valueset-medication-statement-status.html">Medication status codes</a></td>
+      <td>FHIR</td>
+      <td>Health Level Seven International</td>
+    </tr>
+    <tr>
+      <td><a href="https://hl7.org/fhir/R4/codesystem-medicationrequest-status.html">Medicationrequest status</a></td>
+      <td><a href="https://hl7.org/fhir/R4/valueset-medicationrequest-status.html">Medicationrequest status</a></td>
+      <td>FHIR</td>
+      <td>Health Level Seven International</td>
+    </tr>
+    <tr>
+      <td><a href="https://hl7.org/fhir/R4/codesystem-name-use.html">NameUse</a></td>
+      <td><a href="https://hl7.org/fhir/R4/valueset-name-use.html">NameUse</a></td>
+      <td>FHIR</td>
+      <td>Health Level Seven International</td>
+    </tr>
+    <tr>
+      <td><a href="https://hl7.org/fhir/R4/codesystem-observation-category.html">Observation Category Codes</a></td>
+      <td><a href="https://hl7.org/fhir/R4/valueset-observation-category.html">Observation Category Codes</a></td>
+      <td>FHIR</td>
+      <td>Health Level Seven International</td>
+    </tr>
+    <tr>
+      <td><a href="https://hl7.org/fhir/R4/codesystem-referencerange-meaning.html">Observation Reference Range Meaning Codes</a></td>
+      <td><a href="https://hl7.org/fhir/R4/valueset-referencerange-meaning.html">Observation Reference Range Meaning Codes</a></td>
+      <td>FHIR</td>
+      <td>Health Level Seven International</td>
+    </tr>
+    <tr>
+      <td><a href="https://hl7.org/fhir/R4/codesystem-observation-status.html">ObservationStatus</a></td>
+      <td><a href="http://hl7.org/fhir/R4/valueset-observation-status.html">ObservationStatus</a>, <a href="https://hl7.org/fhir/uv/ips/STU2/ValueSet-results-status-uv-ips.html">Results Status Codes - IPS </a></td>
+      <td>FHIR</td>
+      <td>Health Level Seven International</td>
+    </tr>
+    <tr>
+      <td><a href="https://hl7.org/fhir/R4/codesystem-encounter-participant-type.html">Participant type</a></td>
+      <td><a href="https://hl7.org/fhir/R4/valueset-encounter-participant-type.html">Participant type</a></td>
+      <td>FHIR</td>
+      <td>Health Level Seven International</td>
+    </tr>
+    <tr>
+      <td><a href="http://terminology.hl7.org/CodeSystem/v3-ParticipationType">ParticipationType</a></td>
+      <td><a href="https://healthterminologies.gov.au/fhir/ValueSet/related-person-relationship-type-1">Related Person Relationship Type</a></td>
+      <td>FHIR</td>
+      <td>Health Level Seven International</td>
+    </tr>
+    <tr>
+      <td><a href="https://build.fhir.org/ig/hl7au/au-fhir-base/CodeSystem-pbs-item-external.html">PBS Item Codes</a></td>
+      <td><a href="https://build.fhir.org/ig/hl7au/au-fhir-base/ValueSet-pbs-item.html">PBS Item Codes</a></td>
+      <td>AU Base</td>
+      <td>Department of Health and Aged Care, Commonwealth of Australia</td>
+    </tr>
+    <tr>
+      <td><a href="http://terminology.hl7.org/CodeSystem/v3-RoleClass">RoleClass</a></td>
+      <td><a href="https://healthterminologies.gov.au/fhir/ValueSet/related-person-relationship-type-1">Related Person Relationship Type</a></td>
+      <td>HL7 Terminology (THO)</td>
+      <td>Health Level Seven International</td>
+    </tr>
+    <tr>
+      <td><a href="http://terminology.hl7.org/CodeSystem/v3-RoleCode">RoleCode</a></td>
+      <td><a href="https://build.fhir.org/ig/hl7au/au-fhir-base/ValueSet-au-v3-ServiceDeliveryLocationRoleType-extended.html">ServiceDeliveryLocationRoleType - AU Extended</a>, <a href="https://healthterminologies.gov.au/fhir/ValueSet/related-person-relationship-type-1">Related Person Relationship Type</a></td>
+      <td>HL7 Terminology (THO)</td>
+      <td>Health Level Seven International</td>
+    </tr>
+    <tr>
+      <td><a href="https://www.healthterminologies.gov.au/access-clinical-terminology/access-snomed-ct-au/">SNOMED Clinical Terms (Australian extension)</a></td>
+      <td><a href="https://healthterminologies.gov.au/fhir/ValueSet/adverse-reaction-clinical-manifestation-1">Adverse Reaction Clinical Manifestation</a>, <a href="https://healthterminologies.gov.au/fhir/ValueSet/australian-medication-1">Australian Medication</a>, <a href="https://healthterminologies.gov.au/fhir/ValueSet/australian-medication-use-1">Australian Medication Use</a>, <a href="https://healthterminologies.gov.au/fhir/ValueSet/amt-vaccine-1">Australian Medicines Terminology Vaccine</a>, <a href="https://healthterminologies.gov.au/fhir/ValueSet/body-site-1">Body Site</a>, <a href="https://healthterminologies.gov.au/fhir/ValueSet/clinical-condition-1">Clinical Condition</a>, <a href="https://healthterminologies.gov.au/fhir/ValueSet/clinical-finding-1">Clinical Finding</a>, <a href="https://healthterminologies.gov.au/fhir/ValueSet/clinical-specialty-1">Clinical Specialty</a>, <a href="https://hl7.org/fhir/R4/valueset-condition-severity.html">Condition/Diagnosis Severity</a>, <a href="https://healthterminologies.gov.au/fhir/ValueSet/gender-identity-response-1">Gender Identity Response</a>, <a href="https://healthterminologies.gov.au/fhir/ValueSet/healthcare-organisation-role-type-1">Healthcare Organisation Role Type</a>, <a href="https://healthterminologies.gov.au/fhir/ValueSet/indicator-hypersensitivity-intolerance-to-substance-2">Indicator of Hypersensitivity or Intolerance to Substance</a>, <a href="https://hl7.org/fhir/uv/ips/STU2/ValueSet-medical-devices-uv-ips.html">Medical Devices - IPS</a>, <a href="https://healthterminologies.gov.au/fhir/ValueSet/medication-form-1">Medication Form</a>, <a href="https://healthterminologies.gov.au/fhir/ValueSet/medication-ingredient-1">Medication Ingredient</a>, <a href="https://healthterminologies.gov.au/fhir/ValueSet/medication-reason-taken-1">Medication Reason Taken</a>, <a href="https://healthterminologies.gov.au/fhir/ValueSet/practitioner-role-1">Practitioner Role</a>, <a href="https://healthterminologies.gov.au/fhir/ValueSet/procedure-1">Procedure</a>, <a href="https://healthterminologies.gov.au/fhir/ValueSet/reason-for-encounter-1">Reason for Encounter</a>, <a href="https://healthterminologies.gov.au/fhir/ValueSet/reason-for-request-1">Reason for Request</a>, <a href="https://healthterminologies.gov.au/fhir/ValueSet/related-person-relationship-type-1">Related Person Relationship Type</a>, <a href="https://hl7.org/fhir/uv/ips/STU2/ValueSet-results-coded-values-laboratory-pathology-uv-ips.html">Results Coded Values Laboratory/Pathology - IPS</a>, <a href="https://healthterminologies.gov.au/fhir/ValueSet/route-of-administration-1">Route of Administration</a>, <a href="https://healthterminologies.gov.au/fhir/ValueSet/service-type-1">Service Type</a>, <a href="https://healthterminologies.gov.au/fhir/ValueSet/smoking-status-1">Smoking Status</a>, <a href="https://hl7.org/fhir/R4/valueset-additional-instruction-codes.html">SNOMED CT Additional Dosage Instructions</a>, <a href="https://hl7.org/fhir/R4/valueset-administration-method-codes.html">SNOMED CT Administration Method Codes</a></td>
+      <td>NCTS</td>
+      <td>Australian Digital Health Agency</td>
+    </tr>
+    <tr>
+      <td><a href="https://terminology.hl7.org/ECS_MR-v3-ietf3066.html">Tags for the Identification of Languages</a></td>
+      <td><a href="https://healthterminologies.gov.au/fhir/ValueSet/common-languages-australia-2">Common Languages in Australia</a></td>
+      <td>HL7 Terminology (THO)</td>
+      <td>Internet Engineering Task Force</td>
+    </tr>
+    <tr>
+      <td><a href="https://hl7.org/fhir/R4/v3/ObservationInterpretation/cs.html">v3 Code System ObservationInterpretation</a></td>
+      <td><a href="https://hl7.org/fhir/R4/valueset-observation-interpretation.html">Observation Interpretation Codes</a></td>
+      <td>FHIR</td>
+      <td>Health Level Seven International</td>
+    </tr>
+    <tr>
+      <td><a href="https://hl7.org/fhir/R4/v3/ParticipationType/cs.html">v3 Code System ParticipationType</a></td>
+      <td><a href="https://hl7.org/fhir/R4/valueset-encounter-participant-type.html">Participant type</a></td>
+      <td>FHIR</td>
+      <td>Health Level Seven International</td>
+    </tr>
+  </tbody>
+</table>
+
+
+
+
+</div>
+        </div>  <!-- /inner-wrapper -->
+      </div>  <!-- /row -->
+    </div>  <!-- /container -->
+  </div>  <!-- /segment-content -->
+
+  <script type="text/javascript" src="assets/js/jquery.js"> </script>     <!-- note keep space here, otherwise it will be transformed to empty tag -> fails -->
+  <script type="text/javascript" src="assets/js/jquery-ui.min.js"> </script>
+
+  <script type="text/javascript" src="assets/js/window-hash.js"> </script>
+  <a name="bottom"> </a>
+  <div id="segment-footer" igtool="footer" class="segment">  <!-- segment-footer -->
+    <div class="container">  <!-- container -->
+
+      <div class="inner-wrapper">
+        <p>
+          IG &#169; 2024+ <a style="color:var(--footer-hyperlink-text-color)" href="https://confluence.hl7.org/display/HAFWG">HL7 Australia</a>.  Package hl7.fhir.au.ps#1.0.0-ci-build based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Fri, Jun 19, 2026 03:09+0000">2026-06-19</span>
+          <br/>
+          <span style="color: var(--footer-highlight-text-color)">
+                      Links: <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Table of Contents</a> |
+                 <a style="color: var(--footer-hyperlink-text-color)" href="qa.html">QA Report</a>
+                 
+                
+                 | <a style="color: #81BEF7" target="_blank" href="http://hl7.org.au/fhir/ps/history.html">Version History</a> |
+                 <a style="color: #81BEF7" rel="license" href="http://hl7.org/fhir/R4/license.html"><img style="border-style: none;" alt="CC0" src="cc0.png"/></a> |
+                 <a style="color: #81BEF7" target="_blank" href="http://hl7.org/fhir-issues">Propose a change</a>
+
+          </span>
+        </p>
+      </div>  <!-- /inner-wrapper -->
+    </div>  <!-- /container -->
+  </div>  <!-- /segment-footer -->
+  
+  <div id="segment-post-footer" class="segment hidden">  <!-- segment-post-footer -->
+    <div class="container">  <!-- container -->
+    </div>  <!-- /container -->
+  </div>  <!-- /segment-post-footer -->
+
+  <!-- JS and analytics only. -->
+  <!-- Bootstrap core JavaScript
+  ================================================== -->
+  <!-- Placed at the end of the document so the pages load faster -->
+  <script type="text/javascript" src="assets/js/bootstrap.min.js"> </script>
+  <script type="text/javascript" src="assets/js/respond.min.js"> </script>
+  <script type="text/javascript" src="assets/js/anchor.min.js"> </script>
+  <script type="text/javascript" src="assets/js/clipboard.min.js"> </script>
+  <script type="text/javascript" src="assets/js/clipboard-btn.js"> </script>
+  <script type="text/javascript" src="assets/js/anchor-hover.js"> </script>
+  <!-- Analytics Below
+  ================================================== -->
+  </body>
+</html>
+

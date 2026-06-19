@@ -1,0 +1,15 @@
+%%{ init: { "theme": "default", "themeVariables": { "background": "transparent" } } }%%
+
+sequenceDiagram
+    participant Producer as Patient Summary Producer
+    participant Server as Patient Summary Server
+    participant Consumer as Patient Summary Consumer
+
+    Producer->>Server: Bundle create { type: 'document', profile: '.../au-ps-composition' }
+    Server-->>Producer: Location: [baseUrl]/Bundle/[id]
+
+    Consumer->>Server: Bundle search
+    Server-->>Consumer: Bundle { type: 'searchset', entry[]: Bundle { type: 'document' } }
+
+    Consumer->>Server: Bundle/[id] read
+    Server-->>Consumer: Bundle { type: 'document' }

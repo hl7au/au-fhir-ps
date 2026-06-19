@@ -1,0 +1,13 @@
+%%{ init: { "theme": "default", "themeVariables": { "background": "transparent" } } }%%
+
+sequenceDiagram
+    participant Server as Patient Summary Server
+    participant Consumer as Patient Summary Consumer
+
+    alt
+        Consumer->>Server: Patient/$summary { identifier, ... }
+    else 
+        Consumer->>Server: Patient/[id]/$summary { ... }
+    end
+
+    Server-->>Consumer: Bundle { type: 'document' }

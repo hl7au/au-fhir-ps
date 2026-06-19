@@ -1,0 +1,422 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE HTML>
+<html xml:lang="en" xmlns="http://www.w3.org/1999/xhtml" lang="en">
+  <head>
+    <meta content="text/html;charset=utf-8" http-equiv="Content-Type"/>
+    <title>Jeramy 27 May - AU Patient Summary Implementation Guide v1.0.0-ci-build</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta name="author" content="http://hl7.org/fhir"/>
+
+    <link href="fhir.css" rel="stylesheet"/>
+
+    <!-- Bootstrap core CSS -->
+    <link href="assets/css/bootstrap-fhir.css" rel="stylesheet"/>
+
+    <!-- Project extras -->
+    <link href="assets/css/project.css" rel="stylesheet"/>
+    <link href="assets/css/pygments-manni.css" rel="stylesheet"/>
+    <link href="assets/css/jquery-ui.css" rel="stylesheet"/>
+  	<link href="assets/css/prism.css" rel="stylesheet" />
+  	<link href="assets/css/cqf.css" rel="stylesheet" />
+    <!-- Placeholder for child template CSS declarations -->
+    <link href="assets/css/hl7.css" rel="stylesheet"/>
+
+    <link href="assets/css/fhir.css" rel="stylesheet"/>
+    <link href="assets/css/hl7au.css" rel="stylesheet"/>
+
+
+
+    <script type="text/javascript" src="fhir-table-scripts.js"> </script>
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+    <script src="assets/js/html5shiv.js"></script>
+    <script src="assets/js/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- Favicons -->
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="assets/ico/icon-fhir-144.png"/>
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="assets/ico/icon-fhir-114.png"/>
+    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="assets/ico/icon-fhir-72.png"/>
+    <link rel="apple-touch-icon-precomposed" href="assets/ico/icon-fhir-57.png"/>
+    <link rel="shortcut icon" href="assets/ico/favicon.png"/>
+  </head>
+  <body onload="document.body.style.opacity='1'">
+
+	  <script src="assets/js/prism.js"></script>
+    <script type="text/javascript" src="assets/js/mermaid.js"></script>
+    <script type="text/javascript" src="assets/js/mermaid-init.js"></script>
+    <style type="text/css">h2{--heading-prefix:"7.1.25"}
+    h3,h4,h5,h6{--heading-prefix:"7.1.25"}</style>
+    <div id="segment-header" class="segment">  <!-- segment-header -->
+      <div class="container">  <!-- container -->
+
+        <!-- Placeholder for child template header declarations -->
+
+        <div id="hl7-nav">
+          <a id="hl7-logo" data-no-external="true" href="http://hl7.com.au">
+            <img height="50" alt="Visit the HL7 Australia website" src="assets/images/hl7-logo-header.png"/>
+          </a>
+        </div>
+
+        <div id="family-nav">
+          <a id="family-logo" data-no-external="true" href="http://hl7.com.au">
+            <img height="50" alt="Visit the HL7 Australia website" src="assets/images/fhir-au-logo-www.png"/> </a>
+        </div>
+
+
+        <div id="project-nav">
+          <a id="project-logo" data-no-external="true" href="https://sparked.csiro.au/">
+            <img height="50" alt="Visit the Sparked website" src="assets/images/sparked-logo.png"/> </a>
+        </div>
+
+        <!--<div id="hl7-search">
+          <a id="hl7-search-lnk" data-no-external="true" href="http://hl7.org.au/fhir/search"><img alt="Search FHIR" src="assets/images/search.png"/></a>
+        </div>-->
+
+
+        <div id="ig-status">
+          <p><span style="font-size:12pt;font-weight:bold">AU Patient Summary Implementation Guide</span>
+            <br/>
+            <span style="display:inline-block;">1.0.0-ci-build - CI Build
+
+
+
+  <img alt="Australia flag" src="assets/images/aus.svg" height="16" title="Australia"/>
+
+
+            </span>
+          </p>
+        </div>
+      </div> <!-- /container -->
+    </div>  <!-- /segment-header -->
+
+    <div id="segment-navbar" class="segment">  <!-- segment-navbar -->
+      <div id="stripe"> </div>
+      <div class="container">  <!-- container -->
+        <!-- HEADER CONTENT -->
+
+        <nav class="navbar navbar-inverse">
+          <!--status-bar-->
+          <div class="container">
+            <button data-target=".navbar-inverse-collapse" class="navbar-toggle" data-toggle="collapse" type="button">
+              <span class="icon-bar"> </span>
+              <span class="icon-bar"> </span>
+              <span class="icon-bar"> </span>
+            </button>
+            <a class="navbar-brand hidden" href="http://hl7.org/fhir/R4/index.html">FHIR</a>
+            <div class="nav-collapse collapse navbar-inverse-collapse">
+              <ul xmlns="http://www.w3.org/1999/xhtml" class="nav navbar-nav">
+  <li>
+    <a href="index.html">Home</a>
+  </li>
+  <li class="dropdown">
+    <a data-toggle="dropdown" href="#" class="dropdown-toggle">Conformance
+      <b class="caret"></b>
+    </a>
+    <ul class="dropdown-menu">
+      <li>
+        <a href="general-requirements.html">General Requirements</a>
+        <a href="declaring-conformance.html">Declaring Conformance</a>
+      </li>
+    </ul>
+  </li>
+  <li>
+    <a href="the-aups.html">The AU PS</a>
+  </li>
+  <li class="dropdown">
+    <a data-toggle="dropdown" href="#" class="dropdown-toggle">Guidance
+      <b class="caret"></b>
+    </a>
+     <ul class="dropdown-menu">
+      <li>
+        <a href="general-guidance.html">General Guidance</a>
+      </li>
+      <li>
+        <a href="generation-and-access.html">Generation and Access</a>
+      </li>
+      <li>
+        <a href="sex-and-gender.html">Sex and Gender</a>
+      </li>
+      <li>
+        <a href="aucdi.html">AUCDI</a>
+      </li>
+       <li>
+        <a href="relationship.html">Relationship With Other IGs</a>
+      </li>
+      <li>
+        <a href="variance.html">AU Variance Statement</a>
+      </li>
+      <li>
+        <a href="comparison.html">Comparison With Other National and International IGs</a>
+      </li>
+      <li>
+        <a href="future.html">Future of AU PS</a>
+      </li> 
+    </ul>
+  </li>
+  <li class="dropdown">
+    <a data-toggle="dropdown" href="#" class="dropdown-toggle">Use Cases
+      <b class="caret"></b>
+    </a>
+     <ul class="dropdown-menu">
+      <li>
+        <a href="uc-interstate.html">Interstate GP Visit</a>
+      </li>
+      <li>
+        <a href="uc-referral.html">Referral to Specialist and Allied Health</a>
+      </li>
+    </ul>
+  </li>
+  <li>
+    <a href="security.html">Security and Privacy</a>
+  </li>
+  <li class="dropdown">
+    <a data-toggle="dropdown" href="#" class="dropdown-toggle">FHIR Artefacts
+      <b class="caret"></b>
+    </a>
+    <ul class="dropdown-menu">
+       <li>
+        <a href="artifacts.html">Artefacts Summary</a>
+      </li>
+      <li>
+        <a href="profiles-and-extensions.html">Profiles and Extensions</a>
+      </li>
+      <!-- <li>
+        <a href="search-parameters.html">Search Parameters</a>
+      </li>-->
+      <li>
+        <a href="terminology.html">Terminology</a>
+      </li>
+      <!-- <li>
+        <a href="capability-statements.html">Capability Statements</a>
+      </li> -->
+      <li>
+        <a href="actors.html">Actor Definitions</a>
+      </li>
+    </ul>
+  </li>
+  <li>
+    <a href="examples.html">Examples</a>
+  </li>
+  <li class="dropdown">
+    <a data-toggle="dropdown" href="#" class="dropdown-toggle">Support
+      <b class="caret"></b>
+    </a>
+    <ul class="dropdown-menu">
+      <li>
+        <a href="downloads.html">Downloads</a>
+      </li>
+      <li>
+        <a href="license.html">License and Legal</a>
+      </li>
+    </ul>
+  </li>
+  <li>
+    <a href="changes.html">Change Log</a>
+  </li>
+</ul>
+            </div>  <!-- /.nav-collapse -->
+          </div>  <!-- /.container -->
+        </nav>  <!-- /.navbar -->
+      <!-- /HEADER CONTENT -->
+      </div>  <!-- /container -->
+    </div>  <!-- /segment-navbar -->
+    <!--status-bar-->
+
+    <div id="segment-breadcrumb" class="segment">  <!-- segment-breadcrumb -->
+      <div class="container">  <!-- container -->
+        <ul class="breadcrumb">
+          <li><a href='toc.html'><b>Table of Contents</b></a></li><li><a href='artefacts.html'><b>FHIR artefacts</b></a></li><li><a href='artifacts.html'><b>Artefacts Summary</b></a></li><li><b>Jeramy 27 May</b></li>
+
+        </ul>
+      </div>  <!-- /container -->
+    </div>  <!-- /segment-breadcrumb -->
+
+    <a name="top"> </a>
+    <div id="segment-content" class="segment">  <!-- segment-content -->
+      <div class="container">  <!-- container -->
+        <div class="row">
+          <div class="inner-wrapper">
+
+<div class="col-12">
+  <!--ReleaseHeader--><p id="publish-box">This page is part of the AU Patient Summary (v1.0.0-ci-build: QA Preview) based on <a data-no-external="true" href="http://hl7.org/fhir/R4">FHIR (HL7® FHIR® Standard) R4</a>. <span class="fhir-pb-dynamic" data-pb-version="1.0.0-ci-build" data-pb-canonical="http://hl7.org.au/fhir/ps"><span class="fhir-pb-superseded">The current version which supersedes this version is <a class="fhir-pb-current-link" data-no-external="true" href="http://hl7.org.au/fhir/ps"><span class="fhir-pb-current-version">the current version</span></a></span><span class="fhir-pb-iscurrent" style="display:none">This is the current published version</span><span class="fhir-pb-prerelease" style="display:none">This version is a pre-release. The current official version is <a class="fhir-pb-current-link" data-no-external="true" href="http://hl7.org.au/fhir/ps"><span class="fhir-pb-current-version">the current version</span></a></span></span><script type="text/javascript">(function(){function cmp(a,b){if(a===b)return 0;function p(v){var s=String(v).split('-');return{n:s[0].split('.').map(function(x){return parseInt(x,10)||0;}),pre:s.length>1?s.slice(1).join('-'):null};}var pa=p(a),pb=p(b),i,m=Math.max(pa.n.length,pb.n.length);for(i=0;i<m;i++){var d=(pa.n[i]||0)-(pb.n[i]||0);if(d!==0)return d>0?1:-1;}if(pa.pre&&!pb.pre)return -1;if(!pa.pre&&pb.pre)return 1;if(pa.pre&&pb.pre)return pa.pre<pb.pre?-1:(pa.pre>pb.pre?1:0);return 0;}function sh(el,on){if(el)el.style.display=on?'':'none';}function pn(u){try{return new URL(u,document.baseURI).pathname.replace(/\/+$/,'');}catch(e){return null;}}function init(){var dyn=document.querySelectorAll('span.fhir-pb-dynamic');var pv=document.querySelectorAll('span.fhir-pb-page-versions');if(!dyn.length&&!pv.length)return;var canonical=dyn.length?dyn[0].getAttribute('data-pb-canonical'):null;if(!canonical)return;var pgVer=(dyn.length?dyn[0]:pv[0]).getAttribute('data-pb-version');var igRoot=null;if(pgVer){var seg='/'+pgVer+'/';var si=location.pathname.indexOf(seg);if(si>=0)igRoot=location.pathname.slice(0,si);}if(igRoot===null)igRoot=pn(canonical);if(igRoot===null)return;var plUrl=igRoot+'/package-list.json';fetch(plUrl,{cache:'no-cache'}).then(function(r){return r.json();}).then(function(pl){var list=(pl&&pl.list)||[];var cur=null;list.forEach(function(e){if(e&&e.current===true&&e.version!=='current'&&typeof e.path==='string'&&e.path.indexOf(canonical)===0){cur=e;}});if(cur)Array.prototype.forEach.call(dyn,function(box){if(box.getAttribute('data-pb-done'))return;box.setAttribute('data-pb-done','1');var thisVer=box.getAttribute('data-pb-version');Array.prototype.forEach.call(box.querySelectorAll('.fhir-pb-current-version'),function(s){s.textContent=cur.version;});Array.prototype.forEach.call(box.querySelectorAll('a.fhir-pb-current-link'),function(a){a.setAttribute('href',cur.path);});var d=cmp(cur.version,thisVer);sh(box.querySelector('.fhir-pb-superseded'),d>0);sh(box.querySelector('.fhir-pb-iscurrent'),d===0);sh(box.querySelector('.fhir-pb-prerelease'),d<0);});var ms=list.filter(function(e){return e&&e.milestoneName&&typeof e.path==='string'&&e.path.indexOf(canonical)===0;});Array.prototype.forEach.call(pv,function(span){if(span.getAttribute('data-pb-done'))return;span.setAttribute('data-pb-done','1');var thisVer=span.getAttribute('data-pb-version');var mine=list.filter(function(e){return e.version===thisVer;})[0];var myBase=mine?pn(mine.path):null;var here=location.pathname;var rel=(myBase&&here.indexOf(myBase+'/')===0)?here.slice(myBase.length+1):here.substring(here.lastIndexOf('/')+1);Promise.all(ms.map(function(m){var href=pn(m.path)+'/'+rel;if(m.version===thisVer)return Promise.resolve({m:m,href:href,ok:true,self:true});return fetch(href,{method:'HEAD'}).then(function(r){return{m:m,href:href,ok:r.ok,self:false};}).catch(function(){return{m:m,href:href,ok:false};});})).then(function(res){var parts=res.filter(function(x){return x.ok;}).map(function(x){return x.self?('<b>'+x.m.milestoneName+'</b>'):('<a data-no-external="true" href="'+x.href+'">'+x.m.milestoneName+'</a>');});if(parts.length){span.innerHTML='. Page versions: '+parts.join(' ');}});});}).catch(function(){});}if(document.readyState!=='loading'){init();}else{document.addEventListener('DOMContentLoaded',init);}})();</script>.  For a full list of available versions, see the <a data-no-external="true" href="http://hl7.org.au/fhir/ps/history.html">Directory of published versions</a><span class="fhir-pb-page-versions" data-pb-version="1.0.0-ci-build"></span></p><!--EndReleaseHeader-->
+
+  
+
+
+
+
+
+
+
+
+<ul class="nav nav-tabs">
+
+  <li class="active">
+    <a href="#">Narrative Content</a>
+  </li>
+
+
+
+  
+    <li>
+      <a href="Bundle-aups-gpvisit-retrieval.xml.html">XML</a>
+    </li>
+  
+
+
+  
+    <li>
+      <a href="Bundle-aups-gpvisit-retrieval.json.html">JSON</a>
+    </li>
+  
+
+
+  
+    <li>
+      <a href="Bundle-aups-gpvisit-retrieval.ttl.html">TTL</a>
+    </li>
+  
+
+
+
+</ul>
+
+
+  <a name="root"> </a>
+
+
+  <h2 id="root">Example Bundle: Jeramy 27 May</h2>
+
+
+
+
+  <!-- insert intro if present -->
+  
+
+
+
+  <div data-fhir="generated"><div style="border: 1px solid maroon; padding: 10px; background-color: #f2faf9; min-height: 160px;"><p><b>Document Details</b></p><p class="res-header-id"/><a name="aups-gpvisit-retrieval"> </a><a name="hcaups-gpvisit-retrieval"> </a><div style="display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%"><p style="margin-bottom: 0px"/><p style="margin-bottom: 0px">Profile: <a href="StructureDefinition-au-ps-bundle.html">AU PS Bundle</a></p><p>Amended Document at 2025-05-27 11:57:36+1100 by <a href="Bundle-aups-gpvisit-retrieval.html#urn-uuid-ca779d48-9dd8-4fe1-829a-d48b12b492af">Practitioner Abe LOWE </a> for <a href="Bundle-aups-gpvisit-retrieval.html#urn-uuid-d1122188-f53f-417f-a84f-bc44479baa63">Jeramy EZRA BANKS (official) Male, DoB: 1971-05-14 ( IHI: Austalian Healthcare Identifier - Individual#8003608166980417)</a> </p></div></div><hr/><div style="border: 1px solid maroon; padding: 10px; background-color: #f2faf9; min-height: 160px;"><p><b>Document Subject</b></p><p class="res-header-id"/><div style="display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%"><p style="margin-bottom: 0px">version: 1; Last updated: 2020-02-25 11:17:03+1100</p><p style="margin-bottom: 0px">Profile: <a href="StructureDefinition-au-ps-patient.html">AU PS Patient</a></p></div><p style="border: 1px #661aff solid; background-color: #e6e6ff; padding: 10px;">Jeramy EZRA BANKS (official) Male, DoB: 1971-05-14 ( IHI: Austalian Healthcare Identifier - Individual#8003608166980417)</p><hr/><table class="grid" data-fhir="generated"><tr><td style="background-color: #f3f5da" title="Other Id (see the one above)">Other Id:</td><td colspan="3">Medicare Number/29545410411</td></tr><tr><td style="background-color: #f3f5da" title="Ways to contact the Patient">Contact Detail</td><td colspan="3"><ul><li>ph: 0270107520(Home)</li><li>ph: 0491574118(Mobile)</li><li>50 Sebastien St Minjary NSW 2720 AU </li></ul></td></tr><tr><td style="background-color: #f3f5da" title="Patient Links">Links:</td><td colspan="3"><ul><li>General Practitioner: <a href="Bundle-aups-gpvisit-retrieval.html#urn-uuid-4d1e0ca1-4ea7-46a2-8f0f-af5225b73c3a">Organization Mossy Point Medical Centre</a></li></ul></td></tr><tr><td style="background-color: #f3f5da" title="This extension applies to the Patient, Person, and RelatedPerson resources and is used to indicate whether a person identifies as being of Aboriginal or Torres Strait Islander origin."><a href="http://hl7.org.au/fhir/6.0.0/StructureDefinition-indigenous-status.html">Australian Indigenous Status</a></td><td colspan="3"><a href="https://api.healthterminologies.gov.au/integration/R4/fhir/CodeSystem/australian-indigenous-status-1#0dd49b23-4d26-4602-b1ea-8bc5bd0e907c-4">Australian Indigenous Status: 4</a> (Neither Aboriginal nor Torres Strait Islander origin)</td></tr></table></div><hr/><div style="border: 1px solid maroon; padding: 10px; background-color: #f2faf9; min-height: 160px;"><p><b>Document Content</b></p><div><h2>Allergies/Adverse reactions</h2></div>Allergies: Nil Known<div><h2>Current Medications</h2></div>
+            <ul><li><div><b>Medication Name</b>: Metformin 500mg</div><div>Instructions: twice daily</div><div>Clinical indication: Type 2 diabetes mellitus</div></li></ul>
+            <ul><li><div><b>Medication Name</b>: Rosuvastatin 40mg &amp; ezetrol 10mg</div><div>Instructions: once daily</div><div>Clinical indication: Hypercholesterolaemia</div></li></ul>
+            <ul><li><div><b>Medication Name</b>: Telmisartan 80mg</div><div>Instructions: once daily</div><div>Clinical indication: Hypertension</div></li></ul>
+            <ul><li><div><b>Medication Name</b>: Aspirin 100mg</div><div>Instructions: once daily</div><div>Clinical indication: Cardiovascular disease</div></li></ul>
+            <ul><li><div><b>Medication Name</b>: Zyloprim 300mg</div><div>Instructions: once daily</div><div>Clinical indication: Gout</div></li></ul>
+            <ul><li><div><b>Medication Name</b>: Ventolin</div><div>Instructions: 2 puffs, 4 times per day, and as needed</div><div>Clinical indication: COPD</div></li></ul>
+            <ul><li><div><b>Medication Name</b>: Spiriva</div><div>Instructions: once daily</div><div>Clinical indication: COPD</div></li></ul>
+            <div><h2>Current Medical Information</h2></div>
+            <ul>
+              <li>Hypertension</li>
+              <li>Diabetes</li>
+              <li>Hypercholesterolaemia</li>
+              <li>Gout, Left great toe. On allopurinol for uric acid control</li>
+              <li>COPD</li>
+            </ul><div><h2>Vaccination/Immunisation history</h2></div>
+            <ul>
+              <li>M-M-R II</li>
+              <li>Boostrix</li>
+              <li>AstraZeneca Vaxzevria</li>
+            </ul>
+            <div><h2>Past Medical History (Procedures)</h2></div>
+            <ul><li><div><b>Procedure Name</b>: Angiogram</div><div>Reason: Recent chest pain</div><div>Date: 22/05/2025</div></li></ul>
+            <ul><li><div><b>Procedure Name</b>: Chest x-ray</div><div>Date: 22/02/2025</div></li></ul>
+            <div><h2>Result History</h2></div>
+            <table border="1">
+                <thead>
+                  <tr>
+                    <th>Test Date</th>
+                    <th>Total Cholesterol</th>
+                    <th>HDL (High-Density Lipoprotein)</th>
+                    <th>LDL (Low-Density Lipoprotein)</th>
+                    <th>Triglycerides</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>2025-03-17</td>
+                    <td>5.4 mmol/L</td>
+                    <td>1.55 mmol/L</td>
+                    <td>3.10 mmol/L</td>
+                    <td>1.7 mmol/L</td>
+                  </tr>
+                  <tr>
+                    <td>2024-12-17</td>
+                    <td>5.7 mmol/L</td>
+                    <td>1.42 mmol/L</td>
+                    <td>3.36 mmol/L</td>
+                    <td>1.8 mmol/L</td>
+                  </tr>
+                  <tr>
+                    <td>2024-09-17</td>
+                    <td>6.0 mmol/L</td>
+                    <td>1.29 mmol/L</td>
+                    <td>3.62 mmol/L</td>
+                    <td>1.9 mmol/L</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div><hr/><h2>Additional Resources Included in Document</h2><a name="urn-uuid-d1122188-f53f-417f-a84f-bc44479baa63"> </a><a name="Patient_d1122188-f53f-417f-a84f-bc44479baa63"> </a><a name="hcPatient_d1122188-f53f-417f-a84f-bc44479baa63"> </a><hr/><p>Entry 2 - fullUrl = urn:uuid:d1122188-f53f-417f-a84f-bc44479baa63</p><p>Resource Patient:</p><blockquote><p class="res-header-id"/><div style="display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%"><p style="margin-bottom: 0px">version: 1; Last updated: 2020-02-25 11:17:03+1100</p><p style="margin-bottom: 0px">Profile: <a href="StructureDefinition-au-ps-patient.html">AU PS Patient</a></p></div><p style="border: 1px #661aff solid; background-color: #e6e6ff; padding: 10px;">Jeramy EZRA BANKS (official) Male, DoB: 1971-05-14 ( IHI: Austalian Healthcare Identifier - Individual#8003608166980417)</p><hr/><table class="grid" data-fhir="generated"><tr><td style="background-color: #f3f5da" title="Other Id (see the one above)">Other Id:</td><td colspan="3">Medicare Number/29545410411</td></tr><tr><td style="background-color: #f3f5da" title="Ways to contact the Patient">Contact Detail</td><td colspan="3"><ul><li>ph: 0270107520(Home)</li><li>ph: 0491574118(Mobile)</li><li>50 Sebastien St Minjary NSW 2720 AU </li></ul></td></tr><tr><td style="background-color: #f3f5da" title="Patient Links">Links:</td><td colspan="3"><ul><li>General Practitioner: <a href="Bundle-aups-gpvisit-retrieval.html#urn-uuid-4d1e0ca1-4ea7-46a2-8f0f-af5225b73c3a">Organization Mossy Point Medical Centre</a></li></ul></td></tr><tr><td style="background-color: #f3f5da" title="This extension applies to the Patient, Person, and RelatedPerson resources and is used to indicate whether a person identifies as being of Aboriginal or Torres Strait Islander origin."><a href="http://hl7.org.au/fhir/6.0.0/StructureDefinition-indigenous-status.html">Australian Indigenous Status</a></td><td colspan="3"><a href="https://api.healthterminologies.gov.au/integration/R4/fhir/CodeSystem/australian-indigenous-status-1#0dd49b23-4d26-4602-b1ea-8bc5bd0e907c-4">Australian Indigenous Status: 4</a> (Neither Aboriginal nor Torres Strait Islander origin)</td></tr></table></blockquote><a name="urn-uuid-eaf0788a-8fdf-4e21-b302-e529f3bd9d5f"> </a><a name="AllergyIntolerance_eaf0788a-8fdf-4e21-b302-e529f3bd9d5f"> </a><a name="hcAllergyIntolerance_eaf0788a-8fdf-4e21-b302-e529f3bd9d5f"> </a><hr/><p>Entry 3 - fullUrl = urn:uuid:eaf0788a-8fdf-4e21-b302-e529f3bd9d5f</p><p>Resource AllergyIntolerance:</p><blockquote><p class="res-header-id"/><div style="display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%"><p style="margin-bottom: 0px">version: 2; Last updated: 2025-05-25 11:39:15+1100</p><p style="margin-bottom: 0px">Profile: <a href="StructureDefinition-au-ps-allergyintolerance.html">AU PS AllergyIntolerance</a></p></div><p><b>clinicalStatus</b>: <span title="Codes:{http://terminology.hl7.org/CodeSystem/allergyintolerance-clinical active}">Active</span></p><p><b>code</b>: <span title="Codes:{http://snomed.info/sct 716186003}">No known allergy</span></p><p><b>patient</b>: <a href="Bundle-aups-gpvisit-retrieval.html#urn-uuid-d1122188-f53f-417f-a84f-bc44479baa63">Jeramy EZRA BANKS (official) Male, DoB: 1971-05-14 ( IHI: Austalian Healthcare Identifier - Individual#8003608166980417)</a></p></blockquote><a name="urn-uuid-d4ca61a6-5b55-41ab-9b1a-fba0daefe94d"> </a><a name="MedicationRequest_d4ca61a6-5b55-41ab-9b1a-fba0daefe94d"> </a><a name="hcMedicationRequest_d4ca61a6-5b55-41ab-9b1a-fba0daefe94d"> </a><hr/><p>Entry 4 - fullUrl = urn:uuid:d4ca61a6-5b55-41ab-9b1a-fba0daefe94d</p><p>Resource MedicationRequest:</p><blockquote><p class="res-header-id"/><div style="display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%"><p style="margin-bottom: 0px">version: 2; Last updated: 2025-05-25 11:17:03+1100</p><p style="margin-bottom: 0px">Profile: <a href="StructureDefinition-au-ps-medicationrequest.html">AU PS MedicationRequest</a></p></div><p><b>status</b>: Active</p><p><b>intent</b>: Order</p><p><b>subject</b>: <a href="Bundle-aups-gpvisit-retrieval.html#urn-uuid-d1122188-f53f-417f-a84f-bc44479baa63">Jeramy EZRA BANKS (official) Male, DoB: 1971-05-14 ( IHI: Austalian Healthcare Identifier - Individual#8003608166980417)</a></p><p><b>encounter</b>: <a href="Bundle-aups-gpvisit-retrieval.html#urn-uuid-7d63c3a7-3cbe-487d-99aa-00c6c29f1db5">Encounter: status = finished; class = ambulatory (ActCode#AMB); serviceType = General practice service; period = (?) --&gt; 2025-02-25; reasonCode = Follow-up visit</a></p><p><b>authoredOn</b>: Absent because : unknown</p><p><b>requester</b>: <a href="Bundle-aups-gpvisit-retrieval.html#urn-uuid-ca779d48-9dd8-4fe1-829a-d48b12b492af">Practitioner Abe LOWE </a></p><blockquote><p><b>dosageInstruction</b></p><p><b>text</b>: 2 puffs, 4 times per day, and as needed</p><p><b>timing</b>: 4 per 1 day</p><p><b>route</b>: <span title="Codes:{http://snomed.info/sct 447694001}">Respiratory tract route</span></p><h3>DoseAndRates</h3><table class="grid"><tr><td style="display: none">-</td><td><b>Dose[x]</b></td></tr><tr><td style="display: none">*</td><td>2</td></tr></table></blockquote></blockquote><a name="urn-uuid-3f76e819-1f30-405d-b1ef-66c878b401c2"> </a><a name="MedicationRequest_3f76e819-1f30-405d-b1ef-66c878b401c2"> </a><a name="hcMedicationRequest_3f76e819-1f30-405d-b1ef-66c878b401c2"> </a><hr/><p>Entry 5 - fullUrl = urn:uuid:3f76e819-1f30-405d-b1ef-66c878b401c2</p><p>Resource MedicationRequest:</p><blockquote><p class="res-header-id"/><div style="display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%"><p style="margin-bottom: 0px">version: 2; Last updated: 2025-05-25 11:17:03+1100</p><p style="margin-bottom: 0px">Profile: <a href="StructureDefinition-au-ps-medicationrequest.html">AU PS MedicationRequest</a></p></div><p><b>status</b>: Active</p><p><b>intent</b>: Order</p><p><b>subject</b>: <a href="Bundle-aups-gpvisit-retrieval.html#urn-uuid-d1122188-f53f-417f-a84f-bc44479baa63">Jeramy EZRA BANKS (official) Male, DoB: 1971-05-14 ( IHI: Austalian Healthcare Identifier - Individual#8003608166980417)</a></p><p><b>encounter</b>: <a href="Bundle-aups-gpvisit-retrieval.html#urn-uuid-7d63c3a7-3cbe-487d-99aa-00c6c29f1db5">Encounter: status = finished; class = ambulatory (ActCode#AMB); serviceType = General practice service; period = (?) --&gt; 2025-02-25; reasonCode = Follow-up visit</a></p><p><b>authoredOn</b>: Absent because : unknown</p><p><b>requester</b>: <a href="Bundle-aups-gpvisit-retrieval.html#urn-uuid-ca779d48-9dd8-4fe1-829a-d48b12b492af">Practitioner Abe LOWE </a></p><blockquote><p><b>dosageInstruction</b></p><p><b>text</b>: once daily</p><p><b>timing</b>: Once per 1 day</p><p><b>route</b>: <span title="Codes:{http://snomed.info/sct 26643006}">Oral route</span></p><h3>DoseAndRates</h3><table class="grid"><tr><td style="display: none">-</td><td><b>Dose[x]</b></td></tr><tr><td style="display: none">*</td><td>1</td></tr></table></blockquote></blockquote><a name="urn-uuid-e96d8d8d-8ef2-436b-8d04-4d136a731398"> </a><a name="MedicationRequest_e96d8d8d-8ef2-436b-8d04-4d136a731398"> </a><a name="hcMedicationRequest_e96d8d8d-8ef2-436b-8d04-4d136a731398"> </a><hr/><p>Entry 6 - fullUrl = urn:uuid:e96d8d8d-8ef2-436b-8d04-4d136a731398</p><p>Resource MedicationRequest:</p><blockquote><p class="res-header-id"/><div style="display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%"><p style="margin-bottom: 0px">version: 2; Last updated: 2025-05-25 11:17:03+1100</p><p style="margin-bottom: 0px">Profile: <a href="StructureDefinition-au-ps-medicationrequest.html">AU PS MedicationRequest</a></p></div><p><b>status</b>: Active</p><p><b>intent</b>: Order</p><p><b>subject</b>: <a href="Bundle-aups-gpvisit-retrieval.html#urn-uuid-d1122188-f53f-417f-a84f-bc44479baa63">Jeramy EZRA BANKS (official) Male, DoB: 1971-05-14 ( IHI: Austalian Healthcare Identifier - Individual#8003608166980417)</a></p><p><b>encounter</b>: <a href="Bundle-aups-gpvisit-retrieval.html#urn-uuid-7d63c3a7-3cbe-487d-99aa-00c6c29f1db5">Encounter: status = finished; class = ambulatory (ActCode#AMB); serviceType = General practice service; period = (?) --&gt; 2025-02-25; reasonCode = Follow-up visit</a></p><p><b>authoredOn</b>: Absent because : unknown</p><p><b>requester</b>: <a href="Bundle-aups-gpvisit-retrieval.html#urn-uuid-ca779d48-9dd8-4fe1-829a-d48b12b492af">Practitioner Abe LOWE </a></p><h3>DosageInstructions</h3><table class="grid"><tr><td style="display: none">-</td><td><b>Text</b></td><td><b>Timing</b></td></tr><tr><td style="display: none">*</td><td>once daily</td><td>Once per 1 day</td></tr></table></blockquote><a name="urn-uuid-96b7e47d-0487-4219-adbe-7c2dfb0b2deb"> </a><a name="MedicationRequest_96b7e47d-0487-4219-adbe-7c2dfb0b2deb"> </a><a name="hcMedicationRequest_96b7e47d-0487-4219-adbe-7c2dfb0b2deb"> </a><hr/><p>Entry 7 - fullUrl = urn:uuid:96b7e47d-0487-4219-adbe-7c2dfb0b2deb</p><p>Resource MedicationRequest:</p><blockquote><p class="res-header-id"/><div style="display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%"><p style="margin-bottom: 0px">version: 2; Last updated: 2025-05-25 11:17:03+1100</p><p style="margin-bottom: 0px">Profile: <a href="StructureDefinition-au-ps-medicationrequest.html">AU PS MedicationRequest</a></p></div><p><b>status</b>: Active</p><p><b>intent</b>: Order</p><p><b>subject</b>: <a href="Bundle-aups-gpvisit-retrieval.html#urn-uuid-d1122188-f53f-417f-a84f-bc44479baa63">Jeramy EZRA BANKS (official) Male, DoB: 1971-05-14 ( IHI: Austalian Healthcare Identifier - Individual#8003608166980417)</a></p><p><b>encounter</b>: <a href="Bundle-aups-gpvisit-retrieval.html#urn-uuid-f7aaf2d5-c105-4652-8b4c-e555903593a7">Encounter: status = finished; class = inpatient encounter (ActCode#IMP); serviceType = Cardiac diagnostic service; period = 2025-05-22 08:15:00+1000 --&gt; 2025-05-23 11:19:00+1000</a></p><p><b>authoredOn</b>: Absent because : unknown</p><p><b>requester</b>: <a href="Bundle-aups-gpvisit-retrieval.html#urn-uuid-ca779d48-9dd8-4fe1-829a-d48b12b492af">Practitioner Abe LOWE </a></p><h3>DosageInstructions</h3><table class="grid"><tr><td style="display: none">-</td><td><b>Text</b></td><td><b>Timing</b></td></tr><tr><td style="display: none">*</td><td>once daily</td><td>Once per 1 day</td></tr></table></blockquote><a name="urn-uuid-d7351a16-8df1-47a4-9129-2c2d6c2238ec"> </a><a name="MedicationRequest_d7351a16-8df1-47a4-9129-2c2d6c2238ec"> </a><a name="hcMedicationRequest_d7351a16-8df1-47a4-9129-2c2d6c2238ec"> </a><hr/><p>Entry 8 - fullUrl = urn:uuid:d7351a16-8df1-47a4-9129-2c2d6c2238ec</p><p>Resource MedicationRequest:</p><blockquote><p class="res-header-id"/><div style="display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%"><p style="margin-bottom: 0px">version: 2; Last updated: 2025-05-25 11:17:03+1100</p><p style="margin-bottom: 0px">Profile: <a href="StructureDefinition-au-ps-medicationrequest.html">AU PS MedicationRequest</a></p></div><p><b>status</b>: Active</p><p><b>intent</b>: Order</p><p><b>subject</b>: <a href="Bundle-aups-gpvisit-retrieval.html#urn-uuid-d1122188-f53f-417f-a84f-bc44479baa63">Jeramy EZRA BANKS (official) Male, DoB: 1971-05-14 ( IHI: Austalian Healthcare Identifier - Individual#8003608166980417)</a></p><p><b>encounter</b>: <a href="Bundle-aups-gpvisit-retrieval.html#urn-uuid-7d63c3a7-3cbe-487d-99aa-00c6c29f1db5">Encounter: status = finished; class = ambulatory (ActCode#AMB); serviceType = General practice service; period = (?) --&gt; 2025-02-25; reasonCode = Follow-up visit</a></p><p><b>authoredOn</b>: Absent because : unknown</p><p><b>requester</b>: <a href="Bundle-aups-gpvisit-retrieval.html#urn-uuid-ca779d48-9dd8-4fe1-829a-d48b12b492af">Practitioner Abe LOWE </a></p><h3>DosageInstructions</h3><table class="grid"><tr><td style="display: none">-</td><td><b>Text</b></td><td><b>Timing</b></td></tr><tr><td style="display: none">*</td><td>twice daily</td><td>2 per 1 day</td></tr></table></blockquote><a name="urn-uuid-fbc14baf-d7bf-4fa0-9035-f8e4a73986d0"> </a><a name="MedicationRequest_fbc14baf-d7bf-4fa0-9035-f8e4a73986d0"> </a><a name="hcMedicationRequest_fbc14baf-d7bf-4fa0-9035-f8e4a73986d0"> </a><hr/><p>Entry 9 - fullUrl = urn:uuid:fbc14baf-d7bf-4fa0-9035-f8e4a73986d0</p><p>Resource MedicationRequest:</p><blockquote><p class="res-header-id"/><div style="display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%"><p style="margin-bottom: 0px">version: 2; Last updated: 2025-05-25 11:17:03+1100</p><p style="margin-bottom: 0px">Profile: <a href="StructureDefinition-au-ps-medicationrequest.html">AU PS MedicationRequest</a></p></div><p><b>status</b>: Active</p><p><b>intent</b>: Order</p><p><b>subject</b>: <a href="Bundle-aups-gpvisit-retrieval.html#urn-uuid-d1122188-f53f-417f-a84f-bc44479baa63">Jeramy EZRA BANKS (official) Male, DoB: 1971-05-14 ( IHI: Austalian Healthcare Identifier - Individual#8003608166980417)</a></p><p><b>authoredOn</b>: Absent because : unknown</p><p><b>requester</b>: <a href="Bundle-aups-gpvisit-retrieval.html#urn-uuid-ca779d48-9dd8-4fe1-829a-d48b12b492af">Practitioner Abe LOWE </a></p><h3>DosageInstructions</h3><table class="grid"><tr><td style="display: none">-</td><td><b>Text</b></td><td><b>Timing</b></td></tr><tr><td style="display: none">*</td><td>once daily</td><td>Once per 1 day</td></tr></table></blockquote><a name="urn-uuid-cefeac7e-cf0c-4c14-917d-2a526516c3d1"> </a><a name="MedicationRequest_cefeac7e-cf0c-4c14-917d-2a526516c3d1"> </a><a name="hcMedicationRequest_cefeac7e-cf0c-4c14-917d-2a526516c3d1"> </a><hr/><p>Entry 10 - fullUrl = urn:uuid:cefeac7e-cf0c-4c14-917d-2a526516c3d1</p><p>Resource MedicationRequest:</p><blockquote><p class="res-header-id"/><div style="display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%"><p style="margin-bottom: 0px">version: 2; Last updated: 2025-05-25 11:17:03+1100</p><p style="margin-bottom: 0px">Profile: <a href="StructureDefinition-au-ps-medicationrequest.html">AU PS MedicationRequest</a></p></div><p><b>status</b>: Active</p><p><b>intent</b>: Order</p><p><b>subject</b>: <a href="Bundle-aups-gpvisit-retrieval.html#urn-uuid-d1122188-f53f-417f-a84f-bc44479baa63">Jeramy EZRA BANKS (official) Male, DoB: 1971-05-14 ( IHI: Austalian Healthcare Identifier - Individual#8003608166980417)</a></p><p><b>authoredOn</b>: Absent because : unknown</p><p><b>requester</b>: <a href="Bundle-aups-gpvisit-retrieval.html#urn-uuid-ca779d48-9dd8-4fe1-829a-d48b12b492af">Practitioner Abe LOWE </a></p><h3>DosageInstructions</h3><table class="grid"><tr><td style="display: none">-</td><td><b>Text</b></td><td><b>Timing</b></td></tr><tr><td style="display: none">*</td><td>once daily</td><td>Once per 1 day</td></tr></table></blockquote><a name="urn-uuid-ca779d48-9dd8-4fe1-829a-d48b12b492af"> </a><a name="Practitioner_ca779d48-9dd8-4fe1-829a-d48b12b492af"> </a><a name="hcPractitioner_ca779d48-9dd8-4fe1-829a-d48b12b492af"> </a><hr/><p>Entry 11 - fullUrl = urn:uuid:ca779d48-9dd8-4fe1-829a-d48b12b492af</p><p>Resource Practitioner:</p><blockquote><p class="res-header-id"/><div style="display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%"><p style="margin-bottom: 0px">version: 2; Last updated: 2025-05-25 11:17:03+1100</p><p style="margin-bottom: 0px">Profile: <a href="StructureDefinition-au-ps-practitioner.html">AU PS Practitioner</a></p></div><p><b>identifier</b>: HPI-I/8003616566718832, Prescriber Number/8017196</p><p><b>name</b>: Abe LOWE </p><p><b>telecom</b>: ph: 0270102315(Work), <a href="mailto:abe.lowe@mossypointmc.example.net">abe.lowe@mossypointmc.example.net</a></p><p><b>gender</b>: Male</p><p><b>address</b>: 158 Warrego Cl Mossy Point NSW 2537 </p></blockquote><a name="urn-uuid-96013c59-2a84-4e89-9aa4-96d04d367466"> </a><a name="Condition_96013c59-2a84-4e89-9aa4-96d04d367466"> </a><a name="hcCondition_96013c59-2a84-4e89-9aa4-96d04d367466"> </a><hr/><p>Entry 12 - fullUrl = urn:uuid:96013c59-2a84-4e89-9aa4-96d04d367466</p><p>Resource Condition:</p><blockquote><p class="res-header-id"/><div style="display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%"><p style="margin-bottom: 0px">version: 2; Last updated: 2025-05-25 11:17:03+1100</p><p style="margin-bottom: 0px">Profile: <a href="StructureDefinition-au-ps-condition.html">AU PS Condition</a></p></div><p><b>clinicalStatus</b>: <span title="Codes:{http://terminology.hl7.org/CodeSystem/condition-clinical active}">Active</span></p><p><b>verificationStatus</b>: <span title="Codes:{http://terminology.hl7.org/CodeSystem/condition-ver-status confirmed}">Confirmed</span></p><p><b>category</b>: <span title="Codes:{http://terminology.hl7.org/CodeSystem/condition-category problem-list-item}">Problem</span></p><p><b>code</b>: <span title="Codes:{http://snomed.info/sct 13644009}">Hypercholesterolaemia</span></p><p><b>subject</b>: <a href="Bundle-aups-gpvisit-retrieval.html#urn-uuid-d1122188-f53f-417f-a84f-bc44479baa63">Jeramy EZRA BANKS (official) Male, DoB: 1971-05-14 ( IHI: Austalian Healthcare Identifier - Individual#8003608166980417)</a></p></blockquote><a name="urn-uuid-8714f907-ddf9-4f21-9ea9-663e4ad0f99c"> </a><a name="Condition_8714f907-ddf9-4f21-9ea9-663e4ad0f99c"> </a><a name="hcCondition_8714f907-ddf9-4f21-9ea9-663e4ad0f99c"> </a><hr/><p>Entry 13 - fullUrl = urn:uuid:8714f907-ddf9-4f21-9ea9-663e4ad0f99c</p><p>Resource Condition:</p><blockquote><p class="res-header-id"/><div style="display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%"><p style="margin-bottom: 0px">version: 2; Last updated: 2025-05-25 11:17:03+1100</p><p style="margin-bottom: 0px">Profile: <a href="StructureDefinition-au-ps-condition.html">AU PS Condition</a></p></div><p><b>clinicalStatus</b>: <span title="Codes:{http://terminology.hl7.org/CodeSystem/condition-clinical active}">Active</span></p><p><b>verificationStatus</b>: <span title="Codes:{http://terminology.hl7.org/CodeSystem/condition-ver-status confirmed}">Confirmed</span></p><p><b>category</b>: <span title="Codes:{http://terminology.hl7.org/CodeSystem/condition-category problem-list-item}">Problem</span></p><p><b>code</b>: <span title="Codes:{http://snomed.info/sct 44054006}">Type 2 diabetes mellitus</span></p><p><b>subject</b>: <a href="Bundle-aups-gpvisit-retrieval.html#urn-uuid-d1122188-f53f-417f-a84f-bc44479baa63">Jeramy EZRA BANKS (official) Male, DoB: 1971-05-14 ( IHI: Austalian Healthcare Identifier - Individual#8003608166980417)</a></p></blockquote><a name="urn-uuid-bea49472-f812-4aa0-ad52-fb90fad2b0d1"> </a><a name="Condition_bea49472-f812-4aa0-ad52-fb90fad2b0d1"> </a><a name="hcCondition_bea49472-f812-4aa0-ad52-fb90fad2b0d1"> </a><hr/><p>Entry 14 - fullUrl = urn:uuid:bea49472-f812-4aa0-ad52-fb90fad2b0d1</p><p>Resource Condition:</p><blockquote><p class="res-header-id"/><div style="display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%"><p style="margin-bottom: 0px">version: 2; Last updated: 2025-05-25 11:17:03+1100</p><p style="margin-bottom: 0px">Profile: <a href="StructureDefinition-au-ps-condition.html">AU PS Condition</a></p></div><p><b>clinicalStatus</b>: <span title="Codes:{http://terminology.hl7.org/CodeSystem/condition-clinical active}">Active</span></p><p><b>verificationStatus</b>: <span title="Codes:{http://terminology.hl7.org/CodeSystem/condition-ver-status confirmed}">Confirmed</span></p><p><b>category</b>: <span title="Codes:{http://terminology.hl7.org/CodeSystem/condition-category problem-list-item}">Problem</span></p><p><b>code</b>: <span title="Codes:{http://snomed.info/sct 38341003}">Hypertension</span></p><p><b>subject</b>: <a href="Bundle-aups-gpvisit-retrieval.html#urn-uuid-d1122188-f53f-417f-a84f-bc44479baa63">Jeramy EZRA BANKS (official) Male, DoB: 1971-05-14 ( IHI: Austalian Healthcare Identifier - Individual#8003608166980417)</a></p></blockquote><a name="urn-uuid-55e4f3ea-ed3c-4cef-badd-f582254a97dd"> </a><a name="Condition_55e4f3ea-ed3c-4cef-badd-f582254a97dd"> </a><a name="hcCondition_55e4f3ea-ed3c-4cef-badd-f582254a97dd"> </a><hr/><p>Entry 15 - fullUrl = urn:uuid:55e4f3ea-ed3c-4cef-badd-f582254a97dd</p><p>Resource Condition:</p><blockquote><p class="res-header-id"/><div style="display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%"><p style="margin-bottom: 0px">version: 2; Last updated: 2025-05-25 11:17:03+1100</p><p style="margin-bottom: 0px">Profile: <a href="StructureDefinition-au-ps-condition.html">AU PS Condition</a></p></div><p><b>clinicalStatus</b>: <span title="Codes:{http://terminology.hl7.org/CodeSystem/condition-clinical active}">Active</span></p><p><b>verificationStatus</b>: <span title="Codes:{http://terminology.hl7.org/CodeSystem/condition-ver-status confirmed}">Confirmed</span></p><p><b>category</b>: <span title="Codes:{http://terminology.hl7.org/CodeSystem/condition-category problem-list-item}">Problem</span></p><p><b>code</b>: <span title="Codes:{http://snomed.info/sct 90560007}">Gout, Left great toe</span></p><p><b>bodySite</b>: <span title="Codes:{http://snomed.info/sct 723724004}">Left great toe</span></p><p><b>subject</b>: <a href="Bundle-aups-gpvisit-retrieval.html#urn-uuid-d1122188-f53f-417f-a84f-bc44479baa63">Jeramy EZRA BANKS (official) Male, DoB: 1971-05-14 ( IHI: Austalian Healthcare Identifier - Individual#8003608166980417)</a></p><p><b>note</b>: </p><blockquote><div><p>On allopurinol for uric acid control</p>
+</div></blockquote></blockquote><a name="urn-uuid-604a5173-1cf4-4cf4-82a2-13b610ecc593"> </a><a name="Condition_604a5173-1cf4-4cf4-82a2-13b610ecc593"> </a><a name="hcCondition_604a5173-1cf4-4cf4-82a2-13b610ecc593"> </a><hr/><p>Entry 16 - fullUrl = urn:uuid:604a5173-1cf4-4cf4-82a2-13b610ecc593</p><p>Resource Condition:</p><blockquote><p class="res-header-id"/><div style="display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%"><p style="margin-bottom: 0px">version: 2; Last updated: 2025-05-25 11:17:03+1100</p><p style="margin-bottom: 0px">Profile: <a href="StructureDefinition-au-ps-condition.html">AU PS Condition</a></p></div><p><b>clinicalStatus</b>: <span title="Codes:{http://terminology.hl7.org/CodeSystem/condition-clinical active}">Active</span></p><p><b>verificationStatus</b>: <span title="Codes:{http://terminology.hl7.org/CodeSystem/condition-ver-status confirmed}">Confirmed</span></p><p><b>category</b>: <span title="Codes:{http://terminology.hl7.org/CodeSystem/condition-category problem-list-item}">Problem</span></p><p><b>code</b>: <span title="Codes:{http://snomed.info/sct 13645005}">COPD</span></p><p><b>subject</b>: <a href="Bundle-aups-gpvisit-retrieval.html#urn-uuid-d1122188-f53f-417f-a84f-bc44479baa63">Jeramy EZRA BANKS (official) Male, DoB: 1971-05-14 ( IHI: Austalian Healthcare Identifier - Individual#8003608166980417)</a></p></blockquote><a name="urn-uuid-825a781b-e083-4351-a3d9-adf56f65d7e9"> </a><a name="Immunization_825a781b-e083-4351-a3d9-adf56f65d7e9"> </a><a name="hcImmunization_825a781b-e083-4351-a3d9-adf56f65d7e9"> </a><hr/><p>Entry 17 - fullUrl = urn:uuid:825a781b-e083-4351-a3d9-adf56f65d7e9</p><p>Resource Immunization:</p><blockquote><p class="res-header-id"/><div style="display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%"><p style="margin-bottom: 0px">version: 3; Last updated: 2025-05-25 11:39:15+1100</p><p style="margin-bottom: 0px">Profile: <a href="StructureDefinition-au-ps-immunization.html">AU PS Immunization</a></p></div><p><b>status</b>: Completed</p><p><b>vaccineCode</b>: <span title="Codes:{https://www.humanservices.gov.au/organisations/health-professionals/enablers/air-vaccine-code-formats MMRCSL}">M-M-R II</span></p><p><b>patient</b>: <a href="Bundle-aups-gpvisit-retrieval.html#urn-uuid-d1122188-f53f-417f-a84f-bc44479baa63">Jeramy EZRA BANKS (official) Male, DoB: 1971-05-14 ( IHI: Austalian Healthcare Identifier - Individual#8003608166980417)</a></p><p><b>occurrence</b>: Absent because : unknown</p></blockquote><a name="urn-uuid-1e0d5691-c20c-4e14-9261-20a1575ab065"> </a><a name="Immunization_1e0d5691-c20c-4e14-9261-20a1575ab065"> </a><a name="hcImmunization_1e0d5691-c20c-4e14-9261-20a1575ab065"> </a><hr/><p>Entry 18 - fullUrl = urn:uuid:1e0d5691-c20c-4e14-9261-20a1575ab065</p><p>Resource Immunization:</p><blockquote><p class="res-header-id"/><div style="display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%"><p style="margin-bottom: 0px">version: 3; Last updated: 2025-05-25 11:39:15+1100</p><p style="margin-bottom: 0px">Profile: <a href="StructureDefinition-au-ps-immunization.html">AU PS Immunization</a></p></div><p><b>status</b>: Completed</p><p><b>vaccineCode</b>: <span title="Codes:{https://www.humanservices.gov.au/organisations/health-professionals/enablers/air-vaccine-code-formats BOOST}">Boostrix</span></p><p><b>patient</b>: <a href="Bundle-aups-gpvisit-retrieval.html#urn-uuid-d1122188-f53f-417f-a84f-bc44479baa63">Jeramy EZRA BANKS (official) Male, DoB: 1971-05-14 ( IHI: Austalian Healthcare Identifier - Individual#8003608166980417)</a></p><p><b>occurrence</b>: Absent because : unknown</p></blockquote><a name="urn-uuid-0d0d8c79-7f2f-4586-8b2e-f1a1942fe3ed"> </a><a name="Immunization_0d0d8c79-7f2f-4586-8b2e-f1a1942fe3ed"> </a><a name="hcImmunization_0d0d8c79-7f2f-4586-8b2e-f1a1942fe3ed"> </a><hr/><p>Entry 19 - fullUrl = urn:uuid:0d0d8c79-7f2f-4586-8b2e-f1a1942fe3ed</p><p>Resource Immunization:</p><blockquote><p class="res-header-id"/><div style="display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%"><p style="margin-bottom: 0px">version: 3; Last updated: 2025-05-25 11:39:15+1100</p><p style="margin-bottom: 0px">Profile: <a href="StructureDefinition-au-ps-immunization.html">AU PS Immunization</a></p></div><p><b>status</b>: Completed</p><p><b>vaccineCode</b>: <span title="Codes:{https://www.humanservices.gov.au/organisations/health-professionals/enablers/air-vaccine-code-formats COVAST}">AstraZeneca Vaxzevria</span></p><p><b>patient</b>: <a href="Bundle-aups-gpvisit-retrieval.html#urn-uuid-d1122188-f53f-417f-a84f-bc44479baa63">Jeramy EZRA BANKS (official) Male, DoB: 1971-05-14 ( IHI: Austalian Healthcare Identifier - Individual#8003608166980417)</a></p><p><b>occurrence</b>: Absent because : unknown</p></blockquote><a name="urn-uuid-9d9b67a1-15b0-42db-9108-78176017fbed"> </a><a name="Procedure_9d9b67a1-15b0-42db-9108-78176017fbed"> </a><a name="hcProcedure_9d9b67a1-15b0-42db-9108-78176017fbed"> </a><hr/><p>Entry 20 - fullUrl = urn:uuid:9d9b67a1-15b0-42db-9108-78176017fbed</p><p>Resource Procedure:</p><blockquote><p class="res-header-id"/><div style="display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%"><p style="margin-bottom: 0px">version: 1; Last updated: 2025-05-27 11:39:15+1100</p><p style="margin-bottom: 0px">Profile: <a href="StructureDefinition-au-ps-procedure.html">AU PS Procedure</a></p></div><p><b>status</b>: Completed</p><p><b>code</b>: <span title="Codes:{http://snomed.info/sct 77343006}">Angiogram</span></p><p><b>subject</b>: <a href="Bundle-aups-gpvisit-retrieval.html#urn-uuid-d1122188-f53f-417f-a84f-bc44479baa63">Jeramy EZRA BANKS (official) Male, DoB: 1971-05-14 ( IHI: Austalian Healthcare Identifier - Individual#8003608166980417)</a></p><p><b>encounter</b>: <a href="Bundle-aups-gpvisit-retrieval.html#urn-uuid-f7aaf2d5-c105-4652-8b4c-e555903593a7">Encounter: status = finished; class = inpatient encounter (ActCode#IMP); serviceType = Cardiac diagnostic service; period = 2025-05-22 08:15:00+1000 --&gt; 2025-05-23 11:19:00+1000</a></p></blockquote><a name="urn-uuid-4db923a9-f239-411e-911d-62b60b794313"> </a><a name="Procedure_4db923a9-f239-411e-911d-62b60b794313"> </a><a name="hcProcedure_4db923a9-f239-411e-911d-62b60b794313"> </a><hr/><p>Entry 21 - fullUrl = urn:uuid:4db923a9-f239-411e-911d-62b60b794313</p><p>Resource Procedure:</p><blockquote><p class="res-header-id"/><div style="display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%"><p style="margin-bottom: 0px">version: 1; Last updated: 2025-02-27 11:39:15+1100</p><p style="margin-bottom: 0px">Profile: <a href="StructureDefinition-au-ps-procedure.html">AU PS Procedure</a></p></div><p><b>status</b>: Completed</p><p><b>code</b>: <span title="Codes:{http://snomed.info/sct 399208008}">Chest x-ray</span></p><p><b>subject</b>: <a href="Bundle-aups-gpvisit-retrieval.html#urn-uuid-d1122188-f53f-417f-a84f-bc44479baa63">Jeramy EZRA BANKS (official) Male, DoB: 1971-05-14 ( IHI: Austalian Healthcare Identifier - Individual#8003608166980417)</a></p></blockquote><a name="urn-uuid-2862efc6-c7a9-41aa-9d36-f0dcba427635"> </a><a name="Observation_2862efc6-c7a9-41aa-9d36-f0dcba427635"> </a><a name="hcObservation_2862efc6-c7a9-41aa-9d36-f0dcba427635"> </a><hr/><p>Entry 22 - fullUrl = urn:uuid:2862efc6-c7a9-41aa-9d36-f0dcba427635</p><p>Resource Observation:</p><blockquote><p class="res-header-id"/><div style="display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%"><p style="margin-bottom: 0px">version: 1; Last updated: 2025-05-27 11:39:15+1100</p><p style="margin-bottom: 0px">Profile: <a href="StructureDefinition-au-ps-diagnosticresult-path.html">AU PS Pathology Result Observation</a></p></div><p><b>status</b>: Final</p><p><b>category</b>: <span title="Codes:{http://terminology.hl7.org/CodeSystem/observation-category laboratory}">Laboratory</span>, <span title="Codes:{http://terminology.hl7.org/CodeSystem/v2-0074 CH}">Chemistry</span></p><p><b>code</b>: <span title="Codes:{http://loinc.org 14927-8}">Triglyceride</span></p><p><b>subject</b>: <a href="Bundle-aups-gpvisit-retrieval.html#urn-uuid-d1122188-f53f-417f-a84f-bc44479baa63">Jeramy EZRA BANKS (official) Male, DoB: 1971-05-14 ( IHI: Austalian Healthcare Identifier - Individual#8003608166980417)</a></p><p><b>effective</b>: 2025-03-17</p><p><b>performer</b>: ?rref?</p><p><b>value</b>: 1.7 mmol/L<span style="background: LightGoldenRodYellow"> (Details: UCUM  codemmol/L = 'mmol/L')</span></p></blockquote><a name="urn-uuid-6400636f-9f75-40f9-97a0-4255f02aecc6"> </a><a name="Observation_6400636f-9f75-40f9-97a0-4255f02aecc6"> </a><a name="hcObservation_6400636f-9f75-40f9-97a0-4255f02aecc6"> </a><hr/><p>Entry 23 - fullUrl = urn:uuid:6400636f-9f75-40f9-97a0-4255f02aecc6</p><p>Resource Observation:</p><blockquote><p class="res-header-id"/><div style="display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%"><p style="margin-bottom: 0px">version: 1; Last updated: 2025-05-27 11:39:15+1100</p><p style="margin-bottom: 0px">Profile: <a href="StructureDefinition-au-ps-diagnosticresult-path.html">AU PS Pathology Result Observation</a></p></div><p><b>status</b>: Final</p><p><b>category</b>: <span title="Codes:{http://terminology.hl7.org/CodeSystem/observation-category laboratory}">Laboratory</span>, <span title="Codes:{http://terminology.hl7.org/CodeSystem/v2-0074 CH}">Chemistry</span></p><p><b>code</b>: <span title="Codes:{http://loinc.org 14646-4}">HDL</span></p><p><b>subject</b>: <a href="Bundle-aups-gpvisit-retrieval.html#urn-uuid-d1122188-f53f-417f-a84f-bc44479baa63">Jeramy EZRA BANKS (official) Male, DoB: 1971-05-14 ( IHI: Austalian Healthcare Identifier - Individual#8003608166980417)</a></p><p><b>effective</b>: 2025-03-17</p><p><b>performer</b>: ?rref?</p><p><b>value</b>: 1.55 mmol/L<span style="background: LightGoldenRodYellow"> (Details: UCUM  codemmol/L = 'mmol/L')</span></p></blockquote><a name="urn-uuid-38045915-7f10-42b0-943e-f1b90356d3b9"> </a><a name="Observation_38045915-7f10-42b0-943e-f1b90356d3b9"> </a><a name="hcObservation_38045915-7f10-42b0-943e-f1b90356d3b9"> </a><hr/><p>Entry 24 - fullUrl = urn:uuid:38045915-7f10-42b0-943e-f1b90356d3b9</p><p>Resource Observation:</p><blockquote><p class="res-header-id"/><div style="display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%"><p style="margin-bottom: 0px">version: 1; Last updated: 2025-05-27 11:39:15+1100</p><p style="margin-bottom: 0px">Profile: <a href="StructureDefinition-au-ps-diagnosticresult-path.html">AU PS Pathology Result Observation</a></p></div><p><b>status</b>: Final</p><p><b>category</b>: <span title="Codes:{http://terminology.hl7.org/CodeSystem/observation-category laboratory}">Laboratory</span>, <span title="Codes:{http://terminology.hl7.org/CodeSystem/v2-0074 CH}">Chemistry</span></p><p><b>code</b>: <span title="Codes:{http://loinc.org 22748-8}">LDL</span></p><p><b>subject</b>: <a href="Bundle-aups-gpvisit-retrieval.html#urn-uuid-d1122188-f53f-417f-a84f-bc44479baa63">Jeramy EZRA BANKS (official) Male, DoB: 1971-05-14 ( IHI: Austalian Healthcare Identifier - Individual#8003608166980417)</a></p><p><b>effective</b>: 2025-03-17</p><p><b>performer</b>: ?rref?</p><p><b>value</b>: 3.10 mmol/L<span style="background: LightGoldenRodYellow"> (Details: UCUM  codemmol/L = 'mmol/L')</span></p></blockquote><a name="urn-uuid-c56a3eb6-d7e5-475f-831f-36530961013c"> </a><a name="Observation_c56a3eb6-d7e5-475f-831f-36530961013c"> </a><a name="hcObservation_c56a3eb6-d7e5-475f-831f-36530961013c"> </a><hr/><p>Entry 25 - fullUrl = urn:uuid:c56a3eb6-d7e5-475f-831f-36530961013c</p><p>Resource Observation:</p><blockquote><p class="res-header-id"/><div style="display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%"><p style="margin-bottom: 0px">version: 1; Last updated: 2025-05-27 11:39:15+1100</p><p style="margin-bottom: 0px">Profile: <a href="StructureDefinition-au-ps-diagnosticresult-path.html">AU PS Pathology Result Observation</a></p></div><p><b>status</b>: Final</p><p><b>category</b>: <span title="Codes:{http://terminology.hl7.org/CodeSystem/observation-category laboratory}">Laboratory</span>, <span title="Codes:{http://terminology.hl7.org/CodeSystem/v2-0074 CH}">Chemistry</span></p><p><b>code</b>: <span title="Codes:{http://loinc.org 14647-2}">Total Cholesterol</span></p><p><b>subject</b>: <a href="Bundle-aups-gpvisit-retrieval.html#urn-uuid-d1122188-f53f-417f-a84f-bc44479baa63">Jeramy EZRA BANKS (official) Male, DoB: 1971-05-14 ( IHI: Austalian Healthcare Identifier - Individual#8003608166980417)</a></p><p><b>effective</b>: 2025-03-17</p><p><b>performer</b>: ?rref?</p><p><b>value</b>: 5.4 mmol/L<span style="background: LightGoldenRodYellow"> (Details: UCUM  codemmol/L = 'mmol/L')</span></p></blockquote><a name="urn-uuid-25f95f9c-391c-4e35-ad70-7d4cff3178f1"> </a><a name="Observation_25f95f9c-391c-4e35-ad70-7d4cff3178f1"> </a><a name="hcObservation_25f95f9c-391c-4e35-ad70-7d4cff3178f1"> </a><hr/><p>Entry 26 - fullUrl = urn:uuid:25f95f9c-391c-4e35-ad70-7d4cff3178f1</p><p>Resource Observation:</p><blockquote><p class="res-header-id"/><div style="display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%"><p style="margin-bottom: 0px">version: 1; Last updated: 2025-01-27 11:39:15+1100</p><p style="margin-bottom: 0px">Profile: <a href="StructureDefinition-au-ps-diagnosticresult-path.html">AU PS Pathology Result Observation</a></p></div><p><b>status</b>: Final</p><p><b>category</b>: <span title="Codes:{http://terminology.hl7.org/CodeSystem/observation-category laboratory}">Laboratory</span>, <span title="Codes:{http://terminology.hl7.org/CodeSystem/v2-0074 CH}">Chemistry</span></p><p><b>code</b>: <span title="Codes:{http://loinc.org 14647-2}">Total Cholesterol</span></p><p><b>subject</b>: <a href="Bundle-aups-gpvisit-retrieval.html#urn-uuid-d1122188-f53f-417f-a84f-bc44479baa63">Jeramy EZRA BANKS (official) Male, DoB: 1971-05-14 ( IHI: Austalian Healthcare Identifier - Individual#8003608166980417)</a></p><p><b>effective</b>: 2024-12-17</p><p><b>performer</b>: ?rref?</p><p><b>value</b>: 5.7 mmol/L<span style="background: LightGoldenRodYellow"> (Details: UCUM  codemmol/L = 'mmol/L')</span></p></blockquote><a name="urn-uuid-437947c1-6b9b-4213-94b9-19a801bf3113"> </a><a name="Observation_437947c1-6b9b-4213-94b9-19a801bf3113"> </a><a name="hcObservation_437947c1-6b9b-4213-94b9-19a801bf3113"> </a><hr/><p>Entry 27 - fullUrl = urn:uuid:437947c1-6b9b-4213-94b9-19a801bf3113</p><p>Resource Observation:</p><blockquote><p class="res-header-id"/><div style="display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%"><p style="margin-bottom: 0px">version: 1; Last updated: 2025-01-27 11:39:15+1100</p><p style="margin-bottom: 0px">Profile: <a href="StructureDefinition-au-ps-diagnosticresult-path.html">AU PS Pathology Result Observation</a></p></div><p><b>status</b>: Final</p><p><b>category</b>: <span title="Codes:{http://terminology.hl7.org/CodeSystem/observation-category laboratory}">Laboratory</span>, <span title="Codes:{http://terminology.hl7.org/CodeSystem/v2-0074 CH}">Chemistry</span></p><p><b>code</b>: <span title="Codes:{http://loinc.org 14646-4}">HDL</span></p><p><b>subject</b>: <a href="Bundle-aups-gpvisit-retrieval.html#urn-uuid-d1122188-f53f-417f-a84f-bc44479baa63">Jeramy EZRA BANKS (official) Male, DoB: 1971-05-14 ( IHI: Austalian Healthcare Identifier - Individual#8003608166980417)</a></p><p><b>effective</b>: 2024-12-17</p><p><b>performer</b>: ?rref?</p><p><b>value</b>: 1.42 mmol/L<span style="background: LightGoldenRodYellow"> (Details: UCUM  codemmol/L = 'mmol/L')</span></p></blockquote><a name="urn-uuid-28204a08-571b-4c5e-b234-00b65e2e63cf"> </a><a name="Observation_28204a08-571b-4c5e-b234-00b65e2e63cf"> </a><a name="hcObservation_28204a08-571b-4c5e-b234-00b65e2e63cf"> </a><hr/><p>Entry 28 - fullUrl = urn:uuid:28204a08-571b-4c5e-b234-00b65e2e63cf</p><p>Resource Observation:</p><blockquote><p class="res-header-id"/><div style="display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%"><p style="margin-bottom: 0px">version: 1; Last updated: 2025-01-27 11:39:15+1100</p><p style="margin-bottom: 0px">Profile: <a href="StructureDefinition-au-ps-diagnosticresult-path.html">AU PS Pathology Result Observation</a></p></div><p><b>status</b>: Final</p><p><b>category</b>: <span title="Codes:{http://terminology.hl7.org/CodeSystem/observation-category laboratory}">Laboratory</span>, <span title="Codes:{http://terminology.hl7.org/CodeSystem/v2-0074 CH}">Chemistry</span></p><p><b>code</b>: <span title="Codes:{http://loinc.org 22748-8}">LDL</span></p><p><b>subject</b>: <a href="Bundle-aups-gpvisit-retrieval.html#urn-uuid-d1122188-f53f-417f-a84f-bc44479baa63">Jeramy EZRA BANKS (official) Male, DoB: 1971-05-14 ( IHI: Austalian Healthcare Identifier - Individual#8003608166980417)</a></p><p><b>effective</b>: 2024-12-17</p><p><b>performer</b>: ?rref?</p><p><b>value</b>: 3.36 mmol/L<span style="background: LightGoldenRodYellow"> (Details: UCUM  codemmol/L = 'mmol/L')</span></p></blockquote><a name="urn-uuid-e50ef658-5b84-44f4-a40c-f1777830e1dd"> </a><a name="Observation_e50ef658-5b84-44f4-a40c-f1777830e1dd"> </a><a name="hcObservation_e50ef658-5b84-44f4-a40c-f1777830e1dd"> </a><hr/><p>Entry 29 - fullUrl = urn:uuid:e50ef658-5b84-44f4-a40c-f1777830e1dd</p><p>Resource Observation:</p><blockquote><p class="res-header-id"/><div style="display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%"><p style="margin-bottom: 0px">version: 1; Last updated: 2025-01-27 11:39:15+1100</p><p style="margin-bottom: 0px">Profile: <a href="StructureDefinition-au-ps-diagnosticresult-path.html">AU PS Pathology Result Observation</a></p></div><p><b>status</b>: Final</p><p><b>category</b>: <span title="Codes:{http://terminology.hl7.org/CodeSystem/observation-category laboratory}">Laboratory</span>, <span title="Codes:{http://terminology.hl7.org/CodeSystem/v2-0074 CH}">Chemistry</span></p><p><b>code</b>: <span title="Codes:{http://loinc.org 14927-8}">Triglyceride</span></p><p><b>subject</b>: <a href="Bundle-aups-gpvisit-retrieval.html#urn-uuid-d1122188-f53f-417f-a84f-bc44479baa63">Jeramy EZRA BANKS (official) Male, DoB: 1971-05-14 ( IHI: Austalian Healthcare Identifier - Individual#8003608166980417)</a></p><p><b>effective</b>: 2024-12-17</p><p><b>performer</b>: ?rref?</p><p><b>value</b>: 1.8 mmol/L<span style="background: LightGoldenRodYellow"> (Details: UCUM  codemmol/L = 'mmol/L')</span></p></blockquote><a name="urn-uuid-bf2ee7c5-39b8-4b35-8b49-7a5815bc45a1"> </a><a name="Observation_bf2ee7c5-39b8-4b35-8b49-7a5815bc45a1"> </a><a name="hcObservation_bf2ee7c5-39b8-4b35-8b49-7a5815bc45a1"> </a><hr/><p>Entry 30 - fullUrl = urn:uuid:bf2ee7c5-39b8-4b35-8b49-7a5815bc45a1</p><p>Resource Observation:</p><blockquote><p class="res-header-id"/><div style="display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%"><p style="margin-bottom: 0px">version: 1; Last updated: 2024-10-27 11:39:15+1100</p><p style="margin-bottom: 0px">Profile: <a href="StructureDefinition-au-ps-diagnosticresult-path.html">AU PS Pathology Result Observation</a></p></div><p><b>status</b>: Final</p><p><b>category</b>: <span title="Codes:{http://terminology.hl7.org/CodeSystem/observation-category laboratory}">Laboratory</span>, <span title="Codes:{http://terminology.hl7.org/CodeSystem/v2-0074 CH}">Chemistry</span></p><p><b>code</b>: <span title="Codes:{http://loinc.org 14647-2}">Total Cholesterol</span></p><p><b>subject</b>: <a href="Bundle-aups-gpvisit-retrieval.html#urn-uuid-d1122188-f53f-417f-a84f-bc44479baa63">Jeramy EZRA BANKS (official) Male, DoB: 1971-05-14 ( IHI: Austalian Healthcare Identifier - Individual#8003608166980417)</a></p><p><b>effective</b>: 2024-09-17</p><p><b>performer</b>: ?rref?</p><p><b>value</b>: 6.0 mmol/L<span style="background: LightGoldenRodYellow"> (Details: UCUM  codemmol/L = 'mmol/L')</span></p></blockquote><a name="urn-uuid-1e9a7f3b-e353-4a5e-baaa-68a344fc03ba"> </a><a name="Observation_1e9a7f3b-e353-4a5e-baaa-68a344fc03ba"> </a><a name="hcObservation_1e9a7f3b-e353-4a5e-baaa-68a344fc03ba"> </a><hr/><p>Entry 31 - fullUrl = urn:uuid:1e9a7f3b-e353-4a5e-baaa-68a344fc03ba</p><p>Resource Observation:</p><blockquote><p class="res-header-id"/><div style="display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%"><p style="margin-bottom: 0px">version: 1; Last updated: 2024-10-27 11:39:15+1100</p><p style="margin-bottom: 0px">Profile: <a href="StructureDefinition-au-ps-diagnosticresult-path.html">AU PS Pathology Result Observation</a></p></div><p><b>status</b>: Final</p><p><b>category</b>: <span title="Codes:{http://terminology.hl7.org/CodeSystem/observation-category laboratory}">Laboratory</span>, <span title="Codes:{http://terminology.hl7.org/CodeSystem/v2-0074 CH}">Chemistry</span></p><p><b>code</b>: <span title="Codes:{http://loinc.org 14646-4}">HDL</span></p><p><b>subject</b>: <a href="Bundle-aups-gpvisit-retrieval.html#urn-uuid-d1122188-f53f-417f-a84f-bc44479baa63">Jeramy EZRA BANKS (official) Male, DoB: 1971-05-14 ( IHI: Austalian Healthcare Identifier - Individual#8003608166980417)</a></p><p><b>effective</b>: 2024-09-17</p><p><b>performer</b>: ?rref?</p><p><b>value</b>: 1.29 mmol/L<span style="background: LightGoldenRodYellow"> (Details: UCUM  codemmol/L = 'mmol/L')</span></p></blockquote><a name="urn-uuid-0d390cb3-5d12-4051-ad50-bbc5423cb9fa"> </a><a name="Observation_0d390cb3-5d12-4051-ad50-bbc5423cb9fa"> </a><a name="hcObservation_0d390cb3-5d12-4051-ad50-bbc5423cb9fa"> </a><hr/><p>Entry 32 - fullUrl = urn:uuid:0d390cb3-5d12-4051-ad50-bbc5423cb9fa</p><p>Resource Observation:</p><blockquote><p class="res-header-id"/><div style="display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%"><p style="margin-bottom: 0px">version: 1; Last updated: 2024-10-27 11:39:15+1100</p><p style="margin-bottom: 0px">Profile: <a href="StructureDefinition-au-ps-diagnosticresult-path.html">AU PS Pathology Result Observation</a></p></div><p><b>status</b>: Final</p><p><b>category</b>: <span title="Codes:{http://terminology.hl7.org/CodeSystem/observation-category laboratory}">Laboratory</span>, <span title="Codes:{http://terminology.hl7.org/CodeSystem/v2-0074 CH}">Chemistry</span></p><p><b>code</b>: <span title="Codes:{http://loinc.org 22748-8}">LDL</span></p><p><b>subject</b>: <a href="Bundle-aups-gpvisit-retrieval.html#urn-uuid-d1122188-f53f-417f-a84f-bc44479baa63">Jeramy EZRA BANKS (official) Male, DoB: 1971-05-14 ( IHI: Austalian Healthcare Identifier - Individual#8003608166980417)</a></p><p><b>effective</b>: 2024-09-17</p><p><b>performer</b>: ?rref?</p><p><b>value</b>: 3.62 mmol/L<span style="background: LightGoldenRodYellow"> (Details: UCUM  codemmol/L = 'mmol/L')</span></p></blockquote><a name="urn-uuid-12388761-b69d-4d4f-a19a-82b13ae3d960"> </a><a name="Observation_12388761-b69d-4d4f-a19a-82b13ae3d960"> </a><a name="hcObservation_12388761-b69d-4d4f-a19a-82b13ae3d960"> </a><hr/><p>Entry 33 - fullUrl = urn:uuid:12388761-b69d-4d4f-a19a-82b13ae3d960</p><p>Resource Observation:</p><blockquote><p class="res-header-id"/><div style="display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%"><p style="margin-bottom: 0px">version: 1; Last updated: 2024-10-27 11:39:15+1100</p><p style="margin-bottom: 0px">Profile: <a href="StructureDefinition-au-ps-diagnosticresult-path.html">AU PS Pathology Result Observation</a></p></div><p><b>status</b>: Final</p><p><b>category</b>: <span title="Codes:{http://terminology.hl7.org/CodeSystem/observation-category laboratory}">Laboratory</span>, <span title="Codes:{http://terminology.hl7.org/CodeSystem/v2-0074 CH}">Chemistry</span></p><p><b>code</b>: <span title="Codes:{http://loinc.org 14927-8}">Triglyceride</span></p><p><b>subject</b>: <a href="Bundle-aups-gpvisit-retrieval.html#urn-uuid-d1122188-f53f-417f-a84f-bc44479baa63">Jeramy EZRA BANKS (official) Male, DoB: 1971-05-14 ( IHI: Austalian Healthcare Identifier - Individual#8003608166980417)</a></p><p><b>effective</b>: 2024-09-17</p><p><b>performer</b>: ?rref?</p><p><b>value</b>: 1.9 mmol/L<span style="background: LightGoldenRodYellow"> (Details: UCUM  codemmol/L = 'mmol/L')</span></p></blockquote><a name="urn-uuid-4d1e0ca1-4ea7-46a2-8f0f-af5225b73c3a"> </a><a name="Organization_4d1e0ca1-4ea7-46a2-8f0f-af5225b73c3a"> </a><a name="hcOrganization_4d1e0ca1-4ea7-46a2-8f0f-af5225b73c3a"> </a><hr/><p>Entry 34 - fullUrl = urn:uuid:4d1e0ca1-4ea7-46a2-8f0f-af5225b73c3a</p><p>Resource Organization:</p><blockquote><p class="res-header-id"/><div style="display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%"><p style="margin-bottom: 0px">version: 5; Last updated: 2024-02-27 11:39:15+1100</p><p style="margin-bottom: 0px">Profile: <a href="StructureDefinition-au-ps-organization.html">AU PS Organization</a></p></div><p><b>identifier</b>: HPI-O/8003629900040425, ABN/81185378242</p><p><b>type</b>: <span title="Codes:{http://www.abs.gov.au/ausstats/abs@.nsf/mf/1292.0 8511}, {http://snomed.info/sct 788007007}">General practice medical clinic service</span></p><p><b>name</b>: Mossy Point Medical Centre</p><blockquote><p><b>contact</b></p><p><b>telecom</b>: ph: 0255509415(Work), <a href="mailto:reception@mossypointmc.example.net">reception@mossypointmc.example.net</a></p><p><b>address</b>: 192 Pheonix Jnc Mossy Point NSW 2537 </p></blockquote></blockquote><a name="urn-uuid-89fc11f9-a586-4bea-9393-d50e88952a7e"> </a><a name="Organization_89fc11f9-a586-4bea-9393-d50e88952a7e"> </a><a name="hcOrganization_89fc11f9-a586-4bea-9393-d50e88952a7e"> </a><hr/><p>Entry 35 - fullUrl = urn:uuid:89fc11f9-a586-4bea-9393-d50e88952a7e</p><p>Resource Organization:</p><blockquote><p class="res-header-id"/><div style="display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%"><p style="margin-bottom: 0px">version: 2; Last updated: 2024-02-27 11:39:15+1100</p><p style="margin-bottom: 0px">Profile: <a href="StructureDefinition-au-ps-organization.html">AU PS Organization</a></p></div><p><b>identifier</b>: HPI-O/8003626566706927, ABN/81160635191</p><p><b>type</b>: <span title="Codes:{http://www.abs.gov.au/ausstats/abs@.nsf/mf/1292.0 8401}, {http://snomed.info/sct 1223151000168101}">Hospital service</span></p><p><b>name</b>: Kensington Public Hospital</p><blockquote><p><b>contact</b></p><p><b>telecom</b>: ph: 0255507070(Work), <a href="mailto:reception@kensingtonph.example.net">reception@kensingtonph.example.net</a></p></blockquote></blockquote><a name="urn-uuid-e28c5ed1-6092-44cc-b1a9-2ddf4ea550e1"> </a><a name="Location_e28c5ed1-6092-44cc-b1a9-2ddf4ea550e1"> </a><a name="hcLocation_e28c5ed1-6092-44cc-b1a9-2ddf4ea550e1"> </a><hr/><p>Entry 36 - fullUrl = urn:uuid:e28c5ed1-6092-44cc-b1a9-2ddf4ea550e1</p><p>Resource Location:</p><blockquote><p class="res-header-id"/><div style="display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%"><p style="margin-bottom: 0px">version: 2; Last updated: 2025-05-25 11:39:15+1100</p><p style="margin-bottom: 0px">Profile: <a href="http://hl7.org.au/fhir/core/2.0.0/StructureDefinition-au-core-location.html">AU Core Location</a></p></div><p><b>name</b>: Kensington Public Hospital</p><p><b>type</b>: <span title="Codes:{http://terminology.hl7.org/CodeSystem/v3-RoleCode HOSP}, {http://snomed.info/sct 22232009}">Hospital</span></p><p><b>address</b>: 191 Jenkins Cct Kensington NSW 2033 AU </p><p><b>managingOrganization</b>: <a href="Bundle-aups-gpvisit-retrieval.html#urn-uuid-89fc11f9-a586-4bea-9393-d50e88952a7e">Organization Kensington Public Hospital</a></p></blockquote><a name="urn-uuid-f7aaf2d5-c105-4652-8b4c-e555903593a7"> </a><a name="Encounter_f7aaf2d5-c105-4652-8b4c-e555903593a7"> </a><a name="hcEncounter_f7aaf2d5-c105-4652-8b4c-e555903593a7"> </a><hr/><p>Entry 37 - fullUrl = urn:uuid:f7aaf2d5-c105-4652-8b4c-e555903593a7</p><p>Resource Encounter:</p><blockquote><p class="res-header-id"/><div style="display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%"><p style="margin-bottom: 0px">version: 1; Last updated: 2025-05-25 11:39:15+1100</p><p style="margin-bottom: 0px">Profile: <a href="StructureDefinition-au-ps-encounter.html">AU PS Encounter</a></p></div><p><b>status</b>: completed</p><p><b>class</b>: <span title="Codes:{http://terminology.hl7.org/CodeSystem/v3-ActCode IMP}">inpatient encounter</span></p><p><b>serviceType</b>: No display for Encounter.serviceType  (concept: Cardiac diagnostic service)</p><p><b>subject</b>: <a href="Bundle-aups-gpvisit-retrieval.html#urn-uuid-d1122188-f53f-417f-a84f-bc44479baa63">Jeramy EZRA BANKS (official) Male, DoB: 1971-05-14 ( IHI: Austalian Healthcare Identifier - Individual#8003608166980417)</a></p><p><b>serviceProvider</b>: <a href="Bundle-aups-gpvisit-retrieval.html#urn-uuid-89fc11f9-a586-4bea-9393-d50e88952a7e">Organization Kensington Public Hospital</a></p><h3>Locations</h3><table class="grid"><tr><td style="display: none">-</td><td><b>Location</b></td></tr><tr><td style="display: none">*</td><td><a href="Bundle-aups-gpvisit-retrieval.html#urn-uuid-e28c5ed1-6092-44cc-b1a9-2ddf4ea550e1">Location Kensington Public Hospital</a></td></tr></table></blockquote><a name="urn-uuid-7d63c3a7-3cbe-487d-99aa-00c6c29f1db5"> </a><a name="Encounter_7d63c3a7-3cbe-487d-99aa-00c6c29f1db5"> </a><a name="hcEncounter_7d63c3a7-3cbe-487d-99aa-00c6c29f1db5"> </a><hr/><p>Entry 38 - fullUrl = urn:uuid:7d63c3a7-3cbe-487d-99aa-00c6c29f1db5</p><p>Resource Encounter:</p><blockquote><p class="res-header-id"/><div style="display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%"><p style="margin-bottom: 0px">version: 2; Last updated: 2025-05-25 11:39:15+1100</p><p style="margin-bottom: 0px">Profile: <a href="StructureDefinition-au-ps-encounter.html">AU PS Encounter</a></p></div><p><b>status</b>: completed</p><p><b>class</b>: <span title="Codes:{http://terminology.hl7.org/CodeSystem/v3-ActCode AMB}">ambulatory</span></p><p><b>serviceType</b>: No display for Encounter.serviceType  (concept: General practice service)</p><p><b>subject</b>: <a href="Bundle-aups-gpvisit-retrieval.html#urn-uuid-d1122188-f53f-417f-a84f-bc44479baa63">Jeramy EZRA BANKS (official) Male, DoB: 1971-05-14 ( IHI: Austalian Healthcare Identifier - Individual#8003608166980417)</a></p><p><b>serviceProvider</b>: <a href="Bundle-aups-gpvisit-retrieval.html#urn-uuid-4d1e0ca1-4ea7-46a2-8f0f-af5225b73c3a">Organization Mossy Point Medical Centre</a></p><h3>Participants</h3><table class="grid"><tr><td style="display: none">-</td><td><b>Type</b></td></tr><tr><td style="display: none">*</td><td><span title="Codes:{http://terminology.hl7.org/CodeSystem/v3-ParticipationType PPRF}">primary performer</span></td></tr></table></blockquote></div>
+
+  
+
+  <!-- insert notes if present -->
+  
+
+
+
+</div>
+        </div>  <!-- /inner-wrapper -->
+      </div>  <!-- /row -->
+    </div>  <!-- /container -->
+  </div>  <!-- /segment-content -->
+
+  <script type="text/javascript" src="assets/js/jquery.js"> </script>     <!-- note keep space here, otherwise it will be transformed to empty tag -> fails -->
+  <script type="text/javascript" src="assets/js/jquery-ui.min.js"> </script>
+
+  <script type="text/javascript" src="assets/js/window-hash.js"> </script>
+  <a name="bottom"> </a>
+  <div id="segment-footer" igtool="footer" class="segment">  <!-- segment-footer -->
+    <div class="container">  <!-- container -->
+
+      <div class="inner-wrapper">
+        <p>
+          IG &#169; 2024+ <a style="color:var(--footer-hyperlink-text-color)" href="https://confluence.hl7.org/display/HAFWG">HL7 Australia</a>.  Package hl7.fhir.au.ps#1.0.0-ci-build based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Fri, Jun 19, 2026 03:09+0000">2026-06-19</span>
+          <br/>
+          <span style="color: var(--footer-highlight-text-color)">
+                      Links: <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Table of Contents</a> |
+                 <a style="color: var(--footer-hyperlink-text-color)" href="qa.html">QA Report</a>
+                 
+                
+                 | <a style="color: #81BEF7" target="_blank" href="http://hl7.org.au/fhir/ps/history.html">Version History</a> |
+                 <a style="color: #81BEF7" rel="license" href="http://hl7.org/fhir/R4/license.html"><img style="border-style: none;" alt="CC0" src="cc0.png"/></a> |
+                 <a style="color: #81BEF7" target="_blank" href="http://hl7.org/fhir-issues">Propose a change</a>
+
+          </span>
+        </p>
+      </div>  <!-- /inner-wrapper -->
+    </div>  <!-- /container -->
+  </div>  <!-- /segment-footer -->
+  
+  <div id="segment-post-footer" class="segment hidden">  <!-- segment-post-footer -->
+    <div class="container">  <!-- container -->
+    </div>  <!-- /container -->
+  </div>  <!-- /segment-post-footer -->
+
+  <!-- JS and analytics only. -->
+  <!-- Bootstrap core JavaScript
+  ================================================== -->
+  <!-- Placed at the end of the document so the pages load faster -->
+  <script type="text/javascript" src="assets/js/bootstrap.min.js"> </script>
+  <script type="text/javascript" src="assets/js/respond.min.js"> </script>
+  <script type="text/javascript" src="assets/js/anchor.min.js"> </script>
+  <script type="text/javascript" src="assets/js/clipboard.min.js"> </script>
+  <script type="text/javascript" src="assets/js/clipboard-btn.js"> </script>
+  <script type="text/javascript" src="assets/js/anchor-hover.js"> </script>
+  <!-- Analytics Below
+  ================================================== -->
+  </body>
+</html>
+

@@ -1,0 +1,2440 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix loinc: <https://loinc.org/rdf/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix sct: <http://snomed.info/id/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://hl7.org.au/fhir/ps/Bundle/aups-gpvisit-retrieval> a fhir:Bundle ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:id [ fhir:v "aups-gpvisit-retrieval"] ; # 
+  fhir:meta [
+     fhir:profile ( [
+       fhir:v "http://hl7.org.au/fhir/ps/StructureDefinition/au-ps-bundle"^^xsd:anyURI ;
+       fhir:link <http://hl7.org.au/fhir/ps/StructureDefinition/au-ps-bundle>
+     ] )
+  ] ; # 
+  fhir:identifier [
+     fhir:system [ fhir:v "urn:ietf:rfc:3986"^^xsd:anyURI ] ;
+     fhir:value [ fhir:v "urn:uuid:594f5ff3-133e-4cd9-816e-891f675ea864" ]
+  ] ; # 
+  fhir:type [ fhir:v "document"] ; # 
+  fhir:timestamp [ fhir:v "2025-05-27T11:57:37.051+11:00"^^xsd:dateTime] ; # 
+  fhir:entry ( [
+     fhir:fullUrl [ fhir:v "urn:uuid:9a57361b-6ef5-45ba-b491-c9588b4604e4"^^xsd:anyURI ] ;
+     fhir:resource ( <urn:uuid:9a57361b-6ef5-45ba-b491-c9588b4604e4> )
+  ] [
+     fhir:fullUrl [ fhir:v "urn:uuid:d1122188-f53f-417f-a84f-bc44479baa63"^^xsd:anyURI ] ;
+     fhir:resource ( <urn:uuid:d1122188-f53f-417f-a84f-bc44479baa63> )
+  ] [
+     fhir:fullUrl [ fhir:v "urn:uuid:eaf0788a-8fdf-4e21-b302-e529f3bd9d5f"^^xsd:anyURI ] ;
+     fhir:resource ( <urn:uuid:eaf0788a-8fdf-4e21-b302-e529f3bd9d5f> )
+  ] [
+     fhir:fullUrl [ fhir:v "urn:uuid:d4ca61a6-5b55-41ab-9b1a-fba0daefe94d"^^xsd:anyURI ] ;
+     fhir:resource ( <urn:uuid:d4ca61a6-5b55-41ab-9b1a-fba0daefe94d> )
+  ] [
+     fhir:fullUrl [ fhir:v "urn:uuid:3f76e819-1f30-405d-b1ef-66c878b401c2"^^xsd:anyURI ] ;
+     fhir:resource ( <urn:uuid:3f76e819-1f30-405d-b1ef-66c878b401c2> )
+  ] [
+     fhir:fullUrl [ fhir:v "urn:uuid:e96d8d8d-8ef2-436b-8d04-4d136a731398"^^xsd:anyURI ] ;
+     fhir:resource ( <urn:uuid:e96d8d8d-8ef2-436b-8d04-4d136a731398> )
+  ] [
+     fhir:fullUrl [ fhir:v "urn:uuid:96b7e47d-0487-4219-adbe-7c2dfb0b2deb"^^xsd:anyURI ] ;
+     fhir:resource ( <urn:uuid:96b7e47d-0487-4219-adbe-7c2dfb0b2deb> )
+  ] [
+     fhir:fullUrl [ fhir:v "urn:uuid:d7351a16-8df1-47a4-9129-2c2d6c2238ec"^^xsd:anyURI ] ;
+     fhir:resource ( <urn:uuid:d7351a16-8df1-47a4-9129-2c2d6c2238ec> )
+  ] [
+     fhir:fullUrl [ fhir:v "urn:uuid:fbc14baf-d7bf-4fa0-9035-f8e4a73986d0"^^xsd:anyURI ] ;
+     fhir:resource ( <urn:uuid:fbc14baf-d7bf-4fa0-9035-f8e4a73986d0> )
+  ] [
+     fhir:fullUrl [ fhir:v "urn:uuid:cefeac7e-cf0c-4c14-917d-2a526516c3d1"^^xsd:anyURI ] ;
+     fhir:resource ( <urn:uuid:cefeac7e-cf0c-4c14-917d-2a526516c3d1> )
+  ] [
+     fhir:fullUrl [ fhir:v "urn:uuid:ca779d48-9dd8-4fe1-829a-d48b12b492af"^^xsd:anyURI ] ;
+     fhir:resource ( <urn:uuid:ca779d48-9dd8-4fe1-829a-d48b12b492af> )
+  ] [
+     fhir:fullUrl [ fhir:v "urn:uuid:96013c59-2a84-4e89-9aa4-96d04d367466"^^xsd:anyURI ] ;
+     fhir:resource ( <urn:uuid:96013c59-2a84-4e89-9aa4-96d04d367466> )
+  ] [
+     fhir:fullUrl [ fhir:v "urn:uuid:8714f907-ddf9-4f21-9ea9-663e4ad0f99c"^^xsd:anyURI ] ;
+     fhir:resource ( <urn:uuid:8714f907-ddf9-4f21-9ea9-663e4ad0f99c> )
+  ] [
+     fhir:fullUrl [ fhir:v "urn:uuid:bea49472-f812-4aa0-ad52-fb90fad2b0d1"^^xsd:anyURI ] ;
+     fhir:resource ( <urn:uuid:bea49472-f812-4aa0-ad52-fb90fad2b0d1> )
+  ] [
+     fhir:fullUrl [ fhir:v "urn:uuid:55e4f3ea-ed3c-4cef-badd-f582254a97dd"^^xsd:anyURI ] ;
+     fhir:resource ( <urn:uuid:55e4f3ea-ed3c-4cef-badd-f582254a97dd> )
+  ] [
+     fhir:fullUrl [ fhir:v "urn:uuid:604a5173-1cf4-4cf4-82a2-13b610ecc593"^^xsd:anyURI ] ;
+     fhir:resource ( <urn:uuid:604a5173-1cf4-4cf4-82a2-13b610ecc593> )
+  ] [
+     fhir:fullUrl [ fhir:v "urn:uuid:825a781b-e083-4351-a3d9-adf56f65d7e9"^^xsd:anyURI ] ;
+     fhir:resource ( <urn:uuid:825a781b-e083-4351-a3d9-adf56f65d7e9> )
+  ] [
+     fhir:fullUrl [ fhir:v "urn:uuid:1e0d5691-c20c-4e14-9261-20a1575ab065"^^xsd:anyURI ] ;
+     fhir:resource ( <urn:uuid:1e0d5691-c20c-4e14-9261-20a1575ab065> )
+  ] [
+     fhir:fullUrl [ fhir:v "urn:uuid:0d0d8c79-7f2f-4586-8b2e-f1a1942fe3ed"^^xsd:anyURI ] ;
+     fhir:resource ( <urn:uuid:0d0d8c79-7f2f-4586-8b2e-f1a1942fe3ed> )
+  ] [
+     fhir:fullUrl [ fhir:v "urn:uuid:9d9b67a1-15b0-42db-9108-78176017fbed"^^xsd:anyURI ] ;
+     fhir:resource ( <urn:uuid:9d9b67a1-15b0-42db-9108-78176017fbed> )
+  ] [
+     fhir:fullUrl [ fhir:v "urn:uuid:4db923a9-f239-411e-911d-62b60b794313"^^xsd:anyURI ] ;
+     fhir:resource ( <urn:uuid:4db923a9-f239-411e-911d-62b60b794313> )
+  ] [
+     fhir:fullUrl [ fhir:v "urn:uuid:2862efc6-c7a9-41aa-9d36-f0dcba427635"^^xsd:anyURI ] ;
+     fhir:resource ( <urn:uuid:2862efc6-c7a9-41aa-9d36-f0dcba427635> )
+  ] [
+     fhir:fullUrl [ fhir:v "urn:uuid:6400636f-9f75-40f9-97a0-4255f02aecc6"^^xsd:anyURI ] ;
+     fhir:resource ( <urn:uuid:6400636f-9f75-40f9-97a0-4255f02aecc6> )
+  ] [
+     fhir:fullUrl [ fhir:v "urn:uuid:38045915-7f10-42b0-943e-f1b90356d3b9"^^xsd:anyURI ] ;
+     fhir:resource ( <urn:uuid:38045915-7f10-42b0-943e-f1b90356d3b9> )
+  ] [
+     fhir:fullUrl [ fhir:v "urn:uuid:c56a3eb6-d7e5-475f-831f-36530961013c"^^xsd:anyURI ] ;
+     fhir:resource ( <urn:uuid:c56a3eb6-d7e5-475f-831f-36530961013c> )
+  ] [
+     fhir:fullUrl [ fhir:v "urn:uuid:25f95f9c-391c-4e35-ad70-7d4cff3178f1"^^xsd:anyURI ] ;
+     fhir:resource ( <urn:uuid:25f95f9c-391c-4e35-ad70-7d4cff3178f1> )
+  ] [
+     fhir:fullUrl [ fhir:v "urn:uuid:437947c1-6b9b-4213-94b9-19a801bf3113"^^xsd:anyURI ] ;
+     fhir:resource ( <urn:uuid:437947c1-6b9b-4213-94b9-19a801bf3113> )
+  ] [
+     fhir:fullUrl [ fhir:v "urn:uuid:28204a08-571b-4c5e-b234-00b65e2e63cf"^^xsd:anyURI ] ;
+     fhir:resource ( <urn:uuid:28204a08-571b-4c5e-b234-00b65e2e63cf> )
+  ] [
+     fhir:fullUrl [ fhir:v "urn:uuid:e50ef658-5b84-44f4-a40c-f1777830e1dd"^^xsd:anyURI ] ;
+     fhir:resource ( <urn:uuid:e50ef658-5b84-44f4-a40c-f1777830e1dd> )
+  ] [
+     fhir:fullUrl [ fhir:v "urn:uuid:bf2ee7c5-39b8-4b35-8b49-7a5815bc45a1"^^xsd:anyURI ] ;
+     fhir:resource ( <urn:uuid:bf2ee7c5-39b8-4b35-8b49-7a5815bc45a1> )
+  ] [
+     fhir:fullUrl [ fhir:v "urn:uuid:1e9a7f3b-e353-4a5e-baaa-68a344fc03ba"^^xsd:anyURI ] ;
+     fhir:resource ( <urn:uuid:1e9a7f3b-e353-4a5e-baaa-68a344fc03ba> )
+  ] [
+     fhir:fullUrl [ fhir:v "urn:uuid:0d390cb3-5d12-4051-ad50-bbc5423cb9fa"^^xsd:anyURI ] ;
+     fhir:resource ( <urn:uuid:0d390cb3-5d12-4051-ad50-bbc5423cb9fa> )
+  ] [
+     fhir:fullUrl [ fhir:v "urn:uuid:12388761-b69d-4d4f-a19a-82b13ae3d960"^^xsd:anyURI ] ;
+     fhir:resource ( <urn:uuid:12388761-b69d-4d4f-a19a-82b13ae3d960> )
+  ] [
+     fhir:fullUrl [ fhir:v "urn:uuid:4d1e0ca1-4ea7-46a2-8f0f-af5225b73c3a"^^xsd:anyURI ] ;
+     fhir:resource ( <urn:uuid:4d1e0ca1-4ea7-46a2-8f0f-af5225b73c3a> )
+  ] [
+     fhir:fullUrl [ fhir:v "urn:uuid:89fc11f9-a586-4bea-9393-d50e88952a7e"^^xsd:anyURI ] ;
+     fhir:resource ( <urn:uuid:89fc11f9-a586-4bea-9393-d50e88952a7e> )
+  ] [
+     fhir:fullUrl [ fhir:v "urn:uuid:e28c5ed1-6092-44cc-b1a9-2ddf4ea550e1"^^xsd:anyURI ] ;
+     fhir:resource ( <urn:uuid:e28c5ed1-6092-44cc-b1a9-2ddf4ea550e1> )
+  ] [
+     fhir:fullUrl [ fhir:v "urn:uuid:f7aaf2d5-c105-4652-8b4c-e555903593a7"^^xsd:anyURI ] ;
+     fhir:resource ( <urn:uuid:f7aaf2d5-c105-4652-8b4c-e555903593a7> )
+  ] [
+     fhir:fullUrl [ fhir:v "urn:uuid:7d63c3a7-3cbe-487d-99aa-00c6c29f1db5"^^xsd:anyURI ] ;
+     fhir:resource ( <urn:uuid:7d63c3a7-3cbe-487d-99aa-00c6c29f1db5> )
+  ] ) . # 
+
+<urn:uuid:9a57361b-6ef5-45ba-b491-c9588b4604e4> a fhir:Composition ;
+  fhir:meta [
+     fhir:versionId [ fhir:v "3" ] ;
+     fhir:lastUpdated [ fhir:v "2025-05-27T11:39:15.709+11:00"^^xsd:dateTime ] ;
+     fhir:profile ( [
+       fhir:v "http://hl7.org.au/fhir/ps/StructureDefinition/au-ps-composition"^^xsd:anyURI ;
+       fhir:link <http://hl7.org.au/fhir/ps/StructureDefinition/au-ps-composition>
+     ] )
+  ] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "generated" ] ;
+     fhir:div [ fhir:v "<div xmlns=\"http://www.w3.org/1999/xhtml\"><a name=\"Composition_null\"> </a><p class=\"res-header-id\"><b>Generated Narrative: Composition </b></p><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\">version: 3; Last updated: 2025-05-27 11:39:15+1100</p><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-au-ps-composition.html\">AU PS Composition</a></p></div><p><b>identifier</b>: <a href=\"http://terminology.hl7.org/6.2.0/NamingSystem-uri.html\" title=\"As defined by RFC 3986 (http://www.ietf.org/rfc/rfc3986.txt)(with many schemes defined in many RFCs). For OIDs and UUIDs, use the URN form (urn:oid:(note: lowercase) and urn:uuid:). See http://www.ietf.org/rfc/rfc3001.txt and http://www.ietf.org/rfc/rfc4122.txt #xD;#xA;#xD;#xA;This oid is used as an identifier II.root to indicate the the extension is an absolute URI (technically, an IRI). Typically, this is used for OIDs and GUIDs. Note that when this OID is used with OIDs and GUIDs, the II.extension should start with urn:oid or urn:uuid: #xD;#xA;#xD;#xA;Note that this OID is created to aid with interconversion between CDA and FHIR - FHIR uses urn:ietf:rfc:3986 as equivalent to this OID. URIs as identifiers appear more commonly in FHIR.#xD;#xA;#xD;#xA;This OID may also be used in CD.codeSystem.\">Uniform Resource Identifier (URI)</a>/urn:uuid:594f5ff3-133e-4cd9-816e-891f675ea864</p><p><b>status</b>: Amended</p><p><b>type</b>: <span title=\"Codes:{http://loinc.org 60591-5}\">Patient summary Document</span></p><p><b>date</b>: 2025-05-27 11:57:36+1100</p><p><b>author</b>: <a href=\"Bundle-aups-gpvisit-retrieval.html#urn-uuid-ca779d48-9dd8-4fe1-829a-d48b12b492af\">Practitioner Abe LOWE </a></p><p><b>title</b>: Jeramy's Patient Summary</p><p><b>custodian</b>: <a href=\"Bundle-aups-gpvisit-retrieval.html#urn-uuid-4d1e0ca1-4ea7-46a2-8f0f-af5225b73c3a\">Organization Mossy Point Medical Centre</a></p></div>"^^rdf:XMLLiteral ]
+  ] ; # 
+  fhir:identifier [
+     fhir:system [ fhir:v "urn:ietf:rfc:3986"^^xsd:anyURI ] ;
+     fhir:value [ fhir:v "urn:uuid:594f5ff3-133e-4cd9-816e-891f675ea864" ]
+  ] ; # 
+  fhir:status [ fhir:v "amended"] ; # 
+  fhir:type [
+     fhir:coding ( [
+       a loinc:60591-5 ;
+       fhir:system [ fhir:v "http://loinc.org"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "60591-5" ] ;
+       fhir:display [ fhir:v "Patient summary Document" ]
+     ] )
+  ] ; # 
+  fhir:subject [
+     fhir:reference [ fhir:v "urn:uuid:d1122188-f53f-417f-a84f-bc44479baa63" ] ;
+     fhir:type [ fhir:v "Patient"^^xsd:anyURI ]
+  ] ; # 
+  fhir:date [ fhir:v "2025-05-27T11:57:36.833+11:00"^^xsd:dateTime] ; # 
+  fhir:author ( [
+     fhir:reference [ fhir:v "urn:uuid:ca779d48-9dd8-4fe1-829a-d48b12b492af" ] ;
+     fhir:type [ fhir:v "Practitioner"^^xsd:anyURI ]
+  ] ) ; # 
+  fhir:title [ fhir:v "Jeramy's Patient Summary"] ; # 
+  fhir:custodian [
+     fhir:reference [ fhir:v "urn:uuid:4d1e0ca1-4ea7-46a2-8f0f-af5225b73c3a" ]
+  ] ; # 
+  fhir:section ( [
+     fhir:title [ fhir:v "Allergies/Adverse reactions" ] ;
+     fhir:code [
+       fhir:coding ( [
+         a loinc:48765-2 ;
+         fhir:system [ fhir:v "http://loinc.org"^^xsd:anyURI ] ;
+         fhir:code [ fhir:v "48765-2" ] ;
+         fhir:display [ fhir:v "Allergies and adverse reactions Document" ]
+       ] )
+     ] ;
+     fhir:text [
+       fhir:status [ fhir:v "generated" ] ;
+       fhir:div [ fhir:v "<div xmlns=\"http://www.w3.org/1999/xhtml\">Allergies: Nil Known</div>"^^rdf:XMLLiteral ]
+     ] ;
+     fhir:entry ( [
+       fhir:reference [ fhir:v "urn:uuid:eaf0788a-8fdf-4e21-b302-e529f3bd9d5f" ]
+     ] )
+  ] [
+     fhir:title [ fhir:v "Current Medications" ] ;
+     fhir:code [
+       fhir:coding ( [
+         a loinc:10160-0 ;
+         fhir:system [ fhir:v "http://loinc.org"^^xsd:anyURI ] ;
+         fhir:code [ fhir:v "10160-0" ] ;
+         fhir:display [ fhir:v "History of Medication use Narrative" ]
+       ] )
+     ] ;
+     fhir:text [
+       fhir:status [ fhir:v "generated" ] ;
+       fhir:div [ fhir:v "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n            <ul><li><div><b>Medication Name</b>: Metformin 500mg</div><div>Instructions: twice daily</div><div>Clinical indication: Type 2 diabetes mellitus</div></li></ul>\n            <ul><li><div><b>Medication Name</b>: Rosuvastatin 40mg &amp; ezetrol 10mg</div><div>Instructions: once daily</div><div>Clinical indication: Hypercholesterolaemia</div></li></ul>\n            <ul><li><div><b>Medication Name</b>: Telmisartan 80mg</div><div>Instructions: once daily</div><div>Clinical indication: Hypertension</div></li></ul>\n            <ul><li><div><b>Medication Name</b>: Aspirin 100mg</div><div>Instructions: once daily</div><div>Clinical indication: Cardiovascular disease</div></li></ul>\n            <ul><li><div><b>Medication Name</b>: Zyloprim 300mg</div><div>Instructions: once daily</div><div>Clinical indication: Gout</div></li></ul>\n            <ul><li><div><b>Medication Name</b>: Ventolin</div><div>Instructions: 2 puffs, 4 times per day, and as needed</div><div>Clinical indication: COPD</div></li></ul>\n            <ul><li><div><b>Medication Name</b>: Spiriva</div><div>Instructions: once daily</div><div>Clinical indication: COPD</div></li></ul>\n            </div>"^^rdf:XMLLiteral ]
+     ] ;
+     fhir:entry ( [
+       fhir:reference [ fhir:v "urn:uuid:d4ca61a6-5b55-41ab-9b1a-fba0daefe94d" ]
+     ] [
+       fhir:reference [ fhir:v "urn:uuid:3f76e819-1f30-405d-b1ef-66c878b401c2" ]
+     ] [
+       fhir:reference [ fhir:v "urn:uuid:e96d8d8d-8ef2-436b-8d04-4d136a731398" ]
+     ] [
+       fhir:reference [ fhir:v "urn:uuid:96b7e47d-0487-4219-adbe-7c2dfb0b2deb" ]
+     ] [
+       fhir:reference [ fhir:v "urn:uuid:d7351a16-8df1-47a4-9129-2c2d6c2238ec" ]
+     ] [
+       fhir:reference [ fhir:v "urn:uuid:fbc14baf-d7bf-4fa0-9035-f8e4a73986d0" ]
+     ] [
+       fhir:reference [ fhir:v "urn:uuid:cefeac7e-cf0c-4c14-917d-2a526516c3d1" ]
+     ] )
+  ] [
+     fhir:title [ fhir:v "Current Medical Information" ] ;
+     fhir:code [
+       fhir:coding ( [
+         a loinc:11450-4 ;
+         fhir:system [ fhir:v "http://loinc.org"^^xsd:anyURI ] ;
+         fhir:code [ fhir:v "11450-4" ] ;
+         fhir:display [ fhir:v "Problem list Reported" ]
+       ] )
+     ] ;
+     fhir:text [
+       fhir:status [ fhir:v "generated" ] ;
+       fhir:div [ fhir:v "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n            <ul>\n              <li>Hypertension</li>\n              <li>Diabetes</li>\n              <li>Hypercholesterolaemia</li>\n              <li>Gout, Left great toe. On allopurinol for uric acid control</li>\n              <li>COPD</li>\n            </ul></div>"^^rdf:XMLLiteral ]
+     ] ;
+     fhir:entry ( [
+       fhir:reference [ fhir:v "urn:uuid:96013c59-2a84-4e89-9aa4-96d04d367466" ]
+     ] [
+       fhir:reference [ fhir:v "urn:uuid:8714f907-ddf9-4f21-9ea9-663e4ad0f99c" ]
+     ] [
+       fhir:reference [ fhir:v "urn:uuid:bea49472-f812-4aa0-ad52-fb90fad2b0d1" ]
+     ] [
+       fhir:reference [ fhir:v "urn:uuid:55e4f3ea-ed3c-4cef-badd-f582254a97dd" ]
+     ] [
+       fhir:reference [ fhir:v "urn:uuid:604a5173-1cf4-4cf4-82a2-13b610ecc593" ]
+     ] )
+  ] [
+     fhir:title [ fhir:v "Vaccination/Immunisation history" ] ;
+     fhir:code [
+       fhir:coding ( [
+         a loinc:11369-6 ;
+         fhir:system [ fhir:v "http://loinc.org"^^xsd:anyURI ] ;
+         fhir:code [ fhir:v "11369-6" ] ;
+         fhir:display [ fhir:v "History of Immunization note" ]
+       ] )
+     ] ;
+     fhir:text [
+       fhir:status [ fhir:v "generated" ] ;
+       fhir:div [ fhir:v "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n            <ul>\n              <li>M-M-R II</li>\n              <li>Boostrix</li>\n              <li>AstraZeneca Vaxzevria</li>\n            </ul>\n            </div>"^^rdf:XMLLiteral ]
+     ] ;
+     fhir:entry ( [
+       fhir:reference [ fhir:v "urn:uuid:825a781b-e083-4351-a3d9-adf56f65d7e9" ]
+     ] [
+       fhir:reference [ fhir:v "urn:uuid:1e0d5691-c20c-4e14-9261-20a1575ab065" ]
+     ] [
+       fhir:reference [ fhir:v "urn:uuid:0d0d8c79-7f2f-4586-8b2e-f1a1942fe3ed" ]
+     ] )
+  ] [
+     fhir:title [ fhir:v "Past Medical History (Procedures)" ] ;
+     fhir:code [
+       fhir:coding ( [
+         a loinc:47519-4 ;
+         fhir:system [ fhir:v "http://loinc.org"^^xsd:anyURI ] ;
+         fhir:code [ fhir:v "47519-4" ] ;
+         fhir:display [ fhir:v "History of Procedures Document" ]
+       ] )
+     ] ;
+     fhir:text [
+       fhir:status [ fhir:v "generated" ] ;
+       fhir:div [ fhir:v "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n            <ul><li><div><b>Procedure Name</b>: Angiogram</div><div>Reason: Recent chest pain</div><div>Date: 22/05/2025</div></li></ul>\n            <ul><li><div><b>Procedure Name</b>: Chest x-ray</div><div>Date: 22/02/2025</div></li></ul>\n            </div>"^^rdf:XMLLiteral ]
+     ] ;
+     fhir:entry ( [
+       fhir:reference [ fhir:v "urn:uuid:9d9b67a1-15b0-42db-9108-78176017fbed" ]
+     ] [
+       fhir:reference [ fhir:v "urn:uuid:4db923a9-f239-411e-911d-62b60b794313" ]
+     ] )
+  ] [
+     fhir:title [ fhir:v "Result History" ] ;
+     fhir:code [
+       fhir:coding ( [
+         a loinc:30954-2 ;
+         fhir:system [ fhir:v "http://loinc.org"^^xsd:anyURI ] ;
+         fhir:code [ fhir:v "30954-2" ] ;
+         fhir:display [ fhir:v "Relevant diagnostic tests/laboratory data note" ]
+       ] )
+     ] ;
+     fhir:text [
+       fhir:status [ fhir:v "generated" ] ;
+       fhir:div [ fhir:v "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n            <table border=\"1\">\n                <thead>\n                  <tr>\n                    <th>Test Date</th>\n                    <th>Total Cholesterol</th>\n                    <th>HDL (High-Density Lipoprotein)</th>\n                    <th>LDL (Low-Density Lipoprotein)</th>\n                    <th>Triglycerides</th>\n                  </tr>\n                </thead>\n                <tbody>\n                  <tr>\n                    <td>2025-03-17</td>\n                    <td>5.4 mmol/L</td>\n                    <td>1.55 mmol/L</td>\n                    <td>3.10 mmol/L</td>\n                    <td>1.7 mmol/L</td>\n                  </tr>\n                  <tr>\n                    <td>2024-12-17</td>\n                    <td>5.7 mmol/L</td>\n                    <td>1.42 mmol/L</td>\n                    <td>3.36 mmol/L</td>\n                    <td>1.8 mmol/L</td>\n                  </tr>\n                  <tr>\n                    <td>2024-09-17</td>\n                    <td>6.0 mmol/L</td>\n                    <td>1.29 mmol/L</td>\n                    <td>3.62 mmol/L</td>\n                    <td>1.9 mmol/L</td>\n                  </tr>\n                </tbody>\n              </table>\n            </div>"^^rdf:XMLLiteral ]
+     ] ;
+     fhir:entry ( [
+       fhir:reference [ fhir:v "urn:uuid:2862efc6-c7a9-41aa-9d36-f0dcba427635" ]
+     ] [
+       fhir:reference [ fhir:v "urn:uuid:6400636f-9f75-40f9-97a0-4255f02aecc6" ]
+     ] [
+       fhir:reference [ fhir:v "urn:uuid:38045915-7f10-42b0-943e-f1b90356d3b9" ]
+     ] [
+       fhir:reference [ fhir:v "urn:uuid:c56a3eb6-d7e5-475f-831f-36530961013c" ]
+     ] [
+       fhir:reference [ fhir:v "urn:uuid:e50ef658-5b84-44f4-a40c-f1777830e1dd" ]
+     ] [
+       fhir:reference [ fhir:v "urn:uuid:28204a08-571b-4c5e-b234-00b65e2e63cf" ]
+     ] [
+       fhir:reference [ fhir:v "urn:uuid:437947c1-6b9b-4213-94b9-19a801bf3113" ]
+     ] [
+       fhir:reference [ fhir:v "urn:uuid:25f95f9c-391c-4e35-ad70-7d4cff3178f1" ]
+     ] [
+       fhir:reference [ fhir:v "urn:uuid:bf2ee7c5-39b8-4b35-8b49-7a5815bc45a1" ]
+     ] [
+       fhir:reference [ fhir:v "urn:uuid:1e9a7f3b-e353-4a5e-baaa-68a344fc03ba" ]
+     ] [
+       fhir:reference [ fhir:v "urn:uuid:0d390cb3-5d12-4051-ad50-bbc5423cb9fa" ]
+     ] [
+       fhir:reference [ fhir:v "urn:uuid:12388761-b69d-4d4f-a19a-82b13ae3d960" ]
+     ] )
+  ] ) . # 
+
+<urn:uuid:d1122188-f53f-417f-a84f-bc44479baa63> a fhir:Patient ;
+  fhir:meta [
+     fhir:versionId [ fhir:v "1" ] ;
+     fhir:lastUpdated [ fhir:v "2020-02-25T11:17:03.285+11:00"^^xsd:dateTime ] ;
+     fhir:profile ( [
+       fhir:v "http://hl7.org.au/fhir/ps/StructureDefinition/au-ps-patient"^^xsd:anyURI ;
+       fhir:link <http://hl7.org.au/fhir/ps/StructureDefinition/au-ps-patient>
+     ] )
+  ] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "generated" ] ;
+     fhir:div [ fhir:v "<div xmlns=\"http://www.w3.org/1999/xhtml\"><a name=\"Patient_null\"> </a><p class=\"res-header-id\"><b>Generated Narrative: Patient </b></p><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\">version: 1; Last updated: 2020-02-25 11:17:03+1100</p><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-au-ps-patient.html\">AU PS Patient</a></p></div><p style=\"border: 1px #661aff solid; background-color: #e6e6ff; padding: 10px;\">Jeramy EZRA BANKS (official) Male, DoB: 1971-05-14 ( IHI: Austalian Healthcare Identifier - Individual#8003608166980417)</p><hr/><table class=\"grid\"><tr><td style=\"background-color: #f3f5da\" title=\"Other Id (see the one above)\">Other Id:</td><td colspan=\"3\">Medicare Number/29545410411</td></tr><tr><td style=\"background-color: #f3f5da\" title=\"Ways to contact the Patient\">Contact Detail</td><td colspan=\"3\"><ul><li>ph: 0270107520(Home)</li><li>ph: 0491574118(Mobile)</li><li>50 Sebastien St Minjary NSW 2720 AU </li></ul></td></tr><tr><td style=\"background-color: #f3f5da\" title=\"Patient Links\">Links:</td><td colspan=\"3\"><ul><li>General Practitioner: <a href=\"Bundle-aups-gpvisit-retrieval.html#urn-uuid-4d1e0ca1-4ea7-46a2-8f0f-af5225b73c3a\">Organization Mossy Point Medical Centre</a></li></ul></td></tr><tr><td style=\"background-color: #f3f5da\" title=\"This extension applies to the Patient, Person, and RelatedPerson resources and is used to indicate whether a person identifies as being of Aboriginal or Torres Strait Islander origin.\"><a href=\"http://hl7.org.au/fhir/6.0.0/StructureDefinition-indigenous-status.html\">Australian Indigenous Status</a></td><td colspan=\"3\">australian-indigenous-status-1: 4 (Neither Aboriginal nor Torres Strait Islander origin)</td></tr></table></div>"^^rdf:XMLLiteral ]
+  ] ; # 
+  fhir:extension ( [
+     fhir:url [ fhir:v "http://hl7.org.au/fhir/StructureDefinition/indigenous-status"^^xsd:anyURI ] ;
+     fhir:value [
+       a fhir:Coding ;
+       fhir:system [ fhir:v "https://healthterminologies.gov.au/fhir/CodeSystem/australian-indigenous-status-1"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "4" ] ;
+       fhir:display [ fhir:v "Neither Aboriginal nor Torres Strait Islander origin" ]
+     ]
+  ] ) ; # 
+  fhir:identifier ( [
+     fhir:extension ( [
+       fhir:url [ fhir:v "http://hl7.org.au/fhir/StructureDefinition/ihi-status"^^xsd:anyURI ] ;
+       fhir:value [
+         a fhir:Coding ;
+         fhir:system [ fhir:v "https://healthterminologies.gov.au/fhir/CodeSystem/ihi-status-1"^^xsd:anyURI ] ;
+         fhir:code [ fhir:v "active" ]
+       ]
+     ] [
+       fhir:url [ fhir:v "http://hl7.org.au/fhir/StructureDefinition/ihi-record-status"^^xsd:anyURI ] ;
+       fhir:value [
+         a fhir:Coding ;
+         fhir:system [ fhir:v "https://healthterminologies.gov.au/fhir/CodeSystem/ihi-record-status-1"^^xsd:anyURI ] ;
+         fhir:code [ fhir:v "verified" ] ;
+         fhir:display [ fhir:v "verified" ]
+       ]
+     ] ) ;
+     fhir:type [
+       fhir:coding ( [
+         fhir:system [ fhir:v "http://terminology.hl7.org/CodeSystem/v2-0203"^^xsd:anyURI ] ;
+         fhir:code [ fhir:v "NI" ]
+       ] ) ;
+       fhir:text [ fhir:v "IHI" ]
+     ] ;
+     fhir:system [ fhir:v "http://ns.electronichealth.net.au/id/hi/ihi/1.0"^^xsd:anyURI ] ;
+     fhir:value [ fhir:v "8003608166980417" ]
+  ] [
+     fhir:type [
+       fhir:coding ( [
+         fhir:system [ fhir:v "http://terminology.hl7.org/CodeSystem/v2-0203"^^xsd:anyURI ] ;
+         fhir:code [ fhir:v "MC" ]
+       ] ) ;
+       fhir:text [ fhir:v "Medicare Number" ]
+     ] ;
+     fhir:system [ fhir:v "http://ns.electronichealth.net.au/id/medicare-number"^^xsd:anyURI ] ;
+     fhir:value [ fhir:v "29545410411" ]
+  ] ) ; # 
+  fhir:name ( [
+     fhir:use [ fhir:v "official" ] ;
+     fhir:family [ fhir:v "BANKS" ] ;
+     fhir:given ( [ fhir:v "Jeramy" ] [ fhir:v "EZRA" ] )
+  ] ) ; # 
+  fhir:telecom ( [
+     fhir:system [ fhir:v "phone" ] ;
+     fhir:value [ fhir:v "0270107520" ] ;
+     fhir:use [ fhir:v "home" ]
+  ] [
+     fhir:system [ fhir:v "phone" ] ;
+     fhir:value [ fhir:v "0491574118" ] ;
+     fhir:use [ fhir:v "mobile" ]
+  ] ) ; # 
+  fhir:gender [ fhir:v "male"] ; # 
+  fhir:birthDate [ fhir:v "1971-05-14"^^xsd:date] ; # 
+  fhir:address ( [
+     fhir:line ( [ fhir:v "50 Sebastien St" ] ) ;
+     fhir:city [ fhir:v "Minjary" ] ;
+     fhir:state [ fhir:v "NSW" ] ;
+     fhir:postalCode [ fhir:v "2720" ] ;
+     fhir:country [ fhir:v "AU" ]
+  ] ) ; # 
+  fhir:generalPractitioner ( [
+     fhir:reference [ fhir:v "urn:uuid:4d1e0ca1-4ea7-46a2-8f0f-af5225b73c3a" ]
+  ] ) . # 
+
+<urn:uuid:eaf0788a-8fdf-4e21-b302-e529f3bd9d5f> a fhir:AllergyIntolerance ;
+  fhir:meta [
+     fhir:versionId [ fhir:v "2" ] ;
+     fhir:lastUpdated [ fhir:v "2025-05-25T11:39:15.709+11:00"^^xsd:dateTime ] ;
+     fhir:profile ( [
+       fhir:v "http://hl7.org.au/fhir/ps/StructureDefinition/au-ps-allergyintolerance"^^xsd:anyURI ;
+       fhir:link <http://hl7.org.au/fhir/ps/StructureDefinition/au-ps-allergyintolerance>
+     ] )
+  ] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "generated" ] ;
+     fhir:div [ fhir:v "<div xmlns=\"http://www.w3.org/1999/xhtml\"><a name=\"AllergyIntolerance_null\"> </a><p class=\"res-header-id\"><b>Generated Narrative: AllergyIntolerance </b></p><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\">version: 2; Last updated: 2025-05-25 11:39:15+1100</p><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-au-ps-allergyintolerance.html\">AU PS AllergyIntolerance</a></p></div><p><b>clinicalStatus</b>: <span title=\"Codes:{http://terminology.hl7.org/CodeSystem/allergyintolerance-clinical active}\">Active</span></p><p><b>code</b>: <span title=\"Codes:{http://snomed.info/sct 716186003}\">No known allergy</span></p><p><b>patient</b>: <a href=\"Bundle-aups-gpvisit-retrieval.html#urn-uuid-d1122188-f53f-417f-a84f-bc44479baa63\">Jeramy EZRA BANKS (official) Male, DoB: 1971-05-14 ( IHI: Austalian Healthcare Identifier - Individual#8003608166980417)</a></p></div>"^^rdf:XMLLiteral ]
+  ] ; # 
+  fhir:clinicalStatus [
+     fhir:coding ( [
+       fhir:system [ fhir:v "http://terminology.hl7.org/CodeSystem/allergyintolerance-clinical"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "active" ]
+     ] )
+  ] ; # 
+  fhir:code [
+     fhir:coding ( [
+       a sct:716186003 ;
+       fhir:system [ fhir:v "http://snomed.info/sct"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "716186003" ] ;
+       fhir:display [ fhir:v "No known allergy" ]
+     ] ) ;
+     fhir:text [ fhir:v "No known allergy" ]
+  ] ; # 
+  fhir:patient [
+     fhir:reference [ fhir:v "urn:uuid:d1122188-f53f-417f-a84f-bc44479baa63" ] ;
+     fhir:type [ fhir:v "Patient"^^xsd:anyURI ]
+  ] . # 
+
+<urn:uuid:d4ca61a6-5b55-41ab-9b1a-fba0daefe94d> a fhir:MedicationRequest ;
+  fhir:meta [
+     fhir:versionId [ fhir:v "2" ] ;
+     fhir:lastUpdated [ fhir:v "2025-05-25T11:17:03.285+11:00"^^xsd:dateTime ] ;
+     fhir:profile ( [
+       fhir:v "http://hl7.org.au/fhir/ps/StructureDefinition/au-ps-medicationrequest"^^xsd:anyURI ;
+       fhir:link <http://hl7.org.au/fhir/ps/StructureDefinition/au-ps-medicationrequest>
+     ] )
+  ] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "extensions" ] ;
+     fhir:div [ fhir:v "<div xmlns=\"http://www.w3.org/1999/xhtml\"><a name=\"MedicationRequest_null\"> </a><p class=\"res-header-id\"><b>Generated Narrative: MedicationRequest </b></p><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\">version: 2; Last updated: 2025-05-25 11:17:03+1100</p><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-au-ps-medicationrequest.html\">AU PS MedicationRequest</a></p></div><p><b>status</b>: Active</p><p><b>intent</b>: Order</p><p><b>medication</b>: <span title=\"Codes:{http://snomed.info/sct 34481000168108}\">Ventolin</span></p><p><b>subject</b>: <a href=\"Bundle-aups-gpvisit-retrieval.html#urn-uuid-d1122188-f53f-417f-a84f-bc44479baa63\">Jeramy EZRA BANKS (official) Male, DoB: 1971-05-14 ( IHI: Austalian Healthcare Identifier - Individual#8003608166980417)</a></p><p><b>encounter</b>: <a href=\"Bundle-aups-gpvisit-retrieval.html#urn-uuid-7d63c3a7-3cbe-487d-99aa-00c6c29f1db5\">Encounter: status = finished; class = ambulatory (ActCode#AMB); serviceType = General practice service; period = (?) --&gt; 2025-02-25; reasonCode = Follow-up visit</a></p><p><b>authoredOn</b>: Absent because : unknown</p><p><b>requester</b>: <a href=\"Bundle-aups-gpvisit-retrieval.html#urn-uuid-ca779d48-9dd8-4fe1-829a-d48b12b492af\">Practitioner Abe LOWE </a></p><p><b>reasonCode</b>: <span title=\"Codes:{http://snomed.info/sct 13645005}\">COPD</span></p><blockquote><p><b>dosageInstruction</b></p><p><b>text</b>: 2 puffs, 4 times per day, and as needed</p><p><b>timing</b>: 4 per 1 day</p><p><b>route</b>: <span title=\"Codes:{http://snomed.info/sct 447694001}\">Respiratory tract route</span></p><h3>DoseAndRates</h3><table class=\"grid\"><tr><td style=\"display: none\">-</td><td><b>Dose[x]</b></td></tr><tr><td style=\"display: none\">*</td><td>2</td></tr></table></blockquote></div>"^^rdf:XMLLiteral ]
+  ] ; # 
+  fhir:status [ fhir:v "active"] ; # 
+  fhir:intent [ fhir:v "order"] ; # 
+  fhir:medication [
+     a fhir:CodeableConcept ;
+     fhir:coding ( [
+       a sct:34481000168108 ;
+       fhir:system [ fhir:v "http://snomed.info/sct"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "34481000168108" ] ;
+       fhir:display [ fhir:v "Ventolin" ]
+     ] ) ;
+     fhir:text [ fhir:v "Ventolin" ]
+  ] ; # 
+  fhir:subject [
+     fhir:reference [ fhir:v "urn:uuid:d1122188-f53f-417f-a84f-bc44479baa63" ] ;
+     fhir:type [ fhir:v "Patient"^^xsd:anyURI ]
+  ] ; # 
+  fhir:encounter [
+     fhir:reference [ fhir:v "urn:uuid:7d63c3a7-3cbe-487d-99aa-00c6c29f1db5" ]
+  ] ; # 
+  fhir:authoredOn [
+     fhir:extension ( [
+       fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/data-absent-reason"^^xsd:anyURI ] ;
+       fhir:value [
+         a fhir:code ;
+         fhir:v "unknown"
+       ]
+     ] )
+  ] ; # 
+  fhir:requester [
+     fhir:reference [ fhir:v "urn:uuid:ca779d48-9dd8-4fe1-829a-d48b12b492af" ] ;
+     fhir:type [ fhir:v "Practitioner"^^xsd:anyURI ]
+  ] ; # 
+  fhir:reasonCode ( [
+     fhir:coding ( [
+       a sct:13645005 ;
+       fhir:system [ fhir:v "http://snomed.info/sct"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "13645005" ] ;
+       fhir:display [ fhir:v "COPD" ]
+     ] ) ;
+     fhir:text [ fhir:v "COPD" ]
+  ] ) ; # 
+  fhir:dosageInstruction ( [
+     fhir:text [ fhir:v "2 puffs, 4 times per day, and as needed" ] ;
+     fhir:timing [
+       fhir:repeat [
+         fhir:frequency [ fhir:v "4"^^xsd:positiveInteger ] ;
+         fhir:period [ fhir:v "1"^^xsd:decimal ] ;
+         fhir:periodUnit [ fhir:v "d" ]
+       ]
+     ] ;
+     fhir:route [
+       fhir:coding ( [
+         a sct:447694001 ;
+         fhir:system [ fhir:v "http://snomed.info/sct"^^xsd:anyURI ] ;
+         fhir:code [ fhir:v "447694001" ] ;
+         fhir:display [ fhir:v "Respiratory tract route" ]
+       ] ) ;
+       fhir:text [ fhir:v "Respiratory tract route" ]
+     ] ;
+     fhir:doseAndRate ( [
+       fhir:dose [
+         a fhir:Quantity ;
+         fhir:value [ fhir:v "2"^^xsd:decimal ]
+       ]
+     ] )
+  ] ) . # 
+
+<urn:uuid:3f76e819-1f30-405d-b1ef-66c878b401c2> a fhir:MedicationRequest ;
+  fhir:meta [
+     fhir:versionId [ fhir:v "2" ] ;
+     fhir:lastUpdated [ fhir:v "2025-05-25T11:17:03.285+11:00"^^xsd:dateTime ] ;
+     fhir:profile ( [
+       fhir:v "http://hl7.org.au/fhir/ps/StructureDefinition/au-ps-medicationrequest"^^xsd:anyURI ;
+       fhir:link <http://hl7.org.au/fhir/ps/StructureDefinition/au-ps-medicationrequest>
+     ] )
+  ] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "extensions" ] ;
+     fhir:div [ fhir:v "<div xmlns=\"http://www.w3.org/1999/xhtml\"><a name=\"MedicationRequest_null\"> </a><p class=\"res-header-id\"><b>Generated Narrative: MedicationRequest </b></p><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\">version: 2; Last updated: 2025-05-25 11:17:03+1100</p><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-au-ps-medicationrequest.html\">AU PS MedicationRequest</a></p></div><p><b>status</b>: Active</p><p><b>intent</b>: Order</p><p><b>medication</b>: <span title=\"Codes:{http://snomed.info/sct 5690011000036107}\">Zyloprim 300 mg</span></p><p><b>subject</b>: <a href=\"Bundle-aups-gpvisit-retrieval.html#urn-uuid-d1122188-f53f-417f-a84f-bc44479baa63\">Jeramy EZRA BANKS (official) Male, DoB: 1971-05-14 ( IHI: Austalian Healthcare Identifier - Individual#8003608166980417)</a></p><p><b>encounter</b>: <a href=\"Bundle-aups-gpvisit-retrieval.html#urn-uuid-7d63c3a7-3cbe-487d-99aa-00c6c29f1db5\">Encounter: status = finished; class = ambulatory (ActCode#AMB); serviceType = General practice service; period = (?) --&gt; 2025-02-25; reasonCode = Follow-up visit</a></p><p><b>authoredOn</b>: Absent because : unknown</p><p><b>requester</b>: <a href=\"Bundle-aups-gpvisit-retrieval.html#urn-uuid-ca779d48-9dd8-4fe1-829a-d48b12b492af\">Practitioner Abe LOWE </a></p><p><b>reasonCode</b>: <span title=\"Codes:{http://snomed.info/sct 90560007}\">Gout</span></p><blockquote><p><b>dosageInstruction</b></p><p><b>text</b>: once daily</p><p><b>timing</b>: Once per 1 day</p><p><b>route</b>: <span title=\"Codes:{http://snomed.info/sct 26643006}\">Oral route</span></p><h3>DoseAndRates</h3><table class=\"grid\"><tr><td style=\"display: none\">-</td><td><b>Dose[x]</b></td></tr><tr><td style=\"display: none\">*</td><td>1</td></tr></table></blockquote></div>"^^rdf:XMLLiteral ]
+  ] ; # 
+  fhir:status [ fhir:v "active"] ; # 
+  fhir:intent [ fhir:v "order"] ; # 
+  fhir:medication [
+     a fhir:CodeableConcept ;
+     fhir:coding ( [
+       a sct:5690011000036107 ;
+       fhir:system [ fhir:v "http://snomed.info/sct"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "5690011000036107" ] ;
+       fhir:display [ fhir:v "Zyloprim 300 mg tablet" ]
+     ] ) ;
+     fhir:text [ fhir:v "Zyloprim 300 mg" ]
+  ] ; # 
+  fhir:subject [
+     fhir:reference [ fhir:v "urn:uuid:d1122188-f53f-417f-a84f-bc44479baa63" ] ;
+     fhir:type [ fhir:v "Patient"^^xsd:anyURI ]
+  ] ; # 
+  fhir:encounter [
+     fhir:reference [ fhir:v "urn:uuid:7d63c3a7-3cbe-487d-99aa-00c6c29f1db5" ]
+  ] ; # 
+  fhir:authoredOn [
+     fhir:extension ( [
+       fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/data-absent-reason"^^xsd:anyURI ] ;
+       fhir:value [
+         a fhir:code ;
+         fhir:v "unknown"
+       ]
+     ] )
+  ] ; # 
+  fhir:requester [
+     fhir:reference [ fhir:v "urn:uuid:ca779d48-9dd8-4fe1-829a-d48b12b492af" ] ;
+     fhir:type [ fhir:v "Practitioner"^^xsd:anyURI ]
+  ] ; # 
+  fhir:reasonCode ( [
+     fhir:coding ( [
+       a sct:90560007 ;
+       fhir:system [ fhir:v "http://snomed.info/sct"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "90560007" ] ;
+       fhir:display [ fhir:v "Gout" ]
+     ] ) ;
+     fhir:text [ fhir:v "Gout" ]
+  ] ) ; # 
+  fhir:dosageInstruction ( [
+     fhir:text [ fhir:v "once daily" ] ;
+     fhir:timing [
+       fhir:repeat [
+         fhir:frequency [ fhir:v "1"^^xsd:positiveInteger ] ;
+         fhir:period [ fhir:v "1"^^xsd:decimal ] ;
+         fhir:periodUnit [ fhir:v "d" ]
+       ]
+     ] ;
+     fhir:route [
+       fhir:coding ( [
+         a sct:26643006 ;
+         fhir:system [ fhir:v "http://snomed.info/sct"^^xsd:anyURI ] ;
+         fhir:code [ fhir:v "26643006" ] ;
+         fhir:display [ fhir:v "Oral route" ]
+       ] ) ;
+       fhir:text [ fhir:v "Oral route" ]
+     ] ;
+     fhir:doseAndRate ( [
+       fhir:dose [
+         a fhir:Quantity ;
+         fhir:value [ fhir:v "1"^^xsd:decimal ]
+       ]
+     ] )
+  ] ) . # 
+
+<urn:uuid:e96d8d8d-8ef2-436b-8d04-4d136a731398> a fhir:MedicationRequest ;
+  fhir:meta [
+     fhir:versionId [ fhir:v "2" ] ;
+     fhir:lastUpdated [ fhir:v "2025-05-25T11:17:03.285+11:00"^^xsd:dateTime ] ;
+     fhir:profile ( [
+       fhir:v "http://hl7.org.au/fhir/ps/StructureDefinition/au-ps-medicationrequest"^^xsd:anyURI ;
+       fhir:link <http://hl7.org.au/fhir/ps/StructureDefinition/au-ps-medicationrequest>
+     ] )
+  ] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "extensions" ] ;
+     fhir:div [ fhir:v "<div xmlns=\"http://www.w3.org/1999/xhtml\"><a name=\"MedicationRequest_null\"> </a><p class=\"res-header-id\"><b>Generated Narrative: MedicationRequest </b></p><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\">version: 2; Last updated: 2025-05-25 11:17:03+1100</p><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-au-ps-medicationrequest.html\">AU PS MedicationRequest</a></p></div><p><b>status</b>: Active</p><p><b>intent</b>: Order</p><p><b>medication</b>: <span title=\"Codes:{http://snomed.info/sct 3400011000036103}\">Spiriva</span></p><p><b>subject</b>: <a href=\"Bundle-aups-gpvisit-retrieval.html#urn-uuid-d1122188-f53f-417f-a84f-bc44479baa63\">Jeramy EZRA BANKS (official) Male, DoB: 1971-05-14 ( IHI: Austalian Healthcare Identifier - Individual#8003608166980417)</a></p><p><b>encounter</b>: <a href=\"Bundle-aups-gpvisit-retrieval.html#urn-uuid-7d63c3a7-3cbe-487d-99aa-00c6c29f1db5\">Encounter: status = finished; class = ambulatory (ActCode#AMB); serviceType = General practice service; period = (?) --&gt; 2025-02-25; reasonCode = Follow-up visit</a></p><p><b>authoredOn</b>: Absent because : unknown</p><p><b>requester</b>: <a href=\"Bundle-aups-gpvisit-retrieval.html#urn-uuid-ca779d48-9dd8-4fe1-829a-d48b12b492af\">Practitioner Abe LOWE </a></p><p><b>reasonCode</b>: <span title=\"Codes:{http://snomed.info/sct 13645005}\">COPD</span></p><h3>DosageInstructions</h3><table class=\"grid\"><tr><td style=\"display: none\">-</td><td><b>Text</b></td><td><b>Timing</b></td></tr><tr><td style=\"display: none\">*</td><td>once daily</td><td>Once per 1 day</td></tr></table></div>"^^rdf:XMLLiteral ]
+  ] ; # 
+  fhir:status [ fhir:v "active"] ; # 
+  fhir:intent [ fhir:v "order"] ; # 
+  fhir:medication [
+     a fhir:CodeableConcept ;
+     fhir:coding ( [
+       a sct:3400011000036103 ;
+       fhir:system [ fhir:v "http://snomed.info/sct"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "3400011000036103" ] ;
+       fhir:display [ fhir:v "Spiriva" ]
+     ] ) ;
+     fhir:text [ fhir:v "Spiriva" ]
+  ] ; # 
+  fhir:subject [
+     fhir:reference [ fhir:v "urn:uuid:d1122188-f53f-417f-a84f-bc44479baa63" ] ;
+     fhir:type [ fhir:v "Patient"^^xsd:anyURI ]
+  ] ; # 
+  fhir:encounter [
+     fhir:reference [ fhir:v "urn:uuid:7d63c3a7-3cbe-487d-99aa-00c6c29f1db5" ]
+  ] ; # 
+  fhir:authoredOn [
+     fhir:extension ( [
+       fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/data-absent-reason"^^xsd:anyURI ] ;
+       fhir:value [
+         a fhir:code ;
+         fhir:v "unknown"
+       ]
+     ] )
+  ] ; # 
+  fhir:requester [
+     fhir:reference [ fhir:v "urn:uuid:ca779d48-9dd8-4fe1-829a-d48b12b492af" ] ;
+     fhir:type [ fhir:v "Practitioner"^^xsd:anyURI ]
+  ] ; # 
+  fhir:reasonCode ( [
+     fhir:coding ( [
+       a sct:13645005 ;
+       fhir:system [ fhir:v "http://snomed.info/sct"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "13645005" ] ;
+       fhir:display [ fhir:v "COPD" ]
+     ] ) ;
+     fhir:text [ fhir:v "COPD" ]
+  ] ) ; # 
+  fhir:dosageInstruction ( [
+     fhir:text [ fhir:v "once daily" ] ;
+     fhir:timing [
+       fhir:repeat [
+         fhir:frequency [ fhir:v "1"^^xsd:positiveInteger ] ;
+         fhir:period [ fhir:v "1"^^xsd:decimal ] ;
+         fhir:periodUnit [ fhir:v "d" ]
+       ]
+     ]
+  ] ) . # 
+
+<urn:uuid:96b7e47d-0487-4219-adbe-7c2dfb0b2deb> a fhir:MedicationRequest ;
+  fhir:meta [
+     fhir:versionId [ fhir:v "2" ] ;
+     fhir:lastUpdated [ fhir:v "2025-05-25T11:17:03.285+11:00"^^xsd:dateTime ] ;
+     fhir:profile ( [
+       fhir:v "http://hl7.org.au/fhir/ps/StructureDefinition/au-ps-medicationrequest"^^xsd:anyURI ;
+       fhir:link <http://hl7.org.au/fhir/ps/StructureDefinition/au-ps-medicationrequest>
+     ] )
+  ] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "extensions" ] ;
+     fhir:div [ fhir:v "<div xmlns=\"http://www.w3.org/1999/xhtml\"><a name=\"MedicationRequest_null\"> </a><p class=\"res-header-id\"><b>Generated Narrative: MedicationRequest </b></p><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\">version: 2; Last updated: 2025-05-25 11:17:03+1100</p><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-au-ps-medicationrequest.html\">AU PS MedicationRequest</a></p></div><p><b>status</b>: Active</p><p><b>intent</b>: Order</p><p><b>medication</b>: <span title=\"Codes:{http://snomed.info/sct 175151000036106}\">Rosuvastatin 40mg &amp; ezetrol 10mg</span></p><p><b>subject</b>: <a href=\"Bundle-aups-gpvisit-retrieval.html#urn-uuid-d1122188-f53f-417f-a84f-bc44479baa63\">Jeramy EZRA BANKS (official) Male, DoB: 1971-05-14 ( IHI: Austalian Healthcare Identifier - Individual#8003608166980417)</a></p><p><b>encounter</b>: <a href=\"Bundle-aups-gpvisit-retrieval.html#urn-uuid-f7aaf2d5-c105-4652-8b4c-e555903593a7\">Encounter: status = finished; class = inpatient encounter (ActCode#IMP); serviceType = Cardiac diagnostic service; period = 2025-05-22 08:15:00+1000 --&gt; 2025-05-23 11:19:00+1000</a></p><p><b>authoredOn</b>: Absent because : unknown</p><p><b>requester</b>: <a href=\"Bundle-aups-gpvisit-retrieval.html#urn-uuid-ca779d48-9dd8-4fe1-829a-d48b12b492af\">Practitioner Abe LOWE </a></p><p><b>reasonCode</b>: <span title=\"Codes:{http://snomed.info/sct 13644009}\">Hypercholesterolaemia</span></p><h3>DosageInstructions</h3><table class=\"grid\"><tr><td style=\"display: none\">-</td><td><b>Text</b></td><td><b>Timing</b></td></tr><tr><td style=\"display: none\">*</td><td>once daily</td><td>Once per 1 day</td></tr></table></div>"^^rdf:XMLLiteral ]
+  ] ; # 
+  fhir:status [ fhir:v "active"] ; # 
+  fhir:intent [ fhir:v "order"] ; # 
+  fhir:medication [
+     a fhir:CodeableConcept ;
+     fhir:coding ( [
+       a sct:175151000036106 ;
+       fhir:system [ fhir:v "http://snomed.info/sct"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "175151000036106" ] ;
+       fhir:display [ fhir:v "Ezetimibe 10 mg tablet [30] (&) rosuvastatin 40 mg tablet [30], 60" ]
+     ] ) ;
+     fhir:text [ fhir:v "Rosuvastatin 40mg & ezetrol 10mg" ]
+  ] ; # 
+  fhir:subject [
+     fhir:reference [ fhir:v "urn:uuid:d1122188-f53f-417f-a84f-bc44479baa63" ] ;
+     fhir:type [ fhir:v "Patient"^^xsd:anyURI ]
+  ] ; # 
+  fhir:encounter [
+     fhir:reference [ fhir:v "urn:uuid:f7aaf2d5-c105-4652-8b4c-e555903593a7" ]
+  ] ; # 
+  fhir:authoredOn [
+     fhir:extension ( [
+       fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/data-absent-reason"^^xsd:anyURI ] ;
+       fhir:value [
+         a fhir:code ;
+         fhir:v "unknown"
+       ]
+     ] )
+  ] ; # 
+  fhir:requester [
+     fhir:reference [ fhir:v "urn:uuid:ca779d48-9dd8-4fe1-829a-d48b12b492af" ] ;
+     fhir:type [ fhir:v "Practitioner"^^xsd:anyURI ]
+  ] ; # 
+  fhir:reasonCode ( [
+     fhir:coding ( [
+       a sct:13644009 ;
+       fhir:system [ fhir:v "http://snomed.info/sct"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "13644009" ] ;
+       fhir:display [ fhir:v "Hypercholesterolaemia" ]
+     ] ) ;
+     fhir:text [ fhir:v "Hypercholesterolaemia" ]
+  ] ) ; # 
+  fhir:dosageInstruction ( [
+     fhir:text [ fhir:v "once daily" ] ;
+     fhir:timing [
+       fhir:repeat [
+         fhir:frequency [ fhir:v "1"^^xsd:positiveInteger ] ;
+         fhir:period [ fhir:v "1"^^xsd:decimal ] ;
+         fhir:periodUnit [ fhir:v "d" ]
+       ]
+     ]
+  ] ) . # 
+
+<urn:uuid:d7351a16-8df1-47a4-9129-2c2d6c2238ec> a fhir:MedicationRequest ;
+  fhir:meta [
+     fhir:versionId [ fhir:v "2" ] ;
+     fhir:lastUpdated [ fhir:v "2025-05-25T11:17:03.285+11:00"^^xsd:dateTime ] ;
+     fhir:profile ( [
+       fhir:v "http://hl7.org.au/fhir/ps/StructureDefinition/au-ps-medicationrequest"^^xsd:anyURI ;
+       fhir:link <http://hl7.org.au/fhir/ps/StructureDefinition/au-ps-medicationrequest>
+     ] )
+  ] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "extensions" ] ;
+     fhir:div [ fhir:v "<div xmlns=\"http://www.w3.org/1999/xhtml\"><a name=\"MedicationRequest_null\"> </a><p class=\"res-header-id\"><b>Generated Narrative: MedicationRequest </b></p><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\">version: 2; Last updated: 2025-05-25 11:17:03+1100</p><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-au-ps-medicationrequest.html\">AU PS MedicationRequest</a></p></div><p><b>status</b>: Active</p><p><b>intent</b>: Order</p><p><b>medication</b>: <span title=\"Codes:{http://snomed.info/sct 929413011000036109}\">Metformin 500 mg</span></p><p><b>subject</b>: <a href=\"Bundle-aups-gpvisit-retrieval.html#urn-uuid-d1122188-f53f-417f-a84f-bc44479baa63\">Jeramy EZRA BANKS (official) Male, DoB: 1971-05-14 ( IHI: Austalian Healthcare Identifier - Individual#8003608166980417)</a></p><p><b>encounter</b>: <a href=\"Bundle-aups-gpvisit-retrieval.html#urn-uuid-7d63c3a7-3cbe-487d-99aa-00c6c29f1db5\">Encounter: status = finished; class = ambulatory (ActCode#AMB); serviceType = General practice service; period = (?) --&gt; 2025-02-25; reasonCode = Follow-up visit</a></p><p><b>authoredOn</b>: Absent because : unknown</p><p><b>requester</b>: <a href=\"Bundle-aups-gpvisit-retrieval.html#urn-uuid-ca779d48-9dd8-4fe1-829a-d48b12b492af\">Practitioner Abe LOWE </a></p><p><b>reasonCode</b>: <span title=\"Codes:{http://snomed.info/sct 44054006}\">Type 2 diabetes mellitus</span></p><h3>DosageInstructions</h3><table class=\"grid\"><tr><td style=\"display: none\">-</td><td><b>Text</b></td><td><b>Timing</b></td></tr><tr><td style=\"display: none\">*</td><td>twice daily</td><td>2 per 1 day</td></tr></table></div>"^^rdf:XMLLiteral ]
+  ] ; # 
+  fhir:status [ fhir:v "active"] ; # 
+  fhir:intent [ fhir:v "order"] ; # 
+  fhir:medication [
+     a fhir:CodeableConcept ;
+     fhir:coding ( [
+       a sct:929413011000036109 ;
+       fhir:system [ fhir:v "http://snomed.info/sct"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "929413011000036109" ] ;
+       fhir:display [ fhir:v "Metformin (Apo) 500 mg tablet" ]
+     ] ) ;
+     fhir:text [ fhir:v "Metformin 500 mg" ]
+  ] ; # 
+  fhir:subject [
+     fhir:reference [ fhir:v "urn:uuid:d1122188-f53f-417f-a84f-bc44479baa63" ] ;
+     fhir:type [ fhir:v "Patient"^^xsd:anyURI ]
+  ] ; # 
+  fhir:encounter [
+     fhir:reference [ fhir:v "urn:uuid:7d63c3a7-3cbe-487d-99aa-00c6c29f1db5" ]
+  ] ; # 
+  fhir:authoredOn [
+     fhir:extension ( [
+       fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/data-absent-reason"^^xsd:anyURI ] ;
+       fhir:value [
+         a fhir:code ;
+         fhir:v "unknown"
+       ]
+     ] )
+  ] ; # 
+  fhir:requester [
+     fhir:reference [ fhir:v "urn:uuid:ca779d48-9dd8-4fe1-829a-d48b12b492af" ] ;
+     fhir:type [ fhir:v "Practitioner"^^xsd:anyURI ]
+  ] ; # 
+  fhir:reasonCode ( [
+     fhir:coding ( [
+       a sct:44054006 ;
+       fhir:system [ fhir:v "http://snomed.info/sct"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "44054006" ] ;
+       fhir:display [ fhir:v "Type 2 diabetes mellitus" ]
+     ] ) ;
+     fhir:text [ fhir:v "Type 2 diabetes mellitus" ]
+  ] ) ; # 
+  fhir:dosageInstruction ( [
+     fhir:text [ fhir:v "twice daily" ] ;
+     fhir:timing [
+       fhir:repeat [
+         fhir:frequency [ fhir:v "2"^^xsd:positiveInteger ] ;
+         fhir:period [ fhir:v "1"^^xsd:decimal ] ;
+         fhir:periodUnit [ fhir:v "d" ]
+       ]
+     ]
+  ] ) . # 
+
+<urn:uuid:fbc14baf-d7bf-4fa0-9035-f8e4a73986d0> a fhir:MedicationRequest ;
+  fhir:meta [
+     fhir:versionId [ fhir:v "2" ] ;
+     fhir:lastUpdated [ fhir:v "2025-05-25T11:17:03.285+11:00"^^xsd:dateTime ] ;
+     fhir:profile ( [
+       fhir:v "http://hl7.org.au/fhir/ps/StructureDefinition/au-ps-medicationrequest"^^xsd:anyURI ;
+       fhir:link <http://hl7.org.au/fhir/ps/StructureDefinition/au-ps-medicationrequest>
+     ] )
+  ] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "extensions" ] ;
+     fhir:div [ fhir:v "<div xmlns=\"http://www.w3.org/1999/xhtml\"><a name=\"MedicationRequest_null\"> </a><p class=\"res-header-id\"><b>Generated Narrative: MedicationRequest </b></p><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\">version: 2; Last updated: 2025-05-25 11:17:03+1100</p><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-au-ps-medicationrequest.html\">AU PS MedicationRequest</a></p></div><p><b>status</b>: Active</p><p><b>intent</b>: Order</p><p><b>medication</b>: <span title=\"Codes:{http://snomed.info/sct 23173011000036104}\">Aspirin 100 mg</span></p><p><b>subject</b>: <a href=\"Bundle-aups-gpvisit-retrieval.html#urn-uuid-d1122188-f53f-417f-a84f-bc44479baa63\">Jeramy EZRA BANKS (official) Male, DoB: 1971-05-14 ( IHI: Austalian Healthcare Identifier - Individual#8003608166980417)</a></p><p><b>authoredOn</b>: Absent because : unknown</p><p><b>requester</b>: <a href=\"Bundle-aups-gpvisit-retrieval.html#urn-uuid-ca779d48-9dd8-4fe1-829a-d48b12b492af\">Practitioner Abe LOWE </a></p><p><b>reasonCode</b>: <span title=\"Codes:{http://snomed.info/sct 49601007}\">Cardiovascular disease</span></p><h3>DosageInstructions</h3><table class=\"grid\"><tr><td style=\"display: none\">-</td><td><b>Text</b></td><td><b>Timing</b></td></tr><tr><td style=\"display: none\">*</td><td>once daily</td><td>Once per 1 day</td></tr></table></div>"^^rdf:XMLLiteral ]
+  ] ; # 
+  fhir:status [ fhir:v "active"] ; # 
+  fhir:intent [ fhir:v "order"] ; # 
+  fhir:medication [
+     a fhir:CodeableConcept ;
+     fhir:coding ( [
+       a sct:23173011000036104 ;
+       fhir:system [ fhir:v "http://snomed.info/sct"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "23173011000036104" ] ;
+       fhir:display [ fhir:v "Aspirin 100 mg tablet" ]
+     ] ) ;
+     fhir:text [ fhir:v "Aspirin 100 mg" ]
+  ] ; # 
+  fhir:subject [
+     fhir:reference [ fhir:v "urn:uuid:d1122188-f53f-417f-a84f-bc44479baa63" ] ;
+     fhir:type [ fhir:v "Patient"^^xsd:anyURI ]
+  ] ; # 
+  fhir:authoredOn [
+     fhir:extension ( [
+       fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/data-absent-reason"^^xsd:anyURI ] ;
+       fhir:value [
+         a fhir:code ;
+         fhir:v "unknown"
+       ]
+     ] )
+  ] ; # 
+  fhir:requester [
+     fhir:reference [ fhir:v "urn:uuid:ca779d48-9dd8-4fe1-829a-d48b12b492af" ] ;
+     fhir:type [ fhir:v "Practitioner"^^xsd:anyURI ]
+  ] ; # 
+  fhir:reasonCode ( [
+     fhir:coding ( [
+       a sct:49601007 ;
+       fhir:system [ fhir:v "http://snomed.info/sct"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "49601007" ] ;
+       fhir:display [ fhir:v "Cardiovascular disease" ]
+     ] ) ;
+     fhir:text [ fhir:v "Cardiovascular disease" ]
+  ] ) ; # 
+  fhir:dosageInstruction ( [
+     fhir:text [ fhir:v "once daily" ] ;
+     fhir:timing [
+       fhir:repeat [
+         fhir:frequency [ fhir:v "1"^^xsd:positiveInteger ] ;
+         fhir:period [ fhir:v "1"^^xsd:decimal ] ;
+         fhir:periodUnit [ fhir:v "d" ]
+       ]
+     ]
+  ] ) . # 
+
+<urn:uuid:cefeac7e-cf0c-4c14-917d-2a526516c3d1> a fhir:MedicationRequest ;
+  fhir:meta [
+     fhir:versionId [ fhir:v "2" ] ;
+     fhir:lastUpdated [ fhir:v "2025-05-25T11:17:03.285+11:00"^^xsd:dateTime ] ;
+     fhir:profile ( [
+       fhir:v "http://hl7.org.au/fhir/ps/StructureDefinition/au-ps-medicationrequest"^^xsd:anyURI ;
+       fhir:link <http://hl7.org.au/fhir/ps/StructureDefinition/au-ps-medicationrequest>
+     ] )
+  ] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "extensions" ] ;
+     fhir:div [ fhir:v "<div xmlns=\"http://www.w3.org/1999/xhtml\"><a name=\"MedicationRequest_null\"> </a><p class=\"res-header-id\"><b>Generated Narrative: MedicationRequest </b></p><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\">version: 2; Last updated: 2025-05-25 11:17:03+1100</p><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-au-ps-medicationrequest.html\">AU PS MedicationRequest</a></p></div><p><b>status</b>: Active</p><p><b>intent</b>: Order</p><p><b>medication</b>: <span title=\"Codes:{http://snomed.info/sct 22969011000036102}\">Telmisartan 80 mg</span></p><p><b>subject</b>: <a href=\"Bundle-aups-gpvisit-retrieval.html#urn-uuid-d1122188-f53f-417f-a84f-bc44479baa63\">Jeramy EZRA BANKS (official) Male, DoB: 1971-05-14 ( IHI: Austalian Healthcare Identifier - Individual#8003608166980417)</a></p><p><b>authoredOn</b>: Absent because : unknown</p><p><b>requester</b>: <a href=\"Bundle-aups-gpvisit-retrieval.html#urn-uuid-ca779d48-9dd8-4fe1-829a-d48b12b492af\">Practitioner Abe LOWE </a></p><p><b>reasonCode</b>: <span title=\"Codes:{http://snomed.info/sct 38341003}\">Hypertension</span></p><h3>DosageInstructions</h3><table class=\"grid\"><tr><td style=\"display: none\">-</td><td><b>Text</b></td><td><b>Timing</b></td></tr><tr><td style=\"display: none\">*</td><td>once daily</td><td>Once per 1 day</td></tr></table></div>"^^rdf:XMLLiteral ]
+  ] ; # 
+  fhir:status [ fhir:v "active"] ; # 
+  fhir:intent [ fhir:v "order"] ; # 
+  fhir:medication [
+     a fhir:CodeableConcept ;
+     fhir:coding ( [
+       a sct:22969011000036102 ;
+       fhir:system [ fhir:v "http://snomed.info/sct"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "22969011000036102" ] ;
+       fhir:display [ fhir:v "Telmisartan 80 mg tablet" ]
+     ] ) ;
+     fhir:text [ fhir:v "Telmisartan 80 mg" ]
+  ] ; # 
+  fhir:subject [
+     fhir:reference [ fhir:v "urn:uuid:d1122188-f53f-417f-a84f-bc44479baa63" ] ;
+     fhir:type [ fhir:v "Patient"^^xsd:anyURI ]
+  ] ; # 
+  fhir:authoredOn [
+     fhir:extension ( [
+       fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/data-absent-reason"^^xsd:anyURI ] ;
+       fhir:value [
+         a fhir:code ;
+         fhir:v "unknown"
+       ]
+     ] )
+  ] ; # 
+  fhir:requester [
+     fhir:reference [ fhir:v "urn:uuid:ca779d48-9dd8-4fe1-829a-d48b12b492af" ] ;
+     fhir:type [ fhir:v "Practitioner"^^xsd:anyURI ]
+  ] ; # 
+  fhir:reasonCode ( [
+     fhir:coding ( [
+       a sct:38341003 ;
+       fhir:system [ fhir:v "http://snomed.info/sct"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "38341003" ] ;
+       fhir:display [ fhir:v "Hypertension" ]
+     ] ) ;
+     fhir:text [ fhir:v "Hypertension" ]
+  ] ) ; # 
+  fhir:dosageInstruction ( [
+     fhir:text [ fhir:v "once daily" ] ;
+     fhir:timing [
+       fhir:repeat [
+         fhir:frequency [ fhir:v "1"^^xsd:positiveInteger ] ;
+         fhir:period [ fhir:v "1"^^xsd:decimal ] ;
+         fhir:periodUnit [ fhir:v "d" ]
+       ]
+     ]
+  ] ) . # 
+
+<urn:uuid:ca779d48-9dd8-4fe1-829a-d48b12b492af> a fhir:Practitioner ;
+  fhir:meta [
+     fhir:versionId [ fhir:v "2" ] ;
+     fhir:lastUpdated [ fhir:v "2025-05-25T11:17:03.285+11:00"^^xsd:dateTime ] ;
+     fhir:profile ( [
+       fhir:v "http://hl7.org.au/fhir/ps/StructureDefinition/au-ps-practitioner"^^xsd:anyURI ;
+       fhir:link <http://hl7.org.au/fhir/ps/StructureDefinition/au-ps-practitioner>
+     ] )
+  ] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "generated" ] ;
+     fhir:div [ fhir:v "<div xmlns=\"http://www.w3.org/1999/xhtml\"><a name=\"Practitioner_null\"> </a><p class=\"res-header-id\"><b>Generated Narrative: Practitioner </b></p><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\">version: 2; Last updated: 2025-05-25 11:17:03+1100</p><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-au-ps-practitioner.html\">AU PS Practitioner</a></p></div><p><b>identifier</b>: HPI-I/8003616566718832, Prescriber Number/8017196</p><p><b>name</b>: Abe LOWE </p><p><b>telecom</b>: ph: 0270102315(Work), <a href=\"mailto:abe.lowe@mossypointmc.example.net\">abe.lowe@mossypointmc.example.net</a></p><p><b>address</b>: 158 Warrego Cl Mossy Point NSW 2537 </p><p><b>gender</b>: Male</p></div>"^^rdf:XMLLiteral ]
+  ] ; # 
+  fhir:identifier ( [
+     fhir:type [
+       fhir:coding ( [
+         fhir:system [ fhir:v "http://terminology.hl7.org/CodeSystem/v2-0203"^^xsd:anyURI ] ;
+         fhir:code [ fhir:v "NPI" ] ;
+         fhir:display [ fhir:v "National provider identifier" ]
+       ] ) ;
+       fhir:text [ fhir:v "HPI-I" ]
+     ] ;
+     fhir:system [ fhir:v "http://ns.electronichealth.net.au/id/hi/hpii/1.0"^^xsd:anyURI ] ;
+     fhir:value [ fhir:v "8003616566718832" ]
+  ] [
+     fhir:type [
+       fhir:coding ( [
+         fhir:system [ fhir:v "http://terminology.hl7.org.au/CodeSystem/v2-0203"^^xsd:anyURI ] ;
+         fhir:code [ fhir:v "PRES" ] ;
+         fhir:display [ fhir:v "Prescriber Number" ]
+       ] )
+     ] ;
+     fhir:system [ fhir:v "http://ns.electronichealth.net.au/id/medicare-prescriber-number"^^xsd:anyURI ] ;
+     fhir:value [ fhir:v "8017196" ]
+  ] ) ; # 
+  fhir:name ( [
+     fhir:family [ fhir:v "LOWE" ] ;
+     fhir:given ( [ fhir:v "Abe" ] )
+  ] ) ; # 
+  fhir:telecom ( [
+     fhir:system [ fhir:v "phone" ] ;
+     fhir:value [ fhir:v "0270102315" ] ;
+     fhir:use [ fhir:v "work" ]
+  ] [
+     fhir:system [ fhir:v "email" ] ;
+     fhir:value [ fhir:v "abe.lowe@mossypointmc.example.net" ]
+  ] ) ; # 
+  fhir:address ( [
+     fhir:line ( [ fhir:v "158 Warrego Cl" ] ) ;
+     fhir:city [ fhir:v "Mossy Point" ] ;
+     fhir:state [ fhir:v "NSW" ] ;
+     fhir:postalCode [ fhir:v "2537" ]
+  ] ) ; # 
+  fhir:gender [ fhir:v "male"] . # 
+
+<urn:uuid:96013c59-2a84-4e89-9aa4-96d04d367466> a fhir:Condition ;
+  fhir:meta [
+     fhir:versionId [ fhir:v "2" ] ;
+     fhir:lastUpdated [ fhir:v "2025-05-25T11:17:03.285+11:00"^^xsd:dateTime ] ;
+     fhir:profile ( [
+       fhir:v "http://hl7.org.au/fhir/ps/StructureDefinition/au-ps-condition"^^xsd:anyURI ;
+       fhir:link <http://hl7.org.au/fhir/ps/StructureDefinition/au-ps-condition>
+     ] )
+  ] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "generated" ] ;
+     fhir:div [ fhir:v "<div xmlns=\"http://www.w3.org/1999/xhtml\"><a name=\"Condition_null\"> </a><p class=\"res-header-id\"><b>Generated Narrative: Condition </b></p><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\">version: 2; Last updated: 2025-05-25 11:17:03+1100</p><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-au-ps-condition.html\">AU PS Condition</a></p></div><p><b>clinicalStatus</b>: <span title=\"Codes:{http://terminology.hl7.org/CodeSystem/condition-clinical active}\">Active</span></p><p><b>verificationStatus</b>: <span title=\"Codes:{http://terminology.hl7.org/CodeSystem/condition-ver-status confirmed}\">Confirmed</span></p><p><b>category</b>: <span title=\"Codes:{http://terminology.hl7.org/CodeSystem/condition-category problem-list-item}\">Problem</span></p><p><b>code</b>: <span title=\"Codes:{http://snomed.info/sct 13644009}\">Hypercholesterolaemia</span></p><p><b>subject</b>: <a href=\"Bundle-aups-gpvisit-retrieval.html#urn-uuid-d1122188-f53f-417f-a84f-bc44479baa63\">Jeramy EZRA BANKS (official) Male, DoB: 1971-05-14 ( IHI: Austalian Healthcare Identifier - Individual#8003608166980417)</a></p></div>"^^rdf:XMLLiteral ]
+  ] ; # 
+  fhir:clinicalStatus [
+     fhir:coding ( [
+       fhir:system [ fhir:v "http://terminology.hl7.org/CodeSystem/condition-clinical"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "active" ] ;
+       fhir:display [ fhir:v "Active" ]
+     ] ) ;
+     fhir:text [ fhir:v "Active" ]
+  ] ; # 
+  fhir:verificationStatus [
+     fhir:coding ( [
+       fhir:system [ fhir:v "http://terminology.hl7.org/CodeSystem/condition-ver-status"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "confirmed" ] ;
+       fhir:display [ fhir:v "Confirmed" ]
+     ] )
+  ] ; # 
+  fhir:category ( [
+     fhir:coding ( [
+       fhir:system [ fhir:v "http://terminology.hl7.org/CodeSystem/condition-category"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "problem-list-item" ]
+     ] ) ;
+     fhir:text [ fhir:v "Problem" ]
+  ] ) ; # 
+  fhir:code [
+     fhir:coding ( [
+       a sct:13644009 ;
+       fhir:system [ fhir:v "http://snomed.info/sct"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "13644009" ] ;
+       fhir:display [ fhir:v "Hypercholesterolaemia" ]
+     ] ) ;
+     fhir:text [ fhir:v "Hypercholesterolaemia" ]
+  ] ; # 
+  fhir:subject [
+     fhir:reference [ fhir:v "urn:uuid:d1122188-f53f-417f-a84f-bc44479baa63" ] ;
+     fhir:type [ fhir:v "Patient"^^xsd:anyURI ]
+  ] . # 
+
+<urn:uuid:8714f907-ddf9-4f21-9ea9-663e4ad0f99c> a fhir:Condition ;
+  fhir:meta [
+     fhir:versionId [ fhir:v "2" ] ;
+     fhir:lastUpdated [ fhir:v "2025-05-25T11:17:03.285+11:00"^^xsd:dateTime ] ;
+     fhir:profile ( [
+       fhir:v "http://hl7.org.au/fhir/ps/StructureDefinition/au-ps-condition"^^xsd:anyURI ;
+       fhir:link <http://hl7.org.au/fhir/ps/StructureDefinition/au-ps-condition>
+     ] )
+  ] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "generated" ] ;
+     fhir:div [ fhir:v "<div xmlns=\"http://www.w3.org/1999/xhtml\"><a name=\"Condition_null\"> </a><p class=\"res-header-id\"><b>Generated Narrative: Condition </b></p><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\">version: 2; Last updated: 2025-05-25 11:17:03+1100</p><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-au-ps-condition.html\">AU PS Condition</a></p></div><p><b>clinicalStatus</b>: <span title=\"Codes:{http://terminology.hl7.org/CodeSystem/condition-clinical active}\">Active</span></p><p><b>verificationStatus</b>: <span title=\"Codes:{http://terminology.hl7.org/CodeSystem/condition-ver-status confirmed}\">Confirmed</span></p><p><b>category</b>: <span title=\"Codes:{http://terminology.hl7.org/CodeSystem/condition-category problem-list-item}\">Problem</span></p><p><b>code</b>: <span title=\"Codes:{http://snomed.info/sct 44054006}\">Type 2 diabetes mellitus</span></p><p><b>subject</b>: <a href=\"Bundle-aups-gpvisit-retrieval.html#urn-uuid-d1122188-f53f-417f-a84f-bc44479baa63\">Jeramy EZRA BANKS (official) Male, DoB: 1971-05-14 ( IHI: Austalian Healthcare Identifier - Individual#8003608166980417)</a></p></div>"^^rdf:XMLLiteral ]
+  ] ; # 
+  fhir:clinicalStatus [
+     fhir:coding ( [
+       fhir:system [ fhir:v "http://terminology.hl7.org/CodeSystem/condition-clinical"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "active" ] ;
+       fhir:display [ fhir:v "Active" ]
+     ] ) ;
+     fhir:text [ fhir:v "Active" ]
+  ] ; # 
+  fhir:verificationStatus [
+     fhir:coding ( [
+       fhir:system [ fhir:v "http://terminology.hl7.org/CodeSystem/condition-ver-status"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "confirmed" ] ;
+       fhir:display [ fhir:v "Confirmed" ]
+     ] )
+  ] ; # 
+  fhir:category ( [
+     fhir:coding ( [
+       fhir:system [ fhir:v "http://terminology.hl7.org/CodeSystem/condition-category"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "problem-list-item" ]
+     ] ) ;
+     fhir:text [ fhir:v "Problem" ]
+  ] ) ; # 
+  fhir:code [
+     fhir:coding ( [
+       a sct:44054006 ;
+       fhir:system [ fhir:v "http://snomed.info/sct"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "44054006" ] ;
+       fhir:display [ fhir:v "Type 2 diabetes mellitus" ]
+     ] ) ;
+     fhir:text [ fhir:v "Type 2 diabetes mellitus" ]
+  ] ; # 
+  fhir:subject [
+     fhir:reference [ fhir:v "urn:uuid:d1122188-f53f-417f-a84f-bc44479baa63" ] ;
+     fhir:type [ fhir:v "Patient"^^xsd:anyURI ]
+  ] . # 
+
+<urn:uuid:bea49472-f812-4aa0-ad52-fb90fad2b0d1> a fhir:Condition ;
+  fhir:meta [
+     fhir:versionId [ fhir:v "2" ] ;
+     fhir:lastUpdated [ fhir:v "2025-05-25T11:17:03.285+11:00"^^xsd:dateTime ] ;
+     fhir:profile ( [
+       fhir:v "http://hl7.org.au/fhir/ps/StructureDefinition/au-ps-condition"^^xsd:anyURI ;
+       fhir:link <http://hl7.org.au/fhir/ps/StructureDefinition/au-ps-condition>
+     ] )
+  ] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "generated" ] ;
+     fhir:div [ fhir:v "<div xmlns=\"http://www.w3.org/1999/xhtml\"><a name=\"Condition_null\"> </a><p class=\"res-header-id\"><b>Generated Narrative: Condition </b></p><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\">version: 2; Last updated: 2025-05-25 11:17:03+1100</p><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-au-ps-condition.html\">AU PS Condition</a></p></div><p><b>clinicalStatus</b>: <span title=\"Codes:{http://terminology.hl7.org/CodeSystem/condition-clinical active}\">Active</span></p><p><b>verificationStatus</b>: <span title=\"Codes:{http://terminology.hl7.org/CodeSystem/condition-ver-status confirmed}\">Confirmed</span></p><p><b>category</b>: <span title=\"Codes:{http://terminology.hl7.org/CodeSystem/condition-category problem-list-item}\">Problem</span></p><p><b>code</b>: <span title=\"Codes:{http://snomed.info/sct 38341003}\">Hypertension</span></p><p><b>subject</b>: <a href=\"Bundle-aups-gpvisit-retrieval.html#urn-uuid-d1122188-f53f-417f-a84f-bc44479baa63\">Jeramy EZRA BANKS (official) Male, DoB: 1971-05-14 ( IHI: Austalian Healthcare Identifier - Individual#8003608166980417)</a></p></div>"^^rdf:XMLLiteral ]
+  ] ; # 
+  fhir:clinicalStatus [
+     fhir:coding ( [
+       fhir:system [ fhir:v "http://terminology.hl7.org/CodeSystem/condition-clinical"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "active" ] ;
+       fhir:display [ fhir:v "Active" ]
+     ] ) ;
+     fhir:text [ fhir:v "Active" ]
+  ] ; # 
+  fhir:verificationStatus [
+     fhir:coding ( [
+       fhir:system [ fhir:v "http://terminology.hl7.org/CodeSystem/condition-ver-status"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "confirmed" ] ;
+       fhir:display [ fhir:v "Confirmed" ]
+     ] )
+  ] ; # 
+  fhir:category ( [
+     fhir:coding ( [
+       fhir:system [ fhir:v "http://terminology.hl7.org/CodeSystem/condition-category"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "problem-list-item" ]
+     ] ) ;
+     fhir:text [ fhir:v "Problem" ]
+  ] ) ; # 
+  fhir:code [
+     fhir:coding ( [
+       a sct:38341003 ;
+       fhir:system [ fhir:v "http://snomed.info/sct"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "38341003" ] ;
+       fhir:display [ fhir:v "Hypertension" ]
+     ] ) ;
+     fhir:text [ fhir:v "Hypertension" ]
+  ] ; # 
+  fhir:subject [
+     fhir:reference [ fhir:v "urn:uuid:d1122188-f53f-417f-a84f-bc44479baa63" ] ;
+     fhir:type [ fhir:v "Patient"^^xsd:anyURI ]
+  ] . # 
+
+<urn:uuid:55e4f3ea-ed3c-4cef-badd-f582254a97dd> a fhir:Condition ;
+  fhir:meta [
+     fhir:versionId [ fhir:v "2" ] ;
+     fhir:lastUpdated [ fhir:v "2025-05-25T11:17:03.285+11:00"^^xsd:dateTime ] ;
+     fhir:profile ( [
+       fhir:v "http://hl7.org.au/fhir/ps/StructureDefinition/au-ps-condition"^^xsd:anyURI ;
+       fhir:link <http://hl7.org.au/fhir/ps/StructureDefinition/au-ps-condition>
+     ] )
+  ] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "generated" ] ;
+     fhir:div [ fhir:v "<div xmlns=\"http://www.w3.org/1999/xhtml\"><a name=\"Condition_null\"> </a><p class=\"res-header-id\"><b>Generated Narrative: Condition </b></p><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\">version: 2; Last updated: 2025-05-25 11:17:03+1100</p><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-au-ps-condition.html\">AU PS Condition</a></p></div><p><b>clinicalStatus</b>: <span title=\"Codes:{http://terminology.hl7.org/CodeSystem/condition-clinical active}\">Active</span></p><p><b>verificationStatus</b>: <span title=\"Codes:{http://terminology.hl7.org/CodeSystem/condition-ver-status confirmed}\">Confirmed</span></p><p><b>category</b>: <span title=\"Codes:{http://terminology.hl7.org/CodeSystem/condition-category problem-list-item}\">Problem</span></p><p><b>code</b>: <span title=\"Codes:{http://snomed.info/sct 90560007}\">Gout, Left great toe</span></p><p><b>bodySite</b>: <span title=\"Codes:{http://snomed.info/sct 723724004}\">Left great toe</span></p><p><b>subject</b>: <a href=\"Bundle-aups-gpvisit-retrieval.html#urn-uuid-d1122188-f53f-417f-a84f-bc44479baa63\">Jeramy EZRA BANKS (official) Male, DoB: 1971-05-14 ( IHI: Austalian Healthcare Identifier - Individual#8003608166980417)</a></p><p><b>note</b>: </p><blockquote><div><p>On allopurinol for uric acid control</p>\n</div></blockquote></div>"^^rdf:XMLLiteral ]
+  ] ; # 
+  fhir:clinicalStatus [
+     fhir:coding ( [
+       fhir:system [ fhir:v "http://terminology.hl7.org/CodeSystem/condition-clinical"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "active" ] ;
+       fhir:display [ fhir:v "Active" ]
+     ] ) ;
+     fhir:text [ fhir:v "Active" ]
+  ] ; # 
+  fhir:verificationStatus [
+     fhir:coding ( [
+       fhir:system [ fhir:v "http://terminology.hl7.org/CodeSystem/condition-ver-status"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "confirmed" ] ;
+       fhir:display [ fhir:v "Confirmed" ]
+     ] )
+  ] ; # 
+  fhir:category ( [
+     fhir:coding ( [
+       fhir:system [ fhir:v "http://terminology.hl7.org/CodeSystem/condition-category"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "problem-list-item" ]
+     ] ) ;
+     fhir:text [ fhir:v "Problem" ]
+  ] ) ; # 
+  fhir:code [
+     fhir:coding ( [
+       a sct:90560007 ;
+       fhir:system [ fhir:v "http://snomed.info/sct"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "90560007" ] ;
+       fhir:display [ fhir:v "Gout" ]
+     ] ) ;
+     fhir:text [ fhir:v "Gout, Left great toe" ]
+  ] ; # 
+  fhir:bodySite ( [
+     fhir:coding ( [
+       a sct:723724004 ;
+       fhir:system [ fhir:v "http://snomed.info/sct"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "723724004" ] ;
+       fhir:display [ fhir:v "Structure of left great toe" ]
+     ] ) ;
+     fhir:text [ fhir:v "Left great toe" ]
+  ] ) ; # 
+  fhir:subject [
+     fhir:reference [ fhir:v "urn:uuid:d1122188-f53f-417f-a84f-bc44479baa63" ] ;
+     fhir:type [ fhir:v "Patient"^^xsd:anyURI ]
+  ] ; # 
+  fhir:note ( [
+     fhir:text [ fhir:v "On allopurinol for uric acid control" ]
+  ] ) . # 
+
+<urn:uuid:604a5173-1cf4-4cf4-82a2-13b610ecc593> a fhir:Condition ;
+  fhir:meta [
+     fhir:versionId [ fhir:v "2" ] ;
+     fhir:lastUpdated [ fhir:v "2025-05-25T11:17:03.285+11:00"^^xsd:dateTime ] ;
+     fhir:profile ( [
+       fhir:v "http://hl7.org.au/fhir/ps/StructureDefinition/au-ps-condition"^^xsd:anyURI ;
+       fhir:link <http://hl7.org.au/fhir/ps/StructureDefinition/au-ps-condition>
+     ] )
+  ] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "generated" ] ;
+     fhir:div [ fhir:v "<div xmlns=\"http://www.w3.org/1999/xhtml\"><a name=\"Condition_null\"> </a><p class=\"res-header-id\"><b>Generated Narrative: Condition </b></p><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\">version: 2; Last updated: 2025-05-25 11:17:03+1100</p><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-au-ps-condition.html\">AU PS Condition</a></p></div><p><b>clinicalStatus</b>: <span title=\"Codes:{http://terminology.hl7.org/CodeSystem/condition-clinical active}\">Active</span></p><p><b>verificationStatus</b>: <span title=\"Codes:{http://terminology.hl7.org/CodeSystem/condition-ver-status confirmed}\">Confirmed</span></p><p><b>category</b>: <span title=\"Codes:{http://terminology.hl7.org/CodeSystem/condition-category problem-list-item}\">Problem</span></p><p><b>code</b>: <span title=\"Codes:{http://snomed.info/sct 13645005}\">COPD</span></p><p><b>subject</b>: <a href=\"Bundle-aups-gpvisit-retrieval.html#urn-uuid-d1122188-f53f-417f-a84f-bc44479baa63\">Jeramy EZRA BANKS (official) Male, DoB: 1971-05-14 ( IHI: Austalian Healthcare Identifier - Individual#8003608166980417)</a></p></div>"^^rdf:XMLLiteral ]
+  ] ; # 
+  fhir:clinicalStatus [
+     fhir:coding ( [
+       fhir:system [ fhir:v "http://terminology.hl7.org/CodeSystem/condition-clinical"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "active" ] ;
+       fhir:display [ fhir:v "Active" ]
+     ] ) ;
+     fhir:text [ fhir:v "Active" ]
+  ] ; # 
+  fhir:verificationStatus [
+     fhir:coding ( [
+       fhir:system [ fhir:v "http://terminology.hl7.org/CodeSystem/condition-ver-status"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "confirmed" ] ;
+       fhir:display [ fhir:v "Confirmed" ]
+     ] )
+  ] ; # 
+  fhir:category ( [
+     fhir:coding ( [
+       fhir:system [ fhir:v "http://terminology.hl7.org/CodeSystem/condition-category"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "problem-list-item" ]
+     ] ) ;
+     fhir:text [ fhir:v "Problem" ]
+  ] ) ; # 
+  fhir:code [
+     fhir:coding ( [
+       a sct:13645005 ;
+       fhir:system [ fhir:v "http://snomed.info/sct"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "13645005" ] ;
+       fhir:display [ fhir:v "COPD" ]
+     ] ) ;
+     fhir:text [ fhir:v "COPD" ]
+  ] ; # 
+  fhir:subject [
+     fhir:reference [ fhir:v "urn:uuid:d1122188-f53f-417f-a84f-bc44479baa63" ] ;
+     fhir:type [ fhir:v "Patient"^^xsd:anyURI ]
+  ] . # 
+
+<urn:uuid:825a781b-e083-4351-a3d9-adf56f65d7e9> a fhir:Immunization ;
+  fhir:meta [
+     fhir:versionId [ fhir:v "3" ] ;
+     fhir:lastUpdated [ fhir:v "2025-05-25T11:39:15.709+11:00"^^xsd:dateTime ] ;
+     fhir:profile ( [
+       fhir:v "http://hl7.org.au/fhir/ps/StructureDefinition/au-ps-immunization"^^xsd:anyURI ;
+       fhir:link <http://hl7.org.au/fhir/ps/StructureDefinition/au-ps-immunization>
+     ] )
+  ] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "extensions" ] ;
+     fhir:div [ fhir:v "<div xmlns=\"http://www.w3.org/1999/xhtml\"><a name=\"Immunization_null\"> </a><p class=\"res-header-id\"><b>Generated Narrative: Immunization </b></p><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\">version: 3; Last updated: 2025-05-25 11:39:15+1100</p><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-au-ps-immunization.html\">AU PS Immunization</a></p></div><p><b>status</b>: Completed</p><p><b>vaccineCode</b>: <span title=\"Codes:{https://www.humanservices.gov.au/organisations/health-professionals/enablers/air-vaccine-code-formats MMRCSL}\">M-M-R II</span></p><p><b>patient</b>: <a href=\"Bundle-aups-gpvisit-retrieval.html#urn-uuid-d1122188-f53f-417f-a84f-bc44479baa63\">Jeramy EZRA BANKS (official) Male, DoB: 1971-05-14 ( IHI: Austalian Healthcare Identifier - Individual#8003608166980417)</a></p><p><b>occurrence</b>: Absent because : unknown</p></div>"^^rdf:XMLLiteral ]
+  ] ; # 
+  fhir:status [ fhir:v "completed"] ; # 
+  fhir:vaccineCode [
+     fhir:coding ( [
+       fhir:system [ fhir:v "https://www.humanservices.gov.au/organisations/health-professionals/enablers/air-vaccine-code-formats"^^xsd:anyURI ] ;
+       fhir:version [ fhir:v "20240207" ] ;
+       fhir:code [ fhir:v "MMRCSL" ] ;
+       fhir:display [ fhir:v "M-M-R II" ]
+     ] ) ;
+     fhir:text [ fhir:v "M-M-R II" ]
+  ] ; # 
+  fhir:patient [
+     fhir:reference [ fhir:v "urn:uuid:d1122188-f53f-417f-a84f-bc44479baa63" ] ;
+     fhir:type [ fhir:v "Patient"^^xsd:anyURI ]
+  ] ; # 
+  fhir:occurrence [
+     a fhir:dateTime ;
+     fhir:extension ( [
+       fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/data-absent-reason"^^xsd:anyURI ] ;
+       fhir:value [
+         a fhir:code ;
+         fhir:v "unknown"
+       ]
+     ] )
+  ] . # 
+
+<urn:uuid:1e0d5691-c20c-4e14-9261-20a1575ab065> a fhir:Immunization ;
+  fhir:meta [
+     fhir:versionId [ fhir:v "3" ] ;
+     fhir:lastUpdated [ fhir:v "2025-05-25T11:39:15.709+11:00"^^xsd:dateTime ] ;
+     fhir:profile ( [
+       fhir:v "http://hl7.org.au/fhir/ps/StructureDefinition/au-ps-immunization"^^xsd:anyURI ;
+       fhir:link <http://hl7.org.au/fhir/ps/StructureDefinition/au-ps-immunization>
+     ] )
+  ] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "extensions" ] ;
+     fhir:div [ fhir:v "<div xmlns=\"http://www.w3.org/1999/xhtml\"><a name=\"Immunization_null\"> </a><p class=\"res-header-id\"><b>Generated Narrative: Immunization </b></p><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\">version: 3; Last updated: 2025-05-25 11:39:15+1100</p><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-au-ps-immunization.html\">AU PS Immunization</a></p></div><p><b>status</b>: Completed</p><p><b>vaccineCode</b>: <span title=\"Codes:{https://www.humanservices.gov.au/organisations/health-professionals/enablers/air-vaccine-code-formats BOOST}\">Boostrix</span></p><p><b>patient</b>: <a href=\"Bundle-aups-gpvisit-retrieval.html#urn-uuid-d1122188-f53f-417f-a84f-bc44479baa63\">Jeramy EZRA BANKS (official) Male, DoB: 1971-05-14 ( IHI: Austalian Healthcare Identifier - Individual#8003608166980417)</a></p><p><b>occurrence</b>: Absent because : unknown</p></div>"^^rdf:XMLLiteral ]
+  ] ; # 
+  fhir:status [ fhir:v "completed"] ; # 
+  fhir:vaccineCode [
+     fhir:coding ( [
+       fhir:system [ fhir:v "https://www.humanservices.gov.au/organisations/health-professionals/enablers/air-vaccine-code-formats"^^xsd:anyURI ] ;
+       fhir:version [ fhir:v "20240207" ] ;
+       fhir:code [ fhir:v "BOOST" ] ;
+       fhir:display [ fhir:v "Boostrix" ]
+     ] ) ;
+     fhir:text [ fhir:v "Boostrix" ]
+  ] ; # 
+  fhir:patient [
+     fhir:reference [ fhir:v "urn:uuid:d1122188-f53f-417f-a84f-bc44479baa63" ] ;
+     fhir:type [ fhir:v "Patient"^^xsd:anyURI ]
+  ] ; # 
+  fhir:occurrence [
+     a fhir:dateTime ;
+     fhir:extension ( [
+       fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/data-absent-reason"^^xsd:anyURI ] ;
+       fhir:value [
+         a fhir:code ;
+         fhir:v "unknown"
+       ]
+     ] )
+  ] . # 
+
+<urn:uuid:0d0d8c79-7f2f-4586-8b2e-f1a1942fe3ed> a fhir:Immunization ;
+  fhir:meta [
+     fhir:versionId [ fhir:v "3" ] ;
+     fhir:lastUpdated [ fhir:v "2025-05-25T11:39:15.709+11:00"^^xsd:dateTime ] ;
+     fhir:profile ( [
+       fhir:v "http://hl7.org.au/fhir/ps/StructureDefinition/au-ps-immunization"^^xsd:anyURI ;
+       fhir:link <http://hl7.org.au/fhir/ps/StructureDefinition/au-ps-immunization>
+     ] )
+  ] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "extensions" ] ;
+     fhir:div [ fhir:v "<div xmlns=\"http://www.w3.org/1999/xhtml\"><a name=\"Immunization_null\"> </a><p class=\"res-header-id\"><b>Generated Narrative: Immunization </b></p><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\">version: 3; Last updated: 2025-05-25 11:39:15+1100</p><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-au-ps-immunization.html\">AU PS Immunization</a></p></div><p><b>status</b>: Completed</p><p><b>vaccineCode</b>: <span title=\"Codes:{https://www.humanservices.gov.au/organisations/health-professionals/enablers/air-vaccine-code-formats COVAST}\">AstraZeneca Vaxzevria</span></p><p><b>patient</b>: <a href=\"Bundle-aups-gpvisit-retrieval.html#urn-uuid-d1122188-f53f-417f-a84f-bc44479baa63\">Jeramy EZRA BANKS (official) Male, DoB: 1971-05-14 ( IHI: Austalian Healthcare Identifier - Individual#8003608166980417)</a></p><p><b>occurrence</b>: Absent because : unknown</p></div>"^^rdf:XMLLiteral ]
+  ] ; # 
+  fhir:status [ fhir:v "completed"] ; # 
+  fhir:vaccineCode [
+     fhir:coding ( [
+       fhir:system [ fhir:v "https://www.humanservices.gov.au/organisations/health-professionals/enablers/air-vaccine-code-formats"^^xsd:anyURI ] ;
+       fhir:version [ fhir:v "20240207" ] ;
+       fhir:code [ fhir:v "COVAST" ] ;
+       fhir:display [ fhir:v "COVID-19 Vaccine AstraZeneca" ]
+     ] ) ;
+     fhir:text [ fhir:v "AstraZeneca Vaxzevria" ]
+  ] ; # 
+  fhir:patient [
+     fhir:reference [ fhir:v "urn:uuid:d1122188-f53f-417f-a84f-bc44479baa63" ] ;
+     fhir:type [ fhir:v "Patient"^^xsd:anyURI ]
+  ] ; # 
+  fhir:occurrence [
+     a fhir:dateTime ;
+     fhir:extension ( [
+       fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/data-absent-reason"^^xsd:anyURI ] ;
+       fhir:value [
+         a fhir:code ;
+         fhir:v "unknown"
+       ]
+     ] )
+  ] . # 
+
+<urn:uuid:9d9b67a1-15b0-42db-9108-78176017fbed> a fhir:Procedure ;
+  fhir:meta [
+     fhir:versionId [ fhir:v "1" ] ;
+     fhir:lastUpdated [ fhir:v "2025-05-27T11:39:15.709+11:00"^^xsd:dateTime ] ;
+     fhir:profile ( [
+       fhir:v "http://hl7.org.au/fhir/ps/StructureDefinition/au-ps-procedure"^^xsd:anyURI ;
+       fhir:link <http://hl7.org.au/fhir/ps/StructureDefinition/au-ps-procedure>
+     ] )
+  ] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "generated" ] ;
+     fhir:div [ fhir:v "<div xmlns=\"http://www.w3.org/1999/xhtml\"><a name=\"Procedure_null\"> </a><p class=\"res-header-id\"><b>Generated Narrative: Procedure </b></p><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\">version: 1; Last updated: 2025-05-27 11:39:15+1100</p><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-au-ps-procedure.html\">AU PS Procedure</a></p></div><p><b>status</b>: Completed</p><p><b>code</b>: <span title=\"Codes:{http://snomed.info/sct 77343006}\">Angiogram</span></p><p><b>subject</b>: <a href=\"Bundle-aups-gpvisit-retrieval.html#urn-uuid-d1122188-f53f-417f-a84f-bc44479baa63\">Jeramy EZRA BANKS (official) Male, DoB: 1971-05-14 ( IHI: Austalian Healthcare Identifier - Individual#8003608166980417)</a></p><p><b>encounter</b>: <a href=\"Bundle-aups-gpvisit-retrieval.html#urn-uuid-f7aaf2d5-c105-4652-8b4c-e555903593a7\">Encounter: status = finished; class = inpatient encounter (ActCode#IMP); serviceType = Cardiac diagnostic service; period = 2025-05-22 08:15:00+1000 --&gt; 2025-05-23 11:19:00+1000</a></p><p><b>performed</b>: 2025-05-22</p><p><b>reasonCode</b>: <span title=\"Codes:\">Recent chest pain</span></p></div>"^^rdf:XMLLiteral ]
+  ] ; # 
+  fhir:status [ fhir:v "completed"] ; # 
+  fhir:code [
+     fhir:coding ( [
+       a sct:77343006 ;
+       fhir:system [ fhir:v "http://snomed.info/sct"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "77343006" ] ;
+       fhir:display [ fhir:v "Angiography" ]
+     ] ) ;
+     fhir:text [ fhir:v "Angiogram" ]
+  ] ; # 
+  fhir:subject [
+     fhir:reference [ fhir:v "urn:uuid:d1122188-f53f-417f-a84f-bc44479baa63" ] ;
+     fhir:type [ fhir:v "Patient"^^xsd:anyURI ]
+  ] ; # 
+  fhir:encounter [
+     fhir:reference [ fhir:v "urn:uuid:f7aaf2d5-c105-4652-8b4c-e555903593a7" ]
+  ] ; # 
+  fhir:performed [
+     a fhir:dateTime ;
+     fhir:v "2025-05-22"^^xsd:date
+  ] ; # 
+  fhir:reasonCode ( [
+     fhir:text [ fhir:v "Recent chest pain" ]
+  ] ) . # 
+
+<urn:uuid:4db923a9-f239-411e-911d-62b60b794313> a fhir:Procedure ;
+  fhir:meta [
+     fhir:versionId [ fhir:v "1" ] ;
+     fhir:lastUpdated [ fhir:v "2025-02-27T11:39:15.709+11:00"^^xsd:dateTime ] ;
+     fhir:profile ( [
+       fhir:v "http://hl7.org.au/fhir/ps/StructureDefinition/au-ps-procedure"^^xsd:anyURI ;
+       fhir:link <http://hl7.org.au/fhir/ps/StructureDefinition/au-ps-procedure>
+     ] )
+  ] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "generated" ] ;
+     fhir:div [ fhir:v "<div xmlns=\"http://www.w3.org/1999/xhtml\"><a name=\"Procedure_null\"> </a><p class=\"res-header-id\"><b>Generated Narrative: Procedure </b></p><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\">version: 1; Last updated: 2025-02-27 11:39:15+1100</p><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-au-ps-procedure.html\">AU PS Procedure</a></p></div><p><b>status</b>: Completed</p><p><b>code</b>: <span title=\"Codes:{http://snomed.info/sct 399208008}\">Chest x-ray</span></p><p><b>subject</b>: <a href=\"Bundle-aups-gpvisit-retrieval.html#urn-uuid-d1122188-f53f-417f-a84f-bc44479baa63\">Jeramy EZRA BANKS (official) Male, DoB: 1971-05-14 ( IHI: Austalian Healthcare Identifier - Individual#8003608166980417)</a></p><p><b>performed</b>: 2025-02-22</p></div>"^^rdf:XMLLiteral ]
+  ] ; # 
+  fhir:status [ fhir:v "completed"] ; # 
+  fhir:code [
+     fhir:coding ( [
+       a sct:399208008 ;
+       fhir:system [ fhir:v "http://snomed.info/sct"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "399208008" ] ;
+       fhir:display [ fhir:v "Plain X-ray of chest" ]
+     ] ) ;
+     fhir:text [ fhir:v "Chest x-ray" ]
+  ] ; # 
+  fhir:subject [
+     fhir:reference [ fhir:v "urn:uuid:d1122188-f53f-417f-a84f-bc44479baa63" ] ;
+     fhir:type [ fhir:v "Patient"^^xsd:anyURI ]
+  ] ; # 
+  fhir:performed [
+     a fhir:dateTime ;
+     fhir:v "2025-02-22"^^xsd:date
+  ] . # 
+
+<urn:uuid:2862efc6-c7a9-41aa-9d36-f0dcba427635> a fhir:Observation ;
+  fhir:meta [
+     fhir:versionId [ fhir:v "1" ] ;
+     fhir:lastUpdated [ fhir:v "2025-05-27T11:39:15.709+11:00"^^xsd:dateTime ] ;
+     fhir:profile ( [
+       fhir:v "http://hl7.org.au/fhir/ps/StructureDefinition/au-ps-diagnosticresult-path"^^xsd:anyURI ;
+       fhir:link <http://hl7.org.au/fhir/ps/StructureDefinition/au-ps-diagnosticresult-path>
+     ] )
+  ] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "generated" ] ;
+     fhir:div [ fhir:v "<div xmlns=\"http://www.w3.org/1999/xhtml\"><a name=\"Observation_null\"> </a><p class=\"res-header-id\"><b>Generated Narrative: Observation </b></p><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\">version: 1; Last updated: 2025-05-27 11:39:15+1100</p><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-au-ps-diagnosticresult-path.html\">AU PS Pathology Result Observation</a></p></div><p><b>status</b>: Final</p><p><b>category</b>: <span title=\"Codes:{http://terminology.hl7.org/CodeSystem/observation-category laboratory}\">Laboratory</span>, <span title=\"Codes:{http://terminology.hl7.org/CodeSystem/v2-0074 CH}\">Chemistry</span></p><p><b>code</b>: <span title=\"Codes:{http://loinc.org 14927-8}\">Triglyceride</span></p><p><b>subject</b>: <a href=\"Bundle-aups-gpvisit-retrieval.html#urn-uuid-d1122188-f53f-417f-a84f-bc44479baa63\">Jeramy EZRA BANKS (official) Male, DoB: 1971-05-14 ( IHI: Austalian Healthcare Identifier - Individual#8003608166980417)</a></p><p><b>effective</b>: 2025-03-17</p><p><b>performer</b>: ?rref?</p><p><b>value</b>: 1.7 mmol/L<span style=\"background: LightGoldenRodYellow\"> (Details: UCUM  codemmol/L = 'mmol/L')</span></p></div>"^^rdf:XMLLiteral ]
+  ] ; # 
+  fhir:status [ fhir:v "final"] ; # 
+  fhir:category ( [
+     fhir:coding ( [
+       fhir:system [ fhir:v "http://terminology.hl7.org/CodeSystem/observation-category"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "laboratory" ] ;
+       fhir:display [ fhir:v "Laboratory" ]
+     ] )
+  ] [
+     fhir:coding ( [
+       fhir:system [ fhir:v "http://terminology.hl7.org/CodeSystem/v2-0074"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "CH" ] ;
+       fhir:display [ fhir:v "Chemistry" ]
+     ] ) ;
+     fhir:text [ fhir:v "Chemistry" ]
+  ] ) ; # 
+  fhir:code [
+     fhir:coding ( [
+       a loinc:14927-8 ;
+       fhir:system [ fhir:v "http://loinc.org"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "14927-8" ] ;
+       fhir:display [ fhir:v "Triglyceride [Moles/volume] in Serum or Plasma" ]
+     ] ) ;
+     fhir:text [ fhir:v "Triglyceride" ]
+  ] ; # 
+  fhir:subject [
+     fhir:reference [ fhir:v "urn:uuid:d1122188-f53f-417f-a84f-bc44479baa63" ] ;
+     fhir:type [ fhir:v "Patient"^^xsd:anyURI ]
+  ] ; # 
+  fhir:effective [
+     a fhir:dateTime ;
+     fhir:v "2025-03-17"^^xsd:date
+  ] ; # 
+  fhir:performer ( [
+     fhir:extension ( [
+       fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/data-absent-reason"^^xsd:anyURI ] ;
+       fhir:value [
+         a fhir:code ;
+         fhir:v "unknown"
+       ]
+     ] )
+  ] ) ; # 
+  fhir:value [
+     a fhir:Quantity ;
+     fhir:value [ fhir:v 1.7 ] ;
+     fhir:unit [ fhir:v "mmol/L" ] ;
+     fhir:system [ fhir:v "http://unitsofmeasure.org"^^xsd:anyURI ] ;
+     fhir:code [ fhir:v "mmol/L" ]
+  ] . # 
+
+<urn:uuid:6400636f-9f75-40f9-97a0-4255f02aecc6> a fhir:Observation ;
+  fhir:meta [
+     fhir:versionId [ fhir:v "1" ] ;
+     fhir:lastUpdated [ fhir:v "2025-05-27T11:39:15.709+11:00"^^xsd:dateTime ] ;
+     fhir:profile ( [
+       fhir:v "http://hl7.org.au/fhir/ps/StructureDefinition/au-ps-diagnosticresult-path"^^xsd:anyURI ;
+       fhir:link <http://hl7.org.au/fhir/ps/StructureDefinition/au-ps-diagnosticresult-path>
+     ] )
+  ] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "generated" ] ;
+     fhir:div [ fhir:v "<div xmlns=\"http://www.w3.org/1999/xhtml\"><a name=\"Observation_null\"> </a><p class=\"res-header-id\"><b>Generated Narrative: Observation </b></p><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\">version: 1; Last updated: 2025-05-27 11:39:15+1100</p><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-au-ps-diagnosticresult-path.html\">AU PS Pathology Result Observation</a></p></div><p><b>status</b>: Final</p><p><b>category</b>: <span title=\"Codes:{http://terminology.hl7.org/CodeSystem/observation-category laboratory}\">Laboratory</span>, <span title=\"Codes:{http://terminology.hl7.org/CodeSystem/v2-0074 CH}\">Chemistry</span></p><p><b>code</b>: <span title=\"Codes:{http://loinc.org 14646-4}\">HDL</span></p><p><b>subject</b>: <a href=\"Bundle-aups-gpvisit-retrieval.html#urn-uuid-d1122188-f53f-417f-a84f-bc44479baa63\">Jeramy EZRA BANKS (official) Male, DoB: 1971-05-14 ( IHI: Austalian Healthcare Identifier - Individual#8003608166980417)</a></p><p><b>effective</b>: 2025-03-17</p><p><b>performer</b>: ?rref?</p><p><b>value</b>: 1.55 mmol/L<span style=\"background: LightGoldenRodYellow\"> (Details: UCUM  codemmol/L = 'mmol/L')</span></p></div>"^^rdf:XMLLiteral ]
+  ] ; # 
+  fhir:status [ fhir:v "final"] ; # 
+  fhir:category ( [
+     fhir:coding ( [
+       fhir:system [ fhir:v "http://terminology.hl7.org/CodeSystem/observation-category"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "laboratory" ] ;
+       fhir:display [ fhir:v "Laboratory" ]
+     ] )
+  ] [
+     fhir:coding ( [
+       fhir:system [ fhir:v "http://terminology.hl7.org/CodeSystem/v2-0074"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "CH" ] ;
+       fhir:display [ fhir:v "Chemistry" ]
+     ] ) ;
+     fhir:text [ fhir:v "Chemistry" ]
+  ] ) ; # 
+  fhir:code [
+     fhir:coding ( [
+       a loinc:14646-4 ;
+       fhir:system [ fhir:v "http://loinc.org"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "14646-4" ] ;
+       fhir:display [ fhir:v "Cholesterol in HDL [Moles/volume] in Serum or Plasma" ]
+     ] ) ;
+     fhir:text [ fhir:v "HDL" ]
+  ] ; # 
+  fhir:subject [
+     fhir:reference [ fhir:v "urn:uuid:d1122188-f53f-417f-a84f-bc44479baa63" ] ;
+     fhir:type [ fhir:v "Patient"^^xsd:anyURI ]
+  ] ; # 
+  fhir:effective [
+     a fhir:dateTime ;
+     fhir:v "2025-03-17"^^xsd:date
+  ] ; # 
+  fhir:performer ( [
+     fhir:extension ( [
+       fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/data-absent-reason"^^xsd:anyURI ] ;
+       fhir:value [
+         a fhir:code ;
+         fhir:v "unknown"
+       ]
+     ] )
+  ] ) ; # 
+  fhir:value [
+     a fhir:Quantity ;
+     fhir:value [ fhir:v 1.55 ] ;
+     fhir:unit [ fhir:v "mmol/L" ] ;
+     fhir:system [ fhir:v "http://unitsofmeasure.org"^^xsd:anyURI ] ;
+     fhir:code [ fhir:v "mmol/L" ]
+  ] . # 
+
+<urn:uuid:38045915-7f10-42b0-943e-f1b90356d3b9> a fhir:Observation ;
+  fhir:meta [
+     fhir:versionId [ fhir:v "1" ] ;
+     fhir:lastUpdated [ fhir:v "2025-05-27T11:39:15.709+11:00"^^xsd:dateTime ] ;
+     fhir:profile ( [
+       fhir:v "http://hl7.org.au/fhir/ps/StructureDefinition/au-ps-diagnosticresult-path"^^xsd:anyURI ;
+       fhir:link <http://hl7.org.au/fhir/ps/StructureDefinition/au-ps-diagnosticresult-path>
+     ] )
+  ] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "generated" ] ;
+     fhir:div [ fhir:v "<div xmlns=\"http://www.w3.org/1999/xhtml\"><a name=\"Observation_null\"> </a><p class=\"res-header-id\"><b>Generated Narrative: Observation </b></p><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\">version: 1; Last updated: 2025-05-27 11:39:15+1100</p><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-au-ps-diagnosticresult-path.html\">AU PS Pathology Result Observation</a></p></div><p><b>status</b>: Final</p><p><b>category</b>: <span title=\"Codes:{http://terminology.hl7.org/CodeSystem/observation-category laboratory}\">Laboratory</span>, <span title=\"Codes:{http://terminology.hl7.org/CodeSystem/v2-0074 CH}\">Chemistry</span></p><p><b>code</b>: <span title=\"Codes:{http://loinc.org 22748-8}\">LDL</span></p><p><b>subject</b>: <a href=\"Bundle-aups-gpvisit-retrieval.html#urn-uuid-d1122188-f53f-417f-a84f-bc44479baa63\">Jeramy EZRA BANKS (official) Male, DoB: 1971-05-14 ( IHI: Austalian Healthcare Identifier - Individual#8003608166980417)</a></p><p><b>effective</b>: 2025-03-17</p><p><b>performer</b>: ?rref?</p><p><b>value</b>: 3.10 mmol/L<span style=\"background: LightGoldenRodYellow\"> (Details: UCUM  codemmol/L = 'mmol/L')</span></p></div>"^^rdf:XMLLiteral ]
+  ] ; # 
+  fhir:status [ fhir:v "final"] ; # 
+  fhir:category ( [
+     fhir:coding ( [
+       fhir:system [ fhir:v "http://terminology.hl7.org/CodeSystem/observation-category"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "laboratory" ] ;
+       fhir:display [ fhir:v "Laboratory" ]
+     ] )
+  ] [
+     fhir:coding ( [
+       fhir:system [ fhir:v "http://terminology.hl7.org/CodeSystem/v2-0074"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "CH" ] ;
+       fhir:display [ fhir:v "Chemistry" ]
+     ] ) ;
+     fhir:text [ fhir:v "Chemistry" ]
+  ] ) ; # 
+  fhir:code [
+     fhir:coding ( [
+       a loinc:22748-8 ;
+       fhir:system [ fhir:v "http://loinc.org"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "22748-8" ] ;
+       fhir:display [ fhir:v "Cholesterol in LDL [Moles/volume] in Serum or Plasma" ]
+     ] ) ;
+     fhir:text [ fhir:v "LDL" ]
+  ] ; # 
+  fhir:subject [
+     fhir:reference [ fhir:v "urn:uuid:d1122188-f53f-417f-a84f-bc44479baa63" ] ;
+     fhir:type [ fhir:v "Patient"^^xsd:anyURI ]
+  ] ; # 
+  fhir:effective [
+     a fhir:dateTime ;
+     fhir:v "2025-03-17"^^xsd:date
+  ] ; # 
+  fhir:performer ( [
+     fhir:extension ( [
+       fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/data-absent-reason"^^xsd:anyURI ] ;
+       fhir:value [
+         a fhir:code ;
+         fhir:v "unknown"
+       ]
+     ] )
+  ] ) ; # 
+  fhir:value [
+     a fhir:Quantity ;
+     fhir:value [ fhir:v 3.10 ] ;
+     fhir:unit [ fhir:v "mmol/L" ] ;
+     fhir:system [ fhir:v "http://unitsofmeasure.org"^^xsd:anyURI ] ;
+     fhir:code [ fhir:v "mmol/L" ]
+  ] . # 
+
+<urn:uuid:c56a3eb6-d7e5-475f-831f-36530961013c> a fhir:Observation ;
+  fhir:meta [
+     fhir:versionId [ fhir:v "1" ] ;
+     fhir:lastUpdated [ fhir:v "2025-05-27T11:39:15.709+11:00"^^xsd:dateTime ] ;
+     fhir:profile ( [
+       fhir:v "http://hl7.org.au/fhir/ps/StructureDefinition/au-ps-diagnosticresult-path"^^xsd:anyURI ;
+       fhir:link <http://hl7.org.au/fhir/ps/StructureDefinition/au-ps-diagnosticresult-path>
+     ] )
+  ] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "generated" ] ;
+     fhir:div [ fhir:v "<div xmlns=\"http://www.w3.org/1999/xhtml\"><a name=\"Observation_null\"> </a><p class=\"res-header-id\"><b>Generated Narrative: Observation </b></p><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\">version: 1; Last updated: 2025-05-27 11:39:15+1100</p><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-au-ps-diagnosticresult-path.html\">AU PS Pathology Result Observation</a></p></div><p><b>status</b>: Final</p><p><b>category</b>: <span title=\"Codes:{http://terminology.hl7.org/CodeSystem/observation-category laboratory}\">Laboratory</span>, <span title=\"Codes:{http://terminology.hl7.org/CodeSystem/v2-0074 CH}\">Chemistry</span></p><p><b>code</b>: <span title=\"Codes:{http://loinc.org 14647-2}\">Total Cholesterol</span></p><p><b>subject</b>: <a href=\"Bundle-aups-gpvisit-retrieval.html#urn-uuid-d1122188-f53f-417f-a84f-bc44479baa63\">Jeramy EZRA BANKS (official) Male, DoB: 1971-05-14 ( IHI: Austalian Healthcare Identifier - Individual#8003608166980417)</a></p><p><b>effective</b>: 2025-03-17</p><p><b>performer</b>: ?rref?</p><p><b>value</b>: 5.4 mmol/L<span style=\"background: LightGoldenRodYellow\"> (Details: UCUM  codemmol/L = 'mmol/L')</span></p></div>"^^rdf:XMLLiteral ]
+  ] ; # 
+  fhir:status [ fhir:v "final"] ; # 
+  fhir:category ( [
+     fhir:coding ( [
+       fhir:system [ fhir:v "http://terminology.hl7.org/CodeSystem/observation-category"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "laboratory" ] ;
+       fhir:display [ fhir:v "Laboratory" ]
+     ] )
+  ] [
+     fhir:coding ( [
+       fhir:system [ fhir:v "http://terminology.hl7.org/CodeSystem/v2-0074"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "CH" ] ;
+       fhir:display [ fhir:v "Chemistry" ]
+     ] ) ;
+     fhir:text [ fhir:v "Chemistry" ]
+  ] ) ; # 
+  fhir:code [
+     fhir:coding ( [
+       a loinc:14647-2 ;
+       fhir:system [ fhir:v "http://loinc.org"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "14647-2" ] ;
+       fhir:display [ fhir:v "Cholesterol [Moles/volume] in Serum or Plasma" ]
+     ] ) ;
+     fhir:text [ fhir:v "Total Cholesterol" ]
+  ] ; # 
+  fhir:subject [
+     fhir:reference [ fhir:v "urn:uuid:d1122188-f53f-417f-a84f-bc44479baa63" ] ;
+     fhir:type [ fhir:v "Patient"^^xsd:anyURI ]
+  ] ; # 
+  fhir:effective [
+     a fhir:dateTime ;
+     fhir:v "2025-03-17"^^xsd:date
+  ] ; # 
+  fhir:performer ( [
+     fhir:extension ( [
+       fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/data-absent-reason"^^xsd:anyURI ] ;
+       fhir:value [
+         a fhir:code ;
+         fhir:v "unknown"
+       ]
+     ] )
+  ] ) ; # 
+  fhir:value [
+     a fhir:Quantity ;
+     fhir:value [ fhir:v 5.4 ] ;
+     fhir:unit [ fhir:v "mmol/L" ] ;
+     fhir:system [ fhir:v "http://unitsofmeasure.org"^^xsd:anyURI ] ;
+     fhir:code [ fhir:v "mmol/L" ]
+  ] . # 
+
+<urn:uuid:25f95f9c-391c-4e35-ad70-7d4cff3178f1> a fhir:Observation ;
+  fhir:meta [
+     fhir:versionId [ fhir:v "1" ] ;
+     fhir:lastUpdated [ fhir:v "2025-01-27T11:39:15.709+11:00"^^xsd:dateTime ] ;
+     fhir:profile ( [
+       fhir:v "http://hl7.org.au/fhir/ps/StructureDefinition/au-ps-diagnosticresult-path"^^xsd:anyURI ;
+       fhir:link <http://hl7.org.au/fhir/ps/StructureDefinition/au-ps-diagnosticresult-path>
+     ] )
+  ] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "generated" ] ;
+     fhir:div [ fhir:v "<div xmlns=\"http://www.w3.org/1999/xhtml\"><a name=\"Observation_null\"> </a><p class=\"res-header-id\"><b>Generated Narrative: Observation </b></p><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\">version: 1; Last updated: 2025-01-27 11:39:15+1100</p><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-au-ps-diagnosticresult-path.html\">AU PS Pathology Result Observation</a></p></div><p><b>status</b>: Final</p><p><b>category</b>: <span title=\"Codes:{http://terminology.hl7.org/CodeSystem/observation-category laboratory}\">Laboratory</span>, <span title=\"Codes:{http://terminology.hl7.org/CodeSystem/v2-0074 CH}\">Chemistry</span></p><p><b>code</b>: <span title=\"Codes:{http://loinc.org 14647-2}\">Total Cholesterol</span></p><p><b>subject</b>: <a href=\"Bundle-aups-gpvisit-retrieval.html#urn-uuid-d1122188-f53f-417f-a84f-bc44479baa63\">Jeramy EZRA BANKS (official) Male, DoB: 1971-05-14 ( IHI: Austalian Healthcare Identifier - Individual#8003608166980417)</a></p><p><b>effective</b>: 2024-12-17</p><p><b>performer</b>: ?rref?</p><p><b>value</b>: 5.7 mmol/L<span style=\"background: LightGoldenRodYellow\"> (Details: UCUM  codemmol/L = 'mmol/L')</span></p></div>"^^rdf:XMLLiteral ]
+  ] ; # 
+  fhir:status [ fhir:v "final"] ; # 
+  fhir:category ( [
+     fhir:coding ( [
+       fhir:system [ fhir:v "http://terminology.hl7.org/CodeSystem/observation-category"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "laboratory" ] ;
+       fhir:display [ fhir:v "Laboratory" ]
+     ] )
+  ] [
+     fhir:coding ( [
+       fhir:system [ fhir:v "http://terminology.hl7.org/CodeSystem/v2-0074"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "CH" ] ;
+       fhir:display [ fhir:v "Chemistry" ]
+     ] ) ;
+     fhir:text [ fhir:v "Chemistry" ]
+  ] ) ; # 
+  fhir:code [
+     fhir:coding ( [
+       a loinc:14647-2 ;
+       fhir:system [ fhir:v "http://loinc.org"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "14647-2" ] ;
+       fhir:display [ fhir:v "Cholesterol [Moles/volume] in Serum or Plasma" ]
+     ] ) ;
+     fhir:text [ fhir:v "Total Cholesterol" ]
+  ] ; # 
+  fhir:subject [
+     fhir:reference [ fhir:v "urn:uuid:d1122188-f53f-417f-a84f-bc44479baa63" ] ;
+     fhir:type [ fhir:v "Patient"^^xsd:anyURI ]
+  ] ; # 
+  fhir:effective [
+     a fhir:dateTime ;
+     fhir:v "2024-12-17"^^xsd:date
+  ] ; # 
+  fhir:performer ( [
+     fhir:extension ( [
+       fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/data-absent-reason"^^xsd:anyURI ] ;
+       fhir:value [
+         a fhir:code ;
+         fhir:v "unknown"
+       ]
+     ] )
+  ] ) ; # 
+  fhir:value [
+     a fhir:Quantity ;
+     fhir:value [ fhir:v 5.7 ] ;
+     fhir:unit [ fhir:v "mmol/L" ] ;
+     fhir:system [ fhir:v "http://unitsofmeasure.org"^^xsd:anyURI ] ;
+     fhir:code [ fhir:v "mmol/L" ]
+  ] . # 
+
+<urn:uuid:437947c1-6b9b-4213-94b9-19a801bf3113> a fhir:Observation ;
+  fhir:meta [
+     fhir:versionId [ fhir:v "1" ] ;
+     fhir:lastUpdated [ fhir:v "2025-01-27T11:39:15.709+11:00"^^xsd:dateTime ] ;
+     fhir:profile ( [
+       fhir:v "http://hl7.org.au/fhir/ps/StructureDefinition/au-ps-diagnosticresult-path"^^xsd:anyURI ;
+       fhir:link <http://hl7.org.au/fhir/ps/StructureDefinition/au-ps-diagnosticresult-path>
+     ] )
+  ] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "generated" ] ;
+     fhir:div [ fhir:v "<div xmlns=\"http://www.w3.org/1999/xhtml\"><a name=\"Observation_null\"> </a><p class=\"res-header-id\"><b>Generated Narrative: Observation </b></p><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\">version: 1; Last updated: 2025-01-27 11:39:15+1100</p><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-au-ps-diagnosticresult-path.html\">AU PS Pathology Result Observation</a></p></div><p><b>status</b>: Final</p><p><b>category</b>: <span title=\"Codes:{http://terminology.hl7.org/CodeSystem/observation-category laboratory}\">Laboratory</span>, <span title=\"Codes:{http://terminology.hl7.org/CodeSystem/v2-0074 CH}\">Chemistry</span></p><p><b>code</b>: <span title=\"Codes:{http://loinc.org 14646-4}\">HDL</span></p><p><b>subject</b>: <a href=\"Bundle-aups-gpvisit-retrieval.html#urn-uuid-d1122188-f53f-417f-a84f-bc44479baa63\">Jeramy EZRA BANKS (official) Male, DoB: 1971-05-14 ( IHI: Austalian Healthcare Identifier - Individual#8003608166980417)</a></p><p><b>effective</b>: 2024-12-17</p><p><b>performer</b>: ?rref?</p><p><b>value</b>: 1.42 mmol/L<span style=\"background: LightGoldenRodYellow\"> (Details: UCUM  codemmol/L = 'mmol/L')</span></p></div>"^^rdf:XMLLiteral ]
+  ] ; # 
+  fhir:status [ fhir:v "final"] ; # 
+  fhir:category ( [
+     fhir:coding ( [
+       fhir:system [ fhir:v "http://terminology.hl7.org/CodeSystem/observation-category"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "laboratory" ] ;
+       fhir:display [ fhir:v "Laboratory" ]
+     ] )
+  ] [
+     fhir:coding ( [
+       fhir:system [ fhir:v "http://terminology.hl7.org/CodeSystem/v2-0074"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "CH" ] ;
+       fhir:display [ fhir:v "Chemistry" ]
+     ] ) ;
+     fhir:text [ fhir:v "Chemistry" ]
+  ] ) ; # 
+  fhir:code [
+     fhir:coding ( [
+       a loinc:14646-4 ;
+       fhir:system [ fhir:v "http://loinc.org"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "14646-4" ] ;
+       fhir:display [ fhir:v "Cholesterol in HDL [Moles/volume] in Serum or Plasma" ]
+     ] ) ;
+     fhir:text [ fhir:v "HDL" ]
+  ] ; # 
+  fhir:subject [
+     fhir:reference [ fhir:v "urn:uuid:d1122188-f53f-417f-a84f-bc44479baa63" ] ;
+     fhir:type [ fhir:v "Patient"^^xsd:anyURI ]
+  ] ; # 
+  fhir:effective [
+     a fhir:dateTime ;
+     fhir:v "2024-12-17"^^xsd:date
+  ] ; # 
+  fhir:performer ( [
+     fhir:extension ( [
+       fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/data-absent-reason"^^xsd:anyURI ] ;
+       fhir:value [
+         a fhir:code ;
+         fhir:v "unknown"
+       ]
+     ] )
+  ] ) ; # 
+  fhir:value [
+     a fhir:Quantity ;
+     fhir:value [ fhir:v 1.42 ] ;
+     fhir:unit [ fhir:v "mmol/L" ] ;
+     fhir:system [ fhir:v "http://unitsofmeasure.org"^^xsd:anyURI ] ;
+     fhir:code [ fhir:v "mmol/L" ]
+  ] . # 
+
+<urn:uuid:28204a08-571b-4c5e-b234-00b65e2e63cf> a fhir:Observation ;
+  fhir:meta [
+     fhir:versionId [ fhir:v "1" ] ;
+     fhir:lastUpdated [ fhir:v "2025-01-27T11:39:15.709+11:00"^^xsd:dateTime ] ;
+     fhir:profile ( [
+       fhir:v "http://hl7.org.au/fhir/ps/StructureDefinition/au-ps-diagnosticresult-path"^^xsd:anyURI ;
+       fhir:link <http://hl7.org.au/fhir/ps/StructureDefinition/au-ps-diagnosticresult-path>
+     ] )
+  ] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "generated" ] ;
+     fhir:div [ fhir:v "<div xmlns=\"http://www.w3.org/1999/xhtml\"><a name=\"Observation_null\"> </a><p class=\"res-header-id\"><b>Generated Narrative: Observation </b></p><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\">version: 1; Last updated: 2025-01-27 11:39:15+1100</p><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-au-ps-diagnosticresult-path.html\">AU PS Pathology Result Observation</a></p></div><p><b>status</b>: Final</p><p><b>category</b>: <span title=\"Codes:{http://terminology.hl7.org/CodeSystem/observation-category laboratory}\">Laboratory</span>, <span title=\"Codes:{http://terminology.hl7.org/CodeSystem/v2-0074 CH}\">Chemistry</span></p><p><b>code</b>: <span title=\"Codes:{http://loinc.org 22748-8}\">LDL</span></p><p><b>subject</b>: <a href=\"Bundle-aups-gpvisit-retrieval.html#urn-uuid-d1122188-f53f-417f-a84f-bc44479baa63\">Jeramy EZRA BANKS (official) Male, DoB: 1971-05-14 ( IHI: Austalian Healthcare Identifier - Individual#8003608166980417)</a></p><p><b>effective</b>: 2024-12-17</p><p><b>performer</b>: ?rref?</p><p><b>value</b>: 3.36 mmol/L<span style=\"background: LightGoldenRodYellow\"> (Details: UCUM  codemmol/L = 'mmol/L')</span></p></div>"^^rdf:XMLLiteral ]
+  ] ; # 
+  fhir:status [ fhir:v "final"] ; # 
+  fhir:category ( [
+     fhir:coding ( [
+       fhir:system [ fhir:v "http://terminology.hl7.org/CodeSystem/observation-category"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "laboratory" ] ;
+       fhir:display [ fhir:v "Laboratory" ]
+     ] )
+  ] [
+     fhir:coding ( [
+       fhir:system [ fhir:v "http://terminology.hl7.org/CodeSystem/v2-0074"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "CH" ] ;
+       fhir:display [ fhir:v "Chemistry" ]
+     ] ) ;
+     fhir:text [ fhir:v "Chemistry" ]
+  ] ) ; # 
+  fhir:code [
+     fhir:coding ( [
+       a loinc:22748-8 ;
+       fhir:system [ fhir:v "http://loinc.org"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "22748-8" ] ;
+       fhir:display [ fhir:v "Cholesterol in LDL [Moles/volume] in Serum or Plasma" ]
+     ] ) ;
+     fhir:text [ fhir:v "LDL" ]
+  ] ; # 
+  fhir:subject [
+     fhir:reference [ fhir:v "urn:uuid:d1122188-f53f-417f-a84f-bc44479baa63" ] ;
+     fhir:type [ fhir:v "Patient"^^xsd:anyURI ]
+  ] ; # 
+  fhir:effective [
+     a fhir:dateTime ;
+     fhir:v "2024-12-17"^^xsd:date
+  ] ; # 
+  fhir:performer ( [
+     fhir:extension ( [
+       fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/data-absent-reason"^^xsd:anyURI ] ;
+       fhir:value [
+         a fhir:code ;
+         fhir:v "unknown"
+       ]
+     ] )
+  ] ) ; # 
+  fhir:value [
+     a fhir:Quantity ;
+     fhir:value [ fhir:v 3.36 ] ;
+     fhir:unit [ fhir:v "mmol/L" ] ;
+     fhir:system [ fhir:v "http://unitsofmeasure.org"^^xsd:anyURI ] ;
+     fhir:code [ fhir:v "mmol/L" ]
+  ] . # 
+
+<urn:uuid:e50ef658-5b84-44f4-a40c-f1777830e1dd> a fhir:Observation ;
+  fhir:meta [
+     fhir:versionId [ fhir:v "1" ] ;
+     fhir:lastUpdated [ fhir:v "2025-01-27T11:39:15.709+11:00"^^xsd:dateTime ] ;
+     fhir:profile ( [
+       fhir:v "http://hl7.org.au/fhir/ps/StructureDefinition/au-ps-diagnosticresult-path"^^xsd:anyURI ;
+       fhir:link <http://hl7.org.au/fhir/ps/StructureDefinition/au-ps-diagnosticresult-path>
+     ] )
+  ] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "generated" ] ;
+     fhir:div [ fhir:v "<div xmlns=\"http://www.w3.org/1999/xhtml\"><a name=\"Observation_null\"> </a><p class=\"res-header-id\"><b>Generated Narrative: Observation </b></p><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\">version: 1; Last updated: 2025-01-27 11:39:15+1100</p><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-au-ps-diagnosticresult-path.html\">AU PS Pathology Result Observation</a></p></div><p><b>status</b>: Final</p><p><b>category</b>: <span title=\"Codes:{http://terminology.hl7.org/CodeSystem/observation-category laboratory}\">Laboratory</span>, <span title=\"Codes:{http://terminology.hl7.org/CodeSystem/v2-0074 CH}\">Chemistry</span></p><p><b>code</b>: <span title=\"Codes:{http://loinc.org 14927-8}\">Triglyceride</span></p><p><b>subject</b>: <a href=\"Bundle-aups-gpvisit-retrieval.html#urn-uuid-d1122188-f53f-417f-a84f-bc44479baa63\">Jeramy EZRA BANKS (official) Male, DoB: 1971-05-14 ( IHI: Austalian Healthcare Identifier - Individual#8003608166980417)</a></p><p><b>effective</b>: 2024-12-17</p><p><b>performer</b>: ?rref?</p><p><b>value</b>: 1.8 mmol/L<span style=\"background: LightGoldenRodYellow\"> (Details: UCUM  codemmol/L = 'mmol/L')</span></p></div>"^^rdf:XMLLiteral ]
+  ] ; # 
+  fhir:status [ fhir:v "final"] ; # 
+  fhir:category ( [
+     fhir:coding ( [
+       fhir:system [ fhir:v "http://terminology.hl7.org/CodeSystem/observation-category"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "laboratory" ] ;
+       fhir:display [ fhir:v "Laboratory" ]
+     ] )
+  ] [
+     fhir:coding ( [
+       fhir:system [ fhir:v "http://terminology.hl7.org/CodeSystem/v2-0074"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "CH" ] ;
+       fhir:display [ fhir:v "Chemistry" ]
+     ] ) ;
+     fhir:text [ fhir:v "Chemistry" ]
+  ] ) ; # 
+  fhir:code [
+     fhir:coding ( [
+       a loinc:14927-8 ;
+       fhir:system [ fhir:v "http://loinc.org"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "14927-8" ] ;
+       fhir:display [ fhir:v "Triglyceride [Moles/volume] in Serum or Plasma" ]
+     ] ) ;
+     fhir:text [ fhir:v "Triglyceride" ]
+  ] ; # 
+  fhir:subject [
+     fhir:reference [ fhir:v "urn:uuid:d1122188-f53f-417f-a84f-bc44479baa63" ] ;
+     fhir:type [ fhir:v "Patient"^^xsd:anyURI ]
+  ] ; # 
+  fhir:effective [
+     a fhir:dateTime ;
+     fhir:v "2024-12-17"^^xsd:date
+  ] ; # 
+  fhir:performer ( [
+     fhir:extension ( [
+       fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/data-absent-reason"^^xsd:anyURI ] ;
+       fhir:value [
+         a fhir:code ;
+         fhir:v "unknown"
+       ]
+     ] )
+  ] ) ; # 
+  fhir:value [
+     a fhir:Quantity ;
+     fhir:value [ fhir:v 1.8 ] ;
+     fhir:unit [ fhir:v "mmol/L" ] ;
+     fhir:system [ fhir:v "http://unitsofmeasure.org"^^xsd:anyURI ] ;
+     fhir:code [ fhir:v "mmol/L" ]
+  ] . # 
+
+<urn:uuid:bf2ee7c5-39b8-4b35-8b49-7a5815bc45a1> a fhir:Observation ;
+  fhir:meta [
+     fhir:versionId [ fhir:v "1" ] ;
+     fhir:lastUpdated [ fhir:v "2024-10-27T11:39:15.709+11:00"^^xsd:dateTime ] ;
+     fhir:profile ( [
+       fhir:v "http://hl7.org.au/fhir/ps/StructureDefinition/au-ps-diagnosticresult-path"^^xsd:anyURI ;
+       fhir:link <http://hl7.org.au/fhir/ps/StructureDefinition/au-ps-diagnosticresult-path>
+     ] )
+  ] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "generated" ] ;
+     fhir:div [ fhir:v "<div xmlns=\"http://www.w3.org/1999/xhtml\"><a name=\"Observation_null\"> </a><p class=\"res-header-id\"><b>Generated Narrative: Observation </b></p><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\">version: 1; Last updated: 2024-10-27 11:39:15+1100</p><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-au-ps-diagnosticresult-path.html\">AU PS Pathology Result Observation</a></p></div><p><b>status</b>: Final</p><p><b>category</b>: <span title=\"Codes:{http://terminology.hl7.org/CodeSystem/observation-category laboratory}\">Laboratory</span>, <span title=\"Codes:{http://terminology.hl7.org/CodeSystem/v2-0074 CH}\">Chemistry</span></p><p><b>code</b>: <span title=\"Codes:{http://loinc.org 14647-2}\">Total Cholesterol</span></p><p><b>subject</b>: <a href=\"Bundle-aups-gpvisit-retrieval.html#urn-uuid-d1122188-f53f-417f-a84f-bc44479baa63\">Jeramy EZRA BANKS (official) Male, DoB: 1971-05-14 ( IHI: Austalian Healthcare Identifier - Individual#8003608166980417)</a></p><p><b>effective</b>: 2024-09-17</p><p><b>performer</b>: ?rref?</p><p><b>value</b>: 6.0 mmol/L<span style=\"background: LightGoldenRodYellow\"> (Details: UCUM  codemmol/L = 'mmol/L')</span></p></div>"^^rdf:XMLLiteral ]
+  ] ; # 
+  fhir:status [ fhir:v "final"] ; # 
+  fhir:category ( [
+     fhir:coding ( [
+       fhir:system [ fhir:v "http://terminology.hl7.org/CodeSystem/observation-category"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "laboratory" ] ;
+       fhir:display [ fhir:v "Laboratory" ]
+     ] )
+  ] [
+     fhir:coding ( [
+       fhir:system [ fhir:v "http://terminology.hl7.org/CodeSystem/v2-0074"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "CH" ] ;
+       fhir:display [ fhir:v "Chemistry" ]
+     ] ) ;
+     fhir:text [ fhir:v "Chemistry" ]
+  ] ) ; # 
+  fhir:code [
+     fhir:coding ( [
+       a loinc:14647-2 ;
+       fhir:system [ fhir:v "http://loinc.org"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "14647-2" ] ;
+       fhir:display [ fhir:v "Cholesterol [Moles/volume] in Serum or Plasma" ]
+     ] ) ;
+     fhir:text [ fhir:v "Total Cholesterol" ]
+  ] ; # 
+  fhir:subject [
+     fhir:reference [ fhir:v "urn:uuid:d1122188-f53f-417f-a84f-bc44479baa63" ] ;
+     fhir:type [ fhir:v "Patient"^^xsd:anyURI ]
+  ] ; # 
+  fhir:effective [
+     a fhir:dateTime ;
+     fhir:v "2024-09-17"^^xsd:date
+  ] ; # 
+  fhir:performer ( [
+     fhir:extension ( [
+       fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/data-absent-reason"^^xsd:anyURI ] ;
+       fhir:value [
+         a fhir:code ;
+         fhir:v "unknown"
+       ]
+     ] )
+  ] ) ; # 
+  fhir:value [
+     a fhir:Quantity ;
+     fhir:value [ fhir:v 6.0 ] ;
+     fhir:unit [ fhir:v "mmol/L" ] ;
+     fhir:system [ fhir:v "http://unitsofmeasure.org"^^xsd:anyURI ] ;
+     fhir:code [ fhir:v "mmol/L" ]
+  ] . # 
+
+<urn:uuid:1e9a7f3b-e353-4a5e-baaa-68a344fc03ba> a fhir:Observation ;
+  fhir:meta [
+     fhir:versionId [ fhir:v "1" ] ;
+     fhir:lastUpdated [ fhir:v "2024-10-27T11:39:15.709+11:00"^^xsd:dateTime ] ;
+     fhir:profile ( [
+       fhir:v "http://hl7.org.au/fhir/ps/StructureDefinition/au-ps-diagnosticresult-path"^^xsd:anyURI ;
+       fhir:link <http://hl7.org.au/fhir/ps/StructureDefinition/au-ps-diagnosticresult-path>
+     ] )
+  ] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "generated" ] ;
+     fhir:div [ fhir:v "<div xmlns=\"http://www.w3.org/1999/xhtml\"><a name=\"Observation_null\"> </a><p class=\"res-header-id\"><b>Generated Narrative: Observation </b></p><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\">version: 1; Last updated: 2024-10-27 11:39:15+1100</p><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-au-ps-diagnosticresult-path.html\">AU PS Pathology Result Observation</a></p></div><p><b>status</b>: Final</p><p><b>category</b>: <span title=\"Codes:{http://terminology.hl7.org/CodeSystem/observation-category laboratory}\">Laboratory</span>, <span title=\"Codes:{http://terminology.hl7.org/CodeSystem/v2-0074 CH}\">Chemistry</span></p><p><b>code</b>: <span title=\"Codes:{http://loinc.org 14646-4}\">HDL</span></p><p><b>subject</b>: <a href=\"Bundle-aups-gpvisit-retrieval.html#urn-uuid-d1122188-f53f-417f-a84f-bc44479baa63\">Jeramy EZRA BANKS (official) Male, DoB: 1971-05-14 ( IHI: Austalian Healthcare Identifier - Individual#8003608166980417)</a></p><p><b>effective</b>: 2024-09-17</p><p><b>performer</b>: ?rref?</p><p><b>value</b>: 1.29 mmol/L<span style=\"background: LightGoldenRodYellow\"> (Details: UCUM  codemmol/L = 'mmol/L')</span></p></div>"^^rdf:XMLLiteral ]
+  ] ; # 
+  fhir:status [ fhir:v "final"] ; # 
+  fhir:category ( [
+     fhir:coding ( [
+       fhir:system [ fhir:v "http://terminology.hl7.org/CodeSystem/observation-category"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "laboratory" ] ;
+       fhir:display [ fhir:v "Laboratory" ]
+     ] )
+  ] [
+     fhir:coding ( [
+       fhir:system [ fhir:v "http://terminology.hl7.org/CodeSystem/v2-0074"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "CH" ] ;
+       fhir:display [ fhir:v "Chemistry" ]
+     ] ) ;
+     fhir:text [ fhir:v "Chemistry" ]
+  ] ) ; # 
+  fhir:code [
+     fhir:coding ( [
+       a loinc:14646-4 ;
+       fhir:system [ fhir:v "http://loinc.org"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "14646-4" ] ;
+       fhir:display [ fhir:v "Cholesterol in HDL [Moles/volume] in Serum or Plasma" ]
+     ] ) ;
+     fhir:text [ fhir:v "HDL" ]
+  ] ; # 
+  fhir:subject [
+     fhir:reference [ fhir:v "urn:uuid:d1122188-f53f-417f-a84f-bc44479baa63" ] ;
+     fhir:type [ fhir:v "Patient"^^xsd:anyURI ]
+  ] ; # 
+  fhir:effective [
+     a fhir:dateTime ;
+     fhir:v "2024-09-17"^^xsd:date
+  ] ; # 
+  fhir:performer ( [
+     fhir:extension ( [
+       fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/data-absent-reason"^^xsd:anyURI ] ;
+       fhir:value [
+         a fhir:code ;
+         fhir:v "unknown"
+       ]
+     ] )
+  ] ) ; # 
+  fhir:value [
+     a fhir:Quantity ;
+     fhir:value [ fhir:v 1.29 ] ;
+     fhir:unit [ fhir:v "mmol/L" ] ;
+     fhir:system [ fhir:v "http://unitsofmeasure.org"^^xsd:anyURI ] ;
+     fhir:code [ fhir:v "mmol/L" ]
+  ] . # 
+
+<urn:uuid:0d390cb3-5d12-4051-ad50-bbc5423cb9fa> a fhir:Observation ;
+  fhir:meta [
+     fhir:versionId [ fhir:v "1" ] ;
+     fhir:lastUpdated [ fhir:v "2024-10-27T11:39:15.709+11:00"^^xsd:dateTime ] ;
+     fhir:profile ( [
+       fhir:v "http://hl7.org.au/fhir/ps/StructureDefinition/au-ps-diagnosticresult-path"^^xsd:anyURI ;
+       fhir:link <http://hl7.org.au/fhir/ps/StructureDefinition/au-ps-diagnosticresult-path>
+     ] )
+  ] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "generated" ] ;
+     fhir:div [ fhir:v "<div xmlns=\"http://www.w3.org/1999/xhtml\"><a name=\"Observation_null\"> </a><p class=\"res-header-id\"><b>Generated Narrative: Observation </b></p><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\">version: 1; Last updated: 2024-10-27 11:39:15+1100</p><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-au-ps-diagnosticresult-path.html\">AU PS Pathology Result Observation</a></p></div><p><b>status</b>: Final</p><p><b>category</b>: <span title=\"Codes:{http://terminology.hl7.org/CodeSystem/observation-category laboratory}\">Laboratory</span>, <span title=\"Codes:{http://terminology.hl7.org/CodeSystem/v2-0074 CH}\">Chemistry</span></p><p><b>code</b>: <span title=\"Codes:{http://loinc.org 22748-8}\">LDL</span></p><p><b>subject</b>: <a href=\"Bundle-aups-gpvisit-retrieval.html#urn-uuid-d1122188-f53f-417f-a84f-bc44479baa63\">Jeramy EZRA BANKS (official) Male, DoB: 1971-05-14 ( IHI: Austalian Healthcare Identifier - Individual#8003608166980417)</a></p><p><b>effective</b>: 2024-09-17</p><p><b>performer</b>: ?rref?</p><p><b>value</b>: 3.62 mmol/L<span style=\"background: LightGoldenRodYellow\"> (Details: UCUM  codemmol/L = 'mmol/L')</span></p></div>"^^rdf:XMLLiteral ]
+  ] ; # 
+  fhir:status [ fhir:v "final"] ; # 
+  fhir:category ( [
+     fhir:coding ( [
+       fhir:system [ fhir:v "http://terminology.hl7.org/CodeSystem/observation-category"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "laboratory" ] ;
+       fhir:display [ fhir:v "Laboratory" ]
+     ] )
+  ] [
+     fhir:coding ( [
+       fhir:system [ fhir:v "http://terminology.hl7.org/CodeSystem/v2-0074"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "CH" ] ;
+       fhir:display [ fhir:v "Chemistry" ]
+     ] ) ;
+     fhir:text [ fhir:v "Chemistry" ]
+  ] ) ; # 
+  fhir:code [
+     fhir:coding ( [
+       a loinc:22748-8 ;
+       fhir:system [ fhir:v "http://loinc.org"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "22748-8" ] ;
+       fhir:display [ fhir:v "Cholesterol in LDL [Moles/volume] in Serum or Plasma" ]
+     ] ) ;
+     fhir:text [ fhir:v "LDL" ]
+  ] ; # 
+  fhir:subject [
+     fhir:reference [ fhir:v "urn:uuid:d1122188-f53f-417f-a84f-bc44479baa63" ] ;
+     fhir:type [ fhir:v "Patient"^^xsd:anyURI ]
+  ] ; # 
+  fhir:effective [
+     a fhir:dateTime ;
+     fhir:v "2024-09-17"^^xsd:date
+  ] ; # 
+  fhir:performer ( [
+     fhir:extension ( [
+       fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/data-absent-reason"^^xsd:anyURI ] ;
+       fhir:value [
+         a fhir:code ;
+         fhir:v "unknown"
+       ]
+     ] )
+  ] ) ; # 
+  fhir:value [
+     a fhir:Quantity ;
+     fhir:value [ fhir:v 3.62 ] ;
+     fhir:unit [ fhir:v "mmol/L" ] ;
+     fhir:system [ fhir:v "http://unitsofmeasure.org"^^xsd:anyURI ] ;
+     fhir:code [ fhir:v "mmol/L" ]
+  ] . # 
+
+<urn:uuid:12388761-b69d-4d4f-a19a-82b13ae3d960> a fhir:Observation ;
+  fhir:meta [
+     fhir:versionId [ fhir:v "1" ] ;
+     fhir:lastUpdated [ fhir:v "2024-10-27T11:39:15.709+11:00"^^xsd:dateTime ] ;
+     fhir:profile ( [
+       fhir:v "http://hl7.org.au/fhir/ps/StructureDefinition/au-ps-diagnosticresult-path"^^xsd:anyURI ;
+       fhir:link <http://hl7.org.au/fhir/ps/StructureDefinition/au-ps-diagnosticresult-path>
+     ] )
+  ] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "generated" ] ;
+     fhir:div [ fhir:v "<div xmlns=\"http://www.w3.org/1999/xhtml\"><a name=\"Observation_null\"> </a><p class=\"res-header-id\"><b>Generated Narrative: Observation </b></p><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\">version: 1; Last updated: 2024-10-27 11:39:15+1100</p><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-au-ps-diagnosticresult-path.html\">AU PS Pathology Result Observation</a></p></div><p><b>status</b>: Final</p><p><b>category</b>: <span title=\"Codes:{http://terminology.hl7.org/CodeSystem/observation-category laboratory}\">Laboratory</span>, <span title=\"Codes:{http://terminology.hl7.org/CodeSystem/v2-0074 CH}\">Chemistry</span></p><p><b>code</b>: <span title=\"Codes:{http://loinc.org 14927-8}\">Triglyceride</span></p><p><b>subject</b>: <a href=\"Bundle-aups-gpvisit-retrieval.html#urn-uuid-d1122188-f53f-417f-a84f-bc44479baa63\">Jeramy EZRA BANKS (official) Male, DoB: 1971-05-14 ( IHI: Austalian Healthcare Identifier - Individual#8003608166980417)</a></p><p><b>effective</b>: 2024-09-17</p><p><b>performer</b>: ?rref?</p><p><b>value</b>: 1.9 mmol/L<span style=\"background: LightGoldenRodYellow\"> (Details: UCUM  codemmol/L = 'mmol/L')</span></p></div>"^^rdf:XMLLiteral ]
+  ] ; # 
+  fhir:status [ fhir:v "final"] ; # 
+  fhir:category ( [
+     fhir:coding ( [
+       fhir:system [ fhir:v "http://terminology.hl7.org/CodeSystem/observation-category"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "laboratory" ] ;
+       fhir:display [ fhir:v "Laboratory" ]
+     ] )
+  ] [
+     fhir:coding ( [
+       fhir:system [ fhir:v "http://terminology.hl7.org/CodeSystem/v2-0074"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "CH" ] ;
+       fhir:display [ fhir:v "Chemistry" ]
+     ] ) ;
+     fhir:text [ fhir:v "Chemistry" ]
+  ] ) ; # 
+  fhir:code [
+     fhir:coding ( [
+       a loinc:14927-8 ;
+       fhir:system [ fhir:v "http://loinc.org"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "14927-8" ] ;
+       fhir:display [ fhir:v "Triglyceride [Moles/volume] in Serum or Plasma" ]
+     ] ) ;
+     fhir:text [ fhir:v "Triglyceride" ]
+  ] ; # 
+  fhir:subject [
+     fhir:reference [ fhir:v "urn:uuid:d1122188-f53f-417f-a84f-bc44479baa63" ] ;
+     fhir:type [ fhir:v "Patient"^^xsd:anyURI ]
+  ] ; # 
+  fhir:effective [
+     a fhir:dateTime ;
+     fhir:v "2024-09-17"^^xsd:date
+  ] ; # 
+  fhir:performer ( [
+     fhir:extension ( [
+       fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/data-absent-reason"^^xsd:anyURI ] ;
+       fhir:value [
+         a fhir:code ;
+         fhir:v "unknown"
+       ]
+     ] )
+  ] ) ; # 
+  fhir:value [
+     a fhir:Quantity ;
+     fhir:value [ fhir:v 1.9 ] ;
+     fhir:unit [ fhir:v "mmol/L" ] ;
+     fhir:system [ fhir:v "http://unitsofmeasure.org"^^xsd:anyURI ] ;
+     fhir:code [ fhir:v "mmol/L" ]
+  ] . # 
+
+<urn:uuid:4d1e0ca1-4ea7-46a2-8f0f-af5225b73c3a> a fhir:Organization ;
+  fhir:meta [
+     fhir:versionId [ fhir:v "5" ] ;
+     fhir:lastUpdated [ fhir:v "2024-02-27T11:39:15.709+11:00"^^xsd:dateTime ] ;
+     fhir:profile ( [
+       fhir:v "http://hl7.org.au/fhir/ps/StructureDefinition/au-ps-organization"^^xsd:anyURI ;
+       fhir:link <http://hl7.org.au/fhir/ps/StructureDefinition/au-ps-organization>
+     ] )
+  ] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "generated" ] ;
+     fhir:div [ fhir:v "<div xmlns=\"http://www.w3.org/1999/xhtml\"><a name=\"Organization_null\"> </a><p class=\"res-header-id\"><b>Generated Narrative: Organization </b></p><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\">version: 5; Last updated: 2024-02-27 11:39:15+1100</p><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-au-ps-organization.html\">AU PS Organization</a></p></div><p><b>identifier</b>: HPI-O/8003629900040425, ABN/81185378242</p><p><b>type</b>: <span title=\"Codes:{http://www.abs.gov.au/ausstats/abs@.nsf/mf/1292.0 8511}, {http://snomed.info/sct 788007007}\">General practice medical clinic service</span></p><p><b>name</b>: Mossy Point Medical Centre</p><p><b>telecom</b>: ph: 0255509415(Work), <a href=\"mailto:reception@mossypointmc.example.net\">reception@mossypointmc.example.net</a></p><p><b>address</b>: 192 Pheonix Jnc Mossy Point NSW 2537 </p></div>"^^rdf:XMLLiteral ]
+  ] ; # 
+  fhir:identifier ( [
+     fhir:type [
+       fhir:coding ( [
+         fhir:system [ fhir:v "http://terminology.hl7.org.au/CodeSystem/v2-0203"^^xsd:anyURI ] ;
+         fhir:code [ fhir:v "NOI" ]
+       ] ) ;
+       fhir:text [ fhir:v "HPI-O" ]
+     ] ;
+     fhir:system [ fhir:v "http://ns.electronichealth.net.au/id/hi/hpio/1.0"^^xsd:anyURI ] ;
+     fhir:value [ fhir:v "8003629900040425" ]
+  ] [
+     fhir:type [
+       fhir:coding ( [
+         fhir:system [ fhir:v "http://terminology.hl7.org/CodeSystem/v2-0203"^^xsd:anyURI ] ;
+         fhir:code [ fhir:v "XX" ]
+       ] ) ;
+       fhir:text [ fhir:v "ABN" ]
+     ] ;
+     fhir:system [ fhir:v "http://hl7.org.au/id/abn"^^xsd:anyURI ] ;
+     fhir:value [ fhir:v "81185378242" ]
+  ] ) ; # 
+  fhir:type ( [
+     fhir:coding ( [
+       fhir:system [ fhir:v "http://www.abs.gov.au/ausstats/abs@.nsf/mf/1292.0"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "8511" ] ;
+       fhir:display [ fhir:v "General Practice Medical Services" ]
+     ] [
+       a sct:788007007 ;
+       fhir:system [ fhir:v "http://snomed.info/sct"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "788007007" ] ;
+       fhir:display [ fhir:v "General practice service" ]
+     ] ) ;
+     fhir:text [ fhir:v "General practice medical clinic service" ]
+  ] ) ; # 
+  fhir:name [ fhir:v "Mossy Point Medical Centre"] ; # 
+  fhir:telecom ( [
+     fhir:system [ fhir:v "phone" ] ;
+     fhir:value [ fhir:v "0255509415" ] ;
+     fhir:use [ fhir:v "work" ]
+  ] [
+     fhir:system [ fhir:v "email" ] ;
+     fhir:value [ fhir:v "reception@mossypointmc.example.net" ]
+  ] ) ; # 
+  fhir:address ( [
+     fhir:line ( [ fhir:v "192 Pheonix Jnc" ] ) ;
+     fhir:city [ fhir:v "Mossy Point" ] ;
+     fhir:state [ fhir:v "NSW" ] ;
+     fhir:postalCode [ fhir:v "2537" ]
+  ] ) . # 
+
+<urn:uuid:89fc11f9-a586-4bea-9393-d50e88952a7e> a fhir:Organization ;
+  fhir:meta [
+     fhir:versionId [ fhir:v "2" ] ;
+     fhir:lastUpdated [ fhir:v "2024-02-27T11:39:15.709+11:00"^^xsd:dateTime ] ;
+     fhir:profile ( [
+       fhir:v "http://hl7.org.au/fhir/ps/StructureDefinition/au-ps-organization"^^xsd:anyURI ;
+       fhir:link <http://hl7.org.au/fhir/ps/StructureDefinition/au-ps-organization>
+     ] )
+  ] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "generated" ] ;
+     fhir:div [ fhir:v "<div xmlns=\"http://www.w3.org/1999/xhtml\"><a name=\"Organization_null\"> </a><p class=\"res-header-id\"><b>Generated Narrative: Organization </b></p><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\">version: 2; Last updated: 2024-02-27 11:39:15+1100</p><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-au-ps-organization.html\">AU PS Organization</a></p></div><p><b>identifier</b>: HPI-O/8003626566706927, ABN/81160635191</p><p><b>type</b>: <span title=\"Codes:{http://www.abs.gov.au/ausstats/abs@.nsf/mf/1292.0 8401}, {http://snomed.info/sct 1223151000168101}\">Hospital service</span></p><p><b>name</b>: Kensington Public Hospital</p><p><b>telecom</b>: ph: 0255507070(Work), <a href=\"mailto:reception@kensingtonph.example.net\">reception@kensingtonph.example.net</a></p></div>"^^rdf:XMLLiteral ]
+  ] ; # 
+  fhir:identifier ( [
+     fhir:type [
+       fhir:coding ( [
+         fhir:system [ fhir:v "http://terminology.hl7.org.au/CodeSystem/v2-0203"^^xsd:anyURI ] ;
+         fhir:code [ fhir:v "NOI" ]
+       ] ) ;
+       fhir:text [ fhir:v "HPI-O" ]
+     ] ;
+     fhir:system [ fhir:v "http://ns.electronichealth.net.au/id/hi/hpio/1.0"^^xsd:anyURI ] ;
+     fhir:value [ fhir:v "8003626566706927" ]
+  ] [
+     fhir:type [
+       fhir:coding ( [
+         fhir:system [ fhir:v "http://terminology.hl7.org/CodeSystem/v2-0203"^^xsd:anyURI ] ;
+         fhir:code [ fhir:v "XX" ]
+       ] ) ;
+       fhir:text [ fhir:v "ABN" ]
+     ] ;
+     fhir:system [ fhir:v "http://hl7.org.au/id/abn"^^xsd:anyURI ] ;
+     fhir:value [ fhir:v "81160635191" ]
+  ] ) ; # 
+  fhir:type ( [
+     fhir:coding ( [
+       fhir:system [ fhir:v "http://www.abs.gov.au/ausstats/abs@.nsf/mf/1292.0"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "8401" ] ;
+       fhir:display [ fhir:v "Hospitals (Except Psychiatric Hospitals)" ]
+     ] [
+       a sct:1223151000168101 ;
+       fhir:system [ fhir:v "http://snomed.info/sct"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "1223151000168101" ] ;
+       fhir:display [ fhir:v "Hospital service" ]
+     ] ) ;
+     fhir:text [ fhir:v "Hospital service" ]
+  ] ) ; # 
+  fhir:name [ fhir:v "Kensington Public Hospital"] ; # 
+  fhir:telecom ( [
+     fhir:system [ fhir:v "phone" ] ;
+     fhir:value [ fhir:v "0255507070" ] ;
+     fhir:use [ fhir:v "work" ]
+  ] [
+     fhir:system [ fhir:v "email" ] ;
+     fhir:value [ fhir:v "reception@kensingtonph.example.net" ]
+  ] ) . # 
+
+<urn:uuid:e28c5ed1-6092-44cc-b1a9-2ddf4ea550e1> a fhir:Location ;
+  fhir:meta [
+     fhir:versionId [ fhir:v "2" ] ;
+     fhir:lastUpdated [ fhir:v "2025-05-25T11:39:15.709+11:00"^^xsd:dateTime ] ;
+     fhir:profile ( [
+       fhir:v "http://hl7.org.au/fhir/core/StructureDefinition/au-core-location"^^xsd:anyURI ;
+       fhir:link <http://hl7.org.au/fhir/core/StructureDefinition/au-core-location>
+     ] )
+  ] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "generated" ] ;
+     fhir:div [ fhir:v "<div xmlns=\"http://www.w3.org/1999/xhtml\"><a name=\"Location_null\"> </a><p class=\"res-header-id\"><b>Generated Narrative: Location </b></p><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\">version: 2; Last updated: 2025-05-25 11:39:15+1100</p><p style=\"margin-bottom: 0px\">Profile: <a href=\"http://hl7.org.au/fhir/core/2.0.0/StructureDefinition-au-core-location.html\">AU Core Location</a></p></div><p><b>name</b>: Kensington Public Hospital</p><p><b>type</b>: <span title=\"Codes:{http://terminology.hl7.org/CodeSystem/v3-RoleCode HOSP}, {http://snomed.info/sct 22232009}\">Hospital</span></p><p><b>address</b>: 191 Jenkins Cct Kensington NSW 2033 AU </p><p><b>physicalType</b>: <span title=\"Codes:{http://terminology.hl7.org/CodeSystem/location-physical-type si}\">Site</span></p><p><b>managingOrganization</b>: <a href=\"Bundle-aups-gpvisit-retrieval.html#urn-uuid-89fc11f9-a586-4bea-9393-d50e88952a7e\">Organization Kensington Public Hospital</a></p></div>"^^rdf:XMLLiteral ]
+  ] ; # 
+  fhir:name [ fhir:v "Kensington Public Hospital"] ; # 
+  fhir:type ( [
+     fhir:coding ( [
+       fhir:system [ fhir:v "http://terminology.hl7.org/CodeSystem/v3-RoleCode"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "HOSP" ] ;
+       fhir:display [ fhir:v "Hospital" ]
+     ] [
+       a sct:22232009 ;
+       fhir:system [ fhir:v "http://snomed.info/sct"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "22232009" ] ;
+       fhir:display [ fhir:v "Hospital" ]
+     ] )
+  ] ) ; # 
+  fhir:address [
+     fhir:line ( [ fhir:v "191 Jenkins Cct" ] ) ;
+     fhir:city [ fhir:v "Kensington" ] ;
+     fhir:state [ fhir:v "NSW" ] ;
+     fhir:postalCode [ fhir:v "2033" ] ;
+     fhir:country [ fhir:v "AU" ]
+  ] ; # 
+  fhir:physicalType [
+     fhir:coding ( [
+       fhir:system [ fhir:v "http://terminology.hl7.org/CodeSystem/location-physical-type"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "si" ] ;
+       fhir:display [ fhir:v "Site" ]
+     ] )
+  ] ; # 
+  fhir:managingOrganization [
+     fhir:reference [ fhir:v "urn:uuid:89fc11f9-a586-4bea-9393-d50e88952a7e" ]
+  ] . # 
+
+<urn:uuid:f7aaf2d5-c105-4652-8b4c-e555903593a7> a fhir:Encounter ;
+  fhir:meta [
+     fhir:versionId [ fhir:v "1" ] ;
+     fhir:lastUpdated [ fhir:v "2025-05-25T11:39:15.709+11:00"^^xsd:dateTime ] ;
+     fhir:profile ( [
+       fhir:v "http://hl7.org.au/fhir/ps/StructureDefinition/au-ps-encounter"^^xsd:anyURI ;
+       fhir:link <http://hl7.org.au/fhir/ps/StructureDefinition/au-ps-encounter>
+     ] )
+  ] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "generated" ] ;
+     fhir:div [ fhir:v "<div xmlns=\"http://www.w3.org/1999/xhtml\"><a name=\"Encounter_null\"> </a><p class=\"res-header-id\"><b>Generated Narrative: Encounter </b></p><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\">version: 1; Last updated: 2025-05-25 11:39:15+1100</p><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-au-ps-encounter.html\">AU PS Encounter</a></p></div><p><b>status</b>: Finished</p><p><b>class</b>: <a href=\"http://terminology.hl7.org/7.2.0/CodeSystem-v3-ActCode.html#v3-ActCode-IMP\">ActCode: IMP</a> (inpatient encounter)</p><p><b>serviceType</b>: <span title=\"Codes:{http://snomed.info/sct 1230045006}\">Cardiac diagnostic service</span></p><p><b>subject</b>: <a href=\"Bundle-aups-gpvisit-retrieval.html#urn-uuid-d1122188-f53f-417f-a84f-bc44479baa63\">Jeramy EZRA BANKS (official) Male, DoB: 1971-05-14 ( IHI: Austalian Healthcare Identifier - Individual#8003608166980417)</a></p><p><b>period</b>: 2025-05-22 08:15:00+1000 --&gt; 2025-05-23 11:19:00+1000</p><h3>Locations</h3><table class=\"grid\"><tr><td style=\"display: none\">-</td><td><b>Location</b></td></tr><tr><td style=\"display: none\">*</td><td><a href=\"Bundle-aups-gpvisit-retrieval.html#urn-uuid-e28c5ed1-6092-44cc-b1a9-2ddf4ea550e1\">Location Kensington Public Hospital</a></td></tr></table><p><b>serviceProvider</b>: <a href=\"Bundle-aups-gpvisit-retrieval.html#urn-uuid-89fc11f9-a586-4bea-9393-d50e88952a7e\">Organization Kensington Public Hospital</a></p></div>"^^rdf:XMLLiteral ]
+  ] ; # 
+  fhir:status [ fhir:v "finished"] ; # 
+  fhir:class [
+     fhir:system [ fhir:v "http://terminology.hl7.org/CodeSystem/v3-ActCode"^^xsd:anyURI ] ;
+     fhir:code [ fhir:v "IMP" ] ;
+     fhir:display [ fhir:v "inpatient encounter" ]
+  ] ; # 
+  fhir:serviceType [
+     fhir:coding ( [
+       a sct:1230045006 ;
+       fhir:system [ fhir:v "http://snomed.info/sct"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "1230045006" ] ;
+       fhir:display [ fhir:v "Cardiac diagnostic service" ]
+     ] )
+  ] ; # 
+  fhir:subject [
+     fhir:reference [ fhir:v "urn:uuid:d1122188-f53f-417f-a84f-bc44479baa63" ] ;
+     fhir:type [ fhir:v "Patient"^^xsd:anyURI ]
+  ] ; # 
+  fhir:period [
+     fhir:start [ fhir:v "2025-05-22T08:15:00+10:00"^^xsd:dateTime ] ;
+     fhir:end [ fhir:v "2025-05-23T11:19:00+10:00"^^xsd:dateTime ]
+  ] ; # 
+  fhir:location ( [
+     fhir:location [
+       fhir:reference [ fhir:v "urn:uuid:e28c5ed1-6092-44cc-b1a9-2ddf4ea550e1" ]
+     ]
+  ] ) ; # 
+  fhir:serviceProvider [
+     fhir:reference [ fhir:v "urn:uuid:89fc11f9-a586-4bea-9393-d50e88952a7e" ]
+  ] . # 
+
+<urn:uuid:7d63c3a7-3cbe-487d-99aa-00c6c29f1db5> a fhir:Encounter ;
+  fhir:meta [
+     fhir:versionId [ fhir:v "2" ] ;
+     fhir:lastUpdated [ fhir:v "2025-05-25T11:39:15.709+11:00"^^xsd:dateTime ] ;
+     fhir:profile ( [
+       fhir:v "http://hl7.org.au/fhir/ps/StructureDefinition/au-ps-encounter"^^xsd:anyURI ;
+       fhir:link <http://hl7.org.au/fhir/ps/StructureDefinition/au-ps-encounter>
+     ] )
+  ] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "generated" ] ;
+     fhir:div [ fhir:v "<div xmlns=\"http://www.w3.org/1999/xhtml\"><a name=\"Encounter_null\"> </a><p class=\"res-header-id\"><b>Generated Narrative: Encounter </b></p><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\">version: 2; Last updated: 2025-05-25 11:39:15+1100</p><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-au-ps-encounter.html\">AU PS Encounter</a></p></div><p><b>status</b>: Finished</p><p><b>class</b>: <a href=\"http://terminology.hl7.org/7.2.0/CodeSystem-v3-ActCode.html#v3-ActCode-AMB\">ActCode: AMB</a> (ambulatory)</p><p><b>serviceType</b>: <span title=\"Codes:{http://snomed.info/sct 788007007}\">General practice service</span></p><p><b>subject</b>: <a href=\"Bundle-aups-gpvisit-retrieval.html#urn-uuid-d1122188-f53f-417f-a84f-bc44479baa63\">Jeramy EZRA BANKS (official) Male, DoB: 1971-05-14 ( IHI: Austalian Healthcare Identifier - Individual#8003608166980417)</a></p><h3>Participants</h3><table class=\"grid\"><tr><td style=\"display: none\">-</td><td><b>Type</b></td><td><b>Individual</b></td></tr><tr><td style=\"display: none\">*</td><td><span title=\"Codes:{http://terminology.hl7.org/CodeSystem/v3-ParticipationType PPRF}\">primary performer</span></td><td><a href=\"Bundle-aups-gpvisit-retrieval.html#urn-uuid-ca779d48-9dd8-4fe1-829a-d48b12b492af\">Practitioner Abe LOWE </a></td></tr></table><p><b>period</b>: ?? --&gt; 2025-02-25</p><p><b>reasonCode</b>: <span title=\"Codes:{http://snomed.info/sct 185389009}\">Follow-up visit</span></p><p><b>serviceProvider</b>: <a href=\"Bundle-aups-gpvisit-retrieval.html#urn-uuid-4d1e0ca1-4ea7-46a2-8f0f-af5225b73c3a\">Organization Mossy Point Medical Centre</a></p></div>"^^rdf:XMLLiteral ]
+  ] ; # 
+  fhir:status [ fhir:v "finished"] ; # 
+  fhir:class [
+     fhir:system [ fhir:v "http://terminology.hl7.org/CodeSystem/v3-ActCode"^^xsd:anyURI ] ;
+     fhir:code [ fhir:v "AMB" ] ;
+     fhir:display [ fhir:v "ambulatory" ]
+  ] ; # 
+  fhir:serviceType [
+     fhir:coding ( [
+       a sct:788007007 ;
+       fhir:system [ fhir:v "http://snomed.info/sct"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "788007007" ] ;
+       fhir:display [ fhir:v "General practice service" ]
+     ] )
+  ] ; # 
+  fhir:subject [
+     fhir:reference [ fhir:v "urn:uuid:d1122188-f53f-417f-a84f-bc44479baa63" ] ;
+     fhir:type [ fhir:v "Patient"^^xsd:anyURI ]
+  ] ; # 
+  fhir:participant ( [
+     fhir:type ( [
+       fhir:coding ( [
+         fhir:system [ fhir:v "http://terminology.hl7.org/CodeSystem/v3-ParticipationType"^^xsd:anyURI ] ;
+         fhir:code [ fhir:v "PPRF" ] ;
+         fhir:display [ fhir:v "primary performer" ]
+       ] )
+     ] ) ;
+     fhir:individual [
+       fhir:reference [ fhir:v "urn:uuid:ca779d48-9dd8-4fe1-829a-d48b12b492af" ] ;
+       fhir:type [ fhir:v "Practitioner"^^xsd:anyURI ]
+     ]
+  ] ) ; # 
+  fhir:period [
+     fhir:end [ fhir:v "2025-02-25"^^xsd:date ]
+  ] ; # 
+  fhir:reasonCode ( [
+     fhir:coding ( [
+       a sct:185389009 ;
+       fhir:system [ fhir:v "http://snomed.info/sct"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "185389009" ] ;
+       fhir:display [ fhir:v "Follow-up visit" ]
+     ] )
+  ] ) ; # 
+  fhir:serviceProvider [
+     fhir:reference [ fhir:v "urn:uuid:4d1e0ca1-4ea7-46a2-8f0f-af5225b73c3a" ] ;
+     fhir:type [ fhir:v "Organization"^^xsd:anyURI ]
+  ] . # 
+
+# -------------------------------------------------------------------------------------
+

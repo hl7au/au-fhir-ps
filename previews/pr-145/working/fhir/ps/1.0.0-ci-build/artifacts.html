@@ -1,0 +1,592 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE HTML>
+<html xml:lang="en" xmlns="http://www.w3.org/1999/xhtml" lang="en">
+  <head>
+    <meta content="text/html;charset=utf-8" http-equiv="Content-Type"/>
+    <title>Artefacts Summary - AU Patient Summary Implementation Guide v1.0.0-ci-build</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta name="author" content="http://hl7.org/fhir"/>
+
+    <link href="fhir.css" rel="stylesheet"/>
+
+    <!-- Bootstrap core CSS -->
+    <link href="assets/css/bootstrap-fhir.css" rel="stylesheet"/>
+
+    <!-- Project extras -->
+    <link href="assets/css/project.css" rel="stylesheet"/>
+    <link href="assets/css/pygments-manni.css" rel="stylesheet"/>
+    <link href="assets/css/jquery-ui.css" rel="stylesheet"/>
+  	<link href="assets/css/prism.css" rel="stylesheet" />
+  	<link href="assets/css/cqf.css" rel="stylesheet" />
+    <!-- Placeholder for child template CSS declarations -->
+    <link href="assets/css/hl7.css" rel="stylesheet"/>
+
+    <link href="assets/css/fhir.css" rel="stylesheet"/>
+    <link href="assets/css/hl7au.css" rel="stylesheet"/>
+
+
+
+    <script type="text/javascript" src="fhir-table-scripts.js"> </script>
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+    <script src="assets/js/html5shiv.js"></script>
+    <script src="assets/js/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- Favicons -->
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="assets/ico/icon-fhir-144.png"/>
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="assets/ico/icon-fhir-114.png"/>
+    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="assets/ico/icon-fhir-72.png"/>
+    <link rel="apple-touch-icon-precomposed" href="assets/ico/icon-fhir-57.png"/>
+    <link rel="shortcut icon" href="assets/ico/favicon.png"/>
+  </head>
+  <body onload="document.body.style.opacity='1'">
+
+	  <script src="assets/js/prism.js"></script>
+    <script type="text/javascript" src="assets/js/mermaid.js"></script>
+    <script type="text/javascript" src="assets/js/mermaid-init.js"></script>
+    <style type="text/css">h2{--heading-prefix:"7.1"}
+    h3,h4,h5,h6{--heading-prefix:"7.1.0"}</style>
+    <div id="segment-header" class="segment">  <!-- segment-header -->
+      <div class="container">  <!-- container -->
+
+        <!-- Placeholder for child template header declarations -->
+
+        <div id="hl7-nav">
+          <a id="hl7-logo" data-no-external="true" href="http://hl7.com.au">
+            <img height="50" alt="Visit the HL7 Australia website" src="assets/images/hl7-logo-header.png"/>
+          </a>
+        </div>
+
+        <div id="family-nav">
+          <a id="family-logo" data-no-external="true" href="http://hl7.com.au">
+            <img height="50" alt="Visit the HL7 Australia website" src="assets/images/fhir-au-logo-www.png"/> </a>
+        </div>
+
+
+        <div id="project-nav">
+          <a id="project-logo" data-no-external="true" href="https://sparked.csiro.au/">
+            <img height="50" alt="Visit the Sparked website" src="assets/images/sparked-logo.png"/> </a>
+        </div>
+
+        <!--<div id="hl7-search">
+          <a id="hl7-search-lnk" data-no-external="true" href="http://hl7.org.au/fhir/search"><img alt="Search FHIR" src="assets/images/search.png"/></a>
+        </div>-->
+
+
+        <div id="ig-status">
+          <p><span style="font-size:12pt;font-weight:bold">AU Patient Summary Implementation Guide</span>
+            <br/>
+            <span style="display:inline-block;">1.0.0-ci-build - CI Build
+
+
+
+  <img alt="Australia flag" src="assets/images/aus.svg" height="16" title="Australia"/>
+
+
+            </span>
+          </p>
+        </div>
+      </div> <!-- /container -->
+    </div>  <!-- /segment-header -->
+
+    <div id="segment-navbar" class="segment">  <!-- segment-navbar -->
+      <div id="stripe"> </div>
+      <div class="container">  <!-- container -->
+        <!-- HEADER CONTENT -->
+
+        <nav class="navbar navbar-inverse">
+          <!--status-bar-->
+          <div class="container">
+            <button data-target=".navbar-inverse-collapse" class="navbar-toggle" data-toggle="collapse" type="button">
+              <span class="icon-bar"> </span>
+              <span class="icon-bar"> </span>
+              <span class="icon-bar"> </span>
+            </button>
+            <a class="navbar-brand hidden" href="http://hl7.org/fhir/R4/index.html">FHIR</a>
+            <div class="nav-collapse collapse navbar-inverse-collapse">
+              <ul xmlns="http://www.w3.org/1999/xhtml" class="nav navbar-nav">
+  <li>
+    <a href="index.html">Home</a>
+  </li>
+  <li class="dropdown">
+    <a data-toggle="dropdown" href="#" class="dropdown-toggle">Conformance
+      <b class="caret"></b>
+    </a>
+    <ul class="dropdown-menu">
+      <li>
+        <a href="general-requirements.html">General Requirements</a>
+        <a href="declaring-conformance.html">Declaring Conformance</a>
+      </li>
+    </ul>
+  </li>
+  <li>
+    <a href="the-aups.html">The AU PS</a>
+  </li>
+  <li class="dropdown">
+    <a data-toggle="dropdown" href="#" class="dropdown-toggle">Guidance
+      <b class="caret"></b>
+    </a>
+     <ul class="dropdown-menu">
+      <li>
+        <a href="general-guidance.html">General Guidance</a>
+      </li>
+      <li>
+        <a href="generation-and-access.html">Generation and Access</a>
+      </li>
+      <li>
+        <a href="sex-and-gender.html">Sex and Gender</a>
+      </li>
+      <li>
+        <a href="aucdi.html">AUCDI</a>
+      </li>
+       <li>
+        <a href="relationship.html">Relationship With Other IGs</a>
+      </li>
+      <li>
+        <a href="variance.html">AU Variance Statement</a>
+      </li>
+      <li>
+        <a href="comparison.html">Comparison With Other National and International IGs</a>
+      </li>
+      <li>
+        <a href="future.html">Future of AU PS</a>
+      </li> 
+    </ul>
+  </li>
+  <li class="dropdown">
+    <a data-toggle="dropdown" href="#" class="dropdown-toggle">Use Cases
+      <b class="caret"></b>
+    </a>
+     <ul class="dropdown-menu">
+      <li>
+        <a href="uc-interstate.html">Interstate GP Visit</a>
+      </li>
+      <li>
+        <a href="uc-referral.html">Referral to Specialist and Allied Health</a>
+      </li>
+    </ul>
+  </li>
+  <li>
+    <a href="security.html">Security and Privacy</a>
+  </li>
+  <li class="dropdown">
+    <a data-toggle="dropdown" href="#" class="dropdown-toggle">FHIR Artefacts
+      <b class="caret"></b>
+    </a>
+    <ul class="dropdown-menu">
+       <li>
+        <a href="artifacts.html">Artefacts Summary</a>
+      </li>
+      <li>
+        <a href="profiles-and-extensions.html">Profiles and Extensions</a>
+      </li>
+      <!-- <li>
+        <a href="search-parameters.html">Search Parameters</a>
+      </li>-->
+      <li>
+        <a href="terminology.html">Terminology</a>
+      </li>
+      <!-- <li>
+        <a href="capability-statements.html">Capability Statements</a>
+      </li> -->
+      <li>
+        <a href="actors.html">Actor Definitions</a>
+      </li>
+    </ul>
+  </li>
+  <li>
+    <a href="examples.html">Examples</a>
+  </li>
+  <li class="dropdown">
+    <a data-toggle="dropdown" href="#" class="dropdown-toggle">Support
+      <b class="caret"></b>
+    </a>
+    <ul class="dropdown-menu">
+      <li>
+        <a href="downloads.html">Downloads</a>
+      </li>
+      <li>
+        <a href="license.html">License and Legal</a>
+      </li>
+    </ul>
+  </li>
+  <li>
+    <a href="changes.html">Change Log</a>
+  </li>
+</ul>
+            </div>  <!-- /.nav-collapse -->
+          </div>  <!-- /.container -->
+        </nav>  <!-- /.navbar -->
+      <!-- /HEADER CONTENT -->
+      </div>  <!-- /container -->
+    </div>  <!-- /segment-navbar -->
+    <!--status-bar-->
+
+    <div id="segment-breadcrumb" class="segment">  <!-- segment-breadcrumb -->
+      <div class="container">  <!-- container -->
+        <ul class="breadcrumb">
+          <li><a href='toc.html'><b>Table of Contents</b></a></li><li><a href='artefacts.html'><b>FHIR artefacts</b></a></li><li><b>Artefacts Summary</b></li>
+
+        </ul>
+      </div>  <!-- /container -->
+    </div>  <!-- /segment-breadcrumb -->
+
+    <a name="top"> </a>
+    <div id="segment-content" class="segment">  <!-- segment-content -->
+      <div class="container">  <!-- container -->
+        <div class="row">
+          <div class="inner-wrapper">
+
+<style type="text/css">
+h2:before{color:silver;counter-increment:section;content:var(--heading-prefix) " ";}
+h3:before{color:silver;counter-increment:sub-section;content:var(--heading-prefix) "." counter(sub-section) " ";}
+h4:before{color:silver;counter-increment:composite;content:var(--heading-prefix) "." counter(sub-section) "." counter(composite) " ";}
+h5:before{color:silver;counter-increment:detail;content:var(--heading-prefix) "." counter(sub-section) "." counter(composite) "." counter(detail) " ";}
+h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefix) "." counter(sub-section) "." counter(composite) "." counter(detail) "." counter(more-detail)" ";}
+</style>
+<div class="col-12">
+  <!--ReleaseHeader--><p id="publish-box">This page is part of the AU Patient Summary (v1.0.0-ci-build: QA Preview) based on <a data-no-external="true" href="http://hl7.org/fhir/R4">FHIR (HL7® FHIR® Standard) R4</a>. <span class="fhir-pb-dynamic" data-pb-version="1.0.0-ci-build" data-pb-canonical="http://hl7.org.au/fhir/ps"><span class="fhir-pb-superseded">The current version which supersedes this version is <a class="fhir-pb-current-link" data-no-external="true" href="http://hl7.org.au/fhir/ps"><span class="fhir-pb-current-version">the current version</span></a></span><span class="fhir-pb-iscurrent" style="display:none">This is the current published version</span><span class="fhir-pb-prerelease" style="display:none">This version is a pre-release. The current official version is <a class="fhir-pb-current-link" data-no-external="true" href="http://hl7.org.au/fhir/ps"><span class="fhir-pb-current-version">the current version</span></a></span></span><script type="text/javascript">(function(){function cmp(a,b){if(a===b)return 0;function p(v){var s=String(v).split('-');return{n:s[0].split('.').map(function(x){return parseInt(x,10)||0;}),pre:s.length>1?s.slice(1).join('-'):null};}var pa=p(a),pb=p(b),i,m=Math.max(pa.n.length,pb.n.length);for(i=0;i<m;i++){var d=(pa.n[i]||0)-(pb.n[i]||0);if(d!==0)return d>0?1:-1;}if(pa.pre&&!pb.pre)return -1;if(!pa.pre&&pb.pre)return 1;if(pa.pre&&pb.pre)return pa.pre<pb.pre?-1:(pa.pre>pb.pre?1:0);return 0;}function sh(el,on){if(el)el.style.display=on?'':'none';}function pn(u){try{return new URL(u,document.baseURI).pathname.replace(/\/+$/,'');}catch(e){return null;}}function init(){var dyn=document.querySelectorAll('span.fhir-pb-dynamic');var pv=document.querySelectorAll('span.fhir-pb-page-versions');if(!dyn.length&&!pv.length)return;var canonical=dyn.length?dyn[0].getAttribute('data-pb-canonical'):null;if(!canonical)return;var pgVer=(dyn.length?dyn[0]:pv[0]).getAttribute('data-pb-version');var igRoot=null;if(pgVer){var seg='/'+pgVer+'/';var si=location.pathname.indexOf(seg);if(si>=0)igRoot=location.pathname.slice(0,si);}if(igRoot===null)igRoot=pn(canonical);if(igRoot===null)return;var plUrl=igRoot+'/package-list.json';fetch(plUrl,{cache:'no-cache'}).then(function(r){return r.json();}).then(function(pl){var list=(pl&&pl.list)||[];var cur=null;list.forEach(function(e){if(e&&e.current===true&&e.version!=='current'&&typeof e.path==='string'&&e.path.indexOf(canonical)===0){cur=e;}});if(cur)Array.prototype.forEach.call(dyn,function(box){if(box.getAttribute('data-pb-done'))return;box.setAttribute('data-pb-done','1');var thisVer=box.getAttribute('data-pb-version');Array.prototype.forEach.call(box.querySelectorAll('.fhir-pb-current-version'),function(s){s.textContent=cur.version;});Array.prototype.forEach.call(box.querySelectorAll('a.fhir-pb-current-link'),function(a){a.setAttribute('href',cur.path);});var d=cmp(cur.version,thisVer);sh(box.querySelector('.fhir-pb-superseded'),d>0);sh(box.querySelector('.fhir-pb-iscurrent'),d===0);sh(box.querySelector('.fhir-pb-prerelease'),d<0);});var ms=list.filter(function(e){return e&&e.milestoneName&&typeof e.path==='string'&&e.path.indexOf(canonical)===0;});Array.prototype.forEach.call(pv,function(span){if(span.getAttribute('data-pb-done'))return;span.setAttribute('data-pb-done','1');var thisVer=span.getAttribute('data-pb-version');var mine=list.filter(function(e){return e.version===thisVer;})[0];var myBase=mine?pn(mine.path):null;var here=location.pathname;var rel=(myBase&&here.indexOf(myBase+'/')===0)?here.slice(myBase.length+1):here.substring(here.lastIndexOf('/')+1);Promise.all(ms.map(function(m){var href=pn(m.path)+'/'+rel;if(m.version===thisVer)return Promise.resolve({m:m,href:href,ok:true,self:true});return fetch(href,{method:'HEAD'}).then(function(r){return{m:m,href:href,ok:r.ok,self:false};}).catch(function(){return{m:m,href:href,ok:false};});})).then(function(res){var parts=res.filter(function(x){return x.ok;}).map(function(x){return x.self?('<b>'+x.m.milestoneName+'</b>'):('<a data-no-external="true" href="'+x.href+'">'+x.m.milestoneName+'</a>');});if(parts.length){span.innerHTML='. Page versions: '+parts.join(' ');}});});}).catch(function(){});}if(document.readyState!=='loading'){init();}else{document.addEventListener('DOMContentLoaded',init);}})();</script>.  For a full list of available versions, see the <a data-no-external="true" href="http://hl7.org.au/fhir/ps/history.html">Directory of published versions</a><span class="fhir-pb-page-versions" data-pb-version="1.0.0-ci-build"></span></p><!--EndReleaseHeader-->
+  <h2>Artefacts Summary</h2>
+  
+  
+  <table class="colsi">
+    <tr>
+  
+      <td>
+        <i>Page standards status:</i> <a href="http://hl7.org/fhir/R4/versions.html#std-process" title="Standard Status">Informative</a>
+        
+      </td>
+  
+  
+    </tr>
+  </table>
+
+  
+  <!--DO NOT EDIT THIS FILE - It is generated by https://github.com/HL7/ig-template-base/blob/master/scripts/createArtifactSummary.xslt and any changes made will be overwritten--><div xmlns="http://www.w3.org/1999/xhtml"
+     xmlns:f="http://hl7.org/fhir"
+     xmlns:html="http://www.w3.org/1999/xhtml"
+     class="markdown-toc">
+   <p>Contents:</p>
+   <ul>
+      <li>
+         <a href="#1">Requirements: Actor Definitions</a>
+      </li>
+      <li>
+         <a href="#2">Structures: Resource Profiles</a>
+      </li>
+      <li>
+         <a href="#3">Example: Example Instances</a>
+      </li>
+   </ul>
+</div>
+<div xmlns="http://www.w3.org/1999/xhtml"
+     xmlns:f="http://hl7.org/fhir"
+     xmlns:html="http://www.w3.org/1999/xhtml">
+   <p>This page provides a list of the FHIR artifacts defined as part of this implementation guide.</p>
+   <a name="1"> </a>
+   <h3>Requirements: Actor Definitions </h3>
+    <p>The following artifacts define the types of individuals and/or systems that will interact as part of the use cases covered by this implementation guide.</p>
+<table class="grid">
+      <col style="width:20%"/>
+      <tbody>
+         <tr>
+            <td style="column-width:30%">
+               <a href="ActorDefinition-au-ps-actor-consumer.html"
+                  title="ActorDefinition/au-ps-actor-consumer">AU PS Consumer</a>
+            </td>
+            <td>
+<p>An AU PS Consumer is a system that consumes an AU PS Bundle and uses it to display or process patient summary content. This actor is based on the Consumer (IPS) actor, and describes the additional requirements and documentation applied for the Australian context.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="ActorDefinition-au-ps-actor-producer.html"
+                  title="ActorDefinition/au-ps-actor-producer">AU PS Producer</a>
+            </td>
+            <td>
+<p>An AU PS Producer is a system which creates or assembles an AU PS Bundle through automated generation or human curation of the patient summary content. This actor is based on the Creator (IPS) actor, and describes the additional requirements and documentation applied for the Australian context.</p>
+</td>
+         </tr>
+      </tbody>
+   </table>
+   <a name="2"> </a>
+   <h3>Structures: Resource Profiles </h3>
+    <p>These define constraints on FHIR resources for systems conforming to this implementation guide.</p>
+<table class="grid">
+      <col style="width:20%"/>
+      <tbody>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-au-ps-allergyintolerance.html"
+                  title="StructureDefinition/au-ps-allergyintolerance">AU PS AllergyIntolerance</a>
+            </td>
+            <td>
+<p>This profile sets minimum expectations for an AllergyIntolerance resource in the context of a patient summary in an Australian context. It is based on the <a href="https://build.fhir.org/ig/hl7au/au-fhir-core/StructureDefinition-au-core-allergyintolerance.html">AU Core AllergyIntolerance</a> profile, and applies the additional requirements from <a href="http://hl7.org/fhir/uv/ips/StructureDefinition/AllergyIntolerance-uv-ips">AllergyIntolerance (IPS)</a>.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-au-ps-bundle.html"
+                  title="StructureDefinition/au-ps-bundle">AU PS Bundle</a>
+            </td>
+            <td>
+<p>This profile sets minimum expectations for a Bundle resource in the context of a patient summary in an Australian context. It is based on FHIR <a href="http://hl7.org/fhir/StructureDefinition/Bundle">Bundle</a>, and applies the constraints of <a href="http://hl7.org/fhir/uv/ips/StructureDefinition/Bundle-uv-ips">Bundle (IPS)</a> and AU Patient Summary (AU PS).
+AU PS is specified in this guide as a HL7 FHIR document (a Bundle including a Composition), composed by a set of potentially reusable 'minimal' data blocks (the AU PS profiles).</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-au-ps-composition.html"
+                  title="StructureDefinition/au-ps-composition">AU PS Composition</a>
+            </td>
+            <td>
+<p>This profile sets minimum expectations for a Composition resource in the context of a patient summary in an Australian context. It is based on <a href="http://hl7.org.au/fhir/StructureDefinition/au-composition">AU Base Composition</a> and imposes <a href="http://hl7.org/fhir/uv/ips/StructureDefinition/Composition-uv-ips">Composition (IPS)</a>. 
+AU Patient Summary (AU PS) is specified in this guide as a HL7 FHIR document (a Bundle including a Composition), composed by a set of potentially reusable 'minimal' data blocks (the AU PS profiles).</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-au-ps-condition.html"
+                  title="StructureDefinition/au-ps-condition">AU PS Condition</a>
+            </td>
+            <td>
+<p>This profile sets minimum expectations for a Condition resource in the context of a patient summary in an Australian context. It is based on the <a href="https://build.fhir.org/ig/hl7au/au-fhir-core/StructureDefinition-au-core-condition.html">AU Core Condition</a> profile, and applies the additional requirements from <a href="http://hl7.org/fhir/uv/ips/StructureDefinition/Condition-uv-ips">Condition (IPS)</a>.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-au-ps-encounter.html"
+                  title="StructureDefinition/au-ps-encounter">AU PS Encounter</a>
+            </td>
+            <td>
+<p>This profile sets minimum expectations for an Encounter resource in the context of a patient summary in an Australian context. It is based on the <a href="https://build.fhir.org/ig/hl7au/au-fhir-core/StructureDefinition-au-core-encounter.html">AU Core Encounter</a> profile, and applies the additional constraints for use in a patient summary context consistent with the profiling conventions of <a href="https://hl7.org/fhir/uv/ips/STU2/">IPS</a>.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-au-ps-immunization.html"
+                  title="StructureDefinition/au-ps-immunization">AU PS Immunization</a>
+            </td>
+            <td>
+<p>This profile sets minimum expectations for an Immunization resource in the context of a patient summary in an Australian context. It is based on the <a href="https://build.fhir.org/ig/hl7au/au-fhir-core/StructureDefinition-au-core-immunization.html">AU Core Immunization</a> profile, and applies the additional requirements from <a href="http://hl7.org/fhir/uv/ips/StructureDefinition/Immunization-uv-ips">Immunization (IPS)</a>.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-au-ps-medication.html"
+                  title="StructureDefinition/au-ps-medication">AU PS Medication</a>
+            </td>
+            <td>
+<p>This profile sets minimum expectations for a Medication resource in the context of a patient summary in an Australian context. It is based on the <a href="https://build.fhir.org/ig/hl7au/au-fhir-core/StructureDefinition-au-core-medication.html">AU Core Medication</a> profile, and applies the additional requirements from <a href="http://hl7.org/fhir/uv/ips/StructureDefinition/Medication-uv-ips">Medication (IPS)</a>.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-au-ps-medicationrequest.html"
+                  title="StructureDefinition/au-ps-medicationrequest">AU PS MedicationRequest</a>
+            </td>
+            <td>
+<p>This profile sets minimum expectations for a MedicationRequest resource in the context of a patient summary in an Australian context. It is based on the <a href="http://hl7.org.au/fhir/core/StructureDefinition/au-core-medicationrequest">AU Core MedicationRequest</a> profile, and applies the additional requirements from <a href="http://hl7.org/fhir/uv/ips/StructureDefinition/MedicationRequest-uv-ips">MedicationRequest (IPS)</a>.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-au-ps-medicationstatement.html"
+                  title="StructureDefinition/au-ps-medicationstatement">AU PS MedicationStatement</a>
+            </td>
+            <td>
+<p>This profile sets minimum expectations for a MedicationStatement resource in the context of a patient summary in an Australian context. It is based on the <a href="https://build.fhir.org/ig/hl7au/au-fhir-core/StructureDefinition-au-core-medicationstatement.html">AU Core MedicationStatement</a> profile, and applies the additional requirements from <a href="http://hl7.org/fhir/uv/ips/StructureDefinition/MedicationStatement-uv-ips">MedicationStatement (IPS)</a>.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-au-ps-organization.html"
+                  title="StructureDefinition/au-ps-organization">AU PS Organization</a>
+            </td>
+            <td>
+<p>This profile sets minimum expectations for an Organization resource in the context of a patient summary in an Australian context. It is based on the <a href="http://hl7.org.au/fhir/core/StructureDefinition/au-core-organization">AU Core Organization</a> profile, and applies the additional requirements from <a href="http://hl7.org/fhir/uv/ips/StructureDefinition/Organization-uv-ips">Organization (IPS)</a>.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-au-ps-diagnosticresult-path.html"
+                  title="StructureDefinition/au-ps-diagnosticresult-path">AU PS Pathology Result Observation</a>
+            </td>
+            <td>
+<p>This profile sets minimum expectations for an Observation resource that represents a pathology result associated with a patient in the context of a patient summary in an Australian context. It is based on the <a href="https://build.fhir.org/ig/hl7au/au-fhir-core/StructureDefinition-au-core-diagnosticresult-path.html">AU Core Pathology Result Observation</a> profile, and applies the additional requirements from <a href="https://hl7.org/fhir/uv/ips/STU2/StructureDefinition-Observation-results-laboratory-pathology-uv-ips.html">Observation Results - Laboratory/Pathology (IPS)</a>.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-au-ps-patient.html"
+                  title="StructureDefinition/au-ps-patient">AU PS Patient</a>
+            </td>
+            <td>
+<p>This profile sets minimum expectations for a Patient resource in the context of a patient summary in an Australian context. It is based on the <a href="https://build.fhir.org/ig/hl7au/au-fhir-core/StructureDefinition-au-core-patient.html">AU Core Patient</a> profile, and applies the additional requirements from <a href="http://hl7.org/fhir/uv/ips/StructureDefinition/Patient-uv-ips">Patient (IPS)</a>.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-au-ps-practitioner.html"
+                  title="StructureDefinition/au-ps-practitioner">AU PS Practitioner</a>
+            </td>
+            <td>
+<p>This profile sets minimum expectations for a Practitioner resource in the context of a patient summary in an Australian context. It is based on the <a href="http://hl7.org.au/fhir/core/StructureDefinition/au-core-practitioner">AU Core Practitioner</a> profile, and applies the additional requirements from <a href="http://hl7.org/fhir/uv/ips/StructureDefinition/Practitioner-uv-ips">Practitioner (IPS)</a>.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-au-ps-practitionerrole.html"
+                  title="StructureDefinition/au-ps-practitionerrole">AU PS PractitionerRole</a>
+            </td>
+            <td>
+<p>This profile sets minimum expectations for a PractitionerRole resource in the context of a patient summary in an Australian context. It is based on the <a href="http://hl7.org.au/fhir/core/StructureDefinition/au-core-practitionerrole">AU Core PractitionerRole</a> profile, and applies the additional requirements from <a href="http://hl7.org/fhir/uv/ips/StructureDefinition/PractitionerRole-uv-ips">PractitionerRole (IPS)</a>.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-au-ps-procedure.html"
+                  title="StructureDefinition/au-ps-procedure">AU PS Procedure</a>
+            </td>
+            <td>
+<p>This profile sets minimum expectations for a Procedure resource in the context of a patient summary in an Australian context. It is based on the <a href="https://build.fhir.org/ig/hl7au/au-fhir-core/StructureDefinition-au-core-procedure.html">AU Core Procedure</a> profile, and applies the additional requirements from <a href="http://hl7.org/fhir/uv/ips/StructureDefinition/Procedure-uv-ips">Procedure (IPS)</a>.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-au-ps-relatedperson.html"
+                  title="StructureDefinition/au-ps-relatedperson">AU PS RelatedPerson</a>
+            </td>
+            <td>
+<p>This profile sets minimum expectations for a RelatedPerson resource in the context of a patient summary in an Australian context. It is based on the <a href="https://build.fhir.org/ig/hl7au/au-fhir-core/StructureDefinition-au-core-relatedperson.html">AU Core Related Person</a> profile, and applies the additional constraints for use in a patient summary context consistent with the profiling conventions of <a href="https://hl7.org/fhir/uv/ips/STU2/">IPS</a>.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-au-ps-smokingstatus.html"
+                  title="StructureDefinition/au-ps-smokingstatus">AU PS Smoking Status</a>
+            </td>
+            <td>
+<p>This profile sets minimum expectations for an Observation resource that represents a patient's smoking status in the context of a patient summary in an Australian context. It is based on the <a href="https://build.fhir.org/ig/hl7au/au-fhir-core/StructureDefinition-au-core-smokingstatus.html">AU Core Smoking Status</a> profile, and applies the additional requirements from <a href="http://hl7.org/fhir/uv/ips/StructureDefinition/Observation-tobaccouse-uv-ips">Observation Social History - Tobacco Use (IPS)</a>.</p>
+</td>
+         </tr>
+      </tbody>
+   </table>
+   <a name="3"> </a>
+   <h3>Example: Example Instances </h3>
+    <p>These are example instances that show what data produced and consumed by systems conforming with this implementation guide might look like.</p>
+<table class="grid">
+      <col style="width:20%"/>
+      <tbody>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Bundle-aups-basicsummary.html" title="Bundle/aups-basicsummary">Basic Summary</a>
+            </td>
+            <td>
+<p>Shows an example of a provider curated patient summary that demonstrates no known problems or disabilities, current allergies and intolerances, and current medication use. Example for the <em>AU PS Bundle</em> and <em>AU PS Composition</em> profiles. Patient: Mia Leanne Banks.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Bundle-aups-gpvisit-retrieval.html"
+                  title="Bundle/aups-gpvisit-retrieval">Jeramy 27 May</a>
+            </td>
+            <td>
+<p><a href="uc-interstate.html">Interstate GP use case</a> example. Shows an example of a patient summary authored by the patient's usual GP that was updated after a recent admission to hospital. Example for the <em>AU PS Bundle</em> and <em>AU PS Composition</em> profiles. Patient: Jeramy Ezra Banks.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Bundle-aups-referral-endoconsult-autogen.html"
+                  title="Bundle/aups-referral-endoconsult-autogen">Joyce 07 November 2024</a>
+            </td>
+            <td>
+<p><a href="uc-referral.html">Referral to Specialist and Allied Health use case</a> example. Shows an example of a patient summary containing the medical history and current medications that is automatically generated by a clinical information system and includes the most recent information. This example is digitally signed. Example for the <em>AU PS Bundle</em> and <em>AU PS Composition</em> profiles. Patient: Joyce Johnson.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Bundle-aups-referral-endoconsult-curated.html"
+                  title="Bundle/aups-referral-endoconsult-curated">Joyce 28 October</a>
+            </td>
+            <td>
+<p><a href="uc-referral.html">Referral to Specialist and Allied Health use case</a> example. Shows an example of a patient summary containing the medical history and current medications at the time of referral that was authored by the GP through curation of a generated view of the data within their clinical information system, and was attested at the time of creation of the patient summary and signed electronically. Example for the <em>AU PS Bundle</em> and <em>AU PS Composition</em> profiles. Patient: Joyce Johnson.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Bundle-aups-noknownx.html" title="Bundle/aups-noknownx">No Known X</a>
+            </td>
+            <td>
+<p>Shows an example of a patient summary that demonstrates no known problems or disabilities, no known allergies and intolerances, and no known current medications. Example for the <em>AU PS Bundle</em> and <em>AU PS Composition</em> profiles. Patient: Charlotte Morris.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Bundle-aups-section-emptyreason.html"
+                  title="Bundle/aups-section-emptyreason">Section empty reason</a>
+            </td>
+            <td>
+<p>Shows a software-assembled patient summary that demonstrates missing data for Patient.birthDate and suppressed data for Patient.gender and Patient.identifier using the Data Absent Reason extension. The system also has no information for the sections: problems, allergies, medications, and immunisations. Example for the <em>AU PS Bundle</em> and <em>AU PS Composition</em> profiles. Patient: Ronny Lawrence Irvine.</p>
+</td>
+         </tr>
+      </tbody>
+   </table>
+</div>
+
+</div>
+        </div>  <!-- /inner-wrapper -->
+      </div>  <!-- /row -->
+    </div>  <!-- /container -->
+  </div>  <!-- /segment-content -->
+
+  <script type="text/javascript" src="assets/js/jquery.js"> </script>     <!-- note keep space here, otherwise it will be transformed to empty tag -> fails -->
+  <script type="text/javascript" src="assets/js/jquery-ui.min.js"> </script>
+
+  <script type="text/javascript" src="assets/js/window-hash.js"> </script>
+  <a name="bottom"> </a>
+  <div id="segment-footer" igtool="footer" class="segment">  <!-- segment-footer -->
+    <div class="container">  <!-- container -->
+
+      <div class="inner-wrapper">
+        <p>
+          IG &#169; 2024+ <a style="color:var(--footer-hyperlink-text-color)" href="https://confluence.hl7.org/display/HAFWG">HL7 Australia</a>.  Package hl7.fhir.au.ps#1.0.0-ci-build based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Fri, Jun 19, 2026 03:09+0000">2026-06-19</span>
+          <br/>
+          <span style="color: var(--footer-highlight-text-color)">
+                      Links: <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Table of Contents</a> |
+                 <a style="color: var(--footer-hyperlink-text-color)" href="qa.html">QA Report</a>
+                 
+                
+                 | <a style="color: #81BEF7" target="_blank" href="http://hl7.org.au/fhir/ps/history.html">Version History</a> |
+                 <a style="color: #81BEF7" rel="license" href="http://hl7.org/fhir/R4/license.html"><img style="border-style: none;" alt="CC0" src="cc0.png"/></a> |
+                 <a style="color: #81BEF7" target="_blank" href="http://hl7.org/fhir-issues">Propose a change</a>
+
+          </span>
+        </p>
+      </div>  <!-- /inner-wrapper -->
+    </div>  <!-- /container -->
+  </div>  <!-- /segment-footer -->
+  
+  <div id="segment-post-footer" class="segment hidden">  <!-- segment-post-footer -->
+    <div class="container">  <!-- container -->
+    </div>  <!-- /container -->
+  </div>  <!-- /segment-post-footer -->
+
+  <!-- JS and analytics only. -->
+  <!-- Bootstrap core JavaScript
+  ================================================== -->
+  <!-- Placed at the end of the document so the pages load faster -->
+  <script type="text/javascript" src="assets/js/bootstrap.min.js"> </script>
+  <script type="text/javascript" src="assets/js/respond.min.js"> </script>
+  <script type="text/javascript" src="assets/js/anchor.min.js"> </script>
+  <script type="text/javascript" src="assets/js/clipboard.min.js"> </script>
+  <script type="text/javascript" src="assets/js/clipboard-btn.js"> </script>
+  <script type="text/javascript" src="assets/js/anchor-hover.js"> </script>
+  <!-- Analytics Below
+  ================================================== -->
+  </body>
+</html>
+

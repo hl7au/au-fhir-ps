@@ -1,0 +1,23 @@
+{
+  "resourceType" : "ValueSet",
+  "id" : "b31ca674-365d-4488-9949-cbbeff1c9145-125",
+  "url" : "http://hl7.org/fhir/comparison/ValueSet/b31ca674-365d-4488-9949-cbbeff1c9145-125",
+  "name" : "UnionActSubstanceAdminSubstitutionCodeAndActSubstanceAdminSubstitutionCode",
+  "title" : "Union of ActSubstanceAdminSubstitutionCode And ActSubstanceAdminSubstitutionCode",
+  "status" : "active",
+  "date" : "2026-06-19T03:13:12+00:00",
+  "compose" : {
+    "include" : [{
+      "filter" : [{
+        "property" : "concept",
+        "op" : "is-a",
+        "value" : "_ActSubstanceAdminSubstitutionCode"
+      }]
+    }],
+    "exclude" : [{
+      "concept" : [{
+        "code" : "_ActSubstanceAdminSubstitutionCode"
+      }]
+    }]
+  }
+}

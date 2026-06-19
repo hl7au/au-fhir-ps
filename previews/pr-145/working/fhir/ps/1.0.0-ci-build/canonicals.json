@@ -1,0 +1,140 @@
+[{
+  "id" : "au-ps-actor-consumer",
+  "type" : "ActorDefinition",
+  "url" : "http://hl7.org.au/fhir/ps/ActorDefinition/au-ps-actor-consumer",
+  "version" : "1.0.0-ci-build",
+  "name" : "AUPSConsumer"
+},
+{
+  "id" : "au-ps-actor-producer",
+  "type" : "ActorDefinition",
+  "url" : "http://hl7.org.au/fhir/ps/ActorDefinition/au-ps-actor-producer",
+  "version" : "1.0.0-ci-build",
+  "name" : "AUPSProducer"
+},
+{
+  "id" : "hl7.fhir.au.ps",
+  "type" : "ImplementationGuide",
+  "url" : "http://hl7.org.au/fhir/ps/ImplementationGuide/hl7.fhir.au.ps",
+  "version" : "1.0.0-ci-build",
+  "name" : "AUPatientSummaryImplementationGuide"
+},
+{
+  "id" : "au-ps-allergyintolerance",
+  "type" : "StructureDefinition",
+  "url" : "http://hl7.org.au/fhir/ps/StructureDefinition/au-ps-allergyintolerance",
+  "version" : "1.0.0-ci-build",
+  "name" : "AUPSAllergyIntolerance"
+},
+{
+  "id" : "au-ps-bundle",
+  "type" : "StructureDefinition",
+  "url" : "http://hl7.org.au/fhir/ps/StructureDefinition/au-ps-bundle",
+  "version" : "1.0.0-ci-build",
+  "name" : "AUPSBundle"
+},
+{
+  "id" : "au-ps-composition",
+  "type" : "StructureDefinition",
+  "url" : "http://hl7.org.au/fhir/ps/StructureDefinition/au-ps-composition",
+  "version" : "1.0.0-ci-build",
+  "name" : "AUPSComposition"
+},
+{
+  "id" : "au-ps-condition",
+  "type" : "StructureDefinition",
+  "url" : "http://hl7.org.au/fhir/ps/StructureDefinition/au-ps-condition",
+  "version" : "1.0.0-ci-build",
+  "name" : "AUPSCondition"
+},
+{
+  "id" : "au-ps-diagnosticresult-path",
+  "type" : "StructureDefinition",
+  "url" : "http://hl7.org.au/fhir/ps/StructureDefinition/au-ps-diagnosticresult-path",
+  "version" : "1.0.0-ci-build",
+  "name" : "AUPSPathologyResult"
+},
+{
+  "id" : "au-ps-encounter",
+  "type" : "StructureDefinition",
+  "url" : "http://hl7.org.au/fhir/ps/StructureDefinition/au-ps-encounter",
+  "version" : "1.0.0-ci-build",
+  "name" : "AUPSEncounter"
+},
+{
+  "id" : "au-ps-immunization",
+  "type" : "StructureDefinition",
+  "url" : "http://hl7.org.au/fhir/ps/StructureDefinition/au-ps-immunization",
+  "version" : "1.0.0-ci-build",
+  "name" : "AUPSImmunization"
+},
+{
+  "id" : "au-ps-medication",
+  "type" : "StructureDefinition",
+  "url" : "http://hl7.org.au/fhir/ps/StructureDefinition/au-ps-medication",
+  "version" : "1.0.0-ci-build",
+  "name" : "AUPSMedication"
+},
+{
+  "id" : "au-ps-medicationrequest",
+  "type" : "StructureDefinition",
+  "url" : "http://hl7.org.au/fhir/ps/StructureDefinition/au-ps-medicationrequest",
+  "version" : "1.0.0-ci-build",
+  "name" : "AUPSMedicationRequest"
+},
+{
+  "id" : "au-ps-medicationstatement",
+  "type" : "StructureDefinition",
+  "url" : "http://hl7.org.au/fhir/ps/StructureDefinition/au-ps-medicationstatement",
+  "version" : "1.0.0-ci-build",
+  "name" : "AUPSMedicationStatement"
+},
+{
+  "id" : "au-ps-organization",
+  "type" : "StructureDefinition",
+  "url" : "http://hl7.org.au/fhir/ps/StructureDefinition/au-ps-organization",
+  "version" : "1.0.0-ci-build",
+  "name" : "AUPSOrganization"
+},
+{
+  "id" : "au-ps-patient",
+  "type" : "StructureDefinition",
+  "url" : "http://hl7.org.au/fhir/ps/StructureDefinition/au-ps-patient",
+  "version" : "1.0.0-ci-build",
+  "name" : "AUPSPatient"
+},
+{
+  "id" : "au-ps-practitioner",
+  "type" : "StructureDefinition",
+  "url" : "http://hl7.org.au/fhir/ps/StructureDefinition/au-ps-practitioner",
+  "version" : "1.0.0-ci-build",
+  "name" : "AUPSPractitioner"
+},
+{
+  "id" : "au-ps-practitionerrole",
+  "type" : "StructureDefinition",
+  "url" : "http://hl7.org.au/fhir/ps/StructureDefinition/au-ps-practitionerrole",
+  "version" : "1.0.0-ci-build",
+  "name" : "AUPSPractitionerRole"
+},
+{
+  "id" : "au-ps-procedure",
+  "type" : "StructureDefinition",
+  "url" : "http://hl7.org.au/fhir/ps/StructureDefinition/au-ps-procedure",
+  "version" : "1.0.0-ci-build",
+  "name" : "AUPSProcedure"
+},
+{
+  "id" : "au-ps-relatedperson",
+  "type" : "StructureDefinition",
+  "url" : "http://hl7.org.au/fhir/ps/StructureDefinition/au-ps-relatedperson",
+  "version" : "1.0.0-ci-build",
+  "name" : "AUPSRelatedPerson"
+},
+{
+  "id" : "au-ps-smokingstatus",
+  "type" : "StructureDefinition",
+  "url" : "http://hl7.org.au/fhir/ps/StructureDefinition/au-ps-smokingstatus",
+  "version" : "1.0.0-ci-build",
+  "name" : "AUPSSmokingStatus"
+}]
