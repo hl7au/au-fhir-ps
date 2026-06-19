@@ -6,9 +6,9 @@
 
 A patient summary is a standardised collection of patient information. Rather than an entire patient health record, it is the minimum necessary and sufficient data to ensure safe patient care. Patient summaries can enhance patient safety by ensuring critical information is readily accessible when it’s needed most and enables clinicians across different health sectors and health domains to provide more informed, consistent care.
 
-The [HL7 International Patient Summary FHIR Implementation Guide](https://hl7.org/fhir/uv/ips/STU2/) (the [IPS](https://hl7.org/fhir/uv/ips/STU2/)) is an internationally recognised patient summary specification that is an implementation of the ISO 27269:2021 Health informatics — International patient summary standard. In 2021, the G7 nations committed to working towards the adoption of the IPS with several international efforts currently underway to drive adoption, including the European Union, USA, Canada and New Zealand. Multinational vendors with presence in Australia are at various stages of implementation of the IPS.
+The [HL7 International Patient Summary FHIR Implementation Guide](https://hl7.org/fhir/uv/ips/STU2/) (the [IPS](https://hl7.org/fhir/uv/ips/STU2/)) is an internationally recognised patient summary specification that is an implementation of the ISO 27269:2021 Health informatics — International patient summary standard. In 2021, the G7 nations committed to working towards the adoption of the IPS with several international efforts currently underway to drive adoption, including the European Union, USA, Canada and New Zealand.
 
-The AU PS will support the consumer on their healthcare journey, providing the consumer and their healthcare providers with timely and current access to relevant health information. It will provide a future pathway for individuals to share their healthcare information when travelling internationally.
+The AU PS will support a consumer on their healthcare journey, providing the consumer and their healthcare providers with timely and current access to relevant health information. It will provide a future pathway for individuals to share their healthcare information when travelling internationally.
 
 An AU PS is intended to:<a name="aupintendedto">
 * be an interoperable set of clinical data - it is an electronic health record extract containing essential healthcare information about a consumer
@@ -28,7 +28,7 @@ A sample set of [Consumer Journeys](https://sparked.csiro.au/index.php/products-
 ### Structure of the AU PS
 AU PS is specified in this guide as an HL7 FHIR document (a Bundle including a Composition), composed by a set of potentially reusable "minimal" data blocks (the AU PS profiles).
 
-Based on [IPS](https://hl7.org/fhir/uv/ips/STU2/) and [AU Core](https://build.fhir.org/ig/hl7au/au-fhir-core), AU PS defines a patient summary in the context of providing information to downstream providers. While profiled sections can have content that reflect intentions or orders of clinical care, the patient summary is meant as an informative document and is not intended to be directly actionable. For example, a MedicationRequest resource in the Medication Summary section or a CarePlan resource in the Plan of Care section, is not intended to provide authorisation for fulfilment or actioning from the AU PS (or IPS) document.
+Based on [IPS](https://hl7.org/fhir/uv/ips/STU2/) and [AU Core](https://build.fhir.org/ig/hl7au/au-fhir-core), AU PS defines a patient summary in the context of providing information to downstream providers. While profiled sections can have content that reflect intentions or orders of clinical care, the patient summary is meant as an informative document and is not intended to be directly actionable or machine processable as an order. For example, a MedicationRequest resource in the Medication Summary section or a CarePlan resource in the Plan of Care section, is not intended to provide authorisation for fulfilment or actioning from the AU PS (or IPS) document.
 
 The AU PS Document shares the same structure as an IPS, shown below.
 
@@ -59,7 +59,7 @@ The AU PS is based on [IPS](https://hl7.org/fhir/uv/ips/STU2//) and [AU Core](ht
 *Figure 3: The AU PS - a valid AU PS document is a valid IPS document*
 <br/>
 
-While AU PS has no variance (i.e. fully compliant) from [IPS Implementation Guide 2.0.0](https://hl7.org/fhir/uv/ips/STU2/), AU PS does impose requirements additional to IPS to support requirements in the Australian healthcare context (these primarily come from AUCDI and AU Core). These additional requirements are intentionally limited to maximise interoperability with IPS-aware systems. See [Comparison with other national and international IGs](comparison.html) and [Relationship with other IGs](relationship.html) for information on the national and international standards context of AU PS.
+While AU PS has no variance (i.e. fully compliant) from [IPS Implementation Guide 2.0.0](https://hl7.org/fhir/uv/ips/STU2/), AU PS does impose requirements additional to IPS to support requirements in the Australian healthcare context (these primarily come from AUCDI and AU Core). These additional requirements are intentionally limited to maximise interoperability with IPS-aware systems. See [Relationship with other IGs](relationship.html) and [Comparison with other national and international IGs](comparison.html) for information on the national and international standards context of AU PS.
 
 Additional requirements for the Australian healthcare context include:
 * additionally profiled resources
@@ -68,7 +68,7 @@ Additional requirements for the Australian healthcare context include:
 * different and sometimes stronger value set bindings
 * strengthened cardinality
 * additional fixed values
-* additional business rules
+* additional business rules (i.e. invariants)
 * clarified expectations for missing data, empty sections, and suppressed data
 
 A summary of these additional requirements is provided in the sections below. While every effort has been made to ensure this page is consistent with the requirements of AU PS this is not a normative part of the specification.
@@ -104,7 +104,7 @@ AU PS:
 * adopts terminology bound in AU Core in preference to IPS where the IPS binding strength is equivalent or weaker.
 * localised terminology bindings are present in the additionally profiled resources and *Must Support* extensions.
 * defines support for multiple terminologies for medicines and vaccines, see the table in the section [Must Support - Multiple Terminologies](general-requirements.html#must-support---multiple-terminologies).
-* applies a stronger binding strength (e.g. preferred -> extensible) for some *Must Support* elements (the binding strength is inherited from AU Core).
+* applies a stronger binding strength (e.g. preferred -> extensible) for some *Must Support* elements (that stronger binding strength is inherited from AU Core).
  
 In many cases the difference between value sets bound in AU Core and IPS is the IPS use of international SNOMED CT concepts versus the AU Core use of SNOMED CT-AU concepts and international SNOMED CT concepts. Typically these Australian value sets are bound as [preferred](https://hl7.org/fhir/R4/terminologies.html#preferred) in AU PS profiles; these are recommendations for use in the Australian healthcare context but do not prevent other coding or text only representations. 
 
