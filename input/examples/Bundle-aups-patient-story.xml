@@ -71,7 +71,7 @@
                     <li>My prostate cancer has come back and spread to my bones</li>
                     <li>Trouble with my digestion</li>
                     <li>Problems with my skin</li>
-                    <li>Getting infections more than I used to</li>
+                    <li>Infections are hard to fight off</li>
                     <li>Not as sharp mentally as I used to be</li>
                     <li>Bad pain in my back and stomach</li>
                   </ul>
@@ -187,11 +187,11 @@
           <value value="0491571266"/>
           <use value="mobile"/>
         </telecom>
-        <gender value="male"/>
+        <gender value="other"/>
         <birthDate value="1942-07-11"/>
         <address>
           <use value="home"/>
-          <line value="12 Phoenix Lane"/>
+          <line value="12 Pheonix Lane"/>
           <city value="Walliebum"/>
           <state value="QLD"/>
           <postalCode value="4655"/>
@@ -307,7 +307,7 @@
             </coding>
         </category>
         <code>
-          <text value="Getting infections more than I used to"/>
+          <text value="Infections are hard to fight off"/>
         </code>
         <subject>
             <reference value="urn:uuid:f88cc963-56bd-42e7-930d-3b18db0fa723"/>
