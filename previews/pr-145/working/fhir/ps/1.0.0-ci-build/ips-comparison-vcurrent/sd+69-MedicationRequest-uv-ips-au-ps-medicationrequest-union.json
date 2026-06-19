@@ -1,11 +1,11 @@
 {
   "resourceType" : "StructureDefinition",
-  "id" : "b31ca674-365d-4488-9949-cbbeff1c9145-107",
-  "url" : "http://hl7.org/fhir/comparison/StructureDefinition/b31ca674-365d-4488-9949-cbbeff1c9145-107",
+  "id" : "c305d4d0-10a6-4342-a34c-cc8f7ac6cb0f-107",
+  "url" : "http://hl7.org/fhir/comparison/StructureDefinition/c305d4d0-10a6-4342-a34c-cc8f7ac6cb0f-107",
   "name" : "UnionMedicationRequestIPSAndAUPSMedicationRequest",
   "title" : "Union of MedicationRequest (IPS) And AU PS MedicationRequest",
   "status" : "active",
-  "date" : "2026-06-19T03:13:12+00:00",
+  "date" : "2026-06-19T08:10:35+00:00",
   "jurisdiction" : [{
     "coding" : [{
       "system" : "http://unstats.un.org/unsd/methods/m49/m49.htm",
@@ -697,7 +697,7 @@
       "binding" : {
         "strength" : "preferred",
         "description" : "left: SNOMED CT medications (Medicinal product) or a code for absent/unknown medication; right: A coded concept identifying substance or product that can be ordered.",
-        "valueSet" : "http://hl7.org/fhir/comparison/ValueSet/b31ca674-365d-4488-9949-cbbeff1c9145-98"
+        "valueSet" : "http://hl7.org/fhir/comparison/ValueSet/c305d4d0-10a6-4342-a34c-cc8f7ac6cb0f-98"
       },
       "mapping" : [{
         "identity" : "workflow",
@@ -1267,7 +1267,7 @@
       "binding" : {
         "strength" : "preferred",
         "description" : "A coded concept indicating why the medication was ordered.",
-        "valueSet" : "http://hl7.org/fhir/comparison/ValueSet/b31ca674-365d-4488-9949-cbbeff1c9145-110"
+        "valueSet" : "http://hl7.org/fhir/comparison/ValueSet/c305d4d0-10a6-4342-a34c-cc8f7ac6cb0f-110"
       },
       "mapping" : [{
         "identity" : "workflow",
@@ -1801,7 +1801,7 @@
       "binding" : {
         "strength" : "preferred",
         "description" : "A coded concept identifying additional instructions such as \"take with water\" or \"avoid operating heavy machinery\".",
-        "valueSet" : "http://hl7.org/fhir/comparison/ValueSet/b31ca674-365d-4488-9949-cbbeff1c9145-113"
+        "valueSet" : "http://hl7.org/fhir/comparison/ValueSet/c305d4d0-10a6-4342-a34c-cc8f7ac6cb0f-113"
       },
       "mapping" : [{
         "identity" : "v2",
@@ -1904,7 +1904,7 @@
       "binding" : {
         "strength" : "preferred",
         "description" : "A coded concept identifying the precondition that should be met or evaluated prior to consuming or administering a medication dose.  For example \"pain\", \"30 minutes prior to sexual intercourse\", \"on flare-up\" etc.",
-        "valueSet" : "http://hl7.org/fhir/comparison/ValueSet/b31ca674-365d-4488-9949-cbbeff1c9145-116"
+        "valueSet" : "http://hl7.org/fhir/comparison/ValueSet/c305d4d0-10a6-4342-a34c-cc8f7ac6cb0f-116"
       },
       "mapping" : [{
         "identity" : "v2",
@@ -1943,7 +1943,7 @@
       "binding" : {
         "strength" : "preferred",
         "description" : "A coded concept describing the site location the medicine enters into or onto the body.",
-        "valueSet" : "http://hl7.org/fhir/comparison/ValueSet/b31ca674-365d-4488-9949-cbbeff1c9145-119"
+        "valueSet" : "http://hl7.org/fhir/comparison/ValueSet/c305d4d0-10a6-4342-a34c-cc8f7ac6cb0f-119"
       },
       "mapping" : [{
         "identity" : "v2",
@@ -1981,7 +1981,7 @@
       "binding" : {
         "strength" : "preferred",
         "description" : "SNOMED Route Terms",
-        "valueSet" : "http://hl7.org/fhir/comparison/ValueSet/b31ca674-365d-4488-9949-cbbeff1c9145-29"
+        "valueSet" : "http://hl7.org/fhir/comparison/ValueSet/c305d4d0-10a6-4342-a34c-cc8f7ac6cb0f-29"
       },
       "mapping" : [{
         "identity" : "v2",
@@ -2020,7 +2020,7 @@
       "binding" : {
         "strength" : "preferred",
         "description" : "A coded concept describing the technique by which the medicine is administered.",
-        "valueSet" : "http://hl7.org/fhir/comparison/ValueSet/b31ca674-365d-4488-9949-cbbeff1c9145-122"
+        "valueSet" : "http://hl7.org/fhir/comparison/ValueSet/c305d4d0-10a6-4342-a34c-cc8f7ac6cb0f-122"
       },
       "mapping" : [{
         "identity" : "v2",
@@ -3037,7 +3037,7 @@
       "binding" : {
         "strength" : "example",
         "description" : "Identifies the type of substitution allowed.",
-        "valueSet" : "http://hl7.org/fhir/comparison/ValueSet/b31ca674-365d-4488-9949-cbbeff1c9145-125"
+        "valueSet" : "http://hl7.org/fhir/comparison/ValueSet/c305d4d0-10a6-4342-a34c-cc8f7ac6cb0f-125"
       },
       "mapping" : [{
         "identity" : "script10.6",
@@ -3078,7 +3078,7 @@
       "binding" : {
         "strength" : "preferred",
         "description" : "A coded concept describing the reason that a different medication should (or should not) be substituted from what was prescribed.",
-        "valueSet" : "http://hl7.org/fhir/comparison/ValueSet/b31ca674-365d-4488-9949-cbbeff1c9145-128"
+        "valueSet" : "http://hl7.org/fhir/comparison/ValueSet/c305d4d0-10a6-4342-a34c-cc8f7ac6cb0f-128"
       },
       "mapping" : [{
         "identity" : "script10.6",

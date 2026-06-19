@@ -70,7 +70,7 @@ Other representations of profile: [CSV](StructureDefinition-au-ps-practitionerro
   "name" : "AUPSPractitionerRole",
   "title" : "AU PS PractitionerRole",
   "status" : "active",
-  "date" : "2026-06-19T03:09:13+00:00",
+  "date" : "2026-06-19T08:07:30+00:00",
   "publisher" : "HL7 Australia",
   "contact" : [{
     "name" : "HL7 Australia FHIR Work Group",

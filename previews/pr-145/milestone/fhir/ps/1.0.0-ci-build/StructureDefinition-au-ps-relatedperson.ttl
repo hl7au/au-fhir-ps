@@ -39,7 +39,7 @@
   fhir:name [ fhir:v "AUPSRelatedPerson"] ; # 
   fhir:title [ fhir:v "AU PS RelatedPerson"] ; # 
   fhir:status [ fhir:v "active"] ; # 
-  fhir:date [ fhir:v "2026-06-19T03:09:13+00:00"^^xsd:dateTime] ; # 
+  fhir:date [ fhir:v "2026-06-19T08:07:30+00:00"^^xsd:dateTime] ; # 
   fhir:publisher [ fhir:v "HL7 Australia"] ; # 
   fhir:contact ( [
      fhir:name [ fhir:v "HL7 Australia FHIR Work Group" ] ;

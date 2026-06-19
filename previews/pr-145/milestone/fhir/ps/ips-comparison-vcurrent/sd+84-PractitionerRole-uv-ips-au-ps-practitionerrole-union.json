@@ -1,11 +1,11 @@
 {
   "resourceType" : "StructureDefinition",
-  "id" : "b31ca674-365d-4488-9949-cbbeff1c9145-152",
-  "url" : "http://hl7.org/fhir/comparison/StructureDefinition/b31ca674-365d-4488-9949-cbbeff1c9145-152",
+  "id" : "c305d4d0-10a6-4342-a34c-cc8f7ac6cb0f-152",
+  "url" : "http://hl7.org/fhir/comparison/StructureDefinition/c305d4d0-10a6-4342-a34c-cc8f7ac6cb0f-152",
   "name" : "UnionPractitionerRoleUvIpsAndAUPSPractitionerRole",
   "title" : "Union of PractitionerRole (IPS) And AU PS PractitionerRole",
   "status" : "active",
-  "date" : "2026-06-19T03:13:12+00:00",
+  "date" : "2026-06-19T08:10:35+00:00",
   "jurisdiction" : [{
     "coding" : [{
       "system" : "http://unstats.un.org/unsd/methods/m49/m49.htm",
@@ -554,7 +554,7 @@
       "binding" : {
         "strength" : "preferred",
         "description" : "Healthcare professional role codes from International Standard Classification of Occupations (ISCO).",
-        "valueSet" : "http://hl7.org/fhir/comparison/ValueSet/b31ca674-365d-4488-9949-cbbeff1c9145-155"
+        "valueSet" : "http://hl7.org/fhir/comparison/ValueSet/c305d4d0-10a6-4342-a34c-cc8f7ac6cb0f-155"
       },
       "mapping" : [{
         "identity" : "v2",
@@ -595,7 +595,7 @@
       "binding" : {
         "strength" : "preferred",
         "description" : "Specific specialty associated with the agency.",
-        "valueSet" : "http://hl7.org/fhir/comparison/ValueSet/b31ca674-365d-4488-9949-cbbeff1c9145-158"
+        "valueSet" : "http://hl7.org/fhir/comparison/ValueSet/c305d4d0-10a6-4342-a34c-cc8f7ac6cb0f-158"
       },
       "mapping" : [{
         "identity" : "v2",

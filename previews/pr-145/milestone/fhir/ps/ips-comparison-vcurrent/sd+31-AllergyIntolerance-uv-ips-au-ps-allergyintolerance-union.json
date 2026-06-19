@@ -1,11 +1,11 @@
 {
   "resourceType" : "StructureDefinition",
-  "id" : "b31ca674-365d-4488-9949-cbbeff1c9145-2",
-  "url" : "http://hl7.org/fhir/comparison/StructureDefinition/b31ca674-365d-4488-9949-cbbeff1c9145-2",
+  "id" : "c305d4d0-10a6-4342-a34c-cc8f7ac6cb0f-2",
+  "url" : "http://hl7.org/fhir/comparison/StructureDefinition/c305d4d0-10a6-4342-a34c-cc8f7ac6cb0f-2",
   "name" : "UnionAllergyIntoleranceUvIpsAndAUPSAllergyIntolerance",
   "title" : "Union of AllergyIntolerance (IPS) And AU PS AllergyIntolerance",
   "status" : "active",
-  "date" : "2026-06-19T03:13:12+00:00",
+  "date" : "2026-06-19T08:10:35+00:00",
   "jurisdiction" : [{
     "coding" : [{
       "system" : "http://unstats.un.org/unsd/methods/m49/m49.htm",
@@ -643,7 +643,7 @@
       "binding" : {
         "strength" : "extensible",
         "description" : "Type of the substance/product, allergy or intolerance condition or a code for absent/unknown allergy.",
-        "valueSet" : "http://hl7.org/fhir/comparison/ValueSet/b31ca674-365d-4488-9949-cbbeff1c9145-11"
+        "valueSet" : "http://hl7.org/fhir/comparison/ValueSet/c305d4d0-10a6-4342-a34c-cc8f7ac6cb0f-11"
       },
       "mapping" : [{
         "identity" : "w5",
@@ -1300,7 +1300,7 @@
       "binding" : {
         "strength" : "preferred",
         "description" : "Codes defining the type of the substance (including pharmaceutical products).",
-        "valueSet" : "http://hl7.org/fhir/comparison/ValueSet/b31ca674-365d-4488-9949-cbbeff1c9145-23"
+        "valueSet" : "http://hl7.org/fhir/comparison/ValueSet/c305d4d0-10a6-4342-a34c-cc8f7ac6cb0f-23"
       },
       "mapping" : [{
         "identity" : "rim",
@@ -1337,7 +1337,7 @@
       "binding" : {
         "strength" : "preferred",
         "description" : "Code for the allergy or intolerance reaction manifestation from SNOMED CT.",
-        "valueSet" : "http://hl7.org/fhir/comparison/ValueSet/b31ca674-365d-4488-9949-cbbeff1c9145-26"
+        "valueSet" : "http://hl7.org/fhir/comparison/ValueSet/c305d4d0-10a6-4342-a34c-cc8f7ac6cb0f-26"
       },
       "mapping" : [{
         "identity" : "v2",
@@ -1472,7 +1472,7 @@
       "binding" : {
         "strength" : "preferred",
         "description" : "A coded concept describing the route or physiological path of administration of a therapeutic agent into or onto the body of a subject.",
-        "valueSet" : "http://hl7.org/fhir/comparison/ValueSet/b31ca674-365d-4488-9949-cbbeff1c9145-29"
+        "valueSet" : "http://hl7.org/fhir/comparison/ValueSet/c305d4d0-10a6-4342-a34c-cc8f7ac6cb0f-29"
       },
       "mapping" : [{
         "identity" : "rim",

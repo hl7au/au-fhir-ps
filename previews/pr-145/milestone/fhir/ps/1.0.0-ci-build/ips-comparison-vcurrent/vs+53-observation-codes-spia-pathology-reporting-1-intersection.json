@@ -1,9 +1,9 @@
 {
   "resourceType" : "ValueSet",
-  "id" : "b31ca674-365d-4488-9949-cbbeff1c9145-66",
-  "url" : "http://hl7.org/fhir/comparison/ValueSet/b31ca674-365d-4488-9949-cbbeff1c9145-66",
+  "id" : "c305d4d0-10a6-4342-a34c-cc8f7ac6cb0f-66",
+  "url" : "http://hl7.org/fhir/comparison/ValueSet/c305d4d0-10a6-4342-a34c-cc8f7ac6cb0f-66",
   "name" : "IntersectionLOINCCodesAndRCPASPIAPathologyReporting",
   "title" : "Intersection of LOINC Codes And RCPA SPIA Pathology Reporting",
   "status" : "draft",
-  "date" : "2026-06-19T03:13:12+00:00"
+  "date" : "2026-06-19T08:10:35+00:00"
 }

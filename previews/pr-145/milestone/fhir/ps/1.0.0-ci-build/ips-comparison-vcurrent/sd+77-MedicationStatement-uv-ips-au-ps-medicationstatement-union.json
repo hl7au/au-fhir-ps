@@ -1,11 +1,11 @@
 {
   "resourceType" : "StructureDefinition",
-  "id" : "b31ca674-365d-4488-9949-cbbeff1c9145-131",
-  "url" : "http://hl7.org/fhir/comparison/StructureDefinition/b31ca674-365d-4488-9949-cbbeff1c9145-131",
+  "id" : "c305d4d0-10a6-4342-a34c-cc8f7ac6cb0f-131",
+  "url" : "http://hl7.org/fhir/comparison/StructureDefinition/c305d4d0-10a6-4342-a34c-cc8f7ac6cb0f-131",
   "name" : "UnionMedicationStatementIPSAndAUPSMedicationStatement",
   "title" : "Union of MedicationStatement (IPS) And AU PS MedicationStatement",
   "status" : "active",
-  "date" : "2026-06-19T03:13:12+00:00",
+  "date" : "2026-06-19T08:10:35+00:00",
   "jurisdiction" : [{
     "coding" : [{
       "system" : "http://unstats.un.org/unsd/methods/m49/m49.htm",
@@ -601,7 +601,7 @@
       "binding" : {
         "strength" : "preferred",
         "description" : "left: SNOMED CT medications (Medicinal product) or a code for absent/unknown medication; right: A coded concept identifying the substance or product being taken.",
-        "valueSet" : "http://hl7.org/fhir/comparison/ValueSet/b31ca674-365d-4488-9949-cbbeff1c9145-98"
+        "valueSet" : "http://hl7.org/fhir/comparison/ValueSet/c305d4d0-10a6-4342-a34c-cc8f7ac6cb0f-98"
       },
       "mapping" : [{
         "identity" : "workflow",
@@ -1047,7 +1047,7 @@
       "binding" : {
         "strength" : "preferred",
         "description" : "A coded concept identifying why the medication is being taken.",
-        "valueSet" : "http://hl7.org/fhir/comparison/ValueSet/b31ca674-365d-4488-9949-cbbeff1c9145-134"
+        "valueSet" : "http://hl7.org/fhir/comparison/ValueSet/c305d4d0-10a6-4342-a34c-cc8f7ac6cb0f-134"
       },
       "mapping" : [{
         "identity" : "workflow",
@@ -1365,7 +1365,7 @@
       "binding" : {
         "strength" : "preferred",
         "description" : "A coded concept identifying additional instructions such as \"take with water\" or \"avoid operating heavy machinery\".",
-        "valueSet" : "http://hl7.org/fhir/comparison/ValueSet/b31ca674-365d-4488-9949-cbbeff1c9145-113"
+        "valueSet" : "http://hl7.org/fhir/comparison/ValueSet/c305d4d0-10a6-4342-a34c-cc8f7ac6cb0f-113"
       },
       "mapping" : [{
         "identity" : "v2",
@@ -1468,7 +1468,7 @@
       "binding" : {
         "strength" : "preferred",
         "description" : "A coded concept identifying the precondition that should be met or evaluated prior to consuming or administering a medication dose.  For example \"pain\", \"30 minutes prior to sexual intercourse\", \"on flare-up\" etc.",
-        "valueSet" : "http://hl7.org/fhir/comparison/ValueSet/b31ca674-365d-4488-9949-cbbeff1c9145-116"
+        "valueSet" : "http://hl7.org/fhir/comparison/ValueSet/c305d4d0-10a6-4342-a34c-cc8f7ac6cb0f-116"
       },
       "mapping" : [{
         "identity" : "v2",
@@ -1507,7 +1507,7 @@
       "binding" : {
         "strength" : "preferred",
         "description" : "A coded concept describing the site location the medicine enters into or onto the body.",
-        "valueSet" : "http://hl7.org/fhir/comparison/ValueSet/b31ca674-365d-4488-9949-cbbeff1c9145-119"
+        "valueSet" : "http://hl7.org/fhir/comparison/ValueSet/c305d4d0-10a6-4342-a34c-cc8f7ac6cb0f-119"
       },
       "mapping" : [{
         "identity" : "v2",
@@ -1545,7 +1545,7 @@
       "binding" : {
         "strength" : "preferred",
         "description" : "SNOMED Route Terms",
-        "valueSet" : "http://hl7.org/fhir/comparison/ValueSet/b31ca674-365d-4488-9949-cbbeff1c9145-29"
+        "valueSet" : "http://hl7.org/fhir/comparison/ValueSet/c305d4d0-10a6-4342-a34c-cc8f7ac6cb0f-29"
       },
       "mapping" : [{
         "identity" : "v2",
@@ -1584,7 +1584,7 @@
       "binding" : {
         "strength" : "preferred",
         "description" : "A coded concept describing the technique by which the medicine is administered.",
-        "valueSet" : "http://hl7.org/fhir/comparison/ValueSet/b31ca674-365d-4488-9949-cbbeff1c9145-122"
+        "valueSet" : "http://hl7.org/fhir/comparison/ValueSet/c305d4d0-10a6-4342-a34c-cc8f7ac6cb0f-122"
       },
       "mapping" : [{
         "identity" : "v2",

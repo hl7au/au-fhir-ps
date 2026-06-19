@@ -1,11 +1,11 @@
 {
   "resourceType" : "StructureDefinition",
-  "id" : "b31ca674-365d-4488-9949-cbbeff1c9145-41",
-  "url" : "http://hl7.org/fhir/comparison/StructureDefinition/b31ca674-365d-4488-9949-cbbeff1c9145-41",
+  "id" : "c305d4d0-10a6-4342-a34c-cc8f7ac6cb0f-41",
+  "url" : "http://hl7.org/fhir/comparison/StructureDefinition/c305d4d0-10a6-4342-a34c-cc8f7ac6cb0f-41",
   "name" : "UnionConditionUvIpsAndAUPSCondition",
   "title" : "Union of Condition (IPS) And AU PS Condition",
   "status" : "active",
-  "date" : "2026-06-19T03:13:12+00:00",
+  "date" : "2026-06-19T08:10:35+00:00",
   "jurisdiction" : [{
     "coding" : [{
       "system" : "http://unstats.un.org/unsd/methods/m49/m49.htm",
@@ -561,7 +561,7 @@
       "binding" : {
         "strength" : "extensible",
         "description" : "A category assigned to the condition.",
-        "valueSet" : "http://hl7.org/fhir/comparison/ValueSet/b31ca674-365d-4488-9949-cbbeff1c9145-44"
+        "valueSet" : "http://hl7.org/fhir/comparison/ValueSet/c305d4d0-10a6-4342-a34c-cc8f7ac6cb0f-44"
       },
       "mapping" : [{
         "identity" : "w5",
@@ -607,7 +607,7 @@
       "isSummary" : false,
       "binding" : {
         "strength" : "extensible",
-        "valueSet" : "http://hl7.org/fhir/comparison/ValueSet/b31ca674-365d-4488-9949-cbbeff1c9145-47"
+        "valueSet" : "http://hl7.org/fhir/comparison/ValueSet/c305d4d0-10a6-4342-a34c-cc8f7ac6cb0f-47"
       },
       "mapping" : [{
         "identity" : "w5",
@@ -659,7 +659,7 @@
       "binding" : {
         "strength" : "extensible",
         "description" : "Code for a clinical problem (or absent/unknown problem) that is selected from SNOMED CT",
-        "valueSet" : "http://hl7.org/fhir/comparison/ValueSet/b31ca674-365d-4488-9949-cbbeff1c9145-50"
+        "valueSet" : "http://hl7.org/fhir/comparison/ValueSet/c305d4d0-10a6-4342-a34c-cc8f7ac6cb0f-50"
       },
       "mapping" : [{
         "identity" : "workflow",
@@ -712,7 +712,7 @@
       "isSummary" : true,
       "binding" : {
         "strength" : "extensible",
-        "valueSet" : "http://hl7.org/fhir/comparison/ValueSet/b31ca674-365d-4488-9949-cbbeff1c9145-53"
+        "valueSet" : "http://hl7.org/fhir/comparison/ValueSet/c305d4d0-10a6-4342-a34c-cc8f7ac6cb0f-53"
       },
       "mapping" : [{
         "identity" : "sct-concept",
@@ -1638,7 +1638,7 @@
       "binding" : {
         "strength" : "preferred",
         "description" : "Codes that describe the manifestation or symptoms of a condition.",
-        "valueSet" : "http://hl7.org/fhir/comparison/ValueSet/b31ca674-365d-4488-9949-cbbeff1c9145-56"
+        "valueSet" : "http://hl7.org/fhir/comparison/ValueSet/c305d4d0-10a6-4342-a34c-cc8f7ac6cb0f-56"
       },
       "mapping" : [{
         "identity" : "workflow",

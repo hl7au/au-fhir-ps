@@ -1,11 +1,11 @@
 {
   "resourceType" : "StructureDefinition",
-  "id" : "b31ca674-365d-4488-9949-cbbeff1c9145-15",
-  "url" : "http://hl7.org/fhir/comparison/StructureDefinition/b31ca674-365d-4488-9949-cbbeff1c9145-15",
+  "id" : "c305d4d0-10a6-4342-a34c-cc8f7ac6cb0f-15",
+  "url" : "http://hl7.org/fhir/comparison/StructureDefinition/c305d4d0-10a6-4342-a34c-cc8f7ac6cb0f-15",
   "name" : "IntersectionPatientUvIpsAndAUPSPatient",
   "title" : "Intersection of Patient (IPS) And AU PS Patient",
   "status" : "active",
-  "date" : "2026-06-19T03:13:12+00:00",
+  "date" : "2026-06-19T08:10:35+00:00",
   "snapshot" : {
     "element" : [{
       "path" : "Patient",
@@ -1297,7 +1297,7 @@
       "binding" : {
         "strength" : "extensible",
         "description" : "The nature of the relationship between a patient and a contact person for that patient.",
-        "valueSet" : "http://hl7.org/fhir/comparison/ValueSet/b31ca674-365d-4488-9949-cbbeff1c9145-18"
+        "valueSet" : "http://hl7.org/fhir/comparison/ValueSet/c305d4d0-10a6-4342-a34c-cc8f7ac6cb0f-18"
       },
       "mapping" : [{
         "identity" : "v2",

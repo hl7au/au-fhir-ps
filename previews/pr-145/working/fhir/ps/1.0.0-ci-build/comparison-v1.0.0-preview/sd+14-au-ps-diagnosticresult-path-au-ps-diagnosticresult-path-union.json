@@ -1,11 +1,11 @@
 {
   "resourceType" : "StructureDefinition",
-  "id" : "db7275ed-7462-418f-b943-e4e81548085d-32",
-  "url" : "http://hl7.org/fhir/comparison/StructureDefinition/db7275ed-7462-418f-b943-e4e81548085d-32",
+  "id" : "d48fdb52-7637-42a1-8c20-9353debbf4af-32",
+  "url" : "http://hl7.org/fhir/comparison/StructureDefinition/d48fdb52-7637-42a1-8c20-9353debbf4af-32",
   "name" : "UnionAUPSPathologyResultAndAUPSPathologyResult",
   "title" : "Union of AU PS Pathology Result Observation And AU PS Pathology Result Observation",
   "status" : "active",
-  "date" : "2026-06-19T03:13:11+00:00",
+  "date" : "2026-06-19T08:10:34+00:00",
   "jurisdiction" : [{
     "coding" : [{
       "system" : "urn:iso:std:iso:3166",

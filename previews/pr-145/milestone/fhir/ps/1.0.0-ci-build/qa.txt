@@ -3,7 +3,7 @@ AUPatientSummaryImplementationGuide : Validation Results
 
 err = 12, warn = 49, info = 95
 IG Publisher Version: 2.2.10-SNAPSHOT Out of date - current version is 2.2.9
-Generated Fri Jun 19 03:17:35 UTC 2026. FHIR version 4.0.1 for hl7.fhir.au.ps#1.0.0-ci-build (canonical = http://hl7.org.au/fhir/ps)
+Generated Fri Jun 19 08:14:47 UTC 2026. FHIR version 4.0.1 for hl7.fhir.au.ps#1.0.0-ci-build (canonical = http://hl7.org.au/fhir/ps)
  Build Errors : 0 / 0 / 0
  /__w/au-fhir-ps/au-fhir-ps/au-fhir-ps/input/examples/Bundle-aups-basicsummary : 0 / 11 / 23
  /__w/au-fhir-ps/au-fhir-ps/au-fhir-ps/input/examples/Bundle-aups-gpvisit-retrieval : 0 / 113 / 198

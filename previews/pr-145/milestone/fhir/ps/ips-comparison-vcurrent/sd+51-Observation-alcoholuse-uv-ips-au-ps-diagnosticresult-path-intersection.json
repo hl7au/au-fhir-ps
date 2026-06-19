@@ -1,11 +1,11 @@
 {
   "resourceType" : "StructureDefinition",
-  "id" : "b31ca674-365d-4488-9949-cbbeff1c9145-60",
-  "url" : "http://hl7.org/fhir/comparison/StructureDefinition/b31ca674-365d-4488-9949-cbbeff1c9145-60",
+  "id" : "c305d4d0-10a6-4342-a34c-cc8f7ac6cb0f-60",
+  "url" : "http://hl7.org/fhir/comparison/StructureDefinition/c305d4d0-10a6-4342-a34c-cc8f7ac6cb0f-60",
   "name" : "IntersectionObservationAlcoholUseUvIpsAndAUPSPathologyResult",
   "title" : "Intersection of Observation Social History - Alcohol Use (IPS) And AU PS Pathology Result Observation",
   "status" : "active",
-  "date" : "2026-06-19T03:13:12+00:00",
+  "date" : "2026-06-19T08:10:35+00:00",
   "snapshot" : {
     "element" : [{
       "path" : "Observation",
@@ -528,7 +528,7 @@
       "binding" : {
         "strength" : "required",
         "description" : "Codes providing the status of an observation.",
-        "valueSet" : "http://hl7.org/fhir/comparison/ValueSet/b31ca674-365d-4488-9949-cbbeff1c9145-63"
+        "valueSet" : "http://hl7.org/fhir/comparison/ValueSet/c305d4d0-10a6-4342-a34c-cc8f7ac6cb0f-63"
       },
       "mapping" : [{
         "identity" : "workflow",

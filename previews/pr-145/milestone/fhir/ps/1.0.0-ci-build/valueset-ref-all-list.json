@@ -41,9 +41,9 @@
     "sources" : ["2.16.840.1.113883.4.642.3.1"],
     "uses" : {
     },
-    "StructureDefinition-au-ps-relatedperson.html" : "AU PS RelatedPerson",
+    "StructureDefinition-au-ps-patient.html" : "AU PS Patient",
     "StructureDefinition-au-ps-practitioner.html" : "AU PS Practitioner",
-    "StructureDefinition-au-ps-patient.html" : "AU PS Patient"
+    "StructureDefinition-au-ps-relatedperson.html" : "AU PS RelatedPerson"
   },
   {
     "url" : "http://hl7.org/fhir/ValueSet/allergy-intolerance-category",
@@ -668,23 +668,23 @@
     "sources" : ["2.16.840.1.113883.4.642.3.20"],
     "uses" : {
     },
-    "StructureDefinition-au-ps-relatedperson.html" : "AU PS RelatedPerson",
-    "StructureDefinition-au-ps-condition.html" : "AU PS Condition",
-    "StructureDefinition-au-ps-practitioner.html" : "AU PS Practitioner",
-    "StructureDefinition-au-ps-composition.html" : "AU PS Composition",
+    "StructureDefinition-au-ps-encounter.html" : "AU PS Encounter",
     "StructureDefinition-au-ps-medicationrequest.html" : "AU PS MedicationRequest",
-    "StructureDefinition-au-ps-immunization.html" : "AU PS Immunization",
-    "StructureDefinition-au-ps-allergyintolerance.html" : "AU PS AllergyIntolerance",
-    "StructureDefinition-au-ps-procedure.html" : "AU PS Procedure",
     "StructureDefinition-au-ps-diagnosticresult-path.html" : "AU PS Pathology Result Observation",
-    "StructureDefinition-au-ps-practitionerrole.html" : "AU PS PractitionerRole",
+    "StructureDefinition-au-ps-practitioner.html" : "AU PS Practitioner",
+    "StructureDefinition-au-ps-relatedperson.html" : "AU PS RelatedPerson",
+    "StructureDefinition-au-ps-smokingstatus.html" : "AU PS Smoking Status",
     "StructureDefinition-au-ps-medication.html" : "AU PS Medication",
     "StructureDefinition-au-ps-bundle.html" : "AU PS Bundle",
-    "StructureDefinition-au-ps-smokingstatus.html" : "AU PS Smoking Status",
-    "StructureDefinition-au-ps-organization.html" : "AU PS Organization",
+    "StructureDefinition-au-ps-immunization.html" : "AU PS Immunization",
+    "StructureDefinition-au-ps-practitionerrole.html" : "AU PS PractitionerRole",
     "StructureDefinition-au-ps-medicationstatement.html" : "AU PS MedicationStatement",
-    "StructureDefinition-au-ps-encounter.html" : "AU PS Encounter",
-    "StructureDefinition-au-ps-patient.html" : "AU PS Patient"
+    "StructureDefinition-au-ps-procedure.html" : "AU PS Procedure",
+    "StructureDefinition-au-ps-composition.html" : "AU PS Composition",
+    "StructureDefinition-au-ps-organization.html" : "AU PS Organization",
+    "StructureDefinition-au-ps-patient.html" : "AU PS Patient",
+    "StructureDefinition-au-ps-allergyintolerance.html" : "AU PS AllergyIntolerance",
+    "StructureDefinition-au-ps-condition.html" : "AU PS Condition"
   },
   {
     "url" : "http://hl7.org/fhir/ValueSet/link-type",
@@ -783,9 +783,9 @@
     "sources" : ["2.16.840.1.113883.4.642.3.375"],
     "uses" : {
     },
-    "StructureDefinition-au-ps-medication.html" : "AU PS Medication",
     "StructureDefinition-au-ps-medicationrequest.html" : "AU PS MedicationRequest",
-    "StructureDefinition-au-ps-medicationstatement.html" : "AU PS MedicationStatement"
+    "StructureDefinition-au-ps-medicationstatement.html" : "AU PS MedicationStatement",
+    "StructureDefinition-au-ps-medication.html" : "AU PS Medication"
   },
   {
     "url" : "http://hl7.org/fhir/ValueSet/medication-statement-category",
@@ -911,9 +911,9 @@
     "sources" : ["2.16.840.1.113883.4.642.3.65"],
     "uses" : {
     },
-    "StructureDefinition-au-ps-relatedperson.html" : "AU PS RelatedPerson",
+    "StructureDefinition-au-ps-patient.html" : "AU PS Patient",
     "StructureDefinition-au-ps-practitioner.html" : "AU PS Practitioner",
-    "StructureDefinition-au-ps-patient.html" : "AU PS Patient"
+    "StructureDefinition-au-ps-relatedperson.html" : "AU PS RelatedPerson"
   },
   {
     "url" : "http://hl7.org/fhir/ValueSet/observation-category",
@@ -1000,8 +1000,8 @@
     "sources" : ["2.16.840.1.113883.4.642.3.433"],
     "uses" : {
     },
-    "StructureDefinition-au-ps-procedure.html" : "AU PS Procedure",
-    "StructureDefinition-au-ps-medicationrequest.html" : "AU PS MedicationRequest"
+    "StructureDefinition-au-ps-medicationrequest.html" : "AU PS MedicationRequest",
+    "StructureDefinition-au-ps-procedure.html" : "AU PS Procedure"
   },
   {
     "url" : "http://hl7.org/fhir/ValueSet/procedure-category",
@@ -1158,16 +1158,16 @@
     "sources" : ["2.16.840.1.113883.4.642.3.27"],
     "uses" : {
     },
-    "StructureDefinition-au-ps-relatedperson.html" : "AU PS RelatedPerson",
-    "StructureDefinition-au-ps-allergyintolerance.html" : "AU PS AllergyIntolerance",
-    "StructureDefinition-au-ps-condition.html" : "AU PS Condition",
-    "StructureDefinition-au-ps-procedure.html" : "AU PS Procedure",
-    "StructureDefinition-au-ps-diagnosticresult-path.html" : "AU PS Pathology Result Observation",
-    "StructureDefinition-au-ps-smokingstatus.html" : "AU PS Smoking Status",
-    "StructureDefinition-au-ps-composition.html" : "AU PS Composition",
+    "StructureDefinition-au-ps-immunization.html" : "AU PS Immunization",
     "StructureDefinition-au-ps-medicationrequest.html" : "AU PS MedicationRequest",
     "StructureDefinition-au-ps-medicationstatement.html" : "AU PS MedicationStatement",
-    "StructureDefinition-au-ps-immunization.html" : "AU PS Immunization"
+    "StructureDefinition-au-ps-procedure.html" : "AU PS Procedure",
+    "StructureDefinition-au-ps-composition.html" : "AU PS Composition",
+    "StructureDefinition-au-ps-diagnosticresult-path.html" : "AU PS Pathology Result Observation",
+    "StructureDefinition-au-ps-relatedperson.html" : "AU PS RelatedPerson",
+    "StructureDefinition-au-ps-smokingstatus.html" : "AU PS Smoking Status",
+    "StructureDefinition-au-ps-allergyintolerance.html" : "AU PS AllergyIntolerance",
+    "StructureDefinition-au-ps-condition.html" : "AU PS Condition"
   },
   {
     "url" : "http://hl7.org/fhir/ValueSet/search-entry-mode",
@@ -1266,9 +1266,9 @@
     "sources" : ["2.16.840.1.113883.2.3.4.2.4.7"],
     "uses" : {
     },
-    "StructureDefinition-au-ps-medication.html" : "AU PS Medication",
     "StructureDefinition-au-ps-medicationrequest.html" : "AU PS MedicationRequest",
-    "StructureDefinition-au-ps-medicationstatement.html" : "AU PS MedicationStatement"
+    "StructureDefinition-au-ps-medicationstatement.html" : "AU PS MedicationStatement",
+    "StructureDefinition-au-ps-medication.html" : "AU PS Medication"
   },
   {
     "url" : "http://terminology.hl7.org.au/ValueSet/pbs-item",
@@ -1282,9 +1282,9 @@
     "sources" : ["2.16.840.1.113883.2.3.4.2.4.8"],
     "uses" : {
     },
-    "StructureDefinition-au-ps-medication.html" : "AU PS Medication",
     "StructureDefinition-au-ps-medicationrequest.html" : "AU PS MedicationRequest",
-    "StructureDefinition-au-ps-medicationstatement.html" : "AU PS MedicationStatement"
+    "StructureDefinition-au-ps-medicationstatement.html" : "AU PS MedicationStatement",
+    "StructureDefinition-au-ps-medication.html" : "AU PS Medication"
   },
   {
     "url" : "http://terminology.hl7.org.au/ValueSet/v2-0360-extended",
@@ -1425,9 +1425,9 @@
     "sources" : ["2.16.840.1.113883.1.11.19885"],
     "uses" : {
     },
-    "StructureDefinition-au-ps-medication.html" : "AU PS Medication",
     "StructureDefinition-au-ps-medicationrequest.html" : "AU PS MedicationRequest",
-    "StructureDefinition-au-ps-medicationstatement.html" : "AU PS MedicationStatement"
+    "StructureDefinition-au-ps-medicationstatement.html" : "AU PS MedicationStatement",
+    "StructureDefinition-au-ps-medication.html" : "AU PS Medication"
   },
   {
     "url" : "https://healthterminologies.gov.au/fhir/ValueSet/adverse-reaction-agent-1",
@@ -1511,9 +1511,9 @@
     "sources" : ["1.2.36.1.2001.1004.201.10003"],
     "uses" : {
     },
-    "StructureDefinition-au-ps-medication.html" : "AU PS Medication",
     "StructureDefinition-au-ps-medicationrequest.html" : "AU PS MedicationRequest",
-    "StructureDefinition-au-ps-medicationstatement.html" : "AU PS MedicationStatement"
+    "StructureDefinition-au-ps-medicationstatement.html" : "AU PS MedicationStatement",
+    "StructureDefinition-au-ps-medication.html" : "AU PS Medication"
   },
   {
     "url" : "https://healthterminologies.gov.au/fhir/ValueSet/australian-medication-use-1",
@@ -1541,10 +1541,10 @@
     "sources" : ["1.2.36.1.2001.1004.201.10031"],
     "uses" : {
     },
-    "StructureDefinition-au-ps-condition.html" : "AU PS Condition",
-    "StructureDefinition-au-ps-procedure.html" : "AU PS Procedure",
     "StructureDefinition-au-ps-medicationrequest.html" : "AU PS MedicationRequest",
-    "StructureDefinition-au-ps-medicationstatement.html" : "AU PS MedicationStatement"
+    "StructureDefinition-au-ps-medicationstatement.html" : "AU PS MedicationStatement",
+    "StructureDefinition-au-ps-procedure.html" : "AU PS Procedure",
+    "StructureDefinition-au-ps-condition.html" : "AU PS Condition"
   },
   {
     "url" : "https://healthterminologies.gov.au/fhir/ValueSet/clinical-condition-1",
@@ -1572,9 +1572,9 @@
     "sources" : ["1.2.36.1.2001.1004.201.10037"],
     "uses" : {
     },
-    "StructureDefinition-au-ps-condition.html" : "AU PS Condition",
     "StructureDefinition-au-ps-medicationrequest.html" : "AU PS MedicationRequest",
-    "StructureDefinition-au-ps-medicationstatement.html" : "AU PS MedicationStatement"
+    "StructureDefinition-au-ps-medicationstatement.html" : "AU PS MedicationStatement",
+    "StructureDefinition-au-ps-condition.html" : "AU PS Condition"
   },
   {
     "url" : "https://healthterminologies.gov.au/fhir/ValueSet/clinical-specialty-1",
@@ -1602,9 +1602,9 @@
     "sources" : ["1.2.36.1.2001.1004.201.10069"],
     "uses" : {
     },
-    "StructureDefinition-au-ps-relatedperson.html" : "AU PS RelatedPerson",
+    "StructureDefinition-au-ps-patient.html" : "AU PS Patient",
     "StructureDefinition-au-ps-practitioner.html" : "AU PS Practitioner",
-    "StructureDefinition-au-ps-patient.html" : "AU PS Patient"
+    "StructureDefinition-au-ps-relatedperson.html" : "AU PS RelatedPerson"
   },
   {
     "url" : "https://healthterminologies.gov.au/fhir/ValueSet/contact-relationship-type-3",
@@ -1873,9 +1873,9 @@
     "sources" : ["1.2.36.1.2001.1004.201.10041"],
     "uses" : {
     },
-    "StructureDefinition-au-ps-allergyintolerance.html" : "AU PS AllergyIntolerance",
     "StructureDefinition-au-ps-medicationrequest.html" : "AU PS MedicationRequest",
-    "StructureDefinition-au-ps-medicationstatement.html" : "AU PS MedicationStatement"
+    "StructureDefinition-au-ps-medicationstatement.html" : "AU PS MedicationStatement",
+    "StructureDefinition-au-ps-allergyintolerance.html" : "AU PS AllergyIntolerance"
   },
   {
     "url" : "https://healthterminologies.gov.au/fhir/ValueSet/separation-mode-1",

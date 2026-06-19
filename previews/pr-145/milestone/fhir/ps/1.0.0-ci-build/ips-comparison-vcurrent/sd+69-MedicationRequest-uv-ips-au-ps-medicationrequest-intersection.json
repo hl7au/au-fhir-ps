@@ -1,11 +1,11 @@
 {
   "resourceType" : "StructureDefinition",
-  "id" : "b31ca674-365d-4488-9949-cbbeff1c9145-108",
-  "url" : "http://hl7.org/fhir/comparison/StructureDefinition/b31ca674-365d-4488-9949-cbbeff1c9145-108",
+  "id" : "c305d4d0-10a6-4342-a34c-cc8f7ac6cb0f-108",
+  "url" : "http://hl7.org/fhir/comparison/StructureDefinition/c305d4d0-10a6-4342-a34c-cc8f7ac6cb0f-108",
   "name" : "IntersectionMedicationRequestIPSAndAUPSMedicationRequest",
   "title" : "Intersection of MedicationRequest (IPS) And AU PS MedicationRequest",
   "status" : "active",
-  "date" : "2026-06-19T03:13:12+00:00",
+  "date" : "2026-06-19T08:10:35+00:00",
   "snapshot" : {
     "element" : [{
       "path" : "MedicationRequest",
