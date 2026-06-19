@@ -21,14 +21,6 @@ The AU Patient Summary Sparked project includes:
 - Australian Clinical Data for Interoperability (AUCDI) - clinician focussed data requirements project.
 - AU PS FHIR Implementation Guide - HL7 Australia technical data specification.
 
-Additionally, a Patient Summary Clinical Focus Group (CFG), a sub-group of the Clinical Design Group, has developed a series of [consumer journeys](https://sparked.csiro.au/index.php/products-resources/au-ps-consumer-journeys/) that have been elaborated into a set of example use cases in this IG to provide guidance on how AU PS could be implemented.
-
-<div> 
-   <img src="AUPSTeamsContextb.png" alt="AU Patient Summary Development Context" style="width:75%"/>
-  </div>
-*Figure 1: AU PS development context*
-<br/>
-
 For more information on the relationship between AUCDI and AU PS, including mappings, see [AUCDI](aucdi.html).
 
 ### Dependencies
@@ -61,7 +53,7 @@ This guide is divided into several pages which are listed at the top of each pag
   - [Artefacts Summary](artifacts.html): This page lists the FHIR artefacts defined in this guide.
   - [Profiles and Extensions](profiles-and-extensions.html): This page describes the profiles and extensions that are defined in this guide to exchange data. Each profile page includes a narrative description and guidance, and formal definition. Guidance typically focuses on the profiled elements but can include guidance on un-profiled elements to aid with implementation.
   - [Terminology](terminology.html): This page lists the value sets and code systems supported in this guide.
-  - [Actor Definitions](actors.html): This page defines the AU PS actors, AU PS Consumer and AU PS Producer.
+  - [Actor Definitions](actors.html): This page describes the AU PS actors, AU PS Consumer and AU PS Producer.
 - [Examples](examples.html): This page lists all the examples used in this guide.
 - [Support](support.html): These pages provide supporting material for implementation of AU PS.
   - [Downloads](downloads.html): This page provides links to downloadable artefacts.
@@ -75,4 +67,4 @@ This guide is the product of collaborative work undertaken with participants fro
 * [HL7 Australia FHIR Working Group](https://confluence.hl7.org/display/HAFWG/HL7+Australia+FHIR+Work+Group+Home)
 * Australian FHIR Implementers Community
 
-Primary Editors: Brett Esler, Danielle Tavares-Rixon, Dusica Bojicic.
+Primary Editors: Danielle Tavares-Rixon, Dusica Bojicic.
