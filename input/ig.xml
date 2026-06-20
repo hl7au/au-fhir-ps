@@ -409,5 +409,13 @@
   			<code value="ips-comparison"/>
   			<value value="current"/>
 		</parameter>
+		<!-- Pin canonical references that resolve to more than one version (FHIR Extensions Pack ships
+		     several versions of standard extensions). Pins each ambiguous reference to the already-
+		     selected version and downgrades the per-reference "multiple potential matches" WARNING to
+		     INFO. Same setting as au-fhir-base / au-fhir-core. Does not change which version is used. -->
+		<parameter>
+			<code value="pin-canonicals"/>
+			<value value="pin-multiples"/>
+		</parameter>
 	</definition>
 </ImplementationGuide>
