@@ -140,8 +140,6 @@ In this context consuming an IPS document that is NOT an AU Patient Summary may 
 
 During the [AU PS workshop 13 November 2025](https://confluence.hl7.org/spaces/HAFWG/pages/358895090/2025-11-13+AU+Core+TDG+Agenda+Minutes) it was agreed there is a need for some way to tell by inspection that a patient summary document is an AU PS document, rather than some other kind of patient summary (including IPS only), without needing to do validation.
 
-This item has been deferred pending international agreement. Australia is not expected to unilaterally implement a solution to what is a multi-national item.
-
-Contribute via comment on [FHIR-55739](https://jira.hl7.org/browse/FHIR-55739).
+The appropriate means to identify a jurisdictional patient summary document has since been discussed in IPS meetings, and FHIR-I meetings. This topic is also expanded beyond patient summary with the expectation that the solution should be appropriate for use for other document types. As such this topic in Australia ([FHIR-55739](https://jira.hl7.org/browse/FHIR-55739)) is deferred until an agreed international approach is determined.
 
 </div>
