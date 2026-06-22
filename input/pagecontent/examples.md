@@ -65,6 +65,16 @@ The table below identifies some major characteristics of the examples defined in
             <td>-</td>
         </tr>
         <tr>
+            <td><code>Composition.custodian</code></td>
+            <td>AU PS Organization</td>
+            <td>AU PS Organization</td>
+            <td>AU PS Organization</td>
+            <td>-</td>
+            <td>AU PS Organization</td>
+            <td>AU PS Organization</td>
+            <td>AU PS Organization</td>
+        </tr>
+        <tr>
             <td><code>Composition.section:sectionProblems</code></td>
             <td>AU PS Condition</td>
             <td>AU PS Condition</td>
