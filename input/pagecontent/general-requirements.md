@@ -308,12 +308,12 @@ If a sub-element is labelled as *Must Support*:
 - AU PS Producers **SHALL** correctly populate the element with all *Must Support* sub-elements for which a value is known. 
 - AU PS Consumers **SHALL** handle the element if present and containing any *Must Support* sub-elements containing any valid value, and **SHOULD** display the value of this element (if the SHOULD:display obligation is defined) when presenting the data to a human user.
 
-For example, in the AU PS Practitioner Profile, the `Practitioner.name` element is labelled *Must Support* and has *Must Support* sub-elements `family` and `given`. When claiming conformance to this profile:
+For example, in the AU PS Practitioner Profile, the `Practitioner.name` element is labelled *Must Support* and has *Must Support* sub-elements `Practitioner.name.family` and `Practitioner.name.given`. When claiming conformance to this profile:
 - AU PS Producers **SHALL** correctly populate a value in `Practitioner.name.family` and `Practitioner.name.given` if the value for those sub-elements is known.
-- AU PS Consumers **SHALL** handle `Practitioner.name` if present and containing valid values in `Practitioner.name.family` and `Practitioner.name.given` sub-elements, and **SHOULD** display the value of at least the sub elements `Practitioner.name.family` and `Practitioner.name.given` when presenting the data to a human user.
+- AU PS Consumers **SHALL** handle `Practitioner.name` if present and containing valid values in `Practitioner.name.family` and `Practitioner.name.given` sub-elements, and **SHOULD** display the value of at least the sub-elements `Practitioner.name.family` and `Practitioner.name.given` when presenting the data to a human user.
 
 ##### Must Support - Elements with Multiple Cardinality
-Some elements labelled as *Must Support* have multiple cardinality (maximum cardinality> 1) such as `Composition.author`or `AllergyIntolerance.reaction.manifestation.coding`. In such cases:
+Some elements labelled as *Must Support* have multiple cardinality (maximum cardinality> 1) such as `Composition.author` or `AllergyIntolerance.reaction.manifestation.coding`. In such cases:
 - AU PS Producers **SHALL** correctly populate all known values of the element. 
 - AU PS Consumers **SHALL** handle all occurrences of the element if present in the resource and containing any valid value.
 - AU PS Consumers **SHOULD** display all occurrences of the element when presenting the data to a human user.
@@ -326,7 +326,7 @@ For example, in the AU PS Patient Profile, the `Patient.address` element is labe
 ##### Must Support - Resource References
 Some elements labelled as *Must Support* reference multiple resource types or profiles such as `Observation.performer`. In such cases: 
 - AU PS Producers **SHALL** correctly populate the element with at least one referenced resource or allowed profile if the value is known. 
-- AU PS Consumers **SHALL** handle the element if present and containing any valid referenced resource or profiles, and **SHOULD** display the value of this element (if the SHOULD:display obligation is defined) when presenting the data to a human user.
+- AU PS Consumers **SHALL** handle the element if present and containing any valid referenced resource or allowed profile, and **SHOULD** display the value of this element (if the SHOULD:display obligation is defined) when presenting the data to a human user.
 
 The table below provides a list of AU PS profile elements that allow multiple referenced resource types or profiles.
 
@@ -413,7 +413,7 @@ Profile |Must Support Element|Supported Identifiers
 [AU PS PractitionerRole](StructureDefinition-au-ps-practitionerrole.html)|PractitionerRole.identifier|Medicare Provider Number
 {:.grid}
 
-For example, the profile [AU PS Organization](StructureDefinition-au-ps-organization.html) defines support for the Healthcare Provider Identifier - Organisation (HPI-O) and Australian Business Number (ABN) identifier types as slices of `Organization.identifier` flagged with *Must Support*. When claiming conformance to the AU PS Organization Profile:
+For example, the profile [AU PS Organization](StructureDefinition-au-ps-organization.html) defines support for the Healthcare Provider Identifier - Organisation (HPI-O) and Australian Business Number (ABN) identifier types as slices of `Organization.identifier` labelled with *Must Support*. When claiming conformance to the AU PS Organization Profile:
 - AU PS Producers **SHALL** correctly populate `Organization.identifier` with at least one of HPI-O or ABN if known, or any other identifier type when neither HPI-O or ABN are known but some other identifier is known (e.g. NATA Accreditation Number).
 - AU PS Consumers **SHALL** handle `Organization.identifier` if present and containing any valid value. A valid value may be an HPI-O or ABN, or may be any other valid identifier type allowed by the element definition (e.g. NATA Accreditation Number). The AU PS Consumer **SHOULD** display the value of each populated identifier type (HPI-O, ABN, or some other identifier) when presenting the data to a human user.
 
@@ -421,7 +421,7 @@ Systems **MAY** support populating other identifiers, but this is not a requirem
 
 ##### Must Support - Choice of Profile Elements
 
-A resource may support two elements that are used to indicate a reason, e.g. `Encounter.reasonCode` and `Encounter.reasonReference` in the profile [AU PS Encounter](StructureDefinition-au-ps-encounter.html). In such cases:
+A profile may label two elements as *Must Support* that are used to indicate a reason, e.g. `Encounter.reasonCode` and `Encounter.reasonReference` in the profile [AU PS Encounter](StructureDefinition-au-ps-encounter.html). In such cases:
 - AU PS Producers **SHALL** correctly populate at least one element choice if the value is known.
 - AU PS Consumers **SHALL** handle either element choice allowed by the profile if present and containing any valid value. 
 
@@ -455,7 +455,7 @@ Profile |Must Support Sub-Element|Terminology Choices
 [AU PS MedicationStatement](StructureDefinition-au-ps-medicationstatement.html)|MedicationStatement.code.coding|[Australian Medication](https://healthterminologies.gov.au/fhir/ValueSet/australian-medication-1), [PBS Item Codes](https://build.fhir.org/ig/hl7au/au-fhir-base/ValueSet-pbs-item.html)
 {:.grid}
 
-For example, the profile [AU PS Medication](StructureDefinition-au-ps-medication.html) defines support for [Australian Medication](https://healthterminologies.gov.au/fhir/ValueSet/australian-medication-1) and [PBS Item Codes](https://build.fhir.org/ig/hl7au/au-fhir-base/ValueSet-pbs-item.html) value sets as slices of `Medication.code.coding` flagged with *Must Support*.
+For example, the profile [AU PS Medication](StructureDefinition-au-ps-medication.html) defines support for [Australian Medication](https://healthterminologies.gov.au/fhir/ValueSet/australian-medication-1) and [PBS Item Codes](https://build.fhir.org/ig/hl7au/au-fhir-base/ValueSet-pbs-item.html) value sets as slices of `Medication.code.coding` labelled with *Must Support*.
 
 When claiming conformance to the AU PS Medication profile: 
 - AU PS Producers **SHALL** correctly populate `Medication.code.coding` with codes from [Australian Medication](https://healthterminologies.gov.au/fhir/ValueSet/australian-medication-1) and [PBS Item Codes](https://build.fhir.org/ig/hl7au/au-fhir-base/ValueSet-pbs-item.html) if both coded values are known, or from either if only one is known, or from another terminology if neither is known but a code is available, or text only if no coded value is known.
@@ -471,7 +471,7 @@ The SHALL:handle obligation is defined broadly and does not specify what is requ
 
 The SHALL:handle obligation requires a consuming system to understand the meaning of the element and recognise the consequences of not using any of the element data. Ignoring an element without considering these consequences constitutes non-conformance. During testing, system providers can be required to explain how their system uses element data and the implications of receiving values that are not supported. 
 
-Handling might involve processing, displaying, printing, persisting for later use, not using a particular element occurrence, raising an error, rejecting an entire document based on business or safety rules or applying a fallback behaviour (e.g. using narrative when structured data is unknown).
+Handling might involve processing, displaying, printing, persisting for later use, not using a particular element occurrence, raising an error, rejecting an entire document based on business or safety rules, or applying a fallback behaviour (e.g. using narrative when structured data is unknown).
 
 The following table provides some examples of handling that a consuming system might implement based on understanding the meaning of an element and the consequences of not using the element within the system's context of use. These examples are non-exhaustive and intended to be useful but they are not a normative part of the specification nor are they fully representative of real world examples.
 
@@ -486,11 +486,11 @@ The following table provides some examples of handling that a consuming system m
   <tbody>
     <tr>
       <td>Display</td>
-      <td><code>MedicationStatement.medication[x]</code></td>
+      <td>MedicationStatement.medication[x]</td>
       <td><ul>
           <li>display the medication text representation (<code>CodeableConcept.text</code>)</li>
-          <li>display both the element value and section narrative</li>
           <li>display the section narrative only (<code>Composition.section.text</code>)</li>
+          <li>display both the element value and section narrative</li>
           <li>look up the code and display the retrieved display name from the terminology server</li>
           <li>not display the element value</li>
         </ul>
@@ -498,7 +498,7 @@ The following table provides some examples of handling that a consuming system m
     </tr>
     <tr>
       <td>Store and selective display</td>
-      <td><code>Patient.address</code></td>
+      <td>Patient.address</td>
       <td><ul>
           <li>store all addresses and display only addresses with <code>Address.use</code> value "home"</li>
           <li>store and display all addresses</li>
@@ -510,7 +510,7 @@ The following table provides some examples of handling that a consuming system m
     </tr>
     <tr>
       <td>Selective import</td>
-      <td><code>Condition.clinicalStatus</code></td>
+      <td>Condition.clinicalStatus</td>
       <td><ul>
           <li>import only Condition resources with <code>Condition.clinicalStatus</code> value of "active" and not use Condition resources with values such as "recurrence", "remission" or "relapse"</li>
           <li>store all received Condition resources but only use a supported subset operationally (e.g. process only Condition resources with <code>Condition.clinicalStatus</code> of "active" as active problems)</li>
@@ -520,7 +520,7 @@ The following table provides some examples of handling that a consuming system m
     </tr>
     <tr>
       <td>Reject or restrict use</td>
-      <td><code>Composition.status</code></td>
+      <td>Composition.status</td>
       <td><ul>
           <li>not accept the document where <code>Composition.status</code> has value "entered-in-error"</li>
           <li>accept and store the document with <code>Composition.status</code> "entered-in-error" but prevent its operational use (e.g. process as not clinically valid for ongoing care)</li>
@@ -530,16 +530,16 @@ The following table provides some examples of handling that a consuming system m
     </tr>
     <tr>
       <td>Do not use operationally</td>
-      <td><code>MedicationStatement.reasonCode</code>, <code>MedicationStatement.reasonReference</code></td>
+      <td>MedicationStatement.reasonCode, MedicationStatement.reasonReference</td>
       <td><ul>
-          <li>not use <code>MedicationStatement.reasonCode</code> and <code>MedicationStatement.reasonReference</code> where this information is not required for its purpose, for example in a medication dispensing system preparing blister packaging</li>
+          <li>not use <code>MedicationStatement.reasonCode</code> and <code>MedicationStatement.reasonReference</code> where this information is not required for its purpose (e.g. in a medication dispensing system preparing blister packaging)</li>
           <li>store but don't use it operationally (e.g. retain but do not use for decision support)</li>
         </ul>
       </td>
     </tr>
     <tr>
       <td>Use of coded values</td>
-      <td><code>AllergyIntolerance.code</code></td>
+      <td>AllergyIntolerance.code</td>
       <td><ul>
           <li>use a supported coding (i.e. from the SNOMED CT value set) to support adverse reaction checking and not use other codings if present</li>
           <li>use text (<code>CodeableConcept.text</code>) if a supported coding is not available and present appropriate warnings to users that automated adverse reaction checking is unavailable for the imported entry</li>
