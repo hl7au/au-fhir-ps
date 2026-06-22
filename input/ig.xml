@@ -8,7 +8,7 @@
 		<valueInteger value="2"/>
 	</extension>
 	<url value="http://hl7.org.au/fhir/ps/ImplementationGuide/hl7.fhir.au.ps"/>
-	<version value="1.0.0-ci-build"/>
+	<version value="1.0.0"/>
 	<name value="AUPatientSummaryImplementationGuide"/>
 	<title value="AU Patient Summary Implementation Guide"/>
 	<status value="active"/>
@@ -36,12 +36,12 @@
 	<dependsOn>
 		<uri value="http://hl7.org/fhir/uv/ips/ImplementationGuide/hl7.fhir.uv.ips"/>
 		<packageId value="hl7.fhir.uv.ips"/>
-		<version value="2.0.0"/>
+		<version value="2.0.1"/>
 	</dependsOn>
 	<dependsOn>
 		<uri value="http://hl7.org.au/fhir/core/ImplementationGuide/hl7.fhir.au.core"/>
 		<packageId value="hl7.fhir.au.core"/>
-		<version value="current"/>
+		<version value="2.0.0"/>
 	</dependsOn>
 	<definition>
 		<resource>
@@ -373,7 +373,7 @@
 		<!-- releaselabel should be the ballot status for HL7-published IGs. -->
 		<parameter>
 			<code value="releaselabel"/>
-			<value value="CI Build"/>
+			<value value="Working Standard"/>
 		</parameter>
 		<parameter>
 			<code value="find-other-resources"/>

@@ -7,8 +7,8 @@ Systems claiming conformance to AU PS will represent digital health information 
 The requirements of the FHIR standard and [FHIR Conformance Rules](http://hl7.org/fhir/conformance-rules.html) apply, and define the use of terms in this guide including the conformance verbs - **SHALL**, **SHALL NOT**, **SHOULD**, **SHOULD NOT**, **MAY**.
 
 Implementers are advised to be familiar with the requirements of the FHIR standard and the IPS when implementing AU PS, in particular:
-- [IPS Generation and Data Inclusion](https://hl7.org/fhir/uv/ips/STU2/Generation-and-Data-Inclusion.html#generation-and-data-inclusion)
-- [IPS Narrative and Language Translation](https://hl7.org/fhir/uv/ips/STU2/Design-Conventions.html#narrative-and-language-translation)
+- [IPS Generation and Data Inclusion](https://hl7.org/fhir/uv/ips/2.0.1/Generation-and-Data-Inclusion.html#generation-and-data-inclusion)
+- [IPS Narrative and Language Translation](https://hl7.org/fhir/uv/ips/2.0.1/Design-Conventions.html#narrative-and-language-translation)
 - [FHIR Terminology requirements](http://hl7.org/fhir/R4/terminologies.html)
 - [FHIR Documents](https://hl7.org/fhir/R4/documents.html)
 - [FHIR RESTful API](http://hl7.org/fhir/R4/http.html) 
@@ -27,7 +27,7 @@ AU PS profile elements include mandatory and *Must Support* requirements. [Manda
 The [Actor Definitions](actors.html) page lists the AU PS actors defined for this implementation guide and the requirements for implementing that actor. An AU PS profile [StructureDefinition](http://hl7.org/fhir/R4/structuredefinition.html) defines the obligations for an AU PS actor when implementing that profile.
 
 ### Mandatory Elements
-Mandatory elements are elements with minimum cardinality > 0. When an element is mandatory, the data is expected to always be present. Very rarely, it may not be, and in this circumstance the requirements defined by AU Core for [Missing Data](https://build.fhir.org/ig/hl7au/au-fhir-core/general-requirements.html#missing-data) **SHALL** be applied. 
+Mandatory elements are elements with minimum cardinality > 0. When an element is mandatory, the data is expected to always be present. Very rarely, it may not be, and in this circumstance the requirements defined by AU Core for [Missing Data](https://hl7.org.au/fhir/core/2.0.0/general-requirements.html#missing-data) **SHALL** be applied. 
 
 An element can be both *Must Support* and mandatory, and in this circumstance the requirements defined for [Missing Must Support and Mandatory Data](general-requirements.html#missing-must-support-and-mandatory-data) **SHALL** be applied.
 
@@ -50,11 +50,11 @@ In the above circumstances the following is applied:
 
 ##### Missing Must Support and Optional Data
 
-If the source system (AU PS Producer) does not know the value for an optional element (minimum cardinality = 0), including elements labelled *Must Support*, as per the requirements defined in [AU Core](https://build.fhir.org/ig/hl7au/au-fhir-core/general-requirements.html#missing-must-support-and-optional-data), the data element **SHALL** be omitted from the resource.  
+If the source system (AU PS Producer) does not know the value for an optional element (minimum cardinality = 0), including elements labelled *Must Support*, as per the requirements defined in [AU Core](https://hl7.org.au/fhir/core/2.0.0/general-requirements.html#missing-must-support-and-optional-data), the data element **SHALL** be omitted from the resource.  
 
 ##### Missing Must Support and Mandatory Data
 
-If the data element is a mandatory element (minimum cardinality is > 0), the element **SHALL** be present *even if* the source system (AU PS Producer) does not know the value or the reason the value is absent. In this circumstance, the requirements defined by AU Core for [Missing Must Support and Mandatory Data](https://build.fhir.org/ig/hl7au/au-fhir-core/general-requirements.html#missing-must-support-and-mandatory-data) **SHALL** be applied.
+If the data element is a mandatory element (minimum cardinality is > 0), the element **SHALL** be present *even if* the source system (AU PS Producer) does not know the value or the reason the value is absent. In this circumstance, the requirements defined by AU Core for [Missing Must Support and Mandatory Data](https://hl7.org.au/fhir/core/2.0.0/general-requirements.html#missing-must-support-and-mandatory-data) **SHALL** be applied.
 
 Example: MedicationRequest resource where status and requester are missing
 ~~~
@@ -276,7 +276,7 @@ The section is provided as additional support in understanding of *Must Support*
 Profiles defined in this implementation guide flag *Must Support* on elements (e.g. `Patient.name`) and sub-elements of a data type (e.g. `Patient.name.use`). The explanation on how to interpret *Must Support* for an element does not address rules defined in each profile - which may limit or extend what is allowed for each element. For example, the profile [AU PS Patient](StructureDefinition-au-ps-patient.html) limits what is considered valid for the element `Patient.name` with the invariant "**au-core-pat-02:** At least one patient name shall have a family name".
 
 ##### Must Support - Composition Sections
-Obligations on `Composition.section` in the AU PS Composition profile reflect the expectations of [The "IPS"](https://hl7.org/fhir/uv/ips/STU2/Structure-of-the-International-Patient-Summary.html) and  [ISO 27269](https://www.iso.org/standard/79491.html). A summary is provided below:
+Obligations on `Composition.section` in the AU PS Composition profile reflect the expectations of [The "IPS"](https://hl7.org/fhir/uv/ips/2.0.1/Structure-of-the-International-Patient-Summary.html) and  [ISO 27269](https://www.iso.org/standard/79491.html). A summary is provided below:
 - AU PS Consumers **SHALL** handle any Composition section if present and containing any valid value, and **SHOULD** display the content of the section when presenting the data to a human user.
 - For all mandatory sections (`Composition.section` minimum cardinality > 0) AU PS Producers **SHALL** correctly populate the section if a value is known, **SHALL** be capable of populating `Composition.section.entry` with the referenced profiles, and **SHOULD** correctly populate `Composition.section.entry` if a value is known. 
 - For all recommended sections AU PS Producers **SHOULD** correctly populate the section if a value is known and **SHOULD** correctly populate `Composition.section.entry` if a value is known. 
@@ -335,15 +335,15 @@ Profile |Must Support Element|Reference
 [AU PS Composition](StructureDefinition-au-ps-composition.html)|Composition.author|AU PS Practitioner, AU PS PractitionerRole, Device, AU PS Patient, AU PS RelatedPerson, AU PS Organization
 [AU PS Composition](StructureDefinition-au-ps-composition.html)|Composition.attester.party|AU PS Patient, AU PS RelatedPerson, AU PS Practitioner, AU PS PractitionerRole, AU PS Organization
 [AU PS Composition](StructureDefinition-au-ps-composition.html)|Composition.section.entry:medicationStatementOrRequest|AU PS MedicationStatement, AU PS MedicationRequest
-[DiagnosticReport (IPS)](https://hl7.org/fhir/uv/ips/STU2/StructureDefinition-DiagnosticReport-uv-ips.html)|DiagnosticReport.subject|AU PS Patient, Group
-[DiagnosticReport (IPS)](https://hl7.org/fhir/uv/ips/STU2/StructureDefinition-DiagnosticReport-uv-ips.html)|DiagnosticReport.performer|AU PS Practitioner, AU PS PractitionerRole, AU PS Organization, CareTeam
-[DiagnosticReport (IPS)](https://hl7.org/fhir/uv/ips/STU2/StructureDefinition-DiagnosticReport-uv-ips.html)|DiagnosticReport.result:observation-results|AU PS Pathology Result Observation, Observation Results - Radiology (IPS)
+[DiagnosticReport (IPS)](https://hl7.org/fhir/uv/ips/2.0.1/StructureDefinition-DiagnosticReport-uv-ips.html)|DiagnosticReport.subject|AU PS Patient, Group
+[DiagnosticReport (IPS)](https://hl7.org/fhir/uv/ips/2.0.1/StructureDefinition-DiagnosticReport-uv-ips.html)|DiagnosticReport.performer|AU PS Practitioner, AU PS PractitionerRole, AU PS Organization, CareTeam
+[DiagnosticReport (IPS)](https://hl7.org/fhir/uv/ips/2.0.1/StructureDefinition-DiagnosticReport-uv-ips.html)|DiagnosticReport.result:observation-results|AU PS Pathology Result Observation, Observation Results - Radiology (IPS)
 [AU PS Encounter](StructureDefinition-au-ps-encounter.html)|Encounter.participant.individual|AU PS Practitioner, AU PS PractitionerRole, AU PS RelatedPerson
 [AU PS Encounter](StructureDefinition-au-ps-encounter.html)|Encounter.reasonReference|AU PS Condition, Observation, AU PS Procedure
 [AU PS MedicationRequest](StructureDefinition-au-ps-medicationrequest.html)|MedicationRequest.requester|AU PS Practitioner, AU PS PractitionerRole, AU PS Organization, AU PS Patient, AU PS RelatedPerson
 [AU PS MedicationRequest](StructureDefinition-au-ps-medicationrequest.html)|MedicationRequest.reasonReference|AU PS Condition, Observation
 [AU PS MedicationStatement](StructureDefinition-au-ps-medicationstatement.html)|MedicationStatement.reasonReference|AU PS Condition, Observation, DiagnosticReport (IPS)
-[Observation Results - Radiology (IPS)](https://hl7.org/fhir/uv/ips/STU2/StructureDefinition-Observation-results-radiology-uv-ips.html)|Observation.performer|AU PS Practitioner, AU PS PractitionerRole, AU PS Organization, CareTeam, AU PS Patient, AU PS RelatedPerson
+[Observation Results - Radiology (IPS)](https://hl7.org/fhir/uv/ips/2.0.1/StructureDefinition-Observation-results-radiology-uv-ips.html)|Observation.performer|AU PS Practitioner, AU PS PractitionerRole, AU PS Organization, CareTeam, AU PS Patient, AU PS RelatedPerson
 [AU PS Patient](StructureDefinition-au-ps-patient.html)|Patient.generalPractitioner|AU PS Organization, AU PS Practitioner, AU PS PractitionerRole
 [AU PS Pathology Result Observation](StructureDefinition-au-ps-diagnosticresult-path.html)|Observation.performer|AU PS Practitioner, AU PS PractitionerRole, AU PS Organization, AU PS Patient, AU PS RelatedPerson
 [AU PS Procedure](StructureDefinition-au-ps-procedure.html)|Procedure.reasonReference|AU PS Condition, Observation, AU PS Procedure, DocumentReference
@@ -362,14 +362,14 @@ Profile |Must Support Element|Data Types
 [AU PS AllergyIntolerance](StructureDefinition-au-ps-allergyintolerance.html)|AllergyIntolerance.onset[x]|dateTime, age, Period, Range
 [AU PS Condition](StructureDefinition-au-ps-condition.html)|Condition.onset[x]|dateTime, age, Period, Range
 [AU PS Condition](StructureDefinition-au-ps-condition.html)|Condition.abatement[x]|dateTime, age, Period, Range
-[DeviceUseStatement (IPS)](https://hl7.org/fhir/uv/ips/STU2/StructureDefinition-DeviceUseStatement-uv-ips.html)|DeviceUseStatement.timing[x]|Period, dateTime
-[DiagnosticReport (IPS)](https://hl7.org/fhir/uv/ips/STU2/StructureDefinition-DiagnosticReport-uv-ips.html)|DiagnosticReport.effective[x]|dateTime, Period
+[DeviceUseStatement (IPS)](https://hl7.org/fhir/uv/ips/2.0.1/StructureDefinition-DeviceUseStatement-uv-ips.html)|DeviceUseStatement.timing[x]|Period, dateTime
+[DiagnosticReport (IPS)](https://hl7.org/fhir/uv/ips/2.0.1/StructureDefinition-DiagnosticReport-uv-ips.html)|DiagnosticReport.effective[x]|dateTime, Period
 [AU PS Immunization](StructureDefinition-au-ps-immunization.html)|Immunization.occurrence[x]|dateTime, string
 [AU PS MedicationRequest](StructureDefinition-au-ps-medicationrequest.html)|MedicationRequest.medication[x]|CodeableConcept, Reference
 [AU PS MedicationStatement](StructureDefinition-au-ps-medicationstatement.html)|MedicationStatement.medication[x]|CodeableConcept, Reference
 [AU PS MedicationStatement](StructureDefinition-au-ps-medicationstatement.html)|MedicationStatement.effective[x]|dateTime, Period
-[Observation Results - Radiology (IPS)](https://hl7.org/fhir/uv/ips/STU2/StructureDefinition-Observation-results-radiology-uv-ips.html)|Observation.effective[x]|dateTime, Period
-[Observation Results - Radiology (IPS)](https://hl7.org/fhir/uv/ips/STU2/StructureDefinition-Observation-results-radiology-uv-ips.html)|Observation.value[x]|Quantity, CodeableConcept, string, boolean, integer, Range, Ratio, SampledData, time, dateTime, Period
+[Observation Results - Radiology (IPS)](https://hl7.org/fhir/uv/ips/2.0.1/StructureDefinition-Observation-results-radiology-uv-ips.html)|Observation.effective[x]|dateTime, Period
+[Observation Results - Radiology (IPS)](https://hl7.org/fhir/uv/ips/2.0.1/StructureDefinition-Observation-results-radiology-uv-ips.html)|Observation.value[x]|Quantity, CodeableConcept, string, boolean, integer, Range, Ratio, SampledData, time, dateTime, Period
 [AU PS Pathology Result Observation](StructureDefinition-au-ps-diagnosticresult-path.html)|Observation.effective[x]|dateTime, Period,
 [AU PS Pathology Result Observation](StructureDefinition-au-ps-diagnosticresult-path.html)|Observation.value[x]|Quantity, CodeableConcept, string, boolean, integer, Range, Ratio, SampledData, time, dateTime, Period
 [AU PS Pathology Result Observation](StructureDefinition-au-ps-diagnosticresult-path.html)|Observation.component.value[x]|Quantity, CodeableConcept, string, boolean, integer, Range, Ratio, SampledData, time, dateTime, Period
@@ -385,11 +385,11 @@ Profile |Must Support Data Type
 ---|---
 [AU PS AllergyIntolerance](StructureDefinition-au-ps-allergyintolerance.html)|AllergyIntolerance.onsetDateTime
 [AU PS Condition](StructureDefinition-au-ps-condition.html)|Condition.onsetDateTime
-[DeviceUseStatement (IPS)](https://hl7.org/fhir/uv/ips/STU2/StructureDefinition-DeviceUseStatement-uv-ips.html)|DeviceUseStatement.timingDateTime
-[DiagnosticReport (IPS)](https://hl7.org/fhir/uv/ips/STU2/StructureDefinition-DiagnosticReport-uv-ips.html)|DiagnosticReport.effectiveDateTime
+[DeviceUseStatement (IPS)](https://hl7.org/fhir/uv/ips/2.0.1/StructureDefinition-DeviceUseStatement-uv-ips.html)|DeviceUseStatement.timingDateTime
+[DiagnosticReport (IPS)](https://hl7.org/fhir/uv/ips/2.0.1/StructureDefinition-DiagnosticReport-uv-ips.html)|DiagnosticReport.effectiveDateTime
 [AU PS Immunization](StructureDefinition-au-ps-immunization.html)|Immunization.occurrenceDateTime
 [AU PS MedicationStatement](StructureDefinition-au-ps-medicationstatement.html)|MedicationStatement.effectiveDateTime
-[Observation Results - Radiology (IPS)](https://hl7.org/fhir/uv/ips/STU2/StructureDefinition-Observation-results-radiology-uv-ips.html)|Observation.effectiveDateTime
+[Observation Results - Radiology (IPS)](https://hl7.org/fhir/uv/ips/2.0.1/StructureDefinition-Observation-results-radiology-uv-ips.html)|Observation.effectiveDateTime
 [AU PS Pathology Result Observation](StructureDefinition-au-ps-diagnosticresult-path.html)|Observation.effectiveDateTime
 [AU PS Procedure](StructureDefinition-au-ps-procedure.html)|Procedure.performedDateTime
 {:.grid}
@@ -450,16 +450,16 @@ The table below lists the applicable profiles and elements in AU PS that support
 Profile |Must Support Sub-Element|Terminology Choices
 ---|---
 [AU PS Immunization](StructureDefinition-au-ps-immunization.html)|Immunization.vaccineCode.coding|[Australian Medicines Terminology Vaccine](https://healthterminologies.gov.au/fhir/ValueSet/amt-vaccine-1), [Australian Immunisation Register Vaccine](https://healthterminologies.gov.au/fhir/ValueSet/australian-immunisation-register-vaccine-1)
-[AU PS Medication](StructureDefinition-au-ps-medication.html)|Medication.code.coding|[Australian Medication](https://healthterminologies.gov.au/fhir/ValueSet/australian-medication-1), [PBS Item Codes](https://build.fhir.org/ig/hl7au/au-fhir-base/ValueSet-pbs-item.html)
-[AU PS MedicationRequest](StructureDefinition-au-ps-medicationrequest.html)|MedicationRequest.code.coding|[Australian Medication](https://healthterminologies.gov.au/fhir/ValueSet/australian-medication-1), [PBS Item Codes](https://build.fhir.org/ig/hl7au/au-fhir-base/ValueSet-pbs-item.html)
-[AU PS MedicationStatement](StructureDefinition-au-ps-medicationstatement.html)|MedicationStatement.code.coding|[Australian Medication](https://healthterminologies.gov.au/fhir/ValueSet/australian-medication-1), [PBS Item Codes](https://build.fhir.org/ig/hl7au/au-fhir-base/ValueSet-pbs-item.html)
+[AU PS Medication](StructureDefinition-au-ps-medication.html)|Medication.code.coding|[Australian Medication](https://healthterminologies.gov.au/fhir/ValueSet/australian-medication-1), [PBS Item Codes](https://hl7.org.au/fhir/6.0.0/ValueSet-pbs-item.html)
+[AU PS MedicationRequest](StructureDefinition-au-ps-medicationrequest.html)|MedicationRequest.code.coding|[Australian Medication](https://healthterminologies.gov.au/fhir/ValueSet/australian-medication-1), [PBS Item Codes](https://hl7.org.au/fhir/6.0.0/ValueSet-pbs-item.html)
+[AU PS MedicationStatement](StructureDefinition-au-ps-medicationstatement.html)|MedicationStatement.code.coding|[Australian Medication](https://healthterminologies.gov.au/fhir/ValueSet/australian-medication-1), [PBS Item Codes](https://hl7.org.au/fhir/6.0.0/ValueSet-pbs-item.html)
 {:.grid}
 
-For example, the profile [AU PS Medication](StructureDefinition-au-ps-medication.html) defines support for [Australian Medication](https://healthterminologies.gov.au/fhir/ValueSet/australian-medication-1) and [PBS Item Codes](https://build.fhir.org/ig/hl7au/au-fhir-base/ValueSet-pbs-item.html) value sets as slices of `Medication.code.coding` flagged with *Must Support*.
+For example, the profile [AU PS Medication](StructureDefinition-au-ps-medication.html) defines support for [Australian Medication](https://healthterminologies.gov.au/fhir/ValueSet/australian-medication-1) and [PBS Item Codes](https://hl7.org.au/fhir/6.0.0/ValueSet-pbs-item.html) value sets as slices of `Medication.code.coding` flagged with *Must Support*.
 
 When claiming conformance to the AU PS Medication profile: 
-- AU PS Producers **SHALL** correctly populate `Medication.code.coding` with codes from [Australian Medication](https://healthterminologies.gov.au/fhir/ValueSet/australian-medication-1) and [PBS Item Codes](https://build.fhir.org/ig/hl7au/au-fhir-base/ValueSet-pbs-item.html) if both coded values are known, or from either if only one is known, or from another terminology if neither is known but a code is available, or text only if no coded value is known.
-- AU PS Consumers **SHALL** handle `Medication.code.coding` if present and containing any valid value. A valid value may be text, or may be a code from [Australian Medication](https://healthterminologies.gov.au/fhir/ValueSet/australian-medication-1) or [PBS Item Codes](https://build.fhir.org/ig/hl7au/au-fhir-base//ValueSet-pbs-item.html), or both, or some other code. AU PS Consumers **SHOULD** display the value of this element when presenting the data to a human user.
+- AU PS Producers **SHALL** correctly populate `Medication.code.coding` with codes from [Australian Medication](https://healthterminologies.gov.au/fhir/ValueSet/australian-medication-1) and [PBS Item Codes](https://hl7.org.au/fhir/6.0.0/ValueSet-pbs-item.html) if both coded values are known, or from either if only one is known, or from another terminology if neither is known but a code is available, or text only if no coded value is known.
+- AU PS Consumers **SHALL** handle `Medication.code.coding` if present and containing any valid value. A valid value may be text, or may be a code from [Australian Medication](https://healthterminologies.gov.au/fhir/ValueSet/australian-medication-1) or [PBS Item Codes](https://hl7.org.au/fhir/6.0.0//ValueSet-pbs-item.html), or both, or some other code. AU PS Consumers **SHOULD** display the value of this element when presenting the data to a human user.
 
 Systems **MAY** populate other code systems but this is not a requirement of AU PS.
 
