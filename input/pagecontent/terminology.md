@@ -64,7 +64,7 @@ Column attribute descriptions are as follows:
 |[Location Type (Physical) - AU Extended](https://build.fhir.org/ig/hl7au/au-fhir-base//ValueSet-au-location-physical-type-extended.html)|[AU Core Location](https://build.fhir.org/ig/hl7au/au-fhir-core/StructureDefinition-au-core-location.html)|AU Base|
 |[LOINC Diagnostic Report Codes](https://hl7.org/fhir/R4/valueset-report-codes.html)|[DiagnosticReport (IPS)](https://hl7.org/fhir/uv/ips/STU2/StructureDefinition-DiagnosticReport-uv-ips.html)|FHIR|
 |[Medical Devices - IPS](https://hl7.org/fhir/uv/ips/STU2/ValueSet-medical-devices-uv-ips.html)|[Device (IPS)](https://hl7.org/fhir/uv/ips/STU2/StructureDefinition-Device-uv-ips.html)|IPS|
-|[Medication Form](https://healthterminologies.gov.au/fhir/ValueSet/medication-form-1)|[AU PS Medication](StructureDefinition-au-ps-medication.html)|FHIR|
+|[Medication Form](https://healthterminologies.gov.au/fhir/ValueSet/medication-form-1)|[AU PS Medication](StructureDefinition-au-ps-medication.html)|NCTS|
 |[Medication Ingredient](https://healthterminologies.gov.au/fhir/ValueSet/medication-ingredient-1)|[AU PS Medication](StructureDefinition-au-ps-medication.html)|NCTS|
 |[Medication Reason Taken](https://healthterminologies.gov.au/fhir/ValueSet/medication-reason-taken-1)|[AU PS MedicationStatement](StructureDefinition-au-ps-medicationstatement.html)|FHIR|
 |[Medication request intent](https://hl7.org/fhir/R4/valueset-medicationrequest-intent.html)|[AU PS MedicationRequest](StructureDefinition-au-ps-medicationrequest.html)|FHIR|
