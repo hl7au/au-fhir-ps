@@ -11,29 +11,29 @@ The following profiles have been defined for this implementation guide.
 #### Other Profiles Used 
 
 In addition to the profiles defined in this implementation guide, the following profiles defined elsewhere are used by AU Patient Summary. These profiles are a data type profile for a *Must Support* element in an AU PS profile or are the target of a *Must Support* reference element in an AU PS profile through definition or by impose:
-- [AU Australian Business Number](https://build.fhir.org/ig/hl7au/au-fhir-base/StructureDefinition-au-australianbusinessnumber.html)
-- [AU Base Dosage](https://build.fhir.org/ig/hl7au/au-fhir-base/StructureDefinition-au-dosage.html)
-- [AU Core Location](https://build.fhir.org/ig/hl7au/au-fhir-core/StructureDefinition-au-core-location.html)
-- [AU DVA Number](https://build.fhir.org/ig/hl7au/au-fhir-base/StructureDefinition-au-dvanumber.html)
-- [AU HPI-I](https://build.fhir.org/ig/hl7au/au-fhir-base/StructureDefinition-au-hpii.html)
-- [AU HPI-O](https://build.fhir.org/ig/hl7au/au-fhir-base/StructureDefinition-au-hpio.html)
-- [AU IHI](https://build.fhir.org/ig/hl7au/au-fhir-base/StructureDefinition-au-ihi.html)
-- [AU Medicare Card Number](https://build.fhir.org/ig/hl7au/au-fhir-base/StructureDefinition-au-medicarecardnumber.html)
-- [AU Medicare Provider Number](https://build.fhir.org/ig/hl7au/au-fhir-base/StructureDefinition-au-medicareprovidernumber.html)
-- [Codeable Concept (IPS)](https://hl7.org/fhir/uv/ips/STU2/StructureDefinition-CodeableConcept-uv-ips.html)
-- [Device (IPS)](https://hl7.org/fhir/uv/ips/STU2/StructureDefinition-Device-uv-ips.html)
-* [DeviceUseStatement (IPS)](https://hl7.org/fhir/uv/ips/STU2/StructureDefinition-DeviceUseStatement-uv-ips.html)
-* [DiagnosticReport (IPS)](https://hl7.org/fhir/uv/ips/STU2/StructureDefinition-DiagnosticReport-uv-ips.html)
-* [Observation Results - Radiology (IPS)](https://hl7.org/fhir/uv/ips/STU2/StructureDefinition-Observation-results-radiology-uv-ips.html)
+- [AU Australian Business Number](https://hl7.org.au/fhir/StructureDefinition-au-australianbusinessnumber.html)
+- [AU Base Dosage](https://hl7.org.au/fhir/StructureDefinition-au-dosage.html)
+- [AU Core Location](https://hl7.org.au/fhir/core/StructureDefinition-au-core-location.html)
+- [AU DVA Number](https://hl7.org.au/fhir/StructureDefinition-au-dvanumber.html)
+- [AU HPI-I](https://hl7.org.au/fhir/StructureDefinition-au-hpii.html)
+- [AU HPI-O](https://hl7.org.au/fhir/StructureDefinition-au-hpio.html)
+- [AU IHI](https://hl7.org.au/fhir/StructureDefinition-au-ihi.html)
+- [AU Medicare Card Number](https://hl7.org.au/fhir/StructureDefinition-au-medicarecardnumber.html)
+- [AU Medicare Provider Number](https://hl7.org.au/fhir/StructureDefinition-au-medicareprovidernumber.html)
+- [Codeable Concept (IPS)](https://hl7.org/fhir/uv/ips/en/StructureDefinition-CodeableConcept-uv-ips.html)
+- [Device (IPS)](https://hl7.org/fhir/uv/ips/en/StructureDefinition-Device-uv-ips.html)
+* [DeviceUseStatement (IPS)](https://hl7.org/fhir/uv/ips/en/StructureDefinition-DeviceUseStatement-uv-ips.html)
+* [DiagnosticReport (IPS)](https://hl7.org/fhir/uv/ips/en/StructureDefinition-DiagnosticReport-uv-ips.html)
+* [Observation Results - Radiology (IPS)](https://hl7.org/fhir/uv/ips/en/StructureDefinition-Observation-results-radiology-uv-ips.html)
 
 Additional IPS profiles are referenced in [AU PS Bundle](StructureDefinition-au-ps-bundle.html) and [AU PS Composition](StructureDefinition-au-ps-composition.html), but are not labelled *Must Support* in AU PS (or IPS).
 
 
 ### Extensions
 
-All extensions used in this guide are defined in the FHIR Extensions Pack or [AU Base](http://build.fhir.org/ig/hl7au/au-fhir-base/profiles-and-extensions.html#extensions).
+All extensions used in this guide are defined in the FHIR Extensions Pack or [AU Base](https://hl7.org.au/fhir/profiles-and-extensions.html#extensions).
 
 The following extensions are marked with *Must Support* in this implementation guide:
-* [Australian Indigenous Status](https://build.fhir.org/ig/hl7au/au-fhir-base/StructureDefinition-indigenous-status.html) in [AU PS Patient](StructureDefinition-au-ps-patient.html)
-* [Individual Pronouns](https://hl7.org/fhir/extensions/5.1.0/StructureDefinition-individual-pronouns.html) in [AU PS Patient](StructureDefinition-au-ps-patient.html)
-* [Individual Gender Identity](https://hl7.org/fhir/extensions/5.1.0/StructureDefinition-individual-genderIdentity.html) in [AU PS Patient](StructureDefinition-au-ps-patient.html)
+* [Australian Indigenous Status](https://hl7.org.au/fhir/StructureDefinition-indigenous-status.html) in [AU PS Patient](StructureDefinition-au-ps-patient.html)
+* [Individual Pronouns](https://hl7.org/fhir/extensions/5.3.0/StructureDefinition-individual-pronouns.html) in [AU PS Patient](StructureDefinition-au-ps-patient.html)
+* [Individual Gender Identity](https://hl7.org/fhir/extensions/5.3.0/StructureDefinition-individual-genderIdentity.html) in [AU PS Patient](StructureDefinition-au-ps-patient.html)
