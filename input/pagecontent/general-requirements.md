@@ -243,6 +243,55 @@ When selecting a code:
 
 **Option 3**
 
+In some circumstances, specific pieces of data are hidden. The table below describes how suppressed data is represented in AU PS, including which code to use depending on whether the system is permitted to know that data is suppressed.
+
+<table border="1" cellspacing="0" cellpadding="0">
+  <thead>
+    <tr>
+      <th>Scenario</th>
+      <th>Composition.section.emptyReason</th>
+      <th>Resource element</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Optional section (minimum cardinality = 0) cannot be shared and system is not permitted to know data is suppressed</td>
+      <td><strong>MAY</strong> be omitted; if provided use code "unavailable" from the <a href="https://hl7.org/fhir/R4/codesystem-list-empty-reason.html">List Empty Reason</a></td>
+    </tr>
+    <tr>
+      <td>Optional section cannot be shared and system is permitted to know data is suppressed</td>
+      <td><strong>MAY</strong> be omitted; if provided use code "withheld" from the <a href="https://hl7.org/fhir/R4/codesystem-list-empty-reason.html">List Empty Reason</a></td>
+      <td>-</td>
+    </tr>
+    <tr>
+      <td>Mandatory section (minimum cardinality > 0) cannot be shared and system is not permitted to know data is suppressed</td>
+      <td>use code "unavailable" from the <a href="https://hl7.org/fhir/R4/codesystem-list-empty-reason.html">List Empty Reason</a></td>
+      <td>-</td>
+    </tr>
+    <tr>
+      <td>Mandatory section (minimum cardinality > 0) cannot be shared and system is permitted to know data is suppressed</td>
+      <td>use code "withheld" from the <a href="https://hl7.org/fhir/R4/codesystem-list-empty-reason.html">List Empty Reason</a></td>
+    </tr>
+    <tr>
+      <td>Optional element (minimum cardinality > 0) cannot be shared</td>
+      <td>-</td>
+      <td><strong>SHALL</strong> be omitted</td>
+    </tr>
+    <tr>
+      <td>Mandatory element cannot be shared and system is not permitted to know data is suppressed</td>
+      <td>-</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td></td>
+      <td>-</td>
+      <td></td>
+    </tr>
+  </tbody>
+</table>
+
+**Option 4**
+
 In some circumstances, specific pieces of data are hidden. The table below describes how suppressed data is represented in AU PS.
 
 <table border="1" cellspacing="0" cellpadding="0">
