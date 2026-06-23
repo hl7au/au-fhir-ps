@@ -4,8 +4,8 @@ When implementing AU Patient Summary (AU PS), implementers need to be aware of F
 
 - [FHIR Security Considerations](https://hl7.org/fhir/R4/security.html)
 - [FHIR Implementer Safety Checklist](https://hl7.org/fhir/R4/safety.html)
-- [IPS Privacy and Security Considerations](https://hl7.org/fhir/uv/ips/2.0.1/en/Privacy-and-Security-Considerations.html)
-- [AU Core Security and Privacy](https://hl7.org.au/fhir/core/2.0.0/security.html)
+- [IPS Privacy and Security Considerations](https://hl7.org/fhir/uv/ips/en/Privacy-and-Security-Considerations.html)
+- [AU Core Security and Privacy](https://hl7.org.au/fhir/core/security.html)
 
 Implementers of AU PS need to be aware of their obligations regarding security, privacy, and consent in Australia.
 
