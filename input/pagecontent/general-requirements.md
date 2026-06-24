@@ -197,145 +197,14 @@ Example: Condition resource representing 'No Known Problems'
 ### Suppressed Data
 
 In some circumstances, specific pieces of data are hidden:
-* if an optional section (minimum cardinality = 0) is not able to be shared, it **MAY** be omitted; but if provided use the code "unavailable" or "withheld" from the [List Empty Reason](https://hl7.org/fhir/R4/codesystem-list-empty-reason.html) in `Composition.section.emptyReason`.
-* if a mandatory section (minimum cardinality > 0) is not able to be shared, use the code "unavailable" or "withheld" from the [List Empty Reason](https://hl7.org/fhir/R4/codesystem-list-empty-reason.html) in `Composition.section.emptyReason`.
-* if an optional element (minimum cardinality = 0) is not able to be shared, it **SHALL** be omitted.
-* if a mandatory element (minimum cardinality > 0) is not able to be shared, use the code "unknown" or "masked" from the [DataAbsentReason Code System](http://terminology.hl7.org/CodeSystem/data-absent-reason) following the section on [Missing Data](#missing-data).
-
-
-<div class="bg-info" markdown=1>
-
-The following options show two ways of presenting the suppressed data requirements with the addition of informative guidance on when to use withheld vs unavailable for sections, and unknown vs masked for elements, consistent with AU Core. 
-
-</div>
-
-
-**Option 1**
-
-In some circumstances, specific pieces of data are hidden:
-* if an optional section (minimum cardinality = 0) is not able to be shared, it **MAY** be omitted; but if provided use the code "unavailable" or "withheld" from the [List Empty Reason](https://hl7.org/fhir/R4/codesystem-list-empty-reason.html) in `Composition.section.emptyReason`.
-  - where the requester does not have access rights to know that data is suppressed, use the code "unavailable"
-  - where the requester may know that data is suppressed, use the code "withheld"
-* if a mandatory section (minimum cardinality > 0) is not able to be shared, use the code "unavailable" or "withheld" from the [List Empty Reason](https://hl7.org/fhir/R4/codesystem-list-empty-reason.html) in `Composition.section.emptyReason`
-  - where the requester does not have access rights to know the data is suppressed used the code "unavailable"
-  - where the requester may know that the data is suppressed used the code "withheld"
-* if an optional element (minimum cardinality = 0) is not able to be shared, it **SHALL** be omitted.
-* if a mandatory element (minimum cardinality > 0) is not able to be shared, use the code "unknown" or "masked" from the [DataAbsentReason Code System](http://terminology.hl7.org/CodeSystem/data-absent-reason) following the section on [Missing Data](#missing-data)
-  - where the requester does not have access rights to know that data is suppressed use the code "unknown"
-  - where a requester may know that the data is suppressed use the code "masked"
-
-
-**Option 2**
-
-In some circumstances, specific pieces of data are hidden:
 * if an optional section (minimum cardinality = 0) is not able to be shared, it **MAY** be omitted; but if provided use a code from the [List Empty Reason](https://hl7.org/fhir/R4/codesystem-list-empty-reason.html) in `Composition.section.emptyReason`.
-* if a mandatory section (minimum cardinality > 0) is not able to be shared, use a code from the [List Empty Reason](https://hl7.org/fhir/R4/codesystem-list-empty-reason.html) in `Composition.section.emptyReason`
+* if a mandatory section (minimum cardinality > 0) is not able to be shared, use a code from the [List Empty Reason](https://hl7.org/fhir/R4/codesystem-list-empty-reason.html) in `Composition.section.emptyReason`.
 * if an optional element (minimum cardinality = 0) is not able to be shared, it **SHALL** be omitted.
 * if a mandatory element (minimum cardinality > 0) is not able to be shared, use a code from the [DataAbsentReason Code System](http://terminology.hl7.org/CodeSystem/data-absent-reason) following the section on [Missing Data](#missing-data)
 
-When selecting a code:
-* where data is suppressed and the system is not permitted to know  that the data is suppressed, use:
-  - "unavailable" for sections
-  - "unknown" for elements
-- where data is suppressed and the system is permitted to know that the data is suppressed, use
-  - "withheld" for sections
-  - "masked" for elements
+When data is suppressed and the system is not permitted to know that the data is suppressed, use the code "unavailable" for sections and "unknown" for elements.
 
-**Option 3**
-
-In some circumstances, specific pieces of data are hidden. The table below describes how suppressed data is represented in AU PS, including which code to use depending on whether the system is permitted to know that data is suppressed.
-
-<table border="1" cellspacing="0" cellpadding="0">
-  <thead>
-    <tr>
-      <th>Scenario</th>
-      <th>Composition.section.emptyReason</th>
-      <th>Resource element</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>Optional section (minimum cardinality = 0) cannot be shared and system is not permitted to know data is suppressed</td>
-      <td><strong>MAY</strong> be omitted; if provided use code "unavailable" from the <a href="https://hl7.org/fhir/R4/codesystem-list-empty-reason.html">List Empty Reason</a></td>
-    </tr>
-    <tr>
-      <td>Optional section cannot be shared and system is permitted to know data is suppressed</td>
-      <td><strong>MAY</strong> be omitted; if provided use code "withheld" from the <a href="https://hl7.org/fhir/R4/codesystem-list-empty-reason.html">List Empty Reason</a></td>
-      <td>-</td>
-    </tr>
-    <tr>
-      <td>Mandatory section (minimum cardinality > 0) cannot be shared and system is not permitted to know data is suppressed</td>
-      <td>use code "unavailable" from the <a href="https://hl7.org/fhir/R4/codesystem-list-empty-reason.html">List Empty Reason</a></td>
-      <td>-</td>
-    </tr>
-    <tr>
-      <td>Mandatory section (minimum cardinality > 0) cannot be shared and system is permitted to know data is suppressed</td>
-      <td>use code "withheld" from the <a href="https://hl7.org/fhir/R4/codesystem-list-empty-reason.html">List Empty Reason</a></td>
-    </tr>
-    <tr>
-      <td>Optional element (minimum cardinality > 0) cannot be shared</td>
-      <td>-</td>
-      <td><strong>SHALL</strong> be omitted</td>
-    </tr>
-    <tr>
-      <td>Mandatory element cannot be shared and system is not permitted to know data is suppressed</td>
-      <td>-</td>
-      <td></td>
-    </tr>
-    <tr>
-      <td></td>
-      <td>-</td>
-      <td></td>
-    </tr>
-  </tbody>
-</table>
-
-**Option 4**
-
-In some circumstances, specific pieces of data are hidden. The table below describes how suppressed data is represented in AU PS.
-
-<table border="1" cellspacing="0" cellpadding="0">
-  <thead>
-    <tr>
-      <th>Content</th>
-      <th>Cardinality</th>
-      <th>If unable to be shared</th>
-      <th>Code to use (system is not permitted to know data is suppressed)</th>
-      <th>Code to use (system is permitted to know data is suppressed)</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>Section</td>
-      <td>Optional (minimum cardinality = 0)</td>
-      <td><strong>MAY</strong> be omitted; but if provided use a code from the <a href="https://hl7.org/fhir/R4/codesystem-list-empty-reason.html">List Empty Reason</a> <code>Composition.section.emptyReason</code></td>
-      <td>"unavailable"</td>
-      <td>"withheld"</td>
-    </tr>
-    <tr>
-      <td>Section</td>
-      <td>Mandatory (minimum cardinality > 0)</td>
-      <td>Use a code from the <a href="https://hl7.org/fhir/R4/codesystem-list-empty-reason.html">List Empty Reason</a> in <code>Composition.section.emptyReason</code></td>
-      <td>"unavailable"</td>
-      <td>"withheld"</td>
-    </tr>
-    <tr>
-      <td>Element</td>
-      <td>Optional (minimum cardinality = 0)</td>
-      <td><strong>SHALL</strong> be omitted</td>
-      <td>-</td>
-      <td>-</td>
-    </tr>
-    <tr>
-      <td>Element</td>
-      <td>Mandatory (minimum cardinality > 0)</td>
-      <td>Use a code from the <a href="http://terminology.hl7.org/CodeSystem/data-absent-reason">DataAbsentReason Code System</a> following the section on <a href="#missing-data">Missing Data</a></td>
-      <td>"unknown"</td>
-      <td>"masked"</td>
-    </tr>
-  </tbody>
-</table>
-
+When data is suppressed and the system is permitted to know that the data is suppressed, use "withheld" for sections and "masked" for elements.
 
 Example: Allergies and Intolerances Section where the patient's allergy information is not allowed to be shared.
   ~~~
