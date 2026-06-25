@@ -1,4 +1,4 @@
-###  Release TBD
+###  Release 1.0.0
 - Publication date: TBD
 - Publication status: Working Standard (Trial Use)
 - Based on FHIR version: 4.0.1
