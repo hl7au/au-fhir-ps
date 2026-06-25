@@ -94,8 +94,8 @@ In addition to the profiles defined in this implementation guide and in IPS, the
 #### Must Support Extensions
 No extensions are labelled as *Must Support* in IPS. In AU PS, the following extensions are labelled as *Must Support*:
 * [Australian Indigenous Status](https://hl7.org.au/fhir/6.0.0/StructureDefinition-indigenous-status.html) in [AU PS Patient](StructureDefinition-au-ps-patient.html)
-* [Individual Pronouns](https://hl7.org/fhir/extensions/5.1.0/StructureDefinition-individual-pronouns.html) in [AU PS Patient](StructureDefinition-au-ps-patient.html)
-* [Individual Gender Identity](https://hl7.org/fhir/extensions/5.1.0/StructureDefinition-individual-genderIdentity.html) in [AU PS Patient](StructureDefinition-au-ps-patient.html)
+* [Individual Pronouns](https://hl7.org/fhir/extensions/StructureDefinition-individual-pronouns.html) in [AU PS Patient](StructureDefinition-au-ps-patient.html)
+* [Individual Gender Identity](https://hl7.org/fhir/extensions/StructureDefinition-individual-genderIdentity.html) in [AU PS Patient](StructureDefinition-au-ps-patient.html)
 
 #### Terminology Localisation
  A full list of terminology differences is not provided, refer to the [AU PS profiles](profiles-and-extensions.html) and the [Terminology](terminology.html) page to understand the terminology supported for use in AU PS. Some differences are mentioned below to highlight their potential relevance to implementers of the AU PS.

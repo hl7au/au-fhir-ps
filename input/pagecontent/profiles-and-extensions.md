@@ -35,5 +35,5 @@ All extensions used in this guide are defined in the FHIR Extensions Pack or [AU
 
 The following extensions are marked with *Must Support* in this implementation guide:
 * [Australian Indigenous Status](https://hl7.org.au/fhir/StructureDefinition-indigenous-status.html) in [AU PS Patient](StructureDefinition-au-ps-patient.html)
-* [Individual Pronouns](https://hl7.org/fhir/extensions/5.3.0/StructureDefinition-individual-pronouns.html) in [AU PS Patient](StructureDefinition-au-ps-patient.html)
-* [Individual Gender Identity](https://hl7.org/fhir/extensions/5.3.0/StructureDefinition-individual-genderIdentity.html) in [AU PS Patient](StructureDefinition-au-ps-patient.html)
+* [Individual Pronouns](https://hl7.org/fhir/extensions/StructureDefinition-individual-pronouns.html) in [AU PS Patient](StructureDefinition-au-ps-patient.html)
+* [Individual Gender Identity](https://hl7.org/fhir/extensions/StructureDefinition-individual-genderIdentity.html) in [AU PS Patient](StructureDefinition-au-ps-patient.html)
