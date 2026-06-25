@@ -202,9 +202,9 @@ In some circumstances, specific pieces of data are hidden:
 * if an optional element (minimum cardinality = 0) is not able to be shared, it **SHALL** be omitted.
 * if a mandatory element (minimum cardinality > 0) is not able to be shared, use a code from the [DataAbsentReason Code System](http://terminology.hl7.org/CodeSystem/data-absent-reason) following the section on [Missing Data](#missing-data)
 
-When data is suppressed and the system is not permitted to know that the data is suppressed, use the code "unavailable" for sections and "unknown" for elements.
+The codes "unavailable" and "unknown" are applicable in the circumstance where data is suppressed and the receiving system is not permitted to know that the data is suppressed.
 
-When data is suppressed and the system is permitted to know that the data is suppressed, use "withheld" for sections and "masked" for elements.
+The codes "withheld" and "masked" are appliable in the circumstance where the data is suppressed and the receiving system is permitted to know that the data is suppressed.
 
 Example: Allergies and Intolerances Section where the patient's allergy information is not allowed to be shared.
   ~~~
