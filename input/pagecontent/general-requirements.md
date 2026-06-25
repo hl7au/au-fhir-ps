@@ -197,10 +197,10 @@ Example: Condition resource representing 'No Known Problems'
 ### Suppressed Data
 
 In some circumstances, specific pieces of data are hidden:
-* if an optional section (minimum cardinality = 0) is not able to be shared, it **MAY** be omitted; but if provided use a code from the [List Empty Reason](https://hl7.org/fhir/R4/codesystem-list-empty-reason.html) in `Composition.section.emptyReason`.
-* if a mandatory section (minimum cardinality > 0) is not able to be shared, use a code from the [List Empty Reason](https://hl7.org/fhir/R4/codesystem-list-empty-reason.html) in `Composition.section.emptyReason`.
+* if an optional section (minimum cardinality = 0) is not able to be shared, it **MAY** be omitted; but if provided use the code "unavailable" or "withheld" from the [List Empty Reason](https://hl7.org/fhir/R4/codesystem-list-empty-reason.html) in `Composition.section.emptyReason`.
+* if a mandatory section (minimum cardinality > 0) is not able to be shared, use the code "unavailable" or "withheld" from the [List Empty Reason](https://hl7.org/fhir/R4/codesystem-list-empty-reason.html) in `Composition.section.emptyReason`.
 * if an optional element (minimum cardinality = 0) is not able to be shared, it **SHALL** be omitted.
-* if a mandatory element (minimum cardinality > 0) is not able to be shared, use a code from the [DataAbsentReason Code System](http://terminology.hl7.org/CodeSystem/data-absent-reason) following the section on [Missing Data](#missing-data)
+* if a mandatory element (minimum cardinality > 0) is not able to be shared, use the code "unknown" or "masked" from the [DataAbsentReason Code System](http://terminology.hl7.org/CodeSystem/data-absent-reason) following the section on [Missing Data](#missing-data).
 
 The codes "unavailable" and "unknown" are applicable in the circumstance where data is suppressed and the receiving system is not permitted to know that the data is suppressed.
 
