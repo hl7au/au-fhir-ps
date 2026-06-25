@@ -202,38 +202,42 @@ In some circumstances, specific pieces of data are hidden:
 * if an optional element (minimum cardinality = 0) is not able to be shared, it **SHALL** be omitted.
 * if a mandatory element (minimum cardinality > 0) is not able to be shared, use the code "unknown" or "masked" from the [DataAbsentReason Code System](http://terminology.hl7.org/CodeSystem/data-absent-reason) following the section on [Missing Data](#missing-data).
 
-    Example: Allergies and Intolerances Section where the patient's allergy information is not allowed to be shared.
-    ~~~
-        ...
-        "section" : [
-            {
-              "title" : "Allergies and Intolerances",
-              "code" : {
-                "coding" : [
-                    {
-                    "system" : "http://loinc.org",
-                    "code" : "48765-2",
-                    "display" : "Allergies and adverse reactions Document"
-                  }
-                ]
-              },
-              "text" : {
-                "status" : "generated",
-                "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\" xml:lang=\"en-AU\" lang=\"en-AU\">This information is withheld.</div>"
-              },
-              "emptyReason" : {
-                "coding" : [
-                    {
-                    "system" : "http://terminology.hl7.org/CodeSystem/list-empty-reason",
-                    "code" : "withheld",
-                    "display" : "Withheld"
-                    }
-                ],
-                "text" : "Withheld"
+The codes "unavailable" and "unknown" are applicable in the circumstance where data is suppressed and the receiving system is not permitted to know that the data is suppressed.
+
+The codes "withheld" and "masked" are appliable in the circumstance where the data is suppressed and the receiving system is permitted to know that the data is suppressed.
+
+Example: Allergies and Intolerances Section where the patient's allergy information is not allowed to be shared.
+  ~~~
+    ...
+    "section" : [
+        {
+          "title" : "Allergies and Intolerances",
+          "code" : {
+            "coding" : [
+               {
+                "system" : "http://loinc.org",
+                "code" : "48765-2",
+                "display" : "Allergies and adverse reactions Document"
               }
-            },
-        ...
-    ~~~
+            ]
+          },
+          "text" : {
+            "status" : "generated",
+            "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\" xml:lang=\"en-AU\" lang=\"en-AU\">This information is withheld.</div>"
+          },
+          "emptyReason" : {
+            "coding" : [
+                {
+                "system" : "http://terminology.hl7.org/CodeSystem/list-empty-reason",
+                "code" : "withheld",
+                "display" : "Withheld"
+                }
+            ],
+            "text" : "Withheld"
+          }
+        },
+    ...
+  ~~~
     
 
 ### Must Support and Obligation
