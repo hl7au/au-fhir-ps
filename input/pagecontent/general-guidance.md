@@ -1,7 +1,7 @@
 {::options toc_levels="1..4"/}
 
 ### Approach of this Implementation Guide
-AU Patient Summary (AU PS) is provided to support the use of patient summaries in HL7 FHIR in an Australian context. AU PS is based on [IPS](https://hl7.org/fhir/uv/ips/STU2/index.html) and [AU Core](https://build.fhir.org/ig/hl7au/au-fhir-core), setting the minimum conformance expectations for implementing AU PS documents in systems.
+AU Patient Summary (AU PS) is provided to support the use of patient summaries in HL7 FHIR in an Australian context. AU PS is based on [IPS](https://hl7.org/fhir/uv/ips/en/index.html) and [AU Core](https://hl7.org.au/fhir/core/), setting the minimum conformance expectations for implementing AU PS documents in systems.
 
 AU PS, by design:
 * ensures compliance with AU Core and IPS
@@ -24,21 +24,21 @@ AU PS profiles:
 In this release, AU PS does not define new extensions, [terminology](general-guidance.html#terminology-approach), search parameters, operations, or capability statements. Future releases of this IG may include these artefacts.
 
 #### Extension Approach
-AU PS does not define new extensions. All extensions included in AU PS are defined in the [FHIR Extensions Pack](https://hl7.org/fhir/extensions/) or [AU Base](http://build.fhir.org/ig/hl7au/au-fhir-base/profiles-and-extensions.html#extensions). A limited set of extensions are indicated as _Must Support_ in AU PS resource profiles; these supported extensions have been inherited from the underlying AU Core profile.
+AU PS does not define new extensions. All extensions included in AU PS are defined in the [FHIR Extensions Pack](https://hl7.org/fhir/extensions/5.3.0/) or [AU Base](https://hl7.org.au/fhir/profiles-and-extensions.html#extensions). A limited set of extensions are indicated as _Must Support_ in AU PS resource profiles; these supported extensions have been inherited from the underlying AU Core profile.
 
 It is anticipated that extension profiles may be included in future releases of this IG.
 
 #### Terminology Approach
-AU PS does not define new terminology FHIR artefacts (e.g. value sets or code systems). Terminology supported in AU PS are published in [AU Base](https://build.fhir.org/ig/hl7au/au-fhir-base/terminology.html), the FHIR standard, [HL7 Terminology (THO)](https://terminology.hl7.org/), or the [National Clinical Terminology Service (NCTS)](https://www.healthterminologies.gov.au/). 
+AU PS does not define new terminology FHIR artefacts (e.g. value sets or code systems). Terminology supported in AU PS are published in [AU Base](https://hl7.org.au/fhir/terminology.html), the FHIR standard, [HL7 Terminology (THO)](https://terminology.hl7.org/), or the [National Clinical Terminology Service (NCTS)](https://www.healthterminologies.gov.au/). 
 
-As part of profiling, AU PS inherits the AU Core localised terminology and indicates support expectations for an AU PS actor using _Must Support_ and obligations. For more information on the terminology modelling inherited from AU Core see the guidance in AU Core [Use of Terminology Bindings](https://build.fhir.org/ig/hl7au/au-fhir-core/general-guidance.html#use-of-terminology-bindings). 
+As part of profiling, AU PS inherits the AU Core localised terminology and indicates support expectations for an AU PS actor using _Must Support_ and obligations. For more information on the terminology modelling inherited from AU Core see the guidance in AU Core [Use of Terminology Bindings](https://hl7.org.au/fhir/core//general-guidance.html#use-of-terminology-bindings). 
 
 In terms of support in AU PS profiles, a coded element can have support defined for one or more value sets. Coded elements that define support for more than one value set include them in a profile by slicing the [Coding](http://hl7.org/fhir/R4/datatypes.html#Coding) part of the element and placing *Must Support* on each value set slice. These value set slices are not intended to prevent systems from supplying only a text value. Most coded *Must Support* elements in AU PS profiles define support for one value set, which is bound to the supported element and no value set slice is present.
 
 For:
 * a description of the localisation of terminology in AU PS, refer to [Terminology Localisation](the-aups.html#terminology-localisation)
 * a list of the terminologies supported in AU PS, refer to the [Terminology](terminology.html) page
-* guidance on selection of terminology in HL7 AU IGs, refer to the AU Base guidance on [Terminology Selection](https://build.fhir.org/ig/hl7au/au-fhir-base/generalguidance.html#terminology-selection)
+* guidance on selection of terminology in HL7 AU IGs, refer to the AU Base guidance on [Terminology Selection](https://hl7.org.au/fhir/generalguidance.html#terminology-selection)
 
 #### Resource Profile Approach
 
@@ -80,7 +80,7 @@ When modelling AU PS resource profiles, they:
 * are derived from AU Core profiles, or where not available, the AU Base profile (where it exists)
 * apply additional requirements inherited from IPS (in accordance with the [AU PS Profile Design Principles](general-guidance.html#au-ps-profile-design-principles)) 
 * apply additional requirements agreed by the AU PS project (e.g. inclusion of AU PS Encounter profile)
-* use [compliesWithProfile](https://build.fhir.org/ig/HL7/fhir-extensions/StructureDefinition-structuredefinition-compliesWithProfile.html) to assert compliance with the corresponding IPS profile (where it exists)
+* use [compliesWithProfile](https://hl7.org/fhir/extensions/5.3.0/StructureDefinition-structuredefinition-compliesWithProfile.html) to assert compliance with the corresponding IPS profile (where it exists)
 
 <div> 
     <img src="profilingapproach.png" alt="AU PS resource profile modelling" style="width:60%"/>
@@ -102,7 +102,7 @@ The [AU PS Bundle](StructureDefinition-au-ps-bundle.html) profile is not based o
 * derive from the FHIR Bundle resource
 * apply requirements inherited from IPS (in accordance with the [AU PS Profile Design Principles](general-guidance.html#au-ps-profile-design-principles)) 
 * apply additional requirements agreed by the AU PS project
-* use [compliesWithProfile](https://build.fhir.org/ig/HL7/fhir-extensions/StructureDefinition-structuredefinition-compliesWithProfile.html) to assert compliance with IPS
+* use [compliesWithProfile](https://hl7.org/fhir/extensions/5.3.0/StructureDefinition-structuredefinition-compliesWithProfile.html) to assert compliance with IPS
 
 <div> 
     <img src="psbundle-profilingapproach.png" alt="AU PS Bundle current profiling approach" style="width:40%"/>
@@ -110,13 +110,13 @@ The [AU PS Bundle](StructureDefinition-au-ps-bundle.html) profile is not based o
 *Figure 3: Profiling approach for AU PS Bundle profile*
 <br/><br/>
 
-This approach to [AU PS Bundle](StructureDefinition-au-ps-bundle.html) profiling (deriving from the FHIR Bundle resource and not [Bundle (IPS)](https://build.fhir.org/ig/HL7/fhir-ips/en/StructureDefinition-Bundle-uv-ips.html) profile) has been taken as at the time of publication of this release there is a tooling limitation that prevents meeting both of the below conditions:
+This approach to [AU PS Bundle](StructureDefinition-au-ps-bundle.html) profiling (deriving from the FHIR Bundle resource and not [Bundle (IPS)](https://hl7.org/fhir/uv/ips/en/StructureDefinition-Bundle-uv-ips.html) profile) has been taken as at the time of publication of this release there is a tooling limitation that prevents meeting both of the below conditions:
 * derivation from Bundle (IPS)
 * changing reference targets to AU PS profiles (as AU PS profiles derive from AU Core and not IPS they cannot be easily assessed as meeting IPS rules by the tooling)
 
 Additional detail on profiling is:
 * described in the guidance section [Localisation of the IPS](the-aups.html#localisation-of-the-ips)
-* the modelling inherited from AU Core is described in the AU Core [Resource Profile Approach](https://build.fhir.org/ig/hl7au/au-fhir-core/general-guidance.html#resource-profile-approach)
+* the modelling inherited from AU Core is described in the AU Core [Resource Profile Approach](https://hl7.org.au/fhir/core//general-guidance.html#resource-profile-approach)
 
 ###### Use of Must Support and Obligations
 _[Must Support](general-requirements.html#must-support-and-obligation)_ is used to indicate the elements and extensions that form the minimum requirements of AU PS. Labelling an element _Must Support_ means that systems that produce or consume resources are to provide support for the element in some meaningful way. The FHIR standard does not define exactly what 'meaningful' support for an element means, but indicates that a profile needs to make clear exactly what kind of support is required when an element is labelled as _Must Support_.
@@ -125,7 +125,7 @@ The set of _Must Support_ elements in AU PS profiles is inherited from AU Core a
 
 The meaning of _Must Support_ in AU PS is defined in:
 * narrative in the IG (e.g. [Missing Data](general-requirements.html#missing-data) requirements)
-* the [obligation extension](https://hl7.org/fhir/extensions/StructureDefinition-obligation.html) on each supported element in a profile, identifying the support expectations for AU PS actors
+* the [obligation extension](https://hl7.org/fhir/extensions/5.3.0/StructureDefinition-obligation.html) on each supported element in a profile, identifying the support expectations for AU PS actors
 * narrative qualification of element obligations present in the profile specific implementation guidance
 
 See [Must Support and Obligation](general-requirements.html#must-support-and-obligation) for a detailed description of how this is applied in AU PS. 
@@ -135,13 +135,13 @@ See [Must Support and Obligation](general-requirements.html#must-support-and-obl
 When managing [profile complexity and requirements](relationship.html) in the [national and international context for AU PS](the-aups.html#the-au-ps-au-patient-summary), the following mechanisms are available:
 1. [Derived from Profiles (derive)](https://build.fhir.org/structuredefinition-definitions.html#StructureDefinition.baseDefinition)
 1. Informal alignment (human authoring of rules in a profile)
-1. [Complies With Profile (compliesWithProfile)](https://hl7.org/fhir/extensions/StructureDefinition-structuredefinition-compliesWithProfile.html)
-1. [Dependent Profiles (imposeProfile)](https://hl7.org/fhir/extensions/StructureDefinition-structuredefinition-imposeProfile.html)
+1. [Complies With Profile (compliesWithProfile)](https://hl7.org/fhir/extensions/5.3.0/StructureDefinition-structuredefinition-compliesWithProfile.html)
+1. [Dependent Profiles (imposeProfile)](https://hl7.org/fhir/extensions/5.3.0/StructureDefinition-structuredefinition-imposeProfile.html)
 
-These mechanisms offer differing capabilities and advantages. Typically HL7 AU profiles use derivation to manage compliance within HL7 AU inheritance (e.g. [AU PS Patient Profiling Approach](general-guidance.html#aupspatientprofilingapproach)). However, as AU PS will comply with both HL7 AU (AU Core) and HL7 Universal Realm (IPS), additional mechanism(s) on top of derivation from the underlying HL7 AU profile stack are required. At this time additional requirements are included in AU PS profiles via informal alignment (i.e. human authoring, human checking) and a [compliesWithProfile](https://hl7.org/fhir/extensions/StructureDefinition-structuredefinition-compliesWithProfile.html) declaration is made.
+These mechanisms offer differing capabilities and advantages. Typically HL7 AU profiles use derivation to manage compliance within HL7 AU inheritance (e.g. [AU PS Patient Profiling Approach](general-guidance.html#aupspatientprofilingapproach)). However, as AU PS will comply with both HL7 AU (AU Core) and HL7 Universal Realm (IPS), additional mechanism(s) on top of derivation from the underlying HL7 AU profile stack are required. At this time additional requirements are included in AU PS profiles via informal alignment (i.e. human authoring, human checking) and a [compliesWithProfile](https://hl7.org/fhir/extensions/5.3.0/StructureDefinition-structuredefinition-compliesWithProfile.html) declaration is made.
 
 <div class="stu-note" markdown="1">
-For a human, the main differences with use of [imposeProfile](https://hl7.org/fhir/extensions/StructureDefinition-structuredefinition-imposeProfile.html) are:
+For a human, the main differences with use of [imposeProfile](https://hl7.org/fhir/extensions/5.3.0/StructureDefinition-structuredefinition-imposeProfile.html) are:
 - does not rely on humans to maintain compliance rules from the target impose profile
 - does not visually show a human reader the rules from the target imposed profile in the source profile, i.e. a human reader must view and understand both profiles to understand the complete set of rules
 - where two or more profiles offer optional alternatives (e.g. differing preferred bindings or data type choices), it does not make clear which alternative is preferenced
@@ -184,7 +184,7 @@ As in IPS, a producer can send:
 
 Additional sections or elements are often required by other profiles the system may conform to, allowing local requirements, including technical and workflow context for the resource, to be reflected and extending the health information supported in exchanges. For this reason, extensibility is generally encouraged and expected in AU PS profiles. Only in some exceptionally rare use case profiles are rules tightened to limit the nature of additional information that can be sent. 
 
-Implementers intending to populate the AU PS with an unprofiled resource type, e.g. MedicationAdministration, are recommended to consider the corresponding [AU Base](https://build.fhir.org/ig/hl7au/au-fhir-base/) profile, e.g. [AU Base MedicationAdministration](https://build.fhir.org/ig/hl7au/au-fhir-base/StructureDefinition-au-medicationadministration.html), as guidance for that resource type in an Australian healthcare context.
+Implementers intending to populate the AU PS with an unprofiled resource type, e.g. MedicationAdministration, are recommended to consider the corresponding [AU Base](https://hl7.org.au/fhir/) profile, e.g. [AU Base MedicationAdministration](https://hl7.org.au/fhir/StructureDefinition-au-medicationadministration.html), as guidance for that resource type in an Australian healthcare context.
 
 
 #### Extensibility – 'Additional' Sections
@@ -203,21 +203,21 @@ Depending on local requirements, a consumer (i.e. client application) may ignore
 ### Structuring Terminology Choices
 The AU PS shares the same structure as IPS and contains sections that can include coded elements in reusable 'minimal' data blocks.
 
-The AU PS identifies a number of [terminologies](terminology.html) as *Must Support* for AU PS consumers and producers. Primary terminologies used in this specification include [SNOMED CT Australian Edition (SNOMED CT-AU)](https://build.fhir.org/ig/hl7au/au-fhir-base/generalguidance.html#snomed-ct-australian-edition) for clinical concepts (e.g. allergies, problems, procedures, medicines), LOINC for observation codes (e.g. pathology results and vital signs), UCUM for units of measure,  ISO 3166 for countries, PBS Item codes for medicines, Australian Immunisation Register codes for vaccines, and FHIR defined CodeSystems.
+The AU PS identifies a number of [terminologies](terminology.html) as *Must Support* for AU PS consumers and producers. Primary terminologies used in this specification include [SNOMED CT Australian Edition (SNOMED CT-AU)](https://hl7.org.au/fhir/generalguidance.html#snomed-ct-australian-edition) for clinical concepts (e.g. allergies, problems, procedures, medicines), LOINC for observation codes (e.g. pathology results and vital signs), UCUM for units of measure,  ISO 3166 for countries, PBS Item codes for medicines, Australian Immunisation Register codes for vaccines, and FHIR defined CodeSystems.
 
 Within [the AU PS](the-aups.html) context (i.e. the Australian healthcare context), the Australian localised value sets, developed and published by the [National Clinical Terminology Service](https://www.healthterminologies.gov.au) (NCTS) and the HL7 AU FHIR Working Group are preferred over IPS value sets to support the consumer on their healthcare journey in the AU healthcare context.
 
-In an IPS context, IPS proposes that to support interoperability of IPS content between organisations that use different SNOMED CT value set content, a 'common proximal ancestor' strategy is used. See IPS [Structuring Terminology Choices](https://hl7.org/fhir/uv/ips/STU2/General-Principles.html#structuring-terminology-choices) for more information.
+In an IPS context, IPS proposes that to support interoperability of IPS content between organisations that use different SNOMED CT value set content, a 'common proximal ancestor' strategy is used. See IPS [Structuring Terminology Choices](https://hl7.org/fhir/uv/ips/en/General-Principles.html#structuring-terminology-choices) for more information.
  
 
 ### Patient Safety in IPS Context
-See the guidance defined in IPS [Patient Safety in IPS Context](https://hl7.org/fhir/uv/ips/STU2/General-Principles.html#patient-safety-in-ips-context).
+See the guidance defined in IPS [Patient Safety in IPS Context](https://hl7.org/fhir/uv/ips/en/General-Principles.html#patient-safety-in-ips-context).
 
 ### Medicinal Product Identification
-See the guidance defined in AU Core [Medicine Information](https://build.fhir.org/ig/hl7au/au-fhir-core/medicine-information.html). 
+See the guidance defined in AU Core [Medicine Information](https://hl7.org.au/fhir/core//medicine-information.html). 
 
 ### Representing Body Site, Which May Include Laterality
-See the guidance defined in AU Core [Representing Body Site, Which May Include Laterality](https://build.fhir.org/ig/hl7au/au-fhir-core/general-guidance.html#representing-body-site-which-may-include-laterality). 
+See the guidance defined in AU Core [Representing Body Site, Which May Include Laterality](https://hl7.org.au/fhir/core//general-guidance.html#representing-body-site-which-may-include-laterality). 
 
 ### Provenance
-See the guidance defined in IPS [Provenance](https://hl7.org/fhir/uv/ips/STU2/Design-Conventions.html#provenance). 
+See the guidance defined in IPS [Provenance](https://hl7.org/fhir/uv/ips/en/Design-Conventions.html#provenance). 

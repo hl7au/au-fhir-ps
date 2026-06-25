@@ -124,7 +124,7 @@ Column attribute descriptions are as follows:
     <td rowspan="9">Medication Summary</td>
     <td><a href="StructureDefinition-au-ps-medicationstatement.html">AU PS MedicationStatement</a> | <a href="StructureDefinition-au-ps-medication.html">AU PS Medication</a></td>
     <td><code>MedicationStatement.medication[x] | Medication.code</code></td>
-    <td rowspan="9">See the <a href="https://build.fhir.org/ig/hl7au/au-fhir-core/medicine-information.html">Medicine Information</a> guidance page in AU Core.</td>
+    <td rowspan="9">See the <a href="https://hl7.org.au/fhir/core/2.0.0/medicine-information.html">Medicine Information</a> guidance page in AU Core.</td>
   </tr>
   <tr>
     <td colspan="2">Clinical indication</td>
@@ -248,7 +248,7 @@ Column attribute descriptions are as follows:
     <td rowspan="4">N/A</td>
     <td><a href="StructureDefinition-au-ps-patient.html">AU PS Patient</a></td>
     <td><code>Patient.extension.where(url='http://hl7.org/fhir/StructureDefinition/individual-recordedSexOrGender')</code></td>
-    <td>The <a href="http://hl7.org/fhir/StructureDefinition/individual-recordedSexOrGender">Person Recorded Sex or Gender extension</a> is profiled by <a href="https://build.fhir.org/ig/hl7au/au-fhir-core/StructureDefinition-au-core-rsg-sexassignedab.html">AU Core Sex Assigned At Birth (RSG)</a> to represent the concept of Sex assigned at birth.</td>
+    <td>The <a href="http://hl7.org/fhir/StructureDefinition/individual-recordedSexOrGender">Person Recorded Sex or Gender extension</a> is profiled by <a href="https://hl7.org.au/fhir/core/2.0.0/StructureDefinition-au-core-rsg-sexassignedab.html">AU Core Sex Assigned At Birth (RSG)</a> to represent the concept of Sex assigned at birth.</td>
   </tr>
   <tr>
     <td colspan="2">Gender identity</td>
@@ -306,19 +306,19 @@ Column attribute descriptions are as follows:
     <td rowspan="5">Estimated Date of Delivery (EDD) summary</td>
     <td colspan="2">EDD by menstrual cycle</td>
     <td rowspan="5">History of pregnancy</td>
-    <td><a href="https://hl7.org/fhir/uv/ips/STU2/StructureDefinition-Observation-pregnancy-edd-uv-ips.html">Observation Pregnancy - Expected Delivery Date (IPS)</a></td>
+    <td><a href="https://hl7.org/fhir/uv/ips/2.0.1/StructureDefinition-Observation-pregnancy-edd-uv-ips.html">Observation Pregnancy - Expected Delivery Date (IPS)</a></td>
     <td><code>Observation.valueDateTime</code></td>
     <td>This data group maps to an IPS profile; This AUCDI data group is a <a href="future.html#future-candidate-requirements-under-consideration">Future Candidate Requirement Under Consideration</a>.</td>
   </tr>
   <tr>
     <td colspan="2">Date of ultrasound</td>
-    <td><a href="https://hl7.org/fhir/uv/ips/STU2/StructureDefinition-Observation-pregnancy-edd-uv-ips.html">Observation Pregnancy - Expected Delivery Date (IPS)</a></td>
+    <td><a href="https://hl7.org/fhir/uv/ips/2.0.1/StructureDefinition-Observation-pregnancy-edd-uv-ips.html">Observation Pregnancy - Expected Delivery Date (IPS)</a></td>
     <td><code>Observation.effectiveDateTime</code></td>
     <td rowspan="2">AUCDI elements Date of ultrasound and Estimated date of delivery by ultrasound would be grouped together in the same Observation, separate to Estimated data of delivery by menstrual cycle.</td>
   </tr>
   <tr>
     <td colspan="2">EDD by ultrasound</td>
-    <td><a href="https://hl7.org/fhir/uv/ips/STU2/StructureDefinition-Observation-pregnancy-edd-uv-ips.html">Observation Pregnancy - Expected Delivery Date (IPS)</a></td>
+    <td><a href="https://hl7.org/fhir/uv/ips/2.0.1/StructureDefinition-Observation-pregnancy-edd-uv-ips.html">Observation Pregnancy - Expected Delivery Date (IPS)</a></td>
     <td><code>Observation.valueDateTime</code></td>
   </tr>
   <tr>
@@ -337,18 +337,18 @@ Column attribute descriptions are as follows:
     <td rowspan="3">Pregnancy assertion</td>
     <td colspan="2">Pregnancy assertion</td>
     <td rowspan="3">History of pregnancy</td>
-    <td><a href="https://hl7.org/fhir/uv/ips/STU2/StructureDefinition-Observation-pregnancy-status-uv-ips.html">Observation Pregnancy - Status (IPS)</a></td>
+    <td><a href="https://hl7.org/fhir/uv/ips/2.0.1/StructureDefinition-Observation-pregnancy-status-uv-ips.html">Observation Pregnancy - Status (IPS)</a></td>
     <td><code>Observation.valueCodeableConcept</code></td>
     <td rowspan="3">This data group maps to an IPS profile; This AUCDI data group is a <a href="future.html#future-candidate-requirements-under-consideration">Future Candidate Requirement Under Consideration</a>.</td>
   </tr>
   <tr>
     <td colspan="2">Justification</td>
-     <td><a href="https://hl7.org/fhir/uv/ips/STU2/StructureDefinition-Observation-pregnancy-status-uv-ips.html">Observation Pregnancy - Status (IPS)</a></td>
+     <td><a href="https://hl7.org/fhir/uv/ips/2.0.1/StructureDefinition-Observation-pregnancy-status-uv-ips.html">Observation Pregnancy - Status (IPS)</a></td>
     <td><code>Observation.note</code></td>
   </tr>
   <tr>
     <td colspan="2">Date of assertion</td>
-     <td><a href="https://hl7.org/fhir/uv/ips/STU2/StructureDefinition-Observation-pregnancy-status-uv-ips.html">Observation Pregnancy - Status (IPS)</a></td>
+     <td><a href="https://hl7.org/fhir/uv/ips/2.0.1/StructureDefinition-Observation-pregnancy-status-uv-ips.html">Observation Pregnancy - Status (IPS)</a></td>
     <td><code>Observation.effectiveDateTime</code></td>
   </tr>
 </tbody>
