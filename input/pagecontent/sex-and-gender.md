@@ -202,7 +202,7 @@ AU PS supports the exchange of the Gender Identity data element (as defined in t
 In AU PS, Recorded Sex or Gender is not *Must Support*. See the implementation guidance defined in the [Recorded Sex or Gender](https://hl7.org.au/fhir/6.0.0/sexgender.html#recorded-sex-or-gender) section of the AU Base [Sex and Gender](https://hl7.org.au/fhir/6.0.0/sexgender.html) page for more information.
 
 ### Sex Assigned at Birth
-In AU PS, Sex Assigned at Birth is not *Must Support*. See the implementation guidance defined in the [Sex Assigned at Birth](https://build.fhir.org/ig/hl7au/au-fhir-core/sex-and-gender.html#sex-assigned-at-birth) section of the AU Core [Sex and Gender](https://build.fhir.org/ig/hl7au/au-fhir-core/sex-and-gender.html) page for more information.
+In AU PS, Sex Assigned at Birth is not *Must Support*. See the implementation guidance defined in the [Sex Assigned at Birth](https://hl7.org.au/fhir/core/2.0.0/sex-and-gender.html#sex-assigned-at-birth) section of the AU Core [Sex and Gender](https://hl7.org.au/fhir/core/2.0.0/sex-and-gender.html) page for more information.
 
 ### Sex Parameter for Clinical Use (SPCU)
 In AU PS, SPCU is not *Must Support*. See the implementation guidance defined in the [Sex Parameter for Clinical Use (SPCU)](https://hl7.org.au/fhir/6.0.0/sexgender.html#sex-parameter-for-clinical-use-spcu) section of the AU Base [Sex and Gender](https://hl7.org.au/fhir/6.0.0/sexgender.html) page for more information.
