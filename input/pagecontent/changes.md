@@ -8,7 +8,7 @@ This change log documents the significant updates and resolutions implemented fr
 #### Changes in this version
 - added guidance clarifying expectations for Must Support obligations on elements with multiple cardinality in [General Requirements](general-requirements.html) page [AU PS: FHIR-53114](https://jira.hl7.org/browse/FHIR-53114)
 - [AU PS MedicationStatement](StructureDefinition-au-ps-medicationstatement.html):
-  - changed MedicationStatement.medicationCodeableConcept binding to Australian Medication Use (preferred) [AU Base: FHIR-53469](https://jira.hl7.org/browse/FHIR-53469)
+  - changed MedicationStatement.medication[x] binding to Australian Medication Use (preferred) [AU Base: FHIR-53469](https://jira.hl7.org/browse/FHIR-53469)
   - changed guidance for representing no known medications using SNOMED CT 787481004 &#124;No known medications&#124;, aligned with IPS guidance [AU PS: FHIR-52274](https://jira.hl7.org/browse/FHIR-52274)
 - [AU PS Organization](StructureDefinition-au-ps-organization.html):
   - added AU HAE as an allowed type for Organization.identifier [AU Base: FHIR-54928](https://jira.hl7.org/browse/FHIR-54928)
