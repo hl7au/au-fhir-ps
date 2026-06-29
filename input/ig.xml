@@ -2,10 +2,10 @@
 <ImplementationGuide xmlns="http://hl7.org/fhir">
 	<id value="hl7.fhir.au.ps"/>
 	<extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status">
-		<valueCode value="draft"/>
+		<valueCode value="trial-use"/>
 	</extension>
 	<extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-fmm">
-		<valueInteger value="1"/>
+		<valueInteger value="2"/>
 	</extension>
 	<url value="http://hl7.org.au/fhir/ps/ImplementationGuide/hl7.fhir.au.ps"/>
 	<version value="1.0.0-ci-build"/>
@@ -36,13 +36,11 @@
 	<dependsOn>
 		<uri value="http://hl7.org/fhir/uv/ips/ImplementationGuide/hl7.fhir.uv.ips"/>
 		<packageId value="hl7.fhir.uv.ips"/>
-		<version value="2.0.0"/>
+		<version value="2.0.1"/>
 	</dependsOn>
 	<dependsOn>
 		<uri value="http://hl7.org.au/fhir/core/ImplementationGuide/hl7.fhir.au.core"/>
 		<packageId value="hl7.fhir.au.core"/>
-		<!-- Pinned to a released au-core (was: current). The publication process (go-publish) forbids
-		     depending on a #current/CI build, and every live au-ps release pins au-core to 2.0.0. -->
 		<version value="2.0.0"/>
 	</dependsOn>
 	<definition>
@@ -201,6 +199,14 @@
 			</reference>
 			<name value="Jeramy 27 May"/>
 			<description value="[Interstate GP use case](uc-interstate.html) example. Shows an example of a patient summary authored by the patient's usual GP that was updated after a recent admission to hospital. Example for the *AU PS Bundle* and *AU PS Composition* profiles. Patient: Jeramy Ezra Banks."/>
+			<exampleCanonical value="http://hl7.org.au/fhir/ps/StructureDefinition/au-ps-bundle"/>
+		</resource>
+		<resource>
+			<reference>
+				<reference value="Bundle/aups-patient-story"/>
+			</reference>
+			<name value="Patient Story"/>
+			<description value="Shows an example of a patient generated patient summary that includes a Patient Story section capturing the patient's perspective, goals, and preferences for care. Example for the *AU PS Bundle* and *AU PS Composition* profiles. Patient: Shawn Martin."/>
 			<exampleCanonical value="http://hl7.org.au/fhir/ps/StructureDefinition/au-ps-bundle"/>
 		</resource>
 		<!-- PAGES-->

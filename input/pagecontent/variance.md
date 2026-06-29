@@ -7,7 +7,7 @@ HL7 Australia published FHIR implementation guides are required to follow specif
 
 
 ### Variance from AU Base
-This implementation guide has no variance (i.e. fully compliant) from AU Base FHIR Implementation Guide version 6.0.0-ci-build ([current](https://build.fhir.org/ig/hl7au/au-fhir-base/)).
+This implementation guide has no variance (i.e. fully compliant) from AU Base FHIR Implementation Guide version 6.0.0 ([current](https://hl7.org.au/fhir/6.0.0/index.html)).
 
 Note that while there is no variance, this implementation guide imposes requirements additional to AU Base.
 
@@ -19,7 +19,7 @@ This implementation guide profiles the following resources that are not profiled
 
 
 ### Variance from AU Core
-This implementation guide has no variance (i.e. fully compliant) from AU Core FHIR Implementation Guide version 2.0.0-ci-build ([current](https://build.fhir.org/ig/hl7au/au-fhir-core/)). 
+This implementation guide has no variance (i.e. fully compliant) from AU Core FHIR Implementation Guide version 2.0.0 ([current](https://hl7.org.au/fhir/core/2.0.0/index.html)). 
 
 Note that while there is no variance, this implementation guide imposes requirements additional to AU Core.
 
@@ -32,7 +32,7 @@ This implementation guide profiles the following resources that are not profiled
 
 
 ### Variance from IPS
-This implementation guide has no variance (i.e. fully compliant) from IPS Implementation Guide version 2.0.0 ([2.0.0](https://hl7.org/fhir/uv/ips/STU2/)).
+This implementation guide has no variance (i.e. fully compliant) from IPS Implementation Guide version 2.0.1 ([current](https://hl7.org/fhir/uv/ips/2.0.1/en/index.html)).
 
 Note that while there is no variance, this implementation guide imposes requirements additional to IPS.
 
