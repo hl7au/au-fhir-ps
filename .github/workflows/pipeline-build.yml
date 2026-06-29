@@ -1,9 +1,11 @@
-name: Au Patient Summary IG Profiles publish->go-publish SNAPSHO - all releases
+name: (LEGACY) Au Patient Summary IG Profiles publish->go-publish - all releases
 
+# LEGACY / reference only — SUPERSEDED by build-review-publish.yml (the single pipeline: renders once,
+# produces working + milestone Pages previews, and does the gated working/milestone prod publish scoped
+# to /fhir/ps). This is the original self-hosted-EC2 + full 15GB S3 sync pipeline. Tag releases now run
+# build-review-publish.yml, so this is manual-dispatch only (kept for emergency/reference).
 on:
-  push:
-    tags:
-      - "**"
+  workflow_dispatch: {}   # was: push tags '**' — tag releases now run build-review-publish.yml
 
 permissions:
   id-token: write # This is required for requesting the JWT
