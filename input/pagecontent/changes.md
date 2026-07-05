@@ -1,5 +1,5 @@
 ###  Release 1.0.0
-- Publication date: TBD
+- Publication date: 2026-07-05
 - Publication status: Working Standard (Trial Use)
 - Based on FHIR version: 4.0.1
 
