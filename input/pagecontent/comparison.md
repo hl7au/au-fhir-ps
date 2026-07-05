@@ -29,7 +29,7 @@ The comparison considers **SHALL** and **SHOULD** requirements. **MAY** requirem
         <tr>
             <th style="width: 25%; text-align: center; vertical-align: middle;">AU PS</th>
             <th style="width: 25%; text-align: center; vertical-align: middle;">IPA 1.1.0</th>
-            <th style="width: 25%; text-align: center; vertical-align: middle;">IPS 2.0.0</th>
+            <th style="width: 25%; text-align: center; vertical-align: middle;">IPS 2.0.1</th>
             <th style="width: 25%; text-align: center; vertical-align: middle;">AU Core 2.0.0</th>
         </tr>
     </thead>
