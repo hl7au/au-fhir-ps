@@ -1,5 +1,10 @@
-name: Au Patient Summary IG Profiles publish->go-publish SNAPSHO - all releases
+name: (LEGACY) Au Patient Summary IG Profiles publish->go-publish - all releases
 
+# LEGACY pipeline, deliberately kept TAG-TRIGGERED alongside the centralized build-review-publish.yml
+# so either release method can be used: this one renders into the EC2 /webroot and pushing to prod
+# stays a manual step (pipeline-release.yml, dispatch-only), so the two coexist without conflict.
+# The centralized caller publishes per publication-request status (working = automatic, milestone =
+# gated by the production environment).
 on:
   push:
     tags:

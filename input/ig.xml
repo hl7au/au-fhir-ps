@@ -387,6 +387,14 @@
 			<code value="shownav"/>
 			<value value="false"/>
 		</parameter>
+		<!-- A3: render json/xml/ttl "view source" pages client-side from the raw files (Prism),
+		     instead of baking large escaped-source HTML. Opt-in; ~86% smaller viewer pages.
+		     Requires the dynamic-source-viewers code registered in hl7.fhir.uv.tools (else 4
+		     cosmetic QA "code not in value set" warnings). -->
+		<parameter>
+			<code value="dynamic-source-viewers"/>
+			<value value="true"/>
+		</parameter>
 		<parameter>
 			<code value="show-inherited-invariants"/>
 			<value value="true"/>
@@ -406,6 +414,14 @@
 		<parameter>
   			<code value="ips-comparison"/>
   			<value value="current"/>
+		</parameter>
+		<!-- Pin canonical references that resolve to more than one version (FHIR Extensions Pack ships
+		     several versions of standard extensions). Pins each ambiguous reference to the already-
+		     selected version and downgrades the per-reference "multiple potential matches" WARNING to
+		     INFO. Same setting as au-fhir-base / au-fhir-core. Does not change which version is used. -->
+		<parameter>
+			<code value="pin-canonicals"/>
+			<value value="pin-multiples"/>
 		</parameter>
 	</definition>
 </ImplementationGuide>

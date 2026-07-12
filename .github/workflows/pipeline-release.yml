@@ -1,5 +1,9 @@
-name: Publish IG - manual trigger to commit to production
+name: (LEGACY) Publish IG - manual trigger to commit to production
 
+# LEGACY / reference only — SUPERSEDED by build-review-publish.yml's gated publish jobs (which sync only
+# the /fhir/ps subtree + the shared root files, never a blanket bucket sync). This job does the old
+# self-hosted-EC2 full `/webroot → s3://hl7au-fhir-ig` sync; kept manual-dispatch + actor-gated for
+# emergency/reference. Prefer build-review-publish.yml for routine publishes.
 on:
   workflow_dispatch:
 
