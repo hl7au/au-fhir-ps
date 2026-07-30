@@ -1,16 +1,23 @@
-###  Release TBD
+### Release TBD
 - Publication date: TBD
 - Publication status: TBD
 - Based on FHIR version: 4.0.1
 
-This change log documents the significant updates and resolutions implemented from version [1.0.0-ballot](https://hl7.org.au/fhir/ps/1.0.0-ballot/index.html) to TBD.
+This change log documents the significant updates and resolutions implemented from version [1.0.0](https://hl7.org.au/fhir/ps/1.0.0/index.html) to TBD.
+
+### Release 1.0.0
+- Publication date: 2026-07-05
+- Publication status: Working Standard (Trial Use)
+- Based on FHIR version: 4.0.1
+
+This change log documents the significant updates and resolutions implemented from version [1.0.0-ballot](https://hl7.org.au/fhir/ps/1.0.0-ballot/index.html) to [1.0.0](https://hl7.org.au/fhir/ps/1.0.0/index.html).
 
 #### Changes in this version
-- added guidance clarifying expectations for Must Support obligations on elements with multiple cardinality in [General Requirements](general-requirements.html) page [AU PS: FHIR-53114](https://jira.hl7.org/browse/FHIR-53114)
-- [AU PS MedicationStatement](StructureDefinition-au-ps-medicationstatement.html):
+- added guidance clarifying expectations for Must Support obligations on elements with multiple cardinality in [General Requirements](https://hl7.org.au/fhir/ps/1.0.0/general-requirements.html) page [AU PS: FHIR-53114](https://jira.hl7.org/browse/FHIR-53114)
+- [AU PS MedicationStatement](https://hl7.org.au/fhir/ps/1.0.0/StructureDefinition-au-ps-medicationstatement.html):
   - changed MedicationStatement.medication[x] binding to Australian Medication Use (preferred) [AU PS: FHIR-52274](https://jira.hl7.org/browse/FHIR-52274) (preadopt of [AU Base: FHIR-53469](https://jira.hl7.org/browse/FHIR-53469))
   - changed guidance for representing no known medications using SNOMED CT 787481004 &#124;No known medications&#124;, aligned with IPS guidance [AU PS: FHIR-52274](https://jira.hl7.org/browse/FHIR-52274)
-- [AU PS RelatedPerson](StructureDefinition-au-ps-relatedperson.html):
+- [AU PS RelatedPerson](https://hl7.org.au/fhir/ps/1.0.0/StructureDefinition-au-ps-relatedperson.html):
   - applied technical correction to remove SHOULD:display obligation on RelatedPerson.patient.reference for the AU PS Consumer [AU PS: FHIR-56175](https://jira.hl7.org/browse/FHIR-56175)
 
 ###  Release 1.0.0-ballot
