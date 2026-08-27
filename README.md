@@ -8,7 +8,7 @@ If it's a specification error please search the issues list in [GitHub](https://
 
 ## Contributing to Development
 
-AU Patient Summary R1 is in currently in development.
+AU Patient Summary R1 has been published and ongoing development is underway.
 
 ### 1. Join the AU Patient Summary FHIR IG Calls
 
