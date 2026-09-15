@@ -339,14 +339,13 @@ Profile |Must Support Element|Reference
 [AU PS Composition](StructureDefinition-au-ps-composition.html)|Composition.author|AU PS Practitioner, AU PS PractitionerRole, Device, AU PS Patient, AU PS RelatedPerson, AU PS Organization
 [AU PS Composition](StructureDefinition-au-ps-composition.html)|Composition.attester.party|AU PS Patient, AU PS RelatedPerson, AU PS Practitioner, AU PS PractitionerRole, AU PS Organization
 [AU PS Composition](StructureDefinition-au-ps-composition.html)|Composition.section.entry:medicationStatementOrRequest|AU PS MedicationStatement, AU PS MedicationRequest
-[DiagnosticReport (IPS)](https://hl7.org/fhir/uv/ips/2.0.1/StructureDefinition-DiagnosticReport-uv-ips.html)|DiagnosticReport.subject|AU PS Patient, Group
-[DiagnosticReport (IPS)](https://hl7.org/fhir/uv/ips/2.0.1/StructureDefinition-DiagnosticReport-uv-ips.html)|DiagnosticReport.performer|AU PS Practitioner, AU PS PractitionerRole, AU PS Organization, CareTeam
-[DiagnosticReport (IPS)](https://hl7.org/fhir/uv/ips/2.0.1/StructureDefinition-DiagnosticReport-uv-ips.html)|DiagnosticReport.result:observation-results|AU PS Pathology Result Observation, Observation Results - Radiology (IPS)
+[AU PS DiagnosticReport)](StructureDefinition-au-ps-diagnosticreport.html)|DiagnosticReport.performer|AU PS Practitioner, AU PS PractitionerRole, AU PS Organization, CareTeam
+[AU PS DiagnosticReport)](StructureDefinition-au-ps-diagnosticreport.html)|DiagnosticReport.result:observation-results|AU PS Pathology Result Observation, Observation Results - Radiology (IPS)
 [AU PS Encounter](StructureDefinition-au-ps-encounter.html)|Encounter.participant.individual|AU PS Practitioner, AU PS PractitionerRole, AU PS RelatedPerson
 [AU PS Encounter](StructureDefinition-au-ps-encounter.html)|Encounter.reasonReference|AU PS Condition, Observation, AU PS Procedure
 [AU PS MedicationRequest](StructureDefinition-au-ps-medicationrequest.html)|MedicationRequest.requester|AU PS Practitioner, AU PS PractitionerRole, AU PS Organization, AU PS Patient, AU PS RelatedPerson
 [AU PS MedicationRequest](StructureDefinition-au-ps-medicationrequest.html)|MedicationRequest.reasonReference|AU PS Condition, Observation
-[AU PS MedicationStatement](StructureDefinition-au-ps-medicationstatement.html)|MedicationStatement.reasonReference|AU PS Condition, Observation, DiagnosticReport (IPS)
+[AU PS MedicationStatement](StructureDefinition-au-ps-medicationstatement.html)|MedicationStatement.reasonReference|AU PS Condition, Observation, AU PS DiagnosticReport
 [Observation Results - Radiology (IPS)](https://hl7.org/fhir/uv/ips/2.0.1/StructureDefinition-Observation-results-radiology-uv-ips.html)|Observation.performer|AU PS Practitioner, AU PS PractitionerRole, AU PS Organization, CareTeam, AU PS Patient, AU PS RelatedPerson
 [AU PS Patient](StructureDefinition-au-ps-patient.html)|Patient.generalPractitioner|AU PS Organization, AU PS Practitioner, AU PS PractitionerRole
 [AU PS Pathology Result Observation](StructureDefinition-au-ps-diagnosticresult-path.html)|Observation.performer|AU PS Practitioner, AU PS PractitionerRole, AU PS Organization, AU PS Patient, AU PS RelatedPerson
@@ -367,7 +366,7 @@ Profile |Must Support Element|Data Types
 [AU PS Condition](StructureDefinition-au-ps-condition.html)|Condition.onset[x]|dateTime, age, Period, Range
 [AU PS Condition](StructureDefinition-au-ps-condition.html)|Condition.abatement[x]|dateTime, age, Period, Range
 [DeviceUseStatement (IPS)](https://hl7.org/fhir/uv/ips/2.0.1/StructureDefinition-DeviceUseStatement-uv-ips.html)|DeviceUseStatement.timing[x]|Period, dateTime
-[DiagnosticReport (IPS)](https://hl7.org/fhir/uv/ips/2.0.1/StructureDefinition-DiagnosticReport-uv-ips.html)|DiagnosticReport.effective[x]|dateTime, Period
+[AU PS DiagnosticReport)](StructureDefinition-au-ps-diagnosticreport.html)|DiagnosticReport.effective[x]|dateTime, Period
 [AU PS Immunization](StructureDefinition-au-ps-immunization.html)|Immunization.occurrence[x]|dateTime, string
 [AU PS MedicationRequest](StructureDefinition-au-ps-medicationrequest.html)|MedicationRequest.medication[x]|CodeableConcept, Reference
 [AU PS MedicationStatement](StructureDefinition-au-ps-medicationstatement.html)|MedicationStatement.medication[x]|CodeableConcept, Reference
@@ -390,7 +389,7 @@ Profile |Must Support Data Type
 [AU PS AllergyIntolerance](StructureDefinition-au-ps-allergyintolerance.html)|AllergyIntolerance.onsetDateTime
 [AU PS Condition](StructureDefinition-au-ps-condition.html)|Condition.onsetDateTime
 [DeviceUseStatement (IPS)](https://hl7.org/fhir/uv/ips/2.0.1/StructureDefinition-DeviceUseStatement-uv-ips.html)|DeviceUseStatement.timingDateTime
-[DiagnosticReport (IPS)](https://hl7.org/fhir/uv/ips/2.0.1/StructureDefinition-DiagnosticReport-uv-ips.html)|DiagnosticReport.effectiveDateTime
+[AU PS DiagnosticReport)](StructureDefinition-au-ps-diagnosticreport.html)|DiagnosticReport.effectiveDateTime
 [AU PS Immunization](StructureDefinition-au-ps-immunization.html)|Immunization.occurrenceDateTime
 [AU PS MedicationStatement](StructureDefinition-au-ps-medicationstatement.html)|MedicationStatement.effectiveDateTime
 [Observation Results - Radiology (IPS)](https://hl7.org/fhir/uv/ips/2.0.1/StructureDefinition-Observation-results-radiology-uv-ips.html)|Observation.effectiveDateTime

@@ -10,6 +10,10 @@ This change log documents the significant updates and resolutions implemented fr
   - added AU HSP-O as an allowed type for Organization.identifier [AU Base: FHIR-54923](https://jira.hl7.org/browse/FHIR-54923)
   - removed invariant au-core-org-01 limiting a National Organization Identifier to an HPI-O or PAI-O [AU Core: FHIR-55738](https://jira.hl7.org/browse/FHIR-55738)
   - changed Organization.identifier:abn.type to require code ABN from the IdentifierType AU code system [AU Base: FHIR-56103](https://jira.hl7.org/browse/FHIR-56103)
+- [AU PS DiagnosticReport](StructureDefinition-au-ps-diagnosticreport.html):
+  - new profile
+  - updated MedStatement, Composition, Bundle
+
 
 ### Release 1.0.0
 - Publication date: 2026-07-05
