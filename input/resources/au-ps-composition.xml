@@ -15,7 +15,7 @@
   <kind value="resource"/>
   <abstract value="false"/>
   <type value="Composition"/>
-  <baseDefinition value="http://hl7.org.au/fhir/StructureDefinition/au-composition"/>
+  <baseDefinition value="http://hl7.org.au/fhir/core/StructureDefinition/au-core-composition"/>
   <derivation value="constraint"/>
   <differential>
     <element id="Composition">
@@ -63,7 +63,6 @@
         </extension>
       </extension>
       <path value="Composition.text"/>
-      <mustSupport value="true"/>
     </element>
     <element id="Composition.identifier">
       <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
@@ -83,7 +82,6 @@
         </extension>
       </extension>
       <path value="Composition.identifier"/>
-      <mustSupport value="true"/>
     </element>
     <element id="Composition.status">
       <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
@@ -111,7 +109,6 @@
         </extension>
       </extension>
       <path value="Composition.status"/>
-      <mustSupport value="true"/>
     </element>
     <element id="Composition.type">
       <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
@@ -143,7 +140,6 @@
           <code value="60591-5"/>
         </coding>
       </patternCodeableConcept>
-      <mustSupport value="true"/>
     </element>
     <element id="Composition.subject">
       <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
@@ -172,12 +168,10 @@
       </extension>
       <path value="Composition.subject"/>
       <definition value="Who or what the composition is about.&#xD;&#xA;In general a composition can be about a person, (patient or healthcare practitioner), a device (e.g. a machine) or even a group of subjects (such as a document about a herd of livestock, or a set of patients that share a common exposure).&#xD;&#xA;For the AU PS the subject is always the patient."/>
-      <min value="1"/>
       <type>
         <code value="Reference"/>
         <targetProfile value="http://hl7.org.au/fhir/ps/StructureDefinition/au-ps-patient"/>
       </type>
-      <mustSupport value="true"/>
     </element>
     <element id="Composition.subject.reference">
       <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
@@ -226,7 +220,6 @@
         </extension>
       </extension>
       <path value="Composition.date"/>
-      <mustSupport value="true"/>
     </element>
     <element id="Composition.author">
       <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
@@ -265,7 +258,6 @@
         <targetProfile value="http://hl7.org.au/fhir/ps/StructureDefinition/au-ps-relatedperson"/>
         <targetProfile value="http://hl7.org.au/fhir/ps/StructureDefinition/au-ps-organization"/>
       </type>
-      <mustSupport value="true"/>
     </element>
     <element id="Composition.title">
       <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
@@ -295,7 +287,6 @@
       <path value="Composition.title"/>
       <short value="The title of this patient summary"/>
       <definition value="Official human-readable label for the composition.&#xD;&#xA;&#xD;&#xA;For this document the title would likely include the text &quot;Patient Summary&quot; or any equivalent translation and other relevant document information.This can include information like the patient name and time generated."/>
-      <mustSupport value="true"/>
     </element>
     <element id="Composition.attester">
       <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
@@ -323,7 +314,6 @@
         </extension>
       </extension>
       <path value="Composition.attester"/>
-      <mustSupport value="true"/>
     </element>
     <element id="Composition.attester.mode">
       <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
@@ -351,7 +341,6 @@
         </extension>
       </extension>
       <path value="Composition.attester.mode"/>
-      <mustSupport value="true"/>
     </element>
     <element id="Composition.attester.time">
       <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
@@ -379,7 +368,6 @@
         </extension>
       </extension>
       <path value="Composition.attester.time"/>
-      <mustSupport value="true"/>
     </element>
     <element id="Composition.attester.party">
       <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
@@ -415,7 +403,6 @@
         <targetProfile value="http://hl7.org.au/fhir/ps/StructureDefinition/au-ps-practitionerrole"/>        
         <targetProfile value="http://hl7.org.au/fhir/ps/StructureDefinition/au-ps-organization"/>
       </type>
-      <mustSupport value="true"/>
     </element>
     <element id="Composition.custodian">
       <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
@@ -447,7 +434,6 @@
         <code value="Reference"/>   
         <targetProfile value="http://hl7.org.au/fhir/ps/StructureDefinition/au-ps-organization"/>
       </type>
-      <mustSupport value="true"/>
     </element>
     <element id="Composition.relatesTo">
 			<path value="Composition.relatesTo"/>
@@ -605,7 +591,6 @@
       <short value="Sections composing the patient summary"/>
       <definition value="The root of the sections that make up the patient summary composition."/>
       <min value="3"/>
-      <mustSupport value="true"/>
     </element>
     <element id="Composition.section.extension">
       <path value="Composition.section.extension"/>
@@ -654,8 +639,6 @@
         </extension>
       </extension>
       <path value="Composition.section.title"/>
-      <min value="1"/>
-      <mustSupport value="true"/>
     </element>
     <element id="Composition.section.code">
       <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
@@ -672,7 +655,6 @@
 				<code value="CodeableConcept"/>
 				<profile value="http://hl7.org/fhir/uv/ips/StructureDefinition/CodeableConcept-uv-ips"/>
 			</type>
-      <mustSupport value="true"/>
     </element>
     <element id="Composition.section.text">
       <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
@@ -701,7 +683,6 @@
       </extension>
       <path value="Composition.section.text"/>
       <min value="1"/>
-      <mustSupport value="true"/>
     </element>
     <element id="Composition.section.section">
       <path value="Composition.section.section"/>
