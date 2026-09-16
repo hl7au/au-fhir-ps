@@ -3,7 +3,7 @@
 AU Patient Summary (AU PS) complies with, and/or leverages, national and international standards, in particular:
 - [International Patient Access 1.1.0](https://hl7.org/fhir/uv/ipa/STU1.1/)
 - [International Patient Summary Implementation Guide 2.0.1](https://hl7.org/fhir/uv/ips/2.0.1/)
-- [AU Core Implementation Guide 2.0.0](https://hl7.org.au/fhir/core/2.0.0/index.html)
+- [AU Core Implementation Guide (current)](https://build.fhir.org/ig/hl7au/au-fhir-core/)
 
 Relationships between AU PS, AUCDI, and the above key implementation guides are described in [Relationship with other IGs](relationship.html). 
 
@@ -30,7 +30,7 @@ The comparison considers **SHALL** and **SHOULD** requirements. **MAY** requirem
             <th style="width: 25%; text-align: center; vertical-align: middle;">AU PS</th>
             <th style="width: 25%; text-align: center; vertical-align: middle;">IPA 1.1.0</th>
             <th style="width: 25%; text-align: center; vertical-align: middle;">IPS 2.0.1</th>
-            <th style="width: 25%; text-align: center; vertical-align: middle;">AU Core 2.0.0</th>
+            <th style="width: 25%; text-align: center; vertical-align: middle;">AU Core (current)</th>
         </tr>
     </thead>
     <tbody>
@@ -50,7 +50,7 @@ The comparison considers **SHALL** and **SHOULD** requirements. **MAY** requirem
             <td style="width: 25%; text-align: left; vertical-align: middle;"><a href="StructureDefinition-au-ps-composition.html">AU PS Composition</a></td>
             <td style="width: 25%; text-align: center; vertical-align: middle;"><img src="minus_symbol.png" width="20"/></td>
             <td style="width: 25%; text-align: center; vertical-align: middle;"><img src="green_checkmark.png" width="20"/></td>
-            <td style="width: 25%; text-align: center; vertical-align: middle;"><img src="minus_symbol.png" width="20"/></td>
+            <td style="width: 25%; text-align: center; vertical-align: middle;"><img src="green_checkmark.png" width="20"/></td>
         </tr>
         <tr>
             <td rowspan="2" style="width: 25%; text-align: left; vertical-align: middle;"><a href="StructureDefinition-au-ps-condition.html">AU PS Condition</a></td>
