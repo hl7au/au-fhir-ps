@@ -28,7 +28,6 @@ Note that while there is no variance, this implementation guide imposes requirem
 This implementation guide profiles the following resources that are not profiled in AU Core:
 
 - [AU PS Bundle](StructureDefinition-au-ps-bundle.html) profiles FHIR resource [Bundle](http://hl7.org/fhir/R4/bundle.html)
-- [AU PS Composition](StructureDefinition-au-ps-composition.html) profiles FHIR resource [Composition](http://hl7.org/fhir/R4/composition.html)
 
 
 ### Variance from IPS
