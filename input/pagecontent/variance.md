@@ -19,7 +19,7 @@ This implementation guide profiles the following resources that are not profiled
 
 
 ### Variance from AU Core
-This implementation guide has no variance (i.e. fully compliant) from AU Core FHIR Implementation Guide version 2.0.0 ([current](https://hl7.org.au/fhir/core/2.0.0/index.html)). 
+This implementation guide has no variance (i.e. fully compliant) from AU Core FHIR Implementation Guide ([current](https://build.fhir.org/ig/hl7au/au-fhir-core/)). 
 
 Note that while there is no variance, this implementation guide imposes requirements additional to AU Core.
 
@@ -28,7 +28,6 @@ Note that while there is no variance, this implementation guide imposes requirem
 This implementation guide profiles the following resources that are not profiled in AU Core:
 
 - [AU PS Bundle](StructureDefinition-au-ps-bundle.html) profiles FHIR resource [Bundle](http://hl7.org/fhir/R4/bundle.html)
-- [AU PS Composition](StructureDefinition-au-ps-composition.html) profiles FHIR resource [Composition](http://hl7.org/fhir/R4/composition.html)
 
 
 ### Variance from IPS
