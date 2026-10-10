@@ -83,6 +83,10 @@
       <path value="DiagnosticReport.status"/>
       <condition value="au-core-dr-01"/>
       <mustSupport value="true"/>
+      <binding>
+        <strength value="required" />
+        <valueSet value="http://hl7.org/fhir/uv/ips/ValueSet/diagnostics-report-status-uv-ips" />
+      </binding>
     </element>
     <element id="DiagnosticReport.category">
       <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
@@ -178,8 +182,29 @@
       <min value="1"/>
       <type>
         <code value="Reference"/>
-        <targetProfile value="http://hl7.org.au/fhir/core/StructureDefinition/au-core-patient"/>
+        <targetProfile value="http://hl7.org.au/fhir/ps/StructureDefinition/au-ps-patient"/>
       </type>
+      <mustSupport value="true"/>
+    </element>
+    <element id="DiagnosticReport.subject.reference">
+      <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
+        <extension url="code">
+          <valueCode value="SHALL:populate"/>
+        </extension>
+        <extension url="actor">
+          <valueCanonical value="http://hl7.org.au/fhir/ps/ActorDefinition/au-ps-actor-producer"/>
+        </extension>
+      </extension>
+      <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
+        <extension url="code">
+          <valueCode value="SHALL:handle"/>
+        </extension>
+        <extension url="actor">
+          <valueCanonical value="http://hl7.org.au/fhir/ps/ActorDefinition/au-ps-actor-consumer"/>
+        </extension>
+      </extension>
+      <path value="DiagnosticReport.subject.reference"/>
+      <min value="1"/>
       <mustSupport value="true"/>
     </element>
     <element id="DiagnosticReport.effective[x]">
@@ -311,9 +336,9 @@
       <path value="DiagnosticReport.performer"/>
       <type>
         <code value="Reference"/>
-        <targetProfile value="http://hl7.org.au/fhir/core/StructureDefinition/au-core-practitioner"/>
-        <targetProfile value="http://hl7.org.au/fhir/core/StructureDefinition/au-core-practitionerrole"/>
-        <targetProfile value="http://hl7.org.au/fhir/core/StructureDefinition/au-core-organization"/>
+        <targetProfile value="http://hl7.org.au/fhir/ps/StructureDefinition/au-ps-practitioner"/>
+        <targetProfile value="http://hl7.org.au/fhir/ps/StructureDefinition/au-ps-practitionerrole"/>
+        <targetProfile value="http://hl7.org.au/fhir/ps/StructureDefinition/au-ps-organization"/>
         <targetProfile value="http://hl7.org/fhir/StructureDefinition/CareTeam"/>
       </type>
       <mustSupport value="true"/>
@@ -346,9 +371,8 @@
       <path value="DiagnosticReport.result"/>
       <type>
         <code value="Reference"/>
-        <targetProfile value="http://hl7.org.au/fhir/core/StructureDefinition/au-core-diagnosticresult"/>
         <targetProfile value="http://hl7.org.au/fhir/StructureDefinition/au-imagingresult"/>
-        <targetProfile value="http://hl7.org.au/fhir/core/StructureDefinition/au-core-diagnosticresult-path"/>
+        <targetProfile value="http://hl7.org.au/fhir/ps/StructureDefinition/au-ps-diagnosticresult-path"/>
       </type>
       <mustSupport value="true"/>
     </element>
