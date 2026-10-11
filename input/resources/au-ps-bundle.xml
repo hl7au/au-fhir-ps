@@ -348,7 +348,7 @@
       <min value="1"/>
       <type>
         <code value="DiagnosticReport"/>
-        <profile value="http://hl7.org/fhir/uv/ips/StructureDefinition/DiagnosticReport-uv-ips"/>
+        <profile value="http://hl7.org.au/fhir/ps/StructureDefinition/au-ps-diagnosticreport"/>
       </type>
     </element>
     <element id="Bundle.entry:documentreference">
