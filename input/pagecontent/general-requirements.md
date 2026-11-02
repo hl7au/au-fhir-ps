@@ -345,7 +345,7 @@ Profile |Must Support Element|Reference
 [AU PS Encounter](StructureDefinition-au-ps-encounter.html)|Encounter.reasonReference|AU PS Condition, Observation, AU PS Procedure
 [AU PS MedicationRequest](StructureDefinition-au-ps-medicationrequest.html)|MedicationRequest.requester|AU PS Practitioner, AU PS PractitionerRole, AU PS Organization, AU PS Patient, AU PS RelatedPerson
 [AU PS MedicationRequest](StructureDefinition-au-ps-medicationrequest.html)|MedicationRequest.reasonReference|AU PS Condition, Observation
-[AU PS MedicationStatement](StructureDefinition-au-ps-medicationstatement.html)|MedicationStatement.reasonReference|AU PS Condition, Observation, AU PS DiagnosticReport
+[AU PS MedicationStatement](StructureDefinition-au-ps-medicationstatement.html)|MedicationStatement.reasonReference|AU PS Condition, AU PS DiagnosticReport, Observation
 [Observation Results - Radiology (IPS)](https://hl7.org/fhir/uv/ips/2.0.1/StructureDefinition-Observation-results-radiology-uv-ips.html)|Observation.performer|AU PS Practitioner, AU PS PractitionerRole, AU PS Organization, CareTeam, AU PS Patient, AU PS RelatedPerson
 [AU PS Patient](StructureDefinition-au-ps-patient.html)|Patient.generalPractitioner|AU PS Organization, AU PS Practitioner, AU PS PractitionerRole
 [AU PS Pathology Result Observation](StructureDefinition-au-ps-diagnosticresult-path.html)|Observation.performer|AU PS Practitioner, AU PS PractitionerRole, AU PS Organization, AU PS Patient, AU PS RelatedPerson
