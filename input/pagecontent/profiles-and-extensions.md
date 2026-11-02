@@ -23,7 +23,6 @@ In addition to the profiles defined in this implementation guide, the following 
 - [Codeable Concept (IPS)](https://hl7.org/fhir/uv/ips/en/StructureDefinition-CodeableConcept-uv-ips.html)
 - [Device (IPS)](https://hl7.org/fhir/uv/ips/en/StructureDefinition-Device-uv-ips.html)
 * [DeviceUseStatement (IPS)](https://hl7.org/fhir/uv/ips/en/StructureDefinition-DeviceUseStatement-uv-ips.html)
-* [DiagnosticReport (IPS)](https://hl7.org/fhir/uv/ips/en/StructureDefinition-DiagnosticReport-uv-ips.html)
 * [Observation Results - Radiology (IPS)](https://hl7.org/fhir/uv/ips/en/StructureDefinition-Observation-results-radiology-uv-ips.html)
 
 Additional IPS profiles are referenced in [AU PS Bundle](StructureDefinition-au-ps-bundle.html) and [AU PS Composition](StructureDefinition-au-ps-composition.html), but are not labelled *Must Support* in AU PS (or IPS).
