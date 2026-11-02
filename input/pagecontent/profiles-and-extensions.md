@@ -12,8 +12,8 @@ The following profiles have been defined for this implementation guide.
 
 In addition to the profiles defined in this implementation guide, the following profiles defined elsewhere are used by AU Patient Summary. These profiles are a data type profile for a *Must Support* element in an AU PS profile or are the target of a *Must Support* reference element in an AU PS profile through definition or by impose:
 - [AU Australian Business Number](https://hl7.org.au/fhir/StructureDefinition-au-australianbusinessnumber.html)
-- [AU Core DocumentReference](http://hl7.org.au/fhir/core/StructureDefinition/au-core-documentreference)
 - [AU Base Dosage](https://hl7.org.au/fhir/StructureDefinition-au-dosage.html)
+- [AU Core DocumentReference](http://hl7.org.au/fhir/core/StructureDefinition/au-core-documentreference)
 - [AU Core Location](https://hl7.org.au/fhir/core/StructureDefinition-au-core-location.html)
 - [AU DVA Number](https://hl7.org.au/fhir/StructureDefinition-au-dvanumber.html)
 - [AU HPI-I](https://hl7.org.au/fhir/StructureDefinition-au-hpii.html)
