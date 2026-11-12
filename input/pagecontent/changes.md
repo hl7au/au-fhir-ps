@@ -5,6 +5,9 @@
 
 This change log documents the significant updates and resolutions implemented from version [1.0.0](https://hl7.org.au/fhir/ps/1.0.0/index.html) to TBD.
 
+- [AU PS Bundle](StructureDefinition-au-ps-bundle.html):
+  - changed Bundle.entry:diagnosticreport.resource profile from DiagnosticReport (IPS) to AU PS DiagnosticReport [AU PS: FHIR-57435](https://jira.hl7.org/browse/FHIR-57435)
+  - changed Bundle.entry:documentreference.resource profile from DocumentReference to AU Core DocumentReference [AU PS: FHIR-59764](https://jira.hl7.org/browse/FHIR-59764)
 - [AU PS DiagnosticReport](StructureDefinition-au-ps-diagnosticreport.html):
   - added new profile, including replacing references to DiagnosticReport (IPS) with AU PS DiagnosticReport [AU PS: FHIR-57435](https://jira.hl7.org/browse/FHIR-57435)
 - [AU PS Organization](StructureDefinition-au-ps-organization.html):
