@@ -115,14 +115,17 @@ The table below identifies some major characteristics of the examples defined in
             <td>AU PS Immunization</td>
         </tr>
         <tr>
-            <td><code>Composition.section:sectionResults</code></td>
-            <td>-</td>
-            <td>-</td>
-            <td>-</td>
-            <td>-</td>
+            <td rowspan="2"><code>Composition.section:sectionResults</code></td>
+            <td rowspan="2">-</td>
+            <td rowspan="2">-</td>
+            <td rowspan="2">-</td>
+            <td rowspan="2">-</td>
             <td>AU PS Pathology Result</td>
-            <td>-</td>
-            <td>AU PS Pathology Result</td>
+            <td rowspan="2">-</td>
+            <td rowspan="2">AU PS Pathology Result</td>
+        </tr>
+        <tr>
+            <td>AU PS DiagnosticReport</td>
         </tr>
         <tr>
             <td><code>Composition.section:sectionProceduresHx</code></td>
